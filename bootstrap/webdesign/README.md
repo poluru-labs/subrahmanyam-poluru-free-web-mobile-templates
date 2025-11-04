@@ -2,6 +2,9 @@
 
 A modern, responsive web design services template built with Bootstrap 5 and CSS animations.
 
+<img width="3360" height="8442" alt="web-mart-layout" src="https://github.com/user-attachments/assets/7f5b37c7-da11-4f9c-b34a-536429a9e79e" />
+
+
 ## Features
 
 - **Responsive Design**: Fully responsive layout that works on all devices
