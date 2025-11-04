@@ -1,0 +1,307 @@
+/* ===============================================
+   TABLE OF CONTENTS
+   ===============================================
+   1. Base Styles
+   2. Typography
+   3. Layout Components
+   4. Hero Section & Animations
+   5. Navigation
+   6. Sections
+   7. Footer
+   8. Buttons
+   9. Utility Classes
+   =============================================== */
+
+/* ===============================================
+   CSS CUSTOM PROPERTIES (ROOT VARIABLES)
+   =============================================== */
+:root {
+  /* Primary Brand Colors */
+  --ftl-primary: #00334e;
+  --ftl-secondary: #ff4e00;
+
+  /* Footer Colors */
+  --ftl-footer-primary: #00334e;
+  --ftl-footer-secondary: #00263a;
+  --ftl-footer-text: #fff;
+  --ftl-footer-link: #ffb380;
+  --ftl-footer-border: rgba(255, 255, 255, 0.1);
+  --ftl-footer-bottom-text: #b0b8be;
+
+  /* Base Colors */
+  --ftl-white: #fff;
+  --ftl-black: #000;
+
+  /* Hero Bubble Colors */
+  --ftl-bubble-1: #ffb3ba; /* Pink */
+  --ftl-bubble-2: #bae1ff; /* Blue */
+  --ftl-bubble-3: #baffc9; /* Green */
+  --ftl-bubble-4: #ffffba; /* Yellow */
+  --ftl-bubble-5: #ffdfba; /* Orange */
+  --ftl-bubble-6: #bdb2ff; /* Purple */
+  --ftl-bubble-7: #ffd6e0; /* Light Pink */
+
+  /* Shadow & Effect Colors */
+  --ftl-shadow-light: rgba(0, 51, 78, 0.08);
+  --ftl-shadow-dark: rgba(0, 0, 0, 0.04);
+  --ftl-shadow-hover: rgba(0, 0, 0, 0.15);
+}
+.ftl-gradient-btn {
+  background: var(--ftl-secondary);
+  border: none;
+  color: var(--ftl-white) !important;
+  transition: box-shadow 0.2s;
+}
+.ftl-gradient-btn:hover,
+.ftl-gradient-btn:focus {
+  box-shadow: 0 0.25em 1em var(--ftl-shadow-hover);
+  color: var(--ftl-white);
+}
+
+/* ===============================================
+   1. BASE STYLES
+   =============================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+.ftl-main-content {
+  overflow-x: hidden;
+}
+
+/* ===============================================
+   2. TYPOGRAPHY
+   =============================================== */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar,
+.btn {
+  font: normal normal normal 1rem/1.5 "Roboto", Arial, Helvetica, sans-serif !important;
+}
+
+.ftl-logo {
+  color: var(--ftl-primary);
+  font: 900 1.1rem/1.5 "Roboto", "Segoe UI", "Montserrat", Arial, sans-serif !important;
+  letter-spacing: 0.18em;
+  text-shadow: 0 0.125em 0.5em var(--ftl-shadow-light),
+    0 0.0625em 0 var(--ftl-white);
+  text-transform: uppercase;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.ftl-icon {
+  color: var(--ftl-secondary);
+  font-size: 2.5rem;
+}
+
+/* ===============================================
+   3. LAYOUT COMPONENTS
+   =============================================== */
+.ftl-section {
+  padding: 3.75em 0;
+}
+
+/* ===============================================
+   4. HERO SECTION & ANIMATIONS
+   =============================================== */
+.ftl-hero-bubbles {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.ftl-hero-bubbles span {
+  animation: bubbleMove 18s linear infinite;
+  border-radius: 50%;
+  display: block;
+  opacity: 0.18;
+  position: absolute;
+}
+
+.ftl-hero-bubbles span.bubble1 {
+  animation-delay: 0s;
+  background: var(--ftl-bubble-1);
+  bottom: -7.5em;
+  height: 7.5em;
+  left: 10%;
+  width: 7.5em;
+}
+
+.ftl-hero-bubbles span.bubble2 {
+  animation-delay: 3s;
+  background: var(--ftl-bubble-2);
+  bottom: -5em;
+  height: 5em;
+  left: 30%;
+  width: 5em;
+}
+
+.ftl-hero-bubbles span.bubble3 {
+  animation-delay: 6s;
+  background: var(--ftl-bubble-3);
+  bottom: -9.375em;
+  height: 9.375em;
+  left: 50%;
+  width: 9.375em;
+}
+
+.ftl-hero-bubbles span.bubble4 {
+  animation-delay: 1s;
+  background: var(--ftl-bubble-4);
+  bottom: -6.25em;
+  height: 6.25em;
+  left: 70%;
+  width: 6.25em;
+}
+
+.ftl-hero-bubbles span.bubble5 {
+  animation-delay: 5s;
+  background: var(--ftl-bubble-5);
+  bottom: -3.75em;
+  height: 3.75em;
+  left: 85%;
+  width: 3.75em;
+}
+
+.ftl-hero-bubbles span.bubble6 {
+  animation-delay: 8s;
+  background: var(--ftl-bubble-6);
+  bottom: -3.75em;
+  height: 3.75em;
+  left: 20%;
+  width: 3.75em;
+}
+
+.ftl-hero-bubbles span.bubble7 {
+  animation-delay: 10s;
+  background: var(--ftl-bubble-7);
+  bottom: -5.625em;
+  height: 5.625em;
+  left: 60%;
+  width: 5.625em;
+}
+
+@keyframes bubbleMove {
+  0% {
+    opacity: 0.18;
+    transform: translateY(0) scale(1);
+  }
+  70% {
+    opacity: 0.22;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-43.75em) scale(1.2);
+  }
+}
+
+/* ===============================================
+   5. NAVIGATION
+   =============================================== */
+.ftl-sticky-header {
+  background: var(--ftl-white) !important;
+  box-shadow: 0 0.125em 0.5em var(--ftl-shadow-dark);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* ===============================================
+   6. SECTIONS
+   =============================================== */
+/* Section styles can be added here as needed */
+
+/* ===============================================
+   7. FOOTER
+   =============================================== */
+.ftl-footer {
+  background: linear-gradient(
+    90deg,
+    var(--ftl-footer-primary) 0%,
+    var(--ftl-footer-secondary) 100%
+  );
+  border-top: 0.25em solid var(--ftl-secondary);
+  color: var(--ftl-footer-text);
+  padding: 3em 0 1.5em;
+}
+
+.ftl-footer h5,
+.ftl-footer h6 {
+  color: var(--ftl-footer-text);
+  margin: 0 0 1rem;
+}
+
+.ftl-footer a {
+  color: var(--ftl-footer-link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ftl-footer a:hover {
+  color: var(--ftl-secondary);
+  text-decoration: underline;
+}
+
+.ftl-footer .bi {
+  color: var(--ftl-secondary);
+  margin: 0 0.5rem 0 0;
+}
+
+.ftl-footer .list-unstyled li {
+  margin: 0 0 0.5rem;
+}
+
+.ftl-footer .footer-bottom {
+  border-top: 1px solid var(--ftl-footer-border);
+  color: var(--ftl-footer-bottom-text);
+  font-size: 0.95rem;
+  margin: 2rem 0 0;
+  padding: 1rem 0 0;
+}
+
+/* ===============================================
+   8. BUTTONS
+   =============================================== */
+.ftl-gradient-btn {
+  background: var(--ftl-secondary);
+  border: none;
+  color: var(--ftl-white) !important;
+  transition: box-shadow 0.2s;
+}
+
+.ftl-gradient-btn:hover,
+.ftl-gradient-btn:focus {
+  box-shadow: 0 0.25em 1em var(--ftl-shadow-hover);
+  color: var(--ftl-white);
+}
+
+/* ===============================================
+   9. UTILITY CLASSES
+   =============================================== */
+.ftl-bg-primary {
+  background-color: var(--ftl-primary) !important;
+}
+
+.ftl-bg-secondary {
+  background-color: var(--ftl-secondary) !important;
+}
+
+.ftl-text-primary {
+  color: var(--ftl-primary) !important;
+}
+
+.ftl-text-secondary {
+  color: var(--ftl-secondary) !important;
+}
