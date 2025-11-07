@@ -1,0 +1,640 @@
+
+/* ==================================================
+   QUICK REFERENCE & TABLE OF CONTENTS
+   ================================================== 
+   
+   📋 FILE STRUCTURE:
+   ├── 1. CSS Variables        - Custom properties & color scheme
+   ├── 2. Base Styles          - HTML, body, layout foundations
+   ├── 3. Left Sidebar         - Navigation icons & logo
+   ├── 4. Center Sidebar       - Members list, search, avatars
+   ├── 5. Main Chat Window     - Chat header, user info, actions
+   ├── 6. Chat Messages        - Message bubbles & content
+   ├── 7. Typing Indicator     - Animated typing dots
+   ├── 8. Chat Input           - Message input & controls
+   ├── 9. Animations           - Keyframe animations
+   ├── 10. Scrollbar Styles    - Custom scrollbar appearance
+   ├── 11. Responsive Design   - Mobile & tablet breakpoints
+   └── 12. Utility Classes     - Helper classes by category
+   
+   ================================================== */
+
+/* ==================================================
+   1. CSS Variables
+   ================================================== */
+:root {
+    /* Colors */
+    --ftl-primary-color: #13334C;
+    --ftl-white: #ffffff;
+    --ftl-light-bg: #f8f9fa;
+    --ftl-text-dark: #2c3e50;
+    --ftl-text-muted: #6c757d;
+    --ftl-border-color: #e9ecef;
+    
+    /* Status Colors */
+    --ftl-success-color: #28a745;
+    --ftl-warning-color: #ffc107;
+    --ftl-danger-color: #dc3545;
+    
+    /* Effects */
+    --ftl-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --ftl-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================================================
+   2. Base Styles & Layout
+   ================================================== */
+html, body {
+    background: var(--ftl-light-bg);
+    font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: 100vh;
+    padding: 0;
+}
+
+.row {
+    height: 100vh;
+    margin: 0;
+}
+
+.row > .col, 
+.row > .col-auto, 
+.row > .col-3 {
+    height: 100vh;
+    padding: 0;
+}
+
+/* ==================================================
+   3. Left Sidebar - Navigation Icons
+   ================================================== */
+.ftl-sidebar-icons {
+    background: var(--ftl-primary-color) !important;
+    border-right: 1px solid var(--ftl-border-color);
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+}
+
+.ftl-nav {
+    align-items: center;
+}
+
+.ftl-logo-icon {
+    color: var(--ftl-white);
+    font-size: 2rem;
+}
+
+.ftl-nav-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ftl-nav-link {
+    align-items: center;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    font-size: 1.2rem;
+    height: 50px;
+    justify-content: center;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 50px;
+}
+
+.ftl-nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--ftl-white);
+}
+
+.ftl-nav-link.active {
+    background: var(--ftl-white);
+    color: var(--ftl-primary-color);
+}
+
+/* ==================================================
+   4. Center Sidebar - Members List
+   ================================================== */
+.ftl-sidebar-members {
+    background: var(--ftl-white);
+    border-right: 1px solid var(--ftl-border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.ftl-members-header {
+    align-items: center;
+    background: var(--ftl-white);
+    display: flex;
+    justify-content: space-between;
+}
+
+.ftl-members-title {
+    color: var(--ftl-text-dark);
+    font-weight: 600;
+}
+
+/* Search Section */
+.ftl-search-container {
+    background: var(--ftl-light-bg);
+}
+
+.ftl-search-container .ftl-input-group {
+    position: relative;
+}
+
+.ftl-search-container .ftl-input-group-text {
+    background: transparent;
+    border: none;
+    color: var(--ftl-text-muted);
+    left: 12px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Form Controls */
+.ftl-form-control {
+    background: var(--ftl-white);
+    border: 1px solid var(--ftl-border-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    padding: 8px 16px 8px 40px;
+}
+
+.ftl-form-control:focus {
+    border-color: var(--ftl-primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(19, 51, 76, 0.25);
+    outline: none;
+}
+
+/* Members List Container */
+.ftl-members-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Member Items */
+.ftl-member-item {
+    align-items: center;
+    border-bottom: 1px solid var(--ftl-border-color);
+    cursor: pointer;
+    display: flex;
+    padding: 12px 16px;
+    transition: background-color 0.2s ease;
+}
+
+.ftl-member-item:hover {
+    background: var(--ftl-light-bg);
+}
+
+.ftl-member-item.active {
+    background: rgba(19, 51, 76, 0.1);
+    border-left: 3px solid var(--ftl-primary-color);
+}
+
+/* Avatar Components */
+.ftl-member-avatar {
+    margin-right: 12px;
+    position: relative;
+}
+
+.ftl-avatar {
+    border-radius: 50%;
+    height: 40px;
+    object-fit: cover;
+    width: 40px;
+}
+
+.ftl-group-avatar {
+    align-items: center;
+    background: var(--ftl-primary-color);
+    color: var(--ftl-white);
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+}
+
+/* Status Indicators */
+.ftl-status-online,
+.ftl-status-away,
+.ftl-status-offline {
+    border: 2px solid var(--ftl-white);
+    border-radius: 50%;
+    bottom: 0;
+    height: 12px;
+    position: absolute;
+    right: 0;
+    width: 12px;
+}
+
+.ftl-status-online {
+    background: var(--ftl-success-color);
+}
+
+.ftl-status-away {
+    background: var(--ftl-warning-color);
+}
+
+.ftl-status-offline {
+    background: var(--ftl-text-muted);
+}
+
+/* Member Information */
+.ftl-member-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ftl-member-name {
+    color: var(--ftl-text-dark);
+    font-weight: 600;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ftl-member-message {
+    color: var(--ftl-text-muted);
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Member Metadata */
+.ftl-member-meta {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.ftl-time {
+    color: var(--ftl-text-muted);
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+}
+
+.ftl-unread-badge {
+    background: var(--ftl-primary-color);
+    border-radius: 10px;
+    color: var(--ftl-white);
+    font-size: 0.7rem;
+    min-width: 18px;
+    padding: 2px 6px;
+    text-align: center;
+}
+
+/* ==================================================
+   5. Main Chat Window
+   ================================================== */
+.ftl-chat-window {
+    background: var(--ftl-white);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Header */
+.ftl-chat-header {
+    align-items: center;
+    background: var(--ftl-white);
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+.ftl-chat-user-info {
+    align-items: center;
+    display: flex;
+}
+
+.ftl-chat-avatar {
+    margin-right: 12px;
+    position: relative;
+}
+
+.ftl-chat-avatar .ftl-avatar {
+    height: 40px;
+    width: 40px;
+}
+
+.ftl-chat-user-name {
+    color: var(--ftl-text-dark);
+    font-weight: 600;
+}
+
+.ftl-chat-user-status {
+    color: var(--ftl-success-color);
+    font-size: 0.8rem;
+}
+
+.ftl-chat-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Button Components */
+.ftl-btn {
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--ftl-text-muted);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    transition: all 0.2s ease;
+}
+
+.ftl-btn:hover {
+    background: var(--ftl-light-bg);
+    color: var(--ftl-text-dark);
+}
+
+.ftl-btn-primary {
+    background: var(--ftl-primary-color);
+    color: var(--ftl-white);
+}
+
+.ftl-btn-primary:hover {
+    background: #0f2a3d;
+    color: var(--ftl-white);
+}
+
+/* ==================================================
+   6. Chat Messages Area
+   ================================================== */
+.ftl-chat-messages {
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+/* Message Container */
+.ftl-message {
+    animation: ftl-fadeIn 0.3s ease-in;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.ftl-message-received {
+    justify-content: flex-start;
+}
+
+.ftl-message-sent {
+    justify-content: flex-end;
+}
+
+/* Message Avatar */
+.ftl-message-avatar {
+    align-self: flex-end;
+    margin-right: 8px;
+}
+
+.ftl-message-avatar .ftl-avatar {
+    height: 32px;
+    width: 32px;
+}
+
+/* Message Content */
+.ftl-message-content {
+    max-width: 70%;
+}
+
+.ftl-message-sent .ftl-message-content {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message Bubble */
+.ftl-message-bubble {
+    border-radius: 18px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 12px 16px;
+    word-wrap: break-word;
+}
+
+.ftl-message-received .ftl-message-bubble {
+    background: var(--ftl-light-bg);
+    border-bottom-left-radius: 4px;
+    color: var(--ftl-text-dark);
+}
+
+.ftl-message-sent .ftl-message-bubble {
+    background: var(--ftl-primary-color);
+    border-bottom-right-radius: 4px;
+    color: var(--ftl-white);
+}
+
+.ftl-message-time {
+    color: var(--ftl-text-muted);
+    font-size: 0.75rem;
+    margin-top: 4px;
+    padding: 0 4px;
+}
+
+/* ==================================================
+   7. Typing Indicator
+   ================================================== */
+.ftl-typing-indicator {
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.ftl-typing-bubble {
+    background: var(--ftl-light-bg);
+    border-bottom-left-radius: 4px;
+    border-radius: 18px;
+    margin-left: 8px;
+    padding: 12px 16px;
+}
+
+.ftl-typing-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.ftl-typing-dots span {
+    animation: ftl-typing 1.4s infinite ease-in-out;
+    background: var(--ftl-text-muted);
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+.ftl-typing-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.ftl-typing-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+/* ==================================================
+   8. Chat Input Area
+   ================================================== */
+.ftl-chat-input {
+    align-items: center;
+    background: var(--ftl-white);
+    display: flex;
+    min-height: 70px;
+}
+
+.ftl-chat-input .input-group {
+    gap: 8px;
+}
+
+.ftl-message-input {
+    border: 1px solid var(--ftl-border-color);
+    border-radius: 20px;
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 10px 16px;
+}
+
+.ftl-message-input:focus {
+    border-color: var(--ftl-primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(19, 51, 76, 0.25);
+    outline: none;
+}
+
+/* ==================================================
+   9. Animations & Effects
+   ================================================== */
+
+/* Fade In Animation */
+@keyframes ftl-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing Animation */
+@keyframes ftl-typing {
+    0%, 80%, 100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==================================================
+   10. Scrollbar Styles
+   ================================================== */
+.ftl-members-list::-webkit-scrollbar,
+.ftl-chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ftl-members-list::-webkit-scrollbar-track,
+.ftl-chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ftl-members-list::-webkit-scrollbar-thumb,
+.ftl-chat-messages::-webkit-scrollbar-thumb {
+    background: var(--ftl-border-color);
+    border-radius: 3px;
+}
+
+.ftl-members-list::-webkit-scrollbar-thumb:hover,
+.ftl-chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--ftl-text-muted);
+}
+
+/* ==================================================
+   11. Responsive Design
+   ================================================== */
+
+/* Tablet & Mobile - 768px and below */
+@media (max-width: 768px) {
+    .ftl-sidebar-members {
+        left: -100%;
+        position: absolute;
+        transition: left 0.3s ease;
+        width: 280px;
+        z-index: 1000;
+    }
+    
+    .ftl-sidebar-members.show {
+        left: 70px;
+    }
+    
+    .ftl-chat-window {
+        margin-left: 0;
+    }
+    
+    .ftl-message-content {
+        max-width: 85%;
+    }
+}
+
+/* Mobile - 576px and below */
+@media (max-width: 576px) {
+    .ftl-sidebar-icons {
+        width: 60px;
+    }
+    
+    .ftl-nav-link {
+        font-size: 1rem;
+        height: 40px;
+        width: 40px;
+    }
+    
+    .ftl-logo-icon {
+        font-size: 1.5rem;
+    }
+    
+    .ftl-sidebar-members.show {
+        left: 60px;
+        width: calc(100vw - 60px);
+    }
+}
+
+/* ==================================================
+   12. Utility Classes
+   ================================================== */
+
+/* Background Utilities */
+.ftl-bg-primary {
+    background: var(--ftl-primary-color) !important;
+}
+
+/* Border Utilities */
+.ftl-border-primary {
+    border-color: var(--ftl-primary-color) !important;
+}
+
+/* Shadow Utilities */
+.ftl-shadow {
+    box-shadow: var(--ftl-shadow) !important;
+}
+
+.ftl-shadow-lg {
+    box-shadow: var(--ftl-shadow-lg) !important;
+}
+
+/* Text Utilities */
+.ftl-text-primary {
+    color: var(--ftl-primary-color) !important;
+}

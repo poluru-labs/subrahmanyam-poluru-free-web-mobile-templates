@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subrahmanyam Poluru - Teams Style Chat Template</title>
+        <meta author="Subrahmanyam Poluru">
+        <meta name="description" content="A modern chat theme built with Bootstrap 5">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body id="polurus-chat-app">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <!-- Icons Sidebar -->
+                <div class="col-auto ftl-sidebar-icons">
+                    <div class="d-flex flex-column h-100 ftl-nav">
+                        <div class="p-3 ftl-nav-item">
+                            <div class="text-center mb-4 ftl-logo">
+                                <i class="bi bi-chat-dots-fill ftl-logo-icon"></i>
+                            </div>
+                        </div>
+                        <div class="ftl-nav-item">
+                            <a
+                                href="#"
+                                class="ftl-nav-link active"
+                                data-section="activity"
+                                title="Activity"
+                            >
+                                <i class="bi bi-bell-fill"></i>
+                            </a>
+                        </div>
+                        <div class="ftl-nav-item">
+                            <a
+                                href="#"
+                                class="ftl-nav-link"
+                                data-section="chats"
+                                title="Chats"
+                            >
+                                <i class="bi bi-chat-fill"></i>
+                            </a>
+                        </div>
+                        <div class="ftl-nav-item">
+                            <a
+                                href="#"
+                                class="ftl-nav-link"
+                                data-section="calendar"
+                                title="Calendar"
+                            >
+                                <i class="bi bi-calendar-fill"></i>
+                            </a>
+                        </div>
+                        <div class="ftl-nav-item">
+                            <a
+                                href="#"
+                                class="ftl-nav-link"
+                                data-section="groups"
+                                title="Groups"
+                            >
+                                <i class="bi bi-people-fill"></i>
+                            </a>
+                        </div>
+                        <div class="mt-auto p-3 ftl-nav-item">
+                            <a href="#" class="ftl-nav-link" title="Settings">
+                                <i class="bi bi-gear-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Members Sidebar -->
+                <div class="col-3 ftl-sidebar-members">
+                    <div class="p-3 border-bottom ftl-members-header">
+                        <h5 class="mb-0 ftl-members-title">Messages</h5>
+                        <button class="btn btn-sm ftl-btn" type="button">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                    </div>
+                    <div class="p-3 ftl-search-container">
+                        <div class="input-group ftl-input-group">
+                            <span class="input-group-text ftl-input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control ftl-form-control" placeholder="Search conversations...">
+                        </div>
+                    </div>
+                    <div class="ftl-members-list">
+                        <!-- Active Chat Item -->
+                        <div class="ftl-member-item active" data-chat="elon">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Elon Musk" class="ftl-avatar">
+                                <span class="ftl-status-online"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Elon Musk</div>
+                                <div class="ftl-member-message">Lorem ipsum dolor sit amet...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">2:30 PM</span>
+                                <span class="ftl-unread-badge">2</span>
+                            </div>
+                        </div>
+                        <!-- Other Chat Items -->
+                        <div class="ftl-member-item" data-chat="tim">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Tim Cook" class="ftl-avatar">
+                                <span class="ftl-status-online"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Tim Cook</div>
+                                <div class="ftl-member-message">Consectetur adipiscing elit...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">1:15 PM</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="satya">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Satya Nadella" class="ftl-avatar">
+                                <span class="ftl-status-online"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Satya Nadella</div>
+                                <div class="ftl-member-message">Sed do eiusmod tempor...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">12:45 PM</span>
+                                <span class="ftl-unread-badge">3</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="sundar">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Sundar Pichai" class="ftl-avatar">
+                                <span class="ftl-status-away"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Sundar Pichai</div>
+                                <div class="ftl-member-message">Incididunt ut labore...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">11:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="jensen">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Jensen Huang" class="ftl-avatar">
+                                <span class="ftl-status-online"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Jensen Huang</div>
+                                <div class="ftl-member-message">Ut enim ad minim veniam...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">10:15 AM</span>
+                                <span class="ftl-unread-badge">1</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="andy">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Andy Jassy" class="ftl-avatar">
+                                <span class="ftl-status-away"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Andy Jassy</div>
+                                <div class="ftl-member-message">Quis nostrud exercitation...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">9:45 AM</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="mark">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Mark Zuckerberg" class="ftl-avatar">
+                                <span class="ftl-status-online"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Mark Zuckerberg</div>
+                                <div class="ftl-member-message">Ullamco laboris nisi...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="jamie">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Jamie Dimon" class="ftl-avatar">
+                                <span class="ftl-status-offline"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Jamie Dimon</div>
+                                <div class="ftl-member-message">Duis aute irure dolor...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="warren">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Warren Buffett" class="ftl-avatar">
+                                <span class="ftl-status-away"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Warren Buffett</div>
+                                <div class="ftl-member-message">In reprehenderit in voluptate...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="reed">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Reed Hastings" class="ftl-avatar">
+                                <span class="ftl-status-offline"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Reed Hastings</div>
+                                <div class="ftl-member-message">Velit esse cillum dolore...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="mary">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Mary Barra" class="ftl-avatar">
+                                <span class="ftl-status-online"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Mary Barra</div>
+                                <div class="ftl-member-message">Eu fugiat nulla pariatur...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="bernard">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Bernard Arnault" class="ftl-avatar">
+                                <span class="ftl-status-away"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Bernard Arnault</div>
+                                <div class="ftl-member-message">Excepteur sint occaecat...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="susan">
+                            <div class="ftl-member-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Susan Wojcicki" class="ftl-avatar">
+                                <span class="ftl-status-offline"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Susan Wojcicki</div>
+                                <div class="ftl-member-message">Cupidatat non proident...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="ftl-member-item" data-chat="team">
+                            <div class="ftl-member-avatar">
+                                <div class="ftl-avatar ftl-group-avatar">
+                                    <i class="bi bi-people-fill"></i>
+                                </div>
+                                <span class="ftl-status-away"></span>
+                            </div>
+                            <div class="ftl-member-info">
+                                <div class="ftl-member-name">Fortune 500 CEOs</div>
+                                <div class="ftl-member-message">Sunt in culpa qui officia...</div>
+                            </div>
+                            <div class="ftl-member-meta">
+                                <span class="ftl-time">3 days ago</span>
+                                <span class="ftl-unread-badge">12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chat Window -->
+                <div class="col ftl-chat-window">
+                    <!-- Chat Header -->
+                    <div class="p-3 border-bottom ftl-chat-header">
+                        <div class="ftl-chat-user-info">
+                            <div class="ftl-chat-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Elon Musk" class="ftl-avatar">
+                                <span class="ftl-status-online"></span>
+                            </div>
+                            <div class="ftl-chat-user-details">
+                                <h6 class="mb-0 ftl-chat-user-name">Elon Musk</h6>
+                                <small class="text-muted ftl-chat-user-status">Active now</small>
+                            </div>
+                        </div>
+                        <div class="ftl-chat-actions">
+                            <button class="btn btn-sm ftl-btn" type="button" title="Voice call">
+                                <i class="bi bi-telephone-fill"></i>
+                            </button>
+                            <button class="btn btn-sm ftl-btn" type="button" title="Video call">
+                                <i class="bi bi-camera-video-fill"></i>
+                            </button>
+                            <button class="btn btn-sm ftl-btn" type="button" title="More options">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Chat Messages -->
+                    <div class="flex-grow-1 ftl-chat-messages">
+                        <div class="ftl-message ftl-message-received">
+                            <div class="ftl-message-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Elon Musk" class="ftl-avatar">
+                            </div>
+                            <div class="ftl-message-content">
+                                <div class="ftl-message-bubble">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                                <div class="ftl-message-time">2:30 PM</div>
+                            </div>
+                        </div>
+                        <div class="ftl-message ftl-message-sent">
+                            <div class="ftl-message-content">
+                                <div class="ftl-message-bubble">
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                                <div class="ftl-message-time">2:32 PM</div>
+                            </div>
+                        </div>
+                        <div class="ftl-message ftl-message-received">
+                            <div class="ftl-message-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Elon Musk" class="ftl-avatar">
+                            </div>
+                            <div class="ftl-message-content">
+                                <div class="ftl-message-bubble">
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                                </div>
+                                <div class="ftl-message-time">2:35 PM</div>
+                            </div>
+                        </div>
+                        <div class="ftl-message ftl-message-sent">
+                            <div class="ftl-message-content">
+                                <div class="ftl-message-bubble">
+                                    Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                                </div>
+                                <div class="ftl-message-time">2:36 PM</div>
+                            </div>
+                        </div>
+                        <div class="ftl-message ftl-message-received">
+                            <div class="ftl-message-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Elon Musk" class="ftl-avatar">
+                            </div>
+                            <div class="ftl-message-content">
+                                <div class="ftl-message-bubble">
+                                    Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                                </div>
+                                <div class="ftl-message-time">2:37 PM</div>
+                            </div>
+                        </div>
+                        <!-- Typing Indicator -->
+                        <div class="ftl-typing-indicator">
+                            <div class="ftl-message-avatar">
+                                <img src="https://api.polurus.com/images/polurus.png" alt="Elon Musk" class="ftl-avatar">
+                            </div>
+                            <div class="ftl-typing-bubble">
+                                <div class="ftl-typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chat Input -->
+                    <div class="p-3 border-top ftl-chat-input">
+                        <div class="input-group ftl-input-group">
+                            <button class="btn btn-sm ftl-btn" type="button" title="Attach file">
+                                <i class="bi bi-paperclip"></i>
+                            </button>
+                            <input type="text" class="form-control ftl-form-control ftl-message-input" placeholder="Type a message...">
+                            <button class="btn btn-sm ftl-btn" type="button" title="Emoji">
+                                <i class="bi bi-emoji-smile"></i>
+                            </button>
+                            <button class="btn ftl-btn ftl-btn-primary" type="button" title="Send message">
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap 5 JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JavaScript -->
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>
