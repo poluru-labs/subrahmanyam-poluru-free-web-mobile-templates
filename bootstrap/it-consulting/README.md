@@ -7,6 +7,9 @@
 
 A modern, responsive Bootstrap 5 consulting template perfect for consulting firms, business services, and professional agencies. Features optimized CSS with em units, shorthand properties, and comprehensive documentation.
 
+<img width="1733" height="4150" alt="it-consulting-web-template" src="https://github.com/user-attachments/assets/c101a662-c992-4395-8f30-35734a0b8ba0" />
+
+
 > ⭐ **Love this template?** Please share your feedback at **mail.spoluru@gmail.com** and consider giving us a star!
 
 ## 📋 Template Information
