@@ -1,0 +1,930 @@
+/*!
+ * Free Template - Professional Consulting Services Template
+ * Version: 1.0.0
+ * Author: Subrahmanyam Poluru
+ * Website: https://polurus.com
+ * Email: mail.spoluru@gmail.com
+ * License: Free for Personal and Commercial Use
+ * Created: October 2025
+ * Updated: November 2025
+ */
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #545454;
+    font: 400 1em/1.80857 "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+
+/* Top Header Bar
+   -------------------------------- */
+.ftpl-top-header {
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    font: 100 1em/1 "Roboto", sans-serif;
+    padding: 0.625em 0;
+}
+
+.ftpl-top-header a {
+    color: #000;
+    font: 100 1em/1 "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+/* Brand Logo & Text Styles
+   -------------------------------- */
+.ftpl-text-logo {
+    display: inline-block;
+    filter: drop-shadow(0 0.125em 0.25em rgba(0,0,0,0.1));
+    padding: 0.5em 0;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.ftpl-brand-text {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #2c3e50;
+    font: 800 2.2em/1 "Roboto", sans-serif;
+    letter-spacing: -0.0625em;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    -webkit-text-fill-color: transparent;
+}
+
+.ftpl-brand-highlight {
+    background: linear-gradient(45deg, #ff914d, #ff7a2d) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: #ff914d;
+    font-weight: 300;
+    margin-left: 0.125em;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.ftpl-text-logo:hover {
+    filter: drop-shadow(0 0.25em 0.5em rgba(255,145,77,0.2));
+    transform: translateY(-0.0625em);
+}
+
+.ftpl-text-logo:hover .ftpl-brand-text {
+    color: #ff914d;
+    transform: translateY(-0.0625em);
+}
+
+.ftpl-text-logo:hover .ftpl-brand-highlight {
+    color: #2c3e50;
+}
+
+/* Browser Fallback for Background-Clip
+   -------------------------------- */
+@supports not (-webkit-background-clip: text) {
+    .ftpl-brand-text {
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        background-clip: unset !important;
+        color: #2c3e50 !important;
+        -webkit-text-fill-color: #2c3e50 !important;
+    }
+    
+    .ftpl-brand-highlight {
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        background-clip: unset !important;
+        color: #ff914d !important;
+        -webkit-text-fill-color: #ff914d !important;
+    }
+}
+
+/* Navigation Menu Styles
+   -------------------------------- */
+header .nav-item {
+    padding-right: 1.25em;
+}
+
+header .nav-link {
+    color: #545454 !important;
+    font-size: 1.25em;
+}
+
+header .nav-item a:hover, 
+header .nav-item .active {
+    color: #ff914d !important;
+}
+
+.collapse a {
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   HERO BANNER SECTION
+   ========================================================================== */
+
+/* Main Banner Container
+   -------------------------------- */
+#banner {
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(255,145,77,0.8) 100%), url(../images/main_banner.jpg) center/cover no-repeat;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#banner .overlay {
+    width: 100%;
+}
+
+#banner h1 {
+    color: #fff;
+    font: 700 3.5em/1.2 "Roboto", sans-serif;
+    margin-bottom: 2em;
+    text-shadow: 0.125em 0.25em 0.5em rgba(0,0,0,0.3);
+}
+
+#banner h1 .highlight {
+    color: #ff914d;
+    display: block;
+    font-weight: 300;
+}
+
+#banner .lead {
+    color: #fff;
+    font: 300 1.3em/1.4 "Roboto", sans-serif;
+    margin: 0 auto 3em auto;
+    max-width: 50em;
+    text-shadow: 0.0625em 0.125em 0.25em rgba(0,0,0,0.3);
+}
+
+/* Hero Button Styles
+   -------------------------------- */
+#banner .hero-buttons {
+    margin-top: 2em;
+}
+
+#banner .btn {
+    border-radius: 3.125em;
+    font: 600 1.1em/1 "Roboto", sans-serif;
+    letter-spacing: 0.0625em;
+    padding: 1.125em 2.5em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+#banner .btn-primary {
+    background: linear-gradient(45deg, #ff914d, #ff7a2d);
+    border: none;
+    box-shadow: 0 0.5em 1.5625em rgba(255,145,77,0.3);
+}
+
+#banner .btn-primary:hover {
+    box-shadow: 0 0.75em 2.1875em rgba(255,145,77,0.4);
+    transform: translateY(-0.1875em);
+}
+
+#banner .btn-outline-light {
+    background: transparent;
+    border: 0.125em solid #fff;
+    color: #fff;
+}
+
+#banner .btn-outline-light:hover {
+    background: #fff;
+    color: #333;
+    transform: translateY(-0.1875em);
+}
+
+
+/* ==========================================================================
+   STATISTICS SECTION
+   ========================================================================== */
+
+/* Stats Container
+   -------------------------------- */
+#stats {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+/* Individual Stat Items
+   -------------------------------- */
+.ftpl-stat-item {
+    padding: 2em 1em;
+}
+
+.ftpl-stat-number {
+    color: #fff;
+    font: 700 3em/1 "Roboto", sans-serif;
+    margin-bottom: 0.5em;
+}
+
+.ftpl-stat-label {
+    font: 300 1.1em/1.2 "Roboto", sans-serif;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   SECTION HEADERS & TYPOGRAPHY
+   ========================================================================== */
+
+/* Common Section Header Container
+   -------------------------------- */
+.ftpl-section-header {
+    margin-bottom: 4em;
+}
+
+/* Main Section Titles
+   -------------------------------- */
+.ftpl-our-text {
+    color: #2c3e50;
+    font: 600 2.8em/1.2 "Roboto", sans-serif;
+    margin-bottom: 1em;
+}
+
+.ftpl-our-text span {
+    background: linear-gradient(45deg, #ff914d, #ff7a2d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Section Divider Line
+   -------------------------------- */
+.ftpl-section-divider {
+    background: linear-gradient(45deg, #ff914d, #ff7a2d);
+    border-radius: 0.125em;
+    height: 0.25em;
+    width: 5em;
+}
+
+/* Section Description Text
+   -------------------------------- */
+.ftpl-section-description {
+    color: #6c757d;
+    font: 300 1.2em/1.5 "Roboto", sans-serif;
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+/* ==========================================================================
+   SERVICES SECTION
+   ========================================================================== */
+
+/* Services Container
+   -------------------------------- */
+#services {
+    background: #f8f9fa;
+    padding: 5em 0;
+}
+
+/* Service Card Components
+   -------------------------------- */
+.ftpl-service-card {
+    border-radius: 1.25em;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.ftpl-service-card:hover {
+    box-shadow: 0 1.25em 2.5em rgba(0,0,0,0.1) !important;
+    transform: translateY(-0.625em);
+}
+
+.ftpl-service-card::before {
+    background: linear-gradient(45deg, #ff914d, #ff7a2d);
+    content: '';
+    height: 0.25em;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.ftpl-service-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Service Card Elements
+   -------------------------------- */
+.ftpl-service-icon {
+    align-items: center;
+    background: linear-gradient(135deg, #ff914d, #ff7a2d);
+    border-radius: 1.25em;
+    display: flex;
+    height: 5em;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    width: 5em;
+}
+
+.ftpl-service-icon i {
+    color: #fff;
+    font-size: 2em;
+}
+
+.ftpl-service-title {
+    color: #2c3e50;
+    font: 600 1.5em/1.2 "Roboto", sans-serif;
+    margin-bottom: 1em;
+}
+
+.ftpl-service-title span {
+    color: #ff914d;
+}
+
+.ftpl-service-description {
+    color: #6c757d;
+    font: 400 1em/1.6 "Roboto", sans-serif;
+    margin-bottom: 1.5em;
+}
+
+/* Service Features List
+   -------------------------------- */
+.ftpl-service-features {
+    list-style: none;
+    margin-bottom: 2em;
+    padding: 0;
+}
+
+.ftpl-service-features li {
+    color: #495057;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.ftpl-service-features li::before {
+    color: #ff914d;
+    content: '✓';
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+}
+
+/* Service Action Links
+   -------------------------------- */
+.ftpl-service-link {
+    color: #ff914d;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ftpl-service-link:hover {
+    color: #ff7a2d;
+    text-decoration: none;
+}
+
+.ftpl-service-link i {
+    margin-left: 0.5em;
+    transition: transform 0.3s ease;
+}
+
+.ftpl-service-link:hover i {
+    transform: translateX(0.1875em);
+}
+
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+
+/* About Section Container
+   -------------------------------- */
+#about {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #fff;
+    padding: 6em 0;
+    position: relative;
+}
+
+#about::before {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#about .container {
+    position: relative;
+    z-index: 2;
+}
+
+#about h3 {
+    color: #fff;
+    font: 600 2.5em/1.2 "Roboto", sans-serif;
+    margin-bottom: 2em;
+}
+
+/* About Features & Content
+   -------------------------------- */
+.ftpl-about-features .ftpl-feature-item {
+    align-items: center;
+    color: #ecf0f1;
+    display: flex;
+    font-weight: 500;
+}
+
+.ftpl-about-features .ftpl-feature-item i {
+    color: #ff914d;
+    margin-right: 1em;
+}
+
+/* About Image Placeholder
+   -------------------------------- */
+.ftpl-about-image .ftpl-image-placeholder {
+    backdrop-filter: blur(0.625em);
+    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.ftpl-about-image .ftpl-image-placeholder i {
+    color: #ff914d;
+}
+
+.ftpl-about-image .ftpl-image-placeholder h5 {
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.ftpl-about-image .ftpl-image-placeholder p {
+    color: #ecf0f1;
+    margin: 0;
+}
+
+/* ==========================================================================
+   CONTENT IMAGE HEADER
+   ========================================================================== */
+
+/* Page Header with Background
+   -------------------------------- */
+.ftpl-content-img {
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff914d 100%);
+    display: flex;
+    justify-content: center;
+    min-height: 25em;
+    overflow: hidden;
+    position: relative;
+}
+
+.ftpl-content-img::before {
+    background: rgba(0,0,0,0.4);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.ftpl-content-img .container {
+    position: relative;
+    z-index: 2;
+}
+
+.ftpl-content-img h1, 
+.ftpl-content-img h3 {
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0.125em 0.25em 0.5em rgba(0,0,0,0.3);
+}
+
+.ftpl-content-img h1 {
+    font-size: 3.5em;
+    margin-bottom: 1em;
+}
+
+.ftpl-content-img h3 {
+    font-size: 2.8em;
+    margin-bottom: 1em;
+}
+
+.ftpl-content-img p {
+    color: #fff;
+    font: 300 1.3em/1.4 "Roboto", sans-serif;
+    margin: 0;
+    opacity: 0.9;
+    text-align: center;
+    text-shadow: 0.0625em 0.125em 0.25em rgba(0,0,0,0.3);
+}
+
+/* Animated Background Pattern
+   -------------------------------- */
+.ftpl-content-img::after {
+    animation: float 20s ease-in-out infinite;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0.125em, transparent 0.125em),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0.125em, transparent 0.125em),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.1) 0.125em, transparent 0.125em);
+    background-size: 6.25em 6.25em, 9.375em 9.375em, 12.5em 12.5em;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* Float Animation Keyframes
+   -------------------------------- */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-1.25em) rotate(180deg); }
+}
+
+/* ==========================================================================
+   GENERAL CONTENT SECTIONS
+   ========================================================================== */
+
+/* Content Typography
+   -------------------------------- */
+#about p, 
+#content p, 
+#content ul li {
+    font: 300 1.5em/1.6 "Roboto", sans-serif;
+}
+
+/* Content Links
+   -------------------------------- */
+#content a {
+    color: #ff914d;
+    text-transform: lowercase;
+}
+
+/* About Section Buttons
+   -------------------------------- */
+#about .btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 0.9375em 3.75em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   ADDRESS & CONTACT SECTION
+   ========================================================================== */
+
+/* Address Section Container
+   -------------------------------- */
+#address {
+    background-color: #545454;
+    padding: 3.75em 0;
+}
+
+/* Address Content Elements
+   -------------------------------- */
+#address h2 {
+    color: #fff;
+    margin-bottom: 1.875em;
+    width: 10%;
+}
+
+#address .col-lg-4 {
+    color: #fff;
+    font: 100 1.25em/1.4 "Roboto", sans-serif;
+}
+
+#address .col-lg-4 p {
+    line-height: 0.09375em;
+    padding-top: 0.625em;
+}
+
+#address .col-lg-4 i {
+    color: #ff914d;
+    font-size: 3.125em;
+}
+
+#address .col-lg-4 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   SITE FOOTER
+   ========================================================================== */
+
+/* Main Footer Container
+   -------------------------------- */
+footer {
+    background-color: #ff914d;
+    color: #fff;
+    font: 100 1.25em/1.2 "Roboto", sans-serif;
+    margin-bottom: 0;
+    padding: 0.625em;
+}
+
+/* ==========================================================================
+   CLIENT LOGOS SECTION
+   ========================================================================== */
+
+/* Clients Container
+   -------------------------------- */
+#clients {
+    margin: 3em 0;
+}
+
+/* Individual Client Logo Items
+   -------------------------------- */
+.ftpl-client-logo {
+    align-items: center;
+    display: flex;
+    height: 6.25em;
+    justify-content: center;
+    padding: 1em;
+    transition: all 0.3s ease;
+}
+
+.ftpl-client-logo img {
+    filter: grayscale(100%);
+    max-height: 3.75em;
+    max-width: 7.5em;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.ftpl-client-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablet & Medium Devices (768px and below)
+   -------------------------------- */
+@media only screen and (max-width: 768px) {
+    .ftpl-brand-text {
+        font-size: 1.8em;
+    }
+
+    #banner {
+        height: 80vh;
+        padding: 2em 0;
+    }
+    
+    #banner h1 {
+        font-size: 2.5em;
+        margin-bottom: 1.5em;
+    }
+
+    #banner .lead {
+        font-size: 1.1em;
+        margin-bottom: 2em;
+    }
+
+    #banner .hero-buttons {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #banner .btn {
+        margin: 0.5em 0;
+        padding: 0.9375em 1.875em;
+    }
+
+    .ftpl-our-text {
+        font-size: 2.2em;
+    }
+
+    .ftpl-service-card {
+        margin-bottom: 2em;
+    }
+
+    .ftpl-stat-number {
+        font-size: 2.5em;
+    }
+
+    #about h3 {
+        font-size: 2em;
+    }
+
+    #address .col-lg-4 {
+        margin-bottom: 2em;
+    }
+}
+
+/* Mobile Devices (576px and below)
+   -------------------------------- */
+@media only screen and (max-width: 576px) {
+    .ftpl-brand-text {
+        font-size: 1.5em;
+        letter-spacing: -0.03125em;
+    }
+
+    #banner h1 {
+        font-size: 2em;
+    }
+
+    #banner .lead {
+        font-size: 1em;
+    }
+
+    .ftpl-our-text {
+        font-size: 1.8em;
+    }
+
+    .ftpl-service-icon {
+        height: 3.75em;
+        width: 3.75em;
+    }
+
+    .ftpl-service-icon i {
+        font-size: 1.5em;
+    }
+
+    .ftpl-service-title {
+        font-size: 1.3em;
+    }
+
+    .ftpl-stat-number {
+        font-size: 2em;
+    }
+
+    #about {
+        padding: 3em 0;
+    }
+
+    #about h3 {
+        font-size: 1.8em;
+    }
+
+    .ftpl-client-logo img {
+        max-height: 2.5em;
+        max-width: 5em;
+    }
+
+    .ftpl-content-img {
+        min-height: 18.75em;
+    }
+
+    .ftpl-content-img h1 {
+        font-size: 2.5em;
+    }
+
+    .ftpl-content-img h3 {
+        font-size: 2em;
+    }
+
+    .ftpl-content-img p {
+        font-size: 1.1em;
+        padding: 0 1em;
+    }
+}
+
+/* ==========================================================================
+   BREADCRUMB NAVIGATION
+   ========================================================================== */
+
+/* Breadcrumb Container
+   -------------------------------- */
+.ftpl-breadcrumb {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1em 0;
+}
+
+/* Breadcrumb Navigation Elements
+   -------------------------------- */
+.ftpl-breadcrumb-nav {
+    font-size: 0.9em;
+}
+
+.ftpl-breadcrumb-item {
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ftpl-breadcrumb-item:hover {
+    color: #ff914d;
+    text-decoration: none;
+}
+
+.ftpl-breadcrumb-item.active {
+    color: #ff914d;
+    font-weight: 600;
+}
+
+.ftpl-breadcrumb-separator {
+    color: #adb5bd;
+    margin: 0 0.5em;
+}
+
+/* ==========================================================================
+   CONTACT PAGE COMPONENTS
+   ========================================================================== */
+
+/* Contact Information Section
+   -------------------------------- */
+.ftpl-contact-info {
+    position: sticky;
+    top: 2em;
+}
+
+.ftpl-contact-item {
+    align-items: flex-start;
+    display: flex;
+    gap: 1em;
+}
+
+.ftpl-contact-icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 3.75em;
+}
+
+.ftpl-contact-details h5 {
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+}
+
+/* Social Media Links
+   -------------------------------- */
+.ftpl-social-links .ftpl-social-link {
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.ftpl-social-links .ftpl-social-link:hover {
+    color: #ff914d;
+    transform: translateY(-0.1875em);
+}
+
+/* FAQ Section Items
+   -------------------------------- */
+.ftpl-faq-item h5 {
+    margin-bottom: 1em;
+}
+
+.ftpl-faq-item p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   FORM ELEMENTS & INPUT STYLES
+   ========================================================================== */
+
+/* Form Input Focus States
+   -------------------------------- */
+.form-control:focus,
+.form-select:focus {
+    border-color: #ff914d;
+    box-shadow: 0 0 0 0.2em rgba(255,145,77,0.25);
+}
+
+/* Primary Button Styles
+   -------------------------------- */
+.btn-primary {
+    background: linear-gradient(45deg, #ff914d, #ff7a2d);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0.5em 1.5625em rgba(255,145,77,0.3);
+    transform: translateY(-0.125em);
+}
+
+/* Form Validation States
+   -------------------------------- */
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+    border-color: #28a745;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    border-color: #dc3545;
+}
