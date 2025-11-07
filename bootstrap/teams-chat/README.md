@@ -2,6 +2,8 @@
 
 A modern, responsive chat messages interface built with Bootstrap 5, Bootstrap Icons, and professionally organized custom CSS. Features a clean design with sidebar navigation, member list, and real-time messaging interface. All content uses Lorem Ipsum text for template demonstration purposes.
 
+<img width="1723" height="919" alt="teams-chat-free-template" src="https://github.com/user-attachments/assets/288d4af2-7419-4ffe-a750-86a63c110780" />
+
 ## 🚀 Features
 
 - **Modern Chat Interface**: Clean and intuitive design for seamless messaging
