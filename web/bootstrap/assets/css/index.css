@@ -1,0 +1,271 @@
+/*!
+ * Bootstrap Templates Index
+ * Author: Subrahmanyam Poluru
+ * Website: https://polurus.com
+ */
+
+/* ==========================================================================
+   CSS VARIABLES
+   ========================================================================== */
+
+:root {
+  --brand-primary:     #00334e;
+  --brand-accent:      #ff4e00;
+  --brand-accent-soft: #fff1ec;
+  --brand-dark:        #001f30;
+  --brand-text:        #2c3e50;
+  --brand-muted:       #6c757d;
+  --brand-border:      #e4e8ec;
+  --brand-bg:          #f5f7f9;
+  --brand-white:       #ffffff;
+  --brand-card-shadow: 0 2px 12px rgba(0, 51, 78, 0.08);
+  --brand-card-hover:  0 8px 28px rgba(0, 51, 78, 0.14);
+  --radius-card:       12px;
+  --transition-speed:  0.22s;
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+
+.site-navbar {
+  background-color: var(--brand-primary);
+  border-bottom: 3px solid var(--brand-accent);
+  padding: 0.75rem 2rem;
+}
+
+.site-navbar .navbar-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--brand-white);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.site-navbar .navbar-brand span {
+  color: var(--brand-accent);
+}
+
+.site-navbar .navbar-brand i {
+  color: var(--brand-accent);
+}
+
+/* ==========================================================================
+   HERO / PAGE HEADER
+   ========================================================================== */
+
+.page-header {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-dark) 100%);
+  padding: 4rem 2rem 3.5rem;
+  text-align: center;
+  color: var(--brand-white);
+}
+
+.page-header .badge-label {
+  display: inline-block;
+  background-color: var(--brand-accent);
+  color: var(--brand-white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3em 0.85em;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.page-header h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--brand-white);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.page-header h1 span {
+  color: var(--brand-accent);
+}
+
+.page-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   SECTION
+   ========================================================================== */
+
+.templates-section {
+  padding: 3.5rem 0 4rem;
+}
+
+.section-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--brand-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.section-count span {
+  color: var(--brand-accent);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   TEMPLATE CARD
+   ========================================================================== */
+
+.template-card {
+  background-color: var(--brand-white);
+  border: 1px solid var(--brand-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--brand-card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
+
+.template-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--brand-card-hover);
+}
+
+.card-icon-wrap {
+  background-color: var(--brand-accent-soft);
+  padding: 1.5rem 1.75rem 1rem;
+  border-bottom: 1px solid var(--brand-border);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-icon-wrap i {
+  font-size: 2rem;
+  color: var(--brand-accent);
+}
+
+.card-icon-wrap .card-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-accent);
+  background-color: var(--brand-white);
+  border: 1px solid var(--brand-accent);
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  margin-left: auto;
+}
+
+.card-body-custom {
+  padding: 1.5rem 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body-custom h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 0.4rem;
+}
+
+.card-body-custom p {
+  font-size: 0.9rem;
+  color: var(--brand-muted);
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.card-meta .pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--brand-primary);
+  background-color: #e8f0f5;
+  padding: 0.25em 0.65em;
+  border-radius: 50px;
+}
+
+.btn-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--brand-primary);
+  color: var(--brand-white);
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.btn-preview:hover,
+.btn-preview:focus {
+  background-color: var(--brand-accent);
+  color: var(--brand-white);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--brand-primary);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border-top: 3px solid var(--brand-accent);
+}
+
+.site-footer a {
+  color: var(--brand-accent);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
