@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Modern ecommerce admin dashboard template built with Bootstrap 5, Bootstrap Icons, and Inter (Google Fonts)." />
+  <title>ShopRaja — Ecommerce Admin Dashboard</title>
+
+  <!-- Google Fonts: Inter (most popular UI font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Dashboard styles -->
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Mobile sidebar overlay -->
+  <div class="ftl-sidebar-overlay" id="ftlSidebarOverlay" aria-hidden="true"></div>
+
+  <div class="ftl-dashboard">
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="ftl-sidebar" id="ftlSidebar" aria-label="Main navigation">
+      <div class="ftl-sidebar-brand">
+        <a href="index.html" class="ftl-brand-link">
+          <span class="ftl-brand-icon"><i class="bi bi-bag-heart-fill"></i></span>
+          <span class="ftl-brand-text">ShopRaja</span>
+        </a>
+        <button type="button" class="ftl-sidebar-close d-lg-none" id="ftlSidebarClose" aria-label="Close sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="ftl-sidebar-nav">
+        <p class="ftl-nav-label">Main</p>
+        <ul class="ftl-nav-list">
+          <li>
+            <a href="index.html" class="ftl-nav-link active">
+              <i class="bi bi-grid-1x2-fill"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#orders" class="ftl-nav-link">
+              <i class="bi bi-cart3"></i>
+              <span>Orders</span>
+              <span class="ftl-nav-badge">12</span>
+            </a>
+          </li>
+          <li>
+            <a href="#products" class="ftl-nav-link">
+              <i class="bi bi-box-seam"></i>
+              <span>Products</span>
+            </a>
+          </li>
+          <li>
+            <a href="#customers" class="ftl-nav-link">
+              <i class="bi bi-people"></i>
+              <span>Customers</span>
+            </a>
+          </li>
+          <li>
+            <a href="#analytics" class="ftl-nav-link">
+              <i class="bi bi-graph-up-arrow"></i>
+              <span>Analytics</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="ftl-nav-label">Catalog</p>
+        <ul class="ftl-nav-list">
+          <li>
+            <a href="#categories" class="ftl-nav-link">
+              <i class="bi bi-tags"></i>
+              <span>Categories</span>
+            </a>
+          </li>
+          <li>
+            <a href="#inventory" class="ftl-nav-link">
+              <i class="bi bi-clipboard-data"></i>
+              <span>Inventory</span>
+              <span class="ftl-nav-badge ftl-nav-badge-warn">3</span>
+            </a>
+          </li>
+          <li>
+            <a href="#coupons" class="ftl-nav-link">
+              <i class="bi bi-ticket-perforated"></i>
+              <span>Coupons</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="ftl-nav-label">System</p>
+        <ul class="ftl-nav-list">
+          <li>
+            <a href="#settings" class="ftl-nav-link">
+              <i class="bi bi-gear"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#support" class="ftl-nav-link">
+              <i class="bi bi-headset"></i>
+              <span>Support</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="ftl-sidebar-footer">
+        <div class="ftl-plan-card">
+          <p class="ftl-plan-title">Pro Plan</p>
+          <p class="ftl-plan-text">Unlock advanced reports &amp; exports.</p>
+          <a href="#upgrade" class="ftl-plan-btn">Upgrade</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========== MAIN ========== -->
+    <div class="ftl-main">
+      <!-- Topbar -->
+      <header class="ftl-topbar">
+        <div class="ftl-topbar-left">
+          <button type="button" class="ftl-menu-toggle" id="ftlMenuToggle" aria-label="Open sidebar" aria-controls="ftlSidebar" aria-expanded="false">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="ftl-search">
+            <i class="bi bi-search"></i>
+            <input type="search" class="form-control" placeholder="Search orders, products, customers…" aria-label="Search" />
+          </div>
+        </div>
+
+        <div class="ftl-topbar-right">
+          <div class="dropdown">
+            <button class="ftl-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+              <i class="bi bi-bell"></i>
+              <span class="ftl-dot"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end ftl-dropdown">
+              <div class="ftl-dropdown-header">
+                <strong>Notifications</strong>
+                <a href="#notifications">Mark all read</a>
+              </div>
+              <a class="dropdown-item ftl-notif-item" href="#">
+                <span class="ftl-notif-icon ftl-bg-success"><i class="bi bi-bag-check"></i></span>
+                <span>
+                  <span class="ftl-notif-title">New order #4821</span>
+                  <span class="ftl-notif-meta">2 minutes ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item ftl-notif-item" href="#">
+                <span class="ftl-notif-icon ftl-bg-warn"><i class="bi bi-exclamation-triangle"></i></span>
+                <span>
+                  <span class="ftl-notif-title">Low stock: Wireless Earbuds</span>
+                  <span class="ftl-notif-meta">1 hour ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item ftl-notif-item" href="#">
+                <span class="ftl-notif-icon ftl-bg-info"><i class="bi bi-person-plus"></i></span>
+                <span>
+                  <span class="ftl-notif-title">12 new customers today</span>
+                  <span class="ftl-notif-meta">3 hours ago</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="ftl-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://api.polurus.com/images/polurus.png" alt="Admin avatar" width="36" height="36" />
+              <span class="ftl-user-meta d-none d-sm-flex">
+                <span class="ftl-user-name">Alex Morgan</span>
+                <span class="ftl-user-role">Store Admin</span>
+              </span>
+              <i class="bi bi-chevron-down d-none d-sm-inline"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end ftl-dropdown">
+              <li><a class="dropdown-item" href="#profile"><i class="bi bi-person me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="#settings"><i class="bi bi-gear me-2"></i>Settings</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#logout"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="ftl-content">
+        <div class="ftl-page-head">
+          <div>
+            <h1 class="ftl-page-title">Dashboard</h1>
+            <p class="ftl-page-sub">Welcome back — here’s what’s happening in your store today.</p>
+          </div>
+          <div class="ftl-page-actions">
+            <button type="button" class="btn ftl-btn-outline">
+              <i class="bi bi-download me-1"></i> Export
+            </button>
+            <button type="button" class="btn ftl-btn-primary">
+              <i class="bi bi-plus-lg me-1"></i> Add Product
+            </button>
+          </div>
+        </div>
+
+        <!-- KPI cards -->
+        <section class="row g-3 g-xl-4 mb-4" aria-label="Key metrics">
+          <div class="col-6 col-xl-3">
+            <article class="ftl-stat-card">
+              <div class="ftl-stat-icon ftl-bg-primary">
+                <i class="bi bi-currency-dollar"></i>
+              </div>
+              <div class="ftl-stat-body">
+                <p class="ftl-stat-label">Total Revenue</p>
+                <h2 class="ftl-stat-value">$84,290</h2>
+                <p class="ftl-stat-trend ftl-up"><i class="bi bi-arrow-up-right"></i> 12.4% vs last week</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-xl-3">
+            <article class="ftl-stat-card">
+              <div class="ftl-stat-icon ftl-bg-success">
+                <i class="bi bi-bag-check"></i>
+              </div>
+              <div class="ftl-stat-body">
+                <p class="ftl-stat-label">Orders</p>
+                <h2 class="ftl-stat-value">1,248</h2>
+                <p class="ftl-stat-trend ftl-up"><i class="bi bi-arrow-up-right"></i> 8.1% vs last week</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-xl-3">
+            <article class="ftl-stat-card">
+              <div class="ftl-stat-icon ftl-bg-info">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="ftl-stat-body">
+                <p class="ftl-stat-label">Customers</p>
+                <h2 class="ftl-stat-value">6,402</h2>
+                <p class="ftl-stat-trend ftl-up"><i class="bi bi-arrow-up-right"></i> 3.6% vs last week</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-xl-3">
+            <article class="ftl-stat-card">
+              <div class="ftl-stat-icon ftl-bg-warn">
+                <i class="bi bi-percent"></i>
+              </div>
+              <div class="ftl-stat-body">
+                <p class="ftl-stat-label">Conversion</p>
+                <h2 class="ftl-stat-value">3.28%</h2>
+                <p class="ftl-stat-trend ftl-down"><i class="bi bi-arrow-down-right"></i> 0.4% vs last week</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="row g-3 g-xl-4 mb-4">
+          <!-- Sales chart -->
+          <div class="col-lg-8" id="analytics">
+            <section class="ftl-panel">
+              <div class="ftl-panel-head">
+                <div>
+                  <h2 class="ftl-panel-title">Sales Overview</h2>
+                  <p class="ftl-panel-sub">Revenue performance for the last 7 days</p>
+                </div>
+                <div class="btn-group ftl-range-group" role="group" aria-label="Chart range">
+                  <button type="button" class="btn active" data-range="7d">7D</button>
+                  <button type="button" class="btn" data-range="30d">30D</button>
+                  <button type="button" class="btn" data-range="90d">90D</button>
+                </div>
+              </div>
+              <div class="ftl-chart-wrap">
+                <canvas id="ftlSalesChart" aria-label="Sales overview chart" role="img"></canvas>
+              </div>
+            </section>
+          </div>
+
+          <!-- Traffic sources -->
+          <div class="col-lg-4">
+            <section class="ftl-panel h-100">
+              <div class="ftl-panel-head">
+                <div>
+                  <h2 class="ftl-panel-title">Traffic Sources</h2>
+                  <p class="ftl-panel-sub">Where shoppers come from</p>
+                </div>
+              </div>
+              <div class="ftl-donut-wrap">
+                <canvas id="ftlTrafficChart" aria-label="Traffic sources chart" role="img"></canvas>
+              </div>
+              <ul class="ftl-legend">
+                <li><span class="ftl-swatch" style="background:#D90000"></span> Organic <strong>42%</strong></li>
+                <li><span class="ftl-swatch" style="background:#007DCC"></span> Paid Ads <strong>28%</strong></li>
+                <li><span class="ftl-swatch" style="background:#f59e0b"></span> Social <strong>18%</strong></li>
+                <li><span class="ftl-swatch" style="background:#64748b"></span> Referral <strong>12%</strong></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <div class="row g-3 g-xl-4 mb-4">
+          <!-- Recent orders -->
+          <div class="col-xl-8" id="orders">
+            <section class="ftl-panel">
+              <div class="ftl-panel-head">
+                <div>
+                  <h2 class="ftl-panel-title">Recent Orders</h2>
+                  <p class="ftl-panel-sub">Latest transactions across all channels</p>
+                </div>
+                <a href="#orders" class="ftl-link">View all <i class="bi bi-arrow-right"></i></a>
+              </div>
+              <div class="table-responsive">
+                <table class="table ftl-table align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th>Order</th>
+                      <th>Customer</th>
+                      <th>Product</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ftl-order-id">#4821</td>
+                      <td>
+                        <div class="ftl-customer">
+                          <span class="ftl-avatar ftl-bg-primary">JM</span>
+                          <span>
+                            <span class="ftl-customer-name">Jordan Miles</span>
+                            <span class="ftl-customer-email">jordan@email.com</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>Nordic Desk Lamp</td>
+                      <td>$128.00</td>
+                      <td><span class="ftl-status ftl-status-paid">Paid</span></td>
+                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td class="ftl-order-id">#4820</td>
+                      <td>
+                        <div class="ftl-customer">
+                          <span class="ftl-avatar ftl-bg-success">SC</span>
+                          <span>
+                            <span class="ftl-customer-name">Sara Chen</span>
+                            <span class="ftl-customer-email">sara@email.com</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>Canvas Tote Bag</td>
+                      <td>$46.50</td>
+                      <td><span class="ftl-status ftl-status-shipped">Shipped</span></td>
+                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td class="ftl-order-id">#4819</td>
+                      <td>
+                        <div class="ftl-customer">
+                          <span class="ftl-avatar ftl-bg-info">RK</span>
+                          <span>
+                            <span class="ftl-customer-name">Ryan Kim</span>
+                            <span class="ftl-customer-email">ryan@email.com</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>Wireless Earbuds Pro</td>
+                      <td>$189.00</td>
+                      <td><span class="ftl-status ftl-status-pending">Pending</span></td>
+                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td class="ftl-order-id">#4818</td>
+                      <td>
+                        <div class="ftl-customer">
+                          <span class="ftl-avatar ftl-bg-warn">AL</span>
+                          <span>
+                            <span class="ftl-customer-name">Ava Lopez</span>
+                            <span class="ftl-customer-email">ava@email.com</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>Linen Throw Blanket</td>
+                      <td>$72.00</td>
+                      <td><span class="ftl-status ftl-status-paid">Paid</span></td>
+                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                    </tr>
+                    <tr>
+                      <td class="ftl-order-id">#4817</td>
+                      <td>
+                        <div class="ftl-customer">
+                          <span class="ftl-avatar" style="background:#334155">MP</span>
+                          <span>
+                            <span class="ftl-customer-name">Marcus Patel</span>
+                            <span class="ftl-customer-email">marcus@email.com</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>Ceramic Mug Set</td>
+                      <td>$54.00</td>
+                      <td><span class="ftl-status ftl-status-refund">Refunded</span></td>
+                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+
+          <!-- Top products -->
+          <div class="col-xl-4" id="products">
+            <section class="ftl-panel h-100">
+              <div class="ftl-panel-head">
+                <div>
+                  <h2 class="ftl-panel-title">Top Products</h2>
+                  <p class="ftl-panel-sub">Best sellers this week</p>
+                </div>
+              </div>
+              <ul class="ftl-product-list">
+                <li>
+                  <div class="ftl-product-thumb ftl-bg-primary"><i class="bi bi-headphones"></i></div>
+                  <div class="ftl-product-meta">
+                    <span class="ftl-product-name">Wireless Earbuds Pro</span>
+                    <span class="ftl-product-sales">342 sold · $189</span>
+                  </div>
+                  <span class="ftl-product-pct">+18%</span>
+                </li>
+                <li>
+                  <div class="ftl-product-thumb ftl-bg-success"><i class="bi bi-lamp"></i></div>
+                  <div class="ftl-product-meta">
+                    <span class="ftl-product-name">Nordic Desk Lamp</span>
+                    <span class="ftl-product-sales">218 sold · $128</span>
+                  </div>
+                  <span class="ftl-product-pct">+11%</span>
+                </li>
+                <li>
+                  <div class="ftl-product-thumb ftl-bg-info"><i class="bi bi-bag"></i></div>
+                  <div class="ftl-product-meta">
+                    <span class="ftl-product-name">Canvas Tote Bag</span>
+                    <span class="ftl-product-sales">196 sold · $46.50</span>
+                  </div>
+                  <span class="ftl-product-pct">+9%</span>
+                </li>
+                <li>
+                  <div class="ftl-product-thumb ftl-bg-warn"><i class="bi bi-cup-hot"></i></div>
+                  <div class="ftl-product-meta">
+                    <span class="ftl-product-name">Ceramic Mug Set</span>
+                    <span class="ftl-product-sales">154 sold · $54</span>
+                  </div>
+                  <span class="ftl-product-pct">+6%</span>
+                </li>
+                <li>
+                  <div class="ftl-product-thumb" style="background:#64748b"><i class="bi bi-house-heart"></i></div>
+                  <div class="ftl-product-meta">
+                    <span class="ftl-product-name">Linen Throw Blanket</span>
+                    <span class="ftl-product-sales">121 sold · $72</span>
+                  </div>
+                  <span class="ftl-product-pct">+4%</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <div class="row g-3 g-xl-4">
+          <!-- Inventory alerts -->
+          <div class="col-md-6 col-xl-4" id="inventory">
+            <section class="ftl-panel h-100">
+              <div class="ftl-panel-head">
+                <div>
+                  <h2 class="ftl-panel-title">Inventory Alerts</h2>
+                  <p class="ftl-panel-sub">Items running low</p>
+                </div>
+              </div>
+              <ul class="ftl-alert-list">
+                <li>
+                  <div>
+                    <span class="ftl-alert-name">Wireless Earbuds Pro</span>
+                    <div class="progress ftl-progress" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-danger" style="width:12%"></div>
+                    </div>
+                  </div>
+                  <span class="ftl-alert-qty ftl-text-danger">12 left</span>
+                </li>
+                <li>
+                  <div>
+                    <span class="ftl-alert-name">Leather Wallet</span>
+                    <div class="progress ftl-progress" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-warning" style="width:28%"></div>
+                    </div>
+                  </div>
+                  <span class="ftl-alert-qty ftl-text-warn">28 left</span>
+                </li>
+                <li>
+                  <div>
+                    <span class="ftl-alert-name">Desk Organizer</span>
+                    <div class="progress ftl-progress" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-warning" style="width:35%"></div>
+                    </div>
+                  </div>
+                  <span class="ftl-alert-qty ftl-text-warn">35 left</span>
+                </li>
+              </ul>
+              <a href="#inventory" class="ftl-link mt-3 d-inline-flex">Manage inventory <i class="bi bi-arrow-right"></i></a>
+            </section>
+          </div>
+
+          <!-- Customer snapshot -->
+          <div class="col-md-6 col-xl-4" id="customers">
+            <section class="ftl-panel h-100">
+              <div class="ftl-panel-head">
+                <div>
+                  <h2 class="ftl-panel-title">Customer Snapshot</h2>
+                  <p class="ftl-panel-sub">Audience health this month</p>
+                </div>
+              </div>
+              <div class="ftl-snapshot-grid">
+                <div class="ftl-snapshot-item">
+                  <span class="ftl-snapshot-value">428</span>
+                  <span class="ftl-snapshot-label">New customers</span>
+                </div>
+                <div class="ftl-snapshot-item">
+                  <span class="ftl-snapshot-value">62%</span>
+                  <span class="ftl-snapshot-label">Returning rate</span>
+                </div>
+                <div class="ftl-snapshot-item">
+                  <span class="ftl-snapshot-value">$86</span>
+                  <span class="ftl-snapshot-label">Avg. order value</span>
+                </div>
+                <div class="ftl-snapshot-item">
+                  <span class="ftl-snapshot-value">4.6</span>
+                  <span class="ftl-snapshot-label">Store rating</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Activity -->
+          <div class="col-xl-4">
+            <section class="ftl-panel h-100">
+              <div class="ftl-panel-head">
+                <div>
+                  <h2 class="ftl-panel-title">Recent Activity</h2>
+                  <p class="ftl-panel-sub">Live store feed</p>
+                </div>
+              </div>
+              <ul class="ftl-activity">
+                <li>
+                  <span class="ftl-activity-dot ftl-bg-success"></span>
+                  <div>
+                    <p>Order <strong>#4821</strong> was paid successfully.</p>
+                    <time>2 min ago</time>
+                  </div>
+                </li>
+                <li>
+                  <span class="ftl-activity-dot ftl-bg-info"></span>
+                  <div>
+                    <p><strong>Sara Chen</strong> created a new account.</p>
+                    <time>18 min ago</time>
+                  </div>
+                </li>
+                <li>
+                  <span class="ftl-activity-dot ftl-bg-warn"></span>
+                  <div>
+                    <p>Coupon <strong>SPRING15</strong> was applied 24 times.</p>
+                    <time>1 hr ago</time>
+                  </div>
+                </li>
+                <li>
+                  <span class="ftl-activity-dot ftl-bg-primary"></span>
+                  <div>
+                    <p>Product <strong>Nordic Desk Lamp</strong> restocked.</p>
+                    <time>3 hr ago</time>
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <footer class="ftl-footer">
+          <p>© 2026 ShopRaja Admin · Built with Bootstrap 5 · Template by <a href="https://polurus.com" target="_blank" rel="noopener">Subrahmanyam Poluru</a></p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

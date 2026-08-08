@@ -19,13 +19,19 @@ Location: [bootstrap/webdesign](bootstrap/webdesign)
 
 A creative landing page template for web design services, featuring a hero section, process overview, client logos, portfolio highlights, pricing plans, testimonials, and contact details.
 
+### 4. Modern Admin Dashboard
+Location: [web/bootstrap/modern-admin-dashboard](web/bootstrap/modern-admin-dashboard)
+
+A responsive ecommerce admin dashboard with a full-height sidebar, KPI cards, sales and traffic charts, orders table, inventory alerts, and mobile toggle navigation. Built with Bootstrap 5, Bootstrap Icons, Chart.js, and Inter (Google Fonts).
+
 ## Repository Structure
 
 ```text
 bootstrap/
 ├── it-consulting/
 ├── teams-chat/
-└── webdesign/
+├── webdesign/
+└── modern-admin-dashboard/
 ```
 
 Each template folder includes its own HTML files, styling assets, and a README with project-specific details.
