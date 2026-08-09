@@ -12,6 +12,7 @@ A responsive **network and security operations** dashboard for company SOC, netw
 - **Endpoint health meters** — Agent coverage, patching, encryption, AV status
 - **VPN & remote access** — Active sessions, failed logins, uptime snapshot
 - **Ops activity feed** — Admin and analyst actions for audit visibility
+- **10 designed inner pages** — Threat Center, Traffic, Endpoints, Firewall, Devices, VPN, DNS & Proxy, Users & Roles, Reports, Settings
 - **Light sticky sidebar** — Full-height navigation; sticky on desktop, off-canvas on mobile
 - **Role-ready shell** — Brand, environment pill, notifications, user menu for multi-user platforms
 - **Google Fonts (Inter)** — Clean, widely used UI typeface
@@ -54,11 +55,37 @@ CSS variables are namespaced the same way (`--adm-nw-primary`, `--adm-nw-seconda
 | Chart.js | 4.4.1 CDN | Traffic & threat charts |
 | JavaScript | `assets/js/scripts.js` | Sidebar + charts |
 
+## Pages
+
+| Page | File | Purpose |
+|---|---|---|
+| Overview | `index.html` | SOC homepage with KPIs, charts, alerts |
+| Threat Center | `threats.html` | Alert triage, ownership, severity filters |
+| Traffic | `traffic.html` | Throughput, protocol mix, top talkers |
+| Endpoints | `endpoints.html` | Managed devices and posture actions |
+| Firewall | `firewall.html` | Policy rules and recent blocks |
+| Devices | `devices.html` | Routers, switches, collectors inventory |
+| VPN Access | `vpn.html` | Sessions and auth failures |
+| DNS & Proxy | `dns.html` | DNS decisions and resolver health |
+| Users & Roles | `users.html` | Admin / Analyst / Viewer access |
+| Reports | `reports.html` | Scheduled and on-demand exports |
+| Settings | `settings.html` | Tenant, integrations, security toggles |
+
 ## File Structure
 
 ```text
 modern-admin-network-dashboard/
 ├── index.html
+├── threats.html
+├── traffic.html
+├── endpoints.html
+├── firewall.html
+├── devices.html
+├── vpn.html
+├── dns.html
+├── users.html
+├── reports.html
+├── settings.html
 ├── README.md
 └── assets/
     ├── css/

@@ -27,7 +27,7 @@ A responsive ecommerce admin dashboard with a full-height sidebar, KPI cards, sa
 ### 5. Modern Admin Network Dashboard
 Location: [web/bootstrap/modern-admin-network-dashboard](web/bootstrap/modern-admin-network-dashboard)
 
-A network and security operations dashboard for company SOC and network teams — threat center, traffic charts, live alerts, endpoint health, VPN snapshot, and a light sticky sidebar. Uses Bootstrap 5, Bootstrap Icons, Inter, and the `adm-nw-*` CSS prefix.
+A multi-page network and security operations dashboard for company SOC and network teams — overview, threat center, traffic, endpoints, firewall, devices, VPN, DNS, users, reports, and settings. Uses Bootstrap 5, Bootstrap Icons, Inter, and the `adm-nw-*` CSS prefix.
 
 ## Repository Structure
 

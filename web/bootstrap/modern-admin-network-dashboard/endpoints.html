@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Endpoint inventory and health for SecOps." />
+  <title>Endpoints — SecOps</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="adm-nw-body" data-adm-nw-page="endpoints">
+
+  <div class="adm-nw-sidebar-overlay" id="admNwSidebarOverlay" aria-hidden="true"></div>
+
+  <div class="adm-nw-shell">
+    <aside class="adm-nw-sidebar" id="admNwSidebar" aria-label="Main navigation">
+      <div class="adm-nw-sidebar-brand">
+        <a href="index.html" class="adm-nw-brand-link">
+          <span class="adm-nw-brand-icon" aria-hidden="true"><i class="bi bi-shield-lock-fill"></i></span>
+          <span class="adm-nw-brand-text">SecOps</span>
+        </a>
+        <button type="button" class="adm-nw-sidebar-close d-lg-none" id="admNwSidebarClose" aria-label="Close sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="adm-nw-sidebar-nav">
+        <p class="adm-nw-nav-label">Operations</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="index.html" class="adm-nw-nav-link">
+              <i class="bi bi-grid-1x2-fill"></i>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="threats.html" class="adm-nw-nav-link">
+              <i class="bi bi-exclamation-triangle"></i>
+              <span>Threat Center</span>
+              <span class="adm-nw-nav-badge">7</span>
+            </a>
+          </li>
+          <li>
+            <a href="traffic.html" class="adm-nw-nav-link">
+              <i class="bi bi-activity"></i>
+              <span>Traffic</span>
+            </a>
+          </li>
+          <li>
+            <a href="endpoints.html" class="adm-nw-nav-link adm-nw-nav-link-active">
+              <i class="bi bi-pc-display"></i>
+              <span>Endpoints</span>
+            </a>
+          </li>
+          <li>
+            <a href="firewall.html" class="adm-nw-nav-link">
+              <i class="bi bi-bricks"></i>
+              <span>Firewall</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="adm-nw-nav-label">Network</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="devices.html" class="adm-nw-nav-link">
+              <i class="bi bi-router"></i>
+              <span>Devices</span>
+            </a>
+          </li>
+          <li>
+            <a href="vpn.html" class="adm-nw-nav-link">
+              <i class="bi bi-key"></i>
+              <span>VPN Access</span>
+            </a>
+          </li>
+          <li>
+            <a href="dns.html" class="adm-nw-nav-link">
+              <i class="bi bi-globe2"></i>
+              <span>DNS &amp; Proxy</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="adm-nw-nav-label">Platform</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="users.html" class="adm-nw-nav-link">
+              <i class="bi bi-people"></i>
+              <span>Users &amp; Roles</span>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html" class="adm-nw-nav-link">
+              <i class="bi bi-file-earmark-bar-graph"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="adm-nw-nav-link">
+              <i class="bi bi-gear"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <div class="adm-nw-sidebar-footer">
+        <div class="adm-nw-status-card">
+          <div class="adm-nw-status-row">
+            <span class="adm-nw-status-dot adm-nw-status-dot-ok"></span>
+            <span class="adm-nw-status-label">SOC Platform</span>
+          </div>
+          <p class="adm-nw-status-text">All collectors healthy · Latency 42ms</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="adm-nw-main">
+      <header class="adm-nw-topbar">
+        <div class="adm-nw-topbar-left">
+          <button type="button" class="adm-nw-menu-toggle" id="admNwMenuToggle" aria-label="Open sidebar" aria-controls="admNwSidebar" aria-expanded="false">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="adm-nw-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" placeholder="Search hosts, IPs, alerts, users…" aria-label="Search" />
+          </div>
+        </div>
+
+        <div class="adm-nw-topbar-right">
+          <span class="adm-nw-env-pill">
+            <i class="bi bi-building"></i>
+            Acme Corp · Production
+          </span>
+
+          <div class="dropdown">
+            <button class="adm-nw-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Security alerts">
+              <i class="bi bi-bell"></i>
+              <span class="adm-nw-dot"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
+              <div class="adm-nw-dropdown-header">
+                <strong>Security Alerts</strong>
+                <a href="threats.html">View all</a>
+              </div>
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-primary"><i class="bi bi-bug"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Brute-force attempt blocked</span>
+                  <span class="adm-nw-notif-meta">VPN gateway · 2 min ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-secondary"><i class="bi bi-shield-exclamation"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Malware signature match</span>
+                  <span class="adm-nw-notif-meta">Endpoint WS-204 · 14 min ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item adm-nw-notif-item" href="traffic.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-muted"><i class="bi bi-hdd-network"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Unusual outbound traffic</span>
+                  <span class="adm-nw-notif-meta">Subnet 10.20.0.0/24 · 1 hr ago</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="adm-nw-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://api.polurus.com/images/polurus.png" alt="Operator avatar" width="36" height="36" />
+              <span class="adm-nw-user-meta d-none d-sm-flex">
+                <span class="adm-nw-user-name">Subrahmanyam Poluru</span>
+                <span class="adm-nw-user-role">SOC Admin</span>
+              </span>
+              <i class="bi bi-chevron-down d-none d-sm-inline"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
+              <li><a class="dropdown-item" href="users.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="adm-nw-content">
+        <div class="adm-nw-page-head">
+          <div>
+            <h1 class="adm-nw-page-title">Endpoints</h1>
+            <p class="adm-nw-page-sub">Agent coverage, OS posture, and isolation controls for managed devices.</p>
+          </div>
+          <div class="adm-nw-page-actions">
+            <button type="button" class="btn adm-nw-btn-outline"><i class="bi bi-arrow-repeat me-1"></i> Sync Agents</button>
+            <button type="button" class="btn adm-nw-btn-primary"><i class="bi bi-plus-lg me-1"></i> Enroll Device</button>
+          </div>
+        </div>
+
+        <section class="row g-3 g-xl-4 mb-4">
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-primary"><i class="bi bi-pc-display"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">Managed</p><h2 class="adm-nw-stat-value">1,842</h2><p class="adm-nw-stat-trend adm-nw-trend-ok">98.4% online</p></div></article></div>
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-secondary"><i class="bi bi-shield-x"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">At Risk</p><h2 class="adm-nw-stat-value">27</h2><p class="adm-nw-stat-trend adm-nw-trend-up">Needs patch</p></div></article></div>
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-muted"><i class="bi bi-lock"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">Encrypted</p><h2 class="adm-nw-stat-value">96%</h2><p class="adm-nw-stat-trend adm-nw-trend-ok">Disk encryption</p></div></article></div>
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-dark"><i class="bi bi-slash-circle"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">Isolated</p><h2 class="adm-nw-stat-value">4</h2><p class="adm-nw-stat-trend adm-nw-trend-up">Containment</p></div></article></div>
+        </section>
+
+        <div class="adm-nw-toolbar">
+          <div class="adm-nw-filter-search">
+            <i class="bi bi-search"></i>
+            <input type="search" class="form-control" placeholder="Search hostname, user, OS…" aria-label="Filter endpoints" />
+          </div>
+          <select class="form-select adm-nw-filter-select" aria-label="OS filter"><option>All OS</option><option>Windows</option><option>macOS</option><option>Linux</option></select>
+          <select class="form-select adm-nw-filter-select" aria-label="Status filter"><option>All statuses</option><option>Healthy</option><option>At risk</option><option>Offline</option><option>Isolated</option></select>
+        </div>
+
+        <section class="adm-nw-panel">
+          <div class="table-responsive">
+            <table class="table adm-nw-table align-middle mb-0">
+              <thead><tr><th>Endpoint</th><th>User</th><th>OS</th><th>Agent</th><th>Last Seen</th><th>Posture</th><th></th></tr></thead>
+              <tbody>
+                <tr><td><strong>WS-204</strong><span class="adm-nw-alert-id">10.20.8.44</span></td><td>spoluru</td><td>Windows 11</td><td>v4.2.1</td><td>1 min ago</td><td><span class="adm-nw-chip adm-nw-chip-danger">At risk</span></td><td><button type="button" class="btn btn-sm adm-nw-btn-outline">Isolate</button></td></tr>
+                <tr><td><strong>MBP-118</strong><span class="adm-nw-alert-id">10.20.9.12</span></td><td>s.poluru</td><td>macOS 15</td><td>v4.2.1</td><td>3 min ago</td><td><span class="adm-nw-chip adm-nw-chip-ok">Healthy</span></td><td><button type="button" class="btn btn-sm adm-nw-btn-outline">Details</button></td></tr>
+                <tr><td><strong>LNX-072</strong><span class="adm-nw-alert-id">10.10.4.72</span></td><td>svc-build</td><td>Ubuntu 24.04</td><td>v4.1.9</td><td>8 min ago</td><td><span class="adm-nw-chip adm-nw-chip-warn">Patch due</span></td><td><button type="button" class="btn btn-sm adm-nw-btn-outline">Details</button></td></tr>
+                <tr><td><strong>WS-090</strong><span class="adm-nw-alert-id">10.20.3.90</span></td><td>poluru.s</td><td>Windows 10</td><td>v4.2.0</td><td>12 min ago</td><td><span class="adm-nw-chip adm-nw-chip-ok">Healthy</span></td><td><button type="button" class="btn btn-sm adm-nw-btn-outline">Details</button></td></tr>
+                <tr><td><strong>WS-055</strong><span class="adm-nw-alert-id">10.20.2.55</span></td><td>p.subrahmanyam</td><td>Windows 11</td><td>v4.2.1</td><td>2 hr ago</td><td><span class="adm-nw-chip adm-nw-chip-muted">Offline</span></td><td><button type="button" class="btn btn-sm adm-nw-btn-outline">Ping</button></td></tr>
+                <tr><td><strong>WS-011</strong><span class="adm-nw-alert-id">10.20.1.11</span></td><td>s.poluru</td><td>Windows 11</td><td>v4.2.1</td><td>Now</td><td><span class="adm-nw-chip adm-nw-chip-danger">Isolated</span></td><td><button type="button" class="btn btn-sm adm-nw-btn-primary">Release</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="adm-nw-footer">
+          <p>© 2026 SecOps · Built with Bootstrap 5 · Template by <a href="https://polurus.com" target="_blank" rel="noopener">Subrahmanyam Poluru</a></p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

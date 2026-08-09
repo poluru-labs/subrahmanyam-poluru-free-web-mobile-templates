@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Platform settings for SecOps." />
+  <title>Settings — SecOps</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="adm-nw-body" data-adm-nw-page="settings">
+
+  <div class="adm-nw-sidebar-overlay" id="admNwSidebarOverlay" aria-hidden="true"></div>
+
+  <div class="adm-nw-shell">
+    <aside class="adm-nw-sidebar" id="admNwSidebar" aria-label="Main navigation">
+      <div class="adm-nw-sidebar-brand">
+        <a href="index.html" class="adm-nw-brand-link">
+          <span class="adm-nw-brand-icon" aria-hidden="true"><i class="bi bi-shield-lock-fill"></i></span>
+          <span class="adm-nw-brand-text">SecOps</span>
+        </a>
+        <button type="button" class="adm-nw-sidebar-close d-lg-none" id="admNwSidebarClose" aria-label="Close sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="adm-nw-sidebar-nav">
+        <p class="adm-nw-nav-label">Operations</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="index.html" class="adm-nw-nav-link">
+              <i class="bi bi-grid-1x2-fill"></i>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="threats.html" class="adm-nw-nav-link">
+              <i class="bi bi-exclamation-triangle"></i>
+              <span>Threat Center</span>
+              <span class="adm-nw-nav-badge">7</span>
+            </a>
+          </li>
+          <li>
+            <a href="traffic.html" class="adm-nw-nav-link">
+              <i class="bi bi-activity"></i>
+              <span>Traffic</span>
+            </a>
+          </li>
+          <li>
+            <a href="endpoints.html" class="adm-nw-nav-link">
+              <i class="bi bi-pc-display"></i>
+              <span>Endpoints</span>
+            </a>
+          </li>
+          <li>
+            <a href="firewall.html" class="adm-nw-nav-link">
+              <i class="bi bi-bricks"></i>
+              <span>Firewall</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="adm-nw-nav-label">Network</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="devices.html" class="adm-nw-nav-link">
+              <i class="bi bi-router"></i>
+              <span>Devices</span>
+            </a>
+          </li>
+          <li>
+            <a href="vpn.html" class="adm-nw-nav-link">
+              <i class="bi bi-key"></i>
+              <span>VPN Access</span>
+            </a>
+          </li>
+          <li>
+            <a href="dns.html" class="adm-nw-nav-link">
+              <i class="bi bi-globe2"></i>
+              <span>DNS &amp; Proxy</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="adm-nw-nav-label">Platform</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="users.html" class="adm-nw-nav-link">
+              <i class="bi bi-people"></i>
+              <span>Users &amp; Roles</span>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html" class="adm-nw-nav-link">
+              <i class="bi bi-file-earmark-bar-graph"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="adm-nw-nav-link adm-nw-nav-link-active">
+              <i class="bi bi-gear"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <div class="adm-nw-sidebar-footer">
+        <div class="adm-nw-status-card">
+          <div class="adm-nw-status-row">
+            <span class="adm-nw-status-dot adm-nw-status-dot-ok"></span>
+            <span class="adm-nw-status-label">SOC Platform</span>
+          </div>
+          <p class="adm-nw-status-text">All collectors healthy · Latency 42ms</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="adm-nw-main">
+      <header class="adm-nw-topbar">
+        <div class="adm-nw-topbar-left">
+          <button type="button" class="adm-nw-menu-toggle" id="admNwMenuToggle" aria-label="Open sidebar" aria-controls="admNwSidebar" aria-expanded="false">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="adm-nw-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" placeholder="Search hosts, IPs, alerts, users…" aria-label="Search" />
+          </div>
+        </div>
+
+        <div class="adm-nw-topbar-right">
+          <span class="adm-nw-env-pill">
+            <i class="bi bi-building"></i>
+            Acme Corp · Production
+          </span>
+
+          <div class="dropdown">
+            <button class="adm-nw-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Security alerts">
+              <i class="bi bi-bell"></i>
+              <span class="adm-nw-dot"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
+              <div class="adm-nw-dropdown-header">
+                <strong>Security Alerts</strong>
+                <a href="threats.html">View all</a>
+              </div>
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-primary"><i class="bi bi-bug"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Brute-force attempt blocked</span>
+                  <span class="adm-nw-notif-meta">VPN gateway · 2 min ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-secondary"><i class="bi bi-shield-exclamation"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Malware signature match</span>
+                  <span class="adm-nw-notif-meta">Endpoint WS-204 · 14 min ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item adm-nw-notif-item" href="traffic.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-muted"><i class="bi bi-hdd-network"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Unusual outbound traffic</span>
+                  <span class="adm-nw-notif-meta">Subnet 10.20.0.0/24 · 1 hr ago</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="adm-nw-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://api.polurus.com/images/polurus.png" alt="Operator avatar" width="36" height="36" />
+              <span class="adm-nw-user-meta d-none d-sm-flex">
+                <span class="adm-nw-user-name">Subrahmanyam Poluru</span>
+                <span class="adm-nw-user-role">SOC Admin</span>
+              </span>
+              <i class="bi bi-chevron-down d-none d-sm-inline"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
+              <li><a class="dropdown-item" href="users.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="adm-nw-content">
+        <div class="adm-nw-page-head">
+          <div>
+            <h1 class="adm-nw-page-title">Settings</h1>
+            <p class="adm-nw-page-sub">Configure tenant identity, notifications, integrations, and platform security.</p>
+          </div>
+          <div class="adm-nw-page-actions">
+            <button type="button" class="btn adm-nw-btn-outline">Cancel</button>
+            <button type="button" class="btn adm-nw-btn-primary"><i class="bi bi-check2 me-1"></i> Save Changes</button>
+          </div>
+        </div>
+
+        <div class="row g-3 g-xl-4">
+          <div class="col-lg-7">
+            <section class="adm-nw-panel mb-3">
+              <div class="adm-nw-panel-head"><div><h2 class="adm-nw-panel-title">Organization</h2><p class="adm-nw-panel-sub">Tenant profile shown across the platform</p></div></div>
+              <div class="adm-nw-form-grid adm-nw-form-grid-2">
+                <div class="adm-nw-field">
+                  <label for="orgName">Organization name</label>
+                  <input id="orgName" type="text" class="form-control" value="Acme Corp" />
+                </div>
+                <div class="adm-nw-field">
+                  <label for="orgEnv">Environment label</label>
+                  <input id="orgEnv" type="text" class="form-control" value="Production" />
+                </div>
+                <div class="adm-nw-field">
+                  <label for="orgTz">Timezone</label>
+                  <select id="orgTz" class="form-select">
+                    <option selected>America/New_York</option>
+                    <option>UTC</option>
+                    <option>Europe/London</option>
+                    <option>Asia/Kolkata</option>
+                  </select>
+                </div>
+                <div class="adm-nw-field">
+                  <label for="orgRetention">Log retention (days)</label>
+                  <input id="orgRetention" type="number" class="form-control" value="90" />
+                </div>
+              </div>
+            </section>
+
+            <section class="adm-nw-panel">
+              <div class="adm-nw-panel-head"><div><h2 class="adm-nw-panel-title">Integrations</h2><p class="adm-nw-panel-sub">Connect SIEM, ticketing, and identity providers</p></div></div>
+              <div class="adm-nw-switch-row">
+                <div class="adm-nw-switch-meta"><strong>SIEM webhook</strong><span>Push high/critical alerts to your SIEM</span></div>
+                <div class="form-check form-switch m-0"><input class="form-check-input adm-nw-form-check-input" type="checkbox" checked aria-label="SIEM webhook" /></div>
+              </div>
+              <div class="adm-nw-switch-row">
+                <div class="adm-nw-switch-meta"><strong>Ticketing (Jira / ServiceNow)</strong><span>Auto-create incidents from critical alerts</span></div>
+                <div class="form-check form-switch m-0"><input class="form-check-input adm-nw-form-check-input" type="checkbox" checked aria-label="Ticketing integration" /></div>
+              </div>
+              <div class="adm-nw-switch-row">
+                <div class="adm-nw-switch-meta"><strong>SSO / SAML</strong><span>Require enterprise identity for console access</span></div>
+                <div class="form-check form-switch m-0"><input class="form-check-input adm-nw-form-check-input" type="checkbox" checked aria-label="SSO SAML" /></div>
+              </div>
+              <div class="adm-nw-switch-row">
+                <div class="adm-nw-switch-meta"><strong>Slack / Teams notifications</strong><span>Send SOC channel digests for open criticals</span></div>
+                <div class="form-check form-switch m-0"><input class="form-check-input adm-nw-form-check-input" type="checkbox" aria-label="Chat notifications" /></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="col-lg-5">
+            <section class="adm-nw-panel mb-3">
+              <div class="adm-nw-panel-head"><div><h2 class="adm-nw-panel-title">Security</h2><p class="adm-nw-panel-sub">Console hardening defaults</p></div></div>
+              <div class="adm-nw-switch-row">
+                <div class="adm-nw-switch-meta"><strong>MFA required</strong><span>All admins and analysts</span></div>
+                <div class="form-check form-switch m-0"><input class="form-check-input adm-nw-form-check-input" type="checkbox" checked aria-label="MFA required" /></div>
+              </div>
+              <div class="adm-nw-switch-row">
+                <div class="adm-nw-switch-meta"><strong>Session timeout</strong><span>Idle logout after 30 minutes</span></div>
+                <div class="form-check form-switch m-0"><input class="form-check-input adm-nw-form-check-input" type="checkbox" checked aria-label="Session timeout" /></div>
+              </div>
+              <div class="adm-nw-switch-row">
+                <div class="adm-nw-switch-meta"><strong>IP allowlist</strong><span>Restrict console to corporate ranges</span></div>
+                <div class="form-check form-switch m-0"><input class="form-check-input adm-nw-form-check-input" type="checkbox" aria-label="IP allowlist" /></div>
+              </div>
+            </section>
+
+            <section class="adm-nw-panel">
+              <div class="adm-nw-panel-head"><div><h2 class="adm-nw-panel-title">Notification Defaults</h2><p class="adm-nw-panel-sub">Who gets paged for criticals</p></div></div>
+              <div class="adm-nw-field mb-3">
+                <label for="oncall">On-call distribution</label>
+                <input id="oncall" type="email" class="form-control" value="soc-oncall@abc.com" />
+              </div>
+              <div class="adm-nw-field">
+                <label for="severity">Minimum severity for page</label>
+                <select id="severity" class="form-select">
+                  <option selected>Critical</option>
+                  <option>High</option>
+                  <option>Medium</option>
+                </select>
+                <div class="form-text">Lower severities still appear in Threat Center.</div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <footer class="adm-nw-footer">
+          <p>© 2026 SecOps · Built with Bootstrap 5 · Template by <a href="https://polurus.com" target="_blank" rel="noopener">Subrahmanyam Poluru</a></p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

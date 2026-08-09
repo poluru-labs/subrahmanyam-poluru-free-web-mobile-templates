@@ -183,16 +183,16 @@
     });
   }
 
-  function createThreatChart() {
-    if (!threatCanvas || typeof Chart === "undefined") return;
+  function createDoughnut(canvas, labels, data) {
+    if (!canvas || typeof Chart === "undefined") return;
 
-    new Chart(threatCanvas, {
+    new Chart(canvas, {
       type: "doughnut",
       data: {
-        labels: ["Critical", "High", "Medium", "Low"],
+        labels,
         datasets: [
           {
-            data: [3, 5, 4, 2],
+            data,
             backgroundColor: [
               COLORS.primary,
               COLORS.secondary,
@@ -226,7 +226,12 @@
   }
 
   createTrafficChart("1h");
-  createThreatChart();
+  createDoughnut(threatCanvas, ["Critical", "High", "Medium", "Low"], [3, 5, 4, 2]);
+  createDoughnut(
+    document.getElementById("admNwProtocolChart"),
+    ["HTTPS", "DNS", "VPN", "Other"],
+    [54, 16, 18, 12]
+  );
 
   document.querySelectorAll(".adm-nw-range-group [data-range]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -235,6 +240,17 @@
       });
       button.classList.add("adm-nw-range-btn-active");
       createTrafficChart(button.getAttribute("data-range"));
+    });
+  });
+
+  document.querySelectorAll(".adm-nw-tabs").forEach((tabs) => {
+    tabs.querySelectorAll(".adm-nw-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.querySelectorAll(".adm-nw-tab").forEach((item) => {
+          item.classList.remove("adm-nw-tab-active");
+        });
+        tab.classList.add("adm-nw-tab-active");
+      });
     });
   });
 })();

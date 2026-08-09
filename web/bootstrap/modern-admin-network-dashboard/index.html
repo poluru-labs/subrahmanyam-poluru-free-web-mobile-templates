@@ -19,7 +19,7 @@
   <!-- Dashboard styles -->
   <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
-<body class="adm-nw-body">
+<body class="adm-nw-body" data-adm-nw-page="overview">
 
   <div class="adm-nw-sidebar-overlay" id="admNwSidebarOverlay" aria-hidden="true"></div>
 
@@ -46,26 +46,26 @@
             </a>
           </li>
           <li>
-            <a href="#threats" class="adm-nw-nav-link">
+            <a href="threats.html" class="adm-nw-nav-link">
               <i class="bi bi-exclamation-triangle"></i>
               <span>Threat Center</span>
               <span class="adm-nw-nav-badge">7</span>
             </a>
           </li>
           <li>
-            <a href="#traffic" class="adm-nw-nav-link">
+            <a href="traffic.html" class="adm-nw-nav-link">
               <i class="bi bi-activity"></i>
               <span>Traffic</span>
             </a>
           </li>
           <li>
-            <a href="#endpoints" class="adm-nw-nav-link">
+            <a href="endpoints.html" class="adm-nw-nav-link">
               <i class="bi bi-pc-display"></i>
               <span>Endpoints</span>
             </a>
           </li>
           <li>
-            <a href="#firewall" class="adm-nw-nav-link">
+            <a href="firewall.html" class="adm-nw-nav-link">
               <i class="bi bi-bricks"></i>
               <span>Firewall</span>
             </a>
@@ -75,19 +75,19 @@
         <p class="adm-nw-nav-label">Network</p>
         <ul class="adm-nw-nav-list">
           <li>
-            <a href="#devices" class="adm-nw-nav-link">
+            <a href="devices.html" class="adm-nw-nav-link">
               <i class="bi bi-router"></i>
               <span>Devices</span>
             </a>
           </li>
           <li>
-            <a href="#vpn" class="adm-nw-nav-link">
+            <a href="vpn.html" class="adm-nw-nav-link">
               <i class="bi bi-key"></i>
               <span>VPN Access</span>
             </a>
           </li>
           <li>
-            <a href="#dns" class="adm-nw-nav-link">
+            <a href="dns.html" class="adm-nw-nav-link">
               <i class="bi bi-globe2"></i>
               <span>DNS &amp; Proxy</span>
             </a>
@@ -97,19 +97,19 @@
         <p class="adm-nw-nav-label">Platform</p>
         <ul class="adm-nw-nav-list">
           <li>
-            <a href="#users" class="adm-nw-nav-link">
+            <a href="users.html" class="adm-nw-nav-link">
               <i class="bi bi-people"></i>
               <span>Users &amp; Roles</span>
             </a>
           </li>
           <li>
-            <a href="#reports" class="adm-nw-nav-link">
+            <a href="reports.html" class="adm-nw-nav-link">
               <i class="bi bi-file-earmark-bar-graph"></i>
               <span>Reports</span>
             </a>
           </li>
           <li>
-            <a href="#settings" class="adm-nw-nav-link">
+            <a href="settings.html" class="adm-nw-nav-link">
               <i class="bi bi-gear"></i>
               <span>Settings</span>
             </a>
@@ -155,23 +155,23 @@
             <div class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
               <div class="adm-nw-dropdown-header">
                 <strong>Security Alerts</strong>
-                <a href="#threats">View all</a>
+                <a href="threats.html">View all</a>
               </div>
-              <a class="dropdown-item adm-nw-notif-item" href="#threats">
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
                 <span class="adm-nw-notif-icon adm-nw-bg-primary"><i class="bi bi-bug"></i></span>
                 <span>
                   <span class="adm-nw-notif-title">Brute-force attempt blocked</span>
                   <span class="adm-nw-notif-meta">VPN gateway · 2 min ago</span>
                 </span>
               </a>
-              <a class="dropdown-item adm-nw-notif-item" href="#threats">
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
                 <span class="adm-nw-notif-icon adm-nw-bg-secondary"><i class="bi bi-shield-exclamation"></i></span>
                 <span>
                   <span class="adm-nw-notif-title">Malware signature match</span>
                   <span class="adm-nw-notif-meta">Endpoint WS-204 · 14 min ago</span>
                 </span>
               </a>
-              <a class="dropdown-item adm-nw-notif-item" href="#threats">
+              <a class="dropdown-item adm-nw-notif-item" href="traffic.html">
                 <span class="adm-nw-notif-icon adm-nw-bg-muted"><i class="bi bi-hdd-network"></i></span>
                 <span>
                   <span class="adm-nw-notif-title">Unusual outbound traffic</span>
@@ -185,16 +185,16 @@
             <button class="adm-nw-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="https://api.polurus.com/images/polurus.png" alt="Operator avatar" width="36" height="36" />
               <span class="adm-nw-user-meta d-none d-sm-flex">
-                <span class="adm-nw-user-name">Jordan Lee</span>
+                <span class="adm-nw-user-name">Subrahmanyam Poluru</span>
                 <span class="adm-nw-user-role">SOC Admin</span>
               </span>
               <i class="bi bi-chevron-down d-none d-sm-inline"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
-              <li><a class="dropdown-item" href="#users"><i class="bi bi-person me-2"></i>Profile</a></li>
-              <li><a class="dropdown-item" href="#settings"><i class="bi bi-gear me-2"></i>Settings</a></li>
+              <li><a class="dropdown-item" href="users.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#logout"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
             </ul>
           </div>
         </div>
@@ -332,7 +332,7 @@
                   <h2 class="adm-nw-panel-title">Live Security Alerts</h2>
                   <p class="adm-nw-panel-sub">Events requiring analyst review</p>
                 </div>
-                <a href="#threats" class="adm-nw-link">Open Threat Center <i class="bi bi-arrow-right"></i></a>
+                <a href="threats.html" class="adm-nw-link">Open Threat Center <i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="table-responsive">
                 <table class="table adm-nw-table align-middle mb-0">
@@ -397,7 +397,7 @@
                         <span class="adm-nw-alert-name">Policy Violation</span>
                         <span class="adm-nw-alert-id">ALT-9007</span>
                       </td>
-                      <td>User: a.khan</td>
+                      <td>User: poluru.s</td>
                       <td>laptop-882</td>
                       <td><span class="adm-nw-severity adm-nw-severity-medium">Medium</span></td>
                       <td><span class="adm-nw-status-pill adm-nw-status-contained">Contained</span></td>
@@ -577,7 +577,7 @@
                 <li>
                   <span class="adm-nw-activity-dot adm-nw-bg-primary"></span>
                   <div>
-                    <p><strong>Jordan Lee</strong> escalated ALT-9021 to critical.</p>
+                    <p><strong>Subrahmanyam Poluru</strong> escalated ALT-9021 to critical.</p>
                     <time datetime="2026-08-08T22:30">2 min ago</time>
                   </div>
                 </li>
@@ -591,7 +591,7 @@
                 <li>
                   <span class="adm-nw-activity-dot adm-nw-bg-muted"></span>
                   <div>
-                    <p><strong>Priya Nair</strong> closed incident INC-118.</p>
+                    <p><strong>S Poluru</strong> closed incident INC-118.</p>
                     <time datetime="2026-08-08T20:40">1 hr ago</time>
                   </div>
                 </li>

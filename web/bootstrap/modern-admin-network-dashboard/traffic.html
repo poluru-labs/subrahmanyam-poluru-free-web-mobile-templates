@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Network traffic analytics for SecOps teams." />
+  <title>Network Traffic — SecOps</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="adm-nw-body" data-adm-nw-page="traffic">
+
+  <div class="adm-nw-sidebar-overlay" id="admNwSidebarOverlay" aria-hidden="true"></div>
+
+  <div class="adm-nw-shell">
+    <aside class="adm-nw-sidebar" id="admNwSidebar" aria-label="Main navigation">
+      <div class="adm-nw-sidebar-brand">
+        <a href="index.html" class="adm-nw-brand-link">
+          <span class="adm-nw-brand-icon" aria-hidden="true"><i class="bi bi-shield-lock-fill"></i></span>
+          <span class="adm-nw-brand-text">SecOps</span>
+        </a>
+        <button type="button" class="adm-nw-sidebar-close d-lg-none" id="admNwSidebarClose" aria-label="Close sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="adm-nw-sidebar-nav">
+        <p class="adm-nw-nav-label">Operations</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="index.html" class="adm-nw-nav-link">
+              <i class="bi bi-grid-1x2-fill"></i>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="threats.html" class="adm-nw-nav-link">
+              <i class="bi bi-exclamation-triangle"></i>
+              <span>Threat Center</span>
+              <span class="adm-nw-nav-badge">7</span>
+            </a>
+          </li>
+          <li>
+            <a href="traffic.html" class="adm-nw-nav-link adm-nw-nav-link-active">
+              <i class="bi bi-activity"></i>
+              <span>Traffic</span>
+            </a>
+          </li>
+          <li>
+            <a href="endpoints.html" class="adm-nw-nav-link">
+              <i class="bi bi-pc-display"></i>
+              <span>Endpoints</span>
+            </a>
+          </li>
+          <li>
+            <a href="firewall.html" class="adm-nw-nav-link">
+              <i class="bi bi-bricks"></i>
+              <span>Firewall</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="adm-nw-nav-label">Network</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="devices.html" class="adm-nw-nav-link">
+              <i class="bi bi-router"></i>
+              <span>Devices</span>
+            </a>
+          </li>
+          <li>
+            <a href="vpn.html" class="adm-nw-nav-link">
+              <i class="bi bi-key"></i>
+              <span>VPN Access</span>
+            </a>
+          </li>
+          <li>
+            <a href="dns.html" class="adm-nw-nav-link">
+              <i class="bi bi-globe2"></i>
+              <span>DNS &amp; Proxy</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="adm-nw-nav-label">Platform</p>
+        <ul class="adm-nw-nav-list">
+          <li>
+            <a href="users.html" class="adm-nw-nav-link">
+              <i class="bi bi-people"></i>
+              <span>Users &amp; Roles</span>
+            </a>
+          </li>
+          <li>
+            <a href="reports.html" class="adm-nw-nav-link">
+              <i class="bi bi-file-earmark-bar-graph"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html" class="adm-nw-nav-link">
+              <i class="bi bi-gear"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <div class="adm-nw-sidebar-footer">
+        <div class="adm-nw-status-card">
+          <div class="adm-nw-status-row">
+            <span class="adm-nw-status-dot adm-nw-status-dot-ok"></span>
+            <span class="adm-nw-status-label">SOC Platform</span>
+          </div>
+          <p class="adm-nw-status-text">All collectors healthy · Latency 42ms</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="adm-nw-main">
+      <header class="adm-nw-topbar">
+        <div class="adm-nw-topbar-left">
+          <button type="button" class="adm-nw-menu-toggle" id="admNwMenuToggle" aria-label="Open sidebar" aria-controls="admNwSidebar" aria-expanded="false">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="adm-nw-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" placeholder="Search hosts, IPs, alerts, users…" aria-label="Search" />
+          </div>
+        </div>
+
+        <div class="adm-nw-topbar-right">
+          <span class="adm-nw-env-pill">
+            <i class="bi bi-building"></i>
+            Acme Corp · Production
+          </span>
+
+          <div class="dropdown">
+            <button class="adm-nw-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Security alerts">
+              <i class="bi bi-bell"></i>
+              <span class="adm-nw-dot"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
+              <div class="adm-nw-dropdown-header">
+                <strong>Security Alerts</strong>
+                <a href="threats.html">View all</a>
+              </div>
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-primary"><i class="bi bi-bug"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Brute-force attempt blocked</span>
+                  <span class="adm-nw-notif-meta">VPN gateway · 2 min ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item adm-nw-notif-item" href="threats.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-secondary"><i class="bi bi-shield-exclamation"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Malware signature match</span>
+                  <span class="adm-nw-notif-meta">Endpoint WS-204 · 14 min ago</span>
+                </span>
+              </a>
+              <a class="dropdown-item adm-nw-notif-item" href="traffic.html">
+                <span class="adm-nw-notif-icon adm-nw-bg-muted"><i class="bi bi-hdd-network"></i></span>
+                <span>
+                  <span class="adm-nw-notif-title">Unusual outbound traffic</span>
+                  <span class="adm-nw-notif-meta">Subnet 10.20.0.0/24 · 1 hr ago</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="adm-nw-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://api.polurus.com/images/polurus.png" alt="Operator avatar" width="36" height="36" />
+              <span class="adm-nw-user-meta d-none d-sm-flex">
+                <span class="adm-nw-user-name">Subrahmanyam Poluru</span>
+                <span class="adm-nw-user-role">SOC Admin</span>
+              </span>
+              <i class="bi bi-chevron-down d-none d-sm-inline"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end adm-nw-dropdown">
+              <li><a class="dropdown-item" href="users.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="adm-nw-content">
+        <div class="adm-nw-page-head">
+          <div>
+            <h1 class="adm-nw-page-title">Network Traffic</h1>
+            <p class="adm-nw-page-sub">Monitor inbound/outbound throughput, protocol mix, and saturated links.</p>
+          </div>
+          <div class="adm-nw-page-actions">
+            <button type="button" class="btn adm-nw-btn-outline"><i class="bi bi-download me-1"></i> Export NetFlow</button>
+            <button type="button" class="btn adm-nw-btn-primary"><i class="bi bi-broadcast me-1"></i> Live Capture</button>
+          </div>
+        </div>
+
+        <section class="row g-3 g-xl-4 mb-4">
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-primary"><i class="bi bi-arrow-down-left"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">Inbound</p><h2 class="adm-nw-stat-value">3.8 Gbps</h2><p class="adm-nw-stat-trend adm-nw-trend-ok">Peak 4.2</p></div></article></div>
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-secondary"><i class="bi bi-arrow-up-right"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">Outbound</p><h2 class="adm-nw-stat-value">2.6 Gbps</h2><p class="adm-nw-stat-trend adm-nw-trend-ok">Peak 3.1</p></div></article></div>
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-muted"><i class="bi bi-diagram-3"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">Active Flows</p><h2 class="adm-nw-stat-value">84.2k</h2><p class="adm-nw-stat-trend adm-nw-trend-up">+6% hour</p></div></article></div>
+          <div class="col-6 col-xl-3"><article class="adm-nw-stat-card"><div class="adm-nw-stat-icon adm-nw-bg-dark"><i class="bi bi-exclamation-triangle"></i></div><div class="adm-nw-stat-body"><p class="adm-nw-stat-label">Anomalies</p><h2 class="adm-nw-stat-value">5</h2><p class="adm-nw-stat-trend adm-nw-trend-up">Under review</p></div></article></div>
+        </section>
+
+        <div class="row g-3 g-xl-4 mb-4">
+          <div class="col-lg-8">
+            <section class="adm-nw-panel">
+              <div class="adm-nw-panel-head">
+                <div>
+                  <h2 class="adm-nw-panel-title">Throughput Timeline</h2>
+                  <p class="adm-nw-panel-sub">Inbound vs outbound (Mbps)</p>
+                </div>
+                <div class="btn-group adm-nw-range-group" role="group">
+                  <button type="button" class="btn adm-nw-range-btn adm-nw-range-btn-active" data-range="1h">1H</button>
+                  <button type="button" class="btn adm-nw-range-btn" data-range="24h">24H</button>
+                  <button type="button" class="btn adm-nw-range-btn" data-range="7d">7D</button>
+                </div>
+              </div>
+              <div class="adm-nw-chart-wrap">
+                <canvas id="admNwTrafficChart" aria-label="Traffic chart" role="img"></canvas>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-4">
+            <section class="adm-nw-panel adm-nw-panel-fill">
+              <div class="adm-nw-panel-head">
+                <div>
+                  <h2 class="adm-nw-panel-title">Protocol Mix</h2>
+                  <p class="adm-nw-panel-sub">Share of volume</p>
+                </div>
+              </div>
+              <div class="adm-nw-donut-wrap">
+                <canvas id="admNwProtocolChart" aria-label="Protocol chart" role="img"></canvas>
+              </div>
+              <ul class="adm-nw-legend">
+                <li><span class="adm-nw-swatch adm-nw-swatch-primary"></span> HTTPS <strong>54%</strong></li>
+                <li><span class="adm-nw-swatch adm-nw-swatch-secondary"></span> DNS <strong>16%</strong></li>
+                <li><span class="adm-nw-swatch adm-nw-swatch-warn"></span> VPN <strong>18%</strong></li>
+                <li><span class="adm-nw-swatch adm-nw-swatch-muted"></span> Other <strong>12%</strong></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <section class="adm-nw-panel">
+          <div class="adm-nw-panel-head">
+            <div>
+              <h2 class="adm-nw-panel-title">Top Talkers</h2>
+              <p class="adm-nw-panel-sub">Hosts consuming the most bandwidth</p>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table adm-nw-table align-middle mb-0">
+              <thead><tr><th>Host</th><th>IP</th><th>Protocol</th><th>In</th><th>Out</th><th>Share</th></tr></thead>
+              <tbody>
+                <tr><td>app-cluster-a</td><td class="adm-nw-code">10.10.2.14</td><td>HTTPS</td><td>1.1 Gbps</td><td>720 Mbps</td><td>28%</td></tr>
+                <tr><td>db-primary-01</td><td class="adm-nw-code">10.10.5.2</td><td>SQL</td><td>540 Mbps</td><td>380 Mbps</td><td>14%</td></tr>
+                <tr><td>cdn-egress</td><td class="adm-nw-code">Edge</td><td>CDN</td><td>210 Mbps</td><td>530 Mbps</td><td>11%</td></tr>
+                <tr><td>conf-room-av</td><td class="adm-nw-code">10.30.1.55</td><td>RTP</td><td>180 Mbps</td><td>230 Mbps</td><td>6%</td></tr>
+                <tr><td>mdm-sync</td><td class="adm-nw-code">Fleet</td><td>MDM</td><td>90 Mbps</td><td>130 Mbps</td><td>3%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="adm-nw-footer">
+          <p>© 2026 SecOps · Built with Bootstrap 5 · Template by <a href="https://polurus.com" target="_blank" rel="noopener">Subrahmanyam Poluru</a></p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
