@@ -2,6 +2,11 @@
 
 A responsive ecommerce admin dashboard built with **Bootstrap 5**, **Bootstrap Icons**, **Chart.js**, and **Inter** (Google Fonts). Includes a full-height sidebar with mobile toggle, KPI cards, sales charts, orders table, inventory alerts, and more.
 
+## Screenshot
+
+<img width="3361" height="3007" alt="image" src="https://github.com/user-attachments/assets/f882b820-c193-443a-95a5-77a56008dce0" />
+
+
 ## Features
 
 - **Ecommerce KPIs** — Revenue, orders, customers, and conversion rate cards with trend indicators
