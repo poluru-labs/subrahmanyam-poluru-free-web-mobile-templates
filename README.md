@@ -24,6 +24,11 @@ Location: [web/bootstrap/modern-admin-dashboard](web/bootstrap/modern-admin-dash
 
 A responsive ecommerce admin dashboard with a full-height sidebar, KPI cards, sales and traffic charts, orders table, inventory alerts, and mobile toggle navigation. Built with Bootstrap 5, Bootstrap Icons, Chart.js, and Inter (Google Fonts).
 
+### 5. Modern Admin Network Dashboard
+Location: [web/bootstrap/modern-admin-network-dashboard](web/bootstrap/modern-admin-network-dashboard)
+
+A network and security operations dashboard for company SOC and network teams — threat center, traffic charts, live alerts, endpoint health, VPN snapshot, and a light sticky sidebar. Uses Bootstrap 5, Bootstrap Icons, Inter, and the `adm-nw-*` CSS prefix.
+
 ## Repository Structure
 
 ```text
@@ -31,7 +36,8 @@ bootstrap/
 ├── it-consulting/
 ├── teams-chat/
 ├── webdesign/
-└── modern-admin-dashboard/
+├── modern-admin-dashboard/
+└── modern-admin-network-dashboard/
 ```
 
 Each template folder includes its own HTML files, styling assets, and a README with project-specific details.
