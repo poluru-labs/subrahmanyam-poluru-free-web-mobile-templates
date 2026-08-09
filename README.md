@@ -1,38 +1,39 @@
 # Free Web & Mobile Templates
 
-This repository contains a collection of responsive, Bootstrap-based website templates designed for modern business, consulting, and communication experiences. The templates are organized under the Bootstrap section and are ready to preview, customize, and deploy.
+A collection of responsive Bootstrap website and admin templates for business, consulting, communication, ecommerce, and security operations. Templates live under `web/bootstrap/` and are ready to preview, customize, and deploy.
 
 ## Available Templates
 
 ### 1. IT Consulting Template
-Location: [bootstrap/it-consulting](bootstrap/it-consulting)
+Location: [web/bootstrap/it-consulting](web/bootstrap/it-consulting)
 
-A polished multi-page consulting website template with sections for services, company information, careers, contact, and training. It is ideal for consulting firms, agencies, and professional service businesses.
+Multi-page consulting website with services, company info, careers, contact, and training.
 
 ### 2. Teams Chat Template
-Location: [bootstrap/teams-chat](bootstrap/teams-chat)
+Location: [web/bootstrap/teams-chat](web/bootstrap/teams-chat)
 
-A modern chat-style UI template with a sidebar navigation, member list, conversation area, and interactive demo behavior. It is well-suited for messaging dashboards, collaboration tools, and SaaS-style interfaces.
+Modern chat UI with sidebar navigation, member list, conversation area, and interactive demo behavior.
 
 ### 3. Web Design Template
-Location: [bootstrap/webdesign](bootstrap/webdesign)
+Location: [web/bootstrap/webdesign](web/bootstrap/webdesign)
 
-A creative landing page template for web design services, featuring a hero section, process overview, client logos, portfolio highlights, pricing plans, testimonials, and contact details.
+Creative agency landing page with hero, process, portfolio, pricing, testimonials, and contact.
 
 ### 4. Modern Admin Dashboard
 Location: [web/bootstrap/modern-admin-dashboard](web/bootstrap/modern-admin-dashboard)
 
-A responsive ecommerce admin dashboard with a full-height sidebar, KPI cards, sales and traffic charts, orders table, inventory alerts, and mobile toggle navigation. Built with Bootstrap 5, Bootstrap Icons, Chart.js, and Inter (Google Fonts).
+Ecommerce admin dashboard with light sidebar, KPI cards, sales/traffic charts, orders, inventory alerts, and mobile toggle. Brand colors: primary `#D90000`, secondary `#007DCC`.
 
-### 5. Modern Admin Network Dashboard
+### 5. Modern Admin Network Dashboard (SecOps)
 Location: [web/bootstrap/modern-admin-network-dashboard](web/bootstrap/modern-admin-network-dashboard)
 
-A multi-page network and security operations dashboard for company SOC and network teams — overview, threat center, traffic, endpoints, firewall, devices, VPN, DNS, users, reports, and settings. Uses Bootstrap 5, Bootstrap Icons, Inter, and the `adm-nw-*` CSS prefix.
+Multi-page network/security ops platform (11 pages): overview, threat center, traffic, endpoints, firewall, devices, VPN, DNS, users, reports, and settings. Brand colors: primary `#F97300`, secondary `#F05941`. CSS prefix: `adm-nw-*`.
 
 ## Repository Structure
 
 ```text
-bootstrap/
+web/bootstrap/
+├── index.html
 ├── it-consulting/
 ├── teams-chat/
 ├── webdesign/
@@ -40,7 +41,7 @@ bootstrap/
 └── modern-admin-network-dashboard/
 ```
 
-Each template folder includes its own HTML files, styling assets, and a README with project-specific details.
+Each template folder includes HTML, assets, and its own README.
 
 ## Technologies Used
 
@@ -49,32 +50,35 @@ Each template folder includes its own HTML files, styling assets, and a README w
 - Bootstrap 5
 - JavaScript
 - Bootstrap Icons
-- Google Fonts
+- Google Fonts (Inter)
+- Chart.js (admin templates)
 
 ## Getting Started
 
 1. Open the template folder you want to use.
 2. Launch the main HTML file in a browser or serve the folder locally.
-3. Customize the content, branding, images, and colors to fit your project.
+3. Customize content, branding, images, and colors.
 
 Example:
 
 ```bash
-cd bootstrap/teams-chat
+cd web/bootstrap/modern-admin-network-dashboard
 python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000 in your browser.
 
+Browse all Bootstrap templates from [web/bootstrap/index.html](web/bootstrap/index.html).
+
 ## Notes
 
-- No build step is required for these templates.
-- They are intended as free, editable starting points for web projects.
-- For more details, refer to the README inside each template folder.
+- No build step is required.
+- Templates are free, editable starting points.
+- See each template README for features, colors, and customization details.
 
 ## Author
 
-Subrahmanyam Poluru
+**Subrahmanyam Poluru**
 
-Website: https://polurus.com
+Website: https://polurus.com  
 Email: mail.spoluru@gmail.com

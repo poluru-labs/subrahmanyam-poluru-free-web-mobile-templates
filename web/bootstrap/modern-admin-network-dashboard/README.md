@@ -1,20 +1,25 @@
 # Modern Admin Network Dashboard (SecOps)
 
-A responsive **network and security operations** dashboard for company SOC, network, and IT security teams. Built with **Bootstrap 5**, **Bootstrap Icons**, **Chart.js**, and **Inter** (Google Fonts). Admins and operators share the same platform views for threats, traffic, endpoints, firewall, and VPN.
+A responsive **network and security operations** dashboard for company SOC, network, and IT security teams. Built with **Bootstrap 5**, **Bootstrap Icons**, **Chart.js**, and **Inter** (Google Fonts).
+
+Admins and operators share the same platform views for threats, traffic, endpoints, firewall, devices, VPN, DNS, users, reports, and settings.
 
 ## Features
 
+- **11-page platform** — Overview plus dedicated ops, network, and platform screens
 - **Security operations overview** — Active threats, endpoints online, bandwidth, firewall blocks
-- **Network traffic chart** — Inbound vs outbound with 1H / 24H / 7D ranges
-- **Threat severity** — Critical / High / Medium / Low doughnut breakdown
+- **Threat Center** — Triage queue with severity/status filters, ownership, and actions
+- **Network traffic** — Inbound vs outbound charts (1H / 24H / 7D) and protocol mix
 - **Live security alerts** — Analyst-ready table with severity and status badges
-- **Top talkers** — Highest bandwidth hosts and protocols
-- **Endpoint health meters** — Agent coverage, patching, encryption, AV status
-- **VPN & remote access** — Active sessions, failed logins, uptime snapshot
-- **Ops activity feed** — Admin and analyst actions for audit visibility
-- **10 designed inner pages** — Threat Center, Traffic, Endpoints, Firewall, Devices, VPN, DNS & Proxy, Users & Roles, Reports, Settings
-- **Light sticky sidebar** — Full-height navigation; sticky on desktop, off-canvas on mobile
-- **Role-ready shell** — Brand, environment pill, notifications, user menu for multi-user platforms
+- **Endpoints** — Managed device inventory, posture chips, isolate/release actions
+- **Firewall** — Policy rules, hit counts, and recent deny activity
+- **Devices** — Routers, switches, firewalls, collectors, and wireless controllers
+- **VPN Access** — Active sessions, failed logins, gateway capacity
+- **DNS & Proxy** — Query decisions, sinkholes, resolver health
+- **Users & Roles** — Admin / Analyst / Viewer access model
+- **Reports** — Scheduled and on-demand security/network exports
+- **Settings** — Tenant profile, integrations, MFA, and notification defaults
+- **Light sticky sidebar** — Sticky on desktop; off-canvas toggle on mobile
 - **Google Fonts (Inter)** — Clean, widely used UI typeface
 - **External CSS only** — No HTML inline styles; custom classes use `adm-nw-*` prefix
 - **No build step** — CDN assets; open or serve locally
@@ -53,7 +58,7 @@ CSS variables are namespaced the same way (`--adm-nw-primary`, `--adm-nw-seconda
 | Bootstrap Icons | 1.11.3 CDN | Icons |
 | Google Fonts | Inter 400–800 | Typography |
 | Chart.js | 4.4.1 CDN | Traffic & threat charts |
-| JavaScript | `assets/js/scripts.js` | Sidebar + charts |
+| JavaScript | `assets/js/scripts.js` | Sidebar, tabs, charts |
 
 ## Pages
 
@@ -96,6 +101,13 @@ modern-admin-network-dashboard/
 
 ## Getting Started
 
+### Prerequisites
+
+- A modern browser (Chrome, Firefox, Safari, Edge)
+- Optional: a local static server
+
+### Run locally
+
 ```bash
 cd web/bootstrap/modern-admin-network-dashboard
 python3 -m http.server 8000
@@ -103,7 +115,7 @@ python3 -m http.server 8000
 
 Open [http://localhost:8000](http://localhost:8000).
 
-Or open `index.html` directly in a modern browser.
+Or open `index.html` directly in a browser.
 
 ## Layout
 
@@ -111,13 +123,15 @@ Or open `index.html` directly in a modern browser.
 ┌────────────────┬──────────────────────────────────────┐
 │ Sticky Sidebar │ Topbar (search · env · alerts · user)│
 │  (light)       ├──────────────────────────────────────┤
-│                │ Network Security Overview            │
-│ Overview       │ KPI cards                            │
-│ Threat Center  │ Traffic chart     │ Threat severity  │
-│ Traffic        │ Live alerts       │ Top talkers      │
-│ Endpoints      │ Endpoint · VPN · Ops activity        │
+│ Overview       │ Page title + actions                 │
+│ Threat Center  │ KPI cards / filters / tables         │
+│ Traffic        │ Charts, panels, device cards         │
+│ Endpoints      │                                      │
 │ Firewall       │                                      │
-│ VPN / Users    │                                      │
+│ Devices        │                                      │
+│ VPN / DNS      │                                      │
+│ Users / Reports│                                      │
+│ Settings       │                                      │
 └────────────────┴──────────────────────────────────────┘
 ```
 
@@ -128,6 +142,17 @@ Or open `index.html` directly in a modern browser.
 | **≥ 992px** | Sticky light sidebar in document flow |
 | **&lt; 992px** | Off-canvas sidebar + overlay + hamburger |
 | **&lt; 576px** | Compact KPIs; search hidden in topbar |
+
+## Demo Users
+
+Template sample people use these name variants:
+
+- Subrahmanyam Poluru
+- S Poluru
+- Poluru S
+- Poluru Subrahmanyam
+
+Replace them with your real operators when customizing.
 
 ## Customization
 
@@ -147,11 +172,11 @@ Update matching hex values in `assets/js/scripts.js` (`COLORS`) for charts.
 
 ### Content
 
-Replace demo company name, hosts, IPs, alert IDs, and avatar URL with your tenant data. Wire Threat Center / Endpoints links to real routes or APIs.
+Replace demo company name (Acme Corp), hosts, IPs, alert IDs, and avatar URL with your tenant data. Wire Threat Center / Endpoints / Firewall actions to real APIs.
 
 ### Roles
 
-The shell supports shared admin/user views. Hide nav items or action buttons per role in your app layer; the template shows a SOC Admin persona by default.
+The shell supports shared admin/user views. Hide nav items or action buttons per role in your app layer. The template defaults to a **SOC Admin** persona.
 
 ## Browser Support
 
@@ -165,7 +190,7 @@ The shell supports shared admin/user views. Hide nav items or action buttons per
 
 - Frontend template with static demo security/network data
 - Charts and sidebar interactions are client-side only
-- Integrate SIEM, NetFlow, EDR, or ticketing APIs for production
+- Integrate SIEM, NetFlow, EDR, or ticketing APIs for production use
 
 ## Author
 

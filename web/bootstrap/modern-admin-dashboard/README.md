@@ -128,7 +128,9 @@ Sample datasets live in `assets/js/scripts.js` (`salesData`). Replace with API d
 
 ### Content
 
-Replace demo names, order IDs, product labels, and Polurus avatar URL with your own store data and branding.
+Demo people use these name variants: **Subrahmanyam Poluru**, **S Poluru**, **Poluru S**, and **Poluru Subrahmanyam**.
+
+Replace names, order IDs, product labels, and Polurus avatar URL with your own store data and branding.
 
 ## CSS Class Prefix
 
