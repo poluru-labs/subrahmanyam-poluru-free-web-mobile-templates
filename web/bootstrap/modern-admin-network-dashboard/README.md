@@ -4,6 +4,11 @@ A responsive **network and security operations** dashboard for company SOC, netw
 
 Admins and operators share the same platform views for threats, traffic, endpoints, firewall, devices, VPN, DNS, users, reports, and settings.
 
+## Screenshot
+
+<img width="3361" height="3017" alt="image" src="https://github.com/user-attachments/assets/693dafee-e78a-4310-a9a2-c88ebf7a5e0a" />
+
+
 ## Features
 
 - **11-page platform** — Overview plus dedicated ops, network, and platform screens
