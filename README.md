@@ -29,6 +29,11 @@ Location: [web/bootstrap/modern-admin-network-dashboard](web/bootstrap/modern-ad
 
 Multi-page network/security ops platform (11 pages): overview, threat center, traffic, endpoints, firewall, devices, VPN, DNS, users, reports, and settings. Brand colors: primary `#F97300`, secondary `#F05941`. CSS prefix: `adm-nw-*`.
 
+### 6. Nonprofit Impact Dashboard
+Location: [web/bootstrap/non-profit-impact-dashboard](web/bootstrap/non-profit-impact-dashboard)
+
+Public-facing nonprofit impact website with mission hero, animated counters, program outcomes, geographic reach, filterable annual reports, success stories, partners, and donate CTA. Teal/blue nonprofit palette. CSS prefix: `np-*`.
+
 ## Repository Structure
 
 ```text
@@ -38,7 +43,8 @@ web/bootstrap/
 ├── teams-chat/
 ├── webdesign/
 ├── modern-admin-dashboard/
-└── modern-admin-network-dashboard/
+├── modern-admin-network-dashboard/
+└── non-profit-impact-dashboard/
 ```
 
 Each template folder includes HTML, assets, and its own README.

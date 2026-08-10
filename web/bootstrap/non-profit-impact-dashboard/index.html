@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="BrightPath Foundation — public nonprofit impact dashboard showing program outcomes, beneficiaries, geographic reach, annual reports, and donor transparency." />
+  <title>BrightPath Foundation — Impact Dashboard</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="np-body">
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg np-navbar sticky-top" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand np-brand" href="#home">
+        <span class="np-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
+        <span>BrightPath <em>Foundation</em></span>
+      </a>
+      <button class="navbar-toggler np-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#npNav" aria-controls="npNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="npNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#geography">Reach</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reports">Reports</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn np-btn-primary" href="#donate">Donate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. Hero -->
+    <header class="np-hero" id="home">
+      <div class="np-hero-overlay"></div>
+      <div class="container np-hero-content">
+        <div class="row align-items-end min-vh-75">
+          <div class="col-lg-8 np-reveal">
+            <p class="np-eyebrow">Public Impact Dashboard · Est. 2014</p>
+            <h1 class="np-hero-title">BrightPath Foundation</h1>
+            <p class="np-hero-lead">
+              We expand opportunity through education, health access, and community resilience—
+              so every person can build a more secure future.
+            </p>
+            <div class="np-hero-actions">
+              <a href="#reports" class="btn np-btn-primary btn-lg">
+                <i class="bi bi-file-earmark-text me-2"></i>View Annual Report
+              </a>
+              <a href="#donate" class="btn np-btn-light btn-lg">
+                <i class="bi bi-heart-fill me-2"></i>Donate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- This Year in Impact banner -->
+    <section class="np-year-banner" aria-label="This year in impact">
+      <div class="container">
+        <div class="np-year-banner-inner np-reveal">
+          <div class="np-year-badge"><i class="bi bi-stars"></i> This Year in Impact</div>
+          <p class="np-year-text mb-0">
+            In <strong>2025</strong>, BrightPath reached <strong>128,400 people</strong> across
+            <strong>42 communities</strong> with education, clinic care, and emergency support—powered by
+            <strong>3,200 volunteers</strong> and transparent donor partnership.
+          </p>
+          <a href="#impact" class="np-year-link">See the numbers <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Impact stats -->
+    <section class="np-section" id="impact">
+      <div class="container">
+        <div class="np-section-head np-reveal">
+          <p class="np-eyebrow">Key metrics</p>
+          <h2 class="np-section-title">Our impact at a glance</h2>
+          <p class="np-section-sub">Real outcomes tracked for donors, partners, and the communities we serve.</p>
+        </div>
+
+        <div class="row g-3 g-lg-4">
+          <div class="col-6 col-lg">
+            <article class="np-stat-card np-reveal">
+              <div class="np-stat-icon"><i class="bi bi-people-fill"></i></div>
+              <p class="np-stat-value"><span class="np-counter" data-target="128400">0</span></p>
+              <p class="np-stat-label">People served</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg">
+            <article class="np-stat-card np-reveal">
+              <div class="np-stat-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <p class="np-stat-value"><span class="np-counter" data-target="42">0</span></p>
+              <p class="np-stat-label">Communities reached</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg">
+            <article class="np-stat-card np-reveal">
+              <div class="np-stat-icon"><i class="bi bi-hand-heart"></i></div>
+              <p class="np-stat-value"><span class="np-counter" data-target="3200">0</span></p>
+              <p class="np-stat-label">Active volunteers</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg">
+            <article class="np-stat-card np-reveal">
+              <div class="np-stat-icon"><i class="bi bi-cash-stack"></i></div>
+              <p class="np-stat-value">$<span class="np-counter" data-target="18.6" data-decimals="1">0</span>M</p>
+              <p class="np-stat-label">Funds deployed</p>
+            </article>
+          </div>
+          <div class="col-12 col-lg">
+            <article class="np-stat-card np-reveal">
+              <div class="np-stat-icon"><i class="bi bi-check2-circle"></i></div>
+              <p class="np-stat-value"><span class="np-counter" data-target="214">0</span></p>
+              <p class="np-stat-label">Projects completed</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Program outcomes -->
+    <section class="np-section np-section-soft" id="programs">
+      <div class="container">
+        <div class="np-section-head np-reveal">
+          <p class="np-eyebrow">Program outcomes</p>
+          <h2 class="np-section-title">Where your support creates change</h2>
+          <p class="np-section-sub">Four flagship programs with measurable results from the past year.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <article class="np-program-card np-reveal">
+              <div class="np-program-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <h3 class="np-program-title">Learning Pathways</h3>
+              <p class="np-program-text">After-school tutoring, scholarships, and digital literacy for students in underserved districts.</p>
+              <div class="np-program-metric">
+                <div class="d-flex justify-content-between"><span>Grade improvement</span><strong>86%</strong></div>
+                <div class="progress np-progress" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" data-progress="86"></div>
+                </div>
+              </div>
+              <ul class="np-program-list">
+                <li><i class="bi bi-check-lg"></i> 24,800 students supported</li>
+                <li><i class="bi bi-check-lg"></i> 1,140 scholarships awarded</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="np-program-card np-reveal">
+              <div class="np-program-icon np-icon-blue"><i class="bi bi-hospital"></i></div>
+              <h3 class="np-program-title">Community Clinics</h3>
+              <p class="np-program-text">Mobile clinics and wellness screenings that bring primary care closer to rural families.</p>
+              <div class="np-program-metric">
+                <div class="d-flex justify-content-between"><span>Care access goal</span><strong>92%</strong></div>
+                <div class="progress np-progress" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar np-bar-blue" data-progress="92"></div>
+                </div>
+              </div>
+              <ul class="np-program-list">
+                <li><i class="bi bi-check-lg"></i> 61,200 patient visits</li>
+                <li><i class="bi bi-check-lg"></i> 38 mobile clinic days / month</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="np-program-card np-reveal">
+              <div class="np-program-icon np-icon-green"><i class="bi bi-basket2-fill"></i></div>
+              <h3 class="np-program-title">Nourish &amp; Thrive</h3>
+              <p class="np-program-text">Food security networks, community gardens, and nutrition education for families in need.</p>
+              <div class="np-program-metric">
+                <div class="d-flex justify-content-between"><span>Households food-secure</span><strong>78%</strong></div>
+                <div class="progress np-progress" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar np-bar-green" data-progress="78"></div>
+                </div>
+              </div>
+              <ul class="np-program-list">
+                <li><i class="bi bi-check-lg"></i> 2.1M meals distributed</li>
+                <li><i class="bi bi-check-lg"></i> 96 community pantries</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="np-program-card np-reveal">
+              <div class="np-program-icon np-icon-sky"><i class="bi bi-house-heart-fill"></i></div>
+              <h3 class="np-program-title">Safe Harbor Housing</h3>
+              <p class="np-program-text">Emergency shelter, rental assistance, and housing navigation for families facing displacement.</p>
+              <div class="np-program-metric">
+                <div class="d-flex justify-content-between"><span>Stable placement rate</span><strong>81%</strong></div>
+                <div class="progress np-progress" role="progressbar" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar np-bar-sky" data-progress="81"></div>
+                </div>
+              </div>
+              <ul class="np-program-list">
+                <li><i class="bi bi-check-lg"></i> 4,650 families housed</li>
+                <li><i class="bi bi-check-lg"></i> $3.4M rental support</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Geographic impact -->
+    <section class="np-section" id="geography">
+      <div class="container">
+        <div class="np-section-head np-reveal">
+          <p class="np-eyebrow">Geographic reach</p>
+          <h2 class="np-section-title">Communities we serve</h2>
+          <p class="np-section-sub">Programs span urban neighborhoods and rural counties across the United States.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7">
+            <div class="np-map-panel np-reveal">
+              <div class="np-map-art" aria-hidden="true">
+                <div class="np-map-grid"></div>
+                <span class="np-map-pin np-pin-1" title="Pacific Northwest"></span>
+                <span class="np-map-pin np-pin-2" title="Midwest"></span>
+                <span class="np-map-pin np-pin-3" title="Southeast"></span>
+                <span class="np-map-pin np-pin-4" title="Southwest"></span>
+                <span class="np-map-pin np-pin-5" title="Northeast"></span>
+                <div class="np-map-label">
+                  <i class="bi bi-globe-americas"></i>
+                  <span>Coverage map placeholder · 5 regions · 42 communities</span>
+                </div>
+              </div>
+              <div class="np-map-legend">
+                <span><i class="bi bi-circle-fill np-dot-teal"></i> Active programs</span>
+                <span><i class="bi bi-circle-fill np-dot-blue"></i> Partner sites</span>
+                <span><i class="bi bi-circle-fill np-dot-green"></i> Expansion 2026</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="np-region-panel np-reveal">
+              <h3 class="np-region-title">Regions &amp; focus cities</h3>
+              <ul class="np-region-list">
+                <li>
+                  <div>
+                    <strong>Pacific Northwest</strong>
+                    <span>Seattle · Portland · Spokane</span>
+                  </div>
+                  <span class="np-region-tag">12 sites</span>
+                </li>
+                <li>
+                  <div>
+                    <strong>Midwest Heartland</strong>
+                    <span>Chicago · Detroit · Minneapolis</span>
+                  </div>
+                  <span class="np-region-tag">9 sites</span>
+                </li>
+                <li>
+                  <div>
+                    <strong>Southeast Corridor</strong>
+                    <span>Atlanta · Nashville · Charlotte</span>
+                  </div>
+                  <span class="np-region-tag">8 sites</span>
+                </li>
+                <li>
+                  <div>
+                    <strong>Southwest</strong>
+                    <span>Phoenix · Albuquerque · El Paso</span>
+                  </div>
+                  <span class="np-region-tag">7 sites</span>
+                </li>
+                <li>
+                  <div>
+                    <strong>Northeast</strong>
+                    <span>Boston · Philadelphia · Newark</span>
+                  </div>
+                  <span class="np-region-tag">6 sites</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Annual reports -->
+    <section class="np-section np-section-soft" id="reports">
+      <div class="container">
+        <div class="np-section-head np-reveal">
+          <p class="np-eyebrow">Transparency</p>
+          <h2 class="np-section-title">Annual reports &amp; financials</h2>
+          <p class="np-section-sub">Download audited summaries and impact reports. We publish results every year for public trust.</p>
+        </div>
+
+        <div class="np-filter-bar np-reveal" role="group" aria-label="Filter reports by year">
+          <button type="button" class="np-filter-btn np-filter-active" data-filter="all">All years</button>
+          <button type="button" class="np-filter-btn" data-filter="2025">2025</button>
+          <button type="button" class="np-filter-btn" data-filter="2024">2024</button>
+          <button type="button" class="np-filter-btn" data-filter="2023">2023</button>
+          <button type="button" class="np-filter-btn" data-filter="2022">2022</button>
+        </div>
+
+        <div class="row g-4" id="npReportGrid">
+          <div class="col-md-6 col-xl-3" data-year="2025">
+            <article class="np-report-card np-reveal">
+              <div class="np-report-top">
+                <span class="np-report-icon"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+                <span class="np-report-year">2025</span>
+              </div>
+              <h3 class="np-report-title">Annual Impact Report</h3>
+              <p class="np-report-meta">48 pages · Audited outcomes · PDF</p>
+              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3" data-year="2025">
+            <article class="np-report-card np-reveal">
+              <div class="np-report-top">
+                <span class="np-report-icon np-icon-blue"><i class="bi bi-pie-chart-fill"></i></span>
+                <span class="np-report-year">2025</span>
+              </div>
+              <h3 class="np-report-title">Financial Statement</h3>
+              <p class="np-report-meta">Form 990 summary · Independent audit</p>
+              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3" data-year="2024">
+            <article class="np-report-card np-reveal">
+              <div class="np-report-top">
+                <span class="np-report-icon"><i class="bi bi-file-earmark-pdf-fill"></i></span>
+                <span class="np-report-year">2024</span>
+              </div>
+              <h3 class="np-report-title">Annual Impact Report</h3>
+              <p class="np-report-meta">44 pages · Program deep-dives · PDF</p>
+              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3" data-year="2023">
+            <article class="np-report-card np-reveal">
+              <div class="np-report-top">
+                <span class="np-report-icon np-icon-green"><i class="bi bi-journal-richtext"></i></span>
+                <span class="np-report-year">2023</span>
+              </div>
+              <h3 class="np-report-title">Community Year Book</h3>
+              <p class="np-report-meta">Stories, maps, and partner highlights</p>
+              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3" data-year="2022">
+            <article class="np-report-card np-reveal">
+              <div class="np-report-top">
+                <span class="np-report-icon np-icon-sky"><i class="bi bi-clipboard-data-fill"></i></span>
+                <span class="np-report-year">2022</span>
+              </div>
+              <h3 class="np-report-title">Impact Snapshot</h3>
+              <p class="np-report-meta">2-page overview for partners</p>
+              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3" data-year="2024">
+            <article class="np-report-card np-reveal">
+              <div class="np-report-top">
+                <span class="np-report-icon np-icon-blue"><i class="bi bi-shield-check"></i></span>
+                <span class="np-report-year">2024</span>
+              </div>
+              <h3 class="np-report-title">Accountability Brief</h3>
+              <p class="np-report-meta">Governance · ethics · safeguards</p>
+              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Success stories -->
+    <section class="np-section" id="stories">
+      <div class="container">
+        <div class="np-section-head np-reveal">
+          <p class="np-eyebrow">Impact stories</p>
+          <h2 class="np-section-title">Lives changed by community care</h2>
+          <p class="np-section-sub">Stories from people who found opportunity through BrightPath programs.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="np-story-card np-reveal">
+              <div class="np-story-media np-story-media-1">
+                <span class="np-story-initials">MP</span>
+              </div>
+              <div class="np-story-body">
+                <p class="np-story-quote">“The scholarship and tutoring hours gave me a real path to college. I’m the first in my family to enroll.”</p>
+                <div class="np-story-meta">
+                  <div>
+                    <strong>Maya P.</strong>
+                    <span>Learning Pathways · Seattle</span>
+                  </div>
+                  <span class="np-story-tag">Education</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="np-story-card np-reveal">
+              <div class="np-story-media np-story-media-2">
+                <span class="np-story-initials">JR</span>
+              </div>
+              <div class="np-story-body">
+                <p class="np-story-quote">“The mobile clinic caught my blood pressure early. Without that visit, I wouldn’t have started treatment.”</p>
+                <div class="np-story-meta">
+                  <div>
+                    <strong>James R.</strong>
+                    <span>Community Clinics · Nashville</span>
+                  </div>
+                  <span class="np-story-tag">Health</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="np-story-card np-reveal">
+              <div class="np-story-media np-story-media-3">
+                <span class="np-story-initials">AL</span>
+              </div>
+              <div class="np-story-body">
+                <p class="np-story-quote">“Rental assistance kept my kids in the same school. Stability meant everything during that hard season.”</p>
+                <div class="np-story-meta">
+                  <div>
+                    <strong>Aisha L.</strong>
+                    <span>Safe Harbor Housing · Chicago</span>
+                  </div>
+                  <span class="np-story-tag">Housing</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Partners -->
+    <section class="np-section np-section-soft" id="partners">
+      <div class="container">
+        <div class="np-section-head np-reveal">
+          <p class="np-eyebrow">Partners &amp; sponsors</p>
+          <h2 class="np-section-title">Trusted by organizations who care</h2>
+          <p class="np-section-sub">Foundations, civic groups, and corporate partners advancing shared goals.</p>
+        </div>
+
+        <div class="row g-3 g-md-4 np-partner-grid np-reveal">
+          <div class="col-6 col-md-4 col-lg-2"><div class="np-partner-logo"><i class="bi bi-building"></i><span>Northstar Grant</span></div></div>
+          <div class="col-6 col-md-4 col-lg-2"><div class="np-partner-logo"><i class="bi bi-briefcase"></i><span>Civic Bridge</span></div></div>
+          <div class="col-6 col-md-4 col-lg-2"><div class="np-partner-logo"><i class="bi bi-bank"></i><span>Harbor Trust</span></div></div>
+          <div class="col-6 col-md-4 col-lg-2"><div class="np-partner-logo"><i class="bi bi-globe2"></i><span>Unity Works</span></div></div>
+          <div class="col-6 col-md-4 col-lg-2"><div class="np-partner-logo"><i class="bi bi-lightning-charge"></i><span>Summit Care</span></div></div>
+          <div class="col-6 col-md-4 col-lg-2"><div class="np-partner-logo"><i class="bi bi-flower1"></i><span>Green Leaf Co.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CTA -->
+    <section class="np-cta" id="donate">
+      <div class="container">
+        <div class="np-cta-panel np-reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <p class="np-eyebrow np-eyebrow-light">Join the mission</p>
+              <h2 class="np-cta-title">Help more families find a brighter path</h2>
+              <p class="np-cta-text">
+                Your gift funds tutors, clinic days, food distributions, and housing support.
+                Partner with us as a donor, volunteer, or sponsor.
+              </p>
+            </div>
+            <div class="col-lg-5">
+              <div class="np-cta-actions">
+                <a href="#" class="btn np-btn-primary btn-lg w-100"><i class="bi bi-heart-fill me-2"></i>Donate now</a>
+                <a href="#" class="btn np-btn-light btn-lg w-100"><i class="bi bi-person-plus me-2"></i>Volunteer</a>
+                <a href="#" class="btn np-btn-ghost btn-lg w-100"><i class="bi bi-handshake me-2"></i>Partner with us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. Footer -->
+  <footer class="np-footer">
+    <div class="container">
+      <div class="row g-4 g-xl-5">
+        <div class="col-lg-4">
+          <a class="np-brand np-brand-footer" href="#home">
+            <span class="np-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
+            <span>BrightPath <em>Foundation</em></span>
+          </a>
+          <p class="np-footer-about">
+            A 501(c)(3) nonprofit expanding opportunity through education, health, food security, and housing.
+          </p>
+          <div class="np-social">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="np-footer-heading">Explore</h3>
+          <ul class="np-footer-links">
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#geography">Reach</a></li>
+            <li><a href="#stories">Stories</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="np-footer-heading">Resources</h3>
+          <ul class="np-footer-links">
+            <li><a href="#reports">Annual reports</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#donate">Volunteer</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <h3 class="np-footer-heading">Contact</h3>
+          <ul class="np-footer-contact">
+            <li><i class="bi bi-geo-alt"></i> 480 Mission Street, Suite 210<br />Seattle, WA 98101</li>
+            <li><i class="bi bi-telephone"></i> <a href="tel:+12065550140">(206) 555-0140</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:hello@brightpath.org">hello@brightpath.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="np-footer-bottom">
+        <p>© 2026 BrightPath Foundation. All rights reserved. Template by <a href="https://polurus.com" target="_blank" rel="noopener">Subrahmanyam Poluru</a>.</p>
+        <p class="np-footer-ein">EIN 45-1289047 · Nonprofit template for demonstration</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
