@@ -4,6 +4,12 @@ A polished, responsive **awards nomination and judging platform** template for p
 
 This is a premium public-facing awards platform page—not a generic admin dashboard.
 
+
+## Screenshot
+
+
+<img width="2512" height="9950" alt="image" src="https://github.com/user-attachments/assets/a5877fe6-d16b-46b2-a32c-e79b07cf04e5" />
+
 ## Brand Colors
 
 | Token | Value | Use |
