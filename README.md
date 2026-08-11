@@ -34,6 +34,11 @@ Location: [web/bootstrap/non-profit-impact-dashboard](web/bootstrap/non-profit-i
 
 Public-facing nonprofit impact website with mission hero, animated counters, program outcomes, geographic reach, filterable annual reports, success stories, partners, and donate CTA. Teal/blue nonprofit palette. CSS prefix: `np-*`.
 
+### 7. Elevate Awards
+Location: [web/bootstrap/elevate-awards](web/bootstrap/elevate-awards)
+
+Awards nomination and judging platform with workflow timeline, eligibility screening, category filters, reviewer profiles, scoring rubric, finalists, nomination form, and insights. Brand colors: primary `#AF0404`, secondary `#46B5D1`. CSS prefix: `ea-*`.
+
 ## Repository Structure
 
 ```text
@@ -44,7 +49,8 @@ web/bootstrap/
 ├── webdesign/
 ├── modern-admin-dashboard/
 ├── modern-admin-network-dashboard/
-└── non-profit-impact-dashboard/
+├── non-profit-impact-dashboard/
+└── elevate-awards/
 ```
 
 Each template folder includes HTML, assets, and its own README.

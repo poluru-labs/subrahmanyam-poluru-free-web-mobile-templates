@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Elevate Awards — a polished awards nomination and judging platform template for nominations, eligibility screening, expert review, scoring, and winner selection." />
+  <title>Elevate Awards — Nomination &amp; Judging Platform</title>
+
+  <!-- Google Fonts: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="ea-body">
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg ea-navbar sticky-top" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand ea-brand" href="#home">
+        <span class="ea-brand-mark" aria-hidden="true"><i class="bi bi-award-fill"></i></span>
+        <span>Elevate <em>Awards</em></span>
+      </a>
+      <button class="navbar-toggler ea-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#eaNav" aria-controls="eaNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="eaNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#workflow">Workflow</a></li>
+          <li class="nav-item"><a class="nav-link" href="#eligibility">Eligibility</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviewers">Reviewers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scoring">Scoring</a></li>
+          <li class="nav-item"><a class="nav-link" href="#finalists">Finalists</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn ea-btn-primary" href="#nominate">Start Nomination</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. Hero -->
+    <header class="ea-hero" id="home">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 ea-reveal">
+            <p class="ea-eyebrow">Awards Nomination &amp; Judging Platform</p>
+            <h1 class="ea-hero-title">Recognize excellence with a transparent evaluation process</h1>
+            <p class="ea-hero-lead">
+              Elevate Awards helps organizers run nominations, eligibility screening, expert review,
+              scoring, and finalist selection—with clarity donors, juries, and applicants can trust.
+            </p>
+            <div class="ea-hero-actions">
+              <a href="#nominate" class="btn ea-btn-primary btn-lg">
+                <i class="bi bi-pen me-2"></i>Start Nomination
+              </a>
+              <a href="#scoring" class="btn ea-btn-outline btn-lg">
+                <i class="bi bi-list-check me-2"></i>View Criteria
+              </a>
+            </div>
+            <ul class="ea-hero-points">
+              <li><i class="bi bi-shield-check"></i> Blind-ready review workflows</li>
+              <li><i class="bi bi-graph-up"></i> Structured scoring rubrics</li>
+              <li><i class="bi bi-people"></i> Multi-panel expert evaluation</li>
+            </ul>
+          </div>
+          <div class="col-lg-5 ea-reveal">
+            <div class="ea-hero-panel">
+              <div class="ea-hero-panel-head">
+                <span class="ea-pill">Cycle 2026</span>
+                <strong>Program integrity snapshot</strong>
+              </div>
+              <div class="ea-hero-metric">
+                <span>Review completion</span>
+                <strong>78%</strong>
+              </div>
+              <div class="progress ea-progress mb-3">
+                <div class="progress-bar" data-progress="78"></div>
+              </div>
+              <ul class="ea-hero-list">
+                <li><span>Nominations received</span><strong>1,284</strong></li>
+                <li><span>Eligibility cleared</span><strong>962</strong></li>
+                <li><span>Under expert review</span><strong>418</strong></li>
+                <li><span>Shortlisted finalists</span><strong>36</strong></li>
+              </ul>
+              <p class="ea-hero-note mb-0"><i class="bi bi-lock"></i> Transparent evaluation · Audit-ready trails</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Integrity highlight -->
+    <section class="ea-integrity" aria-label="Program integrity">
+      <div class="container">
+        <div class="ea-integrity-inner ea-reveal">
+          <div class="ea-integrity-icon"><i class="bi bi-patch-check-fill"></i></div>
+          <div>
+            <h2 class="ea-integrity-title">Transparent Evaluation</h2>
+            <p class="ea-integrity-text mb-0">
+              Every nomination moves through documented screening, conflict checks, and weighted rubrics—
+              so winners are selected with rigor, not guesswork.
+            </p>
+          </div>
+          <a href="#workflow" class="ea-integrity-link">See the workflow <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Awards overview -->
+    <section class="ea-section" id="overview">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Platform overview</p>
+          <h2 class="ea-section-title">Awards program at a glance</h2>
+          <p class="ea-section-sub">Live indicators for organizers, reviewers, and oversight committees.</p>
+        </div>
+        <div class="row g-3 g-xl-4">
+          <div class="col-6 col-lg">
+            <article class="ea-stat-card ea-reveal">
+              <div class="ea-stat-icon"><i class="bi bi-inbox-fill"></i></div>
+              <p class="ea-stat-value"><span class="ea-counter" data-target="1284">0</span></p>
+              <p class="ea-stat-label">Nominations</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg">
+            <article class="ea-stat-card ea-reveal">
+              <div class="ea-stat-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+              <p class="ea-stat-value"><span class="ea-counter" data-target="8">0</span></p>
+              <p class="ea-stat-label">Categories</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg">
+            <article class="ea-stat-card ea-reveal">
+              <div class="ea-stat-icon"><i class="bi bi-person-badge-fill"></i></div>
+              <p class="ea-stat-value"><span class="ea-counter" data-target="54">0</span></p>
+              <p class="ea-stat-label">Reviewers</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg">
+            <article class="ea-stat-card ea-reveal">
+              <div class="ea-stat-icon"><i class="bi bi-stars"></i></div>
+              <p class="ea-stat-value"><span class="ea-counter" data-target="36">0</span></p>
+              <p class="ea-stat-label">Finalists</p>
+            </article>
+          </div>
+          <div class="col-12 col-lg">
+            <article class="ea-stat-card ea-reveal">
+              <div class="ea-stat-icon"><i class="bi bi-clipboard2-check-fill"></i></div>
+              <p class="ea-stat-value"><span class="ea-counter" data-target="78">0</span>%</p>
+              <p class="ea-stat-label">Review complete</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Nomination workflow -->
+    <section class="ea-section ea-section-soft" id="workflow">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Judging workflow</p>
+          <h2 class="ea-section-title">From nomination to winner selection</h2>
+          <p class="ea-section-sub">A clear five-stage process designed for fairness, speed, and accountability.</p>
+        </div>
+
+        <ol class="ea-timeline ea-reveal">
+          <li>
+            <span class="ea-timeline-step">01</span>
+            <div class="ea-timeline-card">
+              <div class="ea-timeline-icon"><i class="bi bi-pencil-square"></i></div>
+              <h3>Nomination</h3>
+              <p>Applicants or nominators submit structured entries with evidence and endorsements.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ea-timeline-step">02</span>
+            <div class="ea-timeline-card">
+              <div class="ea-timeline-icon"><i class="bi bi-funnel"></i></div>
+              <h3>Screening</h3>
+              <p>Eligibility rules, completeness checks, and conflict-of-interest flags are applied.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ea-timeline-step">03</span>
+            <div class="ea-timeline-card">
+              <div class="ea-timeline-icon"><i class="bi bi-search"></i></div>
+              <h3>Expert Review</h3>
+              <p>Independent reviewers score against a published rubric with written rationale.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ea-timeline-step">04</span>
+            <div class="ea-timeline-card">
+              <div class="ea-timeline-icon"><i class="bi bi-list-stars"></i></div>
+              <h3>Shortlist</h3>
+              <p>Top-ranked nominations advance to panel deliberation and finalist confirmation.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ea-timeline-step">05</span>
+            <div class="ea-timeline-card">
+              <div class="ea-timeline-icon"><i class="bi bi-trophy"></i></div>
+              <h3>Final Selection</h3>
+              <p>Winners are selected, notified, and published with transparent category outcomes.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. Eligibility screening -->
+    <section class="ea-section" id="eligibility">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Eligibility screening</p>
+          <h2 class="ea-section-title">Clear criteria before review begins</h2>
+          <p class="ea-section-sub">Screening protects program integrity and keeps reviewers focused on qualified submissions.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-check-card ea-reveal">
+              <div class="ea-check-top">
+                <i class="bi bi-calendar2-check"></i>
+                <span class="ea-badge ea-badge-ok">Eligible</span>
+              </div>
+              <h3>Submission window</h3>
+              <p>Entries must be submitted before the category deadline with all required fields complete.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-check-card ea-reveal">
+              <div class="ea-check-top">
+                <i class="bi bi-building-check"></i>
+                <span class="ea-badge ea-badge-ok">Eligible</span>
+              </div>
+              <h3>Organizational standing</h3>
+              <p>Nominees must be active legal entities or individuals in good standing within the region.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-check-card ea-reveal">
+              <div class="ea-check-top">
+                <i class="bi bi-hourglass-split"></i>
+                <span class="ea-badge ea-badge-pending">Pending</span>
+              </div>
+              <h3>Evidence package</h3>
+              <p>Supporting documents, metrics, and references are verified for authenticity and completeness.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-check-card ea-reveal">
+              <div class="ea-check-top">
+                <i class="bi bi-exclamation-octagon"></i>
+                <span class="ea-badge ea-badge-review">Under review</span>
+              </div>
+              <h3>Conflict check</h3>
+              <p>Relationships between nominees and assigned reviewers are flagged for reassignment.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="table-responsive ea-table-wrap ea-reveal mt-4">
+          <table class="table ea-table align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Nomination ID</th>
+                <th>Category</th>
+                <th>Organization</th>
+                <th>Screening</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ea-mono">NOM-24018</td>
+                <td>Innovation Excellence</td>
+                <td>Northwind Labs</td>
+                <td>92%</td>
+                <td><span class="ea-badge ea-badge-ok">Eligible</span></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+              </tr>
+              <tr>
+                <td class="ea-mono">NOM-24041</td>
+                <td>Community Impact</td>
+                <td>Harbor Civic Trust</td>
+                <td>74%</td>
+                <td><span class="ea-badge ea-badge-pending">Pending</span></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+              </tr>
+              <tr>
+                <td class="ea-mono">NOM-24057</td>
+                <td>Leadership Award</td>
+                <td>Summit Health Group</td>
+                <td>88%</td>
+                <td><span class="ea-badge ea-badge-review">Under review</span></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+              </tr>
+              <tr>
+                <td class="ea-mono">NOM-24072</td>
+                <td>Emerging Talent</td>
+                <td>Lumen Design Studio</td>
+                <td>100%</td>
+                <td><span class="ea-badge ea-badge-ok">Eligible</span></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Award categories -->
+    <section class="ea-section ea-section-soft" id="categories">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Award categories</p>
+          <h2 class="ea-section-title">Open programs for 2026</h2>
+          <p class="ea-section-sub">Filter by status to explore active categories, deadlines, and submission volume.</p>
+        </div>
+
+        <div class="ea-filter-bar ea-reveal" role="group" aria-label="Filter categories">
+          <button type="button" class="ea-filter-btn ea-filter-active" data-filter="all">All</button>
+          <button type="button" class="ea-filter-btn" data-filter="open">Open</button>
+          <button type="button" class="ea-filter-btn" data-filter="closing">Closing soon</button>
+          <button type="button" class="ea-filter-btn" data-filter="review">In review</button>
+        </div>
+
+        <div class="row g-4" id="eaCategoryGrid">
+          <div class="col-md-6 col-xl-4" data-status="open">
+            <article class="ea-category-card ea-reveal">
+              <div class="ea-category-top">
+                <span class="ea-badge ea-badge-ok">Open</span>
+                <span class="ea-category-count">214 submissions</span>
+              </div>
+              <h3>Innovation Excellence</h3>
+              <p>Recognizes breakthrough products, services, or research with measurable market or social value.</p>
+              <div class="ea-category-meta">
+                <span><i class="bi bi-calendar-event"></i> Closes Apr 30, 2026</span>
+                <span><i class="bi bi-people"></i> 12 reviewers</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-status="closing">
+            <article class="ea-category-card ea-reveal">
+              <div class="ea-category-top">
+                <span class="ea-badge ea-badge-pending">Closing soon</span>
+                <span class="ea-category-count">168 submissions</span>
+              </div>
+              <h3>Community Impact</h3>
+              <p>Honors initiatives that improve local wellbeing, inclusion, and long-term community capacity.</p>
+              <div class="ea-category-meta">
+                <span><i class="bi bi-calendar-event"></i> Closes Mar 18, 2026</span>
+                <span><i class="bi bi-people"></i> 9 reviewers</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-status="open">
+            <article class="ea-category-card ea-reveal">
+              <div class="ea-category-top">
+                <span class="ea-badge ea-badge-ok">Open</span>
+                <span class="ea-category-count">142 submissions</span>
+              </div>
+              <h3>Leadership Award</h3>
+              <p>Celebrates executives and founders who demonstrate ethical leadership and organizational growth.</p>
+              <div class="ea-category-meta">
+                <span><i class="bi bi-calendar-event"></i> Closes May 12, 2026</span>
+                <span><i class="bi bi-people"></i> 10 reviewers</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-status="review">
+            <article class="ea-category-card ea-reveal">
+              <div class="ea-category-top">
+                <span class="ea-badge ea-badge-review">In review</span>
+                <span class="ea-category-count">96 submissions</span>
+              </div>
+              <h3>Emerging Talent</h3>
+              <p>Spotlights rising professionals under 35 making exceptional early-career contributions.</p>
+              <div class="ea-category-meta">
+                <span><i class="bi bi-calendar-event"></i> Closed Feb 1, 2026</span>
+                <span><i class="bi bi-people"></i> 8 reviewers</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-status="open">
+            <article class="ea-category-card ea-reveal">
+              <div class="ea-category-top">
+                <span class="ea-badge ea-badge-ok">Open</span>
+                <span class="ea-category-count">121 submissions</span>
+              </div>
+              <h3>Sustainability Prize</h3>
+              <p>Awards climate-positive solutions with measurable environmental and economic outcomes.</p>
+              <div class="ea-category-meta">
+                <span><i class="bi bi-calendar-event"></i> Closes Jun 2, 2026</span>
+                <span><i class="bi bi-people"></i> 11 reviewers</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-status="closing">
+            <article class="ea-category-card ea-reveal">
+              <div class="ea-category-top">
+                <span class="ea-badge ea-badge-pending">Closing soon</span>
+                <span class="ea-category-count">87 submissions</span>
+              </div>
+              <h3>Public Service Fellowship</h3>
+              <p>Supports civic innovators delivering scalable public-sector improvements.</p>
+              <div class="ea-category-meta">
+                <span><i class="bi bi-calendar-event"></i> Closes Mar 25, 2026</span>
+                <span><i class="bi bi-people"></i> 7 reviewers</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Reviewer panel -->
+    <section class="ea-section" id="reviewers">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Reviewer panel</p>
+          <h2 class="ea-section-title">Independent experts guiding decisions</h2>
+          <p class="ea-section-sub">Multi-disciplinary reviewers with specialization coverage across every award track.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-reviewer-card ea-reveal">
+              <div class="ea-reviewer-avatar">SP</div>
+              <h3>Subrahmanyam Poluru</h3>
+              <p class="ea-reviewer-role">Lead Jury · Innovation Strategy</p>
+              <p class="ea-reviewer-bio">Former program director specializing in product innovation and venture evaluation.</p>
+              <ul class="ea-reviewer-stats">
+                <li><strong>48</strong><span>Reviews</span></li>
+                <li><strong>96%</strong><span>On-time</span></li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-reviewer-card ea-reveal">
+              <div class="ea-reviewer-avatar ea-avatar-alt">PS</div>
+              <h3>Poluru Subrahmanyam</h3>
+              <p class="ea-reviewer-role">Senior Reviewer · Public Policy</p>
+              <p class="ea-reviewer-bio">Focuses on community programs, equity impact, and government partnership models.</p>
+              <ul class="ea-reviewer-stats">
+                <li><strong>36</strong><span>Reviews</span></li>
+                <li><strong>94%</strong><span>On-time</span></li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-reviewer-card ea-reveal">
+              <div class="ea-reviewer-avatar">S</div>
+              <h3>S Poluru</h3>
+              <p class="ea-reviewer-role">Panelist · Sustainability</p>
+              <p class="ea-reviewer-bio">Climate solutions advisor with experience scoring environmental and ESG initiatives.</p>
+              <ul class="ea-reviewer-stats">
+                <li><strong>29</strong><span>Reviews</span></li>
+                <li><strong>98%</strong><span>On-time</span></li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-reviewer-card ea-reveal">
+              <div class="ea-reviewer-avatar ea-avatar-alt">P</div>
+              <h3>Poluru S</h3>
+              <p class="ea-reviewer-role">Fellow Judge · Talent</p>
+              <p class="ea-reviewer-bio">Leadership coach evaluating emerging talent, mentoring quality, and career impact.</p>
+              <ul class="ea-reviewer-stats">
+                <li><strong>41</strong><span>Reviews</span></li>
+                <li><strong>95%</strong><span>On-time</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Scoring and evaluation -->
+    <section class="ea-section ea-section-soft" id="scoring">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Scoring &amp; evaluation</p>
+          <h2 class="ea-section-title">Published rubric for every nomination</h2>
+          <p class="ea-section-sub">Weighted criteria keep evaluations consistent across reviewers and award categories.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="ea-scorecard ea-reveal">
+              <div class="ea-scorecard-head">
+                <h3>Reviewer scorecard</h3>
+                <span class="ea-pill">Weighted total · 100</span>
+              </div>
+              <div class="ea-score-row">
+                <div class="ea-score-label"><span>Innovation</span><strong>22 / 25</strong></div>
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="88"></div></div>
+              </div>
+              <div class="ea-score-row">
+                <div class="ea-score-label"><span>Impact</span><strong>18 / 20</strong></div>
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="90"></div></div>
+              </div>
+              <div class="ea-score-row">
+                <div class="ea-score-label"><span>Leadership</span><strong>16 / 20</strong></div>
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="80"></div></div>
+              </div>
+              <div class="ea-score-row">
+                <div class="ea-score-label"><span>Execution</span><strong>17 / 20</strong></div>
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="85"></div></div>
+              </div>
+              <div class="ea-score-row">
+                <div class="ea-score-label"><span>Community contribution</span><strong>13 / 15</strong></div>
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="87"></div></div>
+              </div>
+              <div class="ea-score-total">
+                <span>Composite score</span>
+                <strong>86.0</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="row g-3">
+              <div class="col-6">
+                <article class="ea-metric-block ea-reveal">
+                  <i class="bi bi-lightbulb"></i>
+                  <strong>25%</strong>
+                  <span>Innovation weight</span>
+                </article>
+              </div>
+              <div class="col-6">
+                <article class="ea-metric-block ea-reveal">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <strong>20%</strong>
+                  <span>Impact weight</span>
+                </article>
+              </div>
+              <div class="col-6">
+                <article class="ea-metric-block ea-reveal">
+                  <i class="bi bi-person-workspace"></i>
+                  <strong>20%</strong>
+                  <span>Leadership weight</span>
+                </article>
+              </div>
+              <div class="col-6">
+                <article class="ea-metric-block ea-reveal">
+                  <i class="bi bi-gear-wide-connected"></i>
+                  <strong>20%</strong>
+                  <span>Execution weight</span>
+                </article>
+              </div>
+              <div class="col-12">
+                <article class="ea-metric-block ea-reveal">
+                  <i class="bi bi-people"></i>
+                  <strong>15%</strong>
+                  <span>Community contribution weight</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Shortlist / finalists -->
+    <section class="ea-section" id="finalists">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Shortlist &amp; finalists</p>
+          <h2 class="ea-section-title">Advancing to final deliberation</h2>
+          <p class="ea-section-sub">Elegant finalist profiles with status markers and summary evaluation notes.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="ea-finalist-card ea-reveal">
+              <div class="ea-finalist-top">
+                <span class="ea-badge ea-badge-final">Finalist</span>
+                <span class="ea-finalist-score">91.4</span>
+              </div>
+              <h3>Northwind Labs</h3>
+              <p class="ea-finalist-cat">Innovation Excellence</p>
+              <p>AI-assisted diagnostics platform reducing rural clinic wait times by 38% in pilot regions.</p>
+              <div class="ea-finalist-meta">
+                <span><i class="bi bi-geo-alt"></i> Seattle, WA</span>
+                <span><i class="bi bi-chat-quote"></i> 5 reviews</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="ea-finalist-card ea-reveal">
+              <div class="ea-finalist-top">
+                <span class="ea-badge ea-badge-final">Finalist</span>
+                <span class="ea-finalist-score">89.7</span>
+              </div>
+              <h3>Harbor Civic Trust</h3>
+              <p class="ea-finalist-cat">Community Impact</p>
+              <p>Neighborhood resilience hubs delivering workforce training and family support services.</p>
+              <div class="ea-finalist-meta">
+                <span><i class="bi bi-geo-alt"></i> Chicago, IL</span>
+                <span><i class="bi bi-chat-quote"></i> 4 reviews</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="ea-finalist-card ea-reveal">
+              <div class="ea-finalist-top">
+                <span class="ea-badge ea-badge-shortlist">Shortlisted</span>
+                <span class="ea-finalist-score">88.2</span>
+              </div>
+              <h3>Lumen Design Studio</h3>
+              <p class="ea-finalist-cat">Emerging Talent</p>
+              <p>Inclusive product design practice advancing accessible interfaces for public services.</p>
+              <div class="ea-finalist-meta">
+                <span><i class="bi bi-geo-alt"></i> Austin, TX</span>
+                <span><i class="bi bi-chat-quote"></i> 6 reviews</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Reports / insights -->
+    <section class="ea-section ea-section-soft" id="insights">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Reports &amp; insights</p>
+          <h2 class="ea-section-title">Program health for organizers</h2>
+          <p class="ea-section-sub">Track review velocity, category balance, and submission quality in one view.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-insight-card ea-reveal">
+              <i class="bi bi-speedometer2"></i>
+              <h3>Review velocity</h3>
+              <p class="ea-insight-value">62 / day</p>
+              <p>Average completed reviews across all panels this week.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-insight-card ea-reveal">
+              <i class="bi bi-bar-chart-line"></i>
+              <h3>Category health</h3>
+              <p class="ea-insight-value">Balanced</p>
+              <p>No category exceeds ±15% variance from target volume.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-insight-card ea-reveal">
+              <i class="bi bi-clipboard-data"></i>
+              <h3>Complete dossiers</h3>
+              <p class="ea-insight-value">84%</p>
+              <p>Submissions with full evidence packages and endorsements.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="ea-insight-card ea-reveal">
+              <i class="bi bi-shield-lock"></i>
+              <h3>Conflict flags</h3>
+              <p class="ea-insight-value">11 open</p>
+              <p>Pending reassignment before final deliberation locks.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nomination form -->
+    <section class="ea-section" id="nominate">
+      <div class="container">
+        <div class="row g-4 g-xl-5 align-items-start">
+          <div class="col-lg-5 ea-reveal">
+            <p class="ea-eyebrow">Reusable nomination form</p>
+            <h2 class="ea-section-title ea-section-title-left">Submit a nomination</h2>
+            <p class="ea-section-sub ea-section-sub-left">
+              A clean starter form layout organizers can adapt for applications, fellowships, or challenge entries.
+            </p>
+            <ul class="ea-form-benefits">
+              <li><i class="bi bi-check2-circle"></i> Structured fields for evidence and impact</li>
+              <li><i class="bi bi-check2-circle"></i> Category-aware submission routing</li>
+              <li><i class="bi bi-check2-circle"></i> Confirmation-ready for production APIs</li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <form class="ea-form-card ea-reveal" action="#" method="post">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="eaNominee">Nominee / organization</label>
+                  <input class="form-control" id="eaNominee" type="text" placeholder="Organization or individual name" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="eaCategory">Award category</label>
+                  <select class="form-select" id="eaCategory">
+                    <option selected disabled>Select a category</option>
+                    <option>Innovation Excellence</option>
+                    <option>Community Impact</option>
+                    <option>Leadership Award</option>
+                    <option>Emerging Talent</option>
+                    <option>Sustainability Prize</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="eaNominator">Nominator name</label>
+                  <input class="form-control" id="eaNominator" type="text" placeholder="Your full name" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="eaEmail">Contact email</label>
+                  <input class="form-control" id="eaEmail" type="email" placeholder="you@organization.org" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="eaSummary">Impact summary</label>
+                  <textarea class="form-control" id="eaSummary" rows="4" placeholder="Describe outcomes, evidence, and why this nomination matters…"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="eaConfirm" />
+                    <label class="form-check-label" for="eaConfirm">I confirm the information is accurate and I have permission to nominate.</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn ea-btn-primary btn-lg">
+                    <i class="bi bi-send me-2"></i>Submit nomination
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CTA -->
+    <section class="ea-cta" id="launch">
+      <div class="container">
+        <div class="ea-cta-panel ea-reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <p class="ea-eyebrow ea-eyebrow-light">Launch your program</p>
+              <h2 class="ea-cta-title">Ready to run a credible awards cycle?</h2>
+              <p class="ea-cta-text">
+                Use this template as the front door for nominations, criteria, reviewer credibility,
+                and transparent evaluation storytelling.
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <div class="ea-cta-actions">
+                <a href="#nominate" class="btn ea-btn-light btn-lg w-100">Start Nomination</a>
+                <a href="#scoring" class="btn ea-btn-ghost btn-lg w-100">Review Criteria</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. Footer -->
+  <footer class="ea-footer">
+    <div class="container">
+      <div class="row g-4 g-xl-5">
+        <div class="col-lg-4">
+          <a class="ea-brand ea-brand-footer" href="#home">
+            <span class="ea-brand-mark" aria-hidden="true"><i class="bi bi-award-fill"></i></span>
+            <span>Elevate <em>Awards</em></span>
+          </a>
+          <p class="ea-footer-about">
+            A premium awards nomination and judging platform template for professional recognition programs,
+            fellowships, and innovation challenges.
+          </p>
+          <div class="ea-social">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="ea-footer-heading">Platform</h3>
+          <ul class="ea-footer-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#finalists">Finalists</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h3 class="ea-footer-heading">Support</h3>
+          <ul class="ea-footer-links">
+            <li><a href="#eligibility">Eligibility</a></li>
+            <li><a href="#scoring">Criteria</a></li>
+            <li><a href="#nominate">Nominate</a></li>
+            <li><a href="#insights">Insights</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <h3 class="ea-footer-heading">Contact</h3>
+          <ul class="ea-footer-contact">
+            <li><i class="bi bi-geo-alt"></i> 1200 Meridian Avenue, Suite 400<br />Boston, MA 02110</li>
+            <li><i class="bi bi-telephone"></i> <a href="tel:+16175550188">(617) 555-0188</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:programs@elevateawards.org">programs@elevateawards.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ea-footer-bottom">
+        <p>© 2026 Elevate Awards. Template by <a href="https://polurus.com" target="_blank" rel="noopener">Subrahmanyam Poluru</a>.</p>
+        <p>Demo content for portfolio and marketplace use.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Nominee preview modal -->
+  <div class="modal fade" id="eaNomineeModal" tabindex="-1" aria-labelledby="eaNomineeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ea-modal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="eaNomineeModalLabel">Nomination preview</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="ea-mono mb-2">NOM-24018</p>
+          <h3 class="h5">Northwind Labs</h3>
+          <p class="text-secondary">Innovation Excellence · Seattle, WA</p>
+          <p>Submitted evidence includes pilot outcomes, partner letters, and a 12-month impact forecast. Screening complete; assigned to Innovation panel.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="ea-badge ea-badge-ok">Eligible</span>
+            <span class="ea-badge ea-badge-review">3 of 5 reviews in</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn ea-btn-outline" data-bs-dismiss="modal">Close</button>
+          <a href="#scoring" class="btn ea-btn-primary" data-bs-dismiss="modal">View rubric</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
