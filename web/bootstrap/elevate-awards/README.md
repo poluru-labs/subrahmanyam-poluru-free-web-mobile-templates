@@ -9,9 +9,11 @@ This is a premium public-facing awards platform page—not a generic admin dashb
 | Token | Value | Use |
 |---|---|---|
 | Primary | `#AF0404` | Headings, CTAs, key highlights |
-| Secondary | `#46B5D1` | Accents, gradients, supporting UI |
+| Secondary | `#46B5D1` | Accents and supporting UI |
 | Muted | `#525252` | Body text and supporting labels |
 | Soft bg | `#f5fafc` | Section contrast |
+
+Solid colors only — no brand-color gradients.
 
 Custom classes use the `ea-` prefix (e.g. `.ea-hero`, `.ea-scorecard`).
 
