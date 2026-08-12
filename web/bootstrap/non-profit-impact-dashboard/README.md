@@ -4,6 +4,11 @@ A polished, public-facing **nonprofit impact website template** for donors, part
 
 This is a landing-page style impact dashboard—not an internal admin panel—designed to communicate outcomes with clarity and trust.
 
+## Screenshot
+
+<img width="2887" height="8659" alt="image" src="https://github.com/user-attachments/assets/7ee0dfc0-c9e1-4576-8a3d-83eeb5323f9f" />
+
+
 ## Features
 
 - Sticky responsive navbar with smooth scrolling
