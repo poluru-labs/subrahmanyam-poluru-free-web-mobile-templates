@@ -39,6 +39,11 @@ Location: [web/bootstrap/elevate-awards](web/bootstrap/elevate-awards)
 
 Awards nomination and judging platform with workflow timeline, eligibility screening, category filters, reviewer profiles, scoring rubric, finalists, nomination form, and insights. Brand colors: primary `#AF0404`, secondary `#46B5D1`. CSS prefix: `ea-*`.
 
+### 8. Founder Metrics Dashboard
+Location: [web/bootstrap/founder-metrics-dashboard-app](web/bootstrap/founder-metrics-dashboard-app)
+
+Investor-ready founder metrics template (Blvd) with KPI cards, growth sparklines, fundraising milestones, finance tables, acquisition insights, product/team updates, and board narrative blocks. Brand colors: primary `#0D63A5`, secondary `#21E6C1`. CSS prefix: `fm-*`.
+
 ## Repository Structure
 
 ```text
@@ -50,7 +55,8 @@ web/bootstrap/
 ├── modern-admin-dashboard/
 ├── modern-admin-network-dashboard/
 ├── non-profit-impact-dashboard/
-└── elevate-awards/
+├── elevate-awards/
+└── founder-metrics-dashboard-app/
 ```
 
 Each template folder includes HTML, assets, and its own README.

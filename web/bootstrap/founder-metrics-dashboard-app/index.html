@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Blvd founder metrics dashboard — investor-ready KPIs, growth trends, fundraising progress, burn & runway, and board update highlights." />
+  <title>Blvd — Founder Metrics Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="fm-body">
+
+  <!-- Sticky header -->
+  <nav class="navbar navbar-expand-lg fm-navbar sticky-top" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand fm-brand" href="#home">
+        <span class="fm-brand-mark" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></span>
+        <span>Blvd <em>Metrics</em></span>
+      </a>
+      <button class="navbar-toggler fm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fmNav" aria-controls="fmNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="fmNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#kpis">KPIs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#growth">Growth</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fundraising">Fundraising</a></li>
+          <li class="nav-item"><a class="nav-link" href="#finance">Finance</a></li>
+          <li class="nav-item"><a class="nav-link" href="#customers">Customers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#updates">Updates</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn fm-btn-primary btn-sm" href="#cta"><i class="bi bi-send me-1"></i>Share Update</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. Hero / top summary -->
+    <header class="fm-hero" id="home">
+      <div class="container">
+        <div class="row align-items-end g-4">
+          <div class="col-lg-7 fm-reveal">
+            <div class="fm-hero-meta">
+              <span class="fm-status-dot" aria-hidden="true"></span>
+              Series A · Board Update Ready
+            </div>
+            <h1 class="fm-hero-title">Blvd</h1>
+            <p class="fm-hero-tagline">Operational clarity for growing mid-market teams.</p>
+            <p class="fm-hero-lead">
+              Investor-facing metrics snapshot for founders, operators, and board partners—
+              MRR trajectory, capital efficiency, and execution highlights in one view.
+            </p>
+            <div class="fm-hero-actions">
+              <a href="#cta" class="btn fm-btn-primary btn-lg">
+                <i class="bi bi-share me-2"></i>Share Update
+              </a>
+              <a href="#finance" class="btn fm-btn-outline btn-lg">
+                <i class="bi bi-download me-2"></i>Download Report
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 fm-reveal">
+            <div class="fm-period-panel">
+              <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                <div>
+                  <p class="fm-label mb-1">Reporting period</p>
+                  <p class="fm-period-title mb-0" id="fmPeriodLabel">Q2 2026 · Monthly</p>
+                </div>
+                <div class="fm-view-toggle" role="group" aria-label="Reporting view">
+                  <button type="button" class="fm-chip is-active" data-view="monthly">Monthly</button>
+                  <button type="button" class="fm-chip" data-view="quarterly">Quarterly</button>
+                </div>
+              </div>
+              <div class="fm-period-chips" role="group" aria-label="Select period">
+                <button type="button" class="fm-chip" data-period="Q1 2026">Q1</button>
+                <button type="button" class="fm-chip is-active" data-period="Q2 2026">Q2</button>
+                <button type="button" class="fm-chip" data-period="Q3 2026">Q3</button>
+                <button type="button" class="fm-chip" data-period="FY 2026">FY</button>
+              </div>
+              <ul class="fm-hero-facts list-unstyled mb-0">
+                <li><i class="bi bi-calendar3"></i> Close date: Jun 30, 2026</li>
+                <li><i class="bi bi-person-badge"></i> Prepared by Subrahmanyam Poluru</li>
+                <li><i class="bi bi-building"></i> HQ · Austin, TX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. KPI overview -->
+    <section class="fm-section" id="kpis">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Core startup KPIs</p>
+          <h2 class="fm-section-title">Performance at a glance</h2>
+          <p class="fm-section-sub">Headline metrics investors track every board cycle.</p>
+        </div>
+
+        <div class="row g-3 g-xl-4">
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-currency-dollar"></i></span>
+                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 12.4%</span>
+              </div>
+              <p class="fm-kpi-label">MRR</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="248000" data-prefix="">0</span></p>
+              <p class="fm-kpi-note">vs prior month</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-bar-chart-line"></i></span>
+                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 11.8%</span>
+              </div>
+              <p class="fm-kpi-label">ARR</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="2976000">0</span></p>
+              <p class="fm-kpi-note">run-rate annualized</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-people"></i></span>
+                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 8.1%</span>
+              </div>
+              <p class="fm-kpi-label">Active customers</p>
+              <p class="fm-kpi-value"><span class="fm-counter" data-target="1842">0</span></p>
+              <p class="fm-kpi-note">paying accounts</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-arrow-left-right"></i></span>
+                <span class="fm-trend fm-trend-down"><i class="bi bi-arrow-down-right"></i> 0.4 pts</span>
+              </div>
+              <p class="fm-kpi-label">Logo churn</p>
+              <p class="fm-kpi-value"><span class="fm-counter" data-target="1.9" data-decimals="1">0</span>%</p>
+              <p class="fm-kpi-note">monthly · improving</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-bullseye"></i></span>
+                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> better</span>
+              </div>
+              <p class="fm-kpi-label">CAC</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="842">0</span></p>
+              <p class="fm-kpi-note">blended acquisition</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-gem"></i></span>
+                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 6.2%</span>
+              </div>
+              <p class="fm-kpi-label">LTV</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="12400">0</span></p>
+              <p class="fm-kpi-note">LTV:CAC 14.7×</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-fire"></i></span>
+                <span class="fm-trend fm-trend-flat"><i class="bi bi-dash"></i> stable</span>
+              </div>
+              <p class="fm-kpi-label">Net burn</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="186000">0</span></p>
+              <p class="fm-kpi-note">monthly cash burn</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-kpi-card fm-kpi-card-accent">
+              <div class="fm-kpi-top">
+                <span class="fm-kpi-icon"><i class="bi bi-hourglass-split"></i></span>
+                <span class="fm-trend fm-trend-up"><i class="bi bi-shield-check"></i> healthy</span>
+              </div>
+              <p class="fm-kpi-label">Runway</p>
+              <p class="fm-kpi-value"><span class="fm-counter" data-target="18">0</span> mo</p>
+              <p class="fm-kpi-note">at current burn</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Growth performance -->
+    <section class="fm-section fm-section-soft" id="growth">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Growth performance</p>
+          <h2 class="fm-section-title">Momentum across the funnel</h2>
+          <p class="fm-section-sub">Lightweight trend blocks—no chart library required.</p>
+        </div>
+
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-xl-4 fm-reveal">
+            <article class="fm-metric-panel">
+              <div class="fm-metric-head">
+                <h3>User growth</h3>
+                <span class="fm-badge-soft">+18% MoM</span>
+              </div>
+              <p class="fm-metric-value">24,680 <small>MAUs</small></p>
+              <div class="fm-spark" aria-hidden="true">
+                <span style="--h:38%"></span><span style="--h:44%"></span><span style="--h:42%"></span>
+                <span style="--h:55%"></span><span style="--h:58%"></span><span style="--h:62%"></span>
+                <span style="--h:70%"></span><span style="--h:78%"></span><span style="--h:86%"></span>
+                <span style="--h:94%"></span>
+              </div>
+              <div class="fm-progress">
+                <div class="d-flex justify-content-between fm-progress-labels"><span>Target</span><span>92%</span></div>
+                <div class="progress fm-bar"><div class="progress-bar" data-progress="92"></div></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 fm-reveal">
+            <article class="fm-metric-panel">
+              <div class="fm-metric-head">
+                <h3>Revenue growth</h3>
+                <span class="fm-badge-soft">+12% MoM</span>
+              </div>
+              <p class="fm-metric-value">$248k <small>MRR</small></p>
+              <div class="fm-spark fm-spark-accent" aria-hidden="true">
+                <span style="--h:40%"></span><span style="--h:46%"></span><span style="--h:52%"></span>
+                <span style="--h:50%"></span><span style="--h:60%"></span><span style="--h:68%"></span>
+                <span style="--h:72%"></span><span style="--h:80%"></span><span style="--h:88%"></span>
+                <span style="--h:96%"></span>
+              </div>
+              <div class="fm-progress">
+                <div class="d-flex justify-content-between fm-progress-labels"><span>Plan</span><span>104%</span></div>
+                <div class="progress fm-bar"><div class="progress-bar" data-progress="100"></div></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 fm-reveal">
+            <article class="fm-metric-panel">
+              <div class="fm-metric-head">
+                <h3>Conversion rate</h3>
+                <span class="fm-badge-soft">Trial → paid</span>
+              </div>
+              <p class="fm-metric-value">18.6% <small>last 30d</small></p>
+              <div class="fm-spark" aria-hidden="true">
+                <span style="--h:55%"></span><span style="--h:52%"></span><span style="--h:58%"></span>
+                <span style="--h:61%"></span><span style="--h:64%"></span><span style="--h:60%"></span>
+                <span style="--h:68%"></span><span style="--h:72%"></span><span style="--h:75%"></span>
+                <span style="--h:80%"></span>
+              </div>
+              <div class="fm-progress">
+                <div class="d-flex justify-content-between fm-progress-labels"><span>Goal 20%</span><span>93%</span></div>
+                <div class="progress fm-bar"><div class="progress-bar" data-progress="93"></div></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-6 fm-reveal">
+            <article class="fm-metric-panel">
+              <div class="fm-metric-head">
+                <h3>Net revenue retention</h3>
+                <span class="fm-badge-soft fm-badge-ok">118%</span>
+              </div>
+              <p class="fm-metric-desc">Expansion and seat growth continue to outpace downgrades.</p>
+              <div class="row g-3 mt-1">
+                <div class="col-6">
+                  <p class="fm-mini-label">Gross retention</p>
+                  <p class="fm-mini-value">96%</p>
+                  <div class="progress fm-bar"><div class="progress-bar" data-progress="96"></div></div>
+                </div>
+                <div class="col-6">
+                  <p class="fm-mini-label">Expansion revenue</p>
+                  <p class="fm-mini-value">$42k</p>
+                  <div class="progress fm-bar fm-bar-secondary"><div class="progress-bar" data-progress="78"></div></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-6 fm-reveal">
+            <article class="fm-metric-panel">
+              <div class="fm-metric-head">
+                <h3>Expansion revenue mix</h3>
+                <span class="fm-badge-soft">This quarter</span>
+              </div>
+              <ul class="fm-mix-list list-unstyled mb-0">
+                <li>
+                  <div class="d-flex justify-content-between"><span>Seat upgrades</span><span>48%</span></div>
+                  <div class="progress fm-bar"><div class="progress-bar" data-progress="48"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>Add-on modules</span><span>31%</span></div>
+                  <div class="progress fm-bar fm-bar-secondary"><div class="progress-bar" data-progress="31"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>Plan migrations</span><span>21%</span></div>
+                  <div class="progress fm-bar fm-bar-amber"><div class="progress-bar" data-progress="21"></div></div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Fundraising -->
+    <section class="fm-section" id="fundraising">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Fundraising progress</p>
+          <h2 class="fm-section-title">Series A pipeline</h2>
+          <p class="fm-section-sub">Target, commitments, lead status, and milestone tracker.</p>
+        </div>
+
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-5 fm-reveal">
+            <article class="fm-raise-card">
+              <p class="fm-label">Current round</p>
+              <h3 class="fm-raise-title">Series A · $12M target</h3>
+              <p class="fm-raise-committed">$<span class="fm-counter" data-target="7800000">0</span> committed</p>
+              <div class="fm-progress mt-3">
+                <div class="d-flex justify-content-between fm-progress-labels"><span>Soft circled</span><span>65%</span></div>
+                <div class="progress fm-bar fm-bar-lg"><div class="progress-bar" data-progress="65"></div></div>
+              </div>
+              <div class="fm-raise-grid">
+                <div>
+                  <p class="fm-mini-label">Lead investor</p>
+                  <p class="fm-mini-value">Horizon Capital <span class="fm-pill-ok">Term sheet</span></p>
+                </div>
+                <div>
+                  <p class="fm-mini-label">Pipeline</p>
+                  <p class="fm-mini-value">14 active · 6 warm</p>
+                </div>
+                <div>
+                  <p class="fm-mini-label">Target close</p>
+                  <p class="fm-mini-value">Sep 2026</p>
+                </div>
+                <div>
+                  <p class="fm-mini-label">Use of funds</p>
+                  <p class="fm-mini-value">Product 45% · GTM 40%</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-7 fm-reveal">
+            <article class="fm-milestone-card">
+              <h3 class="fm-card-title">Fundraising milestones</h3>
+              <ol class="fm-timeline list-unstyled mb-0">
+                <li class="is-done">
+                  <span class="fm-tl-marker" aria-hidden="true"></span>
+                  <div>
+                    <p class="fm-tl-title">Data room live</p>
+                    <p class="fm-tl-meta">Completed · Apr 12 · Metrics pack + cohort tables</p>
+                  </div>
+                </li>
+                <li class="is-done">
+                  <span class="fm-tl-marker" aria-hidden="true"></span>
+                  <div>
+                    <p class="fm-tl-title">Lead term sheet</p>
+                    <p class="fm-tl-meta">Horizon Capital · signed soft circle $5.5M</p>
+                  </div>
+                </li>
+                <li class="is-active">
+                  <span class="fm-tl-marker" aria-hidden="true"></span>
+                  <div>
+                    <p class="fm-tl-title">Syndicate fill</p>
+                    <p class="fm-tl-meta">In progress · $2.3M remaining to target</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="fm-tl-marker" aria-hidden="true"></span>
+                  <div>
+                    <p class="fm-tl-title">Definitive docs & wire</p>
+                    <p class="fm-tl-meta">Planned · mid-September close</p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Revenue and expense -->
+    <section class="fm-section fm-section-soft" id="finance">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Revenue &amp; expenses</p>
+          <h2 class="fm-section-title">Capital efficiency snapshot</h2>
+          <p class="fm-section-sub">Monthly P&amp;L signals for board and operating reviews.</p>
+        </div>
+
+        <div class="row g-3 g-lg-4 mb-4">
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-compare-card">
+              <i class="bi bi-cash-stack"></i>
+              <p class="fm-mini-label">Monthly revenue</p>
+              <p class="fm-mini-value">$248,000</p>
+              <span class="fm-trend fm-trend-up">+12.4%</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-compare-card">
+              <i class="bi bi-receipt"></i>
+              <p class="fm-mini-label">Operating expenses</p>
+              <p class="fm-mini-value">$412,000</p>
+              <span class="fm-trend fm-trend-flat">+1.2%</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-compare-card">
+              <i class="bi bi-pie-chart"></i>
+              <p class="fm-mini-label">Gross margin</p>
+              <p class="fm-mini-value">78%</p>
+              <span class="fm-trend fm-trend-up">+1.1 pts</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 fm-reveal">
+            <article class="fm-compare-card">
+              <i class="bi bi-lightning-charge"></i>
+              <p class="fm-mini-label">Net burn</p>
+              <p class="fm-mini-value">$186,000</p>
+              <span class="fm-trend fm-trend-down">−$8k</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="fm-table-panel fm-reveal">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h3 class="fm-card-title mb-0">Trailing six months</h3>
+            <span class="fm-badge-soft">USD · unaudited</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table fm-table mb-0">
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Revenue</th>
+                  <th>OpEx</th>
+                  <th>Gross margin</th>
+                  <th>Net burn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Jan</td><td>$198k</td><td>$390k</td><td>76%</td><td>$205k</td></tr>
+                <tr><td>Feb</td><td>$209k</td><td>$396k</td><td>76%</td><td>$198k</td></tr>
+                <tr><td>Mar</td><td>$221k</td><td>$401k</td><td>77%</td><td>$192k</td></tr>
+                <tr><td>Apr</td><td>$230k</td><td>$405k</td><td>77%</td><td>$190k</td></tr>
+                <tr><td>May</td><td>$239k</td><td>$408k</td><td>78%</td><td>$188k</td></tr>
+                <tr class="fm-row-highlight"><td>Jun</td><td>$248k</td><td>$412k</td><td>78%</td><td>$186k</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Customer & acquisition -->
+    <section class="fm-section" id="customers">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Customer &amp; acquisition</p>
+          <h2 class="fm-section-title">Where growth is coming from</h2>
+          <p class="fm-section-sub">Channels, segments, conversion, and market mix.</p>
+        </div>
+
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-6 fm-reveal">
+            <article class="fm-panel">
+              <h3 class="fm-card-title">Acquisition channels</h3>
+              <ul class="fm-channel-list list-unstyled mb-0">
+                <li>
+                  <div class="fm-channel-row">
+                    <span><i class="bi bi-search"></i> Organic / SEO</span>
+                    <strong>34%</strong>
+                  </div>
+                  <div class="progress fm-bar"><div class="progress-bar" data-progress="34"></div></div>
+                </li>
+                <li>
+                  <div class="fm-channel-row">
+                    <span><i class="bi bi-briefcase"></i> Outbound / AE</span>
+                    <strong>28%</strong>
+                  </div>
+                  <div class="progress fm-bar fm-bar-secondary"><div class="progress-bar" data-progress="28"></div></div>
+                </li>
+                <li>
+                  <div class="fm-channel-row">
+                    <span><i class="bi bi-people"></i> Partner referrals</span>
+                    <strong>22%</strong>
+                  </div>
+                  <div class="progress fm-bar fm-bar-amber"><div class="progress-bar" data-progress="22"></div></div>
+                </li>
+                <li>
+                  <div class="fm-channel-row">
+                    <span><i class="bi bi-megaphone"></i> Paid + events</span>
+                    <strong>16%</strong>
+                  </div>
+                  <div class="progress fm-bar"><div class="progress-bar" data-progress="16"></div></div>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-6 fm-reveal">
+            <article class="fm-panel">
+              <h3 class="fm-card-title">Top-performing segments</h3>
+              <div class="table-responsive">
+                <table class="table fm-table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Segment</th>
+                      <th>Accounts</th>
+                      <th>NRR</th>
+                      <th>Win rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Ops / RevOps</td><td>612</td><td>124%</td><td>31%</td></tr>
+                    <tr><td>Finance ops</td><td>408</td><td>119%</td><td>27%</td></tr>
+                    <tr><td>Customer success</td><td>351</td><td>115%</td><td>24%</td></tr>
+                    <tr><td>IT / PMO</td><td>471</td><td>111%</td><td>22%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 fm-reveal">
+            <article class="fm-panel fm-panel-compact">
+              <div class="fm-metric-head">
+                <h3>Trial → paid</h3>
+                <i class="bi bi-funnel fm-panel-icon"></i>
+              </div>
+              <p class="fm-metric-value mb-2">18.6%</p>
+              <p class="fm-metric-desc mb-3">Median time-to-value: 9 days · SQL→close 27 days</p>
+              <div class="progress fm-bar"><div class="progress-bar" data-progress="86"></div></div>
+            </article>
+          </div>
+          <div class="col-md-6 fm-reveal">
+            <article class="fm-panel fm-panel-compact">
+              <div class="fm-metric-head">
+                <h3>Market breakdown</h3>
+                <i class="bi bi-globe2 fm-panel-icon"></i>
+              </div>
+              <ul class="fm-region-list list-unstyled mb-0">
+                <li><span>North America</span><span>61%</span></li>
+                <li><span>Europe</span><span>24%</span></li>
+                <li><span>APAC</span><span>11%</span></li>
+                <li><span>LATAM</span><span>4%</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Product and team -->
+    <section class="fm-section fm-section-soft" id="product">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Product &amp; team</p>
+          <h2 class="fm-section-title">Execution this quarter</h2>
+          <p class="fm-section-sub">Roadmap progress, shipping milestones, hiring, wins, and blockers.</p>
+        </div>
+
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-4 fm-reveal">
+            <article class="fm-panel h-100">
+              <h3 class="fm-card-title">Roadmap progress</h3>
+              <ul class="fm-roadmap list-unstyled mb-0">
+                <li>
+                  <div class="d-flex justify-content-between"><span>Workflow automation v3</span><span>90%</span></div>
+                  <div class="progress fm-bar"><div class="progress-bar" data-progress="90"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>Analytics workspace</span><span>72%</span></div>
+                  <div class="progress fm-bar fm-bar-secondary"><div class="progress-bar" data-progress="72"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>SSO / SCIM enterprise</span><span>58%</span></div>
+                  <div class="progress fm-bar fm-bar-amber"><div class="progress-bar" data-progress="58"></div></div>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4 fm-reveal">
+            <article class="fm-panel h-100">
+              <h3 class="fm-card-title">Shipping milestones</h3>
+              <ul class="fm-ship-list list-unstyled mb-0">
+                <li><span class="fm-pill-ok">Shipped</span> Audit log &amp; export APIs</li>
+                <li><span class="fm-pill-ok">Shipped</span> Role-based approvals</li>
+                <li><span class="fm-pill-review">Beta</span> AI assist for ops digests</li>
+                <li><span class="fm-pill-pending">Next</span> Multi-entity billing</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4 fm-reveal">
+            <article class="fm-panel h-100">
+              <h3 class="fm-card-title">Hiring status</h3>
+              <div class="fm-hire-stats">
+                <div><p class="fm-mini-value">48</p><p class="fm-mini-label">Team size</p></div>
+                <div><p class="fm-mini-value">6</p><p class="fm-mini-label">Open roles</p></div>
+                <div><p class="fm-mini-value">3</p><p class="fm-mini-label">Offers out</p></div>
+              </div>
+              <p class="fm-metric-desc mt-3 mb-0">Priority: 2 AEs, Staff Engineer, Product Designer. Lead: Poluru S.</p>
+            </article>
+          </div>
+          <div class="col-md-6 fm-reveal">
+            <article class="fm-panel fm-panel-win">
+              <h3 class="fm-card-title"><i class="bi bi-trophy me-2"></i>Major wins</h3>
+              <ul class="fm-bullets">
+                <li>Closed 3 six-figure logos in manufacturing vertical</li>
+                <li>NRR held above 115% for fifth consecutive month</li>
+                <li>SOC 2 Type II renewal completed with zero exceptions</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 fm-reveal">
+            <article class="fm-panel fm-panel-risk">
+              <h3 class="fm-card-title"><i class="bi bi-exclamation-triangle me-2"></i>Blockers</h3>
+              <ul class="fm-bullets">
+                <li>Enterprise SSO edge cases delaying 2 late-stage deals</li>
+                <li>Paid acquisition CAC spiked 14% in EMEA test markets</li>
+                <li>Need fractional CFO support ahead of Series A close</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Investor update -->
+    <section class="fm-section" id="updates">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Investor update</p>
+          <h2 class="fm-section-title">Highlights, risks, asks &amp; next milestones</h2>
+          <p class="fm-section-sub">Concise board-ready narrative blocks.</p>
+        </div>
+
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-xl-3 fm-reveal">
+            <article class="fm-update-card">
+              <span class="fm-update-icon"><i class="bi bi-stars"></i></span>
+              <h3>Highlights</h3>
+              <ul class="fm-bullets">
+                <li>MRR crossed $248k with durable expansion</li>
+                <li>Lead investor term sheet executed</li>
+                <li>Enterprise pipeline up 22% QoQ</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3 fm-reveal">
+            <article class="fm-update-card">
+              <span class="fm-update-icon fm-update-icon-risk"><i class="bi bi-shield-exclamation"></i></span>
+              <h3>Key risks</h3>
+              <ul class="fm-bullets">
+                <li>Sales cycle elongation on &gt;$100k deals</li>
+                <li>Competitive discounting in mid-market</li>
+                <li>Key hire dependency in platform eng</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3 fm-reveal">
+            <article class="fm-update-card">
+              <span class="fm-update-icon fm-update-icon-ask"><i class="bi bi-hand-index"></i></span>
+              <h3>Asks</h3>
+              <ul class="fm-bullets">
+                <li>Intros to 2 strategic Series A participants</li>
+                <li>Advisor for manufacturing GTM</li>
+                <li>Candidate referrals: Staff Eng, AE</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3 fm-reveal">
+            <article class="fm-update-card">
+              <span class="fm-update-icon fm-update-icon-next"><i class="bi bi-flag"></i></span>
+              <h3>Next milestones</h3>
+              <ul class="fm-bullets">
+                <li>Close Series A by mid-September</li>
+                <li>Ship SSO/SCIM GA in Q3</li>
+                <li>Hit $275k MRR by end of Q3</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="fm-update-timeline fm-reveal mt-4">
+          <h3 class="fm-card-title">Update timeline</h3>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="fm-tl-entry">
+                <span class="fm-tl-date">Jun 30</span>
+                <p class="fm-tl-title">Q2 board pack published</p>
+                <p class="fm-tl-meta">Metrics locked · shared with Horizon Capital</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="fm-tl-entry is-current">
+                <span class="fm-tl-date">Jul 18</span>
+                <p class="fm-tl-title">Investor office hours</p>
+                <p class="fm-tl-meta">Asks review · hiring support · pipeline intros</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="fm-tl-entry">
+                <span class="fm-tl-date">Aug 15</span>
+                <p class="fm-tl-title">Mid-quarter flash</p>
+                <p class="fm-tl-meta">MRR, burn, and syndicate status check-in</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Backers / credibility -->
+    <section class="fm-section fm-section-soft" id="backers">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Credibility</p>
+          <h2 class="fm-section-title">Investors, advisors &amp; partners</h2>
+          <p class="fm-section-sub">Placeholder badges and advisor cards for demo polish.</p>
+        </div>
+
+        <div class="fm-logo-row fm-reveal" aria-label="Investor logos">
+          <span class="fm-logo-badge">Horizon Capital</span>
+          <span class="fm-logo-badge">Cascade Ventures</span>
+          <span class="fm-logo-badge">North Pier Angels</span>
+          <span class="fm-logo-badge">Atlas Seed</span>
+          <span class="fm-logo-badge">Operate Fund</span>
+        </div>
+
+        <div class="row g-3 g-lg-4 mt-2">
+          <div class="col-md-4 fm-reveal">
+            <article class="fm-advisor-card">
+              <div class="fm-advisor-avatar" aria-hidden="true">SP</div>
+              <div>
+                <h3>Subrahmanyam Poluru</h3>
+                <p>Founder &amp; CEO · Strategy &amp; product</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4 fm-reveal">
+            <article class="fm-advisor-card">
+              <div class="fm-advisor-avatar" aria-hidden="true">PS</div>
+              <div>
+                <h3>Poluru S</h3>
+                <p>Advisor · GTM systems &amp; enterprise sales</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4 fm-reveal">
+            <article class="fm-advisor-card">
+              <div class="fm-advisor-avatar" aria-hidden="true">SP</div>
+              <div>
+                <h3>S Poluru</h3>
+                <p>Advisor · Finance ops &amp; board reporting</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CTA -->
+    <section class="fm-section" id="cta">
+      <div class="container">
+        <div class="fm-cta fm-reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <p class="fm-eyebrow fm-eyebrow-light">Ready for your next board cycle</p>
+              <h2 class="fm-cta-title">Ship investor-ready updates with clarity</h2>
+              <p class="fm-cta-text">
+                Use this Founder Metrics Dashboard template for monthly investor updates,
+                fundraising data rooms, and operating reviews—without rebuilding your layout every quarter.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#home" class="btn fm-btn-light btn-lg mb-2 mb-lg-0 me-lg-2">
+                <i class="bi bi-eye me-2"></i>Preview KPIs
+              </a>
+              <a href="mailto:mail.spoluru@gmail.com" class="btn fm-btn-primary-invert btn-lg">
+                <i class="bi bi-envelope me-2"></i>Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. Footer -->
+  <footer class="fm-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="fm-brand fm-brand-footer" href="#home">
+            <span class="fm-brand-mark" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></span>
+            <span>Blvd <em>Metrics</em></span>
+          </a>
+          <p class="fm-footer-text">Premium founder metrics template for board updates, fundraising, and operator reporting.</p>
+          <p class="fm-footer-contact">
+            <a href="mailto:mail.spoluru@gmail.com"><i class="bi bi-envelope me-1"></i>mail.spoluru@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="fm-footer-heading">Navigate</p>
+          <ul class="fm-footer-links list-unstyled">
+            <li><a href="#kpis">KPIs</a></li>
+            <li><a href="#growth">Growth</a></li>
+            <li><a href="#fundraising">Fundraising</a></li>
+            <li><a href="#finance">Finance</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="fm-footer-heading">More</p>
+          <ul class="fm-footer-links list-unstyled">
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#updates">Updates</a></li>
+            <li><a href="#backers">Backers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="fm-footer-heading">Template note</p>
+          <p class="fm-footer-text">Built with Bootstrap 5, Bootstrap Icons, and Manrope. Free to customize for demos, portfolios, and startup reporting.</p>
+        </div>
+      </div>
+      <div class="fm-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>Founder Metrics Dashboard · Demo data</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
