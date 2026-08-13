@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="ResearcherHub — expert academic portfolio for researchers with publications, talks, awards, peer review, teaching, and collaboration." />
+  <title>Subrahmanyam Poluru — ResearcherHub Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="rh-body">
+
+  <!-- Sticky navbar -->
+  <nav class="navbar navbar-expand-lg rh-navbar sticky-top" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand rh-brand" href="#home">
+        <span class="rh-brand-mark" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></span>
+        <span>Researcher<em>Hub</em></span>
+      </a>
+      <button class="navbar-toggler rh-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#rhNav" aria-controls="rhNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="rhNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#talks">Talks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn rh-btn-primary btn-sm" href="#contact"><i class="bi bi-envelope me-1"></i>Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <header class="rh-hero" id="home">
+      <div class="container">
+        <div class="row align-items-center g-4 g-xl-5">
+          <div class="col-lg-7" data-aos="fade-up">
+            <p class="rh-eyebrow">Human-Centered AI · Responsible Systems</p>
+            <h1 class="rh-hero-name">Subrahmanyam Poluru</h1>
+            <p class="rh-hero-title">Associate Professor · Computational Interaction</p>
+            <p class="rh-hero-affil">
+              <i class="bi bi-building" aria-hidden="true"></i>
+              ResearcherHub Lab · Institute for Applied Intelligence · Austin, TX
+            </p>
+            <p class="rh-hero-summary">
+              I study how people collaborate with intelligent systems—designing trustworthy interfaces,
+              evaluating model accountability, and translating research into tools used by product teams
+              and public institutions.
+            </p>
+            <div class="rh-hero-actions">
+              <a href="#publications" class="btn rh-btn-primary btn-lg">
+                <i class="bi bi-journal-text me-2"></i>View Publications
+              </a>
+              <a href="#contact" class="btn rh-btn-secondary btn-lg">
+                <i class="bi bi-people me-2"></i>Collaborate
+              </a>
+              <a href="#cv" class="btn rh-btn-ghost btn-lg">
+                <i class="bi bi-download me-2"></i>Download CV
+              </a>
+            </div>
+            <div class="rh-hero-links" aria-label="Academic profiles">
+              <a href="#" aria-label="Google Scholar"><i class="bi bi-mortarboard"></i></a>
+              <a href="#" aria-label="ORCID"><i class="bi bi-person-badge"></i></a>
+              <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:mail.spoluru@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
+            <aside class="rh-hero-card" aria-label="Research focus">
+              <div class="rh-avatar" aria-hidden="true">SP</div>
+              <p class="rh-label">Current focus</p>
+              <ul class="rh-focus-list list-unstyled mb-0">
+                <li><i class="bi bi-cpu"></i> Trustworthy generative interfaces</li>
+                <li><i class="bi bi-shield-check"></i> Evaluation &amp; audit methods</li>
+                <li><i class="bi bi-diagram-3"></i> Human–AI teaming in ops</li>
+                <li><i class="bi bi-globe2"></i> Inclusive AI for public services</li>
+              </ul>
+              <div class="rh-hero-meta">
+                <span><strong>Ph.D.</strong> HCI</span>
+                <span><strong>Open</strong> to visiting talks</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="rh-section" id="about">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-5" data-aos="fade-up">
+            <p class="rh-eyebrow">About</p>
+            <h2 class="rh-section-title">Research with clarity and consequence</h2>
+            <p class="rh-section-sub">
+              My work sits at the intersection of human–computer interaction, machine learning evaluation,
+              and responsible product practice.
+            </p>
+          </div>
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <div class="rh-prose">
+              <p>
+                Across academia and industry partnerships, I lead studies on how experts and everyday users
+                interpret model outputs, recover from AI errors, and make high-stakes decisions with assistance systems.
+              </p>
+              <p>
+                Before joining ResearcherHub Lab, I contributed to applied research programs with
+                product teams at scale and mentored graduate researchers building measurement frameworks
+                for reliability, fairness, and usability.
+              </p>
+              <p class="mb-0">
+                I publish in venues such as CHI, CSCW, FAccT, and TOCHI, and regularly advise startups,
+                NGOs, and public agencies on evaluation protocols that hold up outside the lab.
+              </p>
+            </div>
+            <div class="row g-3 mt-3">
+              <div class="col-sm-4">
+                <div class="rh-about-chip">
+                  <i class="bi bi-geo-alt"></i>
+                  <div>
+                    <strong>Based in</strong>
+                    <span>Austin, TX</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="rh-about-chip">
+                  <i class="bi bi-translate"></i>
+                  <div>
+                    <strong>Languages</strong>
+                    <span>English, Telugu</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="rh-about-chip">
+                  <i class="bi bi-bookmark-star"></i>
+                  <div>
+                    <strong>Lab</strong>
+                    <span>ResearcherHub</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact metrics -->
+    <section class="rh-section rh-section-soft" id="impact">
+      <div class="container">
+        <div class="rh-section-head text-center mx-auto" data-aos="fade-up">
+          <p class="rh-eyebrow">Impact</p>
+          <h2 class="rh-section-title">Scholarly footprint</h2>
+          <p class="rh-section-sub">Snapshot metrics for publications, influence, and professional service.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
+            <article class="rh-metric">
+              <i class="bi bi-journal-richtext" aria-hidden="true"></i>
+              <p class="rh-metric-value"><span class="rh-counter" data-target="62">0</span></p>
+              <p class="rh-metric-label">Publications</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="50">
+            <article class="rh-metric">
+              <i class="bi bi-quote" aria-hidden="true"></i>
+              <p class="rh-metric-value"><span class="rh-counter" data-target="4180">0</span></p>
+              <p class="rh-metric-label">Citations</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <article class="rh-metric">
+              <i class="bi bi-graph-up" aria-hidden="true"></i>
+              <p class="rh-metric-value"><span class="rh-counter" data-target="28">0</span></p>
+              <p class="rh-metric-label">h-index</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="150">
+            <article class="rh-metric">
+              <i class="bi bi-mic" aria-hidden="true"></i>
+              <p class="rh-metric-value"><span class="rh-counter" data-target="46">0</span></p>
+              <p class="rh-metric-label">Invited talks</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+            <article class="rh-metric">
+              <i class="bi bi-award" aria-hidden="true"></i>
+              <p class="rh-metric-value"><span class="rh-counter" data-target="11">0</span></p>
+              <p class="rh-metric-label">Awards</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="250">
+            <article class="rh-metric">
+              <i class="bi bi-pencil-square" aria-hidden="true"></i>
+              <p class="rh-metric-value"><span class="rh-counter" data-target="190">0</span>+</p>
+              <p class="rh-metric-label">Peer reviews</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="rh-section" id="publications">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4" data-aos="fade-up">
+          <div class="rh-section-head mb-0">
+            <p class="rh-eyebrow">Publications</p>
+            <h2 class="rh-section-title">Selected papers</h2>
+            <p class="rh-section-sub mb-0">Journal and conference work with co-authors and open links.</p>
+          </div>
+          <div class="rh-filter-chips" role="group" aria-label="Filter publications">
+            <button type="button" class="rh-chip is-active" data-filter="all">All</button>
+            <button type="button" class="rh-chip" data-filter="journal">Journals</button>
+            <button type="button" class="rh-chip" data-filter="conference">Conferences</button>
+          </div>
+        </div>
+
+        <div class="rh-pub-list">
+          <article class="rh-pub-card" data-type="journal" data-aos="fade-up">
+            <div class="rh-pub-meta">
+              <span class="rh-pill">Journal</span>
+              <span>TOCHI · 2025</span>
+            </div>
+            <h3 class="rh-pub-title">Calibrated Trust in Generative Assistants for High-Stakes Workflows</h3>
+            <p class="rh-pub-authors">S. Poluru, P. Subrahmanyam, A. Chen, M. Ortiz</p>
+            <div class="rh-pub-links">
+              <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+              <a href="#"><i class="bi bi-link-45deg"></i> DOI</a>
+              <a href="#"><i class="bi bi-code-slash"></i> Code</a>
+            </div>
+          </article>
+
+          <article class="rh-pub-card" data-type="conference" data-aos="fade-up" data-aos-delay="50">
+            <div class="rh-pub-meta">
+              <span class="rh-pill rh-pill-alt">Conference</span>
+              <span>CHI · 2025</span>
+            </div>
+            <h3 class="rh-pub-title">Error Recovery Rituals: How Teams Renegotiate Authority with AI Copilots</h3>
+            <p class="rh-pub-authors">S. Poluru, L. Nguyen, R. Okonkwo</p>
+            <div class="rh-pub-links">
+              <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+              <a href="#"><i class="bi bi-camera-video"></i> Talk</a>
+              <a href="#"><i class="bi bi-filetype-pptx"></i> Slides</a>
+            </div>
+          </article>
+
+          <article class="rh-pub-card" data-type="conference" data-aos="fade-up" data-aos-delay="100">
+            <div class="rh-pub-meta">
+              <span class="rh-pill rh-pill-alt">Conference</span>
+              <span>FAccT · 2024</span>
+            </div>
+            <h3 class="rh-pub-title">Audit Trails that Practitioners Actually Use: A Field Study of Model Reviews</h3>
+            <p class="rh-pub-authors">Poluru S., J. Park, E. Alvarez</p>
+            <div class="rh-pub-links">
+              <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+              <a href="#"><i class="bi bi-link-45deg"></i> DOI</a>
+            </div>
+          </article>
+
+          <article class="rh-pub-card" data-type="journal" data-aos="fade-up" data-aos-delay="150">
+            <div class="rh-pub-meta">
+              <span class="rh-pill">Journal</span>
+              <span>IJHCS · 2024</span>
+            </div>
+            <h3 class="rh-pub-title">Measuring Explanation Usefulness Beyond Accuracy: A Multi-Study Framework</h3>
+            <p class="rh-pub-authors">S. Poluru, M. Das, C. Rivera</p>
+            <div class="rh-pub-links">
+              <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+              <a href="#"><i class="bi bi-database"></i> Data</a>
+            </div>
+          </article>
+
+          <article class="rh-pub-card" data-type="conference" data-aos="fade-up" data-aos-delay="200">
+            <div class="rh-pub-meta">
+              <span class="rh-pill rh-pill-alt">Conference</span>
+              <span>CSCW · 2023</span>
+            </div>
+            <h3 class="rh-pub-title">Collaborative Sensemaking with Predictive Dashboards in Public Agencies</h3>
+            <p class="rh-pub-authors">S. Poluru, H. Brooks, Poluru Subrahmanyam</p>
+            <div class="rh-pub-links">
+              <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+              <a href="#"><i class="bi bi-link-45deg"></i> ACM DL</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Talks -->
+    <section class="rh-section rh-section-soft" id="talks">
+      <div class="container">
+        <div class="rh-section-head" data-aos="fade-up">
+          <p class="rh-eyebrow">Talks &amp; presentations</p>
+          <h2 class="rh-section-title">Invited speaking</h2>
+          <p class="rh-section-sub">Keynotes, seminars, and industry briefings.</p>
+        </div>
+        <ol class="rh-timeline list-unstyled mb-0">
+          <li data-aos="fade-up">
+            <span class="rh-tl-marker" aria-hidden="true"></span>
+            <div class="rh-tl-card">
+              <div class="rh-tl-top">
+                <span class="rh-tl-date">Mar 2026</span>
+                <span class="rh-pill">Keynote</span>
+              </div>
+              <h3>Designing for Contested Expertise in AI Products</h3>
+              <p>Human–AI Symposium · San Francisco</p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="60">
+            <span class="rh-tl-marker" aria-hidden="true"></span>
+            <div class="rh-tl-card">
+              <div class="rh-tl-top">
+                <span class="rh-tl-date">Nov 2025</span>
+                <span class="rh-pill rh-pill-alt">Seminar</span>
+              </div>
+              <h3>From Benchmarks to Boardrooms: Evaluation that Travels</h3>
+              <p>ResearcherHub Colloquium · Austin</p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="120">
+            <span class="rh-tl-marker" aria-hidden="true"></span>
+            <div class="rh-tl-card">
+              <div class="rh-tl-top">
+                <span class="rh-tl-date">Jun 2025</span>
+                <span class="rh-pill">Industry</span>
+              </div>
+              <h3>Trust Signals for Generative Features in Enterprise Tools</h3>
+              <p>OpsTech Summit · Chicago</p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="180">
+            <span class="rh-tl-marker" aria-hidden="true"></span>
+            <div class="rh-tl-card">
+              <div class="rh-tl-top">
+                <span class="rh-tl-date">Feb 2024</span>
+                <span class="rh-pill rh-pill-alt">Panel</span>
+              </div>
+              <h3>Accountability Interfaces for Public-Sector AI</h3>
+              <p>Civic Tech Forum · Washington, D.C.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Media -->
+    <section class="rh-section" id="media">
+      <div class="container">
+        <div class="rh-section-head" data-aos="fade-up">
+          <p class="rh-eyebrow">Media &amp; press</p>
+          <h2 class="rh-section-title">Coverage &amp; commentary</h2>
+          <p class="rh-section-sub">Selected interviews, essays, and research highlights.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <article class="rh-media-card">
+              <p class="rh-label">The Signal Review</p>
+              <h3>“Why calibrated trust beats confidence scores”</h3>
+              <p>Interview on explanation design for operators in regulated industries.</p>
+              <a href="#" class="rh-text-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="rh-media-card">
+              <p class="rh-label">Campus Weekly</p>
+              <h3>Lab open-sources audit checklist toolkit</h3>
+              <p>Coverage of ResearcherHub’s practitioner-facing evaluation kit.</p>
+              <a href="#" class="rh-text-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="rh-media-card">
+              <p class="rh-label">Podcast · Methods Lab</p>
+              <h3>Field methods for studying AI at work</h3>
+              <p>45-minute conversation on ethnography, telemetry, and ethics review.</p>
+              <a href="#" class="rh-text-link">Listen <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="rh-section rh-section-soft" id="awards">
+      <div class="container">
+        <div class="rh-section-head" data-aos="fade-up">
+          <p class="rh-eyebrow">Awards &amp; honors</p>
+          <h2 class="rh-section-title">Recognition</h2>
+          <p class="rh-section-sub">Selected awards for research excellence and teaching impact.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <article class="rh-award-card">
+              <span class="rh-award-icon" aria-hidden="true"><i class="bi bi-trophy"></i></span>
+              <h3>Best Paper Award</h3>
+              <p class="rh-award-org">ACM CHI · 2025</p>
+              <p>For work on error recovery rituals in AI copilots.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="rh-award-card">
+              <span class="rh-award-icon" aria-hidden="true"><i class="bi bi-stars"></i></span>
+              <h3>Early Career Research Prize</h3>
+              <p class="rh-award-org">Institute for Applied Intelligence · 2024</p>
+              <p>Recognizing sustained contributions to trustworthy interaction research.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="rh-award-card">
+              <span class="rh-award-icon" aria-hidden="true"><i class="bi bi-lightbulb"></i></span>
+              <h3>Outstanding Teaching Award</h3>
+              <p class="rh-award-org">School of Computing · 2023</p>
+              <p>Voted by graduate students in Interactive Intelligent Systems.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Peer review / editorial -->
+    <section class="rh-section" id="service-review">
+      <div class="container">
+        <div class="rh-section-head" data-aos="fade-up">
+          <p class="rh-eyebrow">Peer review &amp; editorial</p>
+          <h2 class="rh-section-title">Service to the community</h2>
+          <p class="rh-section-sub">Reviewing, program committees, and judging roles.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <article class="rh-service-card">
+              <i class="bi bi-journal-check" aria-hidden="true"></i>
+              <h3>Editorial board</h3>
+              <ul>
+                <li>Associate Editor, Interaction Science Letters</li>
+                <li>Guest editor, Special Issue on AI Trust (2025)</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="rh-service-card">
+              <i class="bi bi-people" aria-hidden="true"></i>
+              <h3>Program committees</h3>
+              <ul>
+                <li>CHI, CSCW, FAccT, IUI (2022–2026)</li>
+                <li>Workshops chair, Responsible Interfaces ’24</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="rh-service-card">
+              <i class="bi bi-clipboard2-check" aria-hidden="true"></i>
+              <h3>Judging &amp; review</h3>
+              <ul>
+                <li>NSF panel reviewer (HCI / AI)</li>
+                <li>Industry research award juror · 2025</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section class="rh-section rh-section-soft" id="teaching">
+      <div class="container">
+        <div class="rh-section-head" data-aos="fade-up">
+          <p class="rh-eyebrow">Teaching, mentoring &amp; service</p>
+          <h2 class="rh-section-title">Classroom &amp; community</h2>
+          <p class="rh-section-sub">Courses, advising, and institutional contributions.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-4" data-aos="fade-up">
+            <article class="rh-teach-card h-100">
+              <h3><i class="bi bi-book me-2"></i>Courses</h3>
+              <ul class="rh-bullets">
+                <li>HCI Methods for Intelligent Systems (Grad)</li>
+                <li>Responsible AI Product Design (Undergrad)</li>
+                <li>Research Studio: Evaluation in the Wild</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="rh-teach-card h-100">
+              <h3><i class="bi bi-person-hearts me-2"></i>Mentoring</h3>
+              <ul class="rh-bullets">
+                <li>6 Ph.D. advisees · 12 M.S. thesis students</li>
+                <li>Undergraduate research fellows program lead</li>
+                <li>First-gen scholar mentoring circle</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="rh-teach-card h-100">
+              <h3><i class="bi bi-building-check me-2"></i>Institutional service</h3>
+              <ul class="rh-bullets">
+                <li>Faculty senate research committee</li>
+                <li>IRB liaison for HCI protocols</li>
+                <li>DEI curriculum working group</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV anchor target for download CTA -->
+    <section class="visually-hidden" id="cv" aria-hidden="true"></section>
+
+    <!-- Contact / collaboration -->
+    <section class="rh-section" id="contact">
+      <div class="container">
+        <div class="rh-contact-panel" data-aos="fade-up">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <p class="rh-eyebrow rh-eyebrow-on-dark">Collaboration</p>
+              <h2 class="rh-contact-title">Let’s work on research that ships</h2>
+              <p class="rh-contact-text">
+                Open to invited talks, visiting collaborations, industry research partnerships,
+                and Ph.D. advising inquiries aligned with trustworthy human–AI interaction.
+              </p>
+              <ul class="rh-contact-facts list-unstyled mb-0">
+                <li><i class="bi bi-envelope"></i> <a href="mailto:mail.spoluru@gmail.com">mail.spoluru@gmail.com</a></li>
+                <li><i class="bi bi-geo-alt"></i> Austin, TX · hybrid / travel available</li>
+                <li><i class="bi bi-calendar2-week"></i> Office hours by appointment</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <form class="rh-form" id="rhContactForm" novalidate>
+                <div class="mb-3">
+                  <label class="form-label" for="rhName">Name</label>
+                  <input class="form-control" id="rhName" name="name" type="text" required autocomplete="name" placeholder="Your name" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="rhEmail">Email</label>
+                  <input class="form-control" id="rhEmail" name="email" type="email" required autocomplete="email" placeholder="you@institution.edu" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="rhTopic">Topic</label>
+                  <select class="form-select" id="rhTopic" name="topic">
+                    <option>Research collaboration</option>
+                    <option>Invited talk</option>
+                    <option>Ph.D. advising</option>
+                    <option>Industry partnership</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="rhMessage">Message</label>
+                  <textarea class="form-control" id="rhMessage" name="message" rows="4" required placeholder="Share a short note about the opportunity."></textarea>
+                </div>
+                <button type="submit" class="btn rh-btn-secondary w-100 btn-lg">
+                  <i class="bi bi-send me-2"></i>Send message
+                </button>
+                <p class="rh-form-note mb-0" id="rhFormNote" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="rh-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="rh-brand rh-brand-footer" href="#home">
+            <span class="rh-brand-mark" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></span>
+            <span>Researcher<em>Hub</em></span>
+          </a>
+          <p class="rh-footer-text">
+            A modern academic portfolio template for researchers, faculty, and lab leads—
+            built to showcase impact with clarity.
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="rh-footer-heading">Explore</p>
+          <ul class="rh-footer-links list-unstyled">
+            <li><a href="#about">About</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#talks">Talks</a></li>
+            <li><a href="#awards">Awards</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="rh-footer-heading">More</p>
+          <ul class="rh-footer-links list-unstyled">
+            <li><a href="#media">Media</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#service-review">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="rh-footer-heading">Connect</p>
+          <p class="rh-footer-text mb-2">
+            <a href="mailto:mail.spoluru@gmail.com">mail.spoluru@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener">polurus.com</a>
+          </p>
+          <div class="rh-hero-links rh-footer-social">
+            <a href="#" aria-label="Google Scholar"><i class="bi bi-mortarboard"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="rh-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru · ResearcherHub. Free for personal &amp; commercial use.</span>
+        <span>Bootstrap 5 · Manrope · AOS</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

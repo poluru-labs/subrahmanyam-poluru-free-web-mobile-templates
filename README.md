@@ -44,6 +44,11 @@ Location: [web/bootstrap/founder-metrics-dashboard-app](web/bootstrap/founder-me
 
 Investor-ready founder metrics template (Blvd) with KPI cards, growth sparklines, fundraising milestones, finance tables, acquisition insights, product/team updates, and board narrative blocks. Brand colors: primary `#0D63A5`, secondary `#21E6C1`. CSS prefix: `fm-*`.
 
+### 9. Researcher Portfolio (ResearcherHub)
+Location: [web/bootstrap/researcher-portfolio](web/bootstrap/researcher-portfolio)
+
+Modern academic expert portfolio with hero, impact metrics, filterable publications, talks timeline, media, awards, peer-review service, teaching, and collaboration contact. Brand colors: primary `#3B0270`, secondary `#F8DE22`. CSS prefix: `rh-*`. Uses AOS for scroll animations.
+
 ## Repository Structure
 
 ```text
@@ -56,7 +61,8 @@ web/bootstrap/
 ├── modern-admin-network-dashboard/
 ├── non-profit-impact-dashboard/
 ├── elevate-awards/
-└── founder-metrics-dashboard-app/
+├── founder-metrics-dashboard-app/
+└── researcher-portfolio/
 ```
 
 Each template folder includes HTML, assets, and its own README.
