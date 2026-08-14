@@ -4,6 +4,11 @@ A polished, responsive **founder / investor metrics dashboard** template for boa
 
 Premium SaaS presentation—not a generic admin shell. No heavy chart libraries; visuals use Bootstrap progress bars, CSS sparklines, and lightweight JS.
 
+## Screenshot
+
+<img width="2631" height="9495" alt="image" src="https://github.com/user-attachments/assets/a5fbbf55-ca25-4c95-91be-50f055f4ac3e" />
+
+
 ## Brand Colors
 
 | Token | Value | Use |
