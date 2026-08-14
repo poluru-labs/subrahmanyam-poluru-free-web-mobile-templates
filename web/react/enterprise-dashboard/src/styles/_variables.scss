@@ -1,0 +1,61 @@
+// Brand primary — Poluru Data Center
+$brand-50: #e8f6ff;
+$brand-100: #c9ebff;
+$brand-200: #9ad8ff;
+$brand-300: #62c2ff;
+$brand-400: #30afff;
+$brand-500: #1496e8;
+$brand-600: #0b78c4;
+$brand-700: #0a5f9c;
+$brand-800: #0c4d7d;
+$brand-900: #0e4068;
+
+$surface: #f5f8fb;
+$surface-elevated: #ffffff;
+$border: #e2e8f0;
+$text: #0f172a;
+$text-muted: #64748b;
+$sidebar-width: 260px;
+$sidebar-collapsed: 72px;
+$header-height: 64px;
+
+:root {
+  --brand-50: #{$brand-50};
+  --brand-100: #{$brand-100};
+  --brand-200: #{$brand-200};
+  --brand-300: #{$brand-300};
+  --brand-400: #{$brand-400};
+  --brand-500: #{$brand-500};
+  --brand-600: #{$brand-600};
+  --brand-700: #{$brand-700};
+  --brand-800: #{$brand-800};
+  --brand-900: #{$brand-900};
+
+  --surface: #{$surface};
+  --surface-elevated: #{$surface-elevated};
+  --border: #{$border};
+  --text: #{$text};
+  --text-muted: #{$text-muted};
+  --sidebar-width: #{$sidebar-width};
+  --header-height: #{$header-height};
+
+  // Override EDS brand tokens → #30AFFF primary
+  --eds-color-brand-50: #{$brand-50};
+  --eds-color-brand-100: #{$brand-100};
+  --eds-color-brand-200: #{$brand-200};
+  --eds-color-brand-300: #{$brand-300};
+  --eds-color-brand-400: #{$brand-400};
+  --eds-color-brand-500: #{$brand-500};
+  --eds-color-brand-600: #{$brand-600};
+  --eds-color-brand-700: #{$brand-700};
+  --eds-color-brand-800: #{$brand-800};
+  --eds-color-brand-900: #{$brand-900};
+
+  --eds-color-primary: #{$brand-400};
+  --eds-color-primary-hover: #{$brand-500};
+  --eds-color-primary-active: #{$brand-600};
+  --eds-color-focus: #{$brand-400};
+
+  --font-sans: 'Roboto', system-ui, sans-serif;
+  --font-mono: 'Roboto Mono', ui-monospace, monospace;
+}

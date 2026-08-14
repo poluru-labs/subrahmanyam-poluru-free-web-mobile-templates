@@ -1,0 +1,55 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+@mixin fade-in($delay: 0s, $duration: 0.35s) {
+  animation: fade-in $duration ease both;
+  animation-delay: $delay;
+}
+
+@mixin fade-up($delay: 0s, $duration: 0.4s) {
+  animation: fade-up $duration ease both;
+  animation-delay: $delay;
+}
+
+@mixin slide-in-left($delay: 0s, $duration: 0.35s) {
+  animation: slide-in-left $duration ease both;
+  animation-delay: $delay;
+}
