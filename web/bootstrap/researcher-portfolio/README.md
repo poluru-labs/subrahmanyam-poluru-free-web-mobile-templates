@@ -4,6 +4,13 @@ A modern, responsive **academic personal site** template for faculty, lab leads,
 
 Credible and contemporary—not outdated university chrome. Solid brand colors only.
 
+
+## Screenshot
+
+<img width="2679" height="9331" alt="image" src="https://github.com/user-attachments/assets/2eccb372-f268-44fb-a5ad-8c1dd244300f" />
+
+
+
 ## Brand Colors
 
 | Token | Value | Use |
