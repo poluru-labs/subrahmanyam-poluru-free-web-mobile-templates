@@ -9,27 +9,26 @@ Premium SaaS presentation—not a generic admin shell. No heavy chart libraries;
 | Token | Value | Use |
 |---|---|---|
 | Primary | `#008BFF` | Accents, CTAs, growth signals |
-| Ink | `#0B1F33` | Headings, footer, secondary emphasis |
-| Soft bg | `#F3F7FB` | Section contrast |
+| Ink | `#07111D` | Dark command header, footer, headings |
+| Canvas | `#EEF2F6` | Page background |
 
-Solid colors only — no brand-color gradients.
+**Layout:** command-board style — dark header strip, overlapping KPI rail, bento growth grid, horizontal milestone steps, left-rail brief cards. Solid colors only.
 
 Custom classes use the `skb-` prefix (e.g. `.skb-hero`, `.skb-kpi`).
 
 ## Features
 
-- Sticky responsive navbar with smooth scrolling and active section state
-- Hero with startup brand, reporting period chips, monthly/quarterly toggle
-- KPI cards: MRR, ARR, CAC, LTV, churn, customers, burn, runway
-- Animated counters and scroll-triggered progress bars
-- Growth sparklines (CSS) + revenue / retention panels
-- Fundraising progress with milestone tracker
-- Customer acquisition channels and segment table
-- Burn / runway / expense summary + trailing six-month table
-- Product roadmap, shipping milestones, hiring
-- Investor wins / risks / asks + update timeline
-- Backers and advisor cards
-- Share CTA + polished footer
+- Dark sticky command navbar
+- Full-bleed ink hero with reporting toolbar
+- KPI signal strip with left-accent metric tiles
+- Bento growth layout with CSS sparklines
+- Fundraising card + numbered milestone steps
+- Horizontal finance stat rail + trailing table
+- Wins / risks / asks brief panels
+- Backers and advisor rail
+- Outlined share CTA (not a solid color block)
+- Animated counters, progress bars, period toggle
+- Plus Jakarta Sans + Bootstrap 5 + Icons
 
 ## File Structure
 
