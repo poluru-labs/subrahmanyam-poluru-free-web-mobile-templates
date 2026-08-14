@@ -4,6 +4,12 @@ A polished, responsive **founder metrics / startup KPI dashboard** template for 
 
 Premium SaaS presentation—not a generic admin shell. No heavy chart libraries; visuals use Bootstrap progress bars, CSS sparklines, and lightweight JS.
 
+## Screenshot
+
+<img width="2984" height="8374" alt="image" src="https://github.com/user-attachments/assets/40277332-677d-4818-a4c8-b3f2f4898696" />
+
+
+
 ## Brand Colors
 
 | Token | Value | Use |
