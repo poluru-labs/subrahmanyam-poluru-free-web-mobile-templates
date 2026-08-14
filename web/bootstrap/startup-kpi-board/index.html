@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Clearlane Startup KPI Board — investor-ready founder metrics for MRR, ARR, CAC, LTV, churn, burn, runway, fundraising, and board updates." />
+  <title>Clearlane — Startup KPI Board</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="skb-body">
+
+  <nav class="navbar navbar-expand-lg skb-navbar sticky-top" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand skb-brand" href="#home">
+        <span class="skb-brand-mark" aria-hidden="true"><i class="bi bi-kanban"></i></span>
+        <span>Clearlane <em>KPI</em></span>
+      </a>
+      <button class="navbar-toggler skb-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#skbNav" aria-controls="skbNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="skbNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#kpis">KPIs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#growth">Growth</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fundraising">Raise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#customers">Customers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#burn">Burn</a></li>
+          <li class="nav-item"><a class="nav-link" href="#updates">Updates</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn skb-btn-primary btn-sm" href="#share"><i class="bi bi-send me-1"></i>Share Update</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <header class="skb-hero" id="home">
+      <div class="container">
+        <div class="row g-4 align-items-end">
+          <div class="col-lg-7 skb-reveal">
+            <div class="skb-hero-badge">
+              <span class="skb-live" aria-hidden="true"></span>
+              Seed → Series A · Board pack ready
+            </div>
+            <h1 class="skb-hero-title">Clearlane</h1>
+            <p class="skb-hero-tagline">Revenue clarity for modern GTM teams.</p>
+            <p class="skb-hero-lead">
+              A founder metrics board for operators and investors—KPIs, capital efficiency,
+              fundraising momentum, and execution updates in one investor-ready view.
+            </p>
+            <div class="skb-hero-actions">
+              <a href="#share" class="btn skb-btn-primary btn-lg">
+                <i class="bi bi-share me-2"></i>Share Update
+              </a>
+              <a href="#burn" class="btn skb-btn-outline btn-lg">
+                <i class="bi bi-download me-2"></i>Download Report
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 skb-reveal">
+            <div class="skb-period-card">
+              <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                <div>
+                  <p class="skb-label mb-1">Reporting period</p>
+                  <p class="skb-period-title mb-0" id="skbPeriodLabel">Aug 2026 · Monthly</p>
+                </div>
+                <div class="skb-toggle" role="group" aria-label="View mode">
+                  <button type="button" class="skb-chip is-active" data-view="monthly">Monthly</button>
+                  <button type="button" class="skb-chip" data-view="quarterly">Quarterly</button>
+                </div>
+              </div>
+              <div class="skb-period-chips" role="group" aria-label="Select period">
+                <button type="button" class="skb-chip" data-period="Q1 2026">Q1</button>
+                <button type="button" class="skb-chip" data-period="Q2 2026">Q2</button>
+                <button type="button" class="skb-chip is-active" data-period="Q3 2026">Q3</button>
+                <button type="button" class="skb-chip" data-period="FY 2026">FY</button>
+              </div>
+              <ul class="skb-hero-facts list-unstyled mb-0">
+                <li><i class="bi bi-calendar3"></i> Close: Aug 31, 2026</li>
+                <li><i class="bi bi-person-badge"></i> Prepared by Subrahmanyam Poluru</li>
+                <li><i class="bi bi-geo-alt"></i> HQ · Austin, TX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- KPI overview -->
+    <section class="skb-section" id="kpis">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Startup KPIs</p>
+          <h2 class="skb-section-title">Performance at a glance</h2>
+          <p class="skb-section-sub">Core metrics investors expect in every board cycle.</p>
+        </div>
+        <div class="row g-3 g-xl-4">
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-currency-dollar"></i></span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 14.2%</span>
+              </div>
+              <p class="skb-kpi-label">MRR</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="186500">0</span></p>
+              <p class="skb-kpi-note">vs prior month</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-bar-chart-line"></i></span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 13.8%</span>
+              </div>
+              <p class="skb-kpi-label">ARR</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="2238000">0</span></p>
+              <p class="skb-kpi-note">run-rate annualized</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-bullseye"></i></span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> better</span>
+              </div>
+              <p class="skb-kpi-label">CAC</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="720">0</span></p>
+              <p class="skb-kpi-note">blended acquisition</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-gem"></i></span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 5.1%</span>
+              </div>
+              <p class="skb-kpi-label">LTV</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="9800">0</span></p>
+              <p class="skb-kpi-note">LTV:CAC 13.6×</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-arrow-left-right"></i></span>
+                <span class="skb-trend skb-trend-down"><i class="bi bi-arrow-down-right"></i> 0.3 pts</span>
+              </div>
+              <p class="skb-kpi-label">Logo churn</p>
+              <p class="skb-kpi-value"><span class="skb-counter" data-target="2.1" data-decimals="1">0</span>%</p>
+              <p class="skb-kpi-note">monthly · improving</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-people"></i></span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 9.4%</span>
+              </div>
+              <p class="skb-kpi-label">Active customers</p>
+              <p class="skb-kpi-value"><span class="skb-counter" data-target="1264">0</span></p>
+              <p class="skb-kpi-note">paying accounts</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-fire"></i></span>
+                <span class="skb-trend skb-trend-flat"><i class="bi bi-dash"></i> stable</span>
+              </div>
+              <p class="skb-kpi-label">Net burn</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="142000">0</span></p>
+              <p class="skb-kpi-note">monthly cash burn</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-kpi skb-kpi-accent">
+              <div class="skb-kpi-top">
+                <span class="skb-kpi-icon"><i class="bi bi-hourglass-split"></i></span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-shield-check"></i> healthy</span>
+              </div>
+              <p class="skb-kpi-label">Runway</p>
+              <p class="skb-kpi-value"><span class="skb-counter" data-target="21">0</span> mo</p>
+              <p class="skb-kpi-note">at current burn</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Growth & revenue -->
+    <section class="skb-section skb-section-soft" id="growth">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Growth &amp; revenue</p>
+          <h2 class="skb-section-title">Momentum across the funnel</h2>
+          <p class="skb-section-sub">Lightweight trend blocks with CSS sparklines—no chart library.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-xl-4 skb-reveal">
+            <article class="skb-panel">
+              <div class="skb-panel-head">
+                <h3>User growth</h3>
+                <span class="skb-badge">+16% MoM</span>
+              </div>
+              <p class="skb-big">18,420 <small>MAUs</small></p>
+              <div class="skb-spark" aria-hidden="true">
+                <span style="--h:36%"></span><span style="--h:42%"></span><span style="--h:40%"></span>
+                <span style="--h:52%"></span><span style="--h:58%"></span><span style="--h:64%"></span>
+                <span style="--h:70%"></span><span style="--h:78%"></span><span style="--h:86%"></span>
+                <span style="--h:94%"></span>
+              </div>
+              <div class="d-flex justify-content-between skb-progress-labels"><span>Target</span><span>88%</span></div>
+              <div class="progress skb-bar"><div class="progress-bar" data-progress="88"></div></div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 skb-reveal">
+            <article class="skb-panel">
+              <div class="skb-panel-head">
+                <h3>Revenue growth</h3>
+                <span class="skb-badge">+14% MoM</span>
+              </div>
+              <p class="skb-big">$186.5k <small>MRR</small></p>
+              <div class="skb-spark skb-spark-alt" aria-hidden="true">
+                <span style="--h:44%"></span><span style="--h:48%"></span><span style="--h:54%"></span>
+                <span style="--h:52%"></span><span style="--h:60%"></span><span style="--h:66%"></span>
+                <span style="--h:72%"></span><span style="--h:80%"></span><span style="--h:88%"></span>
+                <span style="--h:97%"></span>
+              </div>
+              <div class="d-flex justify-content-between skb-progress-labels"><span>Plan</span><span>106%</span></div>
+              <div class="progress skb-bar"><div class="progress-bar" data-progress="100"></div></div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 skb-reveal">
+            <article class="skb-panel">
+              <div class="skb-panel-head">
+                <h3>Trial → paid</h3>
+                <span class="skb-badge">Conversion</span>
+              </div>
+              <p class="skb-big">17.8% <small>last 30d</small></p>
+              <div class="skb-spark" aria-hidden="true">
+                <span style="--h:50%"></span><span style="--h:54%"></span><span style="--h:58%"></span>
+                <span style="--h:56%"></span><span style="--h:62%"></span><span style="--h:68%"></span>
+                <span style="--h:70%"></span><span style="--h:74%"></span><span style="--h:78%"></span>
+                <span style="--h:84%"></span>
+              </div>
+              <div class="d-flex justify-content-between skb-progress-labels"><span>Goal 20%</span><span>89%</span></div>
+              <div class="progress skb-bar"><div class="progress-bar" data-progress="89"></div></div>
+            </article>
+          </div>
+          <div class="col-md-6 skb-reveal">
+            <article class="skb-panel">
+              <div class="skb-panel-head">
+                <h3>Net revenue retention</h3>
+                <span class="skb-badge skb-badge-ok">116%</span>
+              </div>
+              <p class="skb-muted-text">Expansion continues to outpace contractions across mid-market accounts.</p>
+              <div class="row g-3 mt-1">
+                <div class="col-6">
+                  <p class="skb-mini-label">Gross retention</p>
+                  <p class="skb-mini-value">95%</p>
+                  <div class="progress skb-bar"><div class="progress-bar" data-progress="95"></div></div>
+                </div>
+                <div class="col-6">
+                  <p class="skb-mini-label">Expansion MRR</p>
+                  <p class="skb-mini-value">$31k</p>
+                  <div class="progress skb-bar skb-bar-ink"><div class="progress-bar" data-progress="74"></div></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 skb-reveal">
+            <article class="skb-panel">
+              <div class="skb-panel-head">
+                <h3>Trailing revenue mix</h3>
+                <span class="skb-badge">This quarter</span>
+              </div>
+              <ul class="skb-mix list-unstyled mb-0">
+                <li>
+                  <div class="d-flex justify-content-between"><span>New logos</span><span>41%</span></div>
+                  <div class="progress skb-bar"><div class="progress-bar" data-progress="41"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>Expansion</span><span>37%</span></div>
+                  <div class="progress skb-bar skb-bar-ink"><div class="progress-bar" data-progress="37"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>Reactivations</span><span>22%</span></div>
+                  <div class="progress skb-bar"><div class="progress-bar" data-progress="22"></div></div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fundraising -->
+    <section class="skb-section" id="fundraising">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Fundraising</p>
+          <h2 class="skb-section-title">Series A progress</h2>
+          <p class="skb-section-sub">Target, soft circles, lead status, and milestone tracker.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-5 skb-reveal">
+            <article class="skb-panel skb-raise">
+              <p class="skb-label">Current round</p>
+              <h3 class="skb-raise-title">Series A · $10M target</h3>
+              <p class="skb-raise-amount">$<span class="skb-counter" data-target="6400000">0</span> committed</p>
+              <div class="d-flex justify-content-between skb-progress-labels mt-3"><span>Soft circled</span><span>64%</span></div>
+              <div class="progress skb-bar skb-bar-lg"><div class="progress-bar" data-progress="64"></div></div>
+              <div class="skb-raise-grid">
+                <div>
+                  <p class="skb-mini-label">Lead investor</p>
+                  <p class="skb-mini-value">Brightline Ventures <span class="skb-pill">Term sheet</span></p>
+                </div>
+                <div>
+                  <p class="skb-mini-label">Pipeline</p>
+                  <p class="skb-mini-value">12 active · 5 warm</p>
+                </div>
+                <div>
+                  <p class="skb-mini-label">Target close</p>
+                  <p class="skb-mini-value">Oct 2026</p>
+                </div>
+                <div>
+                  <p class="skb-mini-label">Use of funds</p>
+                  <p class="skb-mini-value">GTM 45% · Product 40%</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-7 skb-reveal">
+            <article class="skb-panel">
+              <h3 class="skb-card-title">Fundraising milestones</h3>
+              <ol class="skb-timeline list-unstyled mb-0">
+                <li class="is-done">
+                  <span class="skb-tl-dot" aria-hidden="true"></span>
+                  <div>
+                    <p class="skb-tl-title">Data room live</p>
+                    <p class="skb-tl-meta">Completed · May 8 · cohort tables + unit economics</p>
+                  </div>
+                </li>
+                <li class="is-done">
+                  <span class="skb-tl-dot" aria-hidden="true"></span>
+                  <div>
+                    <p class="skb-tl-title">Lead term sheet</p>
+                    <p class="skb-tl-meta">Brightline Ventures · $4.5M soft circle</p>
+                  </div>
+                </li>
+                <li class="is-active">
+                  <span class="skb-tl-dot" aria-hidden="true"></span>
+                  <div>
+                    <p class="skb-tl-title">Syndicate fill</p>
+                    <p class="skb-tl-meta">In progress · $3.6M remaining to target</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="skb-tl-dot" aria-hidden="true"></span>
+                  <div>
+                    <p class="skb-tl-title">Definitive docs &amp; wire</p>
+                    <p class="skb-tl-meta">Planned · mid-October close</p>
+                  </div>
+                </li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer acquisition -->
+    <section class="skb-section skb-section-soft" id="customers">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Customer acquisition</p>
+          <h2 class="skb-section-title">Where growth is coming from</h2>
+          <p class="skb-section-sub">Channels, segments, and market mix.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-6 skb-reveal">
+            <article class="skb-panel">
+              <h3 class="skb-card-title">Acquisition channels</h3>
+              <ul class="skb-channel list-unstyled mb-0">
+                <li>
+                  <div class="skb-channel-row"><span><i class="bi bi-search"></i> Organic / SEO</span><strong>32%</strong></div>
+                  <div class="progress skb-bar"><div class="progress-bar" data-progress="32"></div></div>
+                </li>
+                <li>
+                  <div class="skb-channel-row"><span><i class="bi bi-briefcase"></i> Outbound / AE</span><strong>29%</strong></div>
+                  <div class="progress skb-bar skb-bar-ink"><div class="progress-bar" data-progress="29"></div></div>
+                </li>
+                <li>
+                  <div class="skb-channel-row"><span><i class="bi bi-people"></i> Partner referrals</span><strong>21%</strong></div>
+                  <div class="progress skb-bar"><div class="progress-bar" data-progress="21"></div></div>
+                </li>
+                <li>
+                  <div class="skb-channel-row"><span><i class="bi bi-megaphone"></i> Paid + events</span><strong>18%</strong></div>
+                  <div class="progress skb-bar skb-bar-ink"><div class="progress-bar" data-progress="18"></div></div>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-6 skb-reveal">
+            <article class="skb-panel">
+              <h3 class="skb-card-title">Top segments</h3>
+              <div class="table-responsive">
+                <table class="table skb-table mb-0">
+                  <thead>
+                    <tr>
+                      <th>Segment</th>
+                      <th>Accounts</th>
+                      <th>NRR</th>
+                      <th>Win rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>RevOps</td><td>418</td><td>122%</td><td>29%</td></tr>
+                    <tr><td>Sales ops</td><td>306</td><td>118%</td><td>26%</td></tr>
+                    <tr><td>Customer success</td><td>274</td><td>114%</td><td>24%</td></tr>
+                    <tr><td>Finance ops</td><td>266</td><td>111%</td><td>22%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Burn / runway / expenses -->
+    <section class="skb-section" id="burn">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Burn, runway &amp; expenses</p>
+          <h2 class="skb-section-title">Capital efficiency snapshot</h2>
+          <p class="skb-section-sub">Monthly P&amp;L signals for board and operating reviews.</p>
+        </div>
+        <div class="row g-3 g-lg-4 mb-4">
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-stat">
+              <i class="bi bi-cash-stack"></i>
+              <p class="skb-mini-label">Monthly revenue</p>
+              <p class="skb-mini-value">$186,500</p>
+              <span class="skb-trend skb-trend-up">+14.2%</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-stat">
+              <i class="bi bi-receipt"></i>
+              <p class="skb-mini-label">Operating expenses</p>
+              <p class="skb-mini-value">$328,000</p>
+              <span class="skb-trend skb-trend-flat">+0.8%</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-stat">
+              <i class="bi bi-pie-chart"></i>
+              <p class="skb-mini-label">Gross margin</p>
+              <p class="skb-mini-value">79%</p>
+              <span class="skb-trend skb-trend-up">+0.9 pts</span>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3 skb-reveal">
+            <article class="skb-stat">
+              <i class="bi bi-lightning-charge"></i>
+              <p class="skb-mini-label">Net burn</p>
+              <p class="skb-mini-value">$142,000</p>
+              <span class="skb-trend skb-trend-down">−$6k</span>
+            </article>
+          </div>
+        </div>
+        <div class="skb-panel skb-reveal">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h3 class="skb-card-title mb-0">Trailing six months</h3>
+            <span class="skb-badge">USD · unaudited</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table skb-table mb-0">
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Revenue</th>
+                  <th>OpEx</th>
+                  <th>Gross margin</th>
+                  <th>Net burn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Mar</td><td>$148k</td><td>$312k</td><td>77%</td><td>$164k</td></tr>
+                <tr><td>Apr</td><td>$156k</td><td>$316k</td><td>77%</td><td>$158k</td></tr>
+                <tr><td>May</td><td>$164k</td><td>$320k</td><td>78%</td><td>$152k</td></tr>
+                <tr><td>Jun</td><td>$172k</td><td>$322k</td><td>78%</td><td>$148k</td></tr>
+                <tr><td>Jul</td><td>$179k</td><td>$325k</td><td>79%</td><td>$145k</td></tr>
+                <tr class="skb-row-hi"><td>Aug</td><td>$186.5k</td><td>$328k</td><td>79%</td><td>$142k</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product & team -->
+    <section class="skb-section skb-section-soft" id="product">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Product &amp; team</p>
+          <h2 class="skb-section-title">Execution this quarter</h2>
+          <p class="skb-section-sub">Roadmap progress, shipping milestones, and hiring.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-4 skb-reveal">
+            <article class="skb-panel h-100">
+              <h3 class="skb-card-title">Roadmap progress</h3>
+              <ul class="skb-roadmap list-unstyled mb-0">
+                <li>
+                  <div class="d-flex justify-content-between"><span>Forecasting engine v2</span><span>86%</span></div>
+                  <div class="progress skb-bar"><div class="progress-bar" data-progress="86"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>CRM bidirectional sync</span><span>71%</span></div>
+                  <div class="progress skb-bar skb-bar-ink"><div class="progress-bar" data-progress="71"></div></div>
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between"><span>Enterprise SSO</span><span>54%</span></div>
+                  <div class="progress skb-bar"><div class="progress-bar" data-progress="54"></div></div>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4 skb-reveal">
+            <article class="skb-panel h-100">
+              <h3 class="skb-card-title">Shipping milestones</h3>
+              <ul class="skb-ship list-unstyled mb-0">
+                <li><span class="skb-pill">Shipped</span> Board-ready export packs</li>
+                <li><span class="skb-pill">Shipped</span> Cohort retention views</li>
+                <li><span class="skb-pill skb-pill-soft">Beta</span> AI variance explanations</li>
+                <li><span class="skb-pill skb-pill-muted">Next</span> Multi-entity billing</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4 skb-reveal">
+            <article class="skb-panel h-100">
+              <h3 class="skb-card-title">Hiring status</h3>
+              <div class="skb-hire">
+                <div><p class="skb-mini-value">36</p><p class="skb-mini-label">Team size</p></div>
+                <div><p class="skb-mini-value">5</p><p class="skb-mini-label">Open roles</p></div>
+                <div><p class="skb-mini-value">2</p><p class="skb-mini-label">Offers out</p></div>
+              </div>
+              <p class="skb-muted-text mt-3 mb-0">Priority: AE, Staff Engineer, Product Designer. Lead: Poluru S.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investor updates -->
+    <section class="skb-section" id="updates">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Investor update</p>
+          <h2 class="skb-section-title">Wins, risks &amp; asks</h2>
+          <p class="skb-section-sub">Concise board narrative for the current cycle.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4 skb-reveal">
+            <article class="skb-update">
+              <span class="skb-update-icon"><i class="bi bi-trophy"></i></span>
+              <h3>Wins</h3>
+              <ul class="skb-bullets">
+                <li>MRR crossed $186k with durable expansion</li>
+                <li>Lead term sheet executed with Brightline</li>
+                <li>Enterprise pipeline up 19% MoM</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-4 skb-reveal">
+            <article class="skb-update">
+              <span class="skb-update-icon skb-update-risk"><i class="bi bi-exclamation-triangle"></i></span>
+              <h3>Risks</h3>
+              <ul class="skb-bullets">
+                <li>Longer cycles on $80k+ ACV deals</li>
+                <li>Paid CAC up 11% in EMEA tests</li>
+                <li>SSO blockers on two late-stage deals</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-4 skb-reveal">
+            <article class="skb-update">
+              <span class="skb-update-icon skb-update-ask"><i class="bi bi-hand-index"></i></span>
+              <h3>Asks</h3>
+              <ul class="skb-bullets">
+                <li>Intros to 2 strategic Series A participants</li>
+                <li>Advisor for manufacturing GTM</li>
+                <li>Candidate referrals: Staff Eng, AE</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="skb-panel skb-reveal mt-4">
+          <h3 class="skb-card-title">Update timeline</h3>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="skb-tl-entry">
+                <span class="skb-tl-date">Jul 31</span>
+                <p class="skb-tl-title">July board pack published</p>
+                <p class="skb-tl-meta">Metrics locked · shared with Brightline</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skb-tl-entry is-current">
+                <span class="skb-tl-date">Aug 20</span>
+                <p class="skb-tl-title">Investor office hours</p>
+                <p class="skb-tl-meta">Asks review · hiring support · intros</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skb-tl-entry">
+                <span class="skb-tl-date">Sep 15</span>
+                <p class="skb-tl-title">Mid-quarter flash</p>
+                <p class="skb-tl-meta">MRR, burn, and syndicate status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Backers / advisors -->
+    <section class="skb-section skb-section-soft" id="backers">
+      <div class="container">
+        <div class="skb-section-head skb-reveal">
+          <p class="skb-eyebrow">Credibility</p>
+          <h2 class="skb-section-title">Investors, advisors &amp; partners</h2>
+          <p class="skb-section-sub">Placeholder badges and advisor cards for demo polish.</p>
+        </div>
+        <div class="skb-logos skb-reveal" aria-label="Investor logos">
+          <span class="skb-logo">Brightline Ventures</span>
+          <span class="skb-logo">North Pier Angels</span>
+          <span class="skb-logo">Cascade Seed</span>
+          <span class="skb-logo">Operate Fund</span>
+          <span class="skb-logo">Atlas Partners</span>
+        </div>
+        <div class="row g-3 g-lg-4 mt-2">
+          <div class="col-md-4 skb-reveal">
+            <article class="skb-advisor">
+              <div class="skb-avatar" aria-hidden="true">SP</div>
+              <div>
+                <h3>Subrahmanyam Poluru</h3>
+                <p>Founder &amp; CEO · Product &amp; strategy</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4 skb-reveal">
+            <article class="skb-advisor">
+              <div class="skb-avatar" aria-hidden="true">PS</div>
+              <div>
+                <h3>Poluru S</h3>
+                <p>Advisor · Enterprise GTM systems</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4 skb-reveal">
+            <article class="skb-advisor">
+              <div class="skb-avatar" aria-hidden="true">SP</div>
+              <div>
+                <h3>S Poluru</h3>
+                <p>Advisor · Finance ops &amp; board reporting</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Share CTA -->
+    <section class="skb-section" id="share">
+      <div class="container">
+        <div class="skb-cta skb-reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <p class="skb-eyebrow skb-eyebrow-light">Board-ready in minutes</p>
+              <h2 class="skb-cta-title">Share a clear founder update</h2>
+              <p class="skb-cta-text">
+                Use this Startup KPI Board for monthly investor updates, fundraising packs,
+                and operating reviews—without rebuilding your layout every quarter.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#kpis" class="btn skb-btn-light btn-lg mb-2 mb-lg-0 me-lg-2">
+                <i class="bi bi-eye me-2"></i>Preview KPIs
+              </a>
+              <a href="mailto:mail.spoluru@gmail.com" class="btn skb-btn-ink btn-lg">
+                <i class="bi bi-envelope me-2"></i>Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="skb-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="skb-brand skb-brand-footer" href="#home">
+            <span class="skb-brand-mark" aria-hidden="true"><i class="bi bi-kanban"></i></span>
+            <span>Clearlane <em>KPI</em></span>
+          </a>
+          <p class="skb-footer-text">Premium founder metrics template for board updates, fundraising, and operator reporting.</p>
+          <p class="skb-footer-contact">
+            <a href="mailto:mail.spoluru@gmail.com"><i class="bi bi-envelope me-1"></i>mail.spoluru@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="skb-footer-heading">Navigate</p>
+          <ul class="skb-footer-links list-unstyled">
+            <li><a href="#kpis">KPIs</a></li>
+            <li><a href="#growth">Growth</a></li>
+            <li><a href="#fundraising">Fundraising</a></li>
+            <li><a href="#customers">Customers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="skb-footer-heading">More</p>
+          <ul class="skb-footer-links list-unstyled">
+            <li><a href="#burn">Burn</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#updates">Updates</a></li>
+            <li><a href="#backers">Backers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="skb-footer-heading">Template note</p>
+          <p class="skb-footer-text">Built with Bootstrap 5, Bootstrap Icons, and Manrope. Free to customize for demos, portfolios, and startup reporting.</p>
+        </div>
+      </div>
+      <div class="skb-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>Startup KPI Board · Demo data</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -49,6 +49,11 @@ Location: [web/bootstrap/researcher-portfolio](web/bootstrap/researcher-portfoli
 
 Modern academic expert portfolio with hero, impact metrics, filterable publications, talks timeline, media, awards, peer-review service, teaching, and collaboration contact. Brand colors: primary `#3B0270`, secondary `#F8DE22`. CSS prefix: `rh-*`. Uses AOS for scroll animations.
 
+### 10. Startup KPI Board (Clearlane)
+Location: [web/bootstrap/startup-kpi-board](web/bootstrap/startup-kpi-board)
+
+Investor-ready founder metrics board with KPI cards (MRR, ARR, CAC, LTV, churn, burn, runway), growth sparklines, fundraising milestones, acquisition insights, product/team updates, and wins/risks/asks. Brand color: `#008BFF`. CSS prefix: `skb-*`.
+
 ## Repository Structure
 
 ```text
@@ -62,7 +67,8 @@ web/bootstrap/
 ├── non-profit-impact-dashboard/
 ├── elevate-awards/
 ├── founder-metrics-dashboard-app/
-└── researcher-portfolio/
+├── researcher-portfolio/
+└── startup-kpi-board/
 ```
 
 Each template folder includes HTML, assets, and its own README.
