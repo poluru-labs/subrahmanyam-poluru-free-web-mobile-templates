@@ -5,7 +5,7 @@ Ecommerce operations console built with **Vite**, **React**, **React Router**, a
 ## Features
 
 - Full-height sticky sidebar navigation
-- Light theme with brand primary `#30AFFF`
+- Light theme with brand primary `#BE1A1A`
 - Plus Jakarta Sans + IBM Plex Mono
 - Modern shell: branded sidebar, page subtitles, mobile drawer nav
 - Soft surfaces, refined spacing, and light motion

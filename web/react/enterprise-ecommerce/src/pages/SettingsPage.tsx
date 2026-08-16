@@ -45,7 +45,7 @@ export function SettingsPage() {
             <Input
               label="Support email"
               type="email"
-              defaultValue="support@polurulabs.com"
+              defaultValue="mail.polurus@gmail.com"
             />
           </div>
         </Card>

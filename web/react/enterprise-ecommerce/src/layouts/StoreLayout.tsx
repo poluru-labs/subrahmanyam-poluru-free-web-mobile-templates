@@ -193,9 +193,9 @@ export function StoreLayout({ children }: StoreLayoutProps) {
               ) : null}
             </div>
             <div className="store__user">
-              <Avatar name="Alex Rivera" size="sm" />
+              <Avatar name="Subrahmanyam Poluru" size="sm" />
               <div className="store__user-meta">
-                <strong>Alex Rivera</strong>
+                <strong>Subrahmanyam Poluru</strong>
                 <span>Ops lead</span>
               </div>
             </div>
