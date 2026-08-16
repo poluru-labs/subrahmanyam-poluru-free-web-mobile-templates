@@ -117,7 +117,7 @@ export function StoreLayout({ children }: StoreLayoutProps) {
                     `store__nav-link${isActive ? ' is-active' : ''}`
                   }
                 >
-                  <EdsIcon name={item.icon} size="sm" aria-hidden />
+                  <EdsIcon name={item.icon} size="sm" decorative />
                   <span>{item.label}</span>
                 </NavLink>
               </li>

@@ -6,8 +6,9 @@ Ecommerce operations console built with **Vite**, **React**, **React Router**, a
 
 - Full-height sticky sidebar navigation
 - Light theme with brand primary `#30AFFF`
-- Light page and panel animations
-- Roboto + Roboto Mono (Google Fonts)
+- Plus Jakarta Sans + IBM Plex Mono
+- Modern shell: branded sidebar, page subtitles, mobile drawer nav
+- Soft surfaces, refined spacing, and light motion
 - Routes: Overview, Products, Orders, Customers, Inventory, Settings
 - Global search across products, orders, and customers
 - Notification drawer for fulfillment alerts
