@@ -49,7 +49,7 @@ export function OverviewPage() {
 
       <section className="stat-grid stagger" aria-label="Key metrics">
         {overviewStats.map((stat) => (
-          <Card key={stat.label} elevated padded>
+          <Card key={stat.label} elevated padded className="stat-card">
             <Stat
               label={stat.label}
               value={stat.value}
@@ -65,6 +65,7 @@ export function OverviewPage() {
         <Card
           elevated
           padded
+          className="panel-card"
           header={
             <div className="card-heading">
               <h2>Recent orders</h2>
@@ -98,6 +99,7 @@ export function OverviewPage() {
         <Card
           elevated
           padded
+          className="panel-card"
           header={
             <div className="card-heading">
               <h2>Inventory pulse</h2>

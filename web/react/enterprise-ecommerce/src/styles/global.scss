@@ -21,6 +21,7 @@ body {
   background: var(--surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
 }
 
 button,
@@ -37,6 +38,7 @@ a {
 code,
 .mono {
   font-family: var(--font-mono);
+  letter-spacing: 0;
 }
 
 .page {
@@ -50,7 +52,7 @@ code,
 
   @for $i from 1 through 12 {
     > *:nth-child(#{$i}) {
-      animation-delay: #{0.04s * $i};
+      animation-delay: #{0.035s * $i};
     }
   }
 }

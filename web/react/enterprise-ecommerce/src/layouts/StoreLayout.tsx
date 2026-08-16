@@ -3,19 +3,18 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import {
   Autocomplete,
   Avatar,
-  Badge,
   Button,
   Drawer,
-  SideNav,
+  EdsIcon,
   Tag,
   useToast,
-  type SideNavItem,
+  type EdsIconName,
 } from '@poluru-labs/enterprise-design-system-react';
 import { useCommerce } from '../context/CommerceContext';
 import { searchCatalog } from '../data/mock';
 import './StoreLayout.scss';
 
-const navItems: Array<SideNavItem & { path: string }> = [
+const navItems: Array<{ label: string; path: string; icon: EdsIconName }> = [
   { label: 'Overview', path: '/', icon: 'home' },
   { label: 'Products', path: '/products', icon: 'folder' },
   { label: 'Orders', path: '/orders', icon: 'file' },
@@ -23,6 +22,15 @@ const navItems: Array<SideNavItem & { path: string }> = [
   { label: 'Inventory', path: '/inventory', icon: 'link' },
   { label: 'Settings', path: '/settings', icon: 'settings' },
 ];
+
+const pageCopy: Record<string, string> = {
+  '/': 'Sales, fulfillment, and catalog health at a glance.',
+  '/products': 'Manage SKUs, pricing, and catalog readiness.',
+  '/orders': 'Move paid orders through fulfillment with clarity.',
+  '/customers': 'Understand segments, spend, and loyalty.',
+  '/inventory': 'Watch stock levels and resolve warehouse alerts.',
+  '/settings': 'Tune storefront defaults and ops notifications.',
+};
 
 type StoreLayoutProps = {
   children: React.ReactNode;
@@ -34,21 +42,19 @@ export function StoreLayout({ children }: StoreLayoutProps) {
   const { show } = useToast();
   const { openAlerts, dismissAlert } = useCommerce();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
-
-  const items: SideNavItem[] = navItems.map((item) => ({
-    label: item.label,
-    icon: item.icon,
-    active: item.path === location.pathname,
-  }));
 
   const current =
     navItems.find((item) => item.path === location.pathname)?.label ??
     'Overview';
+  const subtitle =
+    pageCopy[location.pathname] ?? 'Enterprise storefront operations.';
 
   useEffect(() => {
     setDrawerOpen(false);
+    setNavOpen(false);
   }, [location.pathname]);
 
   const updateSuggestions = (query: string) => {
@@ -81,45 +87,82 @@ export function StoreLayout({ children }: StoreLayoutProps) {
   };
 
   return (
-    <div className="store">
-      <aside className="store__sidebar">
+    <div className={`store${navOpen ? ' store--nav-open' : ''}`}>
+      <div
+        className="store__scrim"
+        aria-hidden={!navOpen}
+        onClick={() => setNavOpen(false)}
+      />
+
+      <aside className="store__sidebar" aria-label="Primary">
         <div className="store__brand">
+          <span className="store__mark" aria-hidden="true">
+            PC
+          </span>
           <div className="store__brand-text">
             <strong>Poluru Commerce</strong>
-            <span>Enterprise storefront ops</span>
+            <span>Storefront ops</span>
           </div>
         </div>
 
-        <SideNav
-          className="store__sidenav"
-          items={items}
-          onNavigate={(label) => {
-            const match = navItems.find((item) => item.label === label);
-            if (match) navigate(match.path);
-          }}
-        />
+        <nav className="store__nav">
+          <p className="store__nav-label">Workspace</p>
+          <ul>
+            {navItems.map((item) => (
+              <li key={item.path}>
+                <NavLink
+                  to={item.path}
+                  end={item.path === '/'}
+                  className={({ isActive }) =>
+                    `store__nav-link${isActive ? ' is-active' : ''}`
+                  }
+                >
+                  <EdsIcon name={item.icon} size="sm" aria-hidden />
+                  <span>{item.label}</span>
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div className="store__sidebar-foot">
-          <Badge label="Live catalog" variant="brand" soft pill />
-          <p>US · EU · APAC storefronts</p>
+          <div className="store__status-chip">
+            <span className="store__status-dot" aria-hidden="true" />
+            <div>
+              <strong>Live catalog</strong>
+              <p>US · EU · APAC</p>
+            </div>
+          </div>
         </div>
       </aside>
 
       <div className="store__main">
         <header className="store__header">
           <div className="store__header-left">
-            <nav className="store__crumbs" aria-label="Breadcrumb">
-              <NavLink to="/">Commerce</NavLink>
-              <span aria-hidden="true">/</span>
-              <span>{current}</span>
-            </nav>
-            <h1 className="store__title">{current}</h1>
+            <Button
+              className="store__menu-btn"
+              variant="secondary"
+              size="sm"
+              icon="menu"
+              iconOnly
+              accessibleLabel="Open navigation"
+              onClick={() => setNavOpen(true)}
+            />
+            <div>
+              <nav className="store__crumbs" aria-label="Breadcrumb">
+                <NavLink to="/">Commerce</NavLink>
+                <span aria-hidden="true">/</span>
+                <span>{current}</span>
+              </nav>
+              <h1 className="store__title">{current}</h1>
+              <p className="store__subtitle">{subtitle}</p>
+            </div>
           </div>
 
           <div className="store__header-actions">
             <div className="store__search">
               <Autocomplete
-                placeholder="Search products, orders…"
+                placeholder="Search products, orders, customers…"
                 value={searchValue}
                 suggestions={suggestions}
                 minChars={1}
@@ -149,7 +192,13 @@ export function StoreLayout({ children }: StoreLayoutProps) {
                 </span>
               ) : null}
             </div>
-            <Avatar name="Alex Rivera" size="sm" />
+            <div className="store__user">
+              <Avatar name="Alex Rivera" size="sm" />
+              <div className="store__user-meta">
+                <strong>Alex Rivera</strong>
+                <span>Ops lead</span>
+              </div>
+            </div>
           </div>
         </header>
 
@@ -178,9 +227,7 @@ export function StoreLayout({ children }: StoreLayoutProps) {
         }
       >
         {openAlerts.length === 0 ? (
-          <p className="notify-drawer__empty">
-            No open inventory alerts.
-          </p>
+          <p className="notify-drawer__empty">No open inventory alerts.</p>
         ) : (
           <ul className="notify-drawer__list">
             {openAlerts.map((item) => (
