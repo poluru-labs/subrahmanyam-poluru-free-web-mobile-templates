@@ -7,6 +7,7 @@ import {
 } from '@poluru-labs/enterprise-design-system-react';
 import '@poluru-labs/enterprise-design-system-react/styles.css';
 import './styles/global.scss';
+import { AlertsProvider } from './context/AlertsContext';
 import App from './App';
 
 createRoot(document.getElementById('root')!).render(
@@ -14,7 +15,9 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <ThemeProvider defaultTheme="light">
         <ToastProvider>
-          <App />
+          <AlertsProvider>
+            <App />
+          </AlertsProvider>
         </ToastProvider>
       </ThemeProvider>
     </BrowserRouter>

@@ -6,6 +6,7 @@ import {
   DataTable,
   Tab,
   Tabs,
+  useToast,
 } from '@poluru-labs/enterprise-design-system-react';
 import { servers } from '../data/mock';
 import './pages.scss';
@@ -13,8 +14,20 @@ import './pages.scss';
 const tabFilters = ['compute', 'storage', 'network', 'all'] as const;
 
 export function InfrastructurePage() {
+  const { show } = useToast();
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [refreshing, setRefreshing] = useState(false);
+  const [lastRefreshed, setLastRefreshed] = useState(() => new Date());
   const activeFilter = tabFilters[selectedIndex] ?? 'all';
+
+  const handleRefresh = () => {
+    setRefreshing(true);
+    window.setTimeout(() => {
+      setLastRefreshed(new Date());
+      setRefreshing(false);
+      show({ title: 'Host telemetry refreshed', variant: 'success' });
+    }, 650);
+  };
 
   const columns = [
     { key: 'hostname', label: 'Hostname' },
@@ -53,9 +66,22 @@ export function InfrastructurePage() {
           Hosts, racks, and network nodes across the data center fleet.
         </p>
         <div className="page-toolbar__actions">
-          <Badge label={`${filterServers(activeFilter).length} hosts`} variant="brand" soft />
-          <Button variant="secondary" size="sm" icon="refresh">
-            Refresh
+          <Badge
+            label={`${filterServers(activeFilter).length} hosts`}
+            variant="brand"
+            soft
+          />
+          <span className="muted refresh-stamp">
+            Updated {lastRefreshed.toLocaleTimeString()}
+          </span>
+          <Button
+            variant="secondary"
+            size="sm"
+            icon="refresh"
+            disabled={refreshing}
+            onClick={handleRefresh}
+          >
+            {refreshing ? 'Refreshing…' : 'Refresh'}
           </Button>
         </div>
       </div>

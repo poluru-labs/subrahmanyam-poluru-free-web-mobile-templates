@@ -3,6 +3,7 @@ import { DashboardLayout } from './layouts/DashboardLayout';
 import { OverviewPage } from './pages/OverviewPage';
 import { FacilitiesPage } from './pages/FacilitiesPage';
 import { InfrastructurePage } from './pages/InfrastructurePage';
+import { PowerCoolingPage } from './pages/PowerCoolingPage';
 import { AlertsPage } from './pages/AlertsPage';
 import { SettingsPage } from './pages/SettingsPage';
 
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/" element={<OverviewPage />} />
         <Route path="/facilities" element={<FacilitiesPage />} />
         <Route path="/infrastructure" element={<InfrastructurePage />} />
+        <Route path="/power" element={<PowerCoolingPage />} />
         <Route path="/alerts" element={<AlertsPage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />

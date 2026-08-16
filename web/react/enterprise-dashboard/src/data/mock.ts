@@ -179,3 +179,204 @@ export const overviewStats = [
     hint: '2 critical',
   },
 ];
+
+export type CoolingLoop = {
+  id: string;
+  facility: string;
+  loop: string;
+  tempC: number;
+  pressurePsi: number;
+  capacity: number;
+  status: 'nominal' | 'elevated' | 'fault';
+};
+
+export type PowerCircuit = {
+  id: string;
+  facility: string;
+  circuit: string;
+  loadKw: number;
+  capacityKw: number;
+  upsBackupMin: number;
+};
+
+export type MaintenanceWindow = {
+  id: string;
+  title: string;
+  facility: string;
+  startsAt: string;
+  endsAt: string;
+  impact: 'low' | 'medium' | 'high';
+  owner: string;
+};
+
+export const powerStats = [
+  {
+    label: 'Fleet PUE',
+    value: '1.27',
+    trend: 'down' as const,
+    trendValue: '-0.03',
+    hint: 'Trailing 7 days',
+  },
+  {
+    label: 'IT load',
+    value: '14.2 MW',
+    trend: 'up' as const,
+    trendValue: '+1.1%',
+    hint: 'Vs yesterday',
+  },
+  {
+    label: 'Cooling headroom',
+    value: '23%',
+    trend: 'down' as const,
+    trendValue: '-4%',
+    hint: 'DFW-1 constrained',
+  },
+  {
+    label: 'UPS autonomy',
+    value: '12 min',
+    trend: 'flat' as const,
+    trendValue: '0%',
+    hint: 'Fleet minimum',
+  },
+];
+
+export const coolingLoops: CoolingLoop[] = [
+  {
+    id: 'cl-ord-a',
+    facility: 'Chicago ORD-1',
+    loop: 'Loop A',
+    tempC: 18.4,
+    pressurePsi: 42,
+    capacity: 68,
+    status: 'nominal',
+  },
+  {
+    id: 'cl-iad-b',
+    facility: 'Ashburn IAD-2',
+    loop: 'Loop B',
+    tempC: 19.1,
+    pressurePsi: 40,
+    capacity: 74,
+    status: 'nominal',
+  },
+  {
+    id: 'cl-dfw-b',
+    facility: 'Dallas DFW-1',
+    loop: 'Loop B',
+    tempC: 24.8,
+    pressurePsi: 28,
+    capacity: 91,
+    status: 'fault',
+  },
+  {
+    id: 'cl-sjc-a',
+    facility: 'San Jose SJC-3',
+    loop: 'Loop A',
+    tempC: 17.2,
+    pressurePsi: 44,
+    capacity: 55,
+    status: 'elevated',
+  },
+];
+
+export const powerCircuits: PowerCircuit[] = [
+  {
+    id: 'pc-ord',
+    facility: 'Chicago ORD-1',
+    circuit: 'PDU-A / Bus 1',
+    loadKw: 1820,
+    capacityKw: 2400,
+    upsBackupMin: 14,
+  },
+  {
+    id: 'pc-iad',
+    facility: 'Ashburn IAD-2',
+    circuit: 'PDU-C / Bus 2',
+    loadKw: 2680,
+    capacityKw: 3200,
+    upsBackupMin: 11,
+  },
+  {
+    id: 'pc-dfw',
+    facility: 'Dallas DFW-1',
+    circuit: 'PDU-B / Bus 1',
+    loadKw: 2100,
+    capacityKw: 2200,
+    upsBackupMin: 9,
+  },
+  {
+    id: 'pc-sjc',
+    facility: 'San Jose SJC-3',
+    circuit: 'PDU-A / Bus 1',
+    loadKw: 980,
+    capacityKw: 1600,
+    upsBackupMin: 16,
+  },
+];
+
+export const maintenanceWindows: MaintenanceWindow[] = [
+  {
+    id: 'mw-1',
+    title: 'UPS battery string replacement',
+    facility: 'San Jose SJC-3',
+    startsAt: '2026-08-16T02:00:00',
+    endsAt: '2026-08-16T06:00:00',
+    impact: 'medium',
+    owner: 'Facilities',
+  },
+  {
+    id: 'mw-2',
+    title: 'Cooling loop B valve calibration',
+    facility: 'Dallas DFW-1',
+    startsAt: '2026-08-15T22:00:00',
+    endsAt: '2026-08-16T01:00:00',
+    impact: 'high',
+    owner: 'Mechanical',
+  },
+  {
+    id: 'mw-3',
+    title: 'Spine switch firmware roll',
+    facility: 'Ashburn IAD-2',
+    startsAt: '2026-08-18T03:00:00',
+    endsAt: '2026-08-18T05:30:00',
+    impact: 'low',
+    owner: 'Network',
+  },
+  {
+    id: 'mw-4',
+    title: 'Generator load-bank test',
+    facility: 'Chicago ORD-1',
+    startsAt: '2026-08-20T01:00:00',
+    endsAt: '2026-08-20T04:00:00',
+    impact: 'medium',
+    owner: 'Facilities',
+  },
+];
+
+export type SearchResult = {
+  id: string;
+  label: string;
+  category: 'Facility' | 'Host' | 'Alert';
+  path: string;
+};
+
+export const searchCatalog: SearchResult[] = [
+  ...facilities.map((f) => ({
+    id: f.id,
+    label: `${f.name} · ${f.region}`,
+    category: 'Facility' as const,
+    path: '/facilities',
+  })),
+  ...servers.map((s) => ({
+    id: s.id,
+    label: `${s.hostname} · ${s.role}`,
+    category: 'Host' as const,
+    path: '/infrastructure',
+  })),
+  ...alerts.map((a) => ({
+    id: a.id,
+    label: a.title,
+    category: 'Alert' as const,
+    path: '/alerts',
+  })),
+];
