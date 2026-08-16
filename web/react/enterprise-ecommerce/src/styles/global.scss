@@ -1,0 +1,56 @@
+@use 'variables' as *;
+@use 'animations' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--text);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  color: var(--brand-600);
+}
+
+code,
+.mono {
+  font-family: var(--font-mono);
+}
+
+.page {
+  @include fade-up(0.05s);
+}
+
+.stagger {
+  > * {
+    @include fade-up();
+  }
+
+  @for $i from 1 through 12 {
+    > *:nth-child(#{$i}) {
+      animation-delay: #{0.04s * $i};
+    }
+  }
+}
