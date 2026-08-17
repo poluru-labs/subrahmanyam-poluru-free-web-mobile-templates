@@ -17,6 +17,8 @@
 </head>
 <body class="fm-body">
 
+  <a class="fm-skip-link" href="#main">Skip to content</a>
+
   <!-- Sticky header -->
   <nav class="navbar navbar-expand-lg fm-navbar sticky-top" aria-label="Primary">
     <div class="container">
@@ -35,15 +37,18 @@
           <li class="nav-item"><a class="nav-link" href="#finance">Finance</a></li>
           <li class="nav-item"><a class="nav-link" href="#customers">Customers</a></li>
           <li class="nav-item"><a class="nav-link" href="#updates">Updates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
           <li class="nav-item ms-lg-2">
-            <a class="btn fm-btn-primary btn-sm" href="#cta"><i class="bi bi-send me-1"></i>Share Update</a>
+            <button type="button" class="btn fm-btn-primary btn-sm" id="fmShareNav" data-bs-toggle="modal" data-bs-target="#fmShareModal">
+              <i class="bi bi-send me-1"></i>Share Update
+            </button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main>
+  <main id="main">
     <!-- 1. Hero / top summary -->
     <header class="fm-hero" id="home">
       <div class="container">
@@ -60,13 +65,17 @@
               MRR trajectory, capital efficiency, and execution highlights in one view.
             </p>
             <div class="fm-hero-actions">
-              <a href="#cta" class="btn fm-btn-primary btn-lg">
+              <button type="button" class="btn fm-btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#fmShareModal">
                 <i class="bi bi-share me-2"></i>Share Update
-              </a>
-              <a href="#finance" class="btn fm-btn-outline btn-lg">
+              </button>
+              <button type="button" class="btn fm-btn-outline btn-lg" id="fmDownloadReport">
                 <i class="bi bi-download me-2"></i>Download Report
-              </a>
+              </button>
+              <button type="button" class="btn fm-btn-outline btn-lg" id="fmPrintBoard">
+                <i class="bi bi-printer me-2"></i>Print
+              </button>
             </div>
+            <p class="fm-last-updated mb-0"><i class="bi bi-clock-history"></i> Last refreshed <time id="fmLastUpdated" datetime="">—</time></p>
           </div>
           <div class="col-lg-5 fm-reveal">
             <div class="fm-period-panel">
@@ -100,99 +109,106 @@
     <!-- 2. KPI overview -->
     <section class="fm-section" id="kpis">
       <div class="container">
-        <div class="fm-section-head fm-reveal">
-          <p class="fm-eyebrow">Core startup KPIs</p>
-          <h2 class="fm-section-title">Performance at a glance</h2>
-          <p class="fm-section-sub">Headline metrics investors track every board cycle.</p>
+        <div class="fm-section-head fm-reveal d-flex flex-wrap justify-content-between align-items-end gap-3">
+          <div>
+            <p class="fm-eyebrow">Core startup KPIs</p>
+            <h2 class="fm-section-title">Performance at a glance</h2>
+            <p class="fm-section-sub mb-0">Headline metrics investors track every board cycle.</p>
+          </div>
+          <div class="fm-kpi-actions">
+            <button type="button" class="btn fm-btn-outline btn-sm" id="fmCopyKpis">
+              <i class="bi bi-clipboard me-1"></i>Copy KPIs
+            </button>
+          </div>
         </div>
 
-        <div class="row g-3 g-xl-4">
+        <div class="row g-3 g-xl-4" id="fmKpiGrid">
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card">
+            <article class="fm-kpi-card" data-metric="mrr">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-currency-dollar"></i></span>
-                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 12.4%</span>
+                <span class="fm-trend fm-trend-up" data-trend-monthly="12.4%" data-trend-quarterly="38.1%"><i class="bi bi-arrow-up-right"></i> <span class="fm-trend-val">12.4%</span></span>
               </div>
               <p class="fm-kpi-label">MRR</p>
-              <p class="fm-kpi-value">$<span class="fm-counter" data-target="248000" data-prefix="">0</span></p>
-              <p class="fm-kpi-note">vs prior month</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="248000" data-monthly="248000" data-quarterly="235000">0</span></p>
+              <p class="fm-kpi-note" data-note-monthly="vs prior month" data-note-quarterly="avg MoM in quarter">vs prior month</p>
             </article>
           </div>
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card">
+            <article class="fm-kpi-card" data-metric="arr">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-bar-chart-line"></i></span>
-                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 11.8%</span>
+                <span class="fm-trend fm-trend-up" data-trend-monthly="11.8%" data-trend-quarterly="34.2%"><i class="bi bi-arrow-up-right"></i> <span class="fm-trend-val">11.8%</span></span>
               </div>
               <p class="fm-kpi-label">ARR</p>
-              <p class="fm-kpi-value">$<span class="fm-counter" data-target="2976000">0</span></p>
-              <p class="fm-kpi-note">run-rate annualized</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="2976000" data-monthly="2976000" data-quarterly="2820000">0</span></p>
+              <p class="fm-kpi-note" data-note-monthly="run-rate annualized" data-note-quarterly="quarter exit run-rate">run-rate annualized</p>
             </article>
           </div>
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card">
+            <article class="fm-kpi-card" data-metric="customers">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-people"></i></span>
-                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 8.1%</span>
+                <span class="fm-trend fm-trend-up" data-trend-monthly="8.1%" data-trend-quarterly="24.6%"><i class="bi bi-arrow-up-right"></i> <span class="fm-trend-val">8.1%</span></span>
               </div>
               <p class="fm-kpi-label">Active customers</p>
-              <p class="fm-kpi-value"><span class="fm-counter" data-target="1842">0</span></p>
-              <p class="fm-kpi-note">paying accounts</p>
+              <p class="fm-kpi-value"><span class="fm-counter" data-target="1842" data-monthly="1842" data-quarterly="1720">0</span></p>
+              <p class="fm-kpi-note" data-note-monthly="paying accounts" data-note-quarterly="end-of-quarter logos">paying accounts</p>
             </article>
           </div>
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card">
+            <article class="fm-kpi-card" data-metric="churn">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-arrow-left-right"></i></span>
-                <span class="fm-trend fm-trend-down"><i class="bi bi-arrow-down-right"></i> 0.4 pts</span>
+                <span class="fm-trend fm-trend-down" data-trend-monthly="0.4 pts" data-trend-quarterly="0.9 pts"><i class="bi bi-arrow-down-right"></i> <span class="fm-trend-val">0.4 pts</span></span>
               </div>
               <p class="fm-kpi-label">Logo churn</p>
-              <p class="fm-kpi-value"><span class="fm-counter" data-target="1.9" data-decimals="1">0</span>%</p>
-              <p class="fm-kpi-note">monthly · improving</p>
+              <p class="fm-kpi-value"><span class="fm-counter" data-target="1.9" data-decimals="1" data-monthly="1.9" data-quarterly="2.1">0</span>%</p>
+              <p class="fm-kpi-note" data-note-monthly="monthly · improving" data-note-quarterly="avg monthly in quarter">monthly · improving</p>
             </article>
           </div>
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card">
+            <article class="fm-kpi-card" data-metric="cac">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-bullseye"></i></span>
-                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> better</span>
+                <span class="fm-trend fm-trend-up" data-trend-monthly="better" data-trend-quarterly="−6%"><i class="bi bi-arrow-up-right"></i> <span class="fm-trend-val">better</span></span>
               </div>
               <p class="fm-kpi-label">CAC</p>
-              <p class="fm-kpi-value">$<span class="fm-counter" data-target="842">0</span></p>
-              <p class="fm-kpi-note">blended acquisition</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="842" data-monthly="842" data-quarterly="910">0</span></p>
+              <p class="fm-kpi-note" data-note-monthly="blended acquisition" data-note-quarterly="blended · quarter">blended acquisition</p>
             </article>
           </div>
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card">
+            <article class="fm-kpi-card" data-metric="ltv">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-gem"></i></span>
-                <span class="fm-trend fm-trend-up"><i class="bi bi-arrow-up-right"></i> 6.2%</span>
+                <span class="fm-trend fm-trend-up" data-trend-monthly="6.2%" data-trend-quarterly="4.8%"><i class="bi bi-arrow-up-right"></i> <span class="fm-trend-val">6.2%</span></span>
               </div>
               <p class="fm-kpi-label">LTV</p>
-              <p class="fm-kpi-value">$<span class="fm-counter" data-target="12400">0</span></p>
-              <p class="fm-kpi-note">LTV:CAC 14.7×</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="12400" data-monthly="12400" data-quarterly="11800">0</span></p>
+              <p class="fm-kpi-note" data-note-monthly="LTV:CAC 14.7×" data-note-quarterly="LTV:CAC 13.0×">LTV:CAC 14.7×</p>
             </article>
           </div>
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card">
+            <article class="fm-kpi-card" data-metric="burn">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-fire"></i></span>
-                <span class="fm-trend fm-trend-flat"><i class="bi bi-dash"></i> stable</span>
+                <span class="fm-trend fm-trend-flat" data-trend-monthly="stable" data-trend-quarterly="−3%"><i class="bi bi-dash"></i> <span class="fm-trend-val">stable</span></span>
               </div>
               <p class="fm-kpi-label">Net burn</p>
-              <p class="fm-kpi-value">$<span class="fm-counter" data-target="186000">0</span></p>
-              <p class="fm-kpi-note">monthly cash burn</p>
+              <p class="fm-kpi-value">$<span class="fm-counter" data-target="186000" data-monthly="186000" data-quarterly="192000">0</span></p>
+              <p class="fm-kpi-note" data-note-monthly="monthly cash burn" data-note-quarterly="avg monthly burn">monthly cash burn</p>
             </article>
           </div>
           <div class="col-6 col-lg-3 fm-reveal">
-            <article class="fm-kpi-card fm-kpi-card-accent">
+            <article class="fm-kpi-card fm-kpi-card-accent" data-metric="runway">
               <div class="fm-kpi-top">
                 <span class="fm-kpi-icon"><i class="bi bi-hourglass-split"></i></span>
-                <span class="fm-trend fm-trend-up"><i class="bi bi-shield-check"></i> healthy</span>
+                <span class="fm-trend fm-trend-up" data-trend-monthly="healthy" data-trend-quarterly="healthy"><i class="bi bi-shield-check"></i> <span class="fm-trend-val">healthy</span></span>
               </div>
               <p class="fm-kpi-label">Runway</p>
-              <p class="fm-kpi-value"><span class="fm-counter" data-target="18">0</span> mo</p>
-              <p class="fm-kpi-note">at current burn</p>
+              <p class="fm-kpi-value"><span class="fm-counter" data-target="18" data-monthly="18" data-quarterly="17">0</span> mo</p>
+              <p class="fm-kpi-note" data-note-monthly="at current burn" data-note-quarterly="at quarter avg burn">at current burn</p>
             </article>
           </div>
         </div>
@@ -438,10 +454,15 @@
         <div class="fm-table-panel fm-reveal">
           <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
             <h3 class="fm-card-title mb-0">Trailing six months</h3>
-            <span class="fm-badge-soft">USD · unaudited</span>
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <span class="fm-badge-soft">USD · unaudited</span>
+              <button type="button" class="btn fm-btn-outline btn-sm" id="fmExportFinance">
+                <i class="bi bi-filetype-csv me-1"></i>Export CSV
+              </button>
+            </div>
           </div>
           <div class="table-responsive">
-            <table class="table fm-table mb-0">
+            <table class="table fm-table mb-0" id="fmFinanceTable">
               <thead>
                 <tr>
                   <th>Month</th>
@@ -512,9 +533,15 @@
           </div>
           <div class="col-lg-6 fm-reveal">
             <article class="fm-panel">
-              <h3 class="fm-card-title">Top-performing segments</h3>
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <h3 class="fm-card-title mb-0">Top-performing segments</h3>
+                <div class="fm-search-wrap">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <input type="search" class="form-control form-control-sm" id="fmSegmentSearch" placeholder="Filter segments…" aria-label="Filter segments" />
+                </div>
+              </div>
               <div class="table-responsive">
-                <table class="table fm-table mb-0">
+                <table class="table fm-table mb-0" id="fmSegmentTable">
                   <thead>
                     <tr>
                       <th>Segment</th>
@@ -531,6 +558,7 @@
                   </tbody>
                 </table>
               </div>
+              <p class="fm-empty-state d-none mb-0 mt-2" id="fmSegmentEmpty">No segments match your filter.</p>
             </article>
           </div>
           <div class="col-md-6 fm-reveal">
@@ -673,11 +701,27 @@
             <article class="fm-update-card">
               <span class="fm-update-icon fm-update-icon-ask"><i class="bi bi-hand-index"></i></span>
               <h3>Asks</h3>
-              <ul class="fm-bullets">
-                <li>Intros to 2 strategic Series A participants</li>
-                <li>Advisor for manufacturing GTM</li>
-                <li>Candidate referrals: Staff Eng, AE</li>
+              <ul class="fm-checklist list-unstyled mb-0" id="fmAskChecklist">
+                <li>
+                  <label class="fm-check-item">
+                    <input type="checkbox" data-ask-id="ask-1" />
+                    <span>Intros to 2 strategic Series A participants</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="fm-check-item">
+                    <input type="checkbox" data-ask-id="ask-2" />
+                    <span>Advisor for manufacturing GTM</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="fm-check-item">
+                    <input type="checkbox" data-ask-id="ask-3" />
+                    <span>Candidate referrals: Staff Eng, AE</span>
+                  </label>
+                </li>
               </ul>
+              <p class="fm-check-hint mb-0">Checks save in this browser.</p>
             </article>
           </div>
           <div class="col-md-6 col-xl-3 fm-reveal">
@@ -771,8 +815,79 @@
       </div>
     </section>
 
+    <!-- Tools: runway calculator -->
+    <section class="fm-section" id="tools">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-eyebrow">Operator tools</p>
+          <h2 class="fm-section-title">Runway &amp; scenario helper</h2>
+          <p class="fm-section-sub">Model cash runway quickly before your next board conversation.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-lg-7 fm-reveal">
+            <article class="fm-panel">
+              <h3 class="fm-card-title">Runway calculator</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fm-mini-label" for="fmCashBalance">Cash balance (USD)</label>
+                  <input class="form-control fm-input" id="fmCashBalance" type="number" min="0" step="1000" value="3348000" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fm-mini-label" for="fmMonthlyBurn">Monthly net burn (USD)</label>
+                  <input class="form-control fm-input" id="fmMonthlyBurn" type="number" min="1" step="1000" value="186000" />
+                </div>
+              </div>
+              <div class="fm-runway-result mt-4">
+                <div>
+                  <p class="fm-mini-label mb-1">Estimated runway</p>
+                  <p class="fm-runway-value mb-0"><span id="fmRunwayMonths">18.0</span> months</p>
+                </div>
+                <div>
+                  <p class="fm-mini-label mb-1">Zero-cash date</p>
+                  <p class="fm-mini-value mb-0" id="fmRunwayDate">—</p>
+                </div>
+              </div>
+              <div class="progress fm-bar fm-bar-lg mt-3"><div class="progress-bar" id="fmRunwayBar" style="width: 75%"></div></div>
+              <p class="fm-muted-note mt-2 mb-0">Assumes constant burn. Cap shown at 24 months for the visual meter.</p>
+            </article>
+          </div>
+          <div class="col-lg-5 fm-reveal">
+            <article class="fm-panel h-100">
+              <h3 class="fm-card-title">Board pack shortcuts</h3>
+              <ul class="fm-tool-list list-unstyled mb-0">
+                <li>
+                  <button type="button" class="fm-tool-btn" data-bs-toggle="modal" data-bs-target="#fmShareModal">
+                    <i class="bi bi-share"></i>
+                    <span>Compose investor update</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="fm-tool-btn" id="fmCopySummaryTool">
+                    <i class="bi bi-clipboard-data"></i>
+                    <span>Copy KPI summary</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="fm-tool-btn" id="fmDownloadReportTool">
+                    <i class="bi bi-download"></i>
+                    <span>Download text report</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="fm-tool-btn" id="fmPrintBoardTool">
+                    <i class="bi bi-printer"></i>
+                    <span>Print board view</span>
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 10. CTA -->
-    <section class="fm-section" id="cta">
+    <section class="fm-section fm-section-soft" id="cta">
       <div class="container">
         <div class="fm-cta fm-reveal">
           <div class="row align-items-center g-4">
@@ -785,9 +900,9 @@
               </p>
             </div>
             <div class="col-lg-4 text-lg-end">
-              <a href="#home" class="btn fm-btn-light btn-lg mb-2 mb-lg-0 me-lg-2">
-                <i class="bi bi-eye me-2"></i>Preview KPIs
-              </a>
+              <button type="button" class="btn fm-btn-light btn-lg mb-2 mb-lg-0 me-lg-2" data-bs-toggle="modal" data-bs-target="#fmShareModal">
+                <i class="bi bi-send me-2"></i>Share Update
+              </button>
               <a href="mailto:mail.spoluru@gmail.com" class="btn fm-btn-primary-invert btn-lg">
                 <i class="bi bi-envelope me-2"></i>Contact
               </a>
@@ -828,6 +943,7 @@
             <li><a href="#customers">Customers</a></li>
             <li><a href="#product">Product</a></li>
             <li><a href="#updates">Updates</a></li>
+            <li><a href="#tools">Tools</a></li>
             <li><a href="#backers">Backers</a></li>
           </ul>
         </div>
@@ -842,6 +958,42 @@
       </div>
     </div>
   </footer>
+
+  <!-- Share update modal -->
+  <div class="modal fade" id="fmShareModal" tabindex="-1" aria-labelledby="fmShareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content fm-modal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="fmShareModalLabel">Share investor update</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label class="form-label fm-mini-label" for="fmShareText">Update draft</label>
+          <textarea class="form-control fm-input" id="fmShareText" rows="10" aria-label="Investor update draft"></textarea>
+          <p class="fm-muted-note mt-2 mb-0">Generated from current period KPIs, asks, and highlights. Edit before sending.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn fm-btn-outline" id="fmCopyShare">Copy text</button>
+          <a class="btn fm-btn-primary" id="fmMailShare" href="mailto:mail.spoluru@gmail.com">Open email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="fmToast" class="toast fm-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill me-2 text-success"></i>
+        <strong class="me-auto" id="fmToastTitle">Blvd Metrics</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="fmToastBody">Done.</div>
+    </div>
+  </div>
+
+  <button type="button" class="fm-back-top" id="fmBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>

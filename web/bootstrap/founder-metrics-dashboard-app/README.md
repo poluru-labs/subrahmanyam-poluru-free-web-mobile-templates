@@ -25,18 +25,24 @@ Custom classes use the `fm-` prefix (e.g. `.fm-hero`, `.fm-kpi-card`).
 ## Features
 
 - Sticky responsive navbar with smooth scrolling and active section state
+- Skip-to-content link and back-to-top control
 - Hero summary with company brand, reporting period chips, monthly/quarterly toggle
+- Period toggle swaps live KPI values, trends, and notes
+- Copy KPI summary, download text report, print board view
+- Share Update modal with editable draft + email handoff
 - KPI overview cards (MRR, ARR, customers, churn, CAC, LTV, burn, runway) with trend badges
 - Animated counters for headline values (vanilla JS)
 - Growth blocks with CSS sparklines and scroll-triggered progress bars
 - Fundraising progress panel with lead status and milestone timeline
-- Revenue & expense comparison cards + trailing six-month table
-- Acquisition channels, segments, trial-to-paid, and market mix
+- Revenue & expense comparison cards + trailing six-month table + CSV export
+- Segment table search/filter
+- Acquisition channels, trial-to-paid, and market mix
 - Product roadmap, shipping milestones, hiring, wins & blockers
-- Investor update cards (highlights, risks, asks, next milestones) + timeline
-- Backer logo placeholders and advisor cards
-- CTA band for board/fundraising use cases
+- Investor update cards + interactive asks checklist (localStorage)
+- Runway calculator with cash / burn scenario modeling
+- Board pack shortcut tools and toast feedback
 - Scroll-reveal animations with reduced-motion support
+- Print-friendly styles for board packs
 
 ## File Structure
 
@@ -69,10 +75,11 @@ Open [http://localhost:8000](http://localhost:8000).
 5. Finance — revenue, OpEx, margin, burn + table  
 6. Customers — channels, segments, conversion, regions  
 7. Product & team — roadmap, shipping, hiring, wins/blockers  
-8. Investor update — highlights, risks, asks, timeline  
+8. Investor update — highlights, risks, asks checklist, timeline  
 9. Backers — investor badges + advisors  
-10. CTA — board / fundraising call-to-action  
-11. Footer — contact, nav, copyright  
+10. Tools — runway calculator + board pack shortcuts  
+11. CTA — board / fundraising call-to-action  
+12. Footer — contact, nav, copyright  
 
 ## Customization
 
