@@ -26,18 +26,20 @@ Custom classes use the `ea-` prefix (e.g. `.ea-hero`, `.ea-scorecard`).
 ## Features
 
 - Sticky responsive navbar with smooth scrolling
+- Skip-to-content link and back-to-top control
+- Live deadline countdown for the next closing category
 - Credibility-focused hero with integrity snapshot panel
 - Animated overview counters (nominations, categories, reviewers, finalists, completion)
 - Timeline-style nomination → screening → review → shortlist → selection workflow
-- Eligibility screening cards with status badges + review table mockup
-- Filterable award category cards (open / closing soon / in review)
+- Eligibility screening cards + searchable/filterable review table
+- Copy nomination ID + dynamic nominee preview modal
+- Category search, status filters, result counts, and “Nominate in this category” shortcuts
 - Expert reviewer profiles with review stats
-- Weighted scoring rubric with scroll-triggered progress bars
+- Interactive weighted scoring rubric (sliders + composite total + reset)
 - Finalist / shortlist cards with composite scores
 - Insights cards for program health
-- Reusable nomination form layout
-- Nominee preview modal
-- Transparent Evaluation highlight band
+- Nomination form with validation, character counter, local draft save, and toast feedback
+- FAQ accordion for nominators and organizers
 - Scroll-reveal animations (lightweight CSS/JS)
 - No heavy libraries beyond Bootstrap, Bootstrap Icons, and Google Fonts
 
@@ -74,8 +76,9 @@ Open [http://localhost:8000](http://localhost:8000).
 7. Scoring — weighted rubric / scorecard  
 8. Finalists — shortlist cards  
 9. Insights — organizer health metrics  
-10. Nomination form — reusable submission layout  
-11. CTA + Footer  
+10. Nomination form — validation, drafts, character count  
+11. FAQ — accordion help  
+12. CTA + Footer  
 
 ## Customization
 

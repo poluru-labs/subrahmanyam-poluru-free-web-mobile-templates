@@ -18,6 +18,8 @@
 </head>
 <body class="ea-body">
 
+  <a class="ea-skip-link" href="#main">Skip to content</a>
+
   <!-- Sticky Navbar -->
   <nav class="navbar navbar-expand-lg ea-navbar sticky-top" aria-label="Primary">
     <div class="container">
@@ -37,6 +39,7 @@
           <li class="nav-item"><a class="nav-link" href="#reviewers">Reviewers</a></li>
           <li class="nav-item"><a class="nav-link" href="#scoring">Scoring</a></li>
           <li class="nav-item"><a class="nav-link" href="#finalists">Finalists</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item ms-lg-2">
             <a class="btn ea-btn-primary" href="#nominate">Start Nomination</a>
           </li>
@@ -45,7 +48,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main">
     <!-- 1. Hero -->
     <header class="ea-hero" id="home">
       <div class="container">
@@ -110,6 +113,26 @@
             </p>
           </div>
           <a href="#workflow" class="ea-integrity-link">See the workflow <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deadline countdown -->
+    <section class="ea-deadline" aria-label="Upcoming deadline">
+      <div class="container">
+        <div class="ea-deadline-inner ea-reveal">
+          <div class="ea-deadline-copy">
+            <p class="ea-eyebrow mb-1">Next closing category</p>
+            <h2 class="ea-deadline-title" id="eaDeadlineLabel">Community Impact</h2>
+            <p class="ea-deadline-sub mb-0">Submit before the window closes to enter this cycle.</p>
+          </div>
+          <div class="ea-countdown" id="eaCountdown" data-deadline="2026-03-18T23:59:59" aria-live="polite">
+            <div class="ea-count-unit"><strong id="eaDays">00</strong><span>Days</span></div>
+            <div class="ea-count-unit"><strong id="eaHours">00</strong><span>Hours</span></div>
+            <div class="ea-count-unit"><strong id="eaMins">00</strong><span>Mins</span></div>
+            <div class="ea-count-unit"><strong id="eaSecs">00</strong><span>Secs</span></div>
+          </div>
+          <a href="#nominate" class="btn ea-btn-primary">Nominate now</a>
         </div>
       </div>
     </section>
@@ -268,8 +291,21 @@
           </div>
         </div>
 
-        <div class="table-responsive ea-table-wrap ea-reveal mt-4">
-          <table class="table ea-table align-middle mb-0">
+        <div class="ea-table-tools ea-reveal mt-4">
+          <div class="ea-search-wrap">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" id="eaTableSearch" placeholder="Search nominations, categories, or organizations" aria-label="Search nominations" />
+          </div>
+          <div class="ea-filter-bar ea-table-filters" role="group" aria-label="Filter screening status">
+            <button type="button" class="ea-filter-btn ea-filter-active" data-table-filter="all">All</button>
+            <button type="button" class="ea-filter-btn" data-table-filter="eligible">Eligible</button>
+            <button type="button" class="ea-filter-btn" data-table-filter="pending">Pending</button>
+            <button type="button" class="ea-filter-btn" data-table-filter="review">Under review</button>
+          </div>
+        </div>
+
+        <div class="table-responsive ea-table-wrap ea-reveal mt-3">
+          <table class="table ea-table align-middle mb-0" id="eaScreeningTable">
             <thead>
               <tr>
                 <th>Nomination ID</th>
@@ -281,40 +317,53 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="ea-mono">NOM-24018</td>
+              <tr data-status="eligible" data-id="NOM-24018" data-org="Northwind Labs" data-cat="Innovation Excellence" data-loc="Seattle, WA" data-note="Submitted evidence includes pilot outcomes, partner letters, and a 12-month impact forecast. Screening complete; assigned to Innovation panel." data-reviews="3 of 5 reviews in">
+                <td class="ea-mono">
+                  NOM-24018
+                  <button type="button" class="ea-copy-btn" data-copy="NOM-24018" aria-label="Copy NOM-24018" title="Copy ID"><i class="bi bi-clipboard"></i></button>
+                </td>
                 <td>Innovation Excellence</td>
                 <td>Northwind Labs</td>
                 <td>92%</td>
                 <td><span class="ea-badge ea-badge-ok">Eligible</span></td>
-                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost ea-preview-btn">Preview</button></td>
               </tr>
-              <tr>
-                <td class="ea-mono">NOM-24041</td>
+              <tr data-status="pending" data-id="NOM-24041" data-org="Harbor Civic Trust" data-cat="Community Impact" data-loc="Chicago, IL" data-note="Evidence package pending reference verification. Completeness currently at 74%." data-reviews="Awaiting dossier">
+                <td class="ea-mono">
+                  NOM-24041
+                  <button type="button" class="ea-copy-btn" data-copy="NOM-24041" aria-label="Copy NOM-24041" title="Copy ID"><i class="bi bi-clipboard"></i></button>
+                </td>
                 <td>Community Impact</td>
                 <td>Harbor Civic Trust</td>
                 <td>74%</td>
                 <td><span class="ea-badge ea-badge-pending">Pending</span></td>
-                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost ea-preview-btn">Preview</button></td>
               </tr>
-              <tr>
-                <td class="ea-mono">NOM-24057</td>
+              <tr data-status="review" data-id="NOM-24057" data-org="Summit Health Group" data-cat="Leadership Award" data-loc="Boston, MA" data-note="Conflict check in progress. Leadership panel scoring has started for two of five reviewers." data-reviews="2 of 5 reviews in">
+                <td class="ea-mono">
+                  NOM-24057
+                  <button type="button" class="ea-copy-btn" data-copy="NOM-24057" aria-label="Copy NOM-24057" title="Copy ID"><i class="bi bi-clipboard"></i></button>
+                </td>
                 <td>Leadership Award</td>
                 <td>Summit Health Group</td>
                 <td>88%</td>
                 <td><span class="ea-badge ea-badge-review">Under review</span></td>
-                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost ea-preview-btn">Preview</button></td>
               </tr>
-              <tr>
-                <td class="ea-mono">NOM-24072</td>
+              <tr data-status="eligible" data-id="NOM-24072" data-org="Lumen Design Studio" data-cat="Emerging Talent" data-loc="Austin, TX" data-note="Full dossier verified. Ready for Emerging Talent panel deliberation." data-reviews="6 of 6 reviews in">
+                <td class="ea-mono">
+                  NOM-24072
+                  <button type="button" class="ea-copy-btn" data-copy="NOM-24072" aria-label="Copy NOM-24072" title="Copy ID"><i class="bi bi-clipboard"></i></button>
+                </td>
                 <td>Emerging Talent</td>
                 <td>Lumen Design Studio</td>
                 <td>100%</td>
                 <td><span class="ea-badge ea-badge-ok">Eligible</span></td>
-                <td><button type="button" class="btn btn-sm ea-btn-ghost" data-bs-toggle="modal" data-bs-target="#eaNomineeModal">Preview</button></td>
+                <td><button type="button" class="btn btn-sm ea-btn-ghost ea-preview-btn">Preview</button></td>
               </tr>
             </tbody>
           </table>
+          <p class="ea-empty-state d-none mb-0" id="eaTableEmpty">No nominations match your search or filters.</p>
         </div>
       </div>
     </section>
@@ -328,15 +377,23 @@
           <p class="ea-section-sub">Filter by status to explore active categories, deadlines, and submission volume.</p>
         </div>
 
-        <div class="ea-filter-bar ea-reveal" role="group" aria-label="Filter categories">
-          <button type="button" class="ea-filter-btn ea-filter-active" data-filter="all">All</button>
-          <button type="button" class="ea-filter-btn" data-filter="open">Open</button>
-          <button type="button" class="ea-filter-btn" data-filter="closing">Closing soon</button>
-          <button type="button" class="ea-filter-btn" data-filter="review">In review</button>
+        <div class="ea-category-tools ea-reveal">
+          <div class="ea-search-wrap">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" id="eaCategorySearch" placeholder="Search categories…" aria-label="Search categories" />
+          </div>
+          <div class="ea-filter-bar mb-0" role="group" aria-label="Filter categories">
+            <button type="button" class="ea-filter-btn ea-filter-active" data-filter="all">All</button>
+            <button type="button" class="ea-filter-btn" data-filter="open">Open</button>
+            <button type="button" class="ea-filter-btn" data-filter="closing">Closing soon</button>
+            <button type="button" class="ea-filter-btn" data-filter="review">In review</button>
+          </div>
         </div>
 
+        <p class="ea-result-count ea-reveal" id="eaCategoryCount" aria-live="polite">Showing 6 categories</p>
+
         <div class="row g-4" id="eaCategoryGrid">
-          <div class="col-md-6 col-xl-4" data-status="open">
+          <div class="col-md-6 col-xl-4" data-status="open" data-name="Innovation Excellence">
             <article class="ea-category-card ea-reveal">
               <div class="ea-category-top">
                 <span class="ea-badge ea-badge-ok">Open</span>
@@ -348,9 +405,10 @@
                 <span><i class="bi bi-calendar-event"></i> Closes Apr 30, 2026</span>
                 <span><i class="bi bi-people"></i> 12 reviewers</span>
               </div>
+              <button type="button" class="btn ea-btn-ghost btn-sm mt-3 ea-nominate-category" data-category="Innovation Excellence">Nominate in this category</button>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4" data-status="closing">
+          <div class="col-md-6 col-xl-4" data-status="closing" data-name="Community Impact">
             <article class="ea-category-card ea-reveal">
               <div class="ea-category-top">
                 <span class="ea-badge ea-badge-pending">Closing soon</span>
@@ -362,9 +420,10 @@
                 <span><i class="bi bi-calendar-event"></i> Closes Mar 18, 2026</span>
                 <span><i class="bi bi-people"></i> 9 reviewers</span>
               </div>
+              <button type="button" class="btn ea-btn-ghost btn-sm mt-3 ea-nominate-category" data-category="Community Impact">Nominate in this category</button>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4" data-status="open">
+          <div class="col-md-6 col-xl-4" data-status="open" data-name="Leadership Award">
             <article class="ea-category-card ea-reveal">
               <div class="ea-category-top">
                 <span class="ea-badge ea-badge-ok">Open</span>
@@ -376,9 +435,10 @@
                 <span><i class="bi bi-calendar-event"></i> Closes May 12, 2026</span>
                 <span><i class="bi bi-people"></i> 10 reviewers</span>
               </div>
+              <button type="button" class="btn ea-btn-ghost btn-sm mt-3 ea-nominate-category" data-category="Leadership Award">Nominate in this category</button>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4" data-status="review">
+          <div class="col-md-6 col-xl-4" data-status="review" data-name="Emerging Talent">
             <article class="ea-category-card ea-reveal">
               <div class="ea-category-top">
                 <span class="ea-badge ea-badge-review">In review</span>
@@ -390,9 +450,10 @@
                 <span><i class="bi bi-calendar-event"></i> Closed Feb 1, 2026</span>
                 <span><i class="bi bi-people"></i> 8 reviewers</span>
               </div>
+              <button type="button" class="btn ea-btn-ghost btn-sm mt-3" disabled>Submissions closed</button>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4" data-status="open">
+          <div class="col-md-6 col-xl-4" data-status="open" data-name="Sustainability Prize">
             <article class="ea-category-card ea-reveal">
               <div class="ea-category-top">
                 <span class="ea-badge ea-badge-ok">Open</span>
@@ -404,9 +465,10 @@
                 <span><i class="bi bi-calendar-event"></i> Closes Jun 2, 2026</span>
                 <span><i class="bi bi-people"></i> 11 reviewers</span>
               </div>
+              <button type="button" class="btn ea-btn-ghost btn-sm mt-3 ea-nominate-category" data-category="Sustainability Prize">Nominate in this category</button>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4" data-status="closing">
+          <div class="col-md-6 col-xl-4" data-status="closing" data-name="Public Service Fellowship">
             <article class="ea-category-card ea-reveal">
               <div class="ea-category-top">
                 <span class="ea-badge ea-badge-pending">Closing soon</span>
@@ -418,9 +480,11 @@
                 <span><i class="bi bi-calendar-event"></i> Closes Mar 25, 2026</span>
                 <span><i class="bi bi-people"></i> 7 reviewers</span>
               </div>
+              <button type="button" class="btn ea-btn-ghost btn-sm mt-3 ea-nominate-category" data-category="Public Service Fellowship">Nominate in this category</button>
             </article>
           </div>
         </div>
+        <p class="ea-empty-state d-none ea-reveal" id="eaCategoryEmpty">No categories match your search or filters.</p>
       </div>
     </section>
 
@@ -497,35 +561,59 @@
 
         <div class="row g-4">
           <div class="col-lg-7">
-            <div class="ea-scorecard ea-reveal">
+            <div class="ea-scorecard ea-reveal" id="eaScorecard">
               <div class="ea-scorecard-head">
-                <h3>Reviewer scorecard</h3>
+                <h3>Interactive reviewer scorecard</h3>
                 <span class="ea-pill">Weighted total · 100</span>
               </div>
-              <div class="ea-score-row">
-                <div class="ea-score-label"><span>Innovation</span><strong>22 / 25</strong></div>
-                <div class="progress ea-progress"><div class="progress-bar" data-progress="88"></div></div>
+              <p class="ea-score-hint">Adjust the demo sliders to preview how criterion scores roll up into a composite.</p>
+              <div class="ea-score-row" data-max="25" data-weight="0.25">
+                <div class="ea-score-label">
+                  <span>Innovation</span>
+                  <strong><span class="ea-score-val">22</span> / 25</strong>
+                </div>
+                <input class="form-range ea-score-range" type="range" min="0" max="25" value="22" aria-label="Innovation score" />
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="88" style="width:88%"></div></div>
               </div>
-              <div class="ea-score-row">
-                <div class="ea-score-label"><span>Impact</span><strong>18 / 20</strong></div>
-                <div class="progress ea-progress"><div class="progress-bar" data-progress="90"></div></div>
+              <div class="ea-score-row" data-max="20" data-weight="0.20">
+                <div class="ea-score-label">
+                  <span>Impact</span>
+                  <strong><span class="ea-score-val">18</span> / 20</strong>
+                </div>
+                <input class="form-range ea-score-range" type="range" min="0" max="20" value="18" aria-label="Impact score" />
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="90" style="width:90%"></div></div>
               </div>
-              <div class="ea-score-row">
-                <div class="ea-score-label"><span>Leadership</span><strong>16 / 20</strong></div>
-                <div class="progress ea-progress"><div class="progress-bar" data-progress="80"></div></div>
+              <div class="ea-score-row" data-max="20" data-weight="0.20">
+                <div class="ea-score-label">
+                  <span>Leadership</span>
+                  <strong><span class="ea-score-val">16</span> / 20</strong>
+                </div>
+                <input class="form-range ea-score-range" type="range" min="0" max="20" value="16" aria-label="Leadership score" />
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="80" style="width:80%"></div></div>
               </div>
-              <div class="ea-score-row">
-                <div class="ea-score-label"><span>Execution</span><strong>17 / 20</strong></div>
-                <div class="progress ea-progress"><div class="progress-bar" data-progress="85"></div></div>
+              <div class="ea-score-row" data-max="20" data-weight="0.20">
+                <div class="ea-score-label">
+                  <span>Execution</span>
+                  <strong><span class="ea-score-val">17</span> / 20</strong>
+                </div>
+                <input class="form-range ea-score-range" type="range" min="0" max="20" value="17" aria-label="Execution score" />
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="85" style="width:85%"></div></div>
               </div>
-              <div class="ea-score-row">
-                <div class="ea-score-label"><span>Community contribution</span><strong>13 / 15</strong></div>
-                <div class="progress ea-progress"><div class="progress-bar" data-progress="87"></div></div>
+              <div class="ea-score-row" data-max="15" data-weight="0.15">
+                <div class="ea-score-label">
+                  <span>Community contribution</span>
+                  <strong><span class="ea-score-val">13</span> / 15</strong>
+                </div>
+                <input class="form-range ea-score-range" type="range" min="0" max="15" value="13" aria-label="Community contribution score" />
+                <div class="progress ea-progress"><div class="progress-bar" data-progress="87" style="width:87%"></div></div>
               </div>
               <div class="ea-score-total">
                 <span>Composite score</span>
-                <strong>86.0</strong>
+                <strong id="eaCompositeScore">86.0</strong>
               </div>
+              <button type="button" class="btn ea-btn-ghost btn-sm mt-3" id="eaResetScores">
+                <i class="bi bi-arrow-counterclockwise me-1"></i>Reset demo scores
+              </button>
             </div>
           </div>
           <div class="col-lg-5">
@@ -693,48 +781,125 @@
             </ul>
           </div>
           <div class="col-lg-7">
-            <form class="ea-form-card ea-reveal" action="#" method="post">
+            <form class="ea-form-card ea-reveal" id="eaNominationForm" action="#" method="post" novalidate>
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label class="form-label" for="eaNominee">Nominee / organization</label>
-                  <input class="form-control" id="eaNominee" type="text" placeholder="Organization or individual name" />
+                  <label class="form-label" for="eaNominee">Nominee / organization <span class="ea-req">*</span></label>
+                  <input class="form-control" id="eaNominee" name="nominee" type="text" required placeholder="Organization or individual name" autocomplete="organization" />
+                  <div class="invalid-feedback">Please enter a nominee or organization name.</div>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label" for="eaCategory">Award category</label>
-                  <select class="form-select" id="eaCategory">
-                    <option selected disabled>Select a category</option>
+                  <label class="form-label" for="eaCategory">Award category <span class="ea-req">*</span></label>
+                  <select class="form-select" id="eaCategory" name="category" required>
+                    <option value="" selected disabled>Select a category</option>
                     <option>Innovation Excellence</option>
                     <option>Community Impact</option>
                     <option>Leadership Award</option>
                     <option>Emerging Talent</option>
                     <option>Sustainability Prize</option>
+                    <option>Public Service Fellowship</option>
                   </select>
+                  <div class="invalid-feedback">Please choose an award category.</div>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label" for="eaNominator">Nominator name</label>
-                  <input class="form-control" id="eaNominator" type="text" placeholder="Your full name" />
+                  <label class="form-label" for="eaNominator">Nominator name <span class="ea-req">*</span></label>
+                  <input class="form-control" id="eaNominator" name="nominator" type="text" required placeholder="Your full name" autocomplete="name" />
+                  <div class="invalid-feedback">Please enter your name.</div>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label" for="eaEmail">Contact email</label>
-                  <input class="form-control" id="eaEmail" type="email" placeholder="you@organization.org" />
+                  <label class="form-label" for="eaEmail">Contact email <span class="ea-req">*</span></label>
+                  <input class="form-control" id="eaEmail" name="email" type="email" required placeholder="you@organization.org" autocomplete="email" />
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="col-12">
-                  <label class="form-label" for="eaSummary">Impact summary</label>
-                  <textarea class="form-control" id="eaSummary" rows="4" placeholder="Describe outcomes, evidence, and why this nomination matters…"></textarea>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label class="form-label mb-0" for="eaSummary">Impact summary <span class="ea-req">*</span></label>
+                    <span class="ea-char-count" id="eaCharCount" aria-live="polite">0 / 600</span>
+                  </div>
+                  <textarea class="form-control mt-2" id="eaSummary" name="summary" rows="4" maxlength="600" required placeholder="Describe outcomes, evidence, and why this nomination matters…"></textarea>
+                  <div class="invalid-feedback">Please add a brief impact summary.</div>
                 </div>
                 <div class="col-12">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="eaConfirm" />
+                    <input class="form-check-input" type="checkbox" id="eaConfirm" name="confirm" required />
                     <label class="form-check-label" for="eaConfirm">I confirm the information is accurate and I have permission to nominate.</label>
+                    <div class="invalid-feedback">Confirmation is required to submit.</div>
                   </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 d-flex flex-wrap gap-2">
                   <button type="submit" class="btn ea-btn-primary btn-lg">
                     <i class="bi bi-send me-2"></i>Submit nomination
                   </button>
+                  <button type="button" class="btn ea-btn-outline btn-lg" id="eaSaveDraft">
+                    <i class="bi bi-floppy me-2"></i>Save draft
+                  </button>
+                </div>
+                <div class="col-12">
+                  <p class="ea-form-status mb-0" id="eaFormStatus" role="status" aria-live="polite"></p>
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="ea-section ea-section-soft" id="faq">
+      <div class="container">
+        <div class="ea-section-head ea-reveal">
+          <p class="ea-eyebrow">Help center</p>
+          <h2 class="ea-section-title">Frequently asked questions</h2>
+          <p class="ea-section-sub">Quick answers for nominators, reviewers, and program organizers.</p>
+        </div>
+        <div class="accordion ea-accordion ea-reveal" id="eaFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#eaFaq1" aria-expanded="true" aria-controls="eaFaq1">
+                Who can submit a nomination?
+              </button>
+            </h3>
+            <div id="eaFaq1" class="accordion-collapse collapse show" data-bs-parent="#eaFaq">
+              <div class="accordion-body">
+                Individuals, peers, and organizations may nominate eligible candidates. Self-nominations are allowed in most categories unless noted on the category card.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eaFaq2" aria-expanded="false" aria-controls="eaFaq2">
+                How does blind review work?
+              </button>
+            </h3>
+            <div id="eaFaq2" class="accordion-collapse collapse" data-bs-parent="#eaFaq">
+              <div class="accordion-body">
+                Identifying details can be masked during first-pass scoring. Reviewers score against the published rubric and disclose conflicts before dossiers are assigned.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eaFaq3" aria-expanded="false" aria-controls="eaFaq3">
+                Can I save a draft nomination?
+              </button>
+            </h3>
+            <div id="eaFaq3" class="accordion-collapse collapse" data-bs-parent="#eaFaq">
+              <div class="accordion-body">
+                Yes. Use <strong>Save draft</strong> on the nomination form to store your progress in this browser. Drafts stay local until you submit.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eaFaq4" aria-expanded="false" aria-controls="eaFaq4">
+                When are winners announced?
+              </button>
+            </h3>
+            <div id="eaFaq4" class="accordion-collapse collapse" data-bs-parent="#eaFaq">
+              <div class="accordion-body">
+                Finalists are published after panel deliberation. Winners are typically announced within two weeks of the final selection meeting for each category.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -828,13 +993,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="ea-mono mb-2">NOM-24018</p>
-          <h3 class="h5">Northwind Labs</h3>
-          <p class="text-secondary">Innovation Excellence · Seattle, WA</p>
-          <p>Submitted evidence includes pilot outcomes, partner letters, and a 12-month impact forecast. Screening complete; assigned to Innovation panel.</p>
+          <p class="ea-mono mb-2" id="eaModalId">NOM-24018</p>
+          <h3 class="h5" id="eaModalOrg">Northwind Labs</h3>
+          <p class="text-secondary" id="eaModalMeta">Innovation Excellence · Seattle, WA</p>
+          <p id="eaModalNote">Submitted evidence includes pilot outcomes, partner letters, and a 12-month impact forecast. Screening complete; assigned to Innovation panel.</p>
           <div class="d-flex flex-wrap gap-2">
-            <span class="ea-badge ea-badge-ok">Eligible</span>
-            <span class="ea-badge ea-badge-review">3 of 5 reviews in</span>
+            <span class="ea-badge ea-badge-ok" id="eaModalStatus">Eligible</span>
+            <span class="ea-badge ea-badge-review" id="eaModalReviews">3 of 5 reviews in</span>
           </div>
         </div>
         <div class="modal-footer">
@@ -844,6 +1009,22 @@
       </div>
     </div>
   </div>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="eaToast" class="toast ea-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill me-2 text-success"></i>
+        <strong class="me-auto" id="eaToastTitle">Elevate Awards</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="eaToastBody">Action completed.</div>
+    </div>
+  </div>
+
+  <button type="button" class="ea-back-top" id="eaBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
