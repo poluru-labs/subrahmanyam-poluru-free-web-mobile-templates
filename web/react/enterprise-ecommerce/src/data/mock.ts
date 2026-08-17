@@ -245,6 +245,175 @@ export const overviewStats = [
   },
 ];
 
+export const overviewStatsByPeriod: Record<
+  'today' | '7d' | '30d',
+  typeof overviewStats
+> = {
+  today: [
+    {
+      label: 'Gross sales',
+      value: '$18.6k',
+      trend: 'up',
+      trendValue: '+12%',
+      hint: 'Since midnight',
+    },
+    {
+      label: 'Orders',
+      value: '214',
+      trend: 'up',
+      trendValue: '+9%',
+      hint: 'Since midnight',
+    },
+    {
+      label: 'Avg. order value',
+      value: '$87.10',
+      trend: 'up',
+      trendValue: '+1.2%',
+      hint: 'Today',
+    },
+    {
+      label: 'Conversion',
+      value: '3.8%',
+      trend: 'up',
+      trendValue: '+0.3%',
+      hint: 'Today',
+    },
+  ],
+  '7d': overviewStats,
+  '30d': [
+    {
+      label: 'Gross sales',
+      value: '$512.9k',
+      trend: 'up',
+      trendValue: '+6.4%',
+      hint: 'Last 30 days',
+    },
+    {
+      label: 'Orders',
+      value: '5,920',
+      trend: 'up',
+      trendValue: '+4.1%',
+      hint: 'Last 30 days',
+    },
+    {
+      label: 'Avg. order value',
+      value: '$86.60',
+      trend: 'flat',
+      trendValue: '0.2%',
+      hint: 'Last 30 days',
+    },
+    {
+      label: 'Conversion',
+      value: '3.2%',
+      trend: 'down',
+      trendValue: '-0.1%',
+      hint: 'Last 30 days',
+    },
+  ],
+};
+
+export type ChannelMixRow = {
+  channel: 'Web' | 'Mobile' | 'Marketplace' | 'Social' | 'Retail POS';
+  share: number;
+  revenue: number;
+  orders: number;
+  aov: number;
+  conversion: number;
+  sessions: number;
+  trend: 'up' | 'down' | 'flat';
+  trendValue: string;
+  topRegion: string;
+  refundRate: number;
+};
+
+export const channelMix: ChannelMixRow[] = [
+  {
+    channel: 'Web',
+    share: 42,
+    revenue: 61800,
+    orders: 712,
+    aov: 86.8,
+    conversion: 3.9,
+    sessions: 18240,
+    trend: 'up',
+    trendValue: '+6.2%',
+    topRegion: 'US-West',
+    refundRate: 2.1,
+  },
+  {
+    channel: 'Mobile',
+    share: 28,
+    revenue: 43600,
+    orders: 518,
+    aov: 84.2,
+    conversion: 4.4,
+    sessions: 11780,
+    trend: 'up',
+    trendValue: '+9.1%',
+    topRegion: 'US-East',
+    refundRate: 1.8,
+  },
+  {
+    channel: 'Marketplace',
+    share: 16,
+    revenue: 23000,
+    orders: 296,
+    aov: 77.7,
+    conversion: 2.6,
+    sessions: 11400,
+    trend: 'flat',
+    trendValue: '+0.4%',
+    topRegion: 'US-Central',
+    refundRate: 3.4,
+  },
+  {
+    channel: 'Social',
+    share: 9,
+    revenue: 12840,
+    orders: 164,
+    aov: 78.3,
+    conversion: 2.1,
+    sessions: 7810,
+    trend: 'up',
+    trendValue: '+14%',
+    topRegion: 'US-South',
+    refundRate: 2.8,
+  },
+  {
+    channel: 'Retail POS',
+    share: 5,
+    revenue: 7120,
+    orders: 88,
+    aov: 80.9,
+    conversion: 100,
+    sessions: 88,
+    trend: 'down',
+    trendValue: '-3.2%',
+    topRegion: 'US-West',
+    refundRate: 1.2,
+  },
+];
+
+export const channelMixSummary = {
+  totalRevenue: 148360,
+  totalOrders: 1778,
+  blendedAov: 83.4,
+  topChannel: 'Web',
+};
+
+export const categorySales = [
+  { category: 'Apparel', share: 36, units: 842 },
+  { category: 'Electronics', share: 29, units: 318 },
+  { category: 'Home', share: 21, units: 256 },
+  { category: 'Accessories', share: 14, units: 190 },
+];
+
+export const dailyGoals = [
+  { label: 'Sales target', value: 78, target: '$24k' },
+  { label: 'Orders target', value: 64, target: '280' },
+  { label: 'Fulfillment SLA', value: 91, target: '95%' },
+];
+
 export type SearchResult = {
   id: string;
   label: string;

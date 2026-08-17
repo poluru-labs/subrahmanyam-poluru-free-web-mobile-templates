@@ -100,7 +100,7 @@ export function StoreLayout({ children }: StoreLayoutProps) {
             PC
           </span>
           <div className="store__brand-text">
-            <strong>Poluru Commerce</strong>
+            <strong>Enterprise Commerce</strong>
             <span>Storefront ops</span>
           </div>
         </div>

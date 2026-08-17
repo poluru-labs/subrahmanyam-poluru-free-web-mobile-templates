@@ -32,7 +32,7 @@ export function SettingsPage() {
           }
         >
           <div className="form-stack">
-            <Input label="Store name" defaultValue="Poluru Commerce" />
+            <Input label="Store name" defaultValue="Enterprise Commerce" />
             <Select
               label="Primary market"
               defaultValue="us"

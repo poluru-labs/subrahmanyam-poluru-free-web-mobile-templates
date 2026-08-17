@@ -1,4 +1,4 @@
-# Poluru Commerce — Enterprise Ecommerce
+# Enterprise Commerce — Enterprise Ecommerce
 
 Ecommerce operations console built with **Vite**, **React**, **React Router**, and **SCSS**, using [`@poluru-labs/enterprise-design-system-react`](https://www.npmjs.com/package/@poluru-labs/enterprise-design-system-react).
 
