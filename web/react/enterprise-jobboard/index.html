@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jobsdora — enterprise job portal for hiring teams and career-driven professionals."
+    />
+    <title>Jobsdora — Enterprise Job Portal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg site-nav sticky-top" id="siteNav">
+      <div class="container">
+        <a class="navbar-brand brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">PT</span>
+          <span>
+            <strong>Jobsdora</strong>
+            <small>Enterprise hiring</small>
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#primaryNav"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="primaryNav">
+          <ul class="navbar-nav mx-lg-auto gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#jobs">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="#employers">Employers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+            <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
+          </ul>
+          <div class="d-flex flex-wrap gap-2 mt-3 mt-lg-0">
+            <a class="btn btn-ghost" href="#audience">For candidates</a>
+            <a class="btn btn-brand" href="#recruiter-cta">Post a role</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main">
+      <!-- Hero -->
+      <header class="hero" id="top">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Trusted by enterprise recruiting teams</p>
+          <h1>Hire exceptional talent with confidence</h1>
+          <p class="hero-lead">
+            Jobsdora connects hiring leaders with vetted professionals across
+            engineering, product, design, and operations — faster and with less noise.
+          </p>
+
+          <form class="search-panel" id="jobSearchForm" role="search" aria-label="Job search">
+            <div class="row g-2 align-items-stretch">
+              <div class="col-lg-4">
+                <label class="visually-hidden" for="keyword">Keywords</label>
+                <div class="input-shell">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <input
+                    id="keyword"
+                    name="keyword"
+                    type="search"
+                    placeholder="Role, skill, or keyword"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <label class="visually-hidden" for="location">Location</label>
+                <div class="input-shell">
+                  <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                  <select id="location" name="location">
+                    <option value="">Any location</option>
+                    <option>Remote</option>
+                    <option>Austin, TX</option>
+                    <option>Chicago, IL</option>
+                    <option>New York, NY</option>
+                    <option>San Francisco, CA</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <label class="visually-hidden" for="department">Department</label>
+                <div class="input-shell">
+                  <i class="bi bi-briefcase" aria-hidden="true"></i>
+                  <select id="department" name="department">
+                    <option value="">Any department</option>
+                    <option>Engineering</option>
+                    <option>Product</option>
+                    <option>Design</option>
+                    <option>Data</option>
+                    <option>People Ops</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <button class="btn btn-brand w-100 h-100 search-submit" type="submit">
+                  Search
+                </button>
+              </div>
+            </div>
+            <div class="search-chips" aria-label="Popular searches">
+              <button type="button" class="chip" data-keyword="Staff Engineer">Staff Engineer</button>
+              <button type="button" class="chip" data-keyword="Product Manager">Product Manager</button>
+              <button type="button" class="chip" data-keyword="UX Designer">UX Designer</button>
+              <button type="button" class="chip" data-keyword="Data Scientist">Data Scientist</button>
+            </div>
+          </form>
+
+          <div class="hero-actions">
+            <a class="btn btn-brand btn-lg" href="#jobs">Browse open roles</a>
+            <a class="btn btn-light-soft btn-lg" href="#recruiter-cta">Talk to recruiting</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Audience tabs -->
+      <section class="section section-soft" id="audience">
+        <div class="container">
+          <div class="section-head text-center mx-auto">
+            <p class="eyebrow">Built for both sides of hiring</p>
+            <h2>One platform. Two clear journeys.</h2>
+          </div>
+
+          <div class="audience-tabs" role="tablist" aria-label="Audience">
+            <button
+              class="audience-tab is-active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-candidates"
+              id="tab-candidates"
+              data-tab="candidates"
+              type="button"
+            >
+              Candidates
+            </button>
+            <button
+              class="audience-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-employers"
+              id="tab-employers"
+              data-tab="employers"
+              type="button"
+            >
+              Employers
+            </button>
+          </div>
+
+          <div
+            class="audience-panel is-active"
+            id="panel-candidates"
+            role="tabpanel"
+            aria-labelledby="tab-candidates"
+          >
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                <h3>Land roles that match your trajectory</h3>
+                <p>
+                  Curated enterprise openings, transparent compensation bands, and
+                  recruiter responses you can actually track.
+                </p>
+                <ul class="check-list">
+                  <li>Role-fit scoring against your profile</li>
+                  <li>Interview timelines shared upfront</li>
+                  <li>Direct messaging with hiring partners</li>
+                </ul>
+                <a class="btn btn-brand" href="#jobs">Explore jobs</a>
+              </div>
+              <div class="col-lg-6">
+                <div class="progress-cards">
+                  <article class="progress-card">
+                    <div class="progress-card__top">
+                      <strong>Application: Staff Frontend</strong>
+                      <span class="badge-soft">Interview</span>
+                    </div>
+                    <div class="progress-track" aria-hidden="true">
+                      <span style="--p: 65%"></span>
+                    </div>
+                    <small>Next: system design with Poluru Labs · Thu 2:00 PM</small>
+                  </article>
+                  <article class="progress-card">
+                    <div class="progress-card__top">
+                      <strong>Application: Product Ops Lead</strong>
+                      <span class="badge-soft badge-soft--muted">Screening</span>
+                    </div>
+                    <div class="progress-track" aria-hidden="true">
+                      <span style="--p: 35%"></span>
+                    </div>
+                    <small>Recruiter review in progress · avg. 2 days</small>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="audience-panel"
+            id="panel-employers"
+            role="tabpanel"
+            aria-labelledby="tab-employers"
+            hidden
+          >
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-6">
+                <h3>Fill critical seats without the noise</h3>
+                <p>
+                  Structured pipelines, scorecards, and shortlists calibrated for
+                  enterprise hiring velocity and compliance.
+                </p>
+                <ul class="check-list">
+                  <li>ATS-friendly exports and approvals</li>
+                  <li>Diversity-aware sourcing insights</li>
+                  <li>Dedicated talent partner support</li>
+                </ul>
+                <a class="btn btn-brand" href="#recruiter-cta">Start hiring</a>
+              </div>
+              <div class="col-lg-6">
+                <div class="employer-snapshot card-surface">
+                  <div class="d-flex justify-content-between align-items-start gap-3">
+                    <div>
+                      <p class="eyebrow mb-1">Pipeline health</p>
+                      <h4 class="mb-0">North America · Q3</h4>
+                    </div>
+                    <span class="badge-soft">Live</span>
+                  </div>
+                  <div class="stat-mini-grid mt-4">
+                    <div>
+                      <strong>128</strong>
+                      <span>Active reqs</span>
+                    </div>
+                    <div>
+                      <strong>41%</strong>
+                      <span>Offer accept</span>
+                    </div>
+                    <div>
+                      <strong>18d</strong>
+                      <span>Time-to-hire</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured jobs -->
+      <section class="section" id="jobs">
+        <div class="container">
+          <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3">
+            <div>
+              <p class="eyebrow">Featured opportunities</p>
+              <h2>Open roles across the Poluru network</h2>
+            </div>
+            <div class="filter-bar" role="group" aria-label="Job filters">
+              <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+              <button class="filter-btn" type="button" data-filter="Engineering">Engineering</button>
+              <button class="filter-btn" type="button" data-filter="Product">Product</button>
+              <button class="filter-btn" type="button" data-filter="Design">Design</button>
+              <button class="filter-btn" type="button" data-filter="Data">Data</button>
+            </div>
+          </div>
+
+          <div class="row g-4" id="jobGrid">
+            <!-- filled by script.js -->
+          </div>
+
+          <p class="search-feedback" id="searchFeedback" hidden></p>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="section section-soft" id="categories">
+        <div class="container">
+          <div class="section-head text-center mx-auto">
+            <p class="eyebrow">Browse by focus</p>
+            <h2>Job categories built for enterprise teams</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+              <article class="category-card card-surface h-100">
+                <i class="bi bi-cpu" aria-hidden="true"></i>
+                <h3>Engineering</h3>
+                <p>Platform, frontend, backend, and SRE roles.</p>
+                <span class="meta">312 openings</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="category-card card-surface h-100">
+                <i class="bi bi-kanban" aria-hidden="true"></i>
+                <h3>Product</h3>
+                <p>PM, ops, growth, and strategy leadership.</p>
+                <span class="meta">148 openings</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="category-card card-surface h-100">
+                <i class="bi bi-palette" aria-hidden="true"></i>
+                <h3>Design</h3>
+                <p>Product design, research, and design systems.</p>
+                <span class="meta">96 openings</span>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="category-card card-surface h-100">
+                <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+                <h3>Data & AI</h3>
+                <p>Analytics, ML engineering, and data platforms.</p>
+                <span class="meta">174 openings</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Employers -->
+      <section class="section" id="employers">
+        <div class="container">
+          <div class="section-head text-center mx-auto">
+            <p class="eyebrow">Employer network</p>
+            <h2>Companies hiring through Jobsdora</h2>
+          </div>
+          <div class="logo-rail" aria-label="Featured employers">
+            <div class="logo-pill">Northwind Systems</div>
+            <div class="logo-pill">Atlas Health</div>
+            <div class="logo-pill">Beacon Finance</div>
+            <div class="logo-pill">Orbit Retail</div>
+            <div class="logo-pill">Lumen Cloud</div>
+            <div class="logo-pill">Harbor Logistics</div>
+            <div class="logo-pill">Poluru Labs</div>
+          </div>
+
+          <div class="row g-4 mt-2">
+            <div class="col-md-4">
+              <article class="employer-card card-surface h-100">
+                <div class="employer-card__mark">NW</div>
+                <h3>Northwind Systems</h3>
+                <p>Enterprise platform modernization across cloud and security.</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge-soft">24 roles</span>
+                  <span class="badge-soft badge-soft--muted">Hybrid</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="employer-card card-surface h-100">
+                <div class="employer-card__mark">AH</div>
+                <h3>Atlas Health</h3>
+                <p>Clinical product teams scaling digital care experiences.</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge-soft">18 roles</span>
+                  <span class="badge-soft badge-soft--muted">Remote-friendly</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="employer-card card-surface h-100">
+                <div class="employer-card__mark">BF</div>
+                <h3>Beacon Finance</h3>
+                <p>Risk, data, and product hiring for regulated markets.</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge-soft">31 roles</span>
+                  <span class="badge-soft badge-soft--muted">On-site / Hybrid</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="section section-soft" id="benefits">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+              <p class="eyebrow">Candidate benefits</p>
+              <h2>Support that stays with you through every stage</h2>
+              <p class="mb-0">
+                From first intro to signed offer, Jobsdora keeps expectations
+                clear and momentum high.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <article class="benefit-card card-surface h-100">
+                    <i class="bi bi-shield-check" aria-hidden="true"></i>
+                    <h3>Verified employers</h3>
+                    <p>Every listing is reviewed for legitimacy and role clarity.</p>
+                  </article>
+                </div>
+                <div class="col-md-6">
+                  <article class="benefit-card card-surface h-100">
+                    <i class="bi bi-cash-coin" aria-hidden="true"></i>
+                    <h3>Pay transparency</h3>
+                    <p>Compensation ranges published on featured enterprise roles.</p>
+                  </article>
+                </div>
+                <div class="col-md-6">
+                  <article class="benefit-card card-surface h-100">
+                    <i class="bi bi-people" aria-hidden="true"></i>
+                    <h3>Recruiter advocacy</h3>
+                    <p>Human follow-ups when applications stall in the pipeline.</p>
+                  </article>
+                </div>
+                <div class="col-md-6">
+                  <article class="benefit-card card-surface h-100">
+                    <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+                    <h3>Faster cycles</h3>
+                    <p>Structured scorecards reduce interview roundabout.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-head text-center mx-auto">
+            <p class="eyebrow">How it works</p>
+            <h2>A clear path from discovery to offer</h2>
+          </div>
+          <div class="row g-4 process-row">
+            <div class="col-md-6 col-xl-3">
+              <article class="step-card card-surface h-100">
+                <span class="step-num">01</span>
+                <h3>Create your profile</h3>
+                <p>Share skills, preferences, and target compensation bands.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="step-card card-surface h-100">
+                <span class="step-num">02</span>
+                <h3>Match to roles</h3>
+                <p>Browse curated openings or get invited by hiring partners.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="step-card card-surface h-100">
+                <span class="step-num">03</span>
+                <h3>Interview with clarity</h3>
+                <p>Track stages, feedback windows, and next-step owners.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="step-card card-surface h-100">
+                <span class="step-num">04</span>
+                <h3>Accept with confidence</h3>
+                <p>Compare offers, benefits, and start-date logistics in one place.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="section section-brand" id="insights">
+        <div class="container">
+          <div class="section-head text-center mx-auto light">
+            <p class="eyebrow">Platform insights</p>
+            <h2>Hiring velocity that leadership can trust</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-6 col-lg-3">
+              <article class="stat-card">
+                <strong class="counter" data-target="2480">0</strong>
+                <span>Open roles</span>
+              </article>
+            </div>
+            <div class="col-6 col-lg-3">
+              <article class="stat-card">
+                <strong class="counter" data-target="18640">0</strong>
+                <span>Active applicants</span>
+              </article>
+            </div>
+            <div class="col-6 col-lg-3">
+              <article class="stat-card">
+                <strong class="counter" data-target="3120">0</strong>
+                <span>Placements YTD</span>
+              </article>
+            </div>
+            <div class="col-6 col-lg-3">
+              <article class="stat-card">
+                <strong><span class="counter" data-target="18">0</span>d</strong>
+                <span>Avg. hiring velocity</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section" id="stories">
+        <div class="container">
+          <div class="section-head text-center mx-auto">
+            <p class="eyebrow">Success stories</p>
+            <h2>Trusted by candidates and talent leaders</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <figure class="quote-card card-surface h-100">
+                <blockquote>
+                  “I went from first intro to signed offer in three weeks — with
+                  clear feedback after every round.”
+                </blockquote>
+                <figcaption>
+                  <strong>Sravani Poluru</strong>
+                  <span>Staff Engineer · Atlas Health</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4">
+              <figure class="quote-card card-surface h-100">
+                <blockquote>
+                  “Jobsdora shortened our time-to-hire without lowering the bar.
+                  Shortlists arrived interview-ready.”
+                </blockquote>
+                <figcaption>
+                  <strong>Subrahmanyam Poluru</strong>
+                  <span>Head of Talent · Northwind Systems</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-4">
+              <figure class="quote-card card-surface h-100">
+                <blockquote>
+                  “Compensation transparency and recruiter follow-through made the
+                  process feel premium, not transactional.”
+                </blockquote>
+                <figcaption>
+                  <strong>Lakshmi Poluru</strong>
+                  <span>Product Design Lead · Lumen Cloud</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recruiter CTA -->
+      <section class="section section-cta" id="recruiter-cta">
+        <div class="container">
+          <div class="cta-panel">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-7">
+                <p class="eyebrow">For recruiting teams</p>
+                <h2>Ready to staff your next critical role?</h2>
+                <p>
+                  Partner with Jobsdora for curated pipelines, structured
+                  interviews, and placements that stick.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn btn-brand btn-lg" href="mailto:mail.polurus@gmail.com">
+                    Book a hiring consult
+                  </a>
+                  <a class="btn btn-light-soft btn-lg" href="#jobs">Preview the marketplace</a>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <form class="cta-form card-surface" id="leadForm">
+                  <h3 class="h5 mb-3">Request a talent brief</h3>
+                  <div class="mb-3">
+                    <label class="form-label" for="leadName">Full name</label>
+                    <input class="form-control" id="leadName" name="name" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="leadCompany">Company</label>
+                    <input class="form-control" id="leadCompany" name="company" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="leadEmail">Work email</label>
+                    <input class="form-control" id="leadEmail" type="email" name="email" required />
+                  </div>
+                  <button class="btn btn-brand w-100" type="submit">Submit request</button>
+                  <p class="form-note" id="leadNote" role="status" aria-live="polite"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="brand brand--footer" href="#top">
+              <span class="brand-mark" aria-hidden="true">PT</span>
+              <span>
+                <strong>Jobsdora</strong>
+                <small>Enterprise hiring</small>
+              </span>
+            </a>
+            <p class="footer-lead">
+              A modern talent marketplace for enterprise recruiting teams and
+              ambitious professionals.
+            </p>
+            <div class="socials" aria-label="Social links">
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <h3 class="footer-title">Explore</h3>
+            <ul class="footer-links">
+              <li><a href="#jobs">Jobs</a></li>
+              <li><a href="#categories">Categories</a></li>
+              <li><a href="#employers">Employers</a></li>
+              <li><a href="#stories">Stories</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <h3 class="footer-title">Company</h3>
+            <ul class="footer-links">
+              <li><a href="#process">How it works</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#recruiter-cta">For recruiters</a></li>
+              <li><a href="#insights">Insights</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:mail.polurus@gmail.com">
+                  <i class="bi bi-envelope" aria-hidden="true"></i>
+                  mail.polurus@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+15550102840">
+                  <i class="bi bi-telephone" aria-hidden="true"></i>
+                  +1 (555) 010-2840
+                </a>
+              </li>
+              <li>
+                <span>
+                  <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                  Austin · Chicago · Remote
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Jobsdora. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

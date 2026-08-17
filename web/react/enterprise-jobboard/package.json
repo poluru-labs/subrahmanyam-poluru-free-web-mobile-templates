@@ -1,29 +1,18 @@
 {
-  "name": "enterprise-ecommerce",
+  "name": "enterprise-jobboard",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Jobsdora — Enterprise Job Portal template",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@poluru-labs/enterprise-design-system-react": "^1.0.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "react-router-dom": "^7.18.2",
-    "sass": "^1.102.0"
+    "@poluru-labs/enterprise-design-system-react": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^24.13.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@types/react-router-dom": "^5.3.3",
-    "@vitejs/plugin-react": "^6.0.4",
-    "oxlint": "^1.75.0",
-    "typescript": "~6.0.2",
     "vite": "^8.2.0"
   }
 }
