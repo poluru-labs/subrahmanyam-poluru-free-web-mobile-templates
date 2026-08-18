@@ -926,4 +926,211 @@ a:hover {
   .rh-hero-actions .btn {
     width: 100%;
   }
+
+  .rh-pub-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rh-year-select {
+    max-width: none;
+  }
+}
+
+/* UX enhancements --------------------------------------------------------- */
+.rh-skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 2000;
+  background: var(--rh-primary, #3B0270);
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 0.65rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.rh-skip-link:focus {
+  top: 1rem;
+  color: #fff;
+  outline: 2px solid var(--rh-secondary, #F8DE22);
+  outline-offset: 2px;
+}
+
+.rh-navbar-scrolled {
+  box-shadow: 0 0.5rem 1.5rem rgba(59, 2, 112, 0.1);
+}
+
+.rh-pub-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.rh-search-wrap {
+  position: relative;
+  flex: 1 1 14rem;
+  max-width: 24rem;
+}
+
+.rh-search-wrap i {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.rh-search-wrap .form-control {
+  padding-left: 2.35rem;
+  border-radius: 0.65rem;
+  min-height: 2.55rem;
+  border-color: var(--rh-border, #e2e8f0);
+}
+
+.rh-search-wrap .form-control:focus,
+.rh-year-select:focus {
+  border-color: rgba(59, 2, 112, 0.4);
+  box-shadow: 0 0 0 3px rgba(59, 2, 112, 0.12);
+}
+
+.rh-year-select {
+  max-width: 10rem;
+  min-height: 2.55rem;
+  border-radius: 0.65rem;
+  border-color: var(--rh-border, #e2e8f0);
+}
+
+.rh-result-count {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.rh-empty-state {
+  text-align: center;
+  color: #64748b;
+  font-weight: 600;
+  padding: 1.25rem 0.5rem;
+}
+
+.rh-pub-card.is-hidden,
+.rh-timeline > li.is-hidden {
+  display: none !important;
+}
+
+.rh-cite-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 0;
+  background: transparent;
+  color: var(--rh-primary, #3B0270);
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0;
+}
+
+.rh-cite-btn:hover {
+  color: #5b21b6;
+  text-decoration: underline;
+}
+
+.rh-accordion {
+  max-width: 44rem;
+}
+
+.rh-accordion .accordion-item {
+  border: 1px solid var(--rh-border, #e2e8f0);
+  border-radius: 0.85rem !important;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.rh-accordion .accordion-button {
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.rh-accordion .accordion-button:not(.collapsed) {
+  background: #F7F4FB;
+  color: var(--rh-primary, #3B0270);
+}
+
+.rh-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.rh-copy-email {
+  margin-left: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.rh-copy-email:hover {
+  background: var(--rh-secondary, #F8DE22);
+  border-color: var(--rh-secondary, #F8DE22);
+  color: var(--rh-primary, #3B0270);
+}
+
+.rh-btn-on-dark {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.rh-btn-on-dark:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.rh-char-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.rh-toast {
+  border: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 1.75rem rgba(15, 23, 42, 0.14);
+}
+
+.rh-back-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--rh-primary, #3B0270);
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(59, 2, 112, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.5rem);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1055;
+}
+
+.rh-back-top-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.rh-back-top:hover {
+  background: #4c1d95;
 }

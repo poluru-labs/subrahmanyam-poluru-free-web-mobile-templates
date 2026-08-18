@@ -23,17 +23,21 @@ Custom classes use the `rh-` prefix (e.g. `.rh-hero`, `.rh-pub-card`).
 
 ## Features
 
-- Sticky responsive navbar with smooth scrolling and active section state
+- Sticky responsive navbar with smooth scrolling, scroll shadow, and active section state
+- Skip link and floating back-to-top control
 - Hero with name, title, affiliation, research summary, and CTAs
 - About section with focus chips
 - Animated impact metrics (publications, citations, h-index, talks, awards, reviews)
-- Filterable publications (journal / conference) with co-authors and links
-- Talks & presentations timeline
+- Publications: type filters, year filter, keyword search, Cite + BibTeX copy
+- Talks timeline with type filters (keynote / seminar / industry / panel)
 - Media / press cards
 - Awards & honors
 - Peer review, editorial, and judging service
 - Teaching, mentoring, and institutional service
-- Collaboration / contact form (demo)
+- Collaboration FAQ accordion
+- Contact form with character count, localStorage draft, and toast confirmation
+- Copy email and share profile actions
+- Demo CV download toast (wire to your PDF)
 - AOS scroll animations throughout
 - Reduced-motion support
 
@@ -64,14 +68,15 @@ Open [http://localhost:8000](http://localhost:8000).
 1. Hero — identity, affiliation, summary, CTAs  
 2. About — narrative + quick facts  
 3. Impact — scholarly metrics with counters  
-4. Publications — selected papers with filters  
-5. Talks — invited speaking timeline  
+4. Publications — searchable/filterable papers with cite tools  
+5. Talks — invited speaking timeline with type filters  
 6. Media — press and commentary  
 7. Awards — honors and recognition  
 8. Peer review / editorial / judging  
 9. Teaching, mentoring & service  
-10. Collaboration / contact  
-11. Footer  
+10. FAQ — collaboration notes  
+11. Collaboration / contact  
+12. Footer  
 
 ## Customization
 

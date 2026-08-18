@@ -17,9 +17,10 @@
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="rh-body">
+  <a class="rh-skip-link" href="#main-content">Skip to content</a>
 
   <!-- Sticky navbar -->
-  <nav class="navbar navbar-expand-lg rh-navbar sticky-top" aria-label="Primary">
+  <nav class="navbar navbar-expand-lg rh-navbar sticky-top" id="rhNavbar" aria-label="Primary">
     <div class="container">
       <a class="navbar-brand rh-brand" href="#home">
         <span class="rh-brand-mark" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></span>
@@ -44,7 +45,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <!-- Hero -->
     <header class="rh-hero" id="home">
       <div class="container">
@@ -69,9 +70,9 @@
               <a href="#contact" class="btn rh-btn-secondary btn-lg">
                 <i class="bi bi-people me-2"></i>Collaborate
               </a>
-              <a href="#cv" class="btn rh-btn-ghost btn-lg">
+              <button type="button" class="btn rh-btn-ghost btn-lg" id="rhDownloadCv">
                 <i class="bi bi-download me-2"></i>Download CV
-              </a>
+              </button>
             </div>
             <div class="rh-hero-links" aria-label="Academic profiles">
               <a href="#" aria-label="Google Scholar"><i class="bi bi-mortarboard"></i></a>
@@ -221,7 +222,7 @@
     <!-- Publications -->
     <section class="rh-section" id="publications">
       <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4" data-aos="fade-up">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3" data-aos="fade-up">
           <div class="rh-section-head mb-0">
             <p class="rh-eyebrow">Publications</p>
             <h2 class="rh-section-title">Selected papers</h2>
@@ -234,8 +235,29 @@
           </div>
         </div>
 
-        <div class="rh-pub-list">
-          <article class="rh-pub-card" data-type="journal" data-aos="fade-up">
+        <div class="rh-pub-toolbar" data-aos="fade-up">
+          <div class="rh-search-wrap">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" id="rhPubSearch" placeholder="Search title, venue, author…" aria-label="Search publications" />
+          </div>
+          <select class="form-select rh-year-select" id="rhPubYear" aria-label="Filter by year">
+            <option value="all">All years</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
+        <p class="rh-result-count" id="rhPubCount">Showing 5 publications</p>
+
+        <div class="rh-pub-list" id="rhPubList">
+          <article class="rh-pub-card" data-type="journal" data-year="2025" data-aos="fade-up"
+            data-cite="Poluru, S., Subrahmanyam, P., Chen, A., &amp; Ortiz, M. (2025). Calibrated Trust in Generative Assistants for High-Stakes Workflows. TOCHI."
+            data-bibtex="@article{poluru2025calibrated,
+  title={Calibrated Trust in Generative Assistants for High-Stakes Workflows},
+  author={Poluru, Subrahmanyam and Subrahmanyam, P. and Chen, A. and Ortiz, M.},
+  journal={TOCHI},
+  year={2025}
+}">
             <div class="rh-pub-meta">
               <span class="rh-pill">Journal</span>
               <span>TOCHI · 2025</span>
@@ -246,10 +268,19 @@
               <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
               <a href="#"><i class="bi bi-link-45deg"></i> DOI</a>
               <a href="#"><i class="bi bi-code-slash"></i> Code</a>
+              <button type="button" class="rh-cite-btn" data-cite-action="text"><i class="bi bi-quote"></i> Cite</button>
+              <button type="button" class="rh-cite-btn" data-cite-action="bibtex"><i class="bi bi-braces"></i> BibTeX</button>
             </div>
           </article>
 
-          <article class="rh-pub-card" data-type="conference" data-aos="fade-up" data-aos-delay="50">
+          <article class="rh-pub-card" data-type="conference" data-year="2025" data-aos="fade-up" data-aos-delay="50"
+            data-cite="Poluru, S., Nguyen, L., &amp; Okonkwo, R. (2025). Error Recovery Rituals: How Teams Renegotiate Authority with AI Copilots. CHI."
+            data-bibtex="@inproceedings{poluru2025error,
+  title={Error Recovery Rituals: How Teams Renegotiate Authority with AI Copilots},
+  author={Poluru, Subrahmanyam and Nguyen, L. and Okonkwo, R.},
+  booktitle={CHI},
+  year={2025}
+}">
             <div class="rh-pub-meta">
               <span class="rh-pill rh-pill-alt">Conference</span>
               <span>CHI · 2025</span>
@@ -260,10 +291,19 @@
               <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
               <a href="#"><i class="bi bi-camera-video"></i> Talk</a>
               <a href="#"><i class="bi bi-filetype-pptx"></i> Slides</a>
+              <button type="button" class="rh-cite-btn" data-cite-action="text"><i class="bi bi-quote"></i> Cite</button>
+              <button type="button" class="rh-cite-btn" data-cite-action="bibtex"><i class="bi bi-braces"></i> BibTeX</button>
             </div>
           </article>
 
-          <article class="rh-pub-card" data-type="conference" data-aos="fade-up" data-aos-delay="100">
+          <article class="rh-pub-card" data-type="conference" data-year="2024" data-aos="fade-up" data-aos-delay="100"
+            data-cite="Poluru, S., Park, J., &amp; Alvarez, E. (2024). Audit Trails that Practitioners Actually Use: A Field Study of Model Reviews. FAccT."
+            data-bibtex="@inproceedings{poluru2024audit,
+  title={Audit Trails that Practitioners Actually Use: A Field Study of Model Reviews},
+  author={Poluru, Subrahmanyam and Park, J. and Alvarez, E.},
+  booktitle={FAccT},
+  year={2024}
+}">
             <div class="rh-pub-meta">
               <span class="rh-pill rh-pill-alt">Conference</span>
               <span>FAccT · 2024</span>
@@ -273,10 +313,19 @@
             <div class="rh-pub-links">
               <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
               <a href="#"><i class="bi bi-link-45deg"></i> DOI</a>
+              <button type="button" class="rh-cite-btn" data-cite-action="text"><i class="bi bi-quote"></i> Cite</button>
+              <button type="button" class="rh-cite-btn" data-cite-action="bibtex"><i class="bi bi-braces"></i> BibTeX</button>
             </div>
           </article>
 
-          <article class="rh-pub-card" data-type="journal" data-aos="fade-up" data-aos-delay="150">
+          <article class="rh-pub-card" data-type="journal" data-year="2024" data-aos="fade-up" data-aos-delay="150"
+            data-cite="Poluru, S., Das, M., &amp; Rivera, C. (2024). Measuring Explanation Usefulness Beyond Accuracy: A Multi-Study Framework. IJHCS."
+            data-bibtex="@article{poluru2024measuring,
+  title={Measuring Explanation Usefulness Beyond Accuracy: A Multi-Study Framework},
+  author={Poluru, Subrahmanyam and Das, M. and Rivera, C.},
+  journal={IJHCS},
+  year={2024}
+}">
             <div class="rh-pub-meta">
               <span class="rh-pill">Journal</span>
               <span>IJHCS · 2024</span>
@@ -286,10 +335,19 @@
             <div class="rh-pub-links">
               <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
               <a href="#"><i class="bi bi-database"></i> Data</a>
+              <button type="button" class="rh-cite-btn" data-cite-action="text"><i class="bi bi-quote"></i> Cite</button>
+              <button type="button" class="rh-cite-btn" data-cite-action="bibtex"><i class="bi bi-braces"></i> BibTeX</button>
             </div>
           </article>
 
-          <article class="rh-pub-card" data-type="conference" data-aos="fade-up" data-aos-delay="200">
+          <article class="rh-pub-card" data-type="conference" data-year="2023" data-aos="fade-up" data-aos-delay="200"
+            data-cite="Poluru, S., Brooks, H., &amp; Subrahmanyam, P. (2023). Collaborative Sensemaking with Predictive Dashboards in Public Agencies. CSCW."
+            data-bibtex="@inproceedings{poluru2023collaborative,
+  title={Collaborative Sensemaking with Predictive Dashboards in Public Agencies},
+  author={Poluru, Subrahmanyam and Brooks, H. and Subrahmanyam, P.},
+  booktitle={CSCW},
+  year={2023}
+}">
             <div class="rh-pub-meta">
               <span class="rh-pill rh-pill-alt">Conference</span>
               <span>CSCW · 2023</span>
@@ -299,9 +357,12 @@
             <div class="rh-pub-links">
               <a href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
               <a href="#"><i class="bi bi-link-45deg"></i> ACM DL</a>
+              <button type="button" class="rh-cite-btn" data-cite-action="text"><i class="bi bi-quote"></i> Cite</button>
+              <button type="button" class="rh-cite-btn" data-cite-action="bibtex"><i class="bi bi-braces"></i> BibTeX</button>
             </div>
           </article>
         </div>
+        <p class="rh-empty-state d-none" id="rhPubEmpty">No publications match your search or filters.</p>
       </div>
     </section>
 
@@ -313,8 +374,15 @@
           <h2 class="rh-section-title">Invited speaking</h2>
           <p class="rh-section-sub">Keynotes, seminars, and industry briefings.</p>
         </div>
-        <ol class="rh-timeline list-unstyled mb-0">
-          <li data-aos="fade-up">
+        <div class="rh-filter-chips mb-4" role="group" aria-label="Filter talks" data-aos="fade-up">
+          <button type="button" class="rh-chip is-active" data-talk-filter="all">All</button>
+          <button type="button" class="rh-chip" data-talk-filter="keynote">Keynote</button>
+          <button type="button" class="rh-chip" data-talk-filter="seminar">Seminar</button>
+          <button type="button" class="rh-chip" data-talk-filter="industry">Industry</button>
+          <button type="button" class="rh-chip" data-talk-filter="panel">Panel</button>
+        </div>
+        <ol class="rh-timeline list-unstyled mb-0" id="rhTalkList">
+          <li data-talk="keynote" data-aos="fade-up">
             <span class="rh-tl-marker" aria-hidden="true"></span>
             <div class="rh-tl-card">
               <div class="rh-tl-top">
@@ -325,7 +393,7 @@
               <p>Human–AI Symposium · San Francisco</p>
             </div>
           </li>
-          <li data-aos="fade-up" data-aos-delay="60">
+          <li data-talk="seminar" data-aos="fade-up" data-aos-delay="60">
             <span class="rh-tl-marker" aria-hidden="true"></span>
             <div class="rh-tl-card">
               <div class="rh-tl-top">
@@ -336,7 +404,7 @@
               <p>ResearcherHub Colloquium · Austin</p>
             </div>
           </li>
-          <li data-aos="fade-up" data-aos-delay="120">
+          <li data-talk="industry" data-aos="fade-up" data-aos-delay="120">
             <span class="rh-tl-marker" aria-hidden="true"></span>
             <div class="rh-tl-card">
               <div class="rh-tl-top">
@@ -347,7 +415,7 @@
               <p>OpsTech Summit · Chicago</p>
             </div>
           </li>
-          <li data-aos="fade-up" data-aos-delay="180">
+          <li data-talk="panel" data-aos="fade-up" data-aos-delay="180">
             <span class="rh-tl-marker" aria-hidden="true"></span>
             <div class="rh-tl-card">
               <div class="rh-tl-top">
@@ -359,6 +427,7 @@
             </div>
           </li>
         </ol>
+        <p class="rh-empty-state d-none" id="rhTalkEmpty">No talks match this filter.</p>
       </div>
     </section>
 
@@ -522,11 +591,48 @@
       </div>
     </section>
 
-    <!-- CV anchor target for download CTA -->
+    <!-- CV anchor kept for deep links -->
     <section class="visually-hidden" id="cv" aria-hidden="true"></section>
 
+    <!-- FAQ -->
+    <section class="rh-section" id="faq">
+      <div class="container">
+        <div class="rh-section-head text-center mx-auto" data-aos="fade-up">
+          <p class="rh-eyebrow">FAQ</p>
+          <h2 class="rh-section-title">Collaboration notes</h2>
+          <p class="rh-section-sub">Quick answers for talks, advising, and partnerships.</p>
+        </div>
+        <div class="accordion rh-accordion mx-auto" id="rhFaqAccordion" data-aos="fade-up">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#rhFaq1" aria-expanded="true" aria-controls="rhFaq1">Are you available for invited talks?</button>
+            </h3>
+            <div id="rhFaq1" class="accordion-collapse collapse show" data-bs-parent="#rhFaqAccordion">
+              <div class="accordion-body">Yes—keynotes, seminars, and industry briefings on trustworthy human–AI interaction. Use the contact form with topic “Invited talk.”</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rhFaq2" aria-expanded="false" aria-controls="rhFaq2">Do you advise Ph.D. students?</button>
+            </h3>
+            <div id="rhFaq2" class="accordion-collapse collapse" data-bs-parent="#rhFaqAccordion">
+              <div class="accordion-body">I advise a small cohort each cycle. Share a short research statement and CV via the contact form (Ph.D. advising).</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rhFaq3" aria-expanded="false" aria-controls="rhFaq3">Can industry teams request a collaboration?</button>
+            </h3>
+            <div id="rhFaq3" class="accordion-collapse collapse" data-bs-parent="#rhFaqAccordion">
+              <div class="accordion-body">Yes for evaluation partnerships and responsible product research. Include timeline, data constraints, and publication expectations.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact / collaboration -->
-    <section class="rh-section" id="contact">
+    <section class="rh-section rh-section-soft" id="contact">
       <div class="container">
         <div class="rh-contact-panel" data-aos="fade-up">
           <div class="row g-4 align-items-center">
@@ -537,11 +643,18 @@
                 Open to invited talks, visiting collaborations, industry research partnerships,
                 and Ph.D. advising inquiries aligned with trustworthy human–AI interaction.
               </p>
-              <ul class="rh-contact-facts list-unstyled mb-0">
-                <li><i class="bi bi-envelope"></i> <a href="mailto:mail.spoluru@gmail.com">mail.spoluru@gmail.com</a></li>
+              <ul class="rh-contact-facts list-unstyled mb-3">
+                <li>
+                  <i class="bi bi-envelope"></i>
+                  <a href="mailto:mail.spoluru@gmail.com" id="rhEmailLink">mail.spoluru@gmail.com</a>
+                  <button type="button" class="rh-copy-email" id="rhCopyEmail" aria-label="Copy email">Copy</button>
+                </li>
                 <li><i class="bi bi-geo-alt"></i> Austin, TX · hybrid / travel available</li>
                 <li><i class="bi bi-calendar2-week"></i> Office hours by appointment</li>
               </ul>
+              <button type="button" class="btn rh-btn-ghost rh-btn-on-dark" id="rhShareBtn">
+                <i class="bi bi-share me-2"></i>Share profile
+              </button>
             </div>
             <div class="col-lg-6">
               <form class="rh-form" id="rhContactForm" novalidate>
@@ -564,12 +677,20 @@
                   </select>
                 </div>
                 <div class="mb-3">
-                  <label class="form-label" for="rhMessage">Message</label>
-                  <textarea class="form-control" id="rhMessage" name="message" rows="4" required placeholder="Share a short note about the opportunity."></textarea>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <label class="form-label mb-0" for="rhMessage">Message</label>
+                    <span class="rh-char-count" id="rhCharCount" aria-live="polite">0 / 800</span>
+                  </div>
+                  <textarea class="form-control" id="rhMessage" name="message" rows="4" maxlength="800" required placeholder="Share a short note about the opportunity."></textarea>
                 </div>
-                <button type="submit" class="btn rh-btn-secondary w-100 btn-lg">
-                  <i class="bi bi-send me-2"></i>Send message
-                </button>
+                <div class="d-flex flex-wrap gap-2">
+                  <button type="submit" class="btn rh-btn-secondary flex-grow-1 btn-lg">
+                    <i class="bi bi-send me-2"></i>Send message
+                  </button>
+                  <button type="button" class="btn rh-btn-ghost rh-btn-on-dark btn-lg" id="rhSaveDraft">
+                    <i class="bi bi-save me-1"></i>Save draft
+                  </button>
+                </div>
                 <p class="rh-form-note mb-0" id="rhFormNote" role="status" aria-live="polite"></p>
               </form>
             </div>
@@ -608,6 +729,7 @@
             <li><a href="#media">Media</a></li>
             <li><a href="#teaching">Teaching</a></li>
             <li><a href="#service-review">Service</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -630,6 +752,21 @@
       </div>
     </div>
   </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="rhToast" class="toast rh-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill text-success me-2"></i>
+        <strong class="me-auto" id="rhToastTitle">Done</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="rhToastBody">Action completed.</div>
+    </div>
+  </div>
+
+  <button type="button" class="rh-back-top" id="rhBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
