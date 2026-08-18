@@ -1196,3 +1196,196 @@ a:hover {
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   UX enhancements
+   ========================================================================== */
+
+.skb-skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3.5rem;
+  z-index: 2000;
+  background: var(--skb-primary);
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 0.55rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.skb-skip-link:focus {
+  top: 1rem;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.skb-back-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--skb-ink);
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(7, 17, 29, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.5rem);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease, background 0.15s ease;
+  z-index: 1040;
+}
+
+.skb-back-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.skb-back-top:hover {
+  background: var(--skb-primary);
+}
+
+.skb-toast {
+  border: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 1.75rem rgba(7, 17, 29, 0.16);
+}
+
+.skb-toast .toast-header {
+  background: var(--skb-ink);
+  color: #fff;
+  border: 0;
+}
+
+.skb-toast .btn-close {
+  filter: invert(1);
+}
+
+.skb-search-wrap {
+  position: relative;
+  min-width: min(100%, 14rem);
+}
+
+.skb-search-wrap > i {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7a8d;
+  pointer-events: none;
+}
+
+.skb-search-wrap .form-control {
+  padding-left: 2.15rem;
+  border-radius: 0.55rem;
+  border-color: rgba(7, 17, 29, 0.12);
+  font-size: 0.9rem;
+}
+
+.skb-empty-state {
+  margin: 0.75rem 0 0;
+  color: #6b7a8d;
+  font-size: 0.9rem;
+}
+
+.skb-calc-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.skb-field {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #3d4b5c;
+}
+
+.skb-field .form-control {
+  border-radius: 0.55rem;
+  border-color: rgba(7, 17, 29, 0.12);
+  font-weight: 600;
+}
+
+.skb-calc-result {
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(0, 139, 255, 0.08);
+  border: 1px solid rgba(0, 139, 255, 0.18);
+}
+
+.skb-calc-value {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--skb-ink);
+  margin: 0;
+}
+
+.skb-ask-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.skb-ask-item {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  margin: 0;
+  cursor: pointer;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: inherit;
+}
+
+.skb-ask-item input {
+  margin-top: 0.2rem;
+  accent-color: var(--skb-primary);
+  flex-shrink: 0;
+}
+
+.skb-ask-item.is-done span {
+  text-decoration: line-through;
+  opacity: 0.62;
+}
+
+.skb-kpi {
+  cursor: copy;
+}
+
+@media print {
+  .skb-navbar,
+  .skb-skip-link,
+  .skb-back-top,
+  .toast-container,
+  .skb-hero-actions,
+  .skb-cta-actions,
+  #skbFinanceExport,
+  #skbAsksReset {
+    display: none !important;
+  }
+
+  .skb-body {
+    background: #fff !important;
+  }
+
+  .skb-panel,
+  .skb-kpi,
+  .skb-stat,
+  .skb-update {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+
+  .skb-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

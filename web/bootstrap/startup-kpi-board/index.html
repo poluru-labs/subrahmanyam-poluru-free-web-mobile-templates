@@ -16,8 +16,9 @@
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="skb-body">
+  <a class="skb-skip-link" href="#main-content">Skip to content</a>
 
-  <nav class="navbar navbar-expand-lg skb-navbar sticky-top" aria-label="Primary">
+  <nav class="navbar navbar-expand-lg skb-navbar sticky-top" id="skbNavbar" aria-label="Primary">
     <div class="container-xxl">
       <a class="navbar-brand skb-brand" href="#home">
         <span class="skb-brand-mark" aria-hidden="true"><i class="bi bi-grid-1x2-fill"></i></span>
@@ -42,7 +43,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <!-- Command hero -->
     <header class="skb-hero" id="home">
       <div class="container-xxl">
@@ -57,7 +58,8 @@
             </p>
             <div class="skb-hero-actions">
               <a href="#share" class="btn skb-btn-primary btn-lg"><i class="bi bi-share me-2"></i>Share Update</a>
-              <a href="#burn" class="btn skb-btn-ghost btn-lg"><i class="bi bi-download me-2"></i>Download Report</a>
+              <button type="button" class="btn skb-btn-ghost btn-lg" id="skbExportCsv"><i class="bi bi-download me-2"></i>Export CSV</button>
+              <button type="button" class="btn skb-btn-ghost btn-lg" id="skbPrintBtn"><i class="bi bi-printer me-2"></i>Print</button>
             </div>
           </div>
 
@@ -103,74 +105,74 @@
             <article class="skb-kpi">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-currency-dollar"></i></span>
-                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 14.2%</span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> <span data-trend-monthly="14.2%" data-trend-quarterly="38%">14.2%</span></span>
               </div>
               <p class="skb-kpi-label">MRR</p>
-              <p class="skb-kpi-value">$<span class="skb-counter" data-target="186500">0</span></p>
-              <p class="skb-kpi-note">vs prior month</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="186500" data-monthly="186500" data-quarterly="512400">0</span></p>
+              <p class="skb-kpi-note" data-note-monthly="vs prior month" data-note-quarterly="vs prior quarter">vs prior month</p>
             </article>
             <article class="skb-kpi">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-bar-chart-line"></i></span>
-                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 13.8%</span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> <span data-trend-monthly="13.8%" data-trend-quarterly="36%">13.8%</span></span>
               </div>
               <p class="skb-kpi-label">ARR</p>
-              <p class="skb-kpi-value">$<span class="skb-counter" data-target="2238000">0</span></p>
-              <p class="skb-kpi-note">run-rate annualized</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="2238000" data-monthly="2238000" data-quarterly="2238000">0</span></p>
+              <p class="skb-kpi-note" data-note-monthly="run-rate annualized" data-note-quarterly="run-rate annualized">run-rate annualized</p>
             </article>
             <article class="skb-kpi">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-bullseye"></i></span>
-                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> better</span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> <span data-trend-monthly="better" data-trend-quarterly="−8%">better</span></span>
               </div>
               <p class="skb-kpi-label">CAC</p>
-              <p class="skb-kpi-value">$<span class="skb-counter" data-target="720">0</span></p>
-              <p class="skb-kpi-note">blended acquisition</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="720" data-monthly="720" data-quarterly="690">0</span></p>
+              <p class="skb-kpi-note" data-note-monthly="blended acquisition" data-note-quarterly="quarterly blended">blended acquisition</p>
             </article>
             <article class="skb-kpi">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-gem"></i></span>
-                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 5.1%</span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> <span data-trend-monthly="5.1%" data-trend-quarterly="4.2%">5.1%</span></span>
               </div>
               <p class="skb-kpi-label">LTV</p>
-              <p class="skb-kpi-value">$<span class="skb-counter" data-target="9800">0</span></p>
-              <p class="skb-kpi-note">LTV:CAC 13.6×</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="9800" data-monthly="9800" data-quarterly="10200">0</span></p>
+              <p class="skb-kpi-note" data-note-monthly="LTV:CAC 13.6×" data-note-quarterly="LTV:CAC 14.8×">LTV:CAC 13.6×</p>
             </article>
             <article class="skb-kpi">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-arrow-left-right"></i></span>
-                <span class="skb-trend skb-trend-down"><i class="bi bi-arrow-down-right"></i> 0.3 pts</span>
+                <span class="skb-trend skb-trend-down"><i class="bi bi-arrow-down-right"></i> <span data-trend-monthly="0.3 pts" data-trend-quarterly="0.5 pts">0.3 pts</span></span>
               </div>
               <p class="skb-kpi-label">Logo churn</p>
-              <p class="skb-kpi-value"><span class="skb-counter" data-target="2.1" data-decimals="1">0</span>%</p>
-              <p class="skb-kpi-note">monthly · improving</p>
+              <p class="skb-kpi-value"><span class="skb-counter" data-target="2.1" data-decimals="1" data-monthly="2.1" data-quarterly="5.8">0</span>%</p>
+              <p class="skb-kpi-note" data-note-monthly="monthly · improving" data-note-quarterly="quarterly logo churn">monthly · improving</p>
             </article>
             <article class="skb-kpi">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-people"></i></span>
-                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> 9.4%</span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-arrow-up-right"></i> <span data-trend-monthly="9.4%" data-trend-quarterly="24%">9.4%</span></span>
               </div>
               <p class="skb-kpi-label">Customers</p>
-              <p class="skb-kpi-value"><span class="skb-counter" data-target="1264">0</span></p>
-              <p class="skb-kpi-note">paying accounts</p>
+              <p class="skb-kpi-value"><span class="skb-counter" data-target="1264" data-monthly="1264" data-quarterly="1264">0</span></p>
+              <p class="skb-kpi-note" data-note-monthly="paying accounts" data-note-quarterly="paying accounts">paying accounts</p>
             </article>
             <article class="skb-kpi">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-fire"></i></span>
-                <span class="skb-trend skb-trend-flat"><i class="bi bi-dash"></i> stable</span>
+                <span class="skb-trend skb-trend-flat"><i class="bi bi-dash"></i> <span data-trend-monthly="stable" data-trend-quarterly="−4%">stable</span></span>
               </div>
               <p class="skb-kpi-label">Net burn</p>
-              <p class="skb-kpi-value">$<span class="skb-counter" data-target="142000">0</span></p>
-              <p class="skb-kpi-note">monthly cash burn</p>
+              <p class="skb-kpi-value">$<span class="skb-counter" data-target="142000" data-monthly="142000" data-quarterly="435000">0</span></p>
+              <p class="skb-kpi-note" data-note-monthly="monthly cash burn" data-note-quarterly="quarter cash burn">monthly cash burn</p>
             </article>
             <article class="skb-kpi skb-kpi-accent">
               <div class="skb-kpi-top">
                 <span class="skb-kpi-icon"><i class="bi bi-hourglass-split"></i></span>
-                <span class="skb-trend skb-trend-up"><i class="bi bi-shield-check"></i> healthy</span>
+                <span class="skb-trend skb-trend-up"><i class="bi bi-shield-check"></i> <span data-trend-monthly="healthy" data-trend-quarterly="healthy">healthy</span></span>
               </div>
               <p class="skb-kpi-label">Runway</p>
-              <p class="skb-kpi-value"><span class="skb-counter" data-target="21">0</span> mo</p>
-              <p class="skb-kpi-note">at current burn</p>
+              <p class="skb-kpi-value"><span class="skb-counter" data-target="21" data-monthly="21" data-quarterly="21">0</span> mo</p>
+              <p class="skb-kpi-note" data-note-monthly="at current burn" data-note-quarterly="at current burn">at current burn</p>
             </article>
           </div>
         </div>
@@ -381,9 +383,15 @@
           </div>
           <div class="col-lg-7 skb-reveal">
             <article class="skb-panel h-100">
-              <h3 class="skb-card-title">Top segments</h3>
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <h3 class="skb-card-title mb-0">Top segments</h3>
+                <div class="skb-search-wrap">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <input type="search" class="form-control" id="skbSegmentSearch" placeholder="Filter segments…" aria-label="Filter segments" />
+                </div>
+              </div>
               <div class="table-responsive">
-                <table class="table skb-table mb-0">
+                <table class="table skb-table mb-0" id="skbSegmentTable">
                   <thead>
                     <tr>
                       <th>Segment</th>
@@ -400,6 +408,7 @@
                   </tbody>
                 </table>
               </div>
+              <p class="skb-empty-state d-none" id="skbSegmentEmpty">No segments match.</p>
             </article>
           </div>
         </div>
@@ -448,31 +457,59 @@
           </article>
         </div>
 
-        <div class="skb-panel skb-reveal">
-          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
-            <h3 class="skb-card-title mb-0">Trailing six months</h3>
-            <span class="skb-badge">USD · unaudited</span>
+        <div class="row g-3 g-lg-4 mb-3">
+          <div class="col-lg-5 skb-reveal">
+            <article class="skb-panel h-100">
+              <h3 class="skb-card-title">Runway calculator</h3>
+              <p class="skb-muted-text mb-3">Scenario tool for board conversations. Defaults match the demo board.</p>
+              <div class="skb-calc-grid">
+                <label class="skb-field">
+                  <span>Cash on hand ($)</span>
+                  <input type="number" class="form-control" id="skbCashInput" value="2982000" min="0" step="1000" />
+                </label>
+                <label class="skb-field">
+                  <span>Monthly net burn ($)</span>
+                  <input type="number" class="form-control" id="skbBurnInput" value="142000" min="1" step="1000" />
+                </label>
+              </div>
+              <div class="skb-calc-result mt-3" aria-live="polite">
+                <p class="skb-mini-label mb-1">Estimated runway</p>
+                <p class="skb-calc-value mb-1"><span id="skbRunwayOut">21</span> months</p>
+                <p class="skb-muted-text mb-0" id="skbRunwayHint">Cash lasts through ~May 2028 at current burn.</p>
+              </div>
+            </article>
           </div>
-          <div class="table-responsive">
-            <table class="table skb-table mb-0">
-              <thead>
-                <tr>
-                  <th>Month</th>
-                  <th>Revenue</th>
-                  <th>OpEx</th>
-                  <th>Gross margin</th>
-                  <th>Net burn</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Mar</td><td>$148k</td><td>$312k</td><td>77%</td><td>$164k</td></tr>
-                <tr><td>Apr</td><td>$156k</td><td>$316k</td><td>77%</td><td>$158k</td></tr>
-                <tr><td>May</td><td>$164k</td><td>$320k</td><td>78%</td><td>$152k</td></tr>
-                <tr><td>Jun</td><td>$172k</td><td>$322k</td><td>78%</td><td>$148k</td></tr>
-                <tr><td>Jul</td><td>$179k</td><td>$325k</td><td>79%</td><td>$145k</td></tr>
-                <tr class="skb-row-hi"><td>Aug</td><td>$186.5k</td><td>$328k</td><td>79%</td><td>$142k</td></tr>
-              </tbody>
-            </table>
+          <div class="col-lg-7 skb-reveal">
+            <article class="skb-panel h-100">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <h3 class="skb-card-title mb-0">Trailing six months</h3>
+                <div class="d-flex flex-wrap align-items-center gap-2">
+                  <span class="skb-badge">USD · unaudited</span>
+                  <button type="button" class="btn skb-btn-ghost btn-sm" id="skbFinanceExport"><i class="bi bi-download me-1"></i>CSV</button>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table skb-table mb-0" id="skbFinanceTable">
+                  <thead>
+                    <tr>
+                      <th>Month</th>
+                      <th>Revenue</th>
+                      <th>OpEx</th>
+                      <th>Gross margin</th>
+                      <th>Net burn</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Mar</td><td>$148k</td><td>$312k</td><td>77%</td><td>$164k</td></tr>
+                    <tr><td>Apr</td><td>$156k</td><td>$316k</td><td>77%</td><td>$158k</td></tr>
+                    <tr><td>May</td><td>$164k</td><td>$320k</td><td>78%</td><td>$152k</td></tr>
+                    <tr><td>Jun</td><td>$172k</td><td>$322k</td><td>78%</td><td>$148k</td></tr>
+                    <tr><td>Jul</td><td>$179k</td><td>$325k</td><td>79%</td><td>$145k</td></tr>
+                    <tr class="skb-row-hi"><td>Aug</td><td>$186.5k</td><td>$328k</td><td>79%</td><td>$142k</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -563,12 +600,31 @@
             </ul>
           </article>
           <article class="skb-update skb-update-ask">
-            <h3><i class="bi bi-hand-index"></i> Asks</h3>
-            <ul class="skb-bullets">
-              <li>Intros to 2 strategic Series A participants</li>
-              <li>Advisor for manufacturing GTM</li>
-              <li>Candidate referrals: Staff Eng, AE</li>
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+              <h3 class="mb-0"><i class="bi bi-hand-index"></i> Asks</h3>
+              <button type="button" class="btn skb-btn-ghost btn-sm" id="skbAsksReset">Reset</button>
+            </div>
+            <ul class="skb-ask-list list-unstyled mb-0" id="skbAsksList">
+              <li>
+                <label class="skb-ask-item">
+                  <input type="checkbox" data-ask-id="ask-1" />
+                  <span>Intros to 2 strategic Series A participants</span>
+                </label>
+              </li>
+              <li>
+                <label class="skb-ask-item">
+                  <input type="checkbox" data-ask-id="ask-2" />
+                  <span>Advisor for manufacturing GTM</span>
+                </label>
+              </li>
+              <li>
+                <label class="skb-ask-item">
+                  <input type="checkbox" data-ask-id="ask-3" />
+                  <span>Candidate referrals: Staff Eng, AE</span>
+                </label>
+              </li>
             </ul>
+            <p class="skb-muted-text mt-2 mb-0" id="skbAsksStatus">0 of 3 tracked</p>
           </article>
         </div>
 
@@ -651,8 +707,9 @@
             </p>
           </div>
           <div class="skb-cta-actions">
-            <a href="#kpis" class="btn skb-btn-primary btn-lg"><i class="bi bi-eye me-2"></i>Preview KPIs</a>
-            <a href="mailto:mail.spoluru@gmail.com" class="btn skb-btn-ink btn-lg"><i class="bi bi-envelope me-2"></i>Contact</a>
+            <button type="button" class="btn skb-btn-primary btn-lg" id="skbCopyLink"><i class="bi bi-link-45deg me-2"></i>Copy board link</button>
+            <button type="button" class="btn skb-btn-ink btn-lg" id="skbSharePrint"><i class="bi bi-printer me-2"></i>Print pack</button>
+            <a href="mailto:mail.spoluru@gmail.com" class="btn skb-btn-ghost btn-lg"><i class="bi bi-envelope me-2"></i>Contact</a>
           </div>
         </div>
       </div>
@@ -702,6 +759,20 @@
       </div>
     </div>
   </footer>
+
+  <button type="button" class="skb-back-top" id="skbBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="skbToast" class="toast skb-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Clearlane Board</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="skbToastBody">Done.</div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>

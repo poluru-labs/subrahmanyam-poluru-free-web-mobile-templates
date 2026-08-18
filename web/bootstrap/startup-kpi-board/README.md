@@ -1,6 +1,6 @@
 # Startup KPI Board — Clearlane
 
-A polished, responsive **founder metrics / startup KPI dashboard** template for board updates, fundraising packs, and operator reporting. Built with **HTML, CSS, JavaScript, Bootstrap 5, Bootstrap Icons**, and **Manrope**.
+A polished, responsive **founder metrics / startup KPI dashboard** template for board updates, fundraising packs, and operator reporting. Built with **HTML, CSS, JavaScript, Bootstrap 5, Bootstrap Icons**, and **Plus Jakarta Sans**.
 
 Premium SaaS presentation—not a generic admin shell. No heavy chart libraries; visuals use Bootstrap progress bars, CSS sparklines, and lightweight JS.
 
@@ -27,13 +27,19 @@ Custom classes use the `skb-` prefix (e.g. `.skb-hero`, `.skb-kpi`).
 - Dark sticky command navbar
 - Full-bleed ink hero with reporting toolbar
 - KPI signal strip with left-accent metric tiles
+- Monthly / quarterly KPI swap (live counter + trend/note updates)
 - Bento growth layout with CSS sparklines
 - Fundraising card + numbered milestone steps
-- Horizontal finance stat rail + trailing table
-- Wins / risks / asks brief panels
+- Segment table filter
+- Runway calculator (cash ÷ burn scenario)
+- Trailing finance table with CSV export
+- Wins / risks / asks brief panels — asks checklist persists in `localStorage`
 - Backers and advisor rail
-- Outlined share CTA (not a solid color block)
-- Animated counters, progress bars, period toggle
+- Share actions: copy board link, print pack
+- Skip link, back-to-top, toast feedback
+- Double-click any KPI tile to copy its value
+- Print-friendly stylesheet
+- Animated counters, progress bars, period chips
 - Plus Jakarta Sans + Bootstrap 5 + Icons
 
 ## File Structure
@@ -63,7 +69,8 @@ Open [http://localhost:8000](http://localhost:8000).
 1. Update company name, tagline, and demo metrics in `index.html`.  
 2. Adjust CSS variables in `assets/css/style.css` (`:root`).  
 3. Tweak counter targets via `data-target` / `data-decimals` on `.skb-counter`.  
-4. Set progress widths with `data-progress` on `.progress-bar`.
+4. Add `data-monthly` / `data-quarterly` (and matching trend/note attrs) for period swap.  
+5. Set progress widths with `data-progress` on `.progress-bar`.
 
 ## Author
 
