@@ -1429,3 +1429,188 @@ body {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* 10. UX enhancements ---------------------------------------------------- */
+.adm-nw-skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 2000;
+  background: var(--adm-nw-primary);
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 0.65rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.adm-nw-skip-link:focus {
+  top: 1rem;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.adm-nw-search-hint {
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--adm-nw-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--adm-nw-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+.adm-nw-search .form-control:focus + .adm-nw-search-hint,
+.adm-nw-search .form-control:not(:placeholder-shown) + .adm-nw-search-hint {
+  display: none;
+}
+
+.adm-nw-live-clock {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--adm-nw-muted);
+}
+
+.adm-nw-mark-read {
+  border: 0;
+  background: transparent;
+  color: var(--adm-nw-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0;
+  margin-right: 0.75rem;
+}
+
+.adm-nw-mark-read:hover {
+  text-decoration: underline;
+}
+
+.adm-nw-notif-read {
+  opacity: 0.55;
+}
+
+.adm-nw-result-count {
+  margin: 0 0 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--adm-nw-muted);
+}
+
+.adm-nw-empty-state {
+  text-align: center;
+  color: var(--adm-nw-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 1.25rem 0.5rem;
+}
+
+.adm-nw-hidden {
+  display: none !important;
+}
+
+.adm-nw-chip-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.adm-nw-filter-chip {
+  border: 1px solid var(--adm-nw-border);
+  background: #fff;
+  color: var(--adm-nw-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
+
+.adm-nw-filter-chip:hover {
+  color: var(--adm-nw-primary);
+  border-color: rgba(249, 115, 0, 0.4);
+}
+
+.adm-nw-filter-chip-active {
+  background: var(--adm-nw-primary);
+  border-color: var(--adm-nw-primary);
+  color: #fff;
+}
+
+.adm-nw-copyable {
+  cursor: pointer;
+  border-bottom: 1px dashed transparent;
+}
+
+.adm-nw-copyable:hover {
+  border-bottom-color: var(--adm-nw-primary);
+  color: var(--adm-nw-primary);
+}
+
+.adm-nw-char-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--adm-nw-muted);
+  margin-top: 0.35rem;
+}
+
+.adm-nw-modal {
+  border: 0;
+  border-radius: var(--adm-nw-radius);
+  overflow: hidden;
+}
+
+.adm-nw-modal .form-control:focus,
+.adm-nw-modal .form-select:focus {
+  border-color: rgba(249, 115, 0, 0.45);
+  box-shadow: 0 0 0 3px rgba(249, 115, 0, 0.12);
+}
+
+.adm-nw-toast {
+  border: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 1.75rem rgba(17, 24, 39, 0.14);
+}
+
+.adm-nw-back-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--adm-nw-primary);
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(17, 24, 39, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.5rem);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1055;
+}
+
+.adm-nw-back-top-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.adm-nw-back-top:hover {
+  background: #e06800;
+}
+
+@media (max-width: 575.98px) {
+  .adm-nw-search-hint {
+    display: none;
+  }
+}

@@ -13,17 +13,23 @@ Admins and operators share the same platform views for threats, traffic, endpoin
 
 - **11-page platform** — Overview plus dedicated ops, network, and platform screens
 - **Security operations overview** — Active threats, endpoints online, bandwidth, firewall blocks
-- **Threat Center** — Triage queue with severity/status filters, ownership, and actions
+- **Animated KPI counters** — Numeric stats animate into view (respects reduced motion)
+- **Threat Center** — Working search, severity/status filters, triage tabs, assign/investigate actions
 - **Network traffic** — Inbound vs outbound charts (1H / 24H / 7D) and protocol mix
-- **Live security alerts** — Analyst-ready table with severity and status badges
-- **Endpoints** — Managed device inventory, posture chips, isolate/release actions
+- **Live security alerts** — Overview table with search + severity chip filters
+- **Endpoints** — Filter by OS/status; isolate / release / ping demo actions
 - **Firewall** — Policy rules, hit counts, and recent deny activity
-- **Devices** — Routers, switches, firewalls, collectors, and wireless controllers
+- **Devices** — Searchable/filterable inventory cards by type and site
 - **VPN Access** — Active sessions, failed logins, gateway capacity
 - **DNS & Proxy** — Query decisions, sinkholes, resolver health
-- **Users & Roles** — Admin / Analyst / Viewer access model
-- **Reports** — Scheduled and on-demand security/network exports
-- **Settings** — Tenant profile, integrations, MFA, and notification defaults
+- **Users & Roles** — Search + role filter for Admin / Analyst / Viewer access
+- **Reports** — Scheduled and on-demand exports with CSV download of visible tables
+- **Settings** — Tenant profile, integrations, MFA; Save persists to `localStorage`
+- **New incident modal** — Create Incident / New Incident opens a validated demo form
+- **Copy to clipboard** — Click alert IDs and IP codes to copy
+- **Notifications** — Mark all read clears badge dots for the session
+- **Keyboard search** — Press `/` to focus the topbar search
+- **Skip link, live clock, back to top** — Accessibility and operator orientation helpers
 - **Light sticky sidebar** — Sticky on desktop; off-canvas toggle on mobile
 - **Google Fonts (Inter)** — Clean, widely used UI typeface
 - **External CSS only** — No HTML inline styles; custom classes use `adm-nw-*` prefix
@@ -63,7 +69,7 @@ CSS variables are namespaced the same way (`--adm-nw-primary`, `--adm-nw-seconda
 | Bootstrap Icons | 1.11.3 CDN | Icons |
 | Google Fonts | Inter 400–800 | Typography |
 | Chart.js | 4.4.1 CDN | Traffic & threat charts |
-| JavaScript | `assets/js/scripts.js` | Sidebar, tabs, charts |
+| JavaScript | `assets/js/scripts.js` | Sidebar, charts, filters, triage, export, toasts |
 
 ## Pages
 
@@ -194,7 +200,8 @@ The shell supports shared admin/user views. Hide nav items or action buttons per
 ## Notes
 
 - Frontend template with static demo security/network data
-- Charts and sidebar interactions are client-side only
+- Filters, triage actions, CSV export, incident modal, and settings save run client-side
+- Settings are stored in `localStorage` under `adm-nw-settings`
 - Integrate SIEM, NetFlow, EDR, or ticketing APIs for production use
 
 ## Author
