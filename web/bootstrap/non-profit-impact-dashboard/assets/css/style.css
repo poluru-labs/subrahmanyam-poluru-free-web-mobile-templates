@@ -497,10 +497,13 @@ a {
   position: absolute;
   width: 16px;
   height: 16px;
+  border: 0;
+  padding: 0;
   border-radius: 50%;
   background: var(--np-teal);
   box-shadow: 0 0 0 8px rgba(15, 118, 110, 0.18);
   animation: np-pulse 2.4s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .np-pin-1 { top: 28%; left: 18%; background: var(--np-teal); }
@@ -995,4 +998,285 @@ a {
   .np-map-art {
     min-height: 280px;
   }
+
+  .np-impact-calc-row {
+    flex-direction: column;
+  }
+}
+
+/* UX enhancements --------------------------------------------------------- */
+.np-skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 2000;
+  background: var(--np-primary, #0f766e);
+  color: #fff;
+  padding: 0.65rem 1rem;
+  border-radius: 0.65rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.np-skip-link:focus {
+  top: 1rem;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.np-navbar-scrolled {
+  box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.08);
+}
+
+.np-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.np-chip {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+}
+
+.np-chip:hover {
+  color: #0f766e;
+  border-color: rgba(15, 118, 110, 0.4);
+}
+
+.np-chip-active {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+
+.np-result-count {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.np-empty-state {
+  text-align: center;
+  color: #64748b;
+  font-weight: 600;
+  padding: 1.25rem 0.5rem;
+}
+
+.np-hidden,
+.np-report-hidden {
+  display: none !important;
+}
+
+.np-search-wrap {
+  position: relative;
+  max-width: 22rem;
+}
+
+.np-search-wrap i {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.np-search-wrap .form-control {
+  padding-left: 2.35rem;
+  border-radius: 0.65rem;
+  min-height: 2.55rem;
+  border-color: #d1d5db;
+}
+
+.np-search-wrap .form-control:focus {
+  border-color: rgba(15, 118, 110, 0.45);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+.np-map-pin {
+  cursor: pointer;
+}
+
+.np-map-pin.np-pin-active {
+  animation: none;
+  transform: scale(1.35);
+  box-shadow: 0 0 0 6px rgba(15, 118, 110, 0.25);
+}
+
+.np-region-list li {
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.np-region-list li:hover,
+.np-region-list li:focus {
+  background: #f0fdfa;
+  outline: none;
+}
+
+.np-region-active {
+  background: #ccfbf1 !important;
+  box-shadow: inset 3px 0 0 #0f766e;
+}
+
+.np-impact-calc {
+  margin-top: 1.35rem;
+  padding: 1rem 1.1rem;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.np-impact-calc-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.np-impact-calc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.np-impact-calc .input-group {
+  max-width: 9rem;
+}
+
+.np-impact-calc .form-control,
+.np-impact-calc .input-group-text {
+  border: 0;
+  min-height: 2.5rem;
+}
+
+.np-amount-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.np-amount-btn {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+}
+
+.np-modal .np-amount-btn {
+  border-color: #d1d5db;
+  background: #fff;
+  color: #475569;
+}
+
+.np-amount-btn:hover,
+.np-amount-active {
+  background: #fff;
+  color: #0f766e;
+  border-color: #fff;
+}
+
+.np-modal .np-amount-active {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+
+.np-impact-calc-result {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.np-accordion .accordion-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem !important;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.np-accordion .accordion-button {
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.np-accordion .accordion-button:not(.collapsed) {
+  background: #f0fdfa;
+  color: #0f766e;
+}
+
+.np-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.np-newsletter {
+  margin-top: 1.25rem;
+}
+
+.np-newsletter .form-control {
+  border: 0;
+  min-height: 2.55rem;
+}
+
+.np-modal {
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.np-modal .form-control:focus,
+.np-modal .form-select:focus {
+  border-color: rgba(15, 118, 110, 0.45);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+.np-toast {
+  border: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.75rem 1.75rem rgba(15, 23, 42, 0.14);
+}
+
+.np-back-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #0f766e;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(15, 23, 42, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.5rem);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1055;
+}
+
+.np-back-top-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.np-back-top:hover {
+  background: #0d9488;
 }

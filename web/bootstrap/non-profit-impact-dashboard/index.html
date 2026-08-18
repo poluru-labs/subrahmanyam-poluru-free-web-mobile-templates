@@ -19,9 +19,10 @@
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="np-body">
+  <a class="np-skip-link" href="#main-content">Skip to content</a>
 
   <!-- Sticky Navbar -->
-  <nav class="navbar navbar-expand-lg np-navbar sticky-top" aria-label="Primary">
+  <nav class="navbar navbar-expand-lg np-navbar sticky-top" id="npNavbar" aria-label="Primary">
     <div class="container">
       <a class="navbar-brand np-brand" href="#home">
         <span class="np-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
@@ -46,7 +47,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <!-- 1. Hero -->
     <header class="np-hero" id="home">
       <div class="np-hero-overlay"></div>
@@ -145,8 +146,17 @@
           <p class="np-section-sub">Four flagship programs with measurable results from the past year.</p>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-3">
+        <div class="np-toolbar np-reveal" role="group" aria-label="Filter programs">
+          <button type="button" class="np-chip np-chip-active" data-program-filter="all">All</button>
+          <button type="button" class="np-chip" data-program-filter="education">Education</button>
+          <button type="button" class="np-chip" data-program-filter="health">Health</button>
+          <button type="button" class="np-chip" data-program-filter="food">Food</button>
+          <button type="button" class="np-chip" data-program-filter="housing">Housing</button>
+        </div>
+        <p class="np-result-count np-reveal" id="npProgramCount">Showing 4 programs</p>
+
+        <div class="row g-4" id="npProgramGrid">
+          <div class="col-md-6 col-xl-3" data-program="education">
             <article class="np-program-card np-reveal">
               <div class="np-program-icon"><i class="bi bi-mortarboard-fill"></i></div>
               <h3 class="np-program-title">Learning Pathways</h3>
@@ -163,7 +173,7 @@
               </ul>
             </article>
           </div>
-          <div class="col-md-6 col-xl-3">
+          <div class="col-md-6 col-xl-3" data-program="health">
             <article class="np-program-card np-reveal">
               <div class="np-program-icon np-icon-blue"><i class="bi bi-hospital"></i></div>
               <h3 class="np-program-title">Community Clinics</h3>
@@ -180,7 +190,7 @@
               </ul>
             </article>
           </div>
-          <div class="col-md-6 col-xl-3">
+          <div class="col-md-6 col-xl-3" data-program="food">
             <article class="np-program-card np-reveal">
               <div class="np-program-icon np-icon-green"><i class="bi bi-basket2-fill"></i></div>
               <h3 class="np-program-title">Nourish &amp; Thrive</h3>
@@ -197,7 +207,7 @@
               </ul>
             </article>
           </div>
-          <div class="col-md-6 col-xl-3">
+          <div class="col-md-6 col-xl-3" data-program="housing">
             <article class="np-program-card np-reveal">
               <div class="np-program-icon np-icon-sky"><i class="bi bi-house-heart-fill"></i></div>
               <h3 class="np-program-title">Safe Harbor Housing</h3>
@@ -215,6 +225,7 @@
             </article>
           </div>
         </div>
+        <p class="np-empty-state d-none" id="npProgramEmpty">No programs match this filter.</p>
       </div>
     </section>
 
@@ -230,16 +241,16 @@
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-7">
             <div class="np-map-panel np-reveal">
-              <div class="np-map-art" aria-hidden="true">
+              <div class="np-map-art" role="img" aria-label="Coverage map with five regions">
                 <div class="np-map-grid"></div>
-                <span class="np-map-pin np-pin-1" title="Pacific Northwest"></span>
-                <span class="np-map-pin np-pin-2" title="Midwest"></span>
-                <span class="np-map-pin np-pin-3" title="Southeast"></span>
-                <span class="np-map-pin np-pin-4" title="Southwest"></span>
-                <span class="np-map-pin np-pin-5" title="Northeast"></span>
+                <button type="button" class="np-map-pin np-pin-1" data-region="pacific" title="Pacific Northwest" aria-label="Pacific Northwest"></button>
+                <button type="button" class="np-map-pin np-pin-2" data-region="midwest" title="Midwest" aria-label="Midwest Heartland"></button>
+                <button type="button" class="np-map-pin np-pin-3" data-region="southeast" title="Southeast" aria-label="Southeast Corridor"></button>
+                <button type="button" class="np-map-pin np-pin-4" data-region="southwest" title="Southwest" aria-label="Southwest"></button>
+                <button type="button" class="np-map-pin np-pin-5" data-region="northeast" title="Northeast" aria-label="Northeast"></button>
                 <div class="np-map-label">
                   <i class="bi bi-globe-americas"></i>
-                  <span>Coverage map placeholder · 5 regions · 42 communities</span>
+                  <span id="npMapHint">Select a pin or region · 5 regions · 42 communities</span>
                 </div>
               </div>
               <div class="np-map-legend">
@@ -252,36 +263,40 @@
           <div class="col-lg-5">
             <div class="np-region-panel np-reveal">
               <h3 class="np-region-title">Regions &amp; focus cities</h3>
-              <ul class="np-region-list">
-                <li>
+              <div class="np-search-wrap mb-3">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input type="search" class="form-control" id="npRegionSearch" placeholder="Search city or region…" aria-label="Search regions" />
+              </div>
+              <ul class="np-region-list" id="npRegionList">
+                <li data-region="pacific" tabindex="0" role="button">
                   <div>
                     <strong>Pacific Northwest</strong>
                     <span>Seattle · Portland · Spokane</span>
                   </div>
                   <span class="np-region-tag">12 sites</span>
                 </li>
-                <li>
+                <li data-region="midwest" tabindex="0" role="button">
                   <div>
                     <strong>Midwest Heartland</strong>
                     <span>Chicago · Detroit · Minneapolis</span>
                   </div>
                   <span class="np-region-tag">9 sites</span>
                 </li>
-                <li>
+                <li data-region="southeast" tabindex="0" role="button">
                   <div>
                     <strong>Southeast Corridor</strong>
                     <span>Atlanta · Nashville · Charlotte</span>
                   </div>
                   <span class="np-region-tag">8 sites</span>
                 </li>
-                <li>
+                <li data-region="southwest" tabindex="0" role="button">
                   <div>
                     <strong>Southwest</strong>
                     <span>Phoenix · Albuquerque · El Paso</span>
                   </div>
                   <span class="np-region-tag">7 sites</span>
                 </li>
-                <li>
+                <li data-region="northeast" tabindex="0" role="button">
                   <div>
                     <strong>Northeast</strong>
                     <span>Boston · Philadelphia · Newark</span>
@@ -289,6 +304,7 @@
                   <span class="np-region-tag">6 sites</span>
                 </li>
               </ul>
+              <p class="np-empty-state d-none" id="npRegionEmpty">No regions match your search.</p>
             </div>
           </div>
         </div>
@@ -311,6 +327,11 @@
           <button type="button" class="np-filter-btn" data-filter="2023">2023</button>
           <button type="button" class="np-filter-btn" data-filter="2022">2022</button>
         </div>
+        <div class="np-search-wrap np-reveal mb-4">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input type="search" class="form-control" id="npReportSearch" placeholder="Search reports…" aria-label="Search reports" />
+        </div>
+        <p class="np-result-count np-reveal" id="npReportCount">Showing 6 reports</p>
 
         <div class="row g-4" id="npReportGrid">
           <div class="col-md-6 col-xl-3" data-year="2025">
@@ -321,7 +342,7 @@
               </div>
               <h3 class="np-report-title">Annual Impact Report</h3>
               <p class="np-report-meta">48 pages · Audited outcomes · PDF</p>
-              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+              <a href="#" class="btn np-btn-outline w-100 np-download-btn" data-report="Annual Impact Report 2025"><i class="bi bi-download me-2"></i>Download</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-year="2025">
@@ -332,7 +353,7 @@
               </div>
               <h3 class="np-report-title">Financial Statement</h3>
               <p class="np-report-meta">Form 990 summary · Independent audit</p>
-              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+              <a href="#" class="btn np-btn-outline w-100 np-download-btn" data-report="Financial Statement 2025"><i class="bi bi-download me-2"></i>Download</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-year="2024">
@@ -343,7 +364,7 @@
               </div>
               <h3 class="np-report-title">Annual Impact Report</h3>
               <p class="np-report-meta">44 pages · Program deep-dives · PDF</p>
-              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+              <a href="#" class="btn np-btn-outline w-100 np-download-btn" data-report="Annual Impact Report 2024"><i class="bi bi-download me-2"></i>Download</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-year="2023">
@@ -354,7 +375,7 @@
               </div>
               <h3 class="np-report-title">Community Year Book</h3>
               <p class="np-report-meta">Stories, maps, and partner highlights</p>
-              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+              <a href="#" class="btn np-btn-outline w-100 np-download-btn" data-report="Community Year Book 2023"><i class="bi bi-download me-2"></i>Download</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-year="2022">
@@ -365,7 +386,7 @@
               </div>
               <h3 class="np-report-title">Impact Snapshot</h3>
               <p class="np-report-meta">2-page overview for partners</p>
-              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+              <a href="#" class="btn np-btn-outline w-100 np-download-btn" data-report="Impact Snapshot 2022"><i class="bi bi-download me-2"></i>Download</a>
             </article>
           </div>
           <div class="col-md-6 col-xl-3" data-year="2024">
@@ -376,10 +397,11 @@
               </div>
               <h3 class="np-report-title">Accountability Brief</h3>
               <p class="np-report-meta">Governance · ethics · safeguards</p>
-              <a href="#" class="btn np-btn-outline w-100"><i class="bi bi-download me-2"></i>Download</a>
+              <a href="#" class="btn np-btn-outline w-100 np-download-btn" data-report="Accountability Brief 2024"><i class="bi bi-download me-2"></i>Download</a>
             </article>
           </div>
         </div>
+        <p class="np-empty-state d-none" id="npReportEmpty">No reports match your search or year filter.</p>
       </div>
     </section>
 
@@ -392,8 +414,15 @@
           <p class="np-section-sub">Stories from people who found opportunity through BrightPath programs.</p>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-4">
+        <div class="np-toolbar np-reveal" role="group" aria-label="Filter stories">
+          <button type="button" class="np-chip np-chip-active" data-story-filter="all">All</button>
+          <button type="button" class="np-chip" data-story-filter="education">Education</button>
+          <button type="button" class="np-chip" data-story-filter="health">Health</button>
+          <button type="button" class="np-chip" data-story-filter="housing">Housing</button>
+        </div>
+
+        <div class="row g-4" id="npStoryGrid">
+          <div class="col-md-6 col-xl-4" data-story="education">
             <article class="np-story-card np-reveal">
               <div class="np-story-media np-story-media-1">
                 <span class="np-story-initials">MP</span>
@@ -410,7 +439,7 @@
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4">
+          <div class="col-md-6 col-xl-4" data-story="health">
             <article class="np-story-card np-reveal">
               <div class="np-story-media np-story-media-2">
                 <span class="np-story-initials">JR</span>
@@ -427,7 +456,7 @@
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4">
+          <div class="col-md-6 col-xl-4" data-story="housing">
             <article class="np-story-card np-reveal">
               <div class="np-story-media np-story-media-3">
                 <span class="np-story-initials">AL</span>
@@ -445,6 +474,7 @@
             </article>
           </div>
         </div>
+        <p class="np-empty-state d-none" id="npStoryEmpty">No stories match this filter.</p>
       </div>
     </section>
 
@@ -480,13 +510,80 @@
                 Your gift funds tutors, clinic days, food distributions, and housing support.
                 Partner with us as a donor, volunteer, or sponsor.
               </p>
+              <div class="np-impact-calc">
+                <label for="npGiftAmount" class="np-impact-calc-label">See what your gift can do</label>
+                <div class="np-impact-calc-row">
+                  <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" id="npGiftAmount" min="5" step="5" value="50" aria-label="Gift amount" />
+                  </div>
+                  <div class="np-amount-presets" role="group" aria-label="Suggested amounts">
+                    <button type="button" class="np-amount-btn" data-amount="25">$25</button>
+                    <button type="button" class="np-amount-btn np-amount-active" data-amount="50">$50</button>
+                    <button type="button" class="np-amount-btn" data-amount="100">$100</button>
+                    <button type="button" class="np-amount-btn" data-amount="250">$250</button>
+                  </div>
+                </div>
+                <p class="np-impact-calc-result" id="npGiftImpact" aria-live="polite">$50 can provide about <strong>100 meals</strong> or <strong>2 tutoring sessions</strong>.</p>
+              </div>
             </div>
             <div class="col-lg-5">
               <div class="np-cta-actions">
-                <a href="#" class="btn np-btn-primary btn-lg w-100"><i class="bi bi-heart-fill me-2"></i>Donate now</a>
-                <a href="#" class="btn np-btn-light btn-lg w-100"><i class="bi bi-person-plus me-2"></i>Volunteer</a>
-                <a href="#" class="btn np-btn-ghost btn-lg w-100"><i class="bi bi-handshake me-2"></i>Partner with us</a>
+                <button type="button" class="btn np-btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#npDonateModal">
+                  <i class="bi bi-heart-fill me-2"></i>Donate now
+                </button>
+                <button type="button" class="btn np-btn-light btn-lg w-100" data-bs-toggle="modal" data-bs-target="#npVolunteerModal">
+                  <i class="bi bi-person-plus me-2"></i>Volunteer
+                </button>
+                <button type="button" class="btn np-btn-ghost btn-lg w-100" id="npShareBtn">
+                  <i class="bi bi-share me-2"></i>Share this page
+                </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="np-section np-section-soft" id="faq">
+      <div class="container">
+        <div class="np-section-head np-reveal">
+          <p class="np-eyebrow">Donor FAQ</p>
+          <h2 class="np-section-title">Common questions</h2>
+          <p class="np-section-sub">Transparency answers for supporters considering a gift or partnership.</p>
+        </div>
+        <div class="accordion np-accordion np-reveal" id="npFaqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#npFaq1" aria-expanded="true" aria-controls="npFaq1">Is my donation tax-deductible?</button>
+            </h3>
+            <div id="npFaq1" class="accordion-collapse collapse show" data-bs-parent="#npFaqAccordion">
+              <div class="accordion-body">Yes. BrightPath Foundation is a 501(c)(3) nonprofit (EIN 45-1289047). You will receive a receipt for tax records after giving.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#npFaq2" aria-expanded="false" aria-controls="npFaq2">How much of my gift goes to programs?</button>
+            </h3>
+            <div id="npFaq2" class="accordion-collapse collapse" data-bs-parent="#npFaqAccordion">
+              <div class="accordion-body">In the latest audited year, about 86% of expenses supported programs directly. Full breakdowns are in our annual financial statements.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#npFaq3" aria-expanded="false" aria-controls="npFaq3">Can I designate my gift to a program?</button>
+            </h3>
+            <div id="npFaq3" class="accordion-collapse collapse" data-bs-parent="#npFaqAccordion">
+              <div class="accordion-body">Yes. Choose Learning Pathways, Community Clinics, Nourish &amp; Thrive, Safe Harbor Housing, or Where Needed Most when you donate.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#npFaq4" aria-expanded="false" aria-controls="npFaq4">How do I volunteer?</button>
+            </h3>
+            <div id="npFaq4" class="accordion-collapse collapse" data-bs-parent="#npFaqAccordion">
+              <div class="accordion-body">Open the Volunteer form, share your interests and city, and our community team will follow up with local opportunities.</div>
             </div>
           </div>
         </div>
@@ -529,7 +626,7 @@
             <li><a href="#reports">Annual reports</a></li>
             <li><a href="#partners">Partners</a></li>
             <li><a href="#donate">Donate</a></li>
-            <li><a href="#donate">Volunteer</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="col-md-4 col-lg-4">
@@ -539,6 +636,14 @@
             <li><i class="bi bi-telephone"></i> <a href="tel:+12065550140">(206) 555-0140</a></li>
             <li><i class="bi bi-envelope"></i> <a href="mailto:hello@brightpath.org">hello@brightpath.org</a></li>
           </ul>
+          <form class="np-newsletter" id="npNewsletterForm" novalidate>
+            <label for="npNewsletterEmail" class="np-footer-heading">Impact updates</label>
+            <div class="input-group">
+              <input type="email" class="form-control" id="npNewsletterEmail" placeholder="you@email.com" required aria-label="Email for newsletter" />
+              <button type="submit" class="btn np-btn-primary">Join</button>
+            </div>
+            <div class="invalid-feedback d-block" id="npNewsletterError" hidden>Enter a valid email.</div>
+          </form>
         </div>
       </div>
       <div class="np-footer-bottom">
@@ -547,6 +652,119 @@
       </div>
     </div>
   </footer>
+
+  <!-- Donate modal -->
+  <div class="modal fade" id="npDonateModal" tabindex="-1" aria-labelledby="npDonateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content np-modal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="npDonateModalLabel">Make a gift</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="npDonateForm" novalidate>
+          <div class="modal-body">
+            <div class="np-amount-presets mb-3" role="group" aria-label="Donation amount">
+              <button type="button" class="np-amount-btn" data-donate-amount="25">$25</button>
+              <button type="button" class="np-amount-btn np-amount-active" data-donate-amount="50">$50</button>
+              <button type="button" class="np-amount-btn" data-donate-amount="100">$100</button>
+              <button type="button" class="np-amount-btn" data-donate-amount="250">$250</button>
+            </div>
+            <div class="mb-3">
+              <label for="npDonateAmount" class="form-label">Amount (USD)</label>
+              <input type="number" class="form-control" id="npDonateAmount" min="5" step="1" value="50" required />
+              <div class="invalid-feedback">Enter at least $5.</div>
+            </div>
+            <div class="mb-3">
+              <label for="npDonateProgram" class="form-label">Designate to</label>
+              <select class="form-select" id="npDonateProgram" required>
+                <option value="general">Where needed most</option>
+                <option value="education">Learning Pathways</option>
+                <option value="health">Community Clinics</option>
+                <option value="food">Nourish &amp; Thrive</option>
+                <option value="housing">Safe Harbor Housing</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="npDonateName" class="form-label">Full name</label>
+              <input type="text" class="form-control" id="npDonateName" required placeholder="Your name" />
+              <div class="invalid-feedback">Enter your name.</div>
+            </div>
+            <div class="mb-0">
+              <label for="npDonateEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="npDonateEmail" required placeholder="you@email.com" />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn np-btn-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn np-btn-primary"><i class="bi bi-heart-fill me-1"></i> Complete gift</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Volunteer modal -->
+  <div class="modal fade" id="npVolunteerModal" tabindex="-1" aria-labelledby="npVolunteerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content np-modal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="npVolunteerModalLabel">Volunteer interest</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="npVolunteerForm" novalidate>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="npVolName" class="form-label">Full name</label>
+              <input type="text" class="form-control" id="npVolName" required />
+              <div class="invalid-feedback">Enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="npVolEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="npVolEmail" required />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="npVolCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="npVolCity" required placeholder="Seattle" />
+              <div class="invalid-feedback">Enter your city.</div>
+            </div>
+            <div class="mb-0">
+              <label for="npVolInterest" class="form-label">Interest</label>
+              <select class="form-select" id="npVolInterest" required>
+                <option value="">Select one</option>
+                <option>Tutoring</option>
+                <option>Clinic support</option>
+                <option>Food distribution</option>
+                <option>Housing navigation</option>
+                <option>Events &amp; fundraising</option>
+              </select>
+              <div class="invalid-feedback">Choose an interest.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn np-btn-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn np-btn-primary">Submit interest</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="npToast" class="toast np-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill text-success me-2"></i>
+        <strong class="me-auto" id="npToastTitle">Done</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="npToastBody">Action completed.</div>
+    </div>
+  </div>
+
+  <button type="button" class="np-back-top" id="npBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>

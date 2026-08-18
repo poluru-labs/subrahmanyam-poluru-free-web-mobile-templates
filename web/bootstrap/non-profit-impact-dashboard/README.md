@@ -11,19 +11,24 @@ This is a landing-page style impact dashboard—not an internal admin panel—de
 
 ## Features
 
-- Sticky responsive navbar with smooth scrolling
+- Sticky responsive navbar with smooth scrolling and scroll shadow
+- Skip link, back-to-top, and toast feedback for key actions
 - Hero with mission statement and CTAs (Annual Report / Donate)
 - “This Year in Impact” highlight banner
 - Animated impact counters (people served, communities, volunteers, funds, projects)
-- Program outcome cards with scroll-triggered progress bars
-- Geographic reach panel with map-style placeholder and region list
-- Filterable annual report / financial transparency cards
-- Success story cards with outcomes
+- Program outcome cards with category filters and scroll-triggered progress bars
+- Interactive geographic reach — clickable map pins, region highlight, city search
+- Filterable + searchable annual report cards with demo download toasts
+- Success stories filterable by Education / Health / Housing
 - Partners & sponsors logo grid
-- Donation / volunteer / partnership CTA
-- Footer with contact, social links, and quick nav
+- Donation impact calculator with amount presets
+- Donate and Volunteer modals with validation
+- Share this page (Web Share API or copy link)
+- Donor FAQ accordion
+- Footer newsletter signup
 - Scroll-reveal animations (CSS + IntersectionObserver)
 - Mobile-first, accessible contrast, semantic markup
+- Reduced-motion friendly counters and reveals
 - No heavy libraries beyond Bootstrap and Bootstrap Icons
 
 ## Brand Direction
@@ -65,13 +70,14 @@ Or open `index.html` directly in a modern browser.
 
 1. **Hero** — BrightPath Foundation mission + CTAs  
 2. **Impact stats** — Animated key metrics  
-3. **Programs** — Learning, Clinics, Nourish, Housing  
-4. **Geography** — Coverage map placeholder + regions  
-5. **Reports** — Year-filterable downloads  
-6. **Stories** — Beneficiary testimonials  
+3. **Programs** — Filterable Learning, Clinics, Nourish, Housing  
+4. **Geography** — Interactive map pins + searchable regions  
+5. **Reports** — Year + keyword filterable downloads  
+6. **Stories** — Filterable beneficiary testimonials  
 7. **Partners** — Sponsor logo placeholders  
-8. **CTA** — Donate / Volunteer / Partner  
-9. **Footer** — Contact, social, navigation  
+8. **CTA** — Impact calculator, donate / volunteer / share  
+9. **FAQ** — Donor transparency accordion  
+10. **Footer** — Contact, newsletter, social, navigation  
 
 ## Customization
 
