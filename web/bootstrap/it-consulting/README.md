@@ -23,7 +23,7 @@ A modern, responsive Bootstrap 5 consulting template perfect for consulting firm
 | **Email** | mail.spoluru@gmail.com |
 | **License** | Free for Personal and Commercial Use |
 | **Created** | October 2025 |
-| **Last Updated** | November 2025 |
+| **Last Updated** | August 2026 |
 
 ## 🎯 Live Demo
 
@@ -47,8 +47,17 @@ View the live demo at: [Demo Link Coming Soon]
 ### 📱 Layout & Navigation
 - **Multi-page Structure**: 9 dedicated pages for different services
 - **Breadcrumb Navigation**: Easy site navigation
-- **Sticky Header**: Always accessible navigation menu
-- **Mobile-first Design**: Optimized for all device sizes
+- **Sticky Header**: Shadow appears on scroll for clearer focus
+- **Skip Link & Back to Top**: Keyboard-friendly skip-to-content and floating back-to-top control
+- **Mobile-first Design**: Optimized for all device sizes; mobile nav closes after link taps
+
+### ⚡ UX & Functionality (`assets/js/ftpl.js`)
+- **Animated Stats**: Homepage counters animate when scrolled into view
+- **Service Search & Filters**: Homepage services filter by category and keyword
+- **Careers Board**: Searchable/filterable open roles with demo Apply toasts
+- **Contact Form**: Validation, character count, localStorage draft save/restore, success toast
+- **FAQ Accordion**: Contact FAQ items convert to a Bootstrap accordion at runtime
+- **Toasts**: Shared Bootstrap toast for feedback across interactive actions
 
 ### 🛠️ Technical Excellence
 - **Enhanced CSS Architecture**: Organized with em units and shorthand properties
@@ -56,6 +65,7 @@ View the live demo at: [Demo Link Coming Soon]
 - **Performance Optimized**: Efficient CSS with minimal redundancy
 - **Cross-browser Compatible**: Works on all modern browsers
 - **Form Validation**: Client-side validation with Bootstrap classes
+- **Reduced Motion**: Counter animations respect `prefers-reduced-motion`
 
 ### 📚 Development Features
 - **Comprehensive Documentation**: Detailed CSS style guide included
@@ -78,7 +88,9 @@ it-consulting/
 ├── 📄 it-training.html              # IT Training and education
 ├── 📁 assets/
 │   ├── 📁 css/
-│   │   └── 📄 02-free-template.css  # ⭐ Enhanced main stylesheet
+│   │   └── 📄 02-free-template.css  # Enhanced main stylesheet (+ UX styles)
+│   ├── 📁 js/
+│   │   └── 📄 ftpl.js               # Shared UX enhancements (all pages)
 │   └── 📁 images/
 │       └── 🖼️ main_banner.jpg       # Hero section background
 ├── 📄 README.md                     # Documentation (this file)
@@ -92,7 +104,7 @@ it-consulting/
 | `index.html` | Homepage | Hero banner, services overview, statistics, about preview |
 | `about.html` | Company info | Mission, vision, team, company history |
 | `contact.html` | Contact | Contact form, office info, FAQ section |
-| `careers.html` | Job listings | Open positions, benefits, application process |
+| `careers.html` | Job listings | Filterable open roles, search, demo apply actions |
 | `it-consulting.html` | IT Services | Consulting services, expertise areas |
 | `app-development.html` | App Dev | Mobile and web application development |
 | `staff-augmentation.html` | Staffing | Team augmentation services |
@@ -306,6 +318,7 @@ We welcome contributions! Here's how you can help:
 |---------|------|---------|
 | 1.0.0 | Oct 2025 | Initial release with Bootstrap 5 |
 | 1.1.0 | Nov 2025 | Enhanced CSS with em units, shorthand properties |
+| 1.2.0 | Aug 2026 | UX enhancements: filters, counters, contact draft, careers board, skip/BTT |
 
 ## 📄 License & Usage Rights
 

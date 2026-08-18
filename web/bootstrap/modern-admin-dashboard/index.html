@@ -20,6 +20,7 @@
   <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
 <body>
+  <a class="ftl-skip-link" href="#ftlMainContent">Skip to content</a>
 
   <!-- Mobile sidebar overlay -->
   <div class="ftl-sidebar-overlay" id="ftlSidebarOverlay" aria-hidden="true"></div>
@@ -132,20 +133,24 @@
           </button>
           <div class="ftl-search">
             <i class="bi bi-search"></i>
-            <input type="search" class="form-control" placeholder="Search orders, products, customers…" aria-label="Search" />
+            <input type="search" class="form-control" id="ftlGlobalSearch" placeholder="Search orders, products, customers… (/)" aria-label="Search dashboard" />
+            <kbd class="ftl-search-hint" aria-hidden="true">/</kbd>
           </div>
         </div>
 
         <div class="ftl-topbar-right">
+          <button type="button" class="ftl-icon-btn" id="ftlThemeToggle" aria-label="Toggle compact density" title="Toggle compact density">
+            <i class="bi bi-arrows-collapse"></i>
+          </button>
           <div class="dropdown">
-            <button class="ftl-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+            <button class="ftl-icon-btn" type="button" id="ftlNotifToggle" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
               <i class="bi bi-bell"></i>
-              <span class="ftl-dot"></span>
+              <span class="ftl-dot" id="ftlNotifDot"></span>
             </button>
-            <div class="dropdown-menu dropdown-menu-end ftl-dropdown">
+            <div class="dropdown-menu dropdown-menu-end ftl-dropdown" id="ftlNotifMenu">
               <div class="ftl-dropdown-header">
                 <strong>Notifications</strong>
-                <a href="#notifications">Mark all read</a>
+                <button type="button" class="ftl-text-btn" id="ftlMarkNotifRead">Mark all read</button>
               </div>
               <a class="dropdown-item ftl-notif-item" href="#">
                 <span class="ftl-notif-icon ftl-bg-success"><i class="bi bi-bag-check"></i></span>
@@ -191,17 +196,17 @@
       </header>
 
       <!-- Content -->
-      <main class="ftl-content">
+      <main class="ftl-content" id="ftlMainContent">
         <div class="ftl-page-head">
           <div>
             <h1 class="ftl-page-title">Dashboard</h1>
             <p class="ftl-page-sub">Welcome back — here’s what’s happening in your store today.</p>
           </div>
           <div class="ftl-page-actions">
-            <button type="button" class="btn ftl-btn-outline">
-              <i class="bi bi-download me-1"></i> Export
+            <button type="button" class="btn ftl-btn-outline" id="ftlExportOrders">
+              <i class="bi bi-download me-1"></i> Export CSV
             </button>
-            <button type="button" class="btn ftl-btn-primary">
+            <button type="button" class="btn ftl-btn-primary" id="ftlAddProductBtn" data-bs-toggle="modal" data-bs-target="#ftlProductModal">
               <i class="bi bi-plus-lg me-1"></i> Add Product
             </button>
           </div>
@@ -216,7 +221,7 @@
               </div>
               <div class="ftl-stat-body">
                 <p class="ftl-stat-label">Total Revenue</p>
-                <h2 class="ftl-stat-value">$84,290</h2>
+                <h2 class="ftl-stat-value" data-count="84290" data-prefix="$" data-decimals="0">$0</h2>
                 <p class="ftl-stat-trend ftl-up"><i class="bi bi-arrow-up-right"></i> 12.4% vs last week</p>
               </div>
             </article>
@@ -228,7 +233,7 @@
               </div>
               <div class="ftl-stat-body">
                 <p class="ftl-stat-label">Orders</p>
-                <h2 class="ftl-stat-value">1,248</h2>
+                <h2 class="ftl-stat-value" data-count="1248" data-prefix="" data-decimals="0">0</h2>
                 <p class="ftl-stat-trend ftl-up"><i class="bi bi-arrow-up-right"></i> 8.1% vs last week</p>
               </div>
             </article>
@@ -240,7 +245,7 @@
               </div>
               <div class="ftl-stat-body">
                 <p class="ftl-stat-label">Customers</p>
-                <h2 class="ftl-stat-value">6,402</h2>
+                <h2 class="ftl-stat-value" data-count="6402" data-prefix="" data-decimals="0">0</h2>
                 <p class="ftl-stat-trend ftl-up"><i class="bi bi-arrow-up-right"></i> 3.6% vs last week</p>
               </div>
             </article>
@@ -252,7 +257,7 @@
               </div>
               <div class="ftl-stat-body">
                 <p class="ftl-stat-label">Conversion</p>
-                <h2 class="ftl-stat-value">3.28%</h2>
+                <h2 class="ftl-stat-value" data-count="3.28" data-suffix="%" data-decimals="2">0%</h2>
                 <p class="ftl-stat-trend ftl-down"><i class="bi bi-arrow-down-right"></i> 0.4% vs last week</p>
               </div>
             </article>
@@ -293,10 +298,10 @@
                 <canvas id="ftlTrafficChart" aria-label="Traffic sources chart" role="img"></canvas>
               </div>
               <ul class="ftl-legend">
-                <li><span class="ftl-swatch" style="background:#D90000"></span> Organic <strong>42%</strong></li>
-                <li><span class="ftl-swatch" style="background:#007DCC"></span> Paid Ads <strong>28%</strong></li>
-                <li><span class="ftl-swatch" style="background:#f59e0b"></span> Social <strong>18%</strong></li>
-                <li><span class="ftl-swatch" style="background:#64748b"></span> Referral <strong>12%</strong></li>
+                <li><span class="ftl-swatch ftl-swatch-organic"></span> Organic <strong>42%</strong></li>
+                <li><span class="ftl-swatch ftl-swatch-paid"></span> Paid Ads <strong>28%</strong></li>
+                <li><span class="ftl-swatch ftl-swatch-social"></span> Social <strong>18%</strong></li>
+                <li><span class="ftl-swatch ftl-swatch-referral"></span> Referral <strong>12%</strong></li>
               </ul>
             </section>
           </div>
@@ -313,8 +318,22 @@
                 </div>
                 <a href="#orders" class="ftl-link">View all <i class="bi bi-arrow-right"></i></a>
               </div>
+              <div class="ftl-toolbar">
+                <div class="ftl-toolbar-search">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <input type="search" class="form-control" id="ftlOrderSearch" placeholder="Filter by order, customer, product…" aria-label="Filter orders" />
+                </div>
+                <div class="ftl-filter-bar" role="group" aria-label="Filter by status">
+                  <button type="button" class="ftl-filter-btn is-active" data-order-filter="all">All</button>
+                  <button type="button" class="ftl-filter-btn" data-order-filter="paid">Paid</button>
+                  <button type="button" class="ftl-filter-btn" data-order-filter="shipped">Shipped</button>
+                  <button type="button" class="ftl-filter-btn" data-order-filter="pending">Pending</button>
+                  <button type="button" class="ftl-filter-btn" data-order-filter="refund">Refunded</button>
+                </div>
+              </div>
+              <p class="ftl-result-count" id="ftlOrderCount">Showing 5 orders</p>
               <div class="table-responsive">
-                <table class="table ftl-table align-middle mb-0">
+                <table class="table ftl-table align-middle mb-0" id="ftlOrdersTable">
                   <thead>
                     <tr>
                       <th>Order</th>
@@ -326,7 +345,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr data-status="paid">
                       <td class="ftl-order-id">#4821</td>
                       <td>
                         <div class="ftl-customer">
@@ -340,9 +359,18 @@
                       <td>Nordic Desk Lamp</td>
                       <td>$128.00</td>
                       <td><span class="ftl-status ftl-status-paid">Paid</span></td>
-                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="ftl-icon-btn sm" data-bs-toggle="dropdown" aria-label="Order options"><i class="bi bi-three-dots"></i></button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button type="button" class="dropdown-item ftl-copy-order" data-order="#4821"><i class="bi bi-clipboard me-2"></i>Copy ID</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4821" data-action="view"><i class="bi bi-eye me-2"></i>View</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4821" data-action="ship"><i class="bi bi-truck me-2"></i>Mark shipped</button></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
-                    <tr>
+                    <tr data-status="shipped">
                       <td class="ftl-order-id">#4820</td>
                       <td>
                         <div class="ftl-customer">
@@ -356,9 +384,17 @@
                       <td>Canvas Tote Bag</td>
                       <td>$46.50</td>
                       <td><span class="ftl-status ftl-status-shipped">Shipped</span></td>
-                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="ftl-icon-btn sm" data-bs-toggle="dropdown" aria-label="Order options"><i class="bi bi-three-dots"></i></button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button type="button" class="dropdown-item ftl-copy-order" data-order="#4820"><i class="bi bi-clipboard me-2"></i>Copy ID</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4820" data-action="view"><i class="bi bi-eye me-2"></i>View</button></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
-                    <tr>
+                    <tr data-status="pending">
                       <td class="ftl-order-id">#4819</td>
                       <td>
                         <div class="ftl-customer">
@@ -372,9 +408,18 @@
                       <td>Wireless Earbuds Pro</td>
                       <td>$189.00</td>
                       <td><span class="ftl-status ftl-status-pending">Pending</span></td>
-                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="ftl-icon-btn sm" data-bs-toggle="dropdown" aria-label="Order options"><i class="bi bi-three-dots"></i></button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button type="button" class="dropdown-item ftl-copy-order" data-order="#4819"><i class="bi bi-clipboard me-2"></i>Copy ID</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4819" data-action="view"><i class="bi bi-eye me-2"></i>View</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4819" data-action="ship"><i class="bi bi-truck me-2"></i>Mark shipped</button></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
-                    <tr>
+                    <tr data-status="paid">
                       <td class="ftl-order-id">#4818</td>
                       <td>
                         <div class="ftl-customer">
@@ -388,13 +433,22 @@
                       <td>Linen Throw Blanket</td>
                       <td>$72.00</td>
                       <td><span class="ftl-status ftl-status-paid">Paid</span></td>
-                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="ftl-icon-btn sm" data-bs-toggle="dropdown" aria-label="Order options"><i class="bi bi-three-dots"></i></button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button type="button" class="dropdown-item ftl-copy-order" data-order="#4818"><i class="bi bi-clipboard me-2"></i>Copy ID</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4818" data-action="view"><i class="bi bi-eye me-2"></i>View</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4818" data-action="ship"><i class="bi bi-truck me-2"></i>Mark shipped</button></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
-                    <tr>
+                    <tr data-status="refund">
                       <td class="ftl-order-id">#4817</td>
                       <td>
                         <div class="ftl-customer">
-                          <span class="ftl-avatar" style="background:#334155">SP</span>
+                          <span class="ftl-avatar ftl-bg-slate">SP</span>
                           <span>
                             <span class="ftl-customer-name">Poluru S</span>
                             <span class="ftl-customer-email">spoluru@email.com</span>
@@ -404,11 +458,20 @@
                       <td>Ceramic Mug Set</td>
                       <td>$54.00</td>
                       <td><span class="ftl-status ftl-status-refund">Refunded</span></td>
-                      <td><button type="button" class="ftl-icon-btn sm" aria-label="Order options"><i class="bi bi-three-dots"></i></button></td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="ftl-icon-btn sm" data-bs-toggle="dropdown" aria-label="Order options"><i class="bi bi-three-dots"></i></button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button type="button" class="dropdown-item ftl-copy-order" data-order="#4817"><i class="bi bi-clipboard me-2"></i>Copy ID</button></li>
+                            <li><button type="button" class="dropdown-item ftl-order-action" data-order="#4817" data-action="view"><i class="bi bi-eye me-2"></i>View</button></li>
+                          </ul>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <p class="ftl-empty-state d-none" id="ftlOrderEmpty">No orders match your search or filters.</p>
             </section>
           </div>
 
@@ -455,7 +518,7 @@
                   <span class="ftl-product-pct">+6%</span>
                 </li>
                 <li>
-                  <div class="ftl-product-thumb" style="background:#64748b"><i class="bi bi-house-heart"></i></div>
+                  <div class="ftl-product-thumb ftl-bg-slate"><i class="bi bi-house-heart"></i></div>
                   <div class="ftl-product-meta">
                     <span class="ftl-product-name">Linen Throw Blanket</span>
                     <span class="ftl-product-sales">121 sold · $72</span>
@@ -482,28 +545,37 @@
                   <div>
                     <span class="ftl-alert-name">Wireless Earbuds Pro</span>
                     <div class="progress ftl-progress" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar bg-danger" style="width:12%"></div>
+                      <div class="progress-bar bg-danger ftl-w-12"></div>
                     </div>
                   </div>
-                  <span class="ftl-alert-qty ftl-text-danger">12 left</span>
+                  <div class="ftl-alert-actions">
+                    <span class="ftl-alert-qty ftl-text-danger">12 left</span>
+                    <button type="button" class="btn btn-sm ftl-restock-btn" data-product="Wireless Earbuds Pro">Restock</button>
+                  </div>
                 </li>
                 <li>
                   <div>
                     <span class="ftl-alert-name">Leather Wallet</span>
                     <div class="progress ftl-progress" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar bg-warning" style="width:28%"></div>
+                      <div class="progress-bar bg-warning ftl-w-28"></div>
                     </div>
                   </div>
-                  <span class="ftl-alert-qty ftl-text-warn">28 left</span>
+                  <div class="ftl-alert-actions">
+                    <span class="ftl-alert-qty ftl-text-warn">28 left</span>
+                    <button type="button" class="btn btn-sm ftl-restock-btn" data-product="Leather Wallet">Restock</button>
+                  </div>
                 </li>
                 <li>
                   <div>
                     <span class="ftl-alert-name">Desk Organizer</span>
                     <div class="progress ftl-progress" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar bg-warning" style="width:35%"></div>
+                      <div class="progress-bar bg-warning ftl-w-35"></div>
                     </div>
                   </div>
-                  <span class="ftl-alert-qty ftl-text-warn">35 left</span>
+                  <div class="ftl-alert-actions">
+                    <span class="ftl-alert-qty ftl-text-warn">35 left</span>
+                    <button type="button" class="btn btn-sm ftl-restock-btn" data-product="Desk Organizer">Restock</button>
+                  </div>
                 </li>
               </ul>
               <a href="#inventory" class="ftl-link mt-3 d-inline-flex">Manage inventory <i class="bi bi-arrow-right"></i></a>
@@ -589,6 +661,69 @@
       </main>
     </div>
   </div>
+
+  <!-- Add Product modal -->
+  <div class="modal fade" id="ftlProductModal" tabindex="-1" aria-labelledby="ftlProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ftl-modal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="ftlProductModalLabel">Add product</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="ftlProductForm" novalidate>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="ftlProductName" class="form-label">Product name</label>
+              <input type="text" class="form-control" id="ftlProductName" required placeholder="e.g. Ceramic Pour-Over Set" />
+              <div class="invalid-feedback">Enter a product name.</div>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="ftlProductPrice" class="form-label">Price (USD)</label>
+                <input type="number" class="form-control" id="ftlProductPrice" min="0" step="0.01" required placeholder="49.00" />
+                <div class="invalid-feedback">Enter a valid price.</div>
+              </div>
+              <div class="col-sm-6">
+                <label for="ftlProductStock" class="form-label">Stock</label>
+                <input type="number" class="form-control" id="ftlProductStock" min="0" step="1" required placeholder="100" />
+                <div class="invalid-feedback">Enter stock quantity.</div>
+              </div>
+            </div>
+            <div class="mt-3">
+              <label for="ftlProductCategory" class="form-label">Category</label>
+              <select class="form-select" id="ftlProductCategory" required>
+                <option value="">Select category</option>
+                <option>Home</option>
+                <option>Electronics</option>
+                <option>Accessories</option>
+                <option>Apparel</option>
+              </select>
+              <div class="invalid-feedback">Choose a category.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn ftl-btn-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn ftl-btn-primary">Save product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="ftlToast" class="toast ftl-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill text-success me-2"></i>
+        <strong class="me-auto" id="ftlToastTitle">Done</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="ftlToastBody">Action completed.</div>
+    </div>
+  </div>
+
+  <button type="button" class="ftl-back-top" id="ftlBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>

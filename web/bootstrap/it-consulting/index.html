@@ -121,19 +121,19 @@
         <div class="row text-center">
           <div class="col-md-3 mb-4">
                         <div class="ftpl-stat-item">
-              <h3 class="ftpl-stat-number">500+</h3>
+              <h3 class="ftpl-stat-number" data-target="500" data-suffix="+">0</h3>
               <p class="ftpl-stat-label">Projects Completed</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center mb-4">
             <div class="ftpl-stat-item">
-              <h3 class="ftpl-stat-number">15+</h3>
+              <h3 class="ftpl-stat-number" data-target="15" data-suffix="+">0</h3>
               <p class="ftpl-stat-label">Years Experience</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center mb-4">
             <div class="ftpl-stat-item">
-              <h3 class="ftpl-stat-number">98%</h3>
+              <h3 class="ftpl-stat-number" data-target="98" data-suffix="%">0</h3>
               <p class="ftpl-stat-label">Client Satisfaction</p>
             </div>
           </div>
@@ -148,119 +148,120 @@
     </div>
     <div id="services">
       <div class="container">
-      <div class="ftpl-section-header text-center mb-5">
-        <h2 class="ftpl-our-text mb-4"><span>LOREM IPSUM</span></h2>
-        <div class="ftpl-section-divider mx-auto mb-4"></div>
-        <p class="lead ftpl-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-      </div> 
-      <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
+        <div class="ftpl-section-header text-center mb-5">
+          <h2 class="ftpl-our-text mb-4"><span>LOREM IPSUM</span></h2>
+          <div class="ftpl-section-divider mx-auto mb-4"></div>
+          <p class="lead ftpl-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+
+        <div class="ftpl-toolbar">
+          <div class="ftpl-search-wrap">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" id="ftplServiceSearch" placeholder="Search services…" aria-label="Search services" />
+          </div>
+          <div class="ftpl-filter-bar" role="group" aria-label="Filter services">
+            <button type="button" class="ftpl-filter-btn is-active" data-service-filter="all">All</button>
+            <button type="button" class="ftpl-filter-btn" data-service-filter="consulting">Consulting</button>
+            <button type="button" class="ftpl-filter-btn" data-service-filter="staffing">Staffing</button>
+            <button type="button" class="ftpl-filter-btn" data-service-filter="development">Development</button>
+            <button type="button" class="ftpl-filter-btn" data-service-filter="training">Training</button>
+          </div>
+        </div>
+        <p class="ftpl-result-count" id="ftplServiceCount">Showing 6 services</p>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-service="consulting">
             <div class="ftpl-service-card bg-white shadow-lg border-0 p-5 mb-4 h-100">
               <div class="ftpl-service-icon mb-4">
-                <i class="fa-solid fa-chart-line"></i>
+                <i class="fas fa-laptop-code fa-2x text-primary"></i>
               </div>
               <h3 class="ftpl-service-title mb-3"><span>Lorem</span> Ipsum</h3>
               <p class="ftpl-service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
               <ul class="ftpl-service-features">
-                <li>Lorem Ipsum Dolor</li>
-                <li>Consectetur Adipiscing</li>
-                <li>Sed Do Eiusmod</li>
-                <li>Tempor Incididunt</li>
+                <li>Strategy workshops</li>
+                <li>Architecture reviews</li>
+                <li>Roadmap planning</li>
               </ul>
               <a href="it-consulting.html" class="ftpl-service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-service="staffing">
             <div class="ftpl-service-card bg-white shadow-lg border-0 p-5 mb-4 h-100">
               <div class="ftpl-service-icon mb-4">
-                <i class="fa-solid fa-users"></i>
+                <i class="fas fa-users fa-2x text-primary"></i>
               </div>
               <h3 class="ftpl-service-title mb-3"><span>Dolor</span> Sit Amet</h3>
               <p class="ftpl-service-description">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
               <ul class="ftpl-service-features">
-                <li>Duis Aute Irure</li>
-                <li>Dolor Reprehenderit</li>
-                <li>Voluptate Velit</li>
-                <li>Esse Cillum</li>
+                <li>Contract talent</li>
+                <li>Team extensions</li>
+                <li>Specialist hiring</li>
               </ul>
               <a href="staff-augmentation.html" class="ftpl-service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-service="development">
             <div class="ftpl-service-card bg-white shadow-lg border-0 p-5 mb-4 h-100">
               <div class="ftpl-service-icon mb-4">
-                <i class="fa-solid fa-mobile-alt"></i>
+                <i class="fas fa-mobile-alt fa-2x text-primary"></i>
               </div>
               <h3 class="ftpl-service-title mb-3"><span>Fugiat</span> Nulla Pariatur</h3>
               <p class="ftpl-service-description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
               <ul class="ftpl-service-features">
-                <li>Accusantium Doloremque</li>
-                <li>Laudantium Totam</li>
-                <li>Rem Aperiam</li>
-                <li>Eaque Ipsa</li>
+                <li>iOS &amp; Android</li>
+                <li>Product design</li>
+                <li>API integration</li>
               </ul>
               <a href="app-development.html" class="ftpl-service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-
-
-          
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-service="development">
             <div class="ftpl-service-card bg-white shadow-lg border-0 p-5 mb-4 h-100">
               <div class="ftpl-service-icon mb-4">
-                <i class="fa-solid fa-code"></i>
+                <i class="fas fa-globe fa-2x text-primary"></i>
               </div>
               <h3 class="ftpl-service-title mb-3"><span>Quae</span> Inventore</h3>
               <p class="ftpl-service-description">Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
               <ul class="ftpl-service-features">
-                <li>Eos Qui Ratione</li>
-                <li>Voluptatem Sequi</li>
-                <li>Nesciunt Neque</li>
-                <li>Porro Quisquam</li>
+                <li>Marketing sites</li>
+                <li>Web apps</li>
+                <li>CMS builds</li>
               </ul>
               <a href="web-development.html" class="ftpl-service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-service="consulting">
             <div class="ftpl-service-card bg-white shadow-lg border-0 p-5 mb-4 h-100">
               <div class="ftpl-service-icon mb-4">
-                <i class="fa-solid fa-cloud"></i>
+                <i class="fas fa-cogs fa-2x text-primary"></i>
               </div>
               <h3 class="ftpl-service-title mb-3"><span>Dolorem</span> Eum Fugiat</h3>
               <p class="ftpl-service-description">Quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.</p>
               <ul class="ftpl-service-features">
-                <li>Excepturi Sint</li>
-                <li>Occaecati Cupiditate</li>
-                <li>Non Provident</li>
-                <li>Similique Sunt</li>
+                <li>Process design</li>
+                <li>Cloud advisory</li>
+                <li>Security reviews</li>
               </ul>
               <a href="it-consulting.html" class="ftpl-service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-service="training">
             <div class="ftpl-service-card bg-white shadow-lg border-0 p-5 mb-4 h-100">
               <div class="ftpl-service-icon mb-4">
-                <i class="fa-solid fa-graduation-cap"></i>
+                <i class="fas fa-chalkboard-teacher fa-2x text-primary"></i>
               </div>
               <h3 class="ftpl-service-title mb-3"><span>Culpa</span> Qui Officia</h3>
               <p class="ftpl-service-description">Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque.</p>
               <ul class="ftpl-service-features">
-                <li>Nihil Impedit</li>
-                <li>Quo Minus</li>
-                <li>Id Quod Maxime</li>
-                <li>Placeat Facere</li>
+                <li>Team workshops</li>
+                <li>Upskilling paths</li>
+                <li>Certification prep</li>
               </ul>
               <a href="it-training.html" class="ftpl-service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
-
-
-        </div>
+        <p class="ftpl-empty-state d-none" id="ftplServiceEmpty">No services match your search or filters.</p>
 
         <div class="section-header text-center mb-5 mt-5">
           <h2 class="our_text mb-4"><span>LOREM IPSUM DOLOR</span></h2>
@@ -398,16 +399,10 @@
       </div>
     </footer>
   </section>
-  <script>
-    let dt = new Date();
-    document.querySelector('#year').innerHTML = dt.getFullYear();
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
+    <script src="assets/js/ftpl.js"></script>
 </body>
 
 </html>

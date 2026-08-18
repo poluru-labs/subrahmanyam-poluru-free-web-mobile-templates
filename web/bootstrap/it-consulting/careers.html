@@ -109,22 +109,105 @@
       </div>
     </div>
     <div id="content">
-        <div class="container">
-            <div class="bg-white mt-4 mb-4 border shadow-lg p-4">
-                <h1>Lorem Ipsum Dolor Sit</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <h2 class="ftpl-our-text mb-3"><span>Open Roles</span></h2>
+                <p class="lead text-secondary mb-0">Filter openings by team, or search by title and location.</p>
+            </div>
 
-                <div class="pt-4 mb-4">
-                    <p>Lorem ipsum dolor sit amet: <a href="mailto:lipsum@lorem.com">lipsum@lorem.com</a></p>
+            <div class="ftpl-toolbar">
+                <div class="ftpl-search-wrap">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="search" class="form-control" id="ftplJobSearch" placeholder="Search roles…" aria-label="Search jobs" />
                 </div>
+                <div class="ftpl-filter-bar" role="group" aria-label="Filter jobs">
+                    <button type="button" class="ftpl-filter-btn is-active" data-job-filter="all">All</button>
+                    <button type="button" class="ftpl-filter-btn" data-job-filter="engineering">Engineering</button>
+                    <button type="button" class="ftpl-filter-btn" data-job-filter="consulting">Consulting</button>
+                    <button type="button" class="ftpl-filter-btn" data-job-filter="delivery">Delivery</button>
+                </div>
+            </div>
+            <p class="ftpl-result-count" id="ftplJobCount">6 open roles</p>
 
-                <p>
-                    <b>Lorem Ipsum</b>: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                </p>
+            <div class="row g-4 mb-4">
+                <div class="col-lg-6" data-job="engineering">
+                    <article class="ftpl-job-card">
+                        <span class="ftpl-job-badge">Engineering</span>
+                        <h3 class="h5 mt-2 mb-1">Senior Full-Stack Engineer</h3>
+                        <div class="ftpl-job-meta">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>Remote · US</span>
+                            <span><i class="fas fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                        <p class="text-secondary mb-3">Build client portals and internal tooling with modern web stacks.</p>
+                        <button type="button" class="btn btn-primary ftpl-apply-btn" data-role="Senior Full-Stack Engineer">Apply</button>
+                    </article>
+                </div>
+                <div class="col-lg-6" data-job="consulting">
+                    <article class="ftpl-job-card">
+                        <span class="ftpl-job-badge">Consulting</span>
+                        <h3 class="h5 mt-2 mb-1">IT Strategy Consultant</h3>
+                        <div class="ftpl-job-meta">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>Hybrid · Austin</span>
+                            <span><i class="fas fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                        <p class="text-secondary mb-3">Lead discovery workshops and architecture roadmaps for enterprise clients.</p>
+                        <button type="button" class="btn btn-primary ftpl-apply-btn" data-role="IT Strategy Consultant">Apply</button>
+                    </article>
+                </div>
+                <div class="col-lg-6" data-job="engineering">
+                    <article class="ftpl-job-card">
+                        <span class="ftpl-job-badge">Engineering</span>
+                        <h3 class="h5 mt-2 mb-1">Mobile App Developer</h3>
+                        <div class="ftpl-job-meta">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>Remote</span>
+                            <span><i class="fas fa-briefcase me-1"></i>Contract</span>
+                        </div>
+                        <p class="text-secondary mb-3">Ship iOS and Android experiences for product engagements.</p>
+                        <button type="button" class="btn btn-primary ftpl-apply-btn" data-role="Mobile App Developer">Apply</button>
+                    </article>
+                </div>
+                <div class="col-lg-6" data-job="delivery">
+                    <article class="ftpl-job-card">
+                        <span class="ftpl-job-badge">Delivery</span>
+                        <h3 class="h5 mt-2 mb-1">Project Manager</h3>
+                        <div class="ftpl-job-meta">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>On-site · Dallas</span>
+                            <span><i class="fas fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                        <p class="text-secondary mb-3">Own delivery cadence, stakeholder updates, and sprint planning.</p>
+                        <button type="button" class="btn btn-primary ftpl-apply-btn" data-role="Project Manager">Apply</button>
+                    </article>
+                </div>
+                <div class="col-lg-6" data-job="consulting">
+                    <article class="ftpl-job-card">
+                        <span class="ftpl-job-badge">Consulting</span>
+                        <h3 class="h5 mt-2 mb-1">Cloud Solutions Advisor</h3>
+                        <div class="ftpl-job-meta">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>Hybrid</span>
+                            <span><i class="fas fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                        <p class="text-secondary mb-3">Advise on cloud migration, cost, and security for mid-market teams.</p>
+                        <button type="button" class="btn btn-primary ftpl-apply-btn" data-role="Cloud Solutions Advisor">Apply</button>
+                    </article>
+                </div>
+                <div class="col-lg-6" data-job="delivery">
+                    <article class="ftpl-job-card">
+                        <span class="ftpl-job-badge">Delivery</span>
+                        <h3 class="h5 mt-2 mb-1">Technical Recruiter</h3>
+                        <div class="ftpl-job-meta">
+                            <span><i class="fas fa-map-marker-alt me-1"></i>Remote</span>
+                            <span><i class="fas fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                        <p class="text-secondary mb-3">Source engineers and consultants for staff-augmentation programs.</p>
+                        <button type="button" class="btn btn-primary ftpl-apply-btn" data-role="Technical Recruiter">Apply</button>
+                    </article>
+                </div>
+            </div>
+            <p class="ftpl-empty-state d-none" id="ftplJobEmpty">No roles match your search or filters.</p>
+
+            <div class="bg-white border shadow-sm rounded-3 p-4 mb-4">
+                <h3 class="h5">Don’t see a fit?</h3>
+                <p class="text-secondary mb-2">Send a general interest note to <a href="mailto:lipsum@lorem.com">lipsum@lorem.com</a> — we keep résumés for upcoming openings.</p>
             </div>
         </div>
     </div>
@@ -174,16 +257,10 @@
       </div>
     </footer>
   </section>
-  <script>
-    let dt = new Date();
-    document.querySelector('#year').innerHTML = dt.getFullYear();
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
+    <script src="assets/js/ftpl.js"></script>
 </body>
 
 </html>

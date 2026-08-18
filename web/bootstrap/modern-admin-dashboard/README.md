@@ -9,20 +9,28 @@ A responsive ecommerce admin dashboard built with **Bootstrap 5**, **Bootstrap I
 
 ## Features
 
-- **Ecommerce KPIs** — Revenue, orders, customers, and conversion rate cards with trend indicators
+- **Ecommerce KPIs** — Revenue, orders, customers, and conversion rate cards with animated counters
 - **Sales overview chart** — Interactive line chart with 7D / 30D / 90D range switching
 - **Traffic sources** — Doughnut chart with Organic, Paid Ads, Social, and Referral breakdown
-- **Recent orders table** — Customer avatars, product names, amounts, and status badges (Paid, Shipped, Pending, Refunded)
+- **Recent orders table** — Search + status filters, copy ID, view / mark shipped actions
+- **CSV export** — Download the currently visible orders as a CSV file
+- **Add product modal** — Validated demo form for catalog entries with toast confirmation
 - **Top products** — Best-seller list with sales counts and growth percentages
-- **Inventory alerts** — Low-stock progress bars for restock visibility
+- **Inventory alerts** — Low-stock progress bars with one-click demo Restock actions
 - **Customer snapshot** — New customers, returning rate, AOV, and store rating
 - **Activity feed** — Live-style store event timeline
+- **Notifications** — Dropdown alerts with Mark all read
+- **Compact density** — Toggle denser spacing (persisted in localStorage)
+- **Keyboard search** — Press `/` to focus the topbar search
+- **Skip link & back to top** — Accessibility and long-page navigation helpers
+- **Scroll-aware nav** — Sidebar highlight follows the section in view
 - **Full-height sidebar** — Fixed navigation with brand, section labels, badges, and upgrade card
 - **Mobile sidebar toggle** — Hamburger menu, overlay, Escape key, and auto-close on resize / link tap
-- **Sticky topbar** — Search, notifications dropdown, and user menu
+- **Sticky topbar** — Search, density toggle, notifications dropdown, and user menu
 - **Google Fonts (Inter)** — Popular UI typeface loaded via Google Fonts CDN
 - **Bootstrap Icons** — Consistent iconography across navigation and widgets
 - **Responsive layout** — Desktop fixed sidebar; tablet/mobile off-canvas drawer
+- **Reduced motion** — Counter and chart animations respect `prefers-reduced-motion`
 - **No build step** — Open `index.html` or serve locally; all libraries via CDN
 
 ## Tech Stack
@@ -35,7 +43,7 @@ A responsive ecommerce admin dashboard built with **Bootstrap 5**, **Bootstrap I
 | Bootstrap Icons | 1.11.3 (CDN) | Icons |
 | Google Fonts | Inter 400–800 | Typography |
 | Chart.js | 4.4.1 (CDN) | Sales & traffic charts |
-| JavaScript (ES6) | Vanilla | Sidebar + chart interactions |
+| JavaScript (ES6) | Vanilla | Sidebar, charts, filters, export, toasts |
 
 ## File Structure
 
@@ -47,7 +55,7 @@ modern-admin-dashboard/
     ├── css/
     │   └── styles.css         # Theme, layout, responsive styles
     └── js/
-        └── scripts.js         # Sidebar toggle & Chart.js setup
+        └── scripts.js         # Sidebar, charts, filters, export, toasts
 ```
 
 ## Getting Started
@@ -151,8 +159,9 @@ Custom classes use the `ftl-` prefix (Free Template Library) to avoid clashes wi
 ## Notes
 
 - This is a **frontend template** with static demo data
-- Charts and sidebar interactions work client-side; wire APIs for production
-- Inventory, orders, and notifications are UI placeholders
+- Charts, filters, export, and restock actions work client-side; wire APIs for production
+- Inventory, orders, notifications, and the add-product form are UI placeholders with toast feedback
+- Compact density preference is stored in `localStorage` under `ftl-compact-density`
 
 ## Author
 

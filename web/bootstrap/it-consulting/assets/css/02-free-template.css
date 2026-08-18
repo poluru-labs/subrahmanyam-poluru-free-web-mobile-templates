@@ -928,3 +928,223 @@ footer {
 .was-validated .form-select:invalid {
     border-color: #dc3545;
 }
+
+/* ==========================================================================
+   UX ENHANCEMENTS
+   ========================================================================== */
+
+.ftpl-skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    z-index: 2000;
+    background: #ff914d;
+    color: #fff;
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ftpl-skip-link:focus {
+    top: 1rem;
+    color: #fff;
+}
+
+header.border-bottom {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: #fff;
+    transition: box-shadow 0.2s ease;
+}
+
+header.ftpl-header-sticky {
+    box-shadow: 0 0.35rem 1.25rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.ftpl-back-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 0;
+    border-radius: 0.75rem;
+    background: #ff914d;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0.5rem);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 1040;
+}
+
+.ftpl-back-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.ftpl-back-top:hover {
+    background: #ff7a2d;
+}
+
+.ftpl-toast {
+    border: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.12);
+}
+
+.ftpl-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.ftpl-search-wrap {
+    position: relative;
+    flex: 1 1 14rem;
+    max-width: 22rem;
+}
+
+.ftpl-search-wrap i {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.ftpl-search-wrap .form-control {
+    padding-left: 2.35rem;
+    border-radius: 0.5rem;
+    min-height: 2.6rem;
+}
+
+.ftpl-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.ftpl-filter-btn {
+    border: 1px solid #dee2e6;
+    background: #fff;
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+}
+
+.ftpl-filter-btn:hover {
+    color: #ff914d;
+    border-color: #ff914d;
+}
+
+.ftpl-filter-btn.is-active {
+    background: #ff914d;
+    border-color: #ff914d;
+    color: #fff;
+}
+
+.ftpl-result-count {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.ftpl-hidden {
+    display: none !important;
+}
+
+.ftpl-empty-state {
+    text-align: center;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 1.5rem;
+}
+
+.ftpl-char-count {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.ftpl-faq-accordion .accordion-item {
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem !important;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.ftpl-faq-accordion .accordion-button {
+    font-weight: 700;
+    color: #212529;
+    box-shadow: none;
+}
+
+.ftpl-faq-accordion .accordion-button:not(.collapsed) {
+    background: rgba(255, 145, 77, 0.12);
+    color: #ff7a2d;
+}
+
+.ftpl-faq-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.ftpl-job-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 1rem;
+    padding: 1.35rem 1.4rem;
+    height: 100%;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ftpl-job-card:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.ftpl-job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 0.75rem 0 1rem;
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.ftpl-job-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 145, 77, 0.12);
+    color: #ff7a2d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+}
+
+@media (max-width: 575.98px) {
+    .ftpl-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ftpl-search-wrap {
+        max-width: none;
+    }
+}
