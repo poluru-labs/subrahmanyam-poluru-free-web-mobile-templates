@@ -9,9 +9,11 @@ import {
   Stat,
   Status,
   Tag,
+  useToast,
 } from '@poluru-labs/enterprise-design-system-react';
 import { useAlerts } from '../context/AlertsContext';
 import { facilities, maintenanceWindows, overviewStats } from '../data/mock';
+import { downloadCsv } from '../utils/csv';
 import './pages.scss';
 
 const statusVariant = {
@@ -37,6 +39,7 @@ function formatWindow(iso: string) {
 
 export function OverviewPage() {
   const navigate = useNavigate();
+  const { show } = useToast();
   const { openAlerts, criticalCount } = useAlerts();
 
   const stats = overviewStats.map((stat) =>
@@ -52,8 +55,48 @@ export function OverviewPage() {
       : stat,
   );
 
+  const exportFleetSummary = () => {
+    downloadCsv('poluru-dc-fleet-summary.csv', [
+      ['Metric', 'Value', 'Hint'],
+      ...stats.map((s) => [s.label, s.value, s.hint]),
+      [],
+      ['Facility', 'Region', 'Status', 'Utilization %', 'Power kW', 'PUE'],
+      ...facilities.map((f) => [
+        f.name,
+        f.region,
+        f.status,
+        String(f.utilization),
+        String(f.powerKw),
+        f.pue.toFixed(2),
+      ]),
+      [],
+      ['Alert', 'Severity', 'Facility', 'Time'],
+      ...openAlerts.map((a) => [a.title, a.severity, a.facility, a.time]),
+    ]);
+    show({ title: 'Fleet summary exported', variant: 'success' });
+  };
+
   return (
     <div className="page">
+      <div className="page-toolbar">
+        <p className="page-lead">
+          Fleet health across facilities, power, and open incidents.
+        </p>
+        <div className="page-toolbar__actions">
+          <Button variant="secondary" size="sm" icon="download" onClick={exportFleetSummary}>
+            Export summary
+          </Button>
+          <Button
+            variant="primary"
+            size="sm"
+            icon="bell"
+            onClick={() => navigate('/alerts')}
+          >
+            Open alerts
+          </Button>
+        </div>
+      </div>
+
       <Alert
         variant={criticalCount > 0 ? 'warning' : 'info'}
         title={criticalCount > 0 ? 'Attention needed' : 'Fleet healthy'}
@@ -93,30 +136,36 @@ export function OverviewPage() {
           <ul className="facility-list stagger">
             {facilities.map((facility) => (
               <li key={facility.id}>
-                <div className="facility-list__top">
-                  <div>
-                    <strong>{facility.name}</strong>
-                    <span className="muted">{facility.region}</span>
+                <button
+                  type="button"
+                  className="facility-list__button"
+                  onClick={() => navigate('/facilities')}
+                >
+                  <div className="facility-list__top">
+                    <div>
+                      <strong>{facility.name}</strong>
+                      <span className="muted">{facility.region}</span>
+                    </div>
+                    <Status
+                      label={facility.status}
+                      variant={statusVariant[facility.status]}
+                      pulse={facility.status === 'degraded'}
+                    />
                   </div>
-                  <Status
-                    label={facility.status}
-                    variant={statusVariant[facility.status]}
-                    pulse={facility.status === 'degraded'}
+                  <ProgressBar
+                    label="Rack utilization"
+                    value={facility.utilization}
+                    showValue
                   />
-                </div>
-                <ProgressBar
-                  label="Rack utilization"
-                  value={facility.utilization}
-                  showValue
-                />
-                <Meter
-                  label="Power headroom"
-                  value={100 - Math.round(facility.utilization * 0.85)}
-                  high={70}
-                  low={30}
-                  optimum={80}
-                  showValue
-                />
+                  <Meter
+                    label="Power headroom"
+                    value={100 - Math.round(facility.utilization * 0.85)}
+                    high={70}
+                    low={30}
+                    optimum={80}
+                    showValue
+                  />
+                </button>
               </li>
             ))}
           </ul>

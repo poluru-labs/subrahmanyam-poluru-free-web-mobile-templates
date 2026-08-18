@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import {
   Autocomplete,
@@ -6,8 +6,10 @@ import {
   Badge,
   Button,
   Drawer,
+  Kbd,
   SideNav,
   Tag,
+  useTheme,
   useToast,
   type SideNavItem,
 } from '@poluru-labs/enterprise-design-system-react';
@@ -32,10 +34,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const { show } = useToast();
-  const { openAlerts, criticalCount, acknowledge } = useAlerts();
+  const { theme, toggleTheme } = useTheme();
+  const { openAlerts, criticalCount, acknowledge, acknowledgeAll } = useAlerts();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [now, setNow] = useState(() => new Date());
+  const searchWrapRef = useRef<HTMLDivElement>(null);
 
   const items: SideNavItem[] = navItems.map((item) => ({
     label: item.label,
@@ -47,9 +53,55 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     navItems.find((item) => item.path === location.pathname)?.label ??
     'Overview';
 
+  const clockLabel = useMemo(
+    () =>
+      now.toLocaleString(undefined, {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit',
+      }),
+    [now],
+  );
+
   useEffect(() => {
     setDrawerOpen(false);
+    setNavOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    const id = window.setInterval(() => setNow(new Date()), 30_000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      const tag = target?.tagName;
+      const editing =
+        tag === 'INPUT' ||
+        tag === 'TEXTAREA' ||
+        tag === 'SELECT' ||
+        target?.isContentEditable;
+
+      if (event.key === '/' && !editing) {
+        event.preventDefault();
+        const input = searchWrapRef.current?.querySelector('input');
+        input?.focus();
+        return;
+      }
+
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        const input = searchWrapRef.current?.querySelector('input');
+        input?.focus();
+      }
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
   const updateSuggestions = (query: string) => {
     const q = query.trim().toLowerCase();
@@ -81,9 +133,14 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   return (
-    <div className="dashboard">
-      <aside className="dashboard__sidebar">
+    <div className={`dashboard${navOpen ? ' dashboard--nav-open' : ''}`}>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
+
+      <aside className="dashboard__sidebar" id="dashboard-nav">
         <div className="dashboard__brand">
+          <div className="dashboard__brand-mark" aria-hidden="true" />
           <div className="dashboard__brand-text">
             <strong>Poluru DC</strong>
             <span>Data Center Ops</span>
@@ -105,19 +162,44 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         </div>
       </aside>
 
+      {navOpen ? (
+        <button
+          type="button"
+          className="dashboard__nav-backdrop"
+          aria-label="Close navigation"
+          onClick={() => setNavOpen(false)}
+        />
+      ) : null}
+
       <div className="dashboard__main">
         <header className="dashboard__header">
           <div className="dashboard__header-left">
-            <nav className="dashboard__crumbs" aria-label="Breadcrumb">
-              <NavLink to="/">Operations</NavLink>
-              <span aria-hidden="true">/</span>
-              <span>{current}</span>
-            </nav>
-            <h1 className="dashboard__title">{current}</h1>
+            <div className="dashboard__title-row">
+              <Button
+                className="dashboard__menu-btn"
+                variant="secondary"
+                size="sm"
+                icon="menu"
+                iconOnly
+                accessibleLabel="Open navigation"
+                onClick={() => setNavOpen((open) => !open)}
+              />
+              <div>
+                <nav className="dashboard__crumbs" aria-label="Breadcrumb">
+                  <NavLink to="/">Operations</NavLink>
+                  <span aria-hidden="true">/</span>
+                  <span>{current}</span>
+                </nav>
+                <h1 className="dashboard__title">{current}</h1>
+              </div>
+            </div>
+            <p className="dashboard__clock muted" aria-live="polite">
+              {clockLabel} · UTC-aligned ops window
+            </p>
           </div>
 
           <div className="dashboard__header-actions">
-            <div className="dashboard__search">
+            <div className="dashboard__search" ref={searchWrapRef}>
               <Autocomplete
                 placeholder="Search racks, hosts, alerts…"
                 value={searchValue}
@@ -133,7 +215,26 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 }}
                 onSelect={handleSelect}
               />
+              <span className="dashboard__search-hint" aria-hidden="true">
+                <Kbd keys="/" />
+              </span>
             </div>
+            <Button
+              variant="secondary"
+              size="sm"
+              icon={theme === 'dark' ? 'eye' : 'eye-off'}
+              iconOnly
+              accessibleLabel={
+                theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+              }
+              onClick={() => {
+                toggleTheme();
+                show({
+                  title: theme === 'dark' ? 'Light theme' : 'Dark theme',
+                  variant: 'info',
+                });
+              }}
+            />
             <div className="dashboard__notify">
               <Button
                 variant="secondary"
@@ -153,7 +254,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </div>
         </header>
 
-        <main className="dashboard__content">{children}</main>
+        <main className="dashboard__content" id="main-content">
+          {children}
+        </main>
       </div>
 
       <Drawer
@@ -164,6 +267,17 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         size="md"
         footer={
           <div className="notify-drawer__footer">
+            <Button
+              variant="tertiary"
+              size="sm"
+              disabled={openAlerts.length === 0}
+              onClick={() => {
+                acknowledgeAll();
+                show({ title: 'All alerts acknowledged', variant: 'success' });
+              }}
+            >
+              Ack all
+            </Button>
             <Button
               variant="secondary"
               size="sm"

@@ -4,16 +4,20 @@ Data center operations dashboard built with **Vite**, **React**, **React Router*
 
 ## Features
 
-- Full-height sticky sidebar navigation
-- Light theme with brand primary `#30AFFF`
+- Full-height sticky sidebar navigation with mobile drawer
+- Light / dark theme toggle (header + Settings)
+- Skip link, live ops clock, and `/` (or ⌘/Ctrl+K) to focus global search
 - Light page and panel animations
 - Roboto + Roboto Mono (Google Fonts)
 - Routes: Overview, Facilities, Infrastructure, Power & Cooling, Alerts, Settings
 - Global search across facilities, hosts, and alerts
-- Notification drawer with acknowledge actions
-- Interactive alert filtering and acknowledge-all
-- Power & cooling telemetry (circuit load, UPS, CHW loops)
-- Upcoming maintenance windows on Overview
+- Notification drawer with acknowledge / acknowledge-all
+- Interactive alert filtering, search, investigate modal, CSV export, and persistent acknowledgements
+- Facility status filters, detail modal, and CSV export
+- Infrastructure host search, refresh stamp, and CSV export
+- Power & cooling site filter, live telemetry refresh, and CSV export
+- Settings persisted to `localStorage`
+- Overview fleet summary export and click-through facility cards
 
 ## Setup
 

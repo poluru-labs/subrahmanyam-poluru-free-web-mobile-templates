@@ -25,6 +25,8 @@ export type AlertItem = {
   title: string;
   facility: string;
   time: string;
+  description: string;
+  recommendedAction: string;
 };
 
 export const facilities: Facility[] = [
@@ -125,6 +127,10 @@ export const alerts: AlertItem[] = [
     title: 'Cooling loop B pressure below threshold',
     facility: 'Dallas DFW-1',
     time: '4 min ago',
+    description:
+      'CHW loop B differential pressure dropped to 28 psi (threshold 34 psi). Supply temperature rising on halls C–D.',
+    recommendedAction:
+      'Dispatch mechanical on-call, verify valve position, and stage spare pump if pressure does not recover within 10 minutes.',
   },
   {
     id: 'a2',
@@ -132,6 +138,10 @@ export const alerts: AlertItem[] = [
     title: 'Rack A12 PDU load at 92%',
     facility: 'Ashburn IAD-2',
     time: '18 min ago',
+    description:
+      'PDU-A12 phase B load crossed 92% of rated capacity for 12 consecutive minutes.',
+    recommendedAction:
+      'Redistribute non-critical loads or schedule capacity move before peak evening window.',
   },
   {
     id: 'a3',
@@ -139,6 +149,9 @@ export const alerts: AlertItem[] = [
     title: 'Scheduled UPS battery test completed',
     facility: 'Chicago ORD-1',
     time: '1 hr ago',
+    description:
+      'Quarterly UPS battery discharge test finished successfully. Autonomy measured at 14.2 minutes.',
+    recommendedAction: 'Archive test report and update maintenance log.',
   },
   {
     id: 'a4',
@@ -146,6 +159,10 @@ export const alerts: AlertItem[] = [
     title: 'Fiber path redundancy reduced to single link',
     facility: 'San Jose SJC-3',
     time: '2 hr ago',
+    description:
+      'East metro fiber path is down for planned splice. West path remains active with elevated risk.',
+    recommendedAction:
+      'Hold non-urgent maintenance until dual path restored; monitor latency SLOs.',
   },
 ];
 

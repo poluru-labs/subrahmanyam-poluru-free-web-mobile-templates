@@ -135,11 +135,6 @@
   flex-shrink: 0;
 }
 
-.dashboard__search {
-  min-width: 220px;
-  width: min(280px, 36vw);
-}
-
 .dashboard__notify {
   position: relative;
 }
@@ -206,15 +201,67 @@
   line-height: 1.45;
 }
 
-.notify-drawer__footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .dashboard__content {
   flex: 1;
   padding: 1.5rem 1.75rem 2rem;
   overflow: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3.5rem;
+  z-index: 1000;
+  padding: 0.55rem 0.85rem;
+  border-radius: 0.5rem;
+  background: var(--brand-600);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.dashboard__title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.dashboard__menu-btn {
+  display: none;
+  margin-top: 0.15rem;
+}
+
+.dashboard__clock {
+  margin: 0.35rem 0 0;
+}
+
+.dashboard__search {
+  position: relative;
+  min-width: 220px;
+  width: min(280px, 36vw);
+}
+
+.dashboard__search-hint {
+  position: absolute;
+  right: 0.55rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.dashboard__nav-backdrop {
+  display: none;
+}
+
+.notify-drawer__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 @media (max-width: 960px) {
@@ -222,15 +269,38 @@
     grid-template-columns: 1fr;
   }
 
+  .dashboard__menu-btn {
+    display: inline-flex;
+  }
+
   .dashboard__sidebar {
-    height: auto;
-    position: relative;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(18rem, 86vw);
+    height: 100vh;
+    z-index: 40;
+    transform: translateX(-105%);
+    transition: transform 0.2s ease;
+    border-right: 1px solid var(--border);
+    border-bottom: none;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.18);
+  }
+
+  .dashboard--nav-open .dashboard__sidebar {
+    transform: translateX(0);
+  }
+
+  .dashboard__nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    border: 0;
+    background: rgba(15, 23, 42, 0.35);
+    z-index: 30;
   }
 
   .dashboard__sidenav {
-    max-height: 220px;
+    max-height: none;
   }
 
   .dashboard__header {
@@ -240,5 +310,10 @@
 
   .dashboard__header-actions {
     flex-wrap: wrap;
+  }
+
+  .dashboard__search {
+    width: 100%;
+    min-width: 0;
   }
 }

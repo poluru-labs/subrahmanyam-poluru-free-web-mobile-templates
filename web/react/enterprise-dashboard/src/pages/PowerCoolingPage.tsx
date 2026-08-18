@@ -1,18 +1,25 @@
+import { useMemo, useState } from 'react';
 import {
   Badge,
+  Button,
   Card,
   CircularProgress,
   Meter,
   ProgressBar,
+  SegmentedControl,
   Stat,
   Status,
   Tag,
+  useToast,
 } from '@poluru-labs/enterprise-design-system-react';
 import {
-  coolingLoops,
-  powerCircuits,
+  coolingLoops as seedLoops,
+  powerCircuits as seedCircuits,
   powerStats,
+  type CoolingLoop,
+  type PowerCircuit,
 } from '../data/mock';
+import { downloadCsv } from '../utils/csv';
 import './pages.scss';
 
 const coolingStatusVariant = {
@@ -21,13 +28,119 @@ const coolingStatusVariant = {
   fault: 'danger',
 } as const;
 
+const facilityOptions = [
+  { label: 'All sites', value: 'all' },
+  { label: 'Chicago', value: 'Chicago' },
+  { label: 'Ashburn', value: 'Ashburn' },
+  { label: 'Dallas', value: 'Dallas' },
+  { label: 'San Jose', value: 'San Jose' },
+] as const;
+
+function jitter(value: number, amount: number) {
+  const delta = (Math.random() * 2 - 1) * amount;
+  return Math.max(0, Math.round(value + delta));
+}
+
 export function PowerCoolingPage() {
+  const { show } = useToast();
+  const [facilityFilter, setFacilityFilter] = useState('all');
+  const [circuits, setCircuits] = useState<PowerCircuit[]>(seedCircuits);
+  const [loops, setLoops] = useState<CoolingLoop[]>(seedLoops);
+  const [lastRefreshed, setLastRefreshed] = useState(() => new Date());
+  const [refreshing, setRefreshing] = useState(false);
+
+  const filteredCircuits = useMemo(
+    () =>
+      circuits.filter(
+        (c) => facilityFilter === 'all' || c.facility.includes(facilityFilter),
+      ),
+    [circuits, facilityFilter],
+  );
+
+  const filteredLoops = useMemo(
+    () =>
+      loops.filter(
+        (l) => facilityFilter === 'all' || l.facility.includes(facilityFilter),
+      ),
+    [loops, facilityFilter],
+  );
+
+  const handleRefresh = () => {
+    setRefreshing(true);
+    window.setTimeout(() => {
+      setCircuits((prev) =>
+        prev.map((c) => ({
+          ...c,
+          loadKw: Math.min(c.capacityKw, jitter(c.loadKw, 35)),
+          upsBackupMin: Math.max(5, jitter(c.upsBackupMin, 1)),
+        })),
+      );
+      setLoops((prev) =>
+        prev.map((l) => ({
+          ...l,
+          tempC: Math.round((l.tempC + (Math.random() * 0.6 - 0.3)) * 10) / 10,
+          capacity: Math.min(100, Math.max(20, jitter(l.capacity, 2))),
+        })),
+      );
+      setLastRefreshed(new Date());
+      setRefreshing(false);
+      show({ title: 'Power & cooling telemetry refreshed', variant: 'success' });
+    }, 700);
+  };
+
+  const exportCsv = () => {
+    downloadCsv('poluru-dc-power-cooling.csv', [
+      ['Type', 'Facility', 'Asset', 'Metric', 'Value'],
+      ...filteredCircuits.map((c) => [
+        'Circuit',
+        c.facility,
+        c.circuit,
+        'Load kW',
+        `${c.loadKw}/${c.capacityKw}`,
+      ]),
+      ...filteredLoops.map((l) => [
+        'Cooling',
+        l.facility,
+        l.loop,
+        'Capacity %',
+        String(l.capacity),
+      ]),
+    ]);
+    show({ title: 'Telemetry CSV exported', variant: 'success' });
+  };
+
   return (
     <div className="page">
-      <p className="page-lead">
-        Live electrical load, UPS autonomy, and chilled-water loop health across
-        the fleet.
-      </p>
+      <div className="page-toolbar">
+        <p className="page-lead">
+          Live electrical load, UPS autonomy, and chilled-water loop health across
+          the fleet.
+        </p>
+        <div className="page-toolbar__actions">
+          <span className="muted refresh-stamp">
+            Updated {lastRefreshed.toLocaleTimeString()}
+          </span>
+          <Button variant="secondary" size="sm" icon="download" onClick={exportCsv}>
+            Export
+          </Button>
+          <Button
+            variant="secondary"
+            size="sm"
+            icon="refresh"
+            disabled={refreshing}
+            onClick={handleRefresh}
+          >
+            {refreshing ? 'Refreshing…' : 'Refresh'}
+          </Button>
+        </div>
+      </div>
+
+      <SegmentedControl
+        className="filter-bar__segments"
+        value={facilityFilter}
+        onChange={setFacilityFilter}
+        options={[...facilityOptions]}
+      />
 
       <section className="stat-grid stagger" aria-label="Power metrics">
         {powerStats.map((stat) => (
@@ -50,12 +163,17 @@ export function PowerCoolingPage() {
           header={
             <div className="card-heading">
               <h2>Circuit load</h2>
-              <Badge label="Telemetry" variant="brand" soft pill />
+              <Badge
+                label={`${filteredCircuits.length} circuits`}
+                variant="brand"
+                soft
+                pill
+              />
             </div>
           }
         >
           <ul className="power-circuit-list stagger">
-            {powerCircuits.map((circuit) => {
+            {filteredCircuits.map((circuit) => {
               const pct = Math.round(
                 (circuit.loadKw / circuit.capacityKw) * 100,
               );
@@ -73,11 +191,7 @@ export function PowerCoolingPage() {
                       strokeWidth={5}
                     />
                   </div>
-                  <ProgressBar
-                    label="Load"
-                    value={pct}
-                    showValue
-                  />
+                  <ProgressBar label="Load" value={pct} showValue />
                   <div className="power-circuit__meta">
                     <span className="mono">
                       {circuit.loadKw} / {circuit.capacityKw} kW
@@ -110,7 +224,7 @@ export function PowerCoolingPage() {
           }
         >
           <ul className="cooling-list stagger">
-            {coolingLoops.map((loop) => (
+            {filteredLoops.map((loop) => (
               <li key={loop.id}>
                 <div className="facility-list__top">
                   <div>
