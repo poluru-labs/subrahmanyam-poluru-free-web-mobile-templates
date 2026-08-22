@@ -1,0 +1,262 @@
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.page-lead {
+  margin: 0.35rem 0 0;
+  color: var(--wt-muted);
+  max-width: 40rem;
+  font-size: 0.95rem;
+}
+
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.15rem;
+}
+
+.stat-label {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: var(--wt-muted);
+}
+
+.stat-value {
+  margin: 0.35rem 0 0.2rem;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.stat-hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--wt-muted);
+}
+
+.split-2 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.15rem;
+}
+
+.card-title {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.sparkline {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.45rem;
+  align-items: end;
+  min-height: 8.5rem;
+}
+
+.sparkline__bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  height: 100%;
+}
+
+.sparkline__fill {
+  border-radius: 0.4rem 0.4rem 0.2rem 0.2rem;
+  background: var(--wt-primary);
+  min-height: 0.5rem;
+}
+
+.sparkline__label {
+  font-size: 0.72rem;
+  color: var(--wt-muted);
+  text-align: center;
+}
+
+.alloc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.alloc-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 0.75rem;
+  align-items: center;
+}
+
+.alloc-track {
+  grid-column: 1 / -1;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.alloc-fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.toolbar .form-control,
+.toolbar .form-select {
+  border-radius: 0.55rem;
+  border-color: var(--wt-line);
+  min-width: 10rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.wt-table {
+  margin: 0;
+  --bs-table-bg: transparent;
+}
+
+.wt-table thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--wt-muted);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.wt-table td {
+  vertical-align: middle;
+  font-size: 0.92rem;
+}
+
+.badge-soft {
+  display: inline-flex;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--wt-primary-soft);
+  color: var(--wt-primary-dark);
+}
+
+.badge-warn {
+  background: rgba(217, 119, 6, 0.14);
+  color: #b45309;
+}
+
+.badge-ok {
+  background: rgba(5, 150, 105, 0.14);
+  color: #047857;
+}
+
+.progress-wt {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.progress-wt .progress-bar {
+  background: var(--wt-primary);
+}
+
+.progress-wt.is-over .progress-bar {
+  background: var(--wt-danger);
+}
+
+.goal-grid,
+.account-grid,
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.activity-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--wt-line);
+  font-size: 0.92rem;
+}
+
+.activity-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.empty-note {
+  margin: 0.5rem 0 0;
+  color: var(--wt-muted);
+}
+
+.form-stack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split-2,
+  .goal-grid,
+  .account-grid,
+  .watch-grid,
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}

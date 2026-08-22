@@ -1,0 +1,140 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--wt-font);
+  color: var(--wt-ink);
+  background: var(--wt-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--wt-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--wt-primary-dark);
+}
+
+.mono {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3.5rem;
+  z-index: 2000;
+  background: var(--wt-primary);
+  color: #fff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  color: #fff;
+}
+
+.btn-wt-primary {
+  --bs-btn-bg: var(--wt-primary);
+  --bs-btn-border-color: var(--wt-primary);
+  --bs-btn-hover-bg: var(--wt-primary-dark);
+  --bs-btn-hover-border-color: var(--wt-primary-dark);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  font-weight: 650;
+  border-radius: 0.55rem;
+}
+
+.btn-wt-ghost {
+  --bs-btn-color: var(--wt-ink);
+  --bs-btn-border-color: var(--wt-line);
+  --bs-btn-hover-bg: var(--wt-surface);
+  --bs-btn-hover-border-color: var(--wt-ink);
+  font-weight: 650;
+  border-radius: 0.55rem;
+}
+
+.wt-card {
+  background: var(--wt-surface);
+  border: 1px solid var(--wt-line);
+  border-radius: var(--wt-radius);
+  box-shadow: var(--wt-shadow);
+  padding: 1.15rem 1.25rem;
+  height: 100%;
+}
+
+.wt-muted {
+  color: var(--wt-muted);
+}
+
+.wt-positive {
+  color: var(--wt-success);
+}
+
+.wt-negative {
+  color: var(--wt-danger);
+}
+
+.toast-host {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1080;
+  display: grid;
+  gap: 0.55rem;
+  width: min(22rem, calc(100vw - 2rem));
+}
+
+.toast-item {
+  border: 0;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  color: #fff;
+  box-shadow: var(--wt-shadow);
+  text-align: left;
+}
+
+.toast-item--success {
+  background: var(--wt-success);
+}
+
+.toast-item--info {
+  background: var(--wt-primary);
+}
+
+.toast-item--warning {
+  background: var(--wt-warning);
+}
+
+.toast-item--danger {
+  background: var(--wt-danger);
+}
+
+.toast-item strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.toast-item span {
+  display: block;
+  font-size: 0.82rem;
+  opacity: 0.92;
+  margin-top: 0.15rem;
+}
