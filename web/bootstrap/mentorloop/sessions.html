@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+  MentorLoop — Mentorship Network Portal
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Schedule mentorship sessions and manage upcoming meetings." />
+  <title>Sessions — MentorLoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="mlp-body">
+  <a class="mlp-skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg mlp-navbar sticky-top" aria-label="Primary">
+    <div class="container-xxl">
+      <a class="navbar-brand mlp-brand" href="index.html">
+        <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+        <span>Mentor<em>Loop</em></span>
+      </a>
+      <button class="navbar-toggler mlp-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mlpNav" aria-controls="mlpNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mlpNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="mentors.html">Mentors</a></li>
+              <li><a class="dropdown-item" href="mentees.html">Mentees</a></li>
+              <li><a class="dropdown-item" href="matching.html">Matching</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="sessions.html">Sessions</a></li>
+          <li class="nav-item"><a class="nav-link" href="outcomes.html">Outcomes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentation.html">Docs</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn mlp-btn-primary btn-sm" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="main-content">
+    <header class="mlp-page-hero">
+      <div class="container-xxl">
+        <p class="mlp-eyebrow">Scheduling</p>
+        <h1>Session board</h1>
+        <p>Request time with a mentor and keep upcoming conversations visible.</p>
+      </div>
+    </header>
+
+    <section class="mlp-section">
+      <div class="container-xxl">
+        <div class="row g-4">
+          <div class="col-lg-5 mlp-reveal">
+            <article class="mlp-panel">
+              <h2 class="h5 mb-3">Request a session</h2>
+              <form class="mlp-form needs-validation" id="mlpSessionForm" novalidate>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold" for="sessionMentor">Mentor</label>
+                  <select class="form-select" id="sessionMentor" name="mentor" required>
+                    <option value="">Select mentor</option>
+                    <option>Arjun Poluru</option>
+                    <option>Priya Poluru</option>
+                    <option>Rohan Poluru</option>
+                    <option>Ananya Poluru</option>
+                  </select>
+                  <div class="invalid-feedback">Choose a mentor.</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold" for="sessionDate">Date</label>
+                  <input type="date" class="form-control" id="sessionDate" name="date" required />
+                  <div class="invalid-feedback">Pick a date.</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold" for="sessionTime">Time</label>
+                  <input type="time" class="form-control" id="sessionTime" name="time" required />
+                  <div class="invalid-feedback">Pick a time.</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold" for="sessionTopic">Topic</label>
+                  <input type="text" class="form-control" id="sessionTopic" name="topic" placeholder="e.g. Promotion packet review" required />
+                  <div class="invalid-feedback">Add a topic.</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fw-semibold" for="sessionNotes">Agenda notes</label>
+                  <textarea class="form-control" id="sessionNotes" name="notes" rows="3" placeholder="What success looks like this session…"></textarea>
+                </div>
+                <button type="submit" class="btn mlp-btn-primary w-100"><i class="bi bi-send me-1"></i>Send request</button>
+              </form>
+            </article>
+          </div>
+          <div class="col-lg-7 mlp-reveal">
+            <article class="mlp-panel">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <h2 class="h5 mb-0">Upcoming sessions</h2>
+                <span class="mlp-badge"><i class="bi bi-calendar2-check"></i> Demo data</span>
+              </div>
+              <div class="table-responsive">
+                <table class="table mlp-table align-middle">
+                  <thead>
+                    <tr>
+                      <th>Pair</th>
+                      <th>When</th>
+                      <th>Topic</th>
+                      <th>Status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Aditi ↔ Arjun</td>
+                      <td>Aug 22 · 4:00 PM</td>
+                      <td>Roadmap storytelling</td>
+                      <td><span class="mlp-badge">Pending</span></td>
+                      <td class="text-end"><button type="button" class="btn btn-sm mlp-btn-ghost" data-session-action="confirm">Confirm</button></td>
+                    </tr>
+                    <tr>
+                      <td>Kabir ↔ Priya</td>
+                      <td>Aug 24 · 10:30 AM</td>
+                      <td>Design docs clinic</td>
+                      <td><span class="mlp-badge mlp-badge-ink">Confirmed</span></td>
+                      <td class="text-end"><button type="button" class="btn btn-sm mlp-btn-ghost" data-session-action="remind">Remind</button></td>
+                    </tr>
+                    <tr>
+                      <td>Isha ↔ Rohan</td>
+                      <td>Aug 26 · 1:00 PM</td>
+                      <td>Portfolio critique</td>
+                      <td><span class="mlp-badge mlp-badge-warn">Needs agenda</span></td>
+                      <td class="text-end"><button type="button" class="btn btn-sm mlp-btn-ghost" data-session-action="remind">Remind</button></td>
+                    </tr>
+                    <tr>
+                      <td>Neha ↔ Ananya</td>
+                      <td>Aug 28 · 9:00 AM</td>
+                      <td>Fundraising narrative</td>
+                      <td><span class="mlp-badge mlp-badge-ink">Confirmed</span></td>
+                      <td class="text-end"><button type="button" class="btn btn-sm mlp-btn-ghost" data-session-action="remind">Remind</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mlp-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="mlp-brand mlp-brand-footer" href="index.html">
+            <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+            <span>Mentor<em>Loop</em></span>
+          </a>
+          <p class="mlp-footer-text">Mentorship network portal template for matching, scheduling, and outcomes.</p>
+          <p class="mlp-footer-text">
+            <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope me-1"></i>mail.polurus@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">Explore</p>
+          <ul class="mlp-footer-links">
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="mentees.html">Mentees</a></li>
+            <li><a href="matching.html">Matching</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">More</p>
+          <ul class="mlp-footer-links">
+            <li><a href="outcomes.html">Outcomes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="documentation.html">Docs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="mlp-footer-heading">Stack</p>
+          <p class="mlp-footer-text">Bootstrap 5, Bootstrap Icons, Outfit. Free to customize for personal and commercial projects.</p>
+        </div>
+      </div>
+      <div class="mlp-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>MentorLoop · Mentorship Network Portal</span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="mlp-back-top" id="mlpBackTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="mlpToast" class="toast mlp-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">MentorLoop</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="mlpToastBody">Done.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

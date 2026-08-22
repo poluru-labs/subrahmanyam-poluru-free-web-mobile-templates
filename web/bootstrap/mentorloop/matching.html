@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--
+  MentorLoop — Mentorship Network Portal
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Match mentors and mentees with goals, skills, and cadence preferences." />
+  <title>Matching — MentorLoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="mlp-body">
+  <a class="mlp-skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg mlp-navbar sticky-top" aria-label="Primary">
+    <div class="container-xxl">
+      <a class="navbar-brand mlp-brand" href="index.html">
+        <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+        <span>Mentor<em>Loop</em></span>
+      </a>
+      <button class="navbar-toggler mlp-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mlpNav" aria-controls="mlpNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mlpNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="mentors.html">Mentors</a></li>
+              <li><a class="dropdown-item" href="mentees.html">Mentees</a></li>
+              <li><a class="dropdown-item" href="matching.html">Matching</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="sessions.html">Sessions</a></li>
+          <li class="nav-item"><a class="nav-link" href="outcomes.html">Outcomes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentation.html">Docs</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn mlp-btn-primary btn-sm" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="main-content">
+    <header class="mlp-page-hero">
+      <div class="container-xxl">
+        <p class="mlp-eyebrow">Network</p>
+        <h1>Matching studio</h1>
+        <p>Set preferences in a short wizard, then jump to mentors or sessions.</p>
+      </div>
+    </header>
+
+    <section class="mlp-section">
+      <div class="container-xxl">
+        <div class="row g-4">
+          <div class="col-lg-7 mlp-reveal">
+            <div class="mlp-wizard-steps" aria-label="Matching steps">
+              <span class="mlp-wizard-chip is-active">1 · Goals</span>
+              <span class="mlp-wizard-chip">2 · Skills</span>
+              <span class="mlp-wizard-chip">3 · Cadence</span>
+              <span class="mlp-wizard-chip">4 · Results</span>
+            </div>
+            <div class="mlp-panel" id="mlpWizard">
+              <div data-wizard-pane>
+                <h2 class="h5 mb-3">What do you want from mentorship?</h2>
+                <div class="mlp-choice-grid mb-4">
+                  <label class="mlp-choice"><input type="checkbox" name="goal" value="career" checked /><span>Career growth</span></label>
+                  <label class="mlp-choice"><input type="checkbox" name="goal" value="skills" /><span>Skill building</span></label>
+                  <label class="mlp-choice"><input type="checkbox" name="goal" value="leadership" /><span>Leadership</span></label>
+                  <label class="mlp-choice"><input type="checkbox" name="goal" value="startup" /><span>Startup advice</span></label>
+                </div>
+                <button type="button" class="btn mlp-btn-primary" data-wizard-next>Continue</button>
+              </div>
+              <div class="d-none" data-wizard-pane>
+                <h2 class="h5 mb-3">Which skills should your mentor bring?</h2>
+                <div class="mlp-choice-grid mb-4">
+                  <label class="mlp-choice"><input type="checkbox" name="skill" value="product" checked /><span>Product</span></label>
+                  <label class="mlp-choice"><input type="checkbox" name="skill" value="engineering" /><span>Engineering</span></label>
+                  <label class="mlp-choice"><input type="checkbox" name="skill" value="design" /><span>Design</span></label>
+                  <label class="mlp-choice"><input type="checkbox" name="skill" value="leadership" /><span>Leadership</span></label>
+                </div>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn mlp-btn-ghost" data-wizard-prev>Back</button>
+                  <button type="button" class="btn mlp-btn-primary" data-wizard-next>Continue</button>
+                </div>
+              </div>
+              <div class="d-none" data-wizard-pane>
+                <h2 class="h5 mb-3">Preferred session cadence</h2>
+                <div class="mlp-choice-grid mb-4">
+                  <label class="mlp-choice"><input type="radio" name="cadence" value="weekly" checked /><span>Weekly</span></label>
+                  <label class="mlp-choice"><input type="radio" name="cadence" value="biweekly" /><span>Biweekly</span></label>
+                  <label class="mlp-choice"><input type="radio" name="cadence" value="monthly" /><span>Monthly</span></label>
+                  <label class="mlp-choice"><input type="radio" name="cadence" value="asneeded" /><span>As needed</span></label>
+                </div>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn mlp-btn-ghost" data-wizard-prev>Back</button>
+                  <button type="button" class="btn mlp-btn-accent" data-wizard-finish>See matches</button>
+                </div>
+              </div>
+              <div class="d-none" data-wizard-pane>
+                <h2 class="h5 mb-2">Your match readiness</h2>
+                <p class="mlp-match-score" id="mlpMatchScore">—</p>
+                <p class="text-secondary mb-4">Based on goals, skills, and cadence. Next: browse mentors or book a first session.</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="mentors.html" class="btn mlp-btn-primary">Browse mentors</a>
+                  <a href="sessions.html" class="btn mlp-btn-ghost">Schedule session</a>
+                  <button type="button" class="btn mlp-btn-ghost" data-wizard-prev>Edit preferences</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 mlp-reveal">
+            <article class="mlp-panel h-100">
+              <p class="mlp-eyebrow">Tips</p>
+              <h2 class="h5">Better matches start with clarity</h2>
+              <ul class="mb-0 ps-3 text-secondary">
+                <li class="mb-2">Pick one primary goal for the next 90 days.</li>
+                <li class="mb-2">Choose skills your mentor should already practice weekly.</li>
+                <li class="mb-2">Match cadence to real calendar capacity—not ambition alone.</li>
+                <li>After matching, log outcomes so the loop stays honest.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mlp-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="mlp-brand mlp-brand-footer" href="index.html">
+            <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+            <span>Mentor<em>Loop</em></span>
+          </a>
+          <p class="mlp-footer-text">Mentorship network portal template for matching, scheduling, and outcomes.</p>
+          <p class="mlp-footer-text">
+            <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope me-1"></i>mail.polurus@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">Explore</p>
+          <ul class="mlp-footer-links">
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="mentees.html">Mentees</a></li>
+            <li><a href="matching.html">Matching</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">More</p>
+          <ul class="mlp-footer-links">
+            <li><a href="outcomes.html">Outcomes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="documentation.html">Docs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="mlp-footer-heading">Stack</p>
+          <p class="mlp-footer-text">Bootstrap 5, Bootstrap Icons, Outfit. Free to customize for personal and commercial projects.</p>
+        </div>
+      </div>
+      <div class="mlp-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>MentorLoop · Mentorship Network Portal</span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="mlp-back-top" id="mlpBackTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="mlpToast" class="toast mlp-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">MentorLoop</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="mlpToastBody">Done.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

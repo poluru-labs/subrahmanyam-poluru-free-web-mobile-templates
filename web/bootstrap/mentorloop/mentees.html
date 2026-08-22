@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+  MentorLoop — Mentorship Network Portal
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Browse mentees seeking guidance on the MentorLoop portal." />
+  <title>Mentees — MentorLoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="mlp-body">
+  <a class="mlp-skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg mlp-navbar sticky-top" aria-label="Primary">
+    <div class="container-xxl">
+      <a class="navbar-brand mlp-brand" href="index.html">
+        <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+        <span>Mentor<em>Loop</em></span>
+      </a>
+      <button class="navbar-toggler mlp-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mlpNav" aria-controls="mlpNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mlpNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="mentors.html">Mentors</a></li>
+              <li><a class="dropdown-item" href="mentees.html">Mentees</a></li>
+              <li><a class="dropdown-item" href="matching.html">Matching</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="sessions.html">Sessions</a></li>
+          <li class="nav-item"><a class="nav-link" href="outcomes.html">Outcomes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentation.html">Docs</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn mlp-btn-primary btn-sm" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="main-content">
+    <header class="mlp-page-hero">
+      <div class="container-xxl">
+        <p class="mlp-eyebrow">Network</p>
+        <h1>Mentee directory</h1>
+        <p>See goals and stages so mentors can offer the right kind of support.</p>
+      </div>
+    </header>
+
+    <section class="mlp-section">
+      <div class="container-xxl">
+        <div class="mlp-toolbar mlp-reveal">
+          <div class="mlp-search-wrap">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" id="mlpMenteeSearch" placeholder="Search mentees…" aria-label="Search mentees" />
+          </div>
+          <label class="mlp-field">
+            <span>Goal area</span>
+            <select class="form-select" id="mlpMenteeSkill">
+              <option value="all">All goals</option>
+              <option value="product">Product</option>
+              <option value="engineering">Engineering</option>
+              <option value="design">Design</option>
+              <option value="career">Career</option>
+              <option value="leadership">Leadership</option>
+            </select>
+          </label>
+          <label class="mlp-field">
+            <span>Stage</span>
+            <select class="form-select" id="mlpMenteeFocus">
+              <option value="all">All stages</option>
+              <option value="early">Early career</option>
+              <option value="mid">Mid-level</option>
+              <option value="transition">Career transition</option>
+              <option value="founder">Founder</option>
+            </select>
+          </label>
+        </div>
+        <p class="mlp-empty" id="mlpMenteeEmpty">No mentees match your filters.</p>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-xl-4 mlp-reveal" data-mentee-card data-skills="product career" data-focus="mid">
+            <article class="mlp-panel mlp-profile">
+              <div class="mlp-profile-top">
+                <span class="mlp-avatar mlp-avatar-accent">AD</span>
+                <div><h3>Aditi Poluru</h3><p class="mlp-role">Associate PM · Seeking product mentor</p></div>
+              </div>
+              <ul class="mlp-tags"><li class="mlp-tag">Product</li><li class="mlp-tag">Career</li><li class="mlp-tag mlp-tag-muted">Mid-level</li></ul>
+              <p class="mlp-meta mb-0">Goal: ship roadmap confidence and stakeholder storytelling.</p>
+              <div class="mlp-profile-actions">
+                <button type="button" class="btn mlp-btn-primary btn-sm" data-connect="Aditi Poluru">Offer mentorship</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 mlp-reveal" data-mentee-card data-skills="engineering" data-focus="early">
+            <article class="mlp-panel mlp-profile">
+              <div class="mlp-profile-top">
+                <span class="mlp-avatar mlp-avatar-teal">KP</span>
+                <div><h3>Kabir Poluru</h3><p class="mlp-role">Junior engineer · Seeking systems mentor</p></div>
+              </div>
+              <ul class="mlp-tags"><li class="mlp-tag">Engineering</li><li class="mlp-tag mlp-tag-muted">Early career</li></ul>
+              <p class="mlp-meta mb-0">Goal: grow debugging depth and design docs craft.</p>
+              <div class="mlp-profile-actions">
+                <button type="button" class="btn mlp-btn-primary btn-sm" data-connect="Kabir Poluru">Offer mentorship</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 mlp-reveal" data-mentee-card data-skills="design career" data-focus="transition">
+            <article class="mlp-panel mlp-profile">
+              <div class="mlp-profile-top">
+                <span class="mlp-avatar">IP</span>
+                <div><h3>Isha Poluru</h3><p class="mlp-role">Visual designer · Transitioning to UX</p></div>
+              </div>
+              <ul class="mlp-tags"><li class="mlp-tag">Design</li><li class="mlp-tag">Career</li><li class="mlp-tag mlp-tag-muted">Transition</li></ul>
+              <p class="mlp-meta mb-0">Goal: portfolio critique and UX research habits.</p>
+              <div class="mlp-profile-actions">
+                <button type="button" class="btn mlp-btn-primary btn-sm" data-connect="Isha Poluru">Offer mentorship</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 mlp-reveal" data-mentee-card data-skills="leadership startup" data-focus="founder">
+            <article class="mlp-panel mlp-profile">
+              <div class="mlp-profile-top">
+                <span class="mlp-avatar">NP</span>
+                <div><h3>Neha Poluru</h3><p class="mlp-role">First-time founder · Seeking coach</p></div>
+              </div>
+              <ul class="mlp-tags"><li class="mlp-tag">Leadership</li><li class="mlp-tag">Startup</li><li class="mlp-tag mlp-tag-muted">Founder</li></ul>
+              <p class="mlp-meta mb-0">Goal: fundraising narrative and hiring loop.</p>
+              <div class="mlp-profile-actions">
+                <button type="button" class="btn mlp-btn-primary btn-sm" data-connect="Neha Poluru">Offer mentorship</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 mlp-reveal" data-mentee-card data-skills="product leadership" data-focus="mid">
+            <article class="mlp-panel mlp-profile">
+              <div class="mlp-profile-top">
+                <span class="mlp-avatar mlp-avatar-teal">AY</span>
+                <div><h3>Aryan Poluru</h3><p class="mlp-role">Senior IC · Exploring management</p></div>
+              </div>
+              <ul class="mlp-tags"><li class="mlp-tag">Leadership</li><li class="mlp-tag">Product</li><li class="mlp-tag mlp-tag-muted">Mid-level</li></ul>
+              <p class="mlp-meta mb-0">Goal: people skills and promotion packet review.</p>
+              <div class="mlp-profile-actions">
+                <button type="button" class="btn mlp-btn-primary btn-sm" data-connect="Aryan Poluru">Offer mentorship</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 mlp-reveal" data-mentee-card data-skills="engineering career" data-focus="early">
+            <article class="mlp-panel mlp-profile">
+              <div class="mlp-profile-top">
+                <span class="mlp-avatar mlp-avatar-accent">RH</span>
+                <div><h3>Rahul Poluru</h3><p class="mlp-role">Bootcamp grad · First role search</p></div>
+              </div>
+              <ul class="mlp-tags"><li class="mlp-tag">Engineering</li><li class="mlp-tag">Career</li><li class="mlp-tag mlp-tag-muted">Early career</li></ul>
+              <p class="mlp-meta mb-0">Goal: interview practice and project storytelling.</p>
+              <div class="mlp-profile-actions">
+                <button type="button" class="btn mlp-btn-primary btn-sm" data-connect="Rahul Poluru">Offer mentorship</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mlp-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="mlp-brand mlp-brand-footer" href="index.html">
+            <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+            <span>Mentor<em>Loop</em></span>
+          </a>
+          <p class="mlp-footer-text">Mentorship network portal template for matching, scheduling, and outcomes.</p>
+          <p class="mlp-footer-text">
+            <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope me-1"></i>mail.polurus@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">Explore</p>
+          <ul class="mlp-footer-links">
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="mentees.html">Mentees</a></li>
+            <li><a href="matching.html">Matching</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">More</p>
+          <ul class="mlp-footer-links">
+            <li><a href="outcomes.html">Outcomes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="documentation.html">Docs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="mlp-footer-heading">Stack</p>
+          <p class="mlp-footer-text">Bootstrap 5, Bootstrap Icons, Outfit. Free to customize for personal and commercial projects.</p>
+        </div>
+      </div>
+      <div class="mlp-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>MentorLoop · Mentorship Network Portal</span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="mlp-back-top" id="mlpBackTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="mlpToast" class="toast mlp-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">MentorLoop</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="mlpToastBody">Done.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

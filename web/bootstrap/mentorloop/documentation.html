@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--
+  MentorLoop — Mentorship Network Portal
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="MentorLoop documentation — pages, structure, theme tokens, and customization guide." />
+  <title>Documentation — MentorLoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="mlp-body">
+  <a class="mlp-skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg mlp-navbar sticky-top" aria-label="Primary">
+    <div class="container-xxl">
+      <a class="navbar-brand mlp-brand" href="index.html">
+        <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+        <span>Mentor<em>Loop</em></span>
+      </a>
+      <button class="navbar-toggler mlp-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mlpNav" aria-controls="mlpNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mlpNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="mentors.html">Mentors</a></li>
+              <li><a class="dropdown-item" href="mentees.html">Mentees</a></li>
+              <li><a class="dropdown-item" href="matching.html">Matching</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="sessions.html">Sessions</a></li>
+          <li class="nav-item"><a class="nav-link" href="outcomes.html">Outcomes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="documentation.html">Docs</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn mlp-btn-primary btn-sm" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="main-content">
+    <header class="mlp-page-hero">
+      <div class="container-xxl">
+        <p class="mlp-eyebrow">Documentation</p>
+        <h1>MentorLoop docs</h1>
+        <p>Setup, page map, theme tokens, classes, and customization notes for the mentorship portal template.</p>
+      </div>
+    </header>
+
+    <section class="mlp-section">
+      <div class="container-xxl">
+        <div class="mlp-docs-layout">
+          <aside class="mlp-docs-nav mlp-reveal" aria-label="Documentation">
+            <p>On this page</p>
+            <ul>
+              <li><a href="#getting-started" class="is-active">Getting started</a></li>
+              <li><a href="#pages">Page map</a></li>
+              <li><a href="#structure">File structure</a></li>
+              <li><a href="#theme">Theme tokens</a></li>
+              <li><a href="#components">Key classes</a></li>
+              <li><a href="#javascript">JavaScript behaviors</a></li>
+              <li><a href="#customize">Customization</a></li>
+            </ul>
+          </aside>
+          <div class="mlp-docs-content mlp-panel mlp-reveal">
+            <section id="getting-started">
+              <h2>Getting started</h2>
+              <p class="text-secondary">MentorLoop is a static multi-page Bootstrap template. Serve the folder with any static server:</p>
+              <code class="mlp-code">cd web/bootstrap/mentorloop
+python3 -m http.server 8000</code>
+              <p class="text-secondary mt-3 mb-0">Open <strong>http://localhost:8000</strong>. No build step is required.</p>
+            </section>
+
+            <section id="pages">
+              <h2>Page map</h2>
+              <div class="table-responsive">
+                <table class="table mlp-table">
+                  <thead><tr><th>Page</th><th>Purpose</th></tr></thead>
+                  <tbody>
+                    <tr><td><a href="index.html">index.html</a></td><td>Brand hero, how-it-works, featured mentors, CTA</td></tr>
+                    <tr><td><a href="mentors.html">mentors.html</a></td><td>Filterable mentor directory</td></tr>
+                    <tr><td><a href="mentees.html">mentees.html</a></td><td>Filterable mentee directory</td></tr>
+                    <tr><td><a href="matching.html">matching.html</a></td><td>Matching wizard (goals → skills → cadence → score)</td></tr>
+                    <tr><td><a href="sessions.html">sessions.html</a></td><td>Session request form + upcoming board</td></tr>
+                    <tr><td><a href="outcomes.html">outcomes.html</a></td><td>Outcome logging with draft autosave</td></tr>
+                    <tr><td><a href="about.html">about.html</a></td><td>Template story and stack</td></tr>
+                    <tr><td><a href="contact.html">contact.html</a></td><td>Contact form demo</td></tr>
+                    <tr><td><a href="documentation.html">documentation.html</a></td><td>This guide</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section id="structure">
+              <h2>File structure</h2>
+              <code class="mlp-code">mentorloop/
+├── index.html
+├── mentors.html
+├── mentees.html
+├── matching.html
+├── sessions.html
+├── outcomes.html
+├── about.html
+├── contact.html
+├── documentation.html
+├── README.md
+└── assets/
+    ├── css/style.css
+    └── js/script.js</code>
+            </section>
+
+            <section id="theme">
+              <h2>Theme tokens</h2>
+              <p class="text-secondary">Brand colors live on <code>:root</code> in <code>assets/css/style.css</code>:</p>
+              <div class="table-responsive">
+                <table class="table mlp-table">
+                  <thead><tr><th>Token</th><th>Value</th><th>Use</th></tr></thead>
+                  <tbody>
+                    <tr><td><code>--mlp-primary</code></td><td><code>#0F766E</code></td><td>Teal brand, CTAs, links</td></tr>
+                    <tr><td><code>--mlp-accent</code></td><td><code>#C2410C</code></td><td>Secondary emphasis actions</td></tr>
+                    <tr><td><code>--mlp-ink</code></td><td><code>#0B1220</code></td><td>Headers, footer, type</td></tr>
+                    <tr><td><code>--mlp-canvas</code></td><td><code>#F1F5F9</code></td><td>Page background</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-secondary mb-0">Typography uses <strong>Outfit</strong> from Google Fonts.</p>
+            </section>
+
+            <section id="components">
+              <h2>Key classes</h2>
+              <ul class="text-secondary">
+                <li><code>.mlp-navbar</code> / <code>.mlp-toggler</code> — sticky nav with mobile collapse</li>
+                <li><code>.mlp-hero</code> / <code>.mlp-page-hero</code> — landing vs inner page headers</li>
+                <li><code>.mlp-panel</code> / <code>.mlp-profile</code> — interactive profile surfaces</li>
+                <li><code>.mlp-toolbar</code> — search + filter row</li>
+                <li><code>.mlp-wizard-chip</code> / <code>[data-wizard-pane]</code> — matching steps</li>
+                <li><code>.mlp-docs-layout</code> — documentation sidebar layout</li>
+                <li><code>.mlp-btn-primary</code> / <code>.mlp-btn-accent</code> / <code>.mlp-btn-ghost</code> — branded buttons</li>
+              </ul>
+              <div class="mlp-callout">Custom classes use the <code>mlp-</code> prefix to avoid collisions with Bootstrap utilities.</div>
+            </section>
+
+            <section id="javascript">
+              <h2>JavaScript behaviors</h2>
+              <p class="text-secondary"><code>assets/js/script.js</code> powers:</p>
+              <ul class="text-secondary">
+                <li>Mobile menu auto-close on link click</li>
+                <li>Mentor / mentee directory filters</li>
+                <li>Matching wizard step navigation</li>
+                <li>Session booking + confirm/remind toasts</li>
+                <li>Outcomes form draft persistence (<code>localStorage</code>)</li>
+                <li>Contact validation toast, skip link, back-to-top, scroll reveal</li>
+                <li>Docs sidebar active section highlighting</li>
+              </ul>
+            </section>
+
+            <section id="customize">
+              <h2>Customization</h2>
+              <ol class="text-secondary mb-3">
+                <li>Replace copy and demo names in each HTML page.</li>
+                <li>Adjust CSS variables for your brand palette.</li>
+                <li>Add or remove profile cards; keep <code>data-skills</code> / <code>data-focus</code> in sync with filters.</li>
+                <li>Wire forms to your backend API when you leave the static demo.</li>
+              </ol>
+              <p class="mb-0"><a class="btn mlp-btn-primary btn-sm" href="index.html">Back to home</a>
+              <a class="btn mlp-btn-ghost btn-sm" href="contact.html">Contact</a></p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<footer class="mlp-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="mlp-brand mlp-brand-footer" href="index.html">
+            <span class="mlp-brand-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+            <span>Mentor<em>Loop</em></span>
+          </a>
+          <p class="mlp-footer-text">Mentorship network portal template for matching, scheduling, and outcomes.</p>
+          <p class="mlp-footer-text">
+            <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope me-1"></i>mail.polurus@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">Explore</p>
+          <ul class="mlp-footer-links">
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="mentees.html">Mentees</a></li>
+            <li><a href="matching.html">Matching</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="mlp-footer-heading">More</p>
+          <ul class="mlp-footer-links">
+            <li><a href="outcomes.html">Outcomes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="documentation.html">Docs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="mlp-footer-heading">Stack</p>
+          <p class="mlp-footer-text">Bootstrap 5, Bootstrap Icons, Outfit. Free to customize for personal and commercial projects.</p>
+        </div>
+      </div>
+      <div class="mlp-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>MentorLoop · Mentorship Network Portal</span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="mlp-back-top" id="mlpBackTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="mlpToast" class="toast mlp-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">MentorLoop</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="mlpToastBody">Done.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
