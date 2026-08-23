@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--
+  DocBoard — Doctors Classifieds
+  Author: Subrahmanyam Poluru · polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Continuing medical education events and conferences." />
+  <title>CME & Events - DocBoard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="dc-body">
+  <a class="dc-skip" href="#main-content">Skip to content</a>
+
+  <header class="dc-header" id="dcHeader">
+    <nav class="navbar navbar-expand-lg dc-navbar" aria-label="Primary">
+      <div class="container-xxl">
+        <a class="navbar-brand dc-brand" href="index.html">
+          <span class="dc-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
+          <span>Doc<em>Board</em></span>
+        </a>
+        <button class="navbar-toggler dc-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dcNav" aria-controls="dcNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="dcNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="listings.html">All listings</a></li>
+                <li><a class="dropdown-item" href="categories.html">Categories</a></li>
+                <li><a class="dropdown-item" href="jobs.html">Doctors jobs</a></li>
+                <li><a class="dropdown-item" href="clinics.html">Clinics &amp; practice</a></li>
+                <li><a class="dropdown-item" href="equipment.html">Equipment</a></li>
+                <li><a class="dropdown-item" href="cme-events.html">CME &amp; events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item ms-lg-1"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item ms-lg-1"><a href="post-classified.html"><eds-button variant="primary" size="sm">Post a classified</eds-button></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main-content">
+    <header class="dc-page-hero">
+      <div class="container-xxl">
+        <nav class="dc-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>CME & Events</span></nav>
+        <p class="dc-eyebrow">Education</p>
+        <h1>CME & professional events</h1>
+        <p>Find credit-bearing conferences, workshops, and hybrid learning for busy clinicians.</p>
+      </div>
+    </header>
+
+    <section class="dc-section">
+      <div class="container-xxl">
+        
+        <div class="dc-filters">
+          <div class="row g-3 align-items-end">
+            <div class="col-md-4">
+              <label class="form-label" for="dcFilterSearch">Search</label>
+              <input type="search" class="form-control" id="dcFilterSearch" placeholder="Title, specialty, keyword..." />
+            </div>
+            <div class="col-6 col-md-2">
+              <label class="form-label" for="dcFilterCategory">Category</label>
+              <select class="form-select" id="dcFilterCategory">
+                <option value="all">All</option>
+                <option value="jobs">Jobs</option>
+                <option value="clinics">Clinics</option>
+                <option value="equipment">Equipment</option>
+                <option value="cme">CME</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-2">
+              <label class="form-label" for="dcFilterSpecialty">Specialty</label>
+              <select class="form-select" id="dcFilterSpecialty">
+                <option value="all">All</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="family">Family Medicine</option>
+                <option value="internal">Internal Medicine</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="radiology">Radiology</option>
+                <option value="surgery">Surgery</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-2">
+              <label class="form-label" for="dcFilterLocation">Location</label>
+              <select class="form-select" id="dcFilterLocation">
+                <option value="all">All</option>
+                <option value="chicago">Chicago</option>
+                <option value="austin">Austin</option>
+                <option value="seattle">Seattle</option>
+                <option value="nyc">New York</option>
+                <option value="remote">Remote</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-2">
+              <label class="form-label" for="dcFilterType">Type</label>
+              <select class="form-select" id="dcFilterType">
+                <option value="all">All</option>
+                <option value="fulltime">Full-time</option>
+                <option value="locum">Locum</option>
+                <option value="sale">For sale</option>
+                <option value="partnership">Partnership</option>
+                <option value="event">Event</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-3 d-flex gap-2 flex-wrap">
+            <eds-button id="dcFilterReset" variant="secondary" size="sm">Reset filters</eds-button>
+            <eds-badge label="Updated daily" variant="neutral" soft></eds-badge>
+          </div>
+        </div>
+
+        <div class="row g-3" id="dcListingGrid">          <div class="col-md-6 col-xl-4" data-listing-card data-category="cme" data-specialty="pediatrics" data-location="nyc" data-type="event">
+            <article class="dc-card dc-listing">
+              <div class="dc-listing-top">
+                <div class="dc-badges"><span class="dc-pill dc-pill-muted">CME</span></div>
+                <button type="button" class="btn btn-sm btn-light border" data-save-listing aria-pressed="false" aria-label="Save listing"><i class="bi bi-bookmark"></i></button>
+              </div>
+              <h3><a href="listing-detail.html">Pediatric CME Summit 2026</a></h3>
+              <p class="dc-listing-meta mb-0">
+                <span><i class="bi bi-geo-alt"></i>New York, NY</span>
+                <span><i class="bi bi-briefcase"></i>Pediatrics</span>
+                <span><i class="bi bi-cash"></i>From $649</span>
+              </p>
+              <p class="text-secondary small mb-0">18 AMA PRA Category 1 Credits · Hybrid option</p>
+              <div class="dc-listing-actions">
+                <a href="listing-detail.html"><eds-button variant="primary" size="sm">View details</eds-button></a>
+                <eds-button variant="secondary" size="sm" data-contact-seller>Contact</eds-button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing"><i class="bi bi-share me-1"></i>Share</button>
+              </div>
+            </article>
+          </div>
+</div>
+        <div class="mt-4 text-center"><a href="listings.html"><eds-button variant="secondary">Browse all listings</eds-button></a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="dc-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="dc-brand dc-brand-footer" href="index.html">
+            <span class="dc-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
+            <span>Doc<em>Board</em></span>
+          </a>
+          <p class="mt-3 mb-2" style="max-width:28rem">The professional classifieds marketplace for physicians, clinics, hospitals, and medical suppliers.</p>
+          <p class="mb-0">
+            <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope me-1"></i>mail.polurus@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="dc-footer-heading">Marketplace</p>
+          <ul class="dc-footer-links">
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="clinics.html">Clinics</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="dc-footer-heading">Company</p>
+          <ul class="dc-footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="dc-footer-heading">Stay informed</p>
+          <p class="mb-2">Monthly healthcare hiring and practice insights.</p>
+          <form class="dc-newsletter" id="dcNewsletter">
+            <input type="email" class="form-control" placeholder="you@hospital.org" required aria-label="Email" />
+            <eds-button type="submit" variant="primary">Join</eds-button>
+          </form>
+          <p class="mt-3 mb-0 small"><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="faq.html">FAQ</a></p>
+        </div>
+      </div>
+      <div class="dc-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>DocBoard · Doctors Classifieds</span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="dc-back-top" id="dcBackTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <eds-modal id="dcContactModal" heading="Contact poster">
+    <p class="mb-3 text-secondary">Send a professional inquiry. Your message stays on DocBoard until the poster replies.</p>
+    <eds-textarea label="Message" rows="4" placeholder="Introduce yourself and your interest..."></eds-textarea>
+    <div class="dc-eds-actions mt-3">
+      <eds-button variant="secondary" id="dcContactCancel">Cancel</eds-button>
+      <eds-button id="dcContactSend" variant="primary">Send message</eds-button>
+    </div>
+  </eds-modal>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

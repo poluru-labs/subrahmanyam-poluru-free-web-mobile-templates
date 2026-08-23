@@ -1,0 +1,19 @@
+{
+  "name": "doctors-classifieds",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DocBoard — Doctors Classifieds marketplace template",
+  "author": "Subrahmanyam Poluru <mail.polurus@gmail.com>",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@poluru-labs/enterprise-design-system-wc": "^1.1.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

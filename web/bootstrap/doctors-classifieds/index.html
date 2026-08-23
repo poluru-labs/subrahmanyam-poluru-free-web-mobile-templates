@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--
+  DocBoard — Doctors Classifieds
+  Author: Subrahmanyam Poluru · polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="DocBoard is a professional doctors classifieds marketplace for jobs, clinics, equipment, and CME." />
+  <title>DocBoard - Doctors Classifieds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="dc-body">
+  <a class="dc-skip" href="#main-content">Skip to content</a>
+
+  <header class="dc-header" id="dcHeader">
+    <nav class="navbar navbar-expand-lg dc-navbar" aria-label="Primary">
+      <div class="container-xxl">
+        <a class="navbar-brand dc-brand" href="index.html">
+          <span class="dc-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
+          <span>Doc<em>Board</em></span>
+        </a>
+        <button class="navbar-toggler dc-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dcNav" aria-controls="dcNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="dcNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Browse</a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="listings.html">All listings</a></li>
+                <li><a class="dropdown-item" href="categories.html">Categories</a></li>
+                <li><a class="dropdown-item" href="jobs.html">Doctors jobs</a></li>
+                <li><a class="dropdown-item" href="clinics.html">Clinics &amp; practice</a></li>
+                <li><a class="dropdown-item" href="equipment.html">Equipment</a></li>
+                <li><a class="dropdown-item" href="cme-events.html">CME &amp; events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item ms-lg-1"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item ms-lg-1"><a href="post-classified.html"><eds-button variant="primary" size="sm">Post a classified</eds-button></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="main-content">
+
+    <section class="dc-hero">
+      <div class="container-xxl">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <p class="dc-eyebrow">Doctors classifieds marketplace</p>
+            <h1 class="dc-hero-title">Hire, sell, and grow your practice with confidence</h1>
+            <p class="dc-hero-lead">DocBoard connects physicians, clinics, hospitals, and medical suppliers in one trustworthy classifieds network-jobs, practices, equipment, and CME.</p>
+            <div class="dc-hero-actions">
+              <a href="listings.html"><eds-button variant="primary" size="lg">Browse listings</eds-button></a>
+              <a href="post-classified.html"><eds-button variant="secondary" size="lg">Post a classified</eds-button></a>
+            </div>
+            <form class="dc-search-panel" id="dcHeroSearch">
+              <div class="d-flex align-items-center gap-2 px-2">
+                <i class="bi bi-search text-secondary" aria-hidden="true"></i>
+                <input class="form-control" type="search" name="q" placeholder="Search jobs, clinics, equipment, CME..." aria-label="Search classifieds" />
+              </div>
+              <eds-button type="submit" variant="primary">Search</eds-button>
+            </form>
+            <ul class="dc-hero-stats">
+              <li><strong>12k+</strong><span>Verified listings</span></li>
+              <li><strong>48</strong><span>Specialties covered</span></li>
+              <li><strong>91%</strong><span>Reply within 48h</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="dc-hero-visual">
+              <div class="dc-hero-visual-card">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <eds-badge label="Featured" variant="brand" soft pill></eds-badge>
+                  <eds-status label="Verified clinic" variant="success"></eds-status>
+                </div>
+                <h2 class="h5 mb-1">Cardiology opening · Chicago</h2>
+                <p class="text-secondary small mb-3">Hospital-employed · Competitive RVU · Relocation</p>
+                <div class="dc-eds-actions">
+                  <a href="listing-detail.html"><eds-button variant="primary" size="sm">Open listing</eds-button></a>
+                  <eds-button variant="tertiary" size="sm" data-save-listing>Save</eds-button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dc-section">
+      <div class="container-xxl">
+        <div class="dc-board-head">
+          <div>
+            <p class="dc-eyebrow">Categories</p>
+            <h2 class="dc-section-title">Explore by intent</h2>
+          </div>
+          <a href="categories.html"><eds-button variant="tertiary" size="sm">View all categories</eds-button></a>
+        </div>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="dc-card dc-card-link text-center" href="jobs.html">
+              <span class="dc-icon-tile mx-auto"><i class="bi bi-briefcase"></i></span>
+              <h3 class="h6 mb-1">Jobs</h3>
+              <p class="small text-secondary mb-0">3.2k ads</p>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="dc-card dc-card-link text-center" href="clinics.html">
+              <span class="dc-icon-tile mx-auto"><i class="bi bi-hospital"></i></span>
+              <h3 class="h6 mb-1">Clinics</h3>
+              <p class="small text-secondary mb-0">840 ads</p>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="dc-card dc-card-link text-center" href="equipment.html">
+              <span class="dc-icon-tile mx-auto"><i class="bi bi-clipboard2-pulse"></i></span>
+              <h3 class="h6 mb-1">Equipment</h3>
+              <p class="small text-secondary mb-0">1.1k ads</p>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="dc-card dc-card-link text-center" href="cme-events.html">
+              <span class="dc-icon-tile mx-auto"><i class="bi bi-mortarboard"></i></span>
+              <h3 class="h6 mb-1">CME</h3>
+              <p class="small text-secondary mb-0">420 ads</p>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="dc-card dc-card-link text-center" href="jobs.html">
+              <span class="dc-icon-tile mx-auto"><i class="bi bi-clock-history"></i></span>
+              <h3 class="h6 mb-1">Locum</h3>
+              <p class="small text-secondary mb-0">960 ads</p>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="dc-card dc-card-link text-center" href="listings.html">
+              <span class="dc-icon-tile mx-auto"><i class="bi bi-laptop"></i></span>
+              <h3 class="h6 mb-1">Telehealth</h3>
+              <p class="small text-secondary mb-0">510 ads</p>
+            </a>
+          </div></div>
+      </div>
+    </section>
+
+    <section class="dc-section dc-section-soft">
+      <div class="container-xxl">
+        <div class="dc-board-head">
+          <div>
+            <p class="dc-eyebrow">Latest</p>
+            <h2 class="dc-section-title">Fresh classifieds for clinicians</h2>
+          </div>
+          <a href="listings.html"><eds-button variant="secondary" size="sm">See all listings</eds-button></a>
+        </div>
+        <div class="row g-3">          <div class="col-md-6 col-xl-4" data-listing-card data-category="jobs" data-specialty="cardiology" data-location="chicago" data-type="fulltime">
+            <article class="dc-card dc-listing">
+              <div class="dc-listing-top">
+                <div class="dc-badges"><span class="dc-pill">Featured</span><span class="dc-pill dc-pill-new">New</span><span class="dc-pill dc-pill-muted">Jobs</span></div>
+                <button type="button" class="btn btn-sm btn-light border" data-save-listing aria-pressed="false" aria-label="Save listing"><i class="bi bi-bookmark"></i></button>
+              </div>
+              <h3><a href="listing-detail.html">Interventional Cardiology · Full-time</a></h3>
+              <p class="dc-listing-meta mb-0">
+                <span><i class="bi bi-geo-alt"></i>Chicago, IL</span>
+                <span><i class="bi bi-briefcase"></i>Cardiology</span>
+                <span><i class="bi bi-cash"></i>$425k-$480k</span>
+              </p>
+              <p class="text-secondary small mb-0">Hospital-employed · Call 1:4 · Sign-on available</p>
+              <div class="dc-listing-actions">
+                <a href="listing-detail.html"><eds-button variant="primary" size="sm">View details</eds-button></a>
+                <eds-button variant="secondary" size="sm" data-contact-seller>Contact</eds-button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing"><i class="bi bi-share me-1"></i>Share</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-listing-card data-category="clinics" data-specialty="family" data-location="austin" data-type="sale">
+            <article class="dc-card dc-listing">
+              <div class="dc-listing-top">
+                <div class="dc-badges"><span class="dc-pill">Featured</span><span class="dc-pill dc-pill-muted">Clinics</span></div>
+                <button type="button" class="btn btn-sm btn-light border" data-save-listing aria-pressed="false" aria-label="Save listing"><i class="bi bi-bookmark"></i></button>
+              </div>
+              <h3><a href="listing-detail.html">Family Medicine Clinic for Sale</a></h3>
+              <p class="dc-listing-meta mb-0">
+                <span><i class="bi bi-geo-alt"></i>Austin, TX</span>
+                <span><i class="bi bi-briefcase"></i>Family Medicine</span>
+                <span><i class="bi bi-cash"></i>$1.2M asking</span>
+              </p>
+              <p class="text-secondary small mb-0">Turnkey outpatient practice · Strong payer mix</p>
+              <div class="dc-listing-actions">
+                <a href="listing-detail.html"><eds-button variant="primary" size="sm">View details</eds-button></a>
+                <eds-button variant="secondary" size="sm" data-contact-seller>Contact</eds-button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing"><i class="bi bi-share me-1"></i>Share</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-listing-card data-category="equipment" data-specialty="radiology" data-location="remote" data-type="sale">
+            <article class="dc-card dc-listing">
+              <div class="dc-listing-top">
+                <div class="dc-badges"><span class="dc-pill dc-pill-urgent">Urgent</span><span class="dc-pill dc-pill-muted">Equipment</span></div>
+                <button type="button" class="btn btn-sm btn-light border" data-save-listing aria-pressed="false" aria-label="Save listing"><i class="bi bi-bookmark"></i></button>
+              </div>
+              <h3><a href="listing-detail.html">Ultrasound System · Nearly New</a></h3>
+              <p class="dc-listing-meta mb-0">
+                <span><i class="bi bi-geo-alt"></i>Remote / Ship</span>
+                <span><i class="bi bi-briefcase"></i>Radiology</span>
+                <span><i class="bi bi-cash"></i>$38,500</span>
+              </p>
+              <p class="text-secondary small mb-0">Portable cart · Warranty remaining · Seller financed</p>
+              <div class="dc-listing-actions">
+                <a href="listing-detail.html"><eds-button variant="primary" size="sm">View details</eds-button></a>
+                <eds-button variant="secondary" size="sm" data-contact-seller>Contact</eds-button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing"><i class="bi bi-share me-1"></i>Share</button>
+              </div>
+            </article>
+          </div>
+</div>
+      </div>
+    </section>
+
+    <section class="dc-section">
+      <div class="container-xxl">
+        <div class="dc-board-head">
+          <div>
+            <p class="dc-eyebrow">Trusted employers</p>
+            <h2 class="dc-section-title">Hospitals &amp; clinics hiring now</h2>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="dc-card text-center">
+              <eds-avatar name="Northshore Health" size="lg"></eds-avatar>
+              <h3 class="h6 mt-3 mb-1">Northshore Health</h3>
+              <p class="small text-secondary mb-0">Academic medical center</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="dc-card text-center">
+              <eds-avatar name="Prairie Heart Group" size="lg"></eds-avatar>
+              <h3 class="h6 mt-3 mb-1">Prairie Heart Group</h3>
+              <p class="small text-secondary mb-0">Cardiology network</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="dc-card text-center">
+              <eds-avatar name="Austin Family Care" size="lg"></eds-avatar>
+              <h3 class="h6 mt-3 mb-1">Austin Family Care</h3>
+              <p class="small text-secondary mb-0">Multi-site clinic</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="dc-card text-center">
+              <eds-avatar name="Pacific Locums" size="lg"></eds-avatar>
+              <h3 class="h6 mt-3 mb-1">Pacific Locums</h3>
+              <p class="small text-secondary mb-0">Staffing partner</p>
+            </div>
+          </div></div>
+      </div>
+    </section>
+
+    <section class="dc-section dc-section-soft">
+      <div class="container-xxl">
+        <div class="dc-board-head">
+          <div>
+            <p class="dc-eyebrow">How it works</p>
+            <h2 class="dc-section-title">Post, match, and close faster</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4"><div class="dc-step"><span class="dc-step-num">1</span><div><h3 class="h5">Create your profile</h3><p class="text-secondary mb-0">Verify your role as physician, clinic, or supplier in minutes.</p></div></div></div>
+          <div class="col-md-4"><div class="dc-step"><span class="dc-step-num">2</span><div><h3 class="h5">Post or search</h3><p class="text-secondary mb-0">Use specialty and location filters to reach the right audience.</p></div></div></div>
+          <div class="col-md-4"><div class="dc-step"><span class="dc-step-num">3</span><div><h3 class="h5">Message securely</h3><p class="text-secondary mb-0">Contact posters, share listings, and manage ads from your dashboard.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dc-section">
+      <div class="container-xxl">
+        <div class="dc-board-head">
+          <div>
+            <p class="dc-eyebrow">Membership</p>
+            <h2 class="dc-section-title">Plans that fit how you hire and sell</h2>
+          </div>
+          <a href="pricing.html"><eds-button variant="tertiary" size="sm">Compare plans</eds-button></a>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-4"><article class="dc-card dc-plan"><h3 class="h5">Starter</h3><p class="dc-plan-price">$0 <span>/ mo</span></p><p class="text-secondary">1 active listing · Basic search · Email alerts</p><a href="register.html"><eds-button variant="secondary" full-width>Get started</eds-button></a></article></div>
+          <div class="col-md-4"><article class="dc-card dc-plan is-featured"><eds-badge label="Most popular" variant="brand" soft pill></eds-badge><h3 class="h5 mt-2">Practice</h3><p class="dc-plan-price">$79 <span>/ mo</span></p><p class="text-secondary">8 listings · Featured badge · Applicant inbox</p><a href="pricing.html"><eds-button variant="primary" full-width>Choose Practice</eds-button></a></article></div>
+          <div class="col-md-4"><article class="dc-card dc-plan"><h3 class="h5">Enterprise</h3><p class="dc-plan-price">Custom</p><p class="text-secondary">Unlimited seats · SSO · Dedicated success</p><a href="contact.html"><eds-button variant="secondary" full-width>Talk to sales</eds-button></a></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dc-section dc-section-soft">
+      <div class="container-xxl">
+        <div class="dc-board-head"><div><p class="dc-eyebrow">Testimonials</p><h2 class="dc-section-title">Trusted by clinicians nationwide</h2></div></div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <eds-card elevated padded>
+              <blockquote class="dc-quote">"We filled two locum blocks in under a week without the usual staffing markup."</blockquote>
+              <div class="dc-quote-meta">
+                <span class="dc-avatar">PP</span>
+                <div>
+                  <strong>Priya Poluru</strong>
+                  <div class="small text-secondary">Hospitalist · Seattle</div>
+                </div>
+              </div>
+            </eds-card>
+          </div>
+          <div class="col-md-4">
+            <eds-card elevated padded>
+              <blockquote class="dc-quote">"Selling our clinic felt orderly-serious buyers, clear messaging, no spam."</blockquote>
+              <div class="dc-quote-meta">
+                <span class="dc-avatar">AP</span>
+                <div>
+                  <strong>Arjun Poluru</strong>
+                  <div class="small text-secondary">Family Medicine · Austin</div>
+                </div>
+              </div>
+            </eds-card>
+          </div>
+          <div class="col-md-4">
+            <eds-card elevated padded>
+              <blockquote class="dc-quote">"Equipment sold faster than auction sites, and buyers were credentialed."</blockquote>
+              <div class="dc-quote-meta">
+                <span class="dc-avatar">MP</span>
+                <div>
+                  <strong>Meera Poluru</strong>
+                  <div class="small text-secondary">Radiology Ops · Chicago</div>
+                </div>
+              </div>
+            </eds-card>
+          </div></div>
+      </div>
+    </section>
+
+    <section class="dc-section">
+      <div class="container-xxl">
+        <div class="dc-board-head"><div><p class="dc-eyebrow">From the blog</p><h2 class="dc-section-title">News for physician operators</h2></div><a href="blog.html"><eds-button variant="tertiary" size="sm">All articles</eds-button></a></div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <article class="dc-card h-100">
+              <span class="dc-pill mb-2">Hiring</span>
+              <h3 class="h5"><a href="blog.html">How to write a physician job post that converts</a></h3>
+              <p class="text-secondary">Checklist for compensation clarity, call expectations, and culture signals.</p>
+              <p class="small text-secondary mb-0">Aug 12, 2026</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="dc-card h-100">
+              <span class="dc-pill mb-2">Practice sales</span>
+              <h3 class="h5"><a href="blog.html">Valuing an outpatient clinic in 2026</a></h3>
+              <p class="text-secondary">What buyers scrutinize beyond EBITDA in primary care transitions.</p>
+              <p class="small text-secondary mb-0">Aug 5, 2026</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="dc-card h-100">
+              <span class="dc-pill mb-2">CME</span>
+              <h3 class="h5"><a href="blog.html">Hybrid CME that still feels premium</a></h3>
+              <p class="text-secondary">Design tips for events clinicians actually finish.</p>
+              <p class="small text-secondary mb-0">Jul 28, 2026</p>
+            </article>
+          </div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="dc-footer">
+    <div class="container-xxl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="dc-brand dc-brand-footer" href="index.html">
+            <span class="dc-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse-fill"></i></span>
+            <span>Doc<em>Board</em></span>
+          </a>
+          <p class="mt-3 mb-2" style="max-width:28rem">The professional classifieds marketplace for physicians, clinics, hospitals, and medical suppliers.</p>
+          <p class="mb-0">
+            <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope me-1"></i>mail.polurus@gmail.com</a><br />
+            <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+          </p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="dc-footer-heading">Marketplace</p>
+          <ul class="dc-footer-links">
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="clinics.html">Clinics</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="dc-footer-heading">Company</p>
+          <ul class="dc-footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="dc-footer-heading">Stay informed</p>
+          <p class="mb-2">Monthly healthcare hiring and practice insights.</p>
+          <form class="dc-newsletter" id="dcNewsletter">
+            <input type="email" class="form-control" placeholder="you@hospital.org" required aria-label="Email" />
+            <eds-button type="submit" variant="primary">Join</eds-button>
+          </form>
+          <p class="mt-3 mb-0 small"><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="faq.html">FAQ</a></p>
+        </div>
+      </div>
+      <div class="dc-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru. Free for personal &amp; commercial use.</span>
+        <span>DocBoard · Doctors Classifieds</span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="dc-back-top" id="dcBackTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <eds-modal id="dcContactModal" heading="Contact poster">
+    <p class="mb-3 text-secondary">Send a professional inquiry. Your message stays on DocBoard until the poster replies.</p>
+    <eds-textarea label="Message" rows="4" placeholder="Introduce yourself and your interest..."></eds-textarea>
+    <div class="dc-eds-actions mt-3">
+      <eds-button variant="secondary" id="dcContactCancel">Cancel</eds-button>
+      <eds-button id="dcContactSend" variant="primary">Send message</eds-button>
+    </div>
+  </eds-modal>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
