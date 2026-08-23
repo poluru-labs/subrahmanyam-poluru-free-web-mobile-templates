@@ -69,7 +69,7 @@
     <section class="dc-section">
       <div class="container-xxl">
         <div class="row g-4">
-          <div class="col-lg-8">
+          <div class="col-lg-8 min-w-0">
             <article class="dc-card">
               <div class="dc-badges mb-3">
                 <span class="dc-pill">Featured</span>
@@ -102,35 +102,46 @@
               </div>
             </article>
           </div>
-          <div class="col-lg-4">
-            <aside class="dc-card dc-sticky-side mb-3">
-              <h3 class="h6 text-uppercase text-secondary mb-3">Contact</h3>
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <eds-avatar name="Northshore Health" size="lg"></eds-avatar>
-                <div>
-                  <strong>Northshore Health</strong>
-                  <div class="small text-secondary">Verified employer</div>
+          <div class="col-lg-4 min-w-0">
+            <div class="dc-sticky-side">
+              <aside class="dc-card mb-3">
+                <h3 class="h6 text-uppercase text-secondary mb-3">Contact</h3>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <eds-avatar name="Northshore Health" size="lg"></eds-avatar>
+                  <div>
+                    <strong>Northshore Health</strong>
+                    <div class="small text-secondary">Verified employer</div>
+                  </div>
                 </div>
+                <p class="small text-secondary"><i class="bi bi-envelope me-1"></i>recruiting@northshore.example</p>
+                <p class="small text-secondary"><i class="bi bi-telephone me-1"></i>(312) 555-0142</p>
+                <eds-button variant="primary" full-width data-contact-seller>Send inquiry</eds-button>
+                <eds-button class="mt-2" variant="secondary" full-width data-save-listing>Save listing</eds-button>
+              </aside>
+              <div class="dc-card">
+                <h3 class="h6 mb-3">Listing facts</h3>
+                <dl class="dc-facts">
+                  <div><dt>Employment</dt><dd>Hospital-employed</dd></div>
+                  <div><dt>Start date</dt><dd>Flexible / ASAP</dd></div>
+                  <div><dt>Visa</dt><dd>H-1B considered</dd></div>
+                  <div><dt>Category</dt><dd>Doctors jobs</dd></div>
+                </dl>
               </div>
-              <p class="small text-secondary"><i class="bi bi-envelope me-1"></i>recruiting@northshore.example</p>
-              <p class="small text-secondary"><i class="bi bi-telephone me-1"></i>(312) 555-0142</p>
-              <eds-button variant="primary" full-width data-contact-seller>Send inquiry</eds-button>
-              <eds-button class="mt-2" variant="secondary" full-width data-save-listing>Save listing</eds-button>
-            </aside>
-            <div class="dc-card">
-              <h3 class="h6 mb-3">Listing facts</h3>
-              <dl class="dc-facts">
-                <div><dt>Employment</dt><dd>Hospital-employed</dd></div>
-                <div><dt>Start date</dt><dd>Flexible / ASAP</dd></div>
-                <div><dt>Visa</dt><dd>H-1B considered</dd></div>
-                <div><dt>Category</dt><dd>Doctors jobs</dd></div>
-              </dl>
             </div>
           </div>
         </div>
-        <div class="mt-5">
-          <div class="dc-board-head"><div><h2 class="dc-section-title">Related listings</h2></div></div>
-          <div class="row g-3">          <div class="col-md-6 col-xl-4" data-listing-card data-category="clinics" data-specialty="family" data-location="austin" data-type="sale">
+      </div>
+    </section>
+
+    <section class="dc-section dc-section-soft dc-related" aria-labelledby="dcRelatedHeading">
+      <div class="container-xxl">
+        <div class="dc-board-head">
+          <div>
+            <h2 class="dc-section-title" id="dcRelatedHeading">Related listings</h2>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-4 min-w-0" data-listing-card data-category="clinics" data-specialty="family" data-location="austin" data-type="sale">
             <article class="dc-card dc-listing">
               <div class="dc-listing-top">
                 <div class="dc-badges"><span class="dc-pill">Featured</span><span class="dc-pill dc-pill-muted">Clinics</span></div>
@@ -146,11 +157,11 @@
               <div class="dc-listing-actions">
                 <a href="listing-detail.html"><eds-button variant="primary" size="sm">View details</eds-button></a>
                 <eds-button variant="secondary" size="sm" data-contact-seller>Contact</eds-button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing"><i class="bi bi-share me-1"></i>Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing" aria-label="Share"><i class="bi bi-share"></i></button>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4" data-listing-card data-category="equipment" data-specialty="radiology" data-location="remote" data-type="sale">
+          <div class="col-md-6 col-xl-4 min-w-0" data-listing-card data-category="equipment" data-specialty="radiology" data-location="remote" data-type="sale">
             <article class="dc-card dc-listing">
               <div class="dc-listing-top">
                 <div class="dc-badges"><span class="dc-pill dc-pill-urgent">Urgent</span><span class="dc-pill dc-pill-muted">Equipment</span></div>
@@ -166,11 +177,11 @@
               <div class="dc-listing-actions">
                 <a href="listing-detail.html"><eds-button variant="primary" size="sm">View details</eds-button></a>
                 <eds-button variant="secondary" size="sm" data-contact-seller>Contact</eds-button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing"><i class="bi bi-share me-1"></i>Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing" aria-label="Share"><i class="bi bi-share"></i></button>
               </div>
             </article>
           </div>
-          <div class="col-md-6 col-xl-4" data-listing-card data-category="jobs" data-specialty="internal" data-location="seattle" data-type="locum">
+          <div class="col-md-6 col-xl-4 min-w-0" data-listing-card data-category="jobs" data-specialty="internal" data-location="seattle" data-type="locum">
             <article class="dc-card dc-listing">
               <div class="dc-listing-top">
                 <div class="dc-badges"><span class="dc-pill dc-pill-new">New</span><span class="dc-pill dc-pill-muted">Jobs</span></div>
@@ -186,11 +197,10 @@
               <div class="dc-listing-actions">
                 <a href="listing-detail.html"><eds-button variant="primary" size="sm">View details</eds-button></a>
                 <eds-button variant="secondary" size="sm" data-contact-seller>Contact</eds-button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing"><i class="bi bi-share me-1"></i>Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-share-listing="https://polurus.com/docboard/listing" aria-label="Share"><i class="bi bi-share"></i></button>
               </div>
             </article>
           </div>
-</div>
         </div>
       </div>
     </section>

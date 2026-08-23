@@ -695,6 +695,20 @@ button.is-saved {
 .dc-sticky-side {
   position: sticky;
   top: calc(var(--dc-header-h) + 1rem);
+  display: grid;
+  gap: 0;
+  z-index: 1;
+}
+
+/* Keep related + footer above any sticky sidebar paint */
+.dc-related,
+.dc-footer {
+  position: relative;
+  z-index: 2;
+}
+
+.min-w-0 {
+  min-width: 0;
 }
 
 .dc-form-stack {
@@ -815,8 +829,7 @@ button.is-saved {
   background: var(--dc-primary);
 }
 
-/* EDS integration polish */
-eds-button,
+/* EDS integration polish — avoid forcing block on eds-button (breaks flex rows) */
 eds-badge,
 eds-card,
 eds-alert,
@@ -831,8 +844,25 @@ eds-empty-state {
   display: block;
 }
 
+eds-button {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+eds-button[full-width],
+eds-button[full-width=""] {
+  display: flex;
+  width: 100%;
+}
+
 eds-card {
   height: 100%;
+}
+
+.dc-listing-actions > a,
+.dc-eds-actions > a {
+  display: inline-flex;
+  text-decoration: none;
 }
 
 .dc-eds-actions {
