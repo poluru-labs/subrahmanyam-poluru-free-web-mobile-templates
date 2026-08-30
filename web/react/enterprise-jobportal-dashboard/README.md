@@ -1,51 +1,42 @@
-# Jobs Raja Admin — Enterprise Job Portal Dashboard
+# Jobs Raja
 
-Super-admin dashboard template for enterprise hiring operations.
+React hiring dashboard for Poluru Cloud. Theme color is `#2A1A5E`. Built with Vite, Bootstrap, and [`@poluru-labs/enterprise-design-system-react`](https://www.npmjs.com/package/@poluru-labs/enterprise-design-system-react).
 
-**Brand primary:** `#FF0052`
+Signed in as **Kavya Poluru**, talent lead.
 
-## Author
+## Run
 
-**Subrahmanyam Poluru**  
-Email: [mail.polurus@gmail.com](mailto:mail.polurus@gmail.com)  
-Website: [https://polurus.com](https://polurus.com)  
-LinkedIn: [https://www.linkedin.com/in/polurus/](https://www.linkedin.com/in/polurus/)  
-GitHub: [https://github.com/poluru-labs](https://github.com/poluru-labs)
-
-## Stack
-
-- HTML / CSS / JavaScript
-- Bootstrap 5 + Bootstrap Icons (CDN)
-- Manrope (Google Fonts)
-- Vite
-- `@poluru-labs/enterprise-design-system-react`
-
-## Pages
-
-- Overview
-- Jobs
-- Applicants
-- Employers
-- Applications pipeline
-- Recruiters
-- Reports
-- Settings
-
-## Setup
+Requires Node.js 20+.
 
 ```bash
+cd enterprise-jobportal-dashboard
 npm install
 npm run dev
 ```
 
-## Scripts
+Default dev server: http://127.0.0.1:5175
 
-| Command | Description |
+| Script | Description |
 | --- | --- |
-| `npm run dev` | Start Vite dev server |
+| `npm run dev` | Vite development server |
 | `npm run build` | Production build |
-| `npm run preview` | Preview production build |
+| `npm run preview` | Preview the production build |
 
-## License
+## Routes
 
-MIT © Subrahmanyam Poluru / Poluru Labs
+| Hash | Page |
+| --- | --- |
+| `#/overview` | Open roles, inbound, funnel, alerts |
+| `#/jobs` | Marketplace roles |
+| `#/job/:id` | Role workspace |
+| `#/candidates` | Talent pool and interview scheduling |
+| `#/pipeline` | Applied → offer board |
+| `#/employers` | Company seats and departments |
+| `#/settings` | Profile, alerts, CLI |
+
+## Stack
+
+- React 18
+- Vite
+- Bootstrap 5 + Bootstrap Icons
+- `@poluru-labs/enterprise-design-system-react`
