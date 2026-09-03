@@ -141,6 +141,15 @@ body {
   margin: 0 auto;
 }
 
+.page-lead {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 1.1rem auto 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.94rem;
+}
+
 .templates-section {
   padding: 3.5rem 0 4rem;
 }
@@ -191,12 +200,17 @@ body {
   border-bottom: 1px solid var(--brand-border);
 }
 
+.demo-table tbody tr {
+  height: 150px;
+}
+
 .demo-table tbody td {
   padding: 1rem 1.2rem;
   border-bottom: 1px solid var(--brand-border);
   vertical-align: middle;
   font-size: 0.94rem;
   color: var(--brand-text);
+  min-height: 150px;
 }
 
 .demo-table tbody tr:last-child td {
@@ -211,6 +225,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  height: 100%;
+  min-height: 106px;
 }
 
 .template-icon {
@@ -236,7 +252,9 @@ body {
   display: block;
   color: var(--brand-muted);
   font-size: 0.74rem;
+  line-height: 1.5;
   margin-top: 0.12rem;
+  max-width: 24rem;
 }
 
 .table-tag {

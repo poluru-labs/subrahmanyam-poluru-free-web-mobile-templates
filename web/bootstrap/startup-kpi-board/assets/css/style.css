@@ -488,6 +488,7 @@ a:hover {
   border-radius: var(--skb-radius);
   box-shadow: var(--skb-shadow);
   padding: 1.2rem 1.2rem;
+  height: 100%;
   transition: transform var(--skb-transition), box-shadow var(--skb-transition);
 }
 
@@ -783,6 +784,7 @@ a:hover {
   border-radius: var(--skb-radius);
   padding: 1rem 1rem;
   box-shadow: var(--skb-shadow);
+  height: 100%;
 }
 
 .skb-stat > i {
@@ -866,6 +868,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.85rem;
+  align-items: stretch;
 }
 
 .skb-update {
@@ -875,6 +878,7 @@ a:hover {
   padding: 1.2rem 1.15rem;
   box-shadow: var(--skb-shadow);
   border-left-width: 4px;
+  height: 100%;
 }
 
 .skb-update-win {
@@ -979,6 +983,7 @@ a:hover {
   border-radius: var(--skb-radius);
   padding: 1rem 1.05rem;
   box-shadow: var(--skb-shadow);
+  height: 100%;
 }
 
 .skb-avatar {
@@ -1021,6 +1026,20 @@ a:hover {
   border-radius: var(--skb-radius);
   padding: 1.75rem 1.5rem;
   box-shadow: var(--skb-shadow);
+  height: 100%;
+}
+
+.row > [class*='col-'] {
+  display: flex;
+}
+
+.row > [class*='col-'] > .skb-panel,
+.row > [class*='col-'] > .skb-raise,
+.row > [class*='col-'] > .skb-stat,
+.row > [class*='col-'] > .skb-update,
+.row > [class*='col-'] > .skb-advisor,
+.row > [class*='col-'] > .skb-cta {
+  width: 100%;
 }
 
 .skb-cta-title {
