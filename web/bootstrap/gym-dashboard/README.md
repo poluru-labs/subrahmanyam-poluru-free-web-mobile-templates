@@ -6,7 +6,7 @@ A responsive **Bootstrap 5** gym operations dashboard for club managers: members
 
 | Token | Value | Use |
 |---|---|---|
-| Primary | `#E85D04` | Ember CTAs, active nav, highlights |
+| Primary | `#FF5A5A` | CTAs, active nav, highlights |
 | Ink | `#161311` | Sidebar, headings |
 | Canvas | `#F3EFE8` | Page background |
 | Surface | `#fffcf8` | Cards |

@@ -1,10 +1,10 @@
 /* Forge Athletic — Gym operations dashboard
-   Prefix: gxd- | Ember + charcoal | Barlow
+   Prefix: gxd- | Coral + charcoal | Barlow
 */
 :root {
-  --gxd-primary: #e85d04;
-  --gxd-primary-dark: #c2410c;
-  --gxd-primary-soft: rgba(232, 93, 4, 0.12);
+  --gxd-primary: #ff5a5a;
+  --gxd-primary-dark: #e04545;
+  --gxd-primary-soft: rgba(255, 90, 90, 0.14);
   --gxd-volt: #c8f542;
   --gxd-ink: #161311;
   --gxd-ink-2: #2b2622;
@@ -774,10 +774,6 @@ textarea {
   background: var(--gxd-ink);
   color: #fff;
   border: 0;
-}
-
-.gxd-toast .btn-close {
-  filter: invert(1);
 }
 
 .gxd-footer {
