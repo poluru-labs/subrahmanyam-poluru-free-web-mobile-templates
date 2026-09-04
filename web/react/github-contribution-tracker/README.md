@@ -2,7 +2,7 @@
 
 Open source contribution workspace built with **React**, **Vite**, **Tailwind CSS**, **Bootstrap Icons**, and a Node mock GitHub API.
 
-Primary brand color: `#457B9D`.
+Primary brand color: `#8140DC`.
 
 ## Setup
 
