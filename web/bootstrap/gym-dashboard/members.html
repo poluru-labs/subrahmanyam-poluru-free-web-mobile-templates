@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--
+  Forge Athletic — Gym operations dashboard
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Member directory for Forge Athletic gym dashboard." />
+  <title>Members — Forge Athletic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="gxd-body">
+  <a class="gxd-skip-link" href="#main-content">Skip to content</a>
+  <div class="gxd-overlay" id="gxdOverlay" aria-hidden="true"></div>
+  <div class="gxd-shell">
+    <aside class="gxd-sidebar" id="gxdSidebar" aria-label="Primary">
+      <div class="gxd-brand">
+        <a class="gxd-brand-link" href="index.html">
+          <span class="gxd-brand-mark" aria-hidden="true"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span>Forge<em>.</em></span>
+        </a>
+        <button type="button" class="gxd-sidebar-close d-lg-none" id="gxdSidebarClose" aria-label="Close navigation"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <nav class="gxd-nav">
+        <p class="gxd-nav-label">Club</p>
+        <ul class="gxd-nav-list">
+          <li><a class="gxd-nav-link" href="index.html"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a></li>
+          <li><a class="gxd-nav-link active" href="members.html" aria-current="page"><i class="bi bi-people"></i><span>Members</span></a></li>
+          <li><a class="gxd-nav-link" href="trainers.html"><i class="bi bi-person-badge"></i><span>Trainers</span></a></li>
+          <li><a class="gxd-nav-link" href="classes.html"><i class="bi bi-calendar2-week"></i><span>Classes</span></a></li>
+          <li><a class="gxd-nav-link" href="checkins.html"><i class="bi bi-qr-code-scan"></i><span>Check-in</span><span class="gxd-nav-badge">8</span></a></li>
+          <li><a class="gxd-nav-link" href="memberships.html"><i class="bi bi-credit-card"></i><span>Memberships</span></a></li>
+        </ul>
+        <p class="gxd-nav-label">Template</p>
+        <ul class="gxd-nav-list">
+          <li><a class="gxd-nav-link" href="about.html"><i class="bi bi-info-circle"></i><span>About</span></a></li>
+          <li><a class="gxd-nav-link" href="documentation.html"><i class="bi bi-journal-text"></i><span>Docs</span></a></li>
+          <li><a class="gxd-nav-link" href="contact.html"><i class="bi bi-headset"></i><span>Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="gxd-sidebar-foot">
+        <div class="gxd-staff"><span class="gxd-avatar">MC</span><p><strong>Maya Chen</strong>Club manager · Downtown</p></div>
+      </div>
+    </aside>
+    <div class="gxd-main">
+      <header class="gxd-topbar">
+        <button type="button" class="gxd-menu-btn" id="gxdMenuBtn" aria-label="Open navigation"><i class="bi bi-list fs-5"></i></button>
+        <p class="gxd-crumb mb-0">Club / <strong>Members</strong></p>
+        <div class="gxd-search">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input id="gxdTopSearch" type="search" placeholder="Search members, classes…" aria-label="Search the gym dashboard" />
+        </div>
+        <button type="button" class="gxd-icon-btn" aria-label="Notifications, 3 unread"><i class="bi bi-bell"></i><span class="gxd-dot"></span></button>
+        <span class="gxd-avatar">MC</span>
+      </header>
+      <main id="main-content" class="gxd-content">
+        <div class="gxd-page-head">
+          <div>
+            <p class="gxd-kicker">Directory</p>
+            <h1>Members</h1>
+            <p class="gxd-lede">Filter by plan and status. Check someone in or freeze a membership from the card.</p>
+          </div>
+          <a class="btn gxd-btn-primary" href="checkins.html"><i class="bi bi-qr-code-scan me-1"></i>Check in</a>
+        </div>
+        <div class="gxd-toolbar">
+          <div class="gxd-search-wrap">
+            <i class="bi bi-search"></i>
+            <input class="form-control" id="gxdMemberSearch" type="search" placeholder="Search name or ID…" aria-label="Search members" />
+          </div>
+          <label class="gxd-field">Plan
+            <select class="form-select" id="gxdMemberPlan">
+              <option value="all">All plans</option>
+              <option value="unlimited">Unlimited</option>
+              <option value="3-day">3-day</option>
+              <option value="pt">PT pack</option>
+              <option value="student">Student</option>
+            </select>
+          </label>
+          <label class="gxd-field">Status
+            <select class="form-select" id="gxdMemberStatus">
+              <option value="all">All</option>
+              <option value="active">Active</option>
+              <option value="expiring">Expiring</option>
+              <option value="frozen">Frozen</option>
+            </select>
+          </label>
+        </div>
+        <p class="gxd-empty" id="gxdMemberEmpty">No members match those filters.</p>
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-4" data-member-card data-plan="unlimited" data-status="active">
+            <article class="gxd-card gxd-card-pad gxd-profile">
+              <div class="gxd-person">
+                <span class="gxd-avatar gxd-avatar-lg">JH</span>
+                <div><strong>Jordan Hale</strong><span>#4821 · Joined Jan 2024</span></div>
+              </div>
+              <ul class="gxd-tags"><li class="gxd-badge">Unlimited</li><li class="gxd-badge gxd-badge-ok">Active</li></ul>
+              <p class="small text-muted mb-0">Last visit today 6:02 AM · 14 check-ins this week</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn gxd-btn-primary btn-sm" data-member-action="checkin" data-member-name="Jordan Hale">Check in</button>
+                <button type="button" class="btn gxd-btn-ghost btn-sm" data-member-action="freeze" data-member-name="Jordan Hale">Freeze</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-member-card data-plan="3-day" data-status="active">
+            <article class="gxd-card gxd-card-pad gxd-profile">
+              <div class="gxd-person">
+                <span class="gxd-avatar gxd-avatar-lg gxd-avatar-ember">PR</span>
+                <div><strong>Priya Raman</strong><span>#3904 · Joined Mar 2025</span></div>
+              </div>
+              <ul class="gxd-tags"><li class="gxd-badge">3-day</li><li class="gxd-badge gxd-badge-ok">Active</li></ul>
+              <p class="small text-muted mb-0">Last visit today 6:08 AM · Strength Lab regular</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn gxd-btn-primary btn-sm" data-member-action="checkin" data-member-name="Priya Raman">Check in</button>
+                <button type="button" class="btn gxd-btn-ghost btn-sm" data-member-action="freeze" data-member-name="Priya Raman">Freeze</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-member-card data-plan="pt" data-status="expiring">
+            <article class="gxd-card gxd-card-pad gxd-profile">
+              <div class="gxd-person">
+                <span class="gxd-avatar gxd-avatar-lg gxd-avatar-ink">LO</span>
+                <div><strong>Luis Ortega</strong><span>#2750 · Joined Aug 2023</span></div>
+              </div>
+              <ul class="gxd-tags"><li class="gxd-badge">PT pack</li><li class="gxd-badge gxd-badge-warn">Expiring</li></ul>
+              <p class="small text-muted mb-0">2 sessions left with Elena · renews Sep 12</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn gxd-btn-primary btn-sm" data-member-action="checkin" data-member-name="Luis Ortega">Check in</button>
+                <button type="button" class="btn gxd-btn-ghost btn-sm" data-member-action="freeze" data-member-name="Luis Ortega">Freeze</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-member-card data-plan="student" data-status="frozen">
+            <article class="gxd-card gxd-card-pad gxd-profile">
+              <div class="gxd-person">
+                <span class="gxd-avatar gxd-avatar-lg">AH</span>
+                <div><strong>Amira Haddad</strong><span>#5118 · Joined Sep 2025</span></div>
+              </div>
+              <ul class="gxd-tags"><li class="gxd-badge">Student</li><li class="gxd-badge gxd-badge-muted">Frozen</li></ul>
+              <p class="small text-muted mb-0">Freeze until Sep 20 · access paused at gates</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn gxd-btn-ghost btn-sm" disabled>Check in</button>
+                <a class="btn gxd-btn-primary btn-sm" href="memberships.html">Review plan</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-member-card data-plan="unlimited" data-status="active">
+            <article class="gxd-card gxd-card-pad gxd-profile">
+              <div class="gxd-person">
+                <span class="gxd-avatar gxd-avatar-lg gxd-avatar-ember">NK</span>
+                <div><strong>Noah Kim</strong><span>#4488 · Joined Jun 2022</span></div>
+              </div>
+              <ul class="gxd-tags"><li class="gxd-badge">Unlimited</li><li class="gxd-badge gxd-badge-ok">Active</li></ul>
+              <p class="small text-muted mb-0">Ride Club 6:45 PM waitlisted</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn gxd-btn-primary btn-sm" data-member-action="checkin" data-member-name="Noah Kim">Check in</button>
+                <button type="button" class="btn gxd-btn-ghost btn-sm" data-member-action="freeze" data-member-name="Noah Kim">Freeze</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4" data-member-card data-plan="3-day" data-status="expiring">
+            <article class="gxd-card gxd-card-pad gxd-profile">
+              <div class="gxd-person">
+                <span class="gxd-avatar gxd-avatar-lg">SR</span>
+                <div><strong>Sofia Reyes</strong><span>#3291 · Joined Nov 2024</span></div>
+              </div>
+              <ul class="gxd-tags"><li class="gxd-badge">3-day</li><li class="gxd-badge gxd-badge-warn">Expiring</li></ul>
+              <p class="small text-muted mb-0">Card ends Sep 8 · offer Unlimited upgrade</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn gxd-btn-primary btn-sm" data-member-action="checkin" data-member-name="Sofia Reyes">Check in</button>
+                <a class="btn gxd-btn-ghost btn-sm" href="memberships.html">Upgrade</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+      <p class="gxd-footer px-4">&copy; 2026 Subrahmanyam Poluru · Forge Athletic gym dashboard</p>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="gxdToast" class="toast gxd-toast" role="status" aria-live="polite">
+      <div class="toast-header"><strong class="me-auto">Forge Athletic</strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div>
+      <div class="toast-body" id="gxdToastBody">Done.</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

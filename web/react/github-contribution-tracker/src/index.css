@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --color-brand: #457b9d;
+  --color-brand-dark: #315b75;
+  --color-brand-soft: #e5f0f5;
+  --color-canvas: #f4f8fa;
+  --color-ink: #1d2930;
+  --color-muted: #64747c;
+  --color-line: #dbe6eb;
+  --color-success: #2f6b46;
+  --color-warning: #b45309;
+  --color-danger: #b42318;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.ojd-font-display {
+  font-family: var(--font-display);
+}
+
+.ojd-shell { background-image: radial-gradient(circle at 90% 0%, #e6f2f7 0, transparent 28rem); }
+.ojd-metric-icon { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .75rem; color: var(--color-brand); background: var(--color-brand-soft); }
+.ojd-heatmap { display: grid; grid-template-columns: repeat(28, minmax(0, 1fr)); grid-auto-rows: 1.25rem; gap: .35rem; }
+.ojd-heatmap span { border-radius: .25rem; }
+.ojd-heat-0 { background: #edf3f5; }
+.ojd-heat-1 { background: #c7dce5; }
+.ojd-heat-2 { background: #91bacb; }
+.ojd-heat-3 { background: #6499b2; }
+.ojd-heat-4 { background: #457b9d; }
+.ojd-reveal { animation: ojd-rise .5s ease both; }
+@keyframes ojd-rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6cfc4;
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+  Forge Athletic — Gym operations dashboard
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Forge Athletic gym dashboard for members, trainers, classes, check-ins, and memberships." />
+  <title>Dashboard — Forge Athletic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="gxd-body">
+  <a class="gxd-skip-link" href="#main-content">Skip to content</a>
+  <div class="gxd-overlay" id="gxdOverlay" aria-hidden="true"></div>
+
+  <div class="gxd-shell">
+    <aside class="gxd-sidebar" id="gxdSidebar" aria-label="Primary">
+      <div class="gxd-brand">
+        <a class="gxd-brand-link" href="index.html">
+          <span class="gxd-brand-mark" aria-hidden="true"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span>Forge<em>.</em></span>
+        </a>
+        <button type="button" class="gxd-sidebar-close d-lg-none" id="gxdSidebarClose" aria-label="Close navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <nav class="gxd-nav">
+        <p class="gxd-nav-label">Club</p>
+        <ul class="gxd-nav-list">
+          <li><a class="gxd-nav-link active" href="index.html" aria-current="page"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a></li>
+          <li><a class="gxd-nav-link" href="members.html"><i class="bi bi-people"></i><span>Members</span></a></li>
+          <li><a class="gxd-nav-link" href="trainers.html"><i class="bi bi-person-badge"></i><span>Trainers</span></a></li>
+          <li><a class="gxd-nav-link" href="classes.html"><i class="bi bi-calendar2-week"></i><span>Classes</span></a></li>
+          <li><a class="gxd-nav-link" href="checkins.html"><i class="bi bi-qr-code-scan"></i><span>Check-in</span><span class="gxd-nav-badge">8</span></a></li>
+          <li><a class="gxd-nav-link" href="memberships.html"><i class="bi bi-credit-card"></i><span>Memberships</span></a></li>
+        </ul>
+        <p class="gxd-nav-label">Template</p>
+        <ul class="gxd-nav-list">
+          <li><a class="gxd-nav-link" href="about.html"><i class="bi bi-info-circle"></i><span>About</span></a></li>
+          <li><a class="gxd-nav-link" href="documentation.html"><i class="bi bi-journal-text"></i><span>Docs</span></a></li>
+          <li><a class="gxd-nav-link" href="contact.html"><i class="bi bi-headset"></i><span>Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="gxd-sidebar-foot">
+        <div class="gxd-staff">
+          <span class="gxd-avatar">MC</span>
+          <p><strong>Maya Chen</strong>Club manager · Downtown</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="gxd-main">
+      <header class="gxd-topbar">
+        <button type="button" class="gxd-menu-btn" id="gxdMenuBtn" aria-label="Open navigation" aria-controls="gxdSidebar">
+          <i class="bi bi-list fs-5"></i>
+        </button>
+        <p class="gxd-crumb mb-0">Home / <strong>Dashboard</strong></p>
+        <div class="gxd-search">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input id="gxdTopSearch" type="search" placeholder="Search members, classes…" aria-label="Search the gym dashboard" />
+        </div>
+        <button type="button" class="gxd-icon-btn" aria-label="Notifications, 3 unread">
+          <i class="bi bi-bell"></i>
+          <span class="gxd-dot"></span>
+        </button>
+        <span class="gxd-avatar" aria-hidden="true">MC</span>
+      </header>
+
+      <main id="main-content" class="gxd-content">
+        <div class="gxd-page-head">
+          <div>
+            <p class="gxd-kicker" id="gxdClock">Friday, September 4</p>
+            <h1>Floor is live, Maya</h1>
+            <p class="gxd-lede">Downtown club snapshot — members, classes, and front-desk flow in one scan.</p>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn gxd-btn-ghost" href="checkins.html"><i class="bi bi-qr-code-scan me-1"></i>Open check-in</a>
+            <a class="btn gxd-btn-primary" href="classes.html"><i class="bi bi-plus-lg me-1"></i>Add class</a>
+          </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6 col-xl-3">
+            <article class="gxd-card gxd-stat">
+              <span class="gxd-stat-icon"><i class="bi bi-people"></i></span>
+              <span>Active members</span>
+              <strong>1,284</strong>
+              <small>+18 this week</small>
+            </article>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <article class="gxd-card gxd-stat">
+              <span class="gxd-stat-icon"><i class="bi bi-box-arrow-in-right"></i></span>
+              <span>Check-ins today</span>
+              <strong>186</strong>
+              <small>Peak 6–8 AM</small>
+            </article>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <article class="gxd-card gxd-stat">
+              <span class="gxd-stat-icon"><i class="bi bi-activity"></i></span>
+              <span>Class fill</span>
+              <strong>91%</strong>
+              <small>2 waitlists</small>
+            </article>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <article class="gxd-card gxd-stat">
+              <span class="gxd-stat-icon"><i class="bi bi-currency-dollar"></i></span>
+              <span>Membership MRR</span>
+              <strong>$84.2k</strong>
+              <small>12 dues overdue</small>
+            </article>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+          <div class="col-xl-8">
+            <section class="gxd-card">
+              <div class="gxd-card-head">
+                <h2>Today’s classes</h2>
+                <a href="classes.html" class="fw-semibold">Full schedule</a>
+              </div>
+              <div class="table-responsive">
+                <table class="table gxd-table">
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Class</th>
+                      <th>Coach</th>
+                      <th>Studio</th>
+                      <th>Fill</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="gxd-class-time">6:00 AM</td>
+                      <td>Sunrise Cycle</td>
+                      <td>Cole Brennan</td>
+                      <td>Ride Room</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="gxd-bar flex-grow-1"><span style="width:90%"></span></div>
+                          <span class="small">18/20</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="gxd-class-time">7:15 AM</td>
+                      <td>Strength Lab</td>
+                      <td>Elena Vasquez</td>
+                      <td>Iron Floor</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="gxd-bar is-full flex-grow-1"><span style="width:100%"></span></div>
+                          <span class="gxd-badge">Waitlist</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="gxd-class-time">9:00 AM</td>
+                      <td>Power Yoga</td>
+                      <td>Lila Ortega</td>
+                      <td>Loft</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="gxd-bar flex-grow-1"><span style="width:88%"></span></div>
+                          <span class="small">14/16</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="gxd-class-time">12:15 PM</td>
+                      <td>Lunch HIIT</td>
+                      <td>David Okonkwo</td>
+                      <td>Studio B</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="gxd-bar flex-grow-1"><span style="width:62%"></span></div>
+                          <span class="small">10/16</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="gxd-class-time">5:30 PM</td>
+                      <td>After-work Strength</td>
+                      <td>Elena Vasquez</td>
+                      <td>Iron Floor</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="gxd-bar flex-grow-1"><span style="width:89%"></span></div>
+                          <span class="small">16/18</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="gxd-class-time">6:45 PM</td>
+                      <td>Ride Club</td>
+                      <td>Cole Brennan</td>
+                      <td>Ride Room</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="gxd-bar is-full flex-grow-1"><span style="width:100%"></span></div>
+                          <span class="gxd-badge">Full</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+          <div class="col-xl-4">
+            <section class="gxd-card gxd-card-pad mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h6 mb-0">Floor occupancy</h2>
+                <span class="gxd-live">Live</span>
+              </div>
+              <div class="gxd-zone mb-3">
+                <div class="gxd-zone-row"><span>Weights</span><span>78%</span></div>
+                <div class="gxd-bar"><span style="width:78%"></span></div>
+              </div>
+              <div class="gxd-zone mb-3">
+                <div class="gxd-zone-row"><span>Cardio deck</span><span>64%</span></div>
+                <div class="gxd-bar"><span style="width:64%"></span></div>
+              </div>
+              <div class="gxd-zone mb-3">
+                <div class="gxd-zone-row"><span>Ride Room</span><span>90%</span></div>
+                <div class="gxd-bar"><span style="width:90%"></span></div>
+              </div>
+              <div class="gxd-zone">
+                <div class="gxd-zone-row"><span>Locker rooms</span><span>41%</span></div>
+                <div class="gxd-bar"><span style="width:41%"></span></div>
+              </div>
+            </section>
+            <section class="gxd-card gxd-card-pad">
+              <h2 class="h6 mb-3">Alerts</h2>
+              <div class="gxd-alert">
+                <span class="gxd-alert-icon"><i class="bi bi-exclamation-triangle"></i></span>
+                <div>
+                  <strong class="d-block">12 memberships overdue</strong>
+                  <span class="text-muted small">Follow up before Friday freeze window.</span>
+                </div>
+              </div>
+              <div class="gxd-alert">
+                <span class="gxd-alert-icon"><i class="bi bi-tools"></i></span>
+                <div>
+                  <strong class="d-block">Rack 4 cable out of service</strong>
+                  <span class="text-muted small">Tech booked 4:00 PM.</span>
+                </div>
+              </div>
+              <div class="gxd-alert">
+                <span class="gxd-alert-icon"><i class="bi bi-hourglass-split"></i></span>
+                <div>
+                  <strong class="d-block">Strength Lab waitlist = 6</strong>
+                  <span class="text-muted small">Offer 6:00 PM overflow class.</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <section class="gxd-card">
+          <div class="gxd-card-head">
+            <h2>Recent check-ins</h2>
+            <a href="checkins.html" class="fw-semibold">Front desk</a>
+          </div>
+          <div class="table-responsive">
+            <table class="table gxd-table">
+              <thead>
+                <tr>
+                  <th>Member</th>
+                  <th>Plan</th>
+                  <th>Time</th>
+                  <th>Gate</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="gxd-person">
+                      <span class="gxd-avatar">JH</span>
+                      <div><strong>Jordan Hale</strong><span>#4821</span></div>
+                    </div>
+                  </td>
+                  <td>Unlimited</td>
+                  <td>6:02 AM</td>
+                  <td>Gate A</td>
+                  <td><span class="gxd-badge gxd-badge-ok">In club</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="gxd-person">
+                      <span class="gxd-avatar gxd-avatar-ember">PR</span>
+                      <div><strong>Priya Raman</strong><span>#3904</span></div>
+                    </div>
+                  </td>
+                  <td>3-day</td>
+                  <td>6:08 AM</td>
+                  <td>Gate A</td>
+                  <td><span class="gxd-badge gxd-badge-ok">In club</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="gxd-person">
+                      <span class="gxd-avatar gxd-avatar-ink">LO</span>
+                      <div><strong>Luis Ortega</strong><span>#2750</span></div>
+                    </div>
+                  </td>
+                  <td>PT pack</td>
+                  <td>6:11 AM</td>
+                  <td>PT suite</td>
+                  <td><span class="gxd-badge gxd-badge-warn">Expiring</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="gxd-person">
+                      <span class="gxd-avatar">AH</span>
+                      <div><strong>Amira Haddad</strong><span>#5118</span></div>
+                    </div>
+                  </td>
+                  <td>Student</td>
+                  <td>7:40 AM</td>
+                  <td>Gate B</td>
+                  <td><span class="gxd-badge gxd-badge-muted">Frozen</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <p class="gxd-footer px-4">&copy; 2026 Subrahmanyam Poluru · Forge Athletic gym dashboard · Free for personal &amp; commercial use</p>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="gxdToast" class="toast gxd-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Forge Athletic</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="gxdToastBody">Done.</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

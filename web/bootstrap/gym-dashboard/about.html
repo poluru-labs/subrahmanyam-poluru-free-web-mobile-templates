@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+  Forge Athletic — Gym operations dashboard
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="About the Forge Athletic gym dashboard template." />
+  <title>About — Forge Athletic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="gxd-body">
+  <a class="gxd-skip-link" href="#main-content">Skip to content</a>
+  <div class="gxd-overlay" id="gxdOverlay" aria-hidden="true"></div>
+  <div class="gxd-shell">
+    <aside class="gxd-sidebar" id="gxdSidebar" aria-label="Primary">
+      <div class="gxd-brand">
+        <a class="gxd-brand-link" href="index.html">
+          <span class="gxd-brand-mark" aria-hidden="true"><i class="bi bi-lightning-charge-fill"></i></span>
+          <span>Forge<em>.</em></span>
+        </a>
+        <button type="button" class="gxd-sidebar-close d-lg-none" id="gxdSidebarClose" aria-label="Close navigation"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <nav class="gxd-nav">
+        <p class="gxd-nav-label">Club</p>
+        <ul class="gxd-nav-list">
+          <li><a class="gxd-nav-link" href="index.html"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a></li>
+          <li><a class="gxd-nav-link" href="members.html"><i class="bi bi-people"></i><span>Members</span></a></li>
+          <li><a class="gxd-nav-link" href="trainers.html"><i class="bi bi-person-badge"></i><span>Trainers</span></a></li>
+          <li><a class="gxd-nav-link" href="classes.html"><i class="bi bi-calendar2-week"></i><span>Classes</span></a></li>
+          <li><a class="gxd-nav-link" href="checkins.html"><i class="bi bi-qr-code-scan"></i><span>Check-in</span><span class="gxd-nav-badge">8</span></a></li>
+          <li><a class="gxd-nav-link" href="memberships.html"><i class="bi bi-credit-card"></i><span>Memberships</span></a></li>
+        </ul>
+        <p class="gxd-nav-label">Template</p>
+        <ul class="gxd-nav-list">
+          <li><a class="gxd-nav-link active" href="about.html" aria-current="page"><i class="bi bi-info-circle"></i><span>About</span></a></li>
+          <li><a class="gxd-nav-link" href="documentation.html"><i class="bi bi-journal-text"></i><span>Docs</span></a></li>
+          <li><a class="gxd-nav-link" href="contact.html"><i class="bi bi-headset"></i><span>Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="gxd-sidebar-foot"><div class="gxd-staff"><span class="gxd-avatar">MC</span><p><strong>Maya Chen</strong>Club manager · Downtown</p></div></div>
+    </aside>
+    <div class="gxd-main">
+      <header class="gxd-topbar">
+        <button type="button" class="gxd-menu-btn" id="gxdMenuBtn" aria-label="Open navigation"><i class="bi bi-list fs-5"></i></button>
+        <p class="gxd-crumb mb-0">Template / <strong>About</strong></p>
+        <div class="gxd-search"><i class="bi bi-search"></i><input id="gxdTopSearch" type="search" placeholder="Search members, classes…" aria-label="Search the gym dashboard" /></div>
+        <button type="button" class="gxd-icon-btn" aria-label="Notifications, 3 unread"><i class="bi bi-bell"></i><span class="gxd-dot"></span></button>
+        <span class="gxd-avatar">MC</span>
+      </header>
+      <main id="main-content" class="gxd-content">
+        <div class="gxd-page-head">
+          <div>
+            <p class="gxd-kicker">Template</p>
+            <h1>About Forge Athletic</h1>
+            <p class="gxd-lede">A Bootstrap gym operations dashboard for club managers: members, trainers, classes, check-ins, and memberships.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <section class="gxd-card gxd-card-pad">
+              <h2 class="h5">What it’s for</h2>
+              <p>Forge is a static demo of a downtown club desk. Use it as a starting point for a gym CRM, class booking board, or front-desk kiosk. Copy lives in HTML; tokens live in <code>assets/css/style.css</code> under the <code>gxd-</code> prefix.</p>
+              <p class="mb-0">Built with Bootstrap 5, Bootstrap Icons, Barlow, and a small vanilla JS file for filters, the check-in form, and toasts.</p>
+            </section>
+          </div>
+          <div class="col-lg-5">
+            <section class="gxd-card gxd-card-pad">
+              <h2 class="h5">Brand tokens</h2>
+              <ul class="mb-0">
+                <li>Primary <code>#E85D04</code></li>
+                <li>Ink <code>#161311</code></li>
+                <li>Canvas <code>#F3EFE8</code></li>
+                <li>Prefix <code>gxd-</code></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+      <p class="gxd-footer px-4">&copy; 2026 Subrahmanyam Poluru · Free for personal &amp; commercial use</p>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+    <div id="gxdToast" class="toast gxd-toast" role="status" aria-live="polite">
+      <div class="toast-header"><strong class="me-auto">Forge Athletic</strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div>
+      <div class="toast-body" id="gxdToastBody">Done.</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
