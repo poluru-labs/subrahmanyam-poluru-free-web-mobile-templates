@@ -1,0 +1,50 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">Coaching staff</p>
+    <h1>Trainers</h1>
+    <p class="gxd-lede">Who is on the floor today, which studio they own, and remaining PT capacity.</p>
+  </div>
+  <a class="btn gxd-btn-primary" routerLink="/classes">View classes</a>
+</div>
+<div class="gxd-toolbar">
+  <div class="gxd-search-wrap">
+    <i class="bi bi-search"></i>
+    <input class="form-control" type="search" placeholder="Search trainers…" aria-label="Search trainers" (input)="onQuery($event)" />
+  </div>
+  <label class="gxd-field">Focus
+    <select class="form-select" (change)="onFocus($event)">
+      <option value="all">All</option>
+      <option value="strength">Strength</option>
+      <option value="cycle">Cycle</option>
+      <option value="hiit">HIIT</option>
+      <option value="yoga">Yoga</option>
+    </select>
+  </label>
+  <label class="gxd-field">Today
+    <select class="form-select" (change)="onStatus($event)">
+      <option value="all">Any</option>
+      <option value="on-floor">On floor</option>
+      <option value="off">Off</option>
+    </select>
+  </label>
+</div>
+@if (filtered().length === 0) {
+  <p class="gxd-empty is-visible">No trainers match those filters.</p>
+}
+<div class="row g-3">
+  @for (trainer of filtered(); track trainer.name) {
+    <div class="col-md-6">
+      <article class="gxd-card gxd-card-pad gxd-profile">
+        <div class="gxd-person">
+          <span [class]="avatarClass(trainer.tone, true)">{{ trainer.initials }}</span>
+          <div><strong>{{ trainer.name }}</strong><span>{{ trainer.role }}</span></div>
+        </div>
+        <ul class="gxd-tags">
+          <li class="gxd-badge">{{ trainer.focus === 'hiit' ? 'HIIT' : trainer.focus.charAt(0).toUpperCase() + trainer.focus.slice(1) }}</li>
+          <li [class]="badgeClass(trainer.status)">{{ trainer.statusLabel }}</li>
+        </ul>
+        <p class="small text-muted mb-0">{{ trainer.note }}</p>
+      </article>
+    </div>
+  }
+</div>

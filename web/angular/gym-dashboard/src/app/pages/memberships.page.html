@@ -1,0 +1,65 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">Billing</p>
+    <h1>Memberships</h1>
+    <p class="gxd-lede">Plans on the floor, overdue dues, and freeze requests for Downtown.</p>
+  </div>
+</div>
+<div class="row g-3 mb-4">
+  @for (plan of plans; track plan.name) {
+    <div class="col-md-4">
+      <article class="gxd-card gxd-card-pad">
+        <p class="gxd-kicker mb-2">{{ plan.kicker }}</p>
+        <h2 class="h4">{{ plan.name }}</h2>
+        <p class="display-6 fw-bold mb-1">{{ plan.price }}<span class="fs-6 text-muted">{{ plan.unit }}</span></p>
+        <p class="small text-muted mb-0">{{ plan.detail }}</p>
+      </article>
+    </div>
+  }
+</div>
+<section class="gxd-card">
+  <div class="gxd-card-head">
+    <h2>Dues and holds</h2>
+    <span class="gxd-badge gxd-badge-warn">12 overdue</span>
+  </div>
+  <div class="table-responsive">
+    <table class="table gxd-table">
+      <thead>
+        <tr>
+          <th>Member</th>
+          <th>Plan</th>
+          <th>Amount</th>
+          <th>Due</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of dues; track row.name) {
+          <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.plan }}</td>
+            <td>{{ row.amount }}</td>
+            <td>{{ row.due }}</td>
+            <td><span [class]="badgeClass(row.tone)">{{ row.status }}</span></td>
+            <td>
+              @if (row.action === 'upgrade') {
+                <a class="btn gxd-btn-ghost btn-sm" routerLink="/members">Upgrade</a>
+              } @else {
+                <button
+                  type="button"
+                  class="btn btn-sm"
+                  [class.gxd-btn-primary]="row.action === 'remind'"
+                  [class.gxd-btn-ghost]="row.action !== 'remind'"
+                  (click)="act(row.action, row.name)"
+                >
+                  {{ row.action === 'remind' ? 'Remind' : row.action === 'unfreeze' ? 'Unfreeze' : 'Freeze' }}
+                </button>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

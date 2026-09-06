@@ -1,0 +1,63 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">Directory</p>
+    <h1>Members</h1>
+    <p class="gxd-lede">Filter by plan and status. Check someone in or freeze a membership from the card.</p>
+  </div>
+  <a class="btn gxd-btn-primary" routerLink="/checkins"><i class="bi bi-qr-code-scan me-1"></i>Check in</a>
+</div>
+<div class="gxd-toolbar">
+  <div class="gxd-search-wrap">
+    <i class="bi bi-search"></i>
+    <input class="form-control" type="search" placeholder="Search name or ID…" aria-label="Search members" (input)="onQuery($event)" />
+  </div>
+  <label class="gxd-field">Plan
+    <select class="form-select" (change)="onPlan($event)">
+      <option value="all">All plans</option>
+      <option value="unlimited">Unlimited</option>
+      <option value="3-day">3-day</option>
+      <option value="pt">PT pack</option>
+      <option value="student">Student</option>
+    </select>
+  </label>
+  <label class="gxd-field">Status
+    <select class="form-select" (change)="onStatus($event)">
+      <option value="all">All</option>
+      <option value="active">Active</option>
+      <option value="expiring">Expiring</option>
+      <option value="frozen">Frozen</option>
+    </select>
+  </label>
+</div>
+@if (filtered().length === 0) {
+  <p class="gxd-empty is-visible">No members match those filters.</p>
+}
+<div class="row g-3">
+  @for (member of filtered(); track member.id) {
+    <div class="col-md-6 col-xl-4">
+      <article class="gxd-card gxd-card-pad gxd-profile">
+        <div class="gxd-person">
+          <span [class]="avatarClass(member.tone, true)">{{ member.initials }}</span>
+          <div><strong>{{ member.name }}</strong><span>{{ member.id }} · Joined {{ member.joined }}</span></div>
+        </div>
+        <ul class="gxd-tags">
+          <li class="gxd-badge">{{ member.planLabel }}</li>
+          <li [class]="badgeClass(member.status)">{{ member.status === 'active' ? 'Active' : member.status === 'expiring' ? 'Expiring' : 'Frozen' }}</li>
+        </ul>
+        <p class="small text-muted mb-0">{{ member.note }}</p>
+        <div class="d-flex gap-2">
+          @if (member.action === 'frozen') {
+            <button type="button" class="btn gxd-btn-ghost btn-sm" disabled>Check in</button>
+            <a class="btn gxd-btn-primary btn-sm" routerLink="/memberships">Review plan</a>
+          } @else if (member.action === 'upgrade') {
+            <button type="button" class="btn gxd-btn-primary btn-sm" (click)="checkIn(member.name)">Check in</button>
+            <a class="btn gxd-btn-ghost btn-sm" routerLink="/memberships">Upgrade</a>
+          } @else {
+            <button type="button" class="btn gxd-btn-primary btn-sm" (click)="checkIn(member.name)">Check in</button>
+            <button type="button" class="btn gxd-btn-ghost btn-sm" (click)="freeze(member.name)">Freeze</button>
+          }
+        </div>
+      </article>
+    </div>
+  }
+</div>

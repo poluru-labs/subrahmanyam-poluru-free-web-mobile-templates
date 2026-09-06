@@ -1,0 +1,88 @@
+<a class="gxd-skip-link" href="#main-content">Skip to content</a>
+<div class="gxd-overlay" [class.is-visible]="sidebarOpen()" (click)="setSidebar(false)" aria-hidden="true"></div>
+
+<div class="gxd-shell">
+  <aside class="gxd-sidebar" id="gxdSidebar" [class.is-open]="sidebarOpen()" aria-label="Primary">
+    <div class="gxd-brand">
+      <a class="gxd-brand-link" routerLink="/">
+        <span class="gxd-brand-mark" aria-hidden="true"><i class="bi bi-lightning-charge-fill"></i></span>
+        <span>Forge<em>.</em></span>
+      </a>
+      <button type="button" class="gxd-sidebar-close d-lg-none" aria-label="Close navigation" (click)="setSidebar(false)">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <nav class="gxd-nav">
+      <p class="gxd-nav-label">Club</p>
+      <ul class="gxd-nav-list">
+        @for (item of navClub; track item.path) {
+          <li>
+            <a
+              class="gxd-nav-link"
+              [routerLink]="item.path"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: item.exact === true }"
+              ariaCurrentWhenActive="page"
+            >
+              <i [class]="'bi bi-' + item.icon" aria-hidden="true"></i>
+              <span>{{ item.label }}</span>
+              @if (item.badge) {
+                <span class="gxd-nav-badge">{{ item.badge }}</span>
+              }
+            </a>
+          </li>
+        }
+      </ul>
+      <p class="gxd-nav-label">Template</p>
+      <ul class="gxd-nav-list">
+        @for (item of navTemplate; track item.path) {
+          <li>
+            <a class="gxd-nav-link" [routerLink]="item.path" routerLinkActive="active" ariaCurrentWhenActive="page">
+              <i [class]="'bi bi-' + item.icon" aria-hidden="true"></i>
+              <span>{{ item.label }}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+    <div class="gxd-sidebar-foot">
+      <div class="gxd-staff">
+        <span class="gxd-avatar">{{ staff.initials }}</span>
+        <p><strong>{{ staff.name }}</strong>{{ staff.role }}</p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="gxd-main">
+    <header class="gxd-topbar">
+      <button type="button" class="gxd-menu-btn" aria-label="Open navigation" aria-controls="gxdSidebar" (click)="setSidebar(true)">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <p class="gxd-crumb mb-0">{{ section() }} / <strong>{{ crumb() }}</strong></p>
+      <div class="gxd-search">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <input
+          type="search"
+          placeholder="Search members, classes…"
+          aria-label="Search the gym dashboard"
+          (input)="onQuery($event)"
+          (keydown.enter)="search()"
+        />
+      </div>
+      <button type="button" class="gxd-icon-btn" aria-label="Notifications, 3 unread">
+        <i class="bi bi-bell"></i>
+        <span class="gxd-dot"></span>
+      </button>
+      <span class="gxd-avatar">{{ staff.initials }}</span>
+    </header>
+
+    <main id="main-content" class="gxd-content">
+      <router-outlet />
+    </main>
+    <p class="gxd-footer px-4">&copy; 2026 Subrahmanyam Poluru · Forge Athletic gym dashboard · Free for personal &amp; commercial use</p>
+  </div>
+</div>
+
+@if (toast.visible()) {
+  <div class="gxd-toast-panel" role="status" aria-live="polite">{{ toast.message() }}</div>
+}

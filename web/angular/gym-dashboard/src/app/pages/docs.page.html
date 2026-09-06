@@ -1,0 +1,41 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">Guide</p>
+    <h1>Documentation</h1>
+    <p class="gxd-lede">Routes, class prefix, and how the demo interactions work.</p>
+  </div>
+</div>
+<div class="gxd-docs">
+  <nav class="gxd-docs-nav" aria-label="On this page">
+    <p class="gxd-kicker">On this page</p>
+            <ul>
+              <li><a routerLink="/docs" fragment="pages">Routes</a></li>
+              <li><a routerLink="/docs" fragment="prefix">CSS prefix</a></li>
+              <li><a routerLink="/docs" fragment="filters">Filters</a></li>
+              <li><a routerLink="/docs" fragment="run">Run locally</a></li>
+            </ul>
+  </nav>
+  <div class="gxd-docs-content">
+    <section id="pages">
+      <h2 class="h4">Routes</h2>
+      <p><code>/</code> Dashboard, <code>/members</code>, <code>/trainers</code>, <code>/classes</code>, <code>/checkins</code>, <code>/memberships</code>, plus <code>/about</code>, <code>/docs</code>, and <code>/contact</code>.</p>
+    </section>
+    <section id="prefix">
+      <h2 class="h4">CSS prefix</h2>
+      <p>Custom classes use <code>gxd-</code>. Theme tokens sit on <code>:root</code> in <code>src/styles.css</code>.</p>
+      <code class="gxd-code">--gxd-primary: #ff5a5a;
+--gxd-ink: #161311;
+--gxd-canvas: #f3efe8;</code>
+    </section>
+    <section id="filters">
+      <h2 class="h4">Filters</h2>
+      <p>Member, trainer, and class lists filter in the page component from <code>src/app/core/data.ts</code>. Keep plan, focus, studio, and status values aligned with the filter selects.</p>
+    </section>
+    <section id="run">
+      <h2 class="h4">Run locally</h2>
+      <code class="gxd-code">cd web/angular/gym-dashboard
+npm install
+npm start</code>
+    </section>
+  </div>
+</div>

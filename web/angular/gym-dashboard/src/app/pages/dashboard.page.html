@@ -1,0 +1,130 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">{{ clock() }}</p>
+    <h1>Floor is live, Maya</h1>
+    <p class="gxd-lede">Downtown club snapshot — members, classes, and front-desk flow in one scan.</p>
+  </div>
+  <div class="d-flex flex-wrap gap-2">
+    <a class="btn gxd-btn-ghost" routerLink="/checkins"><i class="bi bi-qr-code-scan me-1"></i>Open check-in</a>
+    <a class="btn gxd-btn-primary" routerLink="/classes"><i class="bi bi-plus-lg me-1"></i>Add class</a>
+  </div>
+</div>
+
+<div class="row g-3 mb-4">
+  @for (stat of kpis; track stat.label) {
+    <div class="col-sm-6 col-xl-3">
+      <article class="gxd-card gxd-stat">
+        <span class="gxd-stat-icon"><i [class]="'bi bi-' + stat.icon"></i></span>
+        <span>{{ stat.label }}</span>
+        <strong>{{ stat.value }}</strong>
+        <small>{{ stat.hint }}</small>
+      </article>
+    </div>
+  }
+</div>
+
+<div class="row g-4 mb-4">
+  <div class="col-xl-8">
+    <section class="gxd-card">
+      <div class="gxd-card-head">
+        <h2>Today’s classes</h2>
+        <a routerLink="/classes" class="fw-semibold">Full schedule</a>
+      </div>
+      <div class="table-responsive">
+        <table class="table gxd-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Class</th>
+              <th>Coach</th>
+              <th>Studio</th>
+              <th>Fill</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of classes; track row.name) {
+              <tr>
+                <td class="gxd-class-time">{{ row.time }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.coach }}</td>
+                <td>{{ row.studio }}</td>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="gxd-bar flex-grow-1" [class.is-full]="row.pct === 100"><span [style.width.%]="row.pct"></span></div>
+                    @if (row.status === 'full') {
+                      <span class="gxd-badge">{{ row.fill.startsWith('Waitlist') ? 'Waitlist' : 'Full' }}</span>
+                    } @else {
+                      <span class="small">{{ row.fill }}</span>
+                    }
+                  </div>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <div class="col-xl-4">
+    <section class="gxd-card gxd-card-pad mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h6 mb-0">Floor occupancy</h2>
+        <span class="gxd-live">Live</span>
+      </div>
+      @for (zone of zones; track zone.name) {
+        <div class="gxd-zone" [class.mb-3]="$index < zones.length - 1">
+          <div class="gxd-zone-row"><span>{{ zone.name }}</span><span>{{ zone.pct }}%</span></div>
+          <div class="gxd-bar"><span [style.width.%]="zone.pct"></span></div>
+        </div>
+      }
+    </section>
+    <section class="gxd-card gxd-card-pad">
+      <h2 class="h6 mb-3">Alerts</h2>
+      @for (alert of alerts; track alert.title) {
+        <div class="gxd-alert">
+          <span class="gxd-alert-icon"><i [class]="'bi bi-' + alert.icon"></i></span>
+          <div>
+            <strong class="d-block">{{ alert.title }}</strong>
+            <span class="text-muted small">{{ alert.detail }}</span>
+          </div>
+        </div>
+      }
+    </section>
+  </div>
+</div>
+
+<section class="gxd-card">
+  <div class="gxd-card-head">
+    <h2>Recent check-ins</h2>
+    <a routerLink="/checkins" class="fw-semibold">Front desk</a>
+  </div>
+  <div class="table-responsive">
+    <table class="table gxd-table">
+      <thead>
+        <tr>
+          <th>Member</th>
+          <th>Plan</th>
+          <th>Time</th>
+          <th>Gate</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of checkins; track row.id) {
+          <tr>
+            <td>
+              <div class="gxd-person">
+                <span [class]="avatarClass(row.tone)">{{ row.initials }}</span>
+                <div><strong>{{ row.name }}</strong><span>{{ row.id }}</span></div>
+              </div>
+            </td>
+            <td>{{ row.plan }}</td>
+            <td>{{ row.time }}</td>
+            <td>{{ row.gate }}</td>
+            <td><span [class]="badgeClass(row.statusTone)">{{ row.status }}</span></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

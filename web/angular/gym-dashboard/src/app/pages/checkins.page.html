@@ -1,0 +1,66 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">Front desk</p>
+    <h1>Check-in</h1>
+    <p class="gxd-lede">Look up a member, confirm their plan, and badge them through Gate A or B.</p>
+  </div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-5">
+    <section class="gxd-card gxd-card-pad">
+      <h2 class="h6 mb-3">New check-in</h2>
+      <form class="gxd-form needs-validation" novalidate (submit)="submit($event)">
+        <label class="gxd-field mb-3">Member
+          <select class="form-select" name="member" required>
+            <option value="">Select member</option>
+            @for (name of names; track name) {
+              <option [value]="name">{{ name }}</option>
+            }
+          </select>
+          <div class="invalid-feedback">Choose a member.</div>
+        </label>
+        <label class="gxd-field mb-3">Gate
+          <select class="form-select" name="gate" required>
+            @for (gate of gates; track gate) {
+              <option [value]="gate">{{ gate }}</option>
+            }
+          </select>
+        </label>
+        <label class="gxd-field mb-3">Note (optional)
+          <input class="form-control" name="note" type="text" placeholder="Guest pass, day locker…" />
+        </label>
+        <button type="submit" class="btn gxd-btn-primary w-100"><i class="bi bi-check2-circle me-1"></i>Check in</button>
+      </form>
+    </section>
+  </div>
+  <div class="col-lg-7">
+    <section class="gxd-card">
+      <div class="gxd-card-head">
+        <h2>Today’s log</h2>
+        <span class="gxd-live">186 in club</span>
+      </div>
+      <div class="table-responsive">
+        <table class="table gxd-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Member</th>
+              <th>Gate</th>
+              <th>Plan</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of log(); track row.time + row.member) {
+              <tr>
+                <td>{{ row.time }}</td>
+                <td>{{ row.member }}</td>
+                <td>{{ row.gate }}</td>
+                <td>{{ row.plan }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>

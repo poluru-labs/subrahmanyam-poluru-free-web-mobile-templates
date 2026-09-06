@@ -1,0 +1,76 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">Schedule</p>
+    <h1>Classes</h1>
+    <p class="gxd-lede">Book a member, add a waitlist, or cancel a reservation. Rooms and fill rates update with the board.</p>
+  </div>
+</div>
+<div class="gxd-toolbar">
+  <div class="gxd-search-wrap">
+    <i class="bi bi-search"></i>
+    <input class="form-control" type="search" placeholder="Search class or coach…" aria-label="Search classes" (input)="onQuery($event)" />
+  </div>
+  <label class="gxd-field">Studio
+    <select class="form-select" (change)="onStudio($event)">
+      <option value="all">All rooms</option>
+      <option value="ride">Ride Room</option>
+      <option value="iron">Iron Floor</option>
+      <option value="loft">Loft</option>
+      <option value="studio">Studio B</option>
+    </select>
+  </label>
+  <label class="gxd-field">Fill
+    <select class="form-select" (change)="onStatus($event)">
+      <option value="all">Any</option>
+      <option value="open">Open</option>
+      <option value="full">Full / waitlist</option>
+    </select>
+  </label>
+</div>
+@if (filtered().length === 0) {
+  <p class="gxd-empty is-visible">No classes match those filters.</p>
+}
+<section class="gxd-card">
+  <div class="table-responsive">
+    <table class="table gxd-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Class</th>
+          <th>Coach</th>
+          <th>Studio</th>
+          <th>Fill</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of filtered(); track row.name) {
+          <tr>
+            <td class="gxd-class-time">{{ row.time }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.coach }}</td>
+            <td>{{ row.studio }}</td>
+            <td>
+              @if (row.status === 'full') {
+                <span class="gxd-badge">{{ row.fill }}</span>
+              } @else {
+                {{ row.fill }}
+              }
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-sm"
+                [class.gxd-btn-primary]="row.action === 'book'"
+                [class.gxd-btn-ghost]="row.action !== 'book'"
+                (click)="act(row.action, row.name)"
+              >
+                {{ row.action === 'waitlist' ? 'Waitlist' : row.action === 'cancel' ? 'Cancel' : 'Book' }}
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+<div class="gxd-page-head">
+  <div>
+    <p class="gxd-kicker">Operations</p>
+    <h1>Contact</h1>
+    <p class="gxd-lede">Reach club ops, billing, or the Downtown front desk. Demo form stays on the page.</p>
+  </div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-7">
+    <section class="gxd-card gxd-card-pad">
+      <form class="gxd-form needs-validation" novalidate (submit)="submit($event)">
+        <label class="gxd-field mb-3">Name
+          <input class="form-control" name="name" required />
+          <div class="invalid-feedback">Name is required.</div>
+        </label>
+        <label class="gxd-field mb-3">Email
+          <input class="form-control" type="email" name="email" required />
+          <div class="invalid-feedback">A valid email is required.</div>
+        </label>
+        <label class="gxd-field mb-3">Topic
+          <select class="form-select" name="topic">
+            <option>Membership billing</option>
+            <option>Class booking</option>
+            <option>Equipment</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="gxd-field mb-3">Message
+          <textarea class="form-control" name="message" rows="4" required></textarea>
+          <div class="invalid-feedback">Add a short message.</div>
+        </label>
+        <button type="submit" class="btn gxd-btn-primary">Send message</button>
+      </form>
+    </section>
+  </div>
+  <div class="col-lg-5">
+    <section class="gxd-card gxd-card-pad">
+      <h2 class="h6">Downtown club</h2>
+      <p class="mb-2">410 Forge Ave, Suite 2<br />Open 5:00 AM – 10:00 PM</p>
+      <p class="mb-0">
+        <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope me-1"></i>mail.polurus@gmail.com</a><br />
+        <a href="https://polurus.com" target="_blank" rel="noopener"><i class="bi bi-globe me-1"></i>polurus.com</a>
+      </p>
+    </section>
+  </div>
+</div>
