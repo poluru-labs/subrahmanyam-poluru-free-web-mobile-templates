@@ -1,6 +1,5 @@
 {
   "name": "enterprise-jobboard",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
   "description": "Jobsdora — Enterprise Job Portal template",

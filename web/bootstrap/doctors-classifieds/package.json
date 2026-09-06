@@ -1,7 +1,6 @@
 {
   "name": "doctors-classifieds",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "description": "DocBoard — Doctors Classifieds marketplace template",
   "author": "Subrahmanyam Poluru <mail.polurus@gmail.com>",

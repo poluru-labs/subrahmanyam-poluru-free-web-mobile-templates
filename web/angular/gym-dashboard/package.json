@@ -1,7 +1,6 @@
 {
   "name": "gym-dashboard",
   "version": "1.0.0",
-  "private": true,
   "description": "Forge Athletic gym operations dashboard built with Angular, Bootstrap 5, and Bootstrap Icons. Brand #FF5A5A.",
   "scripts": {
     "start": "ng serve",

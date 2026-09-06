@@ -1,6 +1,5 @@
 {
   "name": "enterprise-jobportal-dashboard",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
   "description": "Jobs Raja — enterprise hiring dashboard for Poluru Cloud",
