@@ -54,6 +54,11 @@ Location: [web/bootstrap/startup-kpi-board](web/bootstrap/startup-kpi-board)
 
 Investor-ready founder metrics board with KPI cards (MRR, ARR, CAC, LTV, churn, burn, runway), growth sparklines, fundraising milestones, acquisition insights, product/team updates, and wins/risks/asks. Brand color: `#008BFF`. CSS prefix: `skb-*`.
 
+### 11. Restaurant Reservation (Laurel)
+Location: [web/bootstrap/restaurant-reservation](web/bootstrap/restaurant-reservation)
+
+Seasonal restaurant site with a filterable menu, table booking, chef profiles, events, reviews, hours, and FAQ. Brand color: `#659287`. CSS prefix: `lr-*`.
+
 ## Repository Structure
 
 ```text
@@ -68,7 +73,8 @@ web/bootstrap/
 ├── elevate-awards/
 ├── founder-metrics-dashboard-app/
 ├── researcher-portfolio/
-└── startup-kpi-board/
+├── startup-kpi-board/
+└── restaurant-reservation/
 ```
 
 Each template folder includes HTML, assets, and its own README.

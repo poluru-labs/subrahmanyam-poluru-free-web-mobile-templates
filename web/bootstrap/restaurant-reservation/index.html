@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!--
+  Laurel — Restaurant reservation website
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Laurel — seasonal Austin kitchen with a live menu, table booking, chef profiles, events, and guest reviews." />
+  <title>Laurel — Seasonal kitchen · Table reservations</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="lr-body">
+  <a class="lr-skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg lr-navbar sticky-top" id="lrNavbar" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand lr-brand" href="#home">
+        <span class="lr-brand-mark" aria-hidden="true"><i class="bi bi-leaf-fill"></i></span>
+        <span>Laurel<em>.</em></span>
+      </a>
+      <button class="navbar-toggler lr-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#lrNav" aria-controls="lrNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="lrNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#story">Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#chefs">Chefs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiences">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visit">Visit</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn lr-btn-primary btn-sm" href="#reserve"><i class="bi bi-calendar2-check me-1"></i>Reserve a table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <header class="lr-hero" id="home">
+      <div class="container">
+        <div class="row align-items-center g-4 g-xl-5">
+          <div class="col-lg-7">
+            <p class="lr-eyebrow">Austin · Seasonal kitchen · Est. 2018</p>
+            <h1 class="lr-hero-title">A quiet table, wood fire, and the week’s harvest.</h1>
+            <p class="lr-hero-lead">
+              Laurel is Maya Poluru’s neighborhood dining room — Gulf seafood, Hill Country produce, and a reservation book that still has room for walk-ins at the bar.
+            </p>
+            <div class="lr-hero-actions">
+              <a href="#reserve" class="btn lr-btn-primary btn-lg">
+                <i class="bi bi-calendar2-heart me-2"></i>Book a table
+              </a>
+              <a href="#menu" class="btn lr-btn-ghost btn-lg">
+                <i class="bi bi-journal-text me-2"></i>Tonight’s menu
+              </a>
+            </div>
+            <ul class="lr-hero-points list-unstyled">
+              <li><i class="bi bi-clock"></i> Dinner Tue–Sun · Brunch Sunday</li>
+              <li><i class="bi bi-geo-alt"></i> 418 Laurel Street, Austin, TX</li>
+              <li><i class="bi bi-telephone"></i> (512) 555-0418</li>
+            </ul>
+          </div>
+          <div class="col-lg-5">
+            <aside class="lr-hero-card" aria-label="Tonight at Laurel">
+              <p class="lr-label">Tonight</p>
+              <h2>Two seatings still open</h2>
+              <p class="lr-hero-card-copy">Maya Poluru is running the cedar trout. Kavya Poluru plated a bergamot olive-oil cake. Patio is heated after 8.</p>
+              <ul class="lr-hero-list list-unstyled mb-0">
+                <li><span>Chef’s counter</span><strong>5:45 pm</strong></li>
+                <li><span>Garden patio</span><strong>7:15 pm</strong></li>
+                <li><span>Bar walk-ins</span><strong>Open</strong></li>
+                <li><span>Private dining</span><strong>Held</strong></li>
+              </ul>
+              <a href="#reserve" class="btn lr-btn-secondary w-100 mt-3">Hold a table</a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="lr-section lr-section-soft" id="story">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-5">
+            <p class="lr-eyebrow">Our story</p>
+            <h2 class="lr-section-title">Cooked for the people who come back.</h2>
+            <p class="lr-section-sub">Laurel began as a Sunday supper in Maya Poluru’s kitchen. It is still a small room, a short menu, and a long conversation.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="lr-prose">
+              <p>
+                We source from farms east of Austin and boats that call in the morning. The fire is oak. The wine list is short on purpose — Arjun Poluru pours what he would drink with the trout.
+              </p>
+              <p>
+                Reservations open 21 days out. We keep a few bar stools for neighbors. If you are celebrating, tell Anika Poluru when you book — she will set the table accordingly.
+              </p>
+            </div>
+            <div class="row g-3 mt-1">
+              <div class="col-sm-4">
+                <div class="lr-about-chip">
+                  <i class="bi bi-fire"></i>
+                  <div>
+                    <strong>Kitchen</strong>
+                    <span>Oak grill, one dessert oven</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="lr-about-chip">
+                  <i class="bi bi-cup-hot"></i>
+                  <div>
+                    <strong>Cellar</strong>
+                    <span>Natural, Loire, Texas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="lr-about-chip">
+                  <i class="bi bi-people"></i>
+                  <div>
+                    <strong>Room</strong>
+                    <span>62 seats · 8 at the counter</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 g-lg-4 mt-4">
+          <div class="col-6 col-lg-3">
+            <article class="lr-metric">
+              <p class="lr-metric-value"><span class="lr-counter" data-target="62">0</span></p>
+              <p class="lr-metric-label">Seats in the room</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="lr-metric">
+              <p class="lr-metric-value"><span class="lr-counter" data-target="8">0</span></p>
+              <p class="lr-metric-label">Years of Sunday supper</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="lr-metric">
+              <p class="lr-metric-value"><span class="lr-counter" data-target="12">0</span></p>
+              <p class="lr-metric-label">Dishes on tonight’s card</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="lr-metric">
+              <p class="lr-metric-value"><span class="lr-counter" data-decimals="1" data-target="4.9">0</span></p>
+              <p class="lr-metric-label">Guest rating this season</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lr-section" id="menu">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+          <div class="lr-section-head mb-0">
+            <p class="lr-eyebrow">Signature menu</p>
+            <h2 class="lr-section-title">What the kitchen is cooking</h2>
+            <p class="lr-section-sub mb-0">A short card. Dietary notes sit beside each dish. Prices in USD.</p>
+          </div>
+          <div class="lr-filter-chips" role="group" aria-label="Filter the menu">
+            <button type="button" class="lr-chip is-active" data-menu-filter="all">All</button>
+            <button type="button" class="lr-chip" data-menu-filter="starter">Starters</button>
+            <button type="button" class="lr-chip" data-menu-filter="main">Mains</button>
+            <button type="button" class="lr-chip" data-menu-filter="dessert">Desserts</button>
+            <button type="button" class="lr-chip" data-menu-filter="drink">Drinks</button>
+          </div>
+        </div>
+        <div class="lr-pub-toolbar">
+          <div class="lr-search-wrap">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" class="form-control" id="lrMenuSearch" placeholder="Search a dish, herb, or chef…" aria-label="Search the menu" />
+          </div>
+          <p class="lr-result-count mb-0" id="lrMenuCount">Showing 12 dishes</p>
+        </div>
+
+        <div class="row g-3 g-lg-4" id="lrMenuGrid">
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="starter">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-flower1"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Starter</span>
+                <span class="lr-price">16</span>
+              </div>
+              <h3>Charred leeks, hazelnut, brown butter</h3>
+              <p>Hill Country leeks, toasted hazelnut, lemon zest. Vegetarian.</p>
+              <p class="lr-dish-chef">Maya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="starter">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-water"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Starter</span>
+                <span class="lr-price">19</span>
+              </div>
+              <h3>Citrus crudo, fennel pollen</h3>
+              <p>Gulf snapper, blood orange, olive oil, chile. Gluten free.</p>
+              <p class="lr-dish-chef">Maya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="starter">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-circle-half"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Starter</span>
+                <span class="lr-price">18</span>
+              </div>
+              <h3>Mushroom tart, aged cheddar</h3>
+              <p>Oyster mushroom, rye crust, herb salad. Vegetarian.</p>
+              <p class="lr-dish-chef">Kavya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="main">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-fish"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill lr-pill-alt">Main</span>
+                <span class="lr-price">36</span>
+              </div>
+              <h3>Cedar trout, dill, new potatoes</h3>
+              <p>Oak-grilled trout, cultured cream, garden dill. Gluten free.</p>
+              <p class="lr-dish-chef">Maya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="main">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-egg-fried"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill lr-pill-alt">Main</span>
+                <span class="lr-price">34</span>
+              </div>
+              <h3>Heritage chicken, sage jus</h3>
+              <p>Half bird, roasted squash, pan juices. Maya’s Sunday plate.</p>
+              <p class="lr-dish-chef">Maya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="main">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-basket"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill lr-pill-alt">Main</span>
+                <span class="lr-price">28</span>
+              </div>
+              <h3>Squash risotto, pecorino</h3>
+              <p>Carnaroli rice, roasted squash, sage. Vegetarian.</p>
+              <p class="lr-dish-chef">Maya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="main">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-fire"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill lr-pill-alt">Main</span>
+                <span class="lr-price">48</span>
+              </div>
+              <h3>Dry-aged ribeye, smoked marrow</h3>
+              <p>For two to share. Charred onion, bone jus. Ask for a wine pair.</p>
+              <p class="lr-dish-chef">Maya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="dessert">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-cake2"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Dessert</span>
+                <span class="lr-price">14</span>
+              </div>
+              <h3>Olive oil cake, bergamot</h3>
+              <p>Kavya Poluru’s house cake, crème fraîche, citrus leaf.</p>
+              <p class="lr-dish-chef">Kavya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="dessert">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-heart"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Dessert</span>
+                <span class="lr-price">15</span>
+              </div>
+              <h3>Dark chocolate, sea salt</h3>
+              <p>70% ganache, olive oil, smoked salt. Gluten free.</p>
+              <p class="lr-dish-chef">Kavya Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="drink">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-cup-straw"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Drink</span>
+                <span class="lr-price">14</span>
+              </div>
+              <h3>Laurel spritz</h3>
+              <p>House vermouth, grapefruit, soda. Arjun Poluru’s porch drink.</p>
+              <p class="lr-dish-chef">Arjun Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="drink">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-cup"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Drink</span>
+                <span class="lr-price">16</span>
+              </div>
+              <h3>Texas chenin, glass</h3>
+              <p>High Plains fruit, saline finish. Pairs with the trout.</p>
+              <p class="lr-dish-chef">Arjun Poluru</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 lr-menu-item" data-cat="drink">
+            <article class="lr-dish">
+              <div class="lr-dish-mark" aria-hidden="true"><i class="bi bi-droplet"></i></div>
+              <div class="lr-dish-meta">
+                <span class="lr-pill">Drink</span>
+                <span class="lr-price">13</span>
+              </div>
+              <h3>House vermouth, neat</h3>
+              <p>Botanicals from the patio. Served cold with orange oil.</p>
+              <p class="lr-dish-chef">Arjun Poluru</p>
+            </article>
+          </div>
+        </div>
+        <p class="lr-empty-state d-none" id="lrMenuEmpty">No dishes match that search. Try another herb or course.</p>
+      </div>
+    </section>
+
+    <section class="lr-section lr-section-soft" id="chefs">
+      <div class="container">
+        <div class="lr-section-head">
+          <p class="lr-eyebrow">The kitchen</p>
+          <h2 class="lr-section-title">Chefs at the pass</h2>
+          <p class="lr-section-sub">Three Polurus run the room: fire, pastry, and the cellar.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4">
+            <article class="lr-chef">
+              <div class="lr-chef-avatar" aria-hidden="true">MP</div>
+              <p class="lr-label">Chef de cuisine</p>
+              <h3>Maya Poluru</h3>
+              <p>Oak grill, Gulf fish, and the Sunday chicken. Twelve years in kitchens from Hyderabad to Austin.</p>
+              <ul class="lr-chef-tags list-unstyled">
+                <li>Wood fire</li>
+                <li>Seafood</li>
+                <li>Family table</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="lr-chef">
+              <div class="lr-chef-avatar" aria-hidden="true">KP</div>
+              <p class="lr-label">Pastry</p>
+              <h3>Kavya Poluru</h3>
+              <p>Citrus, olive oil, and a dessert list that changes with the orchard. The bergamot cake never leaves.</p>
+              <ul class="lr-chef-tags list-unstyled">
+                <li>Cakes</li>
+                <li>Ice</li>
+                <li>Breakfast pastry</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="lr-chef">
+              <div class="lr-chef-avatar" aria-hidden="true">AP</div>
+              <p class="lr-label">Wine &amp; fire</p>
+              <h3>Arjun Poluru</h3>
+              <p>A 90-bin list, house vermouth, and the pairings that sit next to Maya’s trout.</p>
+              <ul class="lr-chef-tags list-unstyled">
+                <li>Natural wine</li>
+                <li>Vermouth</li>
+                <li>Service</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lr-section" id="experiences">
+      <div class="container">
+        <div class="lr-section-head">
+          <p class="lr-eyebrow">Dining experiences</p>
+          <h2 class="lr-section-title">Beyond the two-top</h2>
+          <p class="lr-section-sub">Private rooms, a tasting counter, and catering Maya Poluru still plates herself.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4">
+            <article class="lr-xp">
+              <i class="bi bi-door-open" aria-hidden="true"></i>
+              <h3>Private dining</h3>
+              <p>The Willow room seats 14. A set menu, one bill, Anika Poluru as your host.</p>
+              <a href="#reserve" class="lr-text-link">Request the room <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="lr-xp">
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              <h3>Chef’s counter</h3>
+              <p>Eight seats. A six-course tasting from Maya Poluru. Book 21 days out.</p>
+              <a href="#reserve" class="lr-text-link">Book the counter <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="lr-xp">
+              <i class="bi bi-box-seam" aria-hidden="true"></i>
+              <h3>Catering</h3>
+              <p>Suppers at home for 20–80. Kavya Poluru’s cakes travel. Inquire two weeks ahead.</p>
+              <a href="#reserve" class="lr-text-link">Plan a supper <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lr-section lr-section-soft" id="events">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+          <div class="lr-section-head mb-0">
+            <p class="lr-eyebrow">Events</p>
+            <h2 class="lr-section-title">Nights on the calendar</h2>
+            <p class="lr-section-sub mb-0">Seasonal menus, jazz, and a harvest supper.</p>
+          </div>
+          <div class="lr-filter-chips" role="group" aria-label="Filter events">
+            <button type="button" class="lr-chip is-active" data-event-filter="all">All</button>
+            <button type="button" class="lr-chip" data-event-filter="supper">Supper</button>
+            <button type="button" class="lr-chip" data-event-filter="music">Music</button>
+            <button type="button" class="lr-chip" data-event-filter="wine">Wine</button>
+          </div>
+        </div>
+        <div class="row g-3 g-lg-4" id="lrEventGrid">
+          <div class="col-md-6 col-lg-4 lr-event-item" data-event="supper">
+            <article class="lr-event">
+              <div class="lr-event-date"><span>Sep</span><strong>19</strong></div>
+              <span class="lr-pill">Supper</span>
+              <h3>Harvest supper</h3>
+              <p>Maya Poluru’s long table. Squash, late tomatoes, and a family-style ribeye.</p>
+              <p class="lr-meta">Saturday · 6:30 pm · $95</p>
+              <button type="button" class="btn lr-btn-ghost btn-sm lr-rsvp" data-event-name="Harvest supper">Request a seat</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 lr-event-item" data-event="music">
+            <article class="lr-event">
+              <div class="lr-event-date"><span>Thu</span><strong>10</strong></div>
+              <span class="lr-pill lr-pill-alt">Music</span>
+              <h3>Jazz Thursday</h3>
+              <p>Trio in the garden after 8. Kitchen stays on the regular card. No cover.</p>
+              <p class="lr-meta">Weekly · 8:00 pm · Patio</p>
+              <button type="button" class="btn lr-btn-ghost btn-sm lr-rsvp" data-event-name="Jazz Thursday">Hold a patio table</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 lr-event-item" data-event="wine">
+            <article class="lr-event">
+              <div class="lr-event-date"><span>Oct</span><strong>03</strong></div>
+              <span class="lr-pill">Wine</span>
+              <h3>Loire pairing with Arjun Poluru</h3>
+              <p>Five pours, five small plates. Counter only. Sixteen seats.</p>
+              <p class="lr-meta">Friday · 7:00 pm · $120</p>
+              <button type="button" class="btn lr-btn-ghost btn-sm lr-rsvp" data-event-name="Loire pairing">Join the pairing</button>
+            </article>
+          </div>
+        </div>
+        <p class="lr-empty-state d-none" id="lrEventEmpty">No events in that category this month.</p>
+      </div>
+    </section>
+
+    <section class="lr-section" id="reserve">
+      <div class="container">
+        <div class="lr-reserve-panel">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+              <p class="lr-eyebrow lr-eyebrow-on-dark">Reservations</p>
+              <h2 class="lr-contact-title">Hold a table at Laurel</h2>
+              <p class="lr-contact-text">
+                We book two seatings. Parties of 7 or more go to Anika Poluru in the Willow room. Closed Mondays.
+              </p>
+              <ul class="lr-contact-facts list-unstyled mb-0">
+                <li><i class="bi bi-telephone"></i> (512) 555-0418</li>
+                <li><i class="bi bi-envelope"></i> <a href="mailto:mail.polurus@gmail.com" id="lrEmailLink">mail.polurus@gmail.com</a></li>
+                <li><i class="bi bi-clock"></i> Book up to 21 days ahead</li>
+              </ul>
+            </div>
+            <div class="col-lg-7">
+              <form class="lr-form" id="lrReserveForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrName">Name</label>
+                    <input class="form-control" id="lrName" name="name" type="text" required autocomplete="name" placeholder="Maya Poluru" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrEmail">Email</label>
+                    <input class="form-control" id="lrEmail" name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrPhone">Phone</label>
+                    <input class="form-control" id="lrPhone" name="phone" type="tel" required autocomplete="tel" placeholder="(512) 555-0100" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrDate">Date</label>
+                    <input class="form-control" id="lrDate" name="date" type="date" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrTime">Time</label>
+                    <select class="form-select" id="lrTime" name="time" required>
+                      <option value="">Choose a seating</option>
+                      <option>5:30 pm</option>
+                      <option>6:00 pm</option>
+                      <option>6:30 pm</option>
+                      <option>7:00 pm</option>
+                      <option>7:30 pm</option>
+                      <option>8:00 pm</option>
+                      <option>8:30 pm</option>
+                      <option>9:00 pm</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrGuests">Guests</label>
+                    <div class="lr-stepper">
+                      <button type="button" class="lr-stepper-btn" id="lrGuestMinus" aria-label="Fewer guests">−</button>
+                      <input class="form-control text-center" id="lrGuests" name="guests" type="number" min="1" max="14" value="2" required />
+                      <button type="button" class="lr-stepper-btn" id="lrGuestPlus" aria-label="More guests">+</button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrSeating">Seating</label>
+                    <select class="form-select" id="lrSeating" name="seating">
+                      <option>Dining room</option>
+                      <option>Garden patio</option>
+                      <option>Bar</option>
+                      <option>Chef’s counter</option>
+                      <option>Willow private room</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lrOccasion">Occasion</label>
+                    <select class="form-select" id="lrOccasion" name="occasion">
+                      <option>Weeknight dinner</option>
+                      <option>Birthday</option>
+                      <option>Anniversary</option>
+                      <option>Business</option>
+                      <option>Just because</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="lrNotes">Notes for the kitchen</label>
+                    <textarea class="form-control" id="lrNotes" name="notes" rows="3" maxlength="400" placeholder="Allergies, high chair, or a note for Maya Poluru."></textarea>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <button type="submit" class="btn lr-btn-primary flex-grow-1 btn-lg">
+                    <i class="bi bi-check2-circle me-2"></i>Request reservation
+                  </button>
+                  <button type="button" class="btn lr-btn-ghost btn-lg" id="lrSaveDraft">Save draft</button>
+                </div>
+                <p class="lr-form-note mb-0" id="lrFormNote" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lr-section lr-section-soft" id="reviews">
+      <div class="container">
+        <div class="lr-section-head">
+          <p class="lr-eyebrow">Guest reviews</p>
+          <h2 class="lr-section-title">What the room remembers</h2>
+          <p class="lr-section-sub">Notes from regulars. Stars are out of five.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="lr-review">
+              <div class="lr-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“The trout was quiet and exact. Maya Poluru came by the table. We will be back on a Thursday.”</p>
+              <strong>Priya Poluru</strong>
+              <span>Dining room · March</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="lr-review">
+              <div class="lr-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Kavya Poluru’s olive oil cake ended a long week. Patio heaters, jazz, and a spritz.”</p>
+              <strong>Rohan Poluru</strong>
+              <span>Patio · Jazz Thursday</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="lr-review">
+              <div class="lr-stars" aria-label="4 out of 5">★★★★☆</div>
+              <p>“Chef’s counter is the way to do Laurel. Arjun Poluru’s Loire pairing was the night.”</p>
+              <strong>Ishaan Poluru</strong>
+              <span>Chef’s counter · October</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="lr-review">
+              <div class="lr-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Anika Poluru set a birthday table without making a scene. That is hospitality.”</p>
+              <strong>Nikhil Poluru</strong>
+              <span>Willow room · June</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="lr-review">
+              <div class="lr-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Sunday brunch, then a walk. The mushroom tart is the reason we keep a standing time.”</p>
+              <strong>Anika Poluru</strong>
+              <span>Brunch · August</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="lr-review">
+              <div class="lr-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Bar walk-in on a Tuesday. House vermouth, ribeye for two, home by ten. Perfect.”</p>
+              <strong>Dev Poluru</strong>
+              <span>Bar · February</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lr-section" id="visit">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <p class="lr-eyebrow">Visit us</p>
+            <h2 class="lr-section-title">418 Laurel Street</h2>
+            <p class="lr-section-sub">South Austin. Street parking on Laurel, a small lot behind the garden.</p>
+            <ul class="lr-hours list-unstyled">
+              <li data-days="1"><span>Monday</span><strong>Closed</strong></li>
+              <li data-days="2,3,4"><span>Tuesday – Thursday</span><strong>5:00 – 10:00 pm</strong></li>
+              <li data-days="5,6"><span>Friday – Saturday</span><strong>5:00 – 11:00 pm</strong></li>
+              <li data-days="0"><span>Sunday brunch</span><strong>10:30 am – 2:00 pm</strong></li>
+              <li data-days="0"><span>Sunday dinner</span><strong>5:00 – 9:00 pm</strong></li>
+            </ul>
+            <div class="lr-visit-actions">
+              <a class="btn lr-btn-primary" href="https://maps.google.com/?q=418+Laurel+Street+Austin+TX" target="_blank" rel="noopener">Open map</a>
+              <a class="btn lr-btn-ghost" href="tel:+15125550418">Call the room</a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="lr-map" role="img" aria-label="Map placeholder for 418 Laurel Street, Austin">
+              <div>
+                <p class="lr-label">Laurel</p>
+                <strong>418 Laurel Street</strong>
+                <p>Austin, TX 78704</p>
+                <p class="mb-0">Garden entrance on Willow Lane</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lr-section lr-section-soft" id="faq">
+      <div class="container">
+        <div class="lr-section-head text-center mx-auto">
+          <p class="lr-eyebrow">FAQ</p>
+          <h2 class="lr-section-title">Before you sit down</h2>
+          <p class="lr-section-sub">Short answers from Anika Poluru’s book.</p>
+        </div>
+        <div class="accordion lr-accordion mx-auto" id="lrFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#lrFaq1" aria-expanded="true" aria-controls="lrFaq1">Do you take walk-ins?</button>
+            </h3>
+            <div id="lrFaq1" class="accordion-collapse collapse show" data-bs-parent="#lrFaq">
+              <div class="accordion-body">Yes at the bar, most nights after 8. The dining room and chef’s counter are reservation only.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lrFaq2" aria-expanded="false" aria-controls="lrFaq2">Is there a vegetarian menu?</button>
+            </h3>
+            <div id="lrFaq2" class="accordion-collapse collapse" data-bs-parent="#lrFaq">
+              <div class="accordion-body">Always. Tell us when you book and Maya Poluru will set a plate that is not an afterthought.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lrFaq3" aria-expanded="false" aria-controls="lrFaq3">What is the cancellation window?</button>
+            </h3>
+            <div id="lrFaq3" class="accordion-collapse collapse" data-bs-parent="#lrFaq">
+              <div class="accordion-body">Please cancel 24 hours ahead. Chef’s counter and the Willow room need 48 hours.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lr-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="lr-brand lr-brand-footer" href="#home">
+            <span class="lr-brand-mark" aria-hidden="true"><i class="bi bi-leaf-fill"></i></span>
+            <span>Laurel<em>.</em></span>
+          </a>
+          <p class="lr-footer-text">Seasonal kitchen in Austin. Maya, Kavya, and Arjun Poluru at the pass.</p>
+          <form class="lr-news" id="lrNewsForm">
+            <label class="visually-hidden" for="lrNewsEmail">Email for the supper list</label>
+            <input class="form-control" id="lrNewsEmail" type="email" required placeholder="Supper list email" />
+            <button type="submit" class="btn lr-btn-secondary">Join</button>
+          </form>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="lr-footer-heading">Visit</p>
+          <ul class="lr-footer-links list-unstyled">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reserve">Reservations</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#visit">Hours</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="lr-footer-heading">Kitchen</p>
+          <ul class="lr-footer-links list-unstyled">
+            <li><a href="#story">Story</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#experiences">Private dining</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="lr-footer-heading">Contact</p>
+          <p class="lr-footer-text mb-2">
+            418 Laurel Street, Austin, TX 78704<br />
+            <a href="tel:+15125550418">(512) 555-0418</a><br />
+            <a href="mailto:mail.polurus@gmail.com">mail.polurus@gmail.com</a>
+          </p>
+          <div class="lr-social">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://polurus.com" target="_blank" rel="noopener" aria-label="Poluru Labs"><i class="bi bi-globe"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="lr-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru · Laurel. Free for personal &amp; commercial use.</span>
+        <span>Brand #659287 · Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="lrToast" class="toast lr-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <strong class="me-auto" id="lrToastTitle">Done</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="lrToastBody">Action completed.</div>
+    </div>
+  </div>
+
+  <button type="button" class="lr-back-top" id="lrBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

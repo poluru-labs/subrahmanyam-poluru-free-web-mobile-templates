@@ -1,14 +1,18 @@
-# Restaurant Reservation
+# Laurel — Restaurant Reservation
 
 A polished, responsive **restaurant website and table reservation template** for restaurants, cafes, bistros, and hospitality brands. It presents the dining experience through a curated menu, chef profiles, upcoming events, guest reviews, and a clear reservation journey.
 
-Built with **HTML, CSS, JavaScript, Bootstrap 5, Bootstrap Icons**, and responsive web standards. The template is designed as a welcoming public-facing restaurant site rather than an internal booking dashboard.
+**Restaurant:** Laurel  
+**Brand:** `#659287`  
+**Prefix:** `lr-*`
+
+Built with **HTML, CSS, JavaScript, Bootstrap 5, Bootstrap Icons**, Fraunces, and Outfit. The template is a public-facing restaurant site rather than an internal booking dashboard.
 
 ## Template Overview
 
 | Property | Value |
 |---|---|
-| Template Name | Restaurant Reservation |
+| Template Name | Restaurant Reservation (Laurel) |
 | Category | Restaurant, Hospitality, Food & Beverage |
 | Framework | Bootstrap 5 |
 | Interaction | Vanilla JavaScript |
@@ -16,48 +20,45 @@ Built with **HTML, CSS, JavaScript, Bootstrap 5, Bootstrap Icons**, and responsi
 
 ## Features
 
-- Responsive restaurant navigation with mobile menu
-- Hero section with restaurant story and reservation call-to-action
-- Featured dishes and categorized menu presentation
-- Table reservation form with date, time, guest count, and seating preferences
-- Chef profiles with specialties and experience
-- Private dining and catering service highlights
-- Upcoming events and seasonal dining experiences
-- Guest reviews and testimonial section
-- Restaurant hours, location, contact details, and map area
-- Newsletter signup and social media links
-- Accessible form labels, responsive layouts, and semantic HTML
-- Bootstrap components and Bootstrap Icons for consistent UI
+- Sticky restaurant navigation with mobile menu and skip link
+- Hero with tonight’s seating card and reservation call-to-action
+- Story, seat counts, and hospitality chips
+- Filterable menu (starters, mains, desserts, drinks) with search
+- Chef profiles for Maya, Kavya, and Arjun Poluru
+- Private dining, chef’s counter, and catering
+- Event calendar with RSVP toasts
+- Table reservation form: date, seating, guest stepper, occasion, notes, local draft
+- Guest reviews with star ratings
+- Hours (today highlighted), map panel, FAQ, newsletter
+- Accessible labels, semantic HTML, and reduced-motion handling
 
-## Suggested Sections
+## Sections
 
-1. **Hero** — restaurant identity, atmosphere, and primary booking action
-2. **Our Story** — restaurant background, philosophy, and hospitality values
-3. **Signature Menu** — starters, mains, desserts, drinks, and dietary labels
-4. **Chef Profiles** — featured chefs, specialties, and culinary approach
-5. **Dining Experiences** — private dining, tasting menus, and catering
-6. **Events** — seasonal menus, live music, wine evenings, and special occasions
-7. **Reservations** — booking form with guest and schedule details
-8. **Reviews** — customer feedback and dining highlights
-9. **Visit Us** — opening hours, address, contact information, and map
-10. **Footer** — navigation, newsletter, social links, and restaurant details
+1. **Hero** — restaurant identity and primary booking action
+2. **Our Story** — kitchen philosophy and room size
+3. **Signature Menu** — starters, mains, desserts, drinks
+4. **Chef Profiles** — fire, pastry, and cellar
+5. **Dining Experiences** — private dining, tasting counter, catering
+6. **Events** — harvest supper, jazz, wine pairing
+7. **Reservations** — booking form
+8. **Reviews** — guest notes
+9. **Visit Us** — hours, address, map panel
+10. **Footer** — newsletter and contact
 
 ## File Structure
 
 ```text
 restaurant-reservation/
+├── index.html
 ├── README.md
 └── assets/
     ├── css/
     │   └── style.css
-    ├── img/
     └── js/
         └── script.js
 ```
 
 ## Getting Started
-
-Once the template files are added, run it from the project directory with a local static server:
 
 ```bash
 cd web/bootstrap/restaurant-reservation
@@ -69,20 +70,26 @@ Open [http://localhost:8000](http://localhost:8000) in your browser.
 ## Customization
 
 1. Replace the restaurant name, story, contact details, and opening hours.
-2. Update menu items, prices, dietary labels, and dish images.
-3. Add chef biographies and profile photography.
-4. Update event dates, descriptions, and booking links.
-5. Connect the reservation form to your booking or restaurant management system.
-6. Adjust colors, typography, and spacing in `assets/css/style.css`.
-7. Replace placeholder review content with verified customer testimonials.
+2. Update menu items, prices, and dietary notes.
+3. Swap chef biographies and initials.
+4. Update event dates and RSVP copy.
+5. Connect the reservation form to your booking system.
+6. Adjust colors in `assets/css/style.css` (`--lr-primary` is `#659287`).
 
-## Recommended Brand Direction
+## Brand
 
-Use a warm hospitality palette such as deep charcoal, cream, terracotta, and muted olive. Pair an expressive display typeface for headings with a highly readable sans-serif for menus, forms, and reservation details.
+| Token | Value | Use |
+|---|---|---|
+| Primary | `#659287` | Buttons, pills, brand mark |
+| Deep | `#2F4A45` | Headings, footer, reserve panel |
+| Gold | `#C4A574` | Secondary actions, stars |
+| Canvas | `#F6F3EE` | Page background |
+
+Demo people include **Maya Poluru**, Kavya Poluru, Arjun Poluru, Anika Poluru, Priya Poluru, Rohan Poluru, Ishaan Poluru, Nikhil Poluru, and Dev Poluru.
 
 ## Author
 
 **Subrahmanyam Poluru**
 
 Website: https://polurus.com  
-Email: mail.spoluru@gmail.com
+Email: mail.polurus@gmail.com
