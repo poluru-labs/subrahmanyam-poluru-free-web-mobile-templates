@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<!--
+  Lotline — Real estate marketplace
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Lotline — Austin property marketplace with search filters, listings, agent profiles, and inquiry forms." />
+  <title>Lotline — Homes for sale &amp; rent · Austin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="ll-body">
+  <a class="ll-skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg ll-navbar sticky-top" id="llNavbar" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand ll-brand" href="#home">
+        <span class="ll-brand-mark" aria-hidden="true"><i class="bi bi-house-heart-fill"></i></span>
+        <span>Lotline<em>.</em></span>
+      </a>
+      <button class="navbar-toggler ll-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#llNav" aria-controls="llNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="llNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#listings">Listings</a></li>
+          <li class="nav-item"><a class="nav-link" href="#neighborhoods">Neighborhoods</a></li>
+          <li class="nav-item"><a class="nav-link" href="#agents">Agents</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn ll-btn-primary btn-sm" href="#inquire"><i class="bi bi-chat-dots me-1"></i>Ask an agent</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <header class="ll-hero" id="home">
+      <div class="container">
+        <p class="ll-eyebrow">Austin · Buy · Rent · Represented</p>
+        <h1 class="ll-hero-title">Find the next address on the lot line.</h1>
+        <p class="ll-hero-lead">
+          Lotline is Maya Poluru’s marketplace for Austin homes — search by neighborhood, beds, and price, then write Kavya Poluru or Arjun Poluru in one note.
+        </p>
+
+        <form class="ll-search" id="llSearchForm" aria-label="Search listings">
+          <div class="ll-search-field ll-search-grow">
+            <label for="llQuery">Location</label>
+            <input class="form-control" id="llQuery" type="search" placeholder="Zilker, Clarksville, Mueller…" />
+          </div>
+          <div class="ll-search-field">
+            <label for="llIntent">Intent</label>
+            <select class="form-select" id="llIntent">
+              <option value="all">Buy or rent</option>
+              <option value="sale">For sale</option>
+              <option value="rent">For rent</option>
+            </select>
+          </div>
+          <div class="ll-search-field">
+            <label for="llType">Type</label>
+            <select class="form-select" id="llType">
+              <option value="all">Any home</option>
+              <option value="house">House</option>
+              <option value="condo">Condo</option>
+              <option value="townhome">Townhome</option>
+            </select>
+          </div>
+          <div class="ll-search-field">
+            <label for="llBeds">Beds</label>
+            <select class="form-select" id="llBeds">
+              <option value="0">Any</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+          <div class="ll-search-field">
+            <label for="llPrice">Max price</label>
+            <select class="form-select" id="llPrice">
+              <option value="0">Any</option>
+              <option value="2500">$2,500 / mo</option>
+              <option value="500000">$500k</option>
+              <option value="800000">$800k</option>
+              <option value="2000000">$2M</option>
+            </select>
+          </div>
+          <button type="submit" class="btn ll-btn-primary ll-search-submit">
+            <i class="bi bi-search me-2"></i>Search
+          </button>
+        </form>
+        <p class="ll-search-note" id="llSearchNote" role="status" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <section class="ll-section" id="stats">
+      <div class="container">
+        <div class="row g-3 g-lg-4">
+          <div class="col-6 col-lg-3">
+            <article class="ll-metric">
+              <p class="ll-metric-value"><span class="ll-counter" data-target="186">0</span></p>
+              <p class="ll-metric-label">Active listings</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ll-metric">
+              <p class="ll-metric-value"><span class="ll-counter" data-target="12">0</span></p>
+              <p class="ll-metric-label">Neighborhoods covered</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ll-metric">
+              <p class="ll-metric-value"><span class="ll-counter" data-target="4">0</span></p>
+              <p class="ll-metric-label">Poluru agents on desk</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="ll-metric">
+              <p class="ll-metric-value"><span class="ll-counter" data-decimals="1" data-target="4.9">0</span></p>
+              <p class="ll-metric-label">Client rating</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ll-section ll-section-soft" id="listings">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+          <div class="ll-section-head mb-0">
+            <p class="ll-eyebrow">Listings</p>
+            <h2 class="ll-section-title">Homes on the market</h2>
+            <p class="ll-section-sub mb-0">Cards update when you search. Prices are asking or monthly rent.</p>
+          </div>
+          <div class="ll-filter-chips" role="group" aria-label="Filter listings">
+            <button type="button" class="ll-chip is-active" data-list-filter="all">All</button>
+            <button type="button" class="ll-chip" data-list-filter="sale">For sale</button>
+            <button type="button" class="ll-chip" data-list-filter="rent">For rent</button>
+            <button type="button" class="ll-chip" data-list-filter="house">Houses</button>
+            <button type="button" class="ll-chip" data-list-filter="condo">Condos</button>
+          </div>
+        </div>
+        <p class="ll-result-count" id="llListCount">Showing 6 homes</p>
+
+        <div class="row g-3 g-lg-4" id="llListGrid">
+          <div class="col-md-6 col-xl-4 ll-home" data-intent="sale" data-type="house" data-beds="3" data-price="685000" data-hood="east austin">
+            <article class="ll-card">
+              <div class="ll-card-visual ll-vis-a" aria-hidden="true"><i class="bi bi-house-door"></i></div>
+              <div class="ll-card-body">
+                <div class="ll-card-meta">
+                  <span class="ll-pill">For sale</span>
+                  <strong>$685,000</strong>
+                </div>
+                <h3>East Cesar Chavez bungalow</h3>
+                <p>1184 Willow Lane · 3 bed · 2 bath · 1,420 sq ft</p>
+                <p class="ll-agent-line">Listed by Maya Poluru</p>
+                <button type="button" class="btn ll-btn-ghost w-100 ll-ask" data-home="East Cesar Chavez bungalow" data-agent="Maya Poluru">Inquire</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 ll-home" data-intent="sale" data-type="condo" data-beds="2" data-price="425000" data-hood="clarksville">
+            <article class="ll-card">
+              <div class="ll-card-visual ll-vis-b" aria-hidden="true"><i class="bi bi-building"></i></div>
+              <div class="ll-card-body">
+                <div class="ll-card-meta">
+                  <span class="ll-pill">For sale</span>
+                  <strong>$425,000</strong>
+                </div>
+                <h3>Clarksville condo</h3>
+                <p>44 West Lynn · 2 bed · 2 bath · 980 sq ft</p>
+                <p class="ll-agent-line">Listed by Kavya Poluru</p>
+                <button type="button" class="btn ll-btn-ghost w-100 ll-ask" data-home="Clarksville condo" data-agent="Kavya Poluru">Inquire</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 ll-home" data-intent="rent" data-type="townhome" data-beds="3" data-price="2450" data-hood="mueller">
+            <article class="ll-card">
+              <div class="ll-card-visual ll-vis-c" aria-hidden="true"><i class="bi bi-houses"></i></div>
+              <div class="ll-card-body">
+                <div class="ll-card-meta">
+                  <span class="ll-pill ll-pill-alt">For rent</span>
+                  <strong>$2,450/mo</strong>
+                </div>
+                <h3>Mueller townhome</h3>
+                <p>210 Aldrich · 3 bed · 2.5 bath · 1,610 sq ft</p>
+                <p class="ll-agent-line">Listed by Arjun Poluru</p>
+                <button type="button" class="btn ll-btn-ghost w-100 ll-ask" data-home="Mueller townhome" data-agent="Arjun Poluru">Inquire</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 ll-home" data-intent="sale" data-type="house" data-beds="5" data-price="1850000" data-hood="tarrytown">
+            <article class="ll-card">
+              <div class="ll-card-visual ll-vis-d" aria-hidden="true"><i class="bi bi-tree"></i></div>
+              <div class="ll-card-body">
+                <div class="ll-card-meta">
+                  <span class="ll-pill">For sale</span>
+                  <strong>$1,850,000</strong>
+                </div>
+                <h3>Tarrytown estate</h3>
+                <p>8 Windsor Road · 5 bed · 4 bath · 3,840 sq ft</p>
+                <p class="ll-agent-line">Listed by Anika Poluru</p>
+                <button type="button" class="btn ll-btn-ghost w-100 ll-ask" data-home="Tarrytown estate" data-agent="Anika Poluru">Inquire</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 ll-home" data-intent="rent" data-type="condo" data-beds="1" data-price="3100" data-hood="downtown">
+            <article class="ll-card">
+              <div class="ll-card-visual ll-vis-e" aria-hidden="true"><i class="bi bi-city"></i></div>
+              <div class="ll-card-body">
+                <div class="ll-card-meta">
+                  <span class="ll-pill ll-pill-alt">For rent</span>
+                  <strong>$3,100/mo</strong>
+                </div>
+                <h3>Downtown loft</h3>
+                <p>301 Congress · 1 bed · 1 bath · 780 sq ft</p>
+                <p class="ll-agent-line">Listed by Nikhil Poluru</p>
+                <button type="button" class="btn ll-btn-ghost w-100 ll-ask" data-home="Downtown loft" data-agent="Nikhil Poluru">Inquire</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 ll-home" data-intent="sale" data-type="house" data-beds="3" data-price="795000" data-hood="zilker">
+            <article class="ll-card">
+              <div class="ll-card-visual ll-vis-f" aria-hidden="true"><i class="bi bi-sun"></i></div>
+              <div class="ll-card-body">
+                <div class="ll-card-meta">
+                  <span class="ll-pill">For sale</span>
+                  <strong>$795,000</strong>
+                </div>
+                <h3>Zilker cottage</h3>
+                <p>1604 Barton · 3 bed · 2 bath · 1,560 sq ft</p>
+                <p class="ll-agent-line">Listed by Maya Poluru</p>
+                <button type="button" class="btn ll-btn-ghost w-100 ll-ask" data-home="Zilker cottage" data-agent="Maya Poluru">Inquire</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="ll-empty-state d-none" id="llListEmpty">No homes match those filters. Widen the price or drop a bedroom.</p>
+      </div>
+    </section>
+
+    <section class="ll-section" id="neighborhoods">
+      <div class="container">
+        <div class="ll-section-head">
+          <p class="ll-eyebrow">Neighborhoods</p>
+          <h2 class="ll-section-title">Where Lotline writes offers</h2>
+          <p class="ll-section-sub">Twelve pockets. These four move fastest this season.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-hood">
+              <h3>Zilker</h3>
+              <p>Cottages near the trail. Maya Poluru’s weekend open houses.</p>
+              <button type="button" class="ll-text-btn" data-hood-search="zilker">View homes</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-hood">
+              <h3>Clarksville</h3>
+              <p>Condos and 1920s streets. Kavya Poluru knows every HOA.</p>
+              <button type="button" class="ll-text-btn" data-hood-search="clarksville">View homes</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-hood">
+              <h3>Mueller</h3>
+              <p>Townhomes and new builds. Arjun Poluru handles rentals here.</p>
+              <button type="button" class="ll-text-btn" data-hood-search="mueller">View homes</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-hood">
+              <h3>Tarrytown</h3>
+              <p>Estates and oak canopies. Anika Poluru’s listing desk.</p>
+              <button type="button" class="ll-text-btn" data-hood-search="tarrytown">View homes</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ll-section ll-section-soft" id="agents">
+      <div class="container">
+        <div class="ll-section-head">
+          <p class="ll-eyebrow">Agents</p>
+          <h2 class="ll-section-title">The desk that answers</h2>
+          <p class="ll-section-sub">Four Polurus. One MLS login. No call center.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-agent">
+              <div class="ll-avatar" aria-hidden="true">MP</div>
+              <p class="ll-label">Broker</p>
+              <h3>Maya Poluru</h3>
+              <p>East side and Zilker. 14 years writing offers that close.</p>
+              <button type="button" class="btn ll-btn-ghost btn-sm ll-ask-agent" data-agent="Maya Poluru">Message Maya</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-agent">
+              <div class="ll-avatar" aria-hidden="true">KP</div>
+              <p class="ll-label">Buyer agent</p>
+              <h3>Kavya Poluru</h3>
+              <p>Condos, HOAs, and first homes west of Lamar.</p>
+              <button type="button" class="btn ll-btn-ghost btn-sm ll-ask-agent" data-agent="Kavya Poluru">Message Kavya</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-agent">
+              <div class="ll-avatar" aria-hidden="true">AP</div>
+              <p class="ll-label">Rentals</p>
+              <h3>Arjun Poluru</h3>
+              <p>Mueller, downtown, and leases that start on the first.</p>
+              <button type="button" class="btn ll-btn-ghost btn-sm ll-ask-agent" data-agent="Arjun Poluru">Message Arjun</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ll-agent">
+              <div class="ll-avatar" aria-hidden="true">NP</div>
+              <p class="ll-label">New builds</p>
+              <h3>Nikhil Poluru</h3>
+              <p>Lofts and inventory still in drywall. Anika covers Tarrytown with him.</p>
+              <button type="button" class="btn ll-btn-ghost btn-sm ll-ask-agent" data-agent="Nikhil Poluru">Message Nikhil</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ll-section" id="how">
+      <div class="container">
+        <div class="ll-section-head">
+          <p class="ll-eyebrow">How it works</p>
+          <h2 class="ll-section-title">Search, tour, write, close</h2>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4">
+            <article class="ll-step">
+              <span class="ll-step-num">01</span>
+              <h3>Filter the map</h3>
+              <p>Neighborhood, beds, buy or rent. The cards below the search bar are the live board.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="ll-step">
+              <span class="ll-step-num">02</span>
+              <h3>Ask the listing agent</h3>
+              <p>Inquire pre-fills the home and the Poluru who holds the key. Same-day replies on weekdays.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="ll-step">
+              <span class="ll-step-num">03</span>
+              <h3>Tour and decide</h3>
+              <p>Maya Poluru schedules. You walk. Offers go out with numbers that match the street.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ll-section ll-section-soft" id="inquire">
+      <div class="container">
+        <div class="ll-inquire-panel">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+              <p class="ll-eyebrow ll-eyebrow-on-dark">Inquiry</p>
+              <h2 class="ll-contact-title">Write the desk</h2>
+              <p class="ll-contact-text">
+                Tell us the address or the neighborhood. Anika Poluru routes it to the agent on that listing.
+              </p>
+              <ul class="ll-contact-facts list-unstyled mb-0">
+                <li><i class="bi bi-telephone"></i> (512) 555-0444</li>
+                <li><i class="bi bi-envelope"></i> <a href="mailto:mail.polurus@gmail.com">mail.polurus@gmail.com</a></li>
+                <li><i class="bi bi-clock"></i> Desk 9 am – 6 pm · Austin</li>
+              </ul>
+            </div>
+            <div class="col-lg-7">
+              <form class="ll-form" id="llInquireForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="llName">Name</label>
+                    <input class="form-control" id="llName" name="name" type="text" required autocomplete="name" placeholder="Maya Poluru" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="llEmail">Email</label>
+                    <input class="form-control" id="llEmail" name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="llPhone">Phone</label>
+                    <input class="form-control" id="llPhone" name="phone" type="tel" required autocomplete="tel" placeholder="(512) 555-0100" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="llAgent">Agent</label>
+                    <select class="form-select" id="llAgent" name="agent">
+                      <option>Maya Poluru</option>
+                      <option>Kavya Poluru</option>
+                      <option>Arjun Poluru</option>
+                      <option>Anika Poluru</option>
+                      <option>Nikhil Poluru</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="llHome">Listing</label>
+                    <input class="form-control" id="llHome" name="home" type="text" placeholder="Zilker cottage or a neighborhood" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="llGoal">I want to</label>
+                    <select class="form-select" id="llGoal" name="goal">
+                      <option>Buy</option>
+                      <option>Rent</option>
+                      <option>Sell</option>
+                      <option>Tour this weekend</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="llBudget">Budget</label>
+                    <select class="form-select" id="llBudget" name="budget">
+                      <option>Under $500k</option>
+                      <option>$500k – $800k</option>
+                      <option>$800k – $1.5M</option>
+                      <option>$1.5M+</option>
+                      <option>Rent $2–4k / mo</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="llMessage">Message</label>
+                    <textarea class="form-control" id="llMessage" name="message" rows="3" maxlength="500" required placeholder="Timing, pets, or a note for the listing agent."></textarea>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <button type="submit" class="btn ll-btn-primary flex-grow-1 btn-lg">
+                    <i class="bi bi-send me-2"></i>Send inquiry
+                  </button>
+                  <button type="button" class="btn ll-btn-ghost btn-lg" id="llSaveDraft">Save draft</button>
+                </div>
+                <p class="ll-form-note mb-0" id="llFormNote" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ll-section" id="reviews">
+      <div class="container">
+        <div class="ll-section-head">
+          <p class="ll-eyebrow">Reviews</p>
+          <h2 class="ll-section-title">After the keys change hands</h2>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4">
+            <article class="ll-review">
+              <div class="ll-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Kavya Poluru found the Clarksville condo before it hit the open house. Quiet, exact.”</p>
+              <strong>Priya Poluru</strong>
+              <span>Buyer · March</span>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="ll-review">
+              <div class="ll-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Arjun Poluru’s Mueller lease started on the first. No mystery fees.”</p>
+              <strong>Rohan Poluru</strong>
+              <span>Renter · June</span>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="ll-review">
+              <div class="ll-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Maya Poluru sold the bungalow in nine days. The photos matched the street.”</p>
+              <strong>Ishaan Poluru</strong>
+              <span>Seller · October</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ll-section ll-section-soft" id="office">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <p class="ll-eyebrow">Office</p>
+            <h2 class="ll-section-title">414 Congress Avenue</h2>
+            <p class="ll-section-sub">Second floor, downtown Austin. Street parking after 6. Desk open weekdays.</p>
+            <ul class="ll-hours list-unstyled">
+              <li><span>Monday – Friday</span><strong>9:00 am – 6:00 pm</strong></li>
+              <li><span>Saturday</span><strong>Open houses by appointment</strong></li>
+              <li><span>Sunday</span><strong>On call for offers</strong></li>
+            </ul>
+            <div class="ll-visit-actions">
+              <a class="btn ll-btn-primary" href="https://maps.google.com/?q=414+Congress+Avenue+Austin+TX" target="_blank" rel="noopener">Open map</a>
+              <a class="btn ll-btn-ghost" href="tel:+15125550444">Call the desk</a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="ll-map" role="img" aria-label="Map placeholder for 414 Congress Avenue, Austin">
+              <div>
+                <p class="ll-label">Lotline</p>
+                <strong>414 Congress Avenue</strong>
+                <p>Austin, TX 78701</p>
+                <p class="mb-0">MLS · Buyer and seller representation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ll-section" id="faq">
+      <div class="container">
+        <div class="ll-section-head text-center mx-auto">
+          <p class="ll-eyebrow">FAQ</p>
+          <h2 class="ll-section-title">Before you tour</h2>
+        </div>
+        <div class="accordion ll-accordion mx-auto" id="llFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#llFaq1" aria-expanded="true" aria-controls="llFaq1">Do you charge buyers a fee?</button>
+            </h3>
+            <div id="llFaq1" class="accordion-collapse collapse show" data-bs-parent="#llFaq">
+              <div class="accordion-body">Buyer representation is discussed in writing before the first tour. Maya Poluru will not surprise you at the table.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#llFaq2" aria-expanded="false" aria-controls="llFaq2">Can I tour this weekend?</button>
+            </h3>
+            <div id="llFaq2" class="accordion-collapse collapse" data-bs-parent="#llFaq">
+              <div class="accordion-body">Yes if the listing allows. Use Inquire and pick “Tour this weekend.” Anika Poluru confirms times.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#llFaq3" aria-expanded="false" aria-controls="llFaq3">Do you list rentals?</button>
+            </h3>
+            <div id="llFaq3" class="accordion-collapse collapse" data-bs-parent="#llFaq">
+              <div class="accordion-body">Arjun Poluru’s book. Filter For rent, then inquire on the card.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ll-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="ll-brand ll-brand-footer" href="#home">
+            <span class="ll-brand-mark" aria-hidden="true"><i class="bi bi-house-heart-fill"></i></span>
+            <span>Lotline<em>.</em></span>
+          </a>
+          <p class="ll-footer-text">Austin homes for sale and rent. Maya, Kavya, Arjun, Anika, and Nikhil Poluru.</p>
+          <form class="ll-news" id="llNewsForm">
+            <label class="visually-hidden" for="llNewsEmail">Email for new listings</label>
+            <input class="form-control" id="llNewsEmail" type="email" required placeholder="New-listing email" />
+            <button type="submit" class="btn ll-btn-secondary">Join</button>
+          </form>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="ll-footer-heading">Browse</p>
+          <ul class="ll-footer-links list-unstyled">
+            <li><a href="#listings">Listings</a></li>
+            <li><a href="#neighborhoods">Neighborhoods</a></li>
+            <li><a href="#agents">Agents</a></li>
+            <li><a href="#inquire">Inquire</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="ll-footer-heading">Desk</p>
+          <ul class="ll-footer-links list-unstyled">
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#office">Office</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="ll-footer-heading">Contact</p>
+          <p class="ll-footer-text mb-2">
+            414 Congress Avenue, Austin, TX 78701<br />
+            <a href="tel:+15125550444">(512) 555-0444</a><br />
+            <a href="mailto:mail.polurus@gmail.com">mail.polurus@gmail.com</a>
+          </p>
+          <div class="ll-social">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://polurus.com" target="_blank" rel="noopener" aria-label="Poluru Labs"><i class="bi bi-globe"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="ll-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru · Lotline. Free for personal &amp; commercial use.</span>
+        <span>Brand #44ACFF · Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="llToast" class="toast ll-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <strong class="me-auto" id="llToastTitle">Done</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="llToastBody">Action completed.</div>
+    </div>
+  </div>
+
+  <button type="button" class="ll-back-top" id="llBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

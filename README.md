@@ -64,6 +64,11 @@ Location: [web/bootstrap/hotel-booking](web/bootstrap/hotel-booking)
 
 Gulf Coast hotel and resort site with room listings, availability search, amenities, dining, reviews, and reservations. Brand color: `#F62440`. CSS prefix: `fl-*`.
 
+### 13. Real Estate Platform (Lotline)
+Location: [web/bootstrap/real-estate-platform](web/bootstrap/real-estate-platform)
+
+Austin property marketplace with search filters, listing cards, agent profiles, and inquiry forms. Brand color: `#44ACFF`. CSS prefix: `ll-*`.
+
 ## Repository Structure
 
 ```text
@@ -80,7 +85,8 @@ web/bootstrap/
 ├── researcher-portfolio/
 ├── startup-kpi-board/
 ├── restaurant-reservation/
-└── hotel-booking/
+├── hotel-booking/
+└── real-estate-platform/
 ```
 
 Each template folder includes HTML, assets, and its own README.
