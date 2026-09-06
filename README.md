@@ -59,6 +59,11 @@ Location: [web/bootstrap/restaurant-reservation](web/bootstrap/restaurant-reserv
 
 Seasonal restaurant site with a filterable menu, table booking, chef profiles, events, reviews, hours, and FAQ. Brand color: `#659287`. CSS prefix: `lr-*`.
 
+### 12. Hotel Booking (Flare)
+Location: [web/bootstrap/hotel-booking](web/bootstrap/hotel-booking)
+
+Gulf Coast hotel and resort site with room listings, availability search, amenities, dining, reviews, and reservations. Brand color: `#F62440`. CSS prefix: `fl-*`.
+
 ## Repository Structure
 
 ```text
@@ -74,7 +79,8 @@ web/bootstrap/
 ├── founder-metrics-dashboard-app/
 ├── researcher-portfolio/
 ├── startup-kpi-board/
-└── restaurant-reservation/
+├── restaurant-reservation/
+└── hotel-booking/
 ```
 
 Each template folder includes HTML, assets, and its own README.

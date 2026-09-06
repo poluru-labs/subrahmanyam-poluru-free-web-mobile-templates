@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<!--
+  Flare — Hotel & resort booking website
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Flare — Gulf Coast hotel and resort in Port Aransas with room listings, availability search, amenities, and reservations." />
+  <title>Flare — Hotel &amp; resort · Port Aransas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="fl-body">
+  <a class="fl-skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="navbar navbar-expand-lg fl-navbar sticky-top" id="flNavbar" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand fl-brand" href="#home">
+        <span class="fl-brand-mark" aria-hidden="true"><i class="bi bi-brightness-high-fill"></i></span>
+        <span>Flare<em>.</em></span>
+      </a>
+      <button class="navbar-toggler fl-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#flNav" aria-controls="flNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="flNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#stay">Stay</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dining">Dining</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visit">Visit</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn fl-btn-primary btn-sm" href="#book"><i class="bi bi-calendar2-check me-1"></i>Book a stay</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <header class="fl-hero" id="home">
+      <div class="container">
+        <div class="row align-items-end g-4">
+          <div class="col-lg-7">
+            <p class="fl-eyebrow">Port Aransas · Gulf Coast · Est. 2014</p>
+            <h1 class="fl-hero-title">Sun, salt air, and a room that faces the water.</h1>
+            <p class="fl-hero-lead">
+              Flare is Maya Poluru’s 48-key resort on Mustang Island — pool, spa, and a kitchen that stays open after the last ferry.
+            </p>
+            <ul class="fl-hero-points list-unstyled">
+              <li><i class="bi bi-geo-alt"></i> 220 Beach Road, Port Aransas, TX</li>
+              <li><i class="bi bi-telephone"></i> (361) 555-0220</li>
+              <li><i class="bi bi-sunrise"></i> Check-in 4 pm · Check-out 11 am</li>
+            </ul>
+          </div>
+          <div class="col-lg-5">
+            <aside class="fl-hero-stats" aria-label="Property snapshot">
+              <div><strong>48</strong><span>Keys</span></div>
+              <div><strong>2</strong><span>Pools</span></div>
+              <div><strong>4.8</strong><span>Guest rating</span></div>
+            </aside>
+          </div>
+        </div>
+
+        <form class="fl-search" id="flSearchForm" aria-label="Search availability">
+          <div class="fl-search-field">
+            <label for="flCheckIn">Check-in</label>
+            <input class="form-control" id="flCheckIn" name="checkin" type="date" required />
+          </div>
+          <div class="fl-search-field">
+            <label for="flCheckOut">Check-out</label>
+            <input class="form-control" id="flCheckOut" name="checkout" type="date" required />
+          </div>
+          <div class="fl-search-field">
+            <label for="flSearchGuests">Guests</label>
+            <div class="fl-stepper">
+              <button type="button" class="fl-stepper-btn" id="flSearchMinus" aria-label="Fewer guests">−</button>
+              <input class="form-control text-center" id="flSearchGuests" name="guests" type="number" min="1" max="6" value="2" required />
+              <button type="button" class="fl-stepper-btn" id="flSearchPlus" aria-label="More guests">+</button>
+            </div>
+          </div>
+          <div class="fl-search-field">
+            <label for="flSearchType">Room type</label>
+            <select class="form-select" id="flSearchType">
+              <option value="all">Any room</option>
+              <option value="room">Guest room</option>
+              <option value="suite">Suite</option>
+              <option value="bungalow">Bungalow</option>
+            </select>
+          </div>
+          <button type="submit" class="btn fl-btn-primary fl-search-submit">
+            <i class="bi bi-search me-2"></i>Search dates
+          </button>
+        </form>
+        <p class="fl-search-note" id="flSearchNote" role="status" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <section class="fl-section" id="stay">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-5">
+            <p class="fl-eyebrow">The stay</p>
+            <h2 class="fl-section-title">A small resort that still feels like a house on the gulf.</h2>
+            <p class="fl-section-sub">Maya Poluru rebuilt an old motor court into 48 rooms, a spa, and a dining room that looks at the dunes.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="fl-prose">
+              <p>
+                Mornings start with coffee on the boardwalk. Afternoons are the saltwater pool or Kavya Poluru’s spa. Evenings, Arjun Poluru’s kitchen plates Gulf catch and a short wine list.
+              </p>
+              <p>
+                Anika Poluru runs the desk. She will hold a late check-in, a crib, or a table at dusk if you tell her when you book.
+              </p>
+            </div>
+            <div class="row g-3 mt-1">
+              <div class="col-sm-4">
+                <div class="fl-chip-card">
+                  <i class="bi bi-water"></i>
+                  <div>
+                    <strong>Beach</strong>
+                    <span>Private boardwalk</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="fl-chip-card">
+                  <i class="bi bi-moon-stars"></i>
+                  <div>
+                    <strong>Quiet hours</strong>
+                    <span>After 10 on the pool deck</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="fl-chip-card">
+                  <i class="bi bi-car-front"></i>
+                  <div>
+                    <strong>Parking</strong>
+                    <span>Complimentary lot</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 g-lg-4 mt-4">
+          <div class="col-6 col-lg-3">
+            <article class="fl-metric">
+              <p class="fl-metric-value"><span class="fl-counter" data-target="48">0</span></p>
+              <p class="fl-metric-label">Guest rooms &amp; suites</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="fl-metric">
+              <p class="fl-metric-value"><span class="fl-counter" data-target="12">0</span></p>
+              <p class="fl-metric-label">Years on this stretch</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="fl-metric">
+              <p class="fl-metric-value"><span class="fl-counter" data-target="9">0</span></p>
+              <p class="fl-metric-label">Treatment rooms in spa</p>
+            </article>
+          </div>
+          <div class="col-6 col-lg-3">
+            <article class="fl-metric">
+              <p class="fl-metric-value"><span class="fl-counter" data-decimals="1" data-target="4.8">0</span></p>
+              <p class="fl-metric-label">Guest rating this year</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section fl-section-soft" id="rooms">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-3">
+          <div class="fl-section-head mb-0">
+            <p class="fl-eyebrow">Rooms</p>
+            <h2 class="fl-section-title">Keys on the water</h2>
+            <p class="fl-section-sub mb-0">Rates are per night, before tax. Search dates above to filter by occupancy.</p>
+          </div>
+          <div class="fl-filter-chips" role="group" aria-label="Filter rooms">
+            <button type="button" class="fl-chip is-active" data-room-filter="all">All</button>
+            <button type="button" class="fl-chip" data-room-filter="room">Rooms</button>
+            <button type="button" class="fl-chip" data-room-filter="suite">Suites</button>
+            <button type="button" class="fl-chip" data-room-filter="bungalow">Bungalows</button>
+          </div>
+        </div>
+        <p class="fl-result-count" id="flRoomCount">Showing 6 rooms</p>
+
+        <div class="row g-3 g-lg-4" id="flRoomGrid">
+          <div class="col-md-6 col-xl-4 fl-room-item" data-type="room" data-guests="2" data-view="garden">
+            <article class="fl-room">
+              <div class="fl-room-visual fl-room-visual-a" aria-hidden="true"><i class="bi bi-tree"></i></div>
+              <div class="fl-room-body">
+                <div class="fl-room-meta">
+                  <span class="fl-pill">Guest room</span>
+                  <span class="fl-price">$248<span>/night</span></span>
+                </div>
+                <h3>Garden King</h3>
+                <p>King bed, courtyard, rain shower. Quiet side of the property.</p>
+                <ul class="fl-room-facts">
+                  <li><i class="bi bi-people"></i> 2 guests</li>
+                  <li><i class="bi bi-arrows-fullscreen"></i> 340 sq ft</li>
+                  <li><i class="bi bi-wifi"></i> Wifi</li>
+                </ul>
+                <button type="button" class="btn fl-btn-ghost w-100 fl-book-room" data-room="Garden King">Reserve this room</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 fl-room-item" data-type="room" data-guests="2" data-view="ocean">
+            <article class="fl-room">
+              <div class="fl-room-visual fl-room-visual-b" aria-hidden="true"><i class="bi bi-water"></i></div>
+              <div class="fl-room-body">
+                <div class="fl-room-meta">
+                  <span class="fl-pill">Guest room</span>
+                  <span class="fl-price">$286<span>/night</span></span>
+                </div>
+                <h3>Ocean Queen</h3>
+                <p>Queen bed, gulf view, balcony. Maya Poluru’s favorite morning light.</p>
+                <ul class="fl-room-facts">
+                  <li><i class="bi bi-people"></i> 2 guests</li>
+                  <li><i class="bi bi-arrows-fullscreen"></i> 360 sq ft</li>
+                  <li><i class="bi bi-binoculars"></i> Gulf view</li>
+                </ul>
+                <button type="button" class="btn fl-btn-ghost w-100 fl-book-room" data-room="Ocean Queen">Reserve this room</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 fl-room-item" data-type="suite" data-guests="4" data-view="ocean">
+            <article class="fl-room">
+              <div class="fl-room-visual fl-room-visual-c" aria-hidden="true"><i class="bi bi-house-heart"></i></div>
+              <div class="fl-room-body">
+                <div class="fl-room-meta">
+                  <span class="fl-pill fl-pill-alt">Suite</span>
+                  <span class="fl-price">$392<span>/night</span></span>
+                </div>
+                <h3>Family Suite</h3>
+                <p>King plus sofa bed, kitchenette, two baths. For Anika Poluru’s longer stays.</p>
+                <ul class="fl-room-facts">
+                  <li><i class="bi bi-people"></i> 4 guests</li>
+                  <li><i class="bi bi-arrows-fullscreen"></i> 620 sq ft</li>
+                  <li><i class="bi bi-cup-hot"></i> Kitchenette</li>
+                </ul>
+                <button type="button" class="btn fl-btn-ghost w-100 fl-book-room" data-room="Family Suite">Reserve this room</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 fl-room-item" data-type="suite" data-guests="4" data-view="ocean">
+            <article class="fl-room">
+              <div class="fl-room-visual fl-room-visual-d" aria-hidden="true"><i class="bi bi-building"></i></div>
+              <div class="fl-room-body">
+                <div class="fl-room-meta">
+                  <span class="fl-pill fl-pill-alt">Suite</span>
+                  <span class="fl-price">$640<span>/night</span></span>
+                </div>
+                <h3>Penthouse</h3>
+                <p>Top floor, wraparound terrace, soaking tub. Ask Arjun Poluru for a sunset table.</p>
+                <ul class="fl-room-facts">
+                  <li><i class="bi bi-people"></i> 4 guests</li>
+                  <li><i class="bi bi-arrows-fullscreen"></i> 880 sq ft</li>
+                  <li><i class="bi bi-droplet-half"></i> Soaking tub</li>
+                </ul>
+                <button type="button" class="btn fl-btn-ghost w-100 fl-book-room" data-room="Penthouse">Reserve this room</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 fl-room-item" data-type="bungalow" data-guests="2" data-view="garden">
+            <article class="fl-room">
+              <div class="fl-room-visual fl-room-visual-e" aria-hidden="true"><i class="bi bi-lamp"></i></div>
+              <div class="fl-room-body">
+                <div class="fl-room-meta">
+                  <span class="fl-pill">Bungalow</span>
+                  <span class="fl-price">$410<span>/night</span></span>
+                </div>
+                <h3>Dune Bungalow</h3>
+                <p>Detached, outdoor shower, private patio. Two of these on the property.</p>
+                <ul class="fl-room-facts">
+                  <li><i class="bi bi-people"></i> 2 guests</li>
+                  <li><i class="bi bi-arrows-fullscreen"></i> 480 sq ft</li>
+                  <li><i class="bi bi-door-open"></i> Private patio</li>
+                </ul>
+                <button type="button" class="btn fl-btn-ghost w-100 fl-book-room" data-room="Dune Bungalow">Reserve this room</button>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 fl-room-item" data-type="room" data-guests="2" data-view="garden">
+            <article class="fl-room">
+              <div class="fl-room-visual fl-room-visual-f" aria-hidden="true"><i class="bi bi-person-wheelchair"></i></div>
+              <div class="fl-room-body">
+                <div class="fl-room-meta">
+                  <span class="fl-pill">Guest room</span>
+                  <span class="fl-price">$248<span>/night</span></span>
+                </div>
+                <h3>Accessible King</h3>
+                <p>Roll-in shower, ground floor, garden path to the lobby and pool.</p>
+                <ul class="fl-room-facts">
+                  <li><i class="bi bi-people"></i> 2 guests</li>
+                  <li><i class="bi bi-arrows-fullscreen"></i> 360 sq ft</li>
+                  <li><i class="bi bi-signpost"></i> Step-free</li>
+                </ul>
+                <button type="button" class="btn fl-btn-ghost w-100 fl-book-room" data-room="Accessible King">Reserve this room</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="fl-empty-state d-none" id="flRoomEmpty">No rooms match those dates or guest count. Try fewer guests or any room type.</p>
+      </div>
+    </section>
+
+    <section class="fl-section" id="amenities">
+      <div class="container">
+        <div class="fl-section-head">
+          <p class="fl-eyebrow">Amenities</p>
+          <h2 class="fl-section-title">What comes with the key</h2>
+          <p class="fl-section-sub">Pool, spa, kitchen, and a desk that still answers the phone.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-water" aria-hidden="true"></i>
+              <h3>Saltwater pool</h3>
+              <p>Heated year-round. Towels at the cabana.</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-flower1" aria-hidden="true"></i>
+              <h3>Spa</h3>
+              <p>Nine rooms. Kavya Poluru’s coastal treatments.</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-egg-fried" aria-hidden="true"></i>
+              <h3>Dining</h3>
+              <p>Breakfast, dinner, and a late bar with Arjun Poluru.</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+              <h3>Fitness</h3>
+              <p>Open 5 am–10 pm. Bikes for the beach road.</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-umbrella" aria-hidden="true"></i>
+              <h3>Beach</h3>
+              <p>Boardwalk, chairs, and a morning surf report.</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-headset" aria-hidden="true"></i>
+              <h3>Concierge</h3>
+              <p>Anika Poluru books ferries, tables, and sitters.</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-balloon" aria-hidden="true"></i>
+              <h3>Kids club</h3>
+              <p>Weekends, 9–1. Shell walks and a quiet room.</p>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="fl-amenity">
+              <i class="bi bi-car-front" aria-hidden="true"></i>
+              <h3>Parking</h3>
+              <p>Free lot. Two EV stalls by the spa.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section fl-section-soft" id="dining">
+      <div class="container">
+        <div class="fl-section-head">
+          <p class="fl-eyebrow">Dining &amp; spa</p>
+          <h2 class="fl-section-title">The rest of the house</h2>
+          <p class="fl-section-sub">A kitchen, a treatment list, and a bar that stays lit after dinner.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-4">
+            <article class="fl-xp">
+              <i class="bi bi-cup-hot" aria-hidden="true"></i>
+              <h3>The Ember Room</h3>
+              <p>Arjun Poluru’s dining room. Gulf catch, a short wine list, breakfast until 11.</p>
+              <p class="fl-meta">Dinner 5:30–9:30 · Reservations for hotel guests first</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="fl-xp">
+              <i class="bi bi-droplet" aria-hidden="true"></i>
+              <h3>Tide Spa</h3>
+              <p>Kavya Poluru’s salt scrubs and quiet rooms. Book with your stay or à la carte.</p>
+              <p class="fl-meta">Daily 9–7 · Nine treatment rooms</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="fl-xp">
+              <i class="bi bi-moon" aria-hidden="true"></i>
+              <h3>Boardwalk bar</h3>
+              <p>Sunset spritz, house vermouth, and a late plate if the kitchen still has bread.</p>
+              <p class="fl-meta">Open until 11 · Guests and locals</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section" id="book">
+      <div class="container">
+        <div class="fl-book-panel">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+              <p class="fl-eyebrow fl-eyebrow-on-dark">Reservations</p>
+              <h2 class="fl-contact-title">Hold a room at Flare</h2>
+              <p class="fl-contact-text">
+                Search dates above, then send the request. Anika Poluru confirms within a few hours. Two-night minimum on holiday weekends.
+              </p>
+              <ul class="fl-contact-facts list-unstyled mb-0">
+                <li><i class="bi bi-telephone"></i> (361) 555-0220</li>
+                <li><i class="bi bi-envelope"></i> <a href="mailto:mail.polurus@gmail.com">mail.polurus@gmail.com</a></li>
+                <li><i class="bi bi-clock"></i> Check-in 4 pm · Check-out 11 am</li>
+              </ul>
+            </div>
+            <div class="col-lg-7">
+              <form class="fl-form" id="flBookForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="flName">Name</label>
+                    <input class="form-control" id="flName" name="name" type="text" required autocomplete="name" placeholder="Maya Poluru" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="flEmail">Email</label>
+                    <input class="form-control" id="flEmail" name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="flPhone">Phone</label>
+                    <input class="form-control" id="flPhone" name="phone" type="tel" required autocomplete="tel" placeholder="(361) 555-0100" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="flRoomPick">Room</label>
+                    <select class="form-select" id="flRoomPick" name="room" required>
+                      <option value="">Choose a room</option>
+                      <option>Garden King</option>
+                      <option>Ocean Queen</option>
+                      <option>Family Suite</option>
+                      <option>Penthouse</option>
+                      <option>Dune Bungalow</option>
+                      <option>Accessible King</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="flBookIn">Check-in</label>
+                    <input class="form-control" id="flBookIn" name="checkin" type="date" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="flBookOut">Check-out</label>
+                    <input class="form-control" id="flBookOut" name="checkout" type="date" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="flBookGuests">Guests</label>
+                    <div class="fl-stepper">
+                      <button type="button" class="fl-stepper-btn" id="flBookMinus" aria-label="Fewer guests">−</button>
+                      <input class="form-control text-center" id="flBookGuests" name="guests" type="number" min="1" max="6" value="2" required />
+                      <button type="button" class="fl-stepper-btn" id="flBookPlus" aria-label="More guests">+</button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="flOccasion">Occasion</label>
+                    <select class="form-select" id="flOccasion" name="occasion">
+                      <option>Leisure</option>
+                      <option>Anniversary</option>
+                      <option>Family trip</option>
+                      <option>Business</option>
+                      <option>Just because</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="flNotes">Notes for the desk</label>
+                    <textarea class="form-control" id="flNotes" name="notes" rows="3" maxlength="400" placeholder="Late arrival, crib, or a note for Anika Poluru."></textarea>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <button type="submit" class="btn fl-btn-primary flex-grow-1 btn-lg">
+                    <i class="bi bi-check2-circle me-2"></i>Request stay
+                  </button>
+                  <button type="button" class="btn fl-btn-ghost btn-lg" id="flSaveDraft">Save draft</button>
+                </div>
+                <p class="fl-form-note mb-0" id="flFormNote" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section fl-section-soft" id="reviews">
+      <div class="container">
+        <div class="fl-section-head">
+          <p class="fl-eyebrow">Guest reviews</p>
+          <h2 class="fl-section-title">What people write after checkout</h2>
+          <p class="fl-section-sub">Stars are out of five. Names from recent stays.</p>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="fl-review">
+              <div class="fl-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Ocean Queen at sunrise, then the pool. Anika Poluru held a late table without fuss.”</p>
+              <strong>Priya Poluru</strong>
+              <span>Ocean Queen · April</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="fl-review">
+              <div class="fl-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Family Suite fit four. Kids club in the morning, Ember Room at night. We will be back.”</p>
+              <strong>Rohan Poluru</strong>
+              <span>Family Suite · June</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="fl-review">
+              <div class="fl-stars" aria-label="4 out of 5">★★★★☆</div>
+              <p>“Penthouse terrace is the stay. Arjun Poluru’s catch of the day was the dinner.”</p>
+              <strong>Ishaan Poluru</strong>
+              <span>Penthouse · October</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="fl-review">
+              <div class="fl-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Kavya Poluru’s spa after a windy beach day. Quiet, exact, worth the extra night.”</p>
+              <strong>Nikhil Poluru</strong>
+              <span>Dune Bungalow · March</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="fl-review">
+              <div class="fl-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Accessible King was actually accessible. Garden path to the lobby. That is rare.”</p>
+              <strong>Dev Poluru</strong>
+              <span>Accessible King · August</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="fl-review">
+              <div class="fl-stars" aria-label="5 out of 5">★★★★★</div>
+              <p>“Maya Poluru still walks the boardwalk at dusk. The place feels run, not managed.”</p>
+              <strong>Anika Poluru</strong>
+              <span>Garden King · January</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section" id="visit">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <p class="fl-eyebrow">Visit</p>
+            <h2 class="fl-section-title">220 Beach Road</h2>
+            <p class="fl-section-sub">Port Aransas, Mustang Island. Ferry from Aransas Pass, or the causeway from Corpus Christi.</p>
+            <ul class="fl-hours list-unstyled">
+              <li><span>Front desk</span><strong>24 hours</strong></li>
+              <li><span>Check-in</span><strong>4:00 pm</strong></li>
+              <li><span>Check-out</span><strong>11:00 am</strong></li>
+              <li><span>Ember Room</span><strong>7:00 am – 9:30 pm</strong></li>
+              <li><span>Tide Spa</span><strong>9:00 am – 7:00 pm</strong></li>
+            </ul>
+            <div class="fl-visit-actions">
+              <a class="btn fl-btn-primary" href="https://maps.google.com/?q=220+Beach+Road+Port+Aransas+TX" target="_blank" rel="noopener">Open map</a>
+              <a class="btn fl-btn-ghost" href="tel:+13615550220">Call the desk</a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="fl-map" role="img" aria-label="Map placeholder for 220 Beach Road, Port Aransas">
+              <div>
+                <p class="fl-label">Flare</p>
+                <strong>220 Beach Road</strong>
+                <p>Port Aransas, TX 78373</p>
+                <p class="mb-0">Boardwalk to the gulf · Lot behind the spa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fl-section fl-section-soft" id="faq">
+      <div class="container">
+        <div class="fl-section-head text-center mx-auto">
+          <p class="fl-eyebrow">FAQ</p>
+          <h2 class="fl-section-title">Before you pack</h2>
+          <p class="fl-section-sub">Short answers from Anika Poluru’s desk.</p>
+        </div>
+        <div class="accordion fl-accordion mx-auto" id="flFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flFaq1" aria-expanded="true" aria-controls="flFaq1">Is there a minimum stay?</button>
+            </h3>
+            <div id="flFaq1" class="accordion-collapse collapse show" data-bs-parent="#flFaq">
+              <div class="accordion-body">One night most of the year. Two nights on holiday weekends and during spring wind weeks.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flFaq2" aria-expanded="false" aria-controls="flFaq2">Are pets allowed?</button>
+            </h3>
+            <div id="flFaq2" class="accordion-collapse collapse" data-bs-parent="#flFaq">
+              <div class="accordion-body">Dogs under 40 lb in Garden King and Dune Bungalow. Tell Anika Poluru when you book. $75 cleaning fee.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flFaq3" aria-expanded="false" aria-controls="flFaq3">What is the cancellation window?</button>
+            </h3>
+            <div id="flFaq3" class="accordion-collapse collapse" data-bs-parent="#flFaq">
+              <div class="accordion-body">Free cancel 48 hours ahead. Penthouse and bungalows need 72 hours.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fl-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="fl-brand fl-brand-footer" href="#home">
+            <span class="fl-brand-mark" aria-hidden="true"><i class="bi bi-brightness-high-fill"></i></span>
+            <span>Flare<em>.</em></span>
+          </a>
+          <p class="fl-footer-text">Gulf Coast resort in Port Aransas. Maya, Kavya, Arjun, and Anika Poluru on property.</p>
+          <form class="fl-news" id="flNewsForm">
+            <label class="visually-hidden" for="flNewsEmail">Email for stay notes</label>
+            <input class="form-control" id="flNewsEmail" type="email" required placeholder="Stay-list email" />
+            <button type="submit" class="btn fl-btn-secondary">Join</button>
+          </form>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="fl-footer-heading">Stay</p>
+          <ul class="fl-footer-links list-unstyled">
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#book">Reservations</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#visit">Hours</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="fl-footer-heading">House</p>
+          <ul class="fl-footer-links list-unstyled">
+            <li><a href="#stay">Story</a></li>
+            <li><a href="#dining">Dining</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p class="fl-footer-heading">Contact</p>
+          <p class="fl-footer-text mb-2">
+            220 Beach Road, Port Aransas, TX 78373<br />
+            <a href="tel:+13615550220">(361) 555-0220</a><br />
+            <a href="mailto:mail.polurus@gmail.com">mail.polurus@gmail.com</a>
+          </p>
+          <div class="fl-social">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://polurus.com" target="_blank" rel="noopener" aria-label="Poluru Labs"><i class="bi bi-globe"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="fl-footer-bottom">
+        <span>&copy; 2026 Subrahmanyam Poluru · Flare. Free for personal &amp; commercial use.</span>
+        <span>Brand #F62440 · Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="flToast" class="toast fl-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <strong class="me-auto" id="flToastTitle">Done</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" id="flToastBody">Action completed.</div>
+    </div>
+  </div>
+
+  <button type="button" class="fl-back-top" id="flBackTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
