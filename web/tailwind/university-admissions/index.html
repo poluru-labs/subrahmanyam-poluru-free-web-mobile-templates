@@ -1,24 +1,525 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Harborwell — University admissions
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
 -->
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da373d;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline text-clifford">
-      Hello world!
-    </h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Harborwell — university admissions portal for Leela Poluru: application tracking, document uploads, and status timelines." />
+  <title>Harborwell — Admissions · Leela Poluru</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #05339c;
+      --color-brand-dark: #03256f;
+      --color-brand-deep: #021a4f;
+      --color-brand-soft: #e6eef8;
+      --color-ink: #0e1a2e;
+      --color-muted: #5a6b82;
+      --color-line: #c9d6e8;
+      --color-canvas: #f3f6fb;
+      --color-panel: #ffffff;
+      --color-night: #021a4f;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="hw-body bg-canvas text-ink font-sans antialiased">
+  <a class="hw-skip-link" href="#main-content">Skip to content</a>
+  <div class="hw-overlay" id="hwOverlay" aria-hidden="true"></div>
+
+  <div class="hw-shell">
+    <aside class="hw-sidebar" id="hwSidebar" aria-label="Primary">
+      <div class="hw-brand">
+        <a class="hw-brand-link" href="#overview" data-view="overview">
+          <span class="hw-brand-mark" aria-hidden="true"><i class="bi bi-buildings"></i></span>
+          <span>Harborwell<em>.</em></span>
+        </a>
+        <button type="button" class="hw-sidebar-close lg:hidden" id="hwSidebarClose" aria-label="Close navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="hw-nav">
+        <p class="hw-nav-label">Portal</p>
+        <ul class="hw-nav-list">
+          <li>
+            <a class="hw-nav-link is-active" href="#overview" data-view="overview" aria-current="page">
+              <i class="bi bi-grid-1x2"></i><span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a class="hw-nav-link" href="#applications" data-view="applications">
+              <i class="bi bi-folder2-open"></i><span>Applications</span>
+              <span class="hw-nav-badge">3</span>
+            </a>
+          </li>
+          <li>
+            <a class="hw-nav-link" href="#documents" data-view="documents">
+              <i class="bi bi-cloud-arrow-up"></i><span>Documents</span>
+              <span class="hw-nav-badge">2</span>
+            </a>
+          </li>
+          <li>
+            <a class="hw-nav-link" href="#timeline" data-view="timeline">
+              <i class="bi bi-clock-history"></i><span>Timeline</span>
+            </a>
+          </li>
+          <li>
+            <a class="hw-nav-link" href="#messages" data-view="messages">
+              <i class="bi bi-chat-text"></i><span>Messages</span>
+              <span class="hw-nav-badge">2</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hw-sidebar-foot">
+        <div class="hw-staff">
+          <span class="hw-avatar">LP</span>
+          <p><strong>Leela Poluru</strong>Fall 2027 · Applicant</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="hw-main">
+      <header class="hw-topbar">
+        <button type="button" class="hw-menu-btn lg:hidden" id="hwMenuBtn" aria-label="Open navigation" aria-controls="hwSidebar">
+          <i class="bi bi-list"></i>
+        </button>
+        <p class="hw-crumb mb-0">Harborwell / <strong id="hwCrumb">Overview</strong></p>
+
+        <div class="hw-rail" id="hwRail" role="group" aria-label="Application stage">
+          <span class="hw-rail-step is-done" data-stage="start">Start</span>
+          <span class="hw-rail-join" aria-hidden="true">→</span>
+          <span class="hw-rail-step" data-stage="materials">Materials</span>
+          <span class="hw-rail-join" aria-hidden="true">→</span>
+          <span class="hw-rail-step" data-stage="review">Review</span>
+          <span class="hw-rail-join" aria-hidden="true">→</span>
+          <span class="hw-rail-step" data-stage="decision">Decision</span>
+        </div>
+
+        <span class="hw-meter" id="hwMeter">CS · 4 / 6 files · Oct 15</span>
+
+        <div class="hw-programs" role="group" aria-label="Active application">
+          <button type="button" class="hw-program-chip is-active" data-program-chip="cs">CS</button>
+          <button type="button" class="hw-program-chip" data-program-chip="bio">Bio</button>
+          <button type="button" class="hw-program-chip" data-program-chip="arch">Arch</button>
+        </div>
+
+        <form class="hw-search" id="hwTopSearchForm" role="search">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input id="hwTopSearch" type="search" placeholder="Search files, staff…" aria-label="Search the portal" />
+        </form>
+        <button type="button" class="hw-icon-btn" id="hwBellBtn" aria-label="Notifications, 2 unread">
+          <i class="bi bi-bell"></i>
+          <span class="hw-dot"></span>
+        </button>
+        <span class="hw-avatar hw-avatar-ink" aria-hidden="true">LP</span>
+      </header>
+
+      <main id="main-content" class="hw-content" tabindex="-1">
+        <section class="hw-view is-active" id="view-overview" data-title="Overview" aria-labelledby="overview-title">
+          <div class="hw-page-head">
+            <div>
+              <p class="hw-kicker" id="hwClock">Wednesday, September 9</p>
+              <h1 class="hw-page-title font-display" id="overview-title">Good evening, Leela.</h1>
+              <p class="hw-page-sub"><span id="hwProgramLabel">Computer Science</span> is in review. Maya Poluru still wants the Harborwell supplement before October 15.</p>
+            </div>
+            <button type="button" class="hw-btn hw-btn-primary" data-view-jump="documents">
+              <i class="bi bi-cloud-arrow-up"></i> Upload files
+            </button>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <article class="hw-stat">
+              <p class="hw-stat-label">Applications</p>
+              <p class="hw-stat-value font-display">3</p>
+              <p class="hw-stat-meta">CS, Biology, Architecture</p>
+            </article>
+            <article class="hw-stat">
+              <p class="hw-stat-label">Files in</p>
+              <p class="hw-stat-value font-display" id="hwFileStat">4 / 6</p>
+              <p class="hw-stat-meta">For the active program</p>
+            </article>
+            <article class="hw-stat">
+              <p class="hw-stat-label">Next deadline</p>
+              <p class="hw-stat-value font-display" id="hwDeadlineStat">Oct 15</p>
+              <p class="hw-stat-meta">Supplement + second rec</p>
+            </article>
+            <article class="hw-stat">
+              <p class="hw-stat-label">Reader</p>
+              <p class="hw-stat-value font-display">Anika</p>
+              <p class="hw-stat-meta">Anika Poluru, first read</p>
+            </article>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-3 mt-4">
+            <article class="hw-card xl:col-span-2">
+              <div class="hw-card-head">
+                <h2 class="hw-card-title">Still needed</h2>
+                <button type="button" class="hw-text-btn" data-view-jump="documents">Documents</button>
+              </div>
+              <ul class="hw-feed">
+                <li>
+                  <span class="hw-feed-when">Essay</span>
+                  <div>
+                    <strong>Harborwell supplement</strong>
+                    <span>Why Harborwell · 400 words · Maya Poluru requested a rewrite</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hw-feed-when">Rec</span>
+                  <div>
+                    <strong>Rohan Poluru · counselor</strong>
+                    <span>Pending from Ashbury · Subbu Poluru copied</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hw-feed-when">Aid</span>
+                  <div>
+                    <strong>CSS Profile</strong>
+                    <span>Asha Poluru opened the aid desk yesterday</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="hw-card">
+              <div class="hw-card-head">
+                <h2 class="hw-card-title">Desk notes</h2>
+                <button type="button" class="hw-text-btn" data-view-jump="messages">Inbox</button>
+              </div>
+              <ul class="hw-feed">
+                <li>
+                  <span class="hw-avatar hw-avatar-ink" style="width:2rem;height:2rem;font-size:0.68rem">MP</span>
+                  <div>
+                    <strong>Maya Poluru</strong>
+                    <span>Interview hold for CS until the supplement lands</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hw-avatar hw-avatar-ink" style="width:2rem;height:2rem;font-size:0.68rem">AP</span>
+                  <div>
+                    <strong>Anika Poluru</strong>
+                    <span>First read started September 8</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="hw-avatar hw-avatar-ink" style="width:2rem;height:2rem;font-size:0.68rem">KP</span>
+                  <div>
+                    <strong>Kavya Poluru</strong>
+                    <span>Campus tour booked with Dev Poluru</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="hw-view" id="view-applications" hidden aria-labelledby="apps-title">
+          <div class="hw-page-head">
+            <div>
+              <p class="hw-kicker">Fall 2027</p>
+              <h1 class="hw-page-title font-display" id="apps-title">Applications</h1>
+              <p class="hw-page-sub">Three Harborwell programs. Switch CS, Bio, or Arch in the navy bar, then open files or the timeline.</p>
+            </div>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="hw-app-card" data-program-row="cs">
+              <p class="hw-kicker">B.S. · College of Computing</p>
+              <h2>Computer Science</h2>
+              <span class="hw-status is-review">In review</span>
+              <p>Anika Poluru is first reader. Supplement still open. Interview with Kiran Poluru is on hold.</p>
+              <div class="hw-progress" aria-hidden="true"><span style="width:67%"></span></div>
+              <p>4 of 6 files · due Oct 15</p>
+              <div class="hw-app-actions">
+                <button type="button" class="hw-btn hw-btn-primary" data-view-jump="timeline" data-program="cs">Timeline</button>
+                <button type="button" class="hw-btn hw-btn-ghost" data-view-jump="documents" data-program="cs">Files</button>
+              </div>
+            </article>
+            <article class="hw-app-card" data-program-row="bio">
+              <p class="hw-kicker">B.S. · College of Science</p>
+              <h2>Biology</h2>
+              <span class="hw-status is-materials">Materials</span>
+              <p>Lab rec from Priya Poluru is in. Transcript from Ashbury is still the fall addendum.</p>
+              <div class="hw-progress" aria-hidden="true"><span style="width:50%"></span></div>
+              <p>3 of 6 files · due Nov 1</p>
+              <div class="hw-app-actions">
+                <button type="button" class="hw-btn hw-btn-primary" data-view-jump="timeline" data-program="bio">Timeline</button>
+                <button type="button" class="hw-btn hw-btn-ghost" data-view-jump="documents" data-program="bio">Files</button>
+              </div>
+            </article>
+            <article class="hw-app-card" data-program-row="arch">
+              <p class="hw-kicker">B.Arch · School of Design</p>
+              <h2>Architecture</h2>
+              <span class="hw-status is-start">Started</span>
+              <p>Ishaan Poluru is applying the same studio. Portfolio drop is empty. Nila Poluru runs the review day.</p>
+              <div class="hw-progress" aria-hidden="true"><span style="width:33%"></span></div>
+              <p>2 of 6 files · due Jan 6</p>
+              <div class="hw-app-actions">
+                <button type="button" class="hw-btn hw-btn-primary" data-view-jump="timeline" data-program="arch">Timeline</button>
+                <button type="button" class="hw-btn hw-btn-ghost" data-view-jump="documents" data-program="arch">Files</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="hw-view" id="view-documents" hidden aria-labelledby="docs-title">
+          <div class="hw-page-head">
+            <div>
+              <p class="hw-kicker">Required file set</p>
+              <h1 class="hw-page-title font-display" id="docs-title">Documents</h1>
+              <p class="hw-page-sub">Drop a PDF or pick a file. Nothing leaves this browser. Maya Poluru sees the demo queue only.</p>
+            </div>
+          </div>
+
+          <label class="hw-drop hw-card mb-4 block cursor-pointer" id="hwDrop" for="hwFileInput">
+            <input class="hw-file" id="hwFileInput" type="file" accept=".pdf,.doc,.docx,.png,.jpg" />
+            <i class="bi bi-cloud-arrow-up text-2xl text-brand" aria-hidden="true"></i>
+            <p><strong>Upload to the active program</strong><br />PDF, Word, or image · 10 MB demo limit</p>
+          </label>
+
+          <div class="grid gap-3" id="hwDocList">
+            <article class="hw-doc" data-program-row="cs" data-doc="transcript">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></span>
+              <div>
+                <h3>Official transcript</h3>
+                <p>Ashbury Academy · uploaded Sep 2 · Kavya Poluru requested</p>
+              </div>
+              <span class="hw-status is-ready">In</span>
+            </article>
+            <article class="hw-doc" data-program-row="cs" data-doc="essay">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-pencil-square"></i></span>
+              <div>
+                <h3>Personal essay</h3>
+                <p>Common essay · 648 words · Subbu Poluru paid the fee</p>
+              </div>
+              <span class="hw-status is-ready">In</span>
+            </article>
+            <article class="hw-doc" data-program-row="cs" data-doc="supplement">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-journal-richtext"></i></span>
+              <div>
+                <h3>Harborwell supplement</h3>
+                <p>Why this college · rewrite asked by Maya Poluru</p>
+              </div>
+              <span class="hw-status is-missing">Missing</span>
+            </article>
+            <article class="hw-doc" data-program-row="cs" data-doc="rec-priya">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-person-vcard"></i></span>
+              <div>
+                <h3>Teacher rec · Priya Poluru</h3>
+                <p>Literature 11A · received Sep 4</p>
+              </div>
+              <span class="hw-status is-ready">In</span>
+            </article>
+            <article class="hw-doc" data-program-row="cs" data-doc="rec-rohan">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-person-vcard"></i></span>
+              <div>
+                <h3>Counselor rec · Rohan Poluru</h3>
+                <p>Ashbury counseling · still pending</p>
+              </div>
+              <span class="hw-status is-pending">Pending</span>
+            </article>
+            <article class="hw-doc" data-program-row="cs" data-doc="scores">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-graph-up"></i></span>
+              <div>
+                <h3>Test scores</h3>
+                <p>SAT superscore · uploaded Aug 28</p>
+              </div>
+              <span class="hw-status is-ready">In</span>
+            </article>
+            <article class="hw-doc" data-program-row="bio" data-doc="lab">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-eyedropper"></i></span>
+              <div>
+                <h3>Lab rec · Priya Poluru</h3>
+                <p>Biology section · received Sep 6</p>
+              </div>
+              <span class="hw-status is-ready">In</span>
+            </article>
+            <article class="hw-doc" data-program-row="bio" data-doc="addendum">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-file-earmark-plus"></i></span>
+              <div>
+                <h3>Fall addendum</h3>
+                <p>Updated Ashbury marks · Tara Poluru reminder</p>
+              </div>
+              <span class="hw-status is-missing">Missing</span>
+            </article>
+            <article class="hw-doc" data-program-row="bio" data-doc="bio-essay">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-pencil-square"></i></span>
+              <div>
+                <h3>Science statement</h3>
+                <p>Research interest · draft on Leela’s desk</p>
+              </div>
+              <span class="hw-status is-pending">Draft</span>
+            </article>
+            <article class="hw-doc" data-program-row="arch" data-doc="portfolio">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-images"></i></span>
+              <div>
+                <h3>Design portfolio</h3>
+                <p>12 pages · Nila Poluru reviews January 6</p>
+              </div>
+              <span class="hw-status is-missing">Missing</span>
+            </article>
+            <article class="hw-doc" data-program-row="arch" data-doc="studio">
+              <span class="hw-doc-icon" aria-hidden="true"><i class="bi bi-easel"></i></span>
+              <div>
+                <h3>Studio statement</h3>
+                <p>Shared with Ishaan Poluru’s draft</p>
+              </div>
+              <span class="hw-status is-pending">Draft</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="hw-view" id="view-timeline" hidden aria-labelledby="time-title">
+          <div class="hw-page-head">
+            <div>
+              <p class="hw-kicker">Status log</p>
+              <h1 class="hw-page-title font-display" id="time-title">Timeline</h1>
+              <p class="hw-page-sub">Every desk move on the active program. The navy rail at the top tracks Start → Materials → Review → Decision.</p>
+            </div>
+          </div>
+          <article class="hw-card">
+            <ol class="hw-timeline">
+              <li class="hw-event" data-program-row="cs">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-08-12">Aug 12</time>
+                <h3>Application started</h3>
+                <p>Leela Poluru opened Computer Science. Subbu Poluru paid the Harborwell fee.</p>
+              </li>
+              <li class="hw-event" data-program-row="cs">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-09-02">Sep 2</time>
+                <h3>Transcript received</h3>
+                <p>Ashbury Academy sent the official file. Kavya Poluru confirmed the address.</p>
+              </li>
+              <li class="hw-event" data-program-row="cs">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-09-04">Sep 4</time>
+                <h3>Teacher rec in</h3>
+                <p>Priya Poluru submitted the Literature 11A letter.</p>
+              </li>
+              <li class="hw-event" data-program-row="cs">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-09-08">Sep 8</time>
+                <h3>First read opened</h3>
+                <p>Anika Poluru started the CS file. Interview with Kiran Poluru is held until the supplement lands.</p>
+              </li>
+              <li class="hw-event is-pending" data-program-row="cs">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-10-15">Oct 15</time>
+                <h3>Materials deadline</h3>
+                <p>Harborwell supplement and Rohan Poluru’s counselor rec still open.</p>
+              </li>
+              <li class="hw-event" data-program-row="bio">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-08-20">Aug 20</time>
+                <h3>Biology started</h3>
+                <p>Second program added after a walk with Tara Poluru on the science quad.</p>
+              </li>
+              <li class="hw-event" data-program-row="bio">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-09-06">Sep 6</time>
+                <h3>Lab rec received</h3>
+                <p>Priya Poluru posted the biology recommendation.</p>
+              </li>
+              <li class="hw-event is-pending" data-program-row="bio">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-11-01">Nov 1</time>
+                <h3>Fall addendum due</h3>
+                <p>Updated Ashbury marks. Maya Poluru will not move the file without them.</p>
+              </li>
+              <li class="hw-event" data-program-row="arch">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2026-09-01">Sep 1</time>
+                <h3>Architecture opened</h3>
+                <p>Shared studio track with Ishaan Poluru. Nila Poluru scheduled review day for January.</p>
+              </li>
+              <li class="hw-event is-pending" data-program-row="arch">
+                <span class="hw-event-dot" aria-hidden="true"></span>
+                <time datetime="2027-01-06">Jan 6</time>
+                <h3>Portfolio review</h3>
+                <p>Twelve pages still empty. Dev Poluru offered a studio walkthrough in October.</p>
+              </li>
+            </ol>
+          </article>
+        </section>
+
+        <section class="hw-view" id="view-messages" hidden aria-labelledby="msg-title">
+          <div class="hw-page-head">
+            <div>
+              <p class="hw-kicker">Admissions desk</p>
+              <h1 class="hw-page-title font-display" id="msg-title">Messages</h1>
+              <p class="hw-page-sub">Maya Poluru, Anika Poluru, and Asha Poluru write here. Replies stay on this page.</p>
+            </div>
+          </div>
+          <article class="hw-card">
+            <div class="hw-note" data-program-row="cs">
+              <span class="hw-avatar hw-avatar-ink">MP</span>
+              <div>
+                <strong>Maya Poluru · counselor</strong>
+                <p>Leela — CS will not go to interview until the Harborwell supplement is in. Keep it under 400 words. Subbu Poluru is copied.</p>
+              </div>
+            </div>
+            <div class="hw-note" data-program-row="cs">
+              <span class="hw-avatar hw-avatar-ink">AP</span>
+              <div>
+                <strong>Anika Poluru · first reader</strong>
+                <p>Opened the file September 8. Priya Poluru’s letter is strong. I still need Rohan Poluru’s counselor rec.</p>
+              </div>
+            </div>
+            <div class="hw-note" data-program-row="bio">
+              <span class="hw-avatar hw-avatar-ink">AP</span>
+              <div>
+                <strong>Anika Poluru · science desk</strong>
+                <p>Biology is waiting on the fall addendum. Tara Poluru already reminded the registrar.</p>
+              </div>
+            </div>
+            <div class="hw-note" data-program-row="arch">
+              <span class="hw-avatar hw-avatar-ink">NP</span>
+              <div>
+                <strong>Nila Poluru · design review</strong>
+                <p>Portfolio day is January 6. Ishaan Poluru is in the same room. Bring twelve pages, not twenty.</p>
+              </div>
+            </div>
+            <div class="hw-note" data-program-row="cs">
+              <span class="hw-avatar hw-avatar-ink">AS</span>
+              <div>
+                <strong>Asha Poluru · aid</strong>
+                <p>CSS Profile is open. No award letter until CS is complete.</p>
+              </div>
+            </div>
+            <form class="hw-reply" id="hwReplyForm">
+              <label class="sr-only" for="hwReply">Reply to the desk</label>
+              <input id="hwReply" type="text" placeholder="Reply to Maya Poluru…" />
+              <button type="submit" class="hw-btn hw-btn-primary">Send</button>
+            </form>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div class="hw-toast" id="hwToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <div>
+      <strong id="hwToastTitle">Done</strong>
+      <p id="hwToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
 </html>
