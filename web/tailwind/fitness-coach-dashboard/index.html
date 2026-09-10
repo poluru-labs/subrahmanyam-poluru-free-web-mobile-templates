@@ -1,24 +1,605 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Stride — Fitness coach dashboard
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
 -->
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #da373d;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline text-clifford">
-      Hello world!
-    </h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Stride — trainer dashboard for Subbu Poluru: client workouts, nutrition plans, progress charts, and sessions." />
+  <title>Stride — Coach desk · Subbu Poluru</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #05339c;
+      --color-brand-dark: #03256f;
+      --color-brand-deep: #021a4f;
+      --color-brand-soft: #e6eef8;
+      --color-ink: #0e1a2e;
+      --color-muted: #5a6b82;
+      --color-line: #c9d6e8;
+      --color-canvas: #f3f6fb;
+      --color-panel: #ffffff;
+      --color-night: #021a4f;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="st-body bg-canvas text-ink font-sans antialiased">
+  <a class="st-skip-link" href="#main-content">Skip to content</a>
+  <div class="st-overlay" id="stOverlay" aria-hidden="true"></div>
+
+  <div class="st-shell">
+    <aside class="st-sidebar" id="stSidebar" aria-label="Primary">
+      <div class="st-brand">
+        <a class="st-brand-link" href="#overview" data-view="overview">
+          <span class="st-brand-mark" aria-hidden="true"><i class="bi bi-activity"></i></span>
+          <span>Stride<em>.</em></span>
+        </a>
+        <button type="button" class="st-sidebar-close lg:hidden" id="stSidebarClose" aria-label="Close navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="st-nav">
+        <p class="st-nav-label">Floor</p>
+        <ul class="st-nav-list">
+          <li>
+            <a class="st-nav-link is-active" href="#overview" data-view="overview" aria-current="page">
+              <i class="bi bi-grid-1x2"></i><span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a class="st-nav-link" href="#workouts" data-view="workouts">
+              <i class="bi bi-barbell"></i><span>Workouts</span>
+            </a>
+          </li>
+          <li>
+            <a class="st-nav-link" href="#nutrition" data-view="nutrition">
+              <i class="bi bi-egg-fried"></i><span>Nutrition</span>
+            </a>
+          </li>
+          <li>
+            <a class="st-nav-link" href="#progress" data-view="progress">
+              <i class="bi bi-graph-up"></i><span>Progress</span>
+            </a>
+          </li>
+          <li>
+            <a class="st-nav-link" href="#sessions" data-view="sessions">
+              <i class="bi bi-calendar-week"></i><span>Sessions</span>
+              <span class="st-nav-badge">3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="st-sidebar-foot">
+        <div class="st-staff">
+          <span class="st-avatar">SP</span>
+          <p><strong>Subbu Poluru</strong>Head coach · Strength</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="st-main">
+      <header class="st-topbar">
+        <button type="button" class="st-menu-btn lg:hidden" id="stMenuBtn" aria-label="Open navigation" aria-controls="stSidebar">
+          <i class="bi bi-list"></i>
+        </button>
+        <p class="st-crumb mb-0">Stride / <strong id="stCrumb">Overview</strong></p>
+
+        <div class="st-rail" id="stRail" role="group" aria-label="Today’s session block">
+          <span class="st-rail-step" data-block="warmup">Warm-up</span>
+          <span class="st-rail-join" aria-hidden="true">→</span>
+          <span class="st-rail-step" data-block="strength">Strength</span>
+          <span class="st-rail-join" aria-hidden="true">→</span>
+          <span class="st-rail-step" data-block="condition">Condition</span>
+          <span class="st-rail-join" aria-hidden="true">→</span>
+          <span class="st-rail-step" data-block="recover">Recover</span>
+        </div>
+
+        <span class="st-meter" id="stMeter">Leela · 4 / 5 · 82%</span>
+
+        <div class="st-clients" role="group" aria-label="Active client">
+          <button type="button" class="st-client-chip is-active" data-client-chip="leela">Leela</button>
+          <button type="button" class="st-client-chip" data-client-chip="kavya">Kavya</button>
+          <button type="button" class="st-client-chip" data-client-chip="ishaan">Ishaan</button>
+        </div>
+
+        <form class="st-search" id="stTopSearchForm" role="search">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input id="stTopSearch" type="search" placeholder="Search lifts, meals…" aria-label="Search the desk" />
+        </form>
+        <button type="button" class="st-icon-btn" id="stBellBtn" aria-label="Notifications, next session">
+          <i class="bi bi-bell"></i>
+          <span class="st-dot"></span>
+        </button>
+        <span class="st-avatar st-avatar-ink" aria-hidden="true">SP</span>
+      </header>
+
+      <main id="main-content" class="st-content" tabindex="-1">
+        <section class="st-view is-active" id="view-overview" data-title="Overview" aria-labelledby="overview-title">
+          <div class="st-page-head">
+            <div>
+              <p class="st-kicker" id="stClock">Thursday, September 10</p>
+              <h1 class="st-page-title font-display" id="overview-title">Good evening, Subbu.</h1>
+              <p class="st-page-sub"><span id="stClientLabel">Leela Poluru</span> is mid-block. Maya Poluru booked the 6:30 floor. Log the lift before Kavya Poluru arrives.</p>
+            </div>
+            <button type="button" class="st-btn st-btn-primary" data-view-jump="sessions">
+              <i class="bi bi-calendar-plus"></i> Open sessions
+            </button>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <article class="st-stat">
+              <p class="st-stat-label">Clients</p>
+              <p class="st-stat-value font-display">3</p>
+              <p class="st-stat-meta">Leela, Kavya, Ishaan</p>
+            </article>
+            <article class="st-stat">
+              <p class="st-stat-label">Adherence</p>
+              <p class="st-stat-value font-display" id="stAdhereStat">82%</p>
+              <p class="st-stat-meta">This week for the active client</p>
+            </article>
+            <article class="st-stat">
+              <p class="st-stat-label">Next session</p>
+              <p class="st-stat-value font-display" id="stNextStat">6:30</p>
+              <p class="st-stat-meta" id="stNextMeta">Strength · floor 2</p>
+            </article>
+            <article class="st-stat">
+              <p class="st-stat-label">Calories</p>
+              <p class="st-stat-value font-display" id="stCalStat">1,840</p>
+              <p class="st-stat-meta">Target for today</p>
+            </article>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-3 mt-4">
+            <article class="st-card xl:col-span-2">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Today on the floor</h2>
+                <button type="button" class="st-text-btn" data-view-jump="workouts">Workouts</button>
+              </div>
+              <ul class="st-feed">
+                <li>
+                  <span class="st-feed-when">6:30</span>
+                  <div>
+                    <strong>Leela Poluru · squat wave</strong>
+                    <span>Strength block · Priya Poluru spotting the last set</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="st-feed-when">7:15</span>
+                  <div>
+                    <strong>Kavya Poluru · tempo run</strong>
+                    <span>Condition · Maya Poluru holding the clock</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="st-feed-when">8:00</span>
+                  <div>
+                    <strong>Ishaan Poluru · push day</strong>
+                    <span>Warm-up still open · Rohan Poluru on mobility</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+            <article class="st-card">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Desk notes</h2>
+                <button type="button" class="st-text-btn" data-view-jump="nutrition">Nutrition</button>
+              </div>
+              <ul class="st-feed">
+                <li>
+                  <span class="st-avatar st-avatar-ink" style="width:2rem;height:2rem;font-size:0.68rem">LP</span>
+                  <div>
+                    <strong>Leela Poluru</strong>
+                    <span>Sleep was short. Keep the top set conservative.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="st-avatar st-avatar-ink" style="width:2rem;height:2rem;font-size:0.68rem">KP</span>
+                  <div>
+                    <strong>Kavya Poluru</strong>
+                    <span>Protein still light at lunch. Asha Poluru sent a swap.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="st-avatar st-avatar-ink" style="width:2rem;height:2rem;font-size:0.68rem">IP</span>
+                  <div>
+                    <strong>Ishaan Poluru</strong>
+                    <span>Tara Poluru asked to film the bench for form.</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="st-view" id="view-workouts" hidden aria-labelledby="work-title">
+          <div class="st-page-head">
+            <div>
+              <p class="st-kicker">This week’s block</p>
+              <h1 class="st-page-title font-display" id="work-title">Workouts</h1>
+              <p class="st-page-sub">Switch Leela, Kavya, or Ishaan in the navy bar. Log a lift and it stays on this desk.</p>
+            </div>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="st-plan" data-client-row="leela">
+              <p class="st-kicker">Lower · strength</p>
+              <h2>Squat wave</h2>
+              <span class="st-status is-live">Today</span>
+              <ul class="st-sets">
+                <li><span>Back squat</span><span>5 × 3 @ 85%</span></li>
+                <li><span>Romanian deadlift</span><span>3 × 8</span></li>
+                <li><span>Split squat</span><span>3 × 8 / side</span></li>
+                <li><span>Hanging knee raise</span><span>3 × 12</span></li>
+              </ul>
+              <div class="st-progress" aria-hidden="true"><span style="width:40%"></span></div>
+              <p>Warm-up done. Strength is live. Priya Poluru on the last set.</p>
+              <div class="st-plan-actions">
+                <button type="button" class="st-btn st-btn-primary" data-log="Leela Poluru · squat wave">Log lift</button>
+                <button type="button" class="st-btn st-btn-ghost" data-view-jump="progress" data-client="leela">Chart</button>
+              </div>
+            </article>
+            <article class="st-plan" data-client-row="kavya">
+              <p class="st-kicker">Condition · rebuild</p>
+              <h2>Tempo run</h2>
+              <span class="st-status is-soon">7:15</span>
+              <ul class="st-sets">
+                <li><span>Walk / jog</span><span>8 min</span></li>
+                <li><span>Tempo</span><span>4 × 4 min</span></li>
+                <li><span>Stride outs</span><span>6 × 20 sec</span></li>
+                <li><span>Breathing reset</span><span>5 min</span></li>
+              </ul>
+              <div class="st-progress" aria-hidden="true"><span style="width:20%"></span></div>
+              <p>Maya Poluru holds the clock. Keep the last repeat honest, not fast.</p>
+              <div class="st-plan-actions">
+                <button type="button" class="st-btn st-btn-primary" data-log="Kavya Poluru · tempo run">Log run</button>
+                <button type="button" class="st-btn st-btn-ghost" data-view-jump="progress" data-client="kavya">Chart</button>
+              </div>
+            </article>
+            <article class="st-plan" data-client-row="ishaan">
+              <p class="st-kicker">Push · hypertrophy</p>
+              <h2>Press day</h2>
+              <span class="st-status is-soon">8:00</span>
+              <ul class="st-sets">
+                <li><span>Bench press</span><span>4 × 6</span></li>
+                <li><span>Overhead press</span><span>3 × 8</span></li>
+                <li><span>Dip</span><span>3 × 10</span></li>
+                <li><span>Face pull</span><span>3 × 15</span></li>
+              </ul>
+              <div class="st-progress" aria-hidden="true"><span style="width:10%"></span></div>
+              <p>Rohan Poluru on mobility. Tara Poluru wants the bench on video.</p>
+              <div class="st-plan-actions">
+                <button type="button" class="st-btn st-btn-primary" data-log="Ishaan Poluru · press day">Log lift</button>
+                <button type="button" class="st-btn st-btn-ghost" data-view-jump="progress" data-client="ishaan">Chart</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="st-view" id="view-nutrition" hidden aria-labelledby="food-title">
+          <div class="st-page-head">
+            <div>
+              <p class="st-kicker">Daily plan</p>
+              <h1 class="st-page-title font-display" id="food-title">Nutrition</h1>
+              <p class="st-page-sub">Asha Poluru writes the plates. Confirm a meal and it toasts. Nothing leaves this browser.</p>
+            </div>
+            <button type="button" class="st-btn st-btn-ghost" id="stAdjustBtn">Adjust macros</button>
+          </div>
+          <div class="grid gap-4 xl:grid-cols-3">
+            <article class="st-card xl:col-span-2">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Today’s plates</h2>
+              </div>
+              <div class="st-meal" data-client-row="leela">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-sunrise"></i></span>
+                <div>
+                  <h3>Breakfast · yogurt bowl</h3>
+                  <p>Greek yogurt, berries, walnuts · Kavya Poluru packed extras</p>
+                </div>
+                <span class="st-kcal">420 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="leela">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-briefcase"></i></span>
+                <div>
+                  <h3>Lunch · chicken rice</h3>
+                  <p>Rice, thigh, greens · Asha Poluru held the oil</p>
+                </div>
+                <span class="st-kcal">610 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="leela">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-moon"></i></span>
+                <div>
+                  <h3>Dinner · salmon plate</h3>
+                  <p>Salmon, potato, cucumber · Maya Poluru reminder at 7</p>
+                </div>
+                <span class="st-kcal">680 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="kavya">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-sunrise"></i></span>
+                <div>
+                  <h3>Breakfast · egg toast</h3>
+                  <p>Eggs, sourdough, fruit · protein still short</p>
+                </div>
+                <span class="st-kcal">380 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="kavya">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-briefcase"></i></span>
+                <div>
+                  <h3>Lunch · lentil bowl</h3>
+                  <p>Asha Poluru swapped the dressing · add 20 g whey</p>
+                </div>
+                <span class="st-kcal">540 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="kavya">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-moon"></i></span>
+                <div>
+                  <h3>Dinner · paneer + rice</h3>
+                  <p>Rebuild calories · Priya Poluru cooking</p>
+                </div>
+                <span class="st-kcal">720 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="ishaan">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-sunrise"></i></span>
+                <div>
+                  <h3>Breakfast · oats + milk</h3>
+                  <p>Rolled oats, milk, banana · Rohan Poluru shake after</p>
+                </div>
+                <span class="st-kcal">510 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="ishaan">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-briefcase"></i></span>
+                <div>
+                  <h3>Lunch · beef bowl</h3>
+                  <p>Rice, ground beef, peppers · surplus day</p>
+                </div>
+                <span class="st-kcal">780 kcal</span>
+              </div>
+              <div class="st-meal" data-client-row="ishaan">
+                <span class="st-meal-icon" aria-hidden="true"><i class="bi bi-moon"></i></span>
+                <div>
+                  <h3>Dinner · pasta + chicken</h3>
+                  <p>Nila Poluru sent the recipe · 40 g extra pasta</p>
+                </div>
+                <span class="st-kcal">820 kcal</span>
+              </div>
+            </article>
+            <article class="st-card">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Macros</h2>
+              </div>
+              <div class="st-ring" id="stMacroRing" style="--st-ring: 74">
+                <strong id="stMacroPct">74%</strong>
+                <span>protein</span>
+              </div>
+              <ul class="st-bars">
+                <li>
+                  <div><span>Protein</span><span id="stProVal">138 g</span></div>
+                  <div class="st-progress"><span id="stProBar" style="width:74%"></span></div>
+                </li>
+                <li>
+                  <div><span>Carbs</span><span id="stCarbVal">180 g</span></div>
+                  <div class="st-progress"><span id="stCarbBar" style="width:62%"></span></div>
+                </li>
+                <li>
+                  <div><span>Fat</span><span id="stFatVal">58 g</span></div>
+                  <div class="st-progress"><span id="stFatBar" style="width:55%"></span></div>
+                </li>
+              </ul>
+              <button type="button" class="st-btn st-btn-primary mt-4 w-full" id="stConfirmMeal">Confirm lunch</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="st-view" id="view-progress" hidden aria-labelledby="prog-title">
+          <div class="st-page-head">
+            <div>
+              <p class="st-kicker">Eight weeks</p>
+              <h1 class="st-page-title font-display" id="prog-title">Progress</h1>
+              <p class="st-page-sub">Volume, body weight, and adherence for the client in the navy bar. Dev Poluru logs the Saturday weigh-in.</p>
+            </div>
+          </div>
+          <div class="grid gap-4 xl:grid-cols-3">
+            <article class="st-card st-chart-block" data-client-row="leela">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Weekly volume</h2>
+              </div>
+              <div class="st-week" aria-label="Leela weekly volume">
+                <button type="button" data-day="Mon"><i style="height:42%"></i><span>Mon</span></button>
+                <button type="button" data-day="Tue"><i style="height:70%"></i><span>Tue</span></button>
+                <button type="button" data-day="Wed"><i style="height:38%"></i><span>Wed</span></button>
+                <button type="button" data-day="Thu"><i style="height:88%"></i><span>Thu</span></button>
+                <button type="button" data-day="Fri"><i style="height:55%"></i><span>Fri</span></button>
+                <button type="button" data-day="Sat"><i style="height:24%"></i><span>Sat</span></button>
+                <button type="button" data-day="Sun"><i style="height:12%"></i><span>Sun</span></button>
+              </div>
+            </article>
+            <article class="st-card st-chart-block" data-client-row="leela">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Body weight</h2>
+              </div>
+              <svg class="st-spark" viewBox="0 0 280 120" role="img" aria-label="Leela weight trend">
+                <polyline points="8,78 48,74 88,70 128,68 168,64 208,62 248,58" />
+                <circle cx="248" cy="58" r="4" />
+              </svg>
+              <p>62.4 kg · down 1.8 from week 1</p>
+            </article>
+            <article class="st-card st-chart-block" data-client-row="leela">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Adherence</h2>
+              </div>
+              <div class="st-ring" style="--st-ring: 82">
+                <strong>82%</strong>
+                <span>week</span>
+              </div>
+              <p>4 of 5 sessions. Missed Tuesday mobility with Rohan Poluru.</p>
+            </article>
+
+            <article class="st-card st-chart-block" data-client-row="kavya">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Weekly volume</h2>
+              </div>
+              <div class="st-week" aria-label="Kavya weekly volume">
+                <button type="button" data-day="Mon"><i style="height:30%"></i><span>Mon</span></button>
+                <button type="button" data-day="Tue"><i style="height:58%"></i><span>Tue</span></button>
+                <button type="button" data-day="Wed"><i style="height:22%"></i><span>Wed</span></button>
+                <button type="button" data-day="Thu"><i style="height:64%"></i><span>Thu</span></button>
+                <button type="button" data-day="Fri"><i style="height:40%"></i><span>Fri</span></button>
+                <button type="button" data-day="Sat"><i style="height:18%"></i><span>Sat</span></button>
+                <button type="button" data-day="Sun"><i style="height:8%"></i><span>Sun</span></button>
+              </div>
+            </article>
+            <article class="st-card st-chart-block" data-client-row="kavya">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Body weight</h2>
+              </div>
+              <svg class="st-spark" viewBox="0 0 280 120" role="img" aria-label="Kavya weight trend">
+                <polyline points="8,48 48,52 88,50 128,56 168,54 208,58 248,60" />
+                <circle cx="248" cy="60" r="4" />
+              </svg>
+              <p>58.1 kg · rebuild, up 0.9 with Priya Poluru’s plates</p>
+            </article>
+            <article class="st-card st-chart-block" data-client-row="kavya">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Adherence</h2>
+              </div>
+              <div class="st-ring" style="--st-ring: 74">
+                <strong>74%</strong>
+                <span>week</span>
+              </div>
+              <p>3 of 4 sessions. Wednesday travel with Anika Poluru.</p>
+            </article>
+
+            <article class="st-card st-chart-block" data-client-row="ishaan">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Weekly volume</h2>
+              </div>
+              <div class="st-week" aria-label="Ishaan weekly volume">
+                <button type="button" data-day="Mon"><i style="height:76%"></i><span>Mon</span></button>
+                <button type="button" data-day="Tue"><i style="height:80%"></i><span>Tue</span></button>
+                <button type="button" data-day="Wed"><i style="height:48%"></i><span>Wed</span></button>
+                <button type="button" data-day="Thu"><i style="height:92%"></i><span>Thu</span></button>
+                <button type="button" data-day="Fri"><i style="height:70%"></i><span>Fri</span></button>
+                <button type="button" data-day="Sat"><i style="height:36%"></i><span>Sat</span></button>
+                <button type="button" data-day="Sun"><i style="height:16%"></i><span>Sun</span></button>
+              </div>
+            </article>
+            <article class="st-card st-chart-block" data-client-row="ishaan">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Body weight</h2>
+              </div>
+              <svg class="st-spark" viewBox="0 0 280 120" role="img" aria-label="Ishaan weight trend">
+                <polyline points="8,70 48,68 88,64 128,66 168,60 208,58 248,54" />
+                <circle cx="248" cy="54" r="4" />
+              </svg>
+              <p>76.8 kg · surplus holding. Kiran Poluru checked the tape.</p>
+            </article>
+            <article class="st-card st-chart-block" data-client-row="ishaan">
+              <div class="st-card-head">
+                <h2 class="st-card-title">Adherence</h2>
+              </div>
+              <div class="st-ring" style="--st-ring: 91">
+                <strong>91%</strong>
+                <span>week</span>
+              </div>
+              <p>5 of 5. Only the Sunday walk with Dev Poluru was easy.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="st-view" id="view-sessions" hidden aria-labelledby="sess-title">
+          <div class="st-page-head">
+            <div>
+              <p class="st-kicker">Floor book</p>
+              <h1 class="st-page-title font-display" id="sess-title">Sessions</h1>
+              <p class="st-page-sub">Today and the rest of the week. Check in a client or move a slot. Anika Poluru covers late floors.</p>
+            </div>
+            <button type="button" class="st-btn st-btn-primary" id="stBookBtn">Book slot</button>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <article class="st-session" data-client-row="leela">
+              <p class="st-kicker">Today · 6:30</p>
+              <h3>Leela Poluru · squat wave</h3>
+              <span class="st-status is-live">On floor</span>
+              <p>Floor 2 · 55 min · Priya Poluru spotting. Sleep note from Kavya Poluru.</p>
+              <div class="st-session-actions">
+                <button type="button" class="st-btn st-btn-primary" data-checkin="Leela Poluru">Check in</button>
+                <button type="button" class="st-btn st-btn-ghost" data-view-jump="workouts" data-client="leela">Open lift</button>
+              </div>
+            </article>
+            <article class="st-session" data-client-row="kavya">
+              <p class="st-kicker">Today · 7:15</p>
+              <h3>Kavya Poluru · tempo run</h3>
+              <span class="st-status is-soon">Next</span>
+              <p>Track · 40 min · Maya Poluru on the clock. Protein still light at lunch.</p>
+              <div class="st-session-actions">
+                <button type="button" class="st-btn st-btn-primary" data-checkin="Kavya Poluru">Check in</button>
+                <button type="button" class="st-btn st-btn-ghost" data-view-jump="workouts" data-client="kavya">Open run</button>
+              </div>
+            </article>
+            <article class="st-session" data-client-row="ishaan">
+              <p class="st-kicker">Today · 8:00</p>
+              <h3>Ishaan Poluru · press day</h3>
+              <span class="st-status is-soon">Queued</span>
+              <p>Floor 1 · 60 min · Rohan Poluru mobility first. Tara Poluru filming bench.</p>
+              <div class="st-session-actions">
+                <button type="button" class="st-btn st-btn-primary" data-checkin="Ishaan Poluru">Check in</button>
+                <button type="button" class="st-btn st-btn-ghost" data-view-jump="workouts" data-client="ishaan">Open lift</button>
+              </div>
+            </article>
+            <article class="st-session" data-client-row="leela">
+              <p class="st-kicker">Friday · 6:30</p>
+              <h3>Leela Poluru · upper pull</h3>
+              <span class="st-status is-soon">Booked</span>
+              <p>Floor 2 · 50 min. Nila Poluru asked to sit in on the row work.</p>
+              <div class="st-session-actions">
+                <button type="button" class="st-btn st-btn-ghost" data-move="Leela Poluru">Move slot</button>
+              </div>
+            </article>
+            <article class="st-session" data-client-row="kavya">
+              <p class="st-kicker">Saturday · 9:00</p>
+              <h3>Kavya Poluru · easy bike</h3>
+              <span class="st-status is-soon">Booked</span>
+              <p>Studio · 30 min recovery. Dev Poluru has the weigh-in after.</p>
+              <div class="st-session-actions">
+                <button type="button" class="st-btn st-btn-ghost" data-move="Kavya Poluru">Move slot</button>
+              </div>
+            </article>
+            <article class="st-session" data-client-row="ishaan">
+              <p class="st-kicker">Sunday · walk</p>
+              <h3>Ishaan Poluru · zone 2</h3>
+              <span class="st-status is-done">Optional</span>
+              <p>Outside with Dev Poluru. Counts for adherence if he sends the watch file.</p>
+              <div class="st-session-actions">
+                <button type="button" class="st-btn st-btn-ghost" data-move="Ishaan Poluru">Move slot</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div class="st-toast" id="stToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <div>
+      <strong id="stToastTitle">Done</strong>
+      <p id="stToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
 </html>
