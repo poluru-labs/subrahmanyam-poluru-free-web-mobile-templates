@@ -1,4 +1,4 @@
-# Free Web & Mobile Templates
+# Download Free Web & Mobile Templates 
 
 A collection of responsive Bootstrap website and admin templates for business, consulting, communication, ecommerce, and security operations. Templates live under `web/bootstrap/` and are ready to preview, customize, and deploy.
 
@@ -135,4 +135,4 @@ Browse all Bootstrap templates from [web/bootstrap/index.html](web/bootstrap/ind
 **Subrahmanyam Poluru**
 
 Website: https://polurus.com  
-Email: mail.spoluru@gmail.com
+Email: mail.polurus@gmail.com
