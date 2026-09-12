@@ -1,0 +1,487 @@
+/* ==========================================================================
+   Liberty Air — Flight booking & travel marketplace
+   Prefix: la-*
+   Primary Blue: #0078D2   Accent Red: #C60C30   Navy: #1D2429
+   Headings: Poppins   Body: Inter
+   ========================================================================== */
+
+:root {
+  --la-blue: #0078d2;
+  --la-blue-dark: #003f87;
+  --la-red: #c60c30;
+  --la-red-dark: #9c0a26;
+  --la-navy: #1d2429;
+  --la-light: #f5f7fa;
+  --la-gray: #6b7680;
+  --la-radius: 14px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--la-navy);
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--la-navy);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- Top utility bar ---------- */
+.la-topbar {
+  background: var(--la-navy);
+  color: #cfd6dc;
+  font-size: 0.82rem;
+  padding: 6px 0;
+}
+.la-topbar-links a {
+  color: #cfd6dc;
+  margin-right: 1.25rem;
+}
+.la-topbar-links a:last-child { margin-right: 0; }
+.la-topbar-links a:hover { color: #fff; }
+.la-topbar-join {
+  color: #ffd166 !important;
+  font-weight: 600;
+}
+
+/* ---------- Navbar ---------- */
+.la-navbar {
+  background: #fff;
+  padding: 0.8rem 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  transition: box-shadow .2s ease;
+}
+.la-navbar.la-scrolled {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.la-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--la-navy);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.la-brand i { color: var(--la-red); }
+.la-brand span { color: var(--la-blue); }
+
+.la-navbar .nav-link {
+  font-weight: 600;
+  color: var(--la-navy);
+  margin: 0 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.la-navbar .nav-link.active,
+.la-navbar .nav-link:hover {
+  color: var(--la-blue);
+}
+
+.btn-la-red {
+  background: var(--la-red);
+  border-color: var(--la-red);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-la-red:hover {
+  background: var(--la-red-dark);
+  border-color: var(--la-red-dark);
+  color: #fff;
+}
+.btn-outline-la {
+  border: 1.5px solid var(--la-blue);
+  color: var(--la-blue);
+  font-weight: 600;
+}
+.btn-outline-la:hover {
+  background: var(--la-blue);
+  color: #fff;
+}
+.text-la-navy { color: var(--la-navy) !important; }
+
+/* ---------- Hero ---------- */
+.la-hero {
+  background: linear-gradient(135deg, var(--la-blue-dark) 0%, var(--la-blue) 55%, #1d9bf0 100%);
+  padding: 4rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.la-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(255,255,255,0.12), transparent 55%);
+}
+.la-hero-text {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2.5rem;
+  color: #fff;
+}
+.la-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.la-badge-light {
+  background: rgba(255,255,255,0.35);
+}
+.la-hero-text h1 {
+  color: #fff;
+  font-size: 2.75rem;
+  font-weight: 800;
+}
+.la-hero-text p {
+  color: #e6f0fb;
+  font-size: 1.1rem;
+}
+
+/* ---------- Search card ---------- */
+.la-search-card {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: var(--la-radius);
+  box-shadow: 0 20px 45px rgba(0,32,63,0.25);
+  padding: 1.5rem 1.75rem 2rem;
+}
+.la-trip-tabs {
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.la-trip-tabs .nav-link {
+  font-weight: 600;
+  color: var(--la-gray);
+  border-radius: 50px;
+  padding: 0.5rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.la-trip-tabs .nav-link.active {
+  background: var(--la-blue);
+  color: #fff;
+}
+.la-search-form label {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--la-gray);
+}
+.la-search-form .form-control,
+.la-search-form .form-select {
+  padding-left: 2.2rem;
+  border-radius: 10px;
+  border-color: #dfe4ea;
+}
+.la-search-form .form-control:focus,
+.la-search-form .form-select:focus {
+  border-color: var(--la-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0,120,210,0.15);
+}
+.la-field-icon {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.65rem;
+  color: var(--la-blue);
+}
+.la-swap-btn {
+  border: 1.5px solid #dfe4ea;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--la-blue);
+}
+.la-swap-btn:hover {
+  background: var(--la-blue);
+  color: #fff;
+}
+
+/* ---------- Quick links ---------- */
+.la-quicklinks {
+  background: var(--la-light);
+  padding: 2.5rem 0;
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 0;
+  padding-top: 4.5rem;
+}
+.la-quick-item i {
+  font-size: 2rem;
+  color: var(--la-blue);
+  margin-bottom: 0.5rem;
+}
+.la-quick-item h6 {
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.la-quick-item p {
+  font-size: 0.85rem;
+  color: var(--la-gray);
+  margin: 0;
+}
+
+/* ---------- Section common ---------- */
+.la-section {
+  padding: 4.5rem 0;
+}
+.la-section-alt {
+  background: var(--la-light);
+}
+.la-section-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+.la-eyebrow {
+  color: var(--la-red);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.la-section-head h2 {
+  margin: 0.5rem 0 0.5rem;
+}
+.la-section-head p {
+  color: var(--la-gray);
+  margin: 0;
+}
+
+/* ---------- Deal cards ---------- */
+.la-deal-card {
+  background: #fff;
+  border-radius: var(--la-radius);
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.la-deal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+.la-deal-img {
+  height: 150px;
+  position: relative;
+}
+.la-bg-1 { background: linear-gradient(135deg, #0078d2, #00b4d8); }
+.la-bg-2 { background: linear-gradient(135deg, #c60c30, #ff5f6d); }
+.la-bg-3 { background: linear-gradient(135deg, #1d2429, #3a4750); }
+.la-bg-4 { background: linear-gradient(135deg, #003f87, #0078d2); }
+.la-deal-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(255,255,255,0.9);
+  color: var(--la-navy);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+}
+.la-deal-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+.la-deal-body h5 {
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.la-deal-body p {
+  color: var(--la-gray);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+.la-price {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--la-blue);
+}
+
+/* ---------- Destination cards ---------- */
+.la-dest-card {
+  height: 320px;
+  border-radius: var(--la-radius);
+  position: relative;
+  overflow: hidden;
+}
+.la-bg-5 { background: linear-gradient(135deg, #0078d2, #1d2429); }
+.la-bg-6 { background: linear-gradient(135deg, #c60c30, #1d2429); }
+.la-bg-7 { background: linear-gradient(135deg, #003f87, #00b4d8); }
+.la-dest-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  color: #fff;
+}
+.la-dest-overlay h5 {
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.la-dest-overlay p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ---------- Features ---------- */
+.la-feature i {
+  font-size: 2.25rem;
+  color: var(--la-red);
+  margin-bottom: 0.75rem;
+}
+.la-feature h6 {
+  font-weight: 700;
+}
+.la-feature p {
+  color: var(--la-gray);
+  font-size: 0.88rem;
+}
+
+/* ---------- Loyalty banner ---------- */
+.la-loyalty {
+  background: linear-gradient(120deg, var(--la-red) 0%, var(--la-red-dark) 100%);
+  color: #fff;
+  padding: 4rem 0;
+}
+.la-loyalty h2 {
+  color: #fff;
+  font-size: 2.1rem;
+}
+.la-loyalty p {
+  color: #ffe3e9;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+.la-loyalty-icon {
+  font-size: 9rem;
+  color: rgba(255,255,255,0.25);
+  transform: rotate(45deg);
+}
+
+/* ---------- Newsletter ---------- */
+.la-newsletter {
+  background: var(--la-navy);
+  color: #fff;
+  padding: 3rem 0;
+}
+.la-newsletter h4 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.la-newsletter p {
+  color: #cfd6dc;
+}
+
+/* ---------- Footer ---------- */
+.la-footer {
+  background: #14181c;
+  color: #b7c0c8;
+  padding: 3.5rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+.la-brand-footer {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.la-footer h6 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.la-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.la-footer ul li {
+  margin-bottom: 0.6rem;
+}
+.la-footer ul li a {
+  color: #b7c0c8;
+}
+.la-footer ul li a:hover {
+  color: var(--la-blue);
+}
+.la-social {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.la-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.la-social a:hover {
+  background: var(--la-blue);
+}
+.la-footer hr {
+  border-color: rgba(255,255,255,0.1);
+  margin: 2rem 0 1rem;
+}
+.la-footer-bottom a {
+  color: #b7c0c8;
+  margin-right: 1rem;
+}
+.la-footer-bottom a:hover {
+  color: #fff;
+}
+
+/* ---------- Back to top ---------- */
+.la-back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: var(--la-blue);
+  color: #fff;
+  font-size: 1.1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+.la-back-to-top.show {
+  display: flex;
+}
+.la-back-to-top:hover {
+  background: var(--la-blue-dark);
+}
+
+@media (max-width: 767.98px) {
+  .la-hero-text h1 { font-size: 2rem; }
+  .la-quicklinks { padding-top: 2rem; margin-top: 0; }
+}

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--
+  Liberty Air — Flight booking & travel marketplace
+  Style: inspired by classic American airline branding (blue / red / navy)
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Liberty Air — Book flights, check in, track flight status and manage trips with the best fares to destinations across the globe." />
+  <title>Liberty Air — Book Flights, Vacations &amp; More</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Top utility bar -->
+  <div class="la-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="la-topbar-links">
+        <a href="#"><i class="bi bi-geo-alt"></i> Find airports</a>
+        <a href="#"><i class="bi bi-headset"></i> Contact us</a>
+        <a href="#"><i class="bi bi-question-circle"></i> Help center</a>
+      </div>
+      <div class="la-topbar-links">
+        <a href="#"><i class="bi bi-globe2"></i> English / USD</a>
+        <a href="#" class="la-topbar-join"><i class="bi bi-star-fill"></i> Join SkyMiles Club</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top la-navbar" id="laNavbar">
+    <div class="container">
+      <a class="navbar-brand la-brand" href="#">
+        <i class="bi bi-airplane-fill"></i> Liberty<span>Air</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#laNavMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="laNavMenu">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="#book"><i class="bi bi-ticket-perforated"></i> Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="#status"><i class="bi bi-broadcast"></i> Flight status</a></li>
+          <li class="nav-item"><a class="nav-link" href="#checkin"><i class="bi bi-box-arrow-in-right"></i> Check-in</a></li>
+          <li class="nav-item"><a class="nav-link" href="#deals"><i class="bi bi-tags"></i> Deals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations"><i class="bi bi-compass"></i> Destinations</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="#" class="btn btn-outline-la"><i class="bi bi-person-circle"></i> Log in</a>
+          <a href="#book" class="btn btn-la-red">Book now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="la-hero" id="book">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 mx-auto text-center la-hero-text">
+          <span class="la-badge"><i class="bi bi-award"></i> #1 Rated On-Time Airline</span>
+          <h1>Fly farther. Fly for less.</h1>
+          <p>Search and book flights to over 350 destinations worldwide with Liberty Air.</p>
+        </div>
+      </div>
+
+      <!-- Search widget -->
+      <div class="row">
+        <div class="col-12 col-xl-10 mx-auto">
+          <div class="la-search-card">
+            <ul class="nav nav-pills la-trip-tabs" id="tripTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-round" type="button">
+                  <i class="bi bi-arrow-left-right"></i> Round trip
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-oneway" type="button">
+                  <i class="bi bi-arrow-right"></i> One way
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-multi" type="button">
+                  <i class="bi bi-signpost-split"></i> Multi-city
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab-round">
+                <form class="row g-3 align-items-end la-search-form">
+                  <div class="col-md-3 position-relative">
+                    <label class="form-label">From</label>
+                    <i class="bi bi-airplane-engines-fill la-field-icon"></i>
+                    <input type="text" class="form-control" value="New York (JFK)" />
+                  </div>
+                  <div class="col-md-auto d-none d-md-flex justify-content-center">
+                    <button type="button" class="btn la-swap-btn" title="Swap"><i class="bi bi-arrow-left-right"></i></button>
+                  </div>
+                  <div class="col-md-3 position-relative">
+                    <label class="form-label">To</label>
+                    <i class="bi bi-geo-alt-fill la-field-icon"></i>
+                    <input type="text" class="form-control" value="Los Angeles (LAX)" />
+                  </div>
+                  <div class="col-md-2 position-relative">
+                    <label class="form-label">Depart</label>
+                    <i class="bi bi-calendar-event la-field-icon"></i>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-md-2 position-relative">
+                    <label class="form-label">Return</label>
+                    <i class="bi bi-calendar-check la-field-icon"></i>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-md-2 position-relative">
+                    <label class="form-label">Travelers</label>
+                    <i class="bi bi-person la-field-icon"></i>
+                    <select class="form-select">
+                      <option>1 Adult</option>
+                      <option>2 Adults</option>
+                      <option>2 Adults, 1 Child</option>
+                      <option>Family (4+)</option>
+                    </select>
+                  </div>
+                  <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-la-red btn-lg px-5"><i class="bi bi-search"></i> Search flights</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="tab-pane fade" id="tab-oneway">
+                <form class="row g-3 align-items-end la-search-form">
+                  <div class="col-md-4 position-relative">
+                    <label class="form-label">From</label>
+                    <i class="bi bi-airplane-engines-fill la-field-icon"></i>
+                    <input type="text" class="form-control" value="Chicago (ORD)" />
+                  </div>
+                  <div class="col-md-4 position-relative">
+                    <label class="form-label">To</label>
+                    <i class="bi bi-geo-alt-fill la-field-icon"></i>
+                    <input type="text" class="form-control" value="Miami (MIA)" />
+                  </div>
+                  <div class="col-md-2 position-relative">
+                    <label class="form-label">Depart</label>
+                    <i class="bi bi-calendar-event la-field-icon"></i>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-md-2 position-relative">
+                    <label class="form-label">Travelers</label>
+                    <i class="bi bi-person la-field-icon"></i>
+                    <select class="form-select">
+                      <option>1 Adult</option>
+                      <option>2 Adults</option>
+                    </select>
+                  </div>
+                  <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-la-red btn-lg px-5"><i class="bi bi-search"></i> Search flights</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="tab-pane fade" id="tab-multi">
+                <form class="row g-3 align-items-end la-search-form">
+                  <div class="col-md-3 position-relative">
+                    <label class="form-label">From</label>
+                    <i class="bi bi-airplane-engines-fill la-field-icon"></i>
+                    <input type="text" class="form-control" placeholder="Origin city" />
+                  </div>
+                  <div class="col-md-3 position-relative">
+                    <label class="form-label">To</label>
+                    <i class="bi bi-geo-alt-fill la-field-icon"></i>
+                    <input type="text" class="form-control" placeholder="Destination city" />
+                  </div>
+                  <div class="col-md-3 position-relative">
+                    <label class="form-label">Date</label>
+                    <i class="bi bi-calendar-event la-field-icon"></i>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-outline-la w-100"><i class="bi bi-plus-lg"></i> Add another flight</button>
+                  </div>
+                  <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-la-red btn-lg px-5"><i class="bi bi-search"></i> Search flights</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick links -->
+  <section class="la-quicklinks">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3" id="status">
+          <div class="la-quick-item">
+            <i class="bi bi-broadcast"></i>
+            <h6>Flight status</h6>
+            <p>Track your flight in real time</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" id="checkin">
+          <div class="la-quick-item">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <h6>Check-in</h6>
+            <p>Online check-in opens 24hrs prior</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="la-quick-item">
+            <i class="bi bi-suitcase-lg"></i>
+            <h6>Manage trips</h6>
+            <p>Change, cancel or upgrade</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="la-quick-item">
+            <i class="bi bi-award"></i>
+            <h6>SkyMiles Club</h6>
+            <p>Earn miles on every trip</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deals -->
+  <section class="la-section" id="deals">
+    <div class="container">
+      <div class="la-section-head">
+        <span class="la-eyebrow">Limited-time offers</span>
+        <h2>Top flight deals right now</h2>
+        <p>Fares shown are round trip, per person, taxes &amp; fees included.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="la-deal-card">
+            <div class="la-deal-img la-bg-1"><span class="la-deal-tag">Best seller</span></div>
+            <div class="la-deal-body">
+              <h5>New York <i class="bi bi-arrow-right"></i> Miami</h5>
+              <p><i class="bi bi-calendar3"></i> Oct 12 – Oct 19</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="la-price">$129</span>
+                <a href="#" class="btn btn-sm btn-la-red">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="la-deal-card">
+            <div class="la-deal-img la-bg-2"><span class="la-deal-tag">Popular</span></div>
+            <div class="la-deal-body">
+              <h5>Chicago <i class="bi bi-arrow-right"></i> Denver</h5>
+              <p><i class="bi bi-calendar3"></i> Nov 03 – Nov 10</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="la-price">$99</span>
+                <a href="#" class="btn btn-sm btn-la-red">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="la-deal-card">
+            <div class="la-deal-img la-bg-3"><span class="la-deal-tag">New route</span></div>
+            <div class="la-deal-body">
+              <h5>Dallas <i class="bi bi-arrow-right"></i> Cancun</h5>
+              <p><i class="bi bi-calendar3"></i> Dec 05 – Dec 12</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="la-price">$219</span>
+                <a href="#" class="btn btn-sm btn-la-red">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="la-deal-card">
+            <div class="la-deal-img la-bg-4"><span class="la-deal-tag">Ends soon</span></div>
+            <div class="la-deal-body">
+              <h5>Los Angeles <i class="bi bi-arrow-right"></i> London</h5>
+              <p><i class="bi bi-calendar3"></i> Jan 08 – Jan 18</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="la-price">$439</span>
+                <a href="#" class="btn btn-sm btn-la-red">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <section class="la-section la-section-alt" id="destinations">
+    <div class="container">
+      <div class="la-section-head">
+        <span class="la-eyebrow">Where to next</span>
+        <h2>Popular destinations</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="la-dest-card la-bg-5">
+            <div class="la-dest-overlay">
+              <h5>Paris, France</h5>
+              <p><i class="bi bi-airplane"></i> From $389</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="la-dest-card la-bg-6">
+            <div class="la-dest-overlay">
+              <h5>Tokyo, Japan</h5>
+              <p><i class="bi bi-airplane"></i> From $612</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="la-dest-card la-bg-7">
+            <div class="la-dest-overlay">
+              <h5>Cancun, Mexico</h5>
+              <p><i class="bi bi-airplane"></i> From $219</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="la-section">
+    <div class="container">
+      <div class="la-section-head">
+        <span class="la-eyebrow">The Liberty Air difference</span>
+        <h2>Why travelers choose us</h2>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-md-3">
+          <div class="la-feature">
+            <i class="bi bi-shield-check"></i>
+            <h6>Safety first</h6>
+            <p>Industry-leading safety standards on every flight.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="la-feature">
+            <i class="bi bi-clock-history"></i>
+            <h6>On-time performance</h6>
+            <p>Rated among the most punctual airlines in the country.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="la-feature">
+            <i class="bi bi-star-fill"></i>
+            <h6>Rewarding loyalty</h6>
+            <p>Earn miles on flights, hotels, cars and more.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="la-feature">
+            <i class="bi bi-headset"></i>
+            <h6>24/7 support</h6>
+            <p>Our team is here for you, anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loyalty banner -->
+  <section class="la-loyalty">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="la-badge la-badge-light"><i class="bi bi-award"></i> SkyMiles Club</span>
+          <h2>Join free. Earn miles on every trip.</h2>
+          <p>Sign up today and get 10,000 bonus miles on your first flight booking.</p>
+          <a href="#" class="btn btn-light btn-lg text-la-navy fw-semibold">Join now — it's free</a>
+        </div>
+        <div class="col-lg-5 text-center">
+          <i class="bi bi-airplane-fill la-loyalty-icon"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="la-newsletter">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-6">
+          <h4><i class="bi bi-envelope-heart"></i> Get fare alerts &amp; travel deals</h4>
+          <p class="mb-0">Be the first to know about flash sales and exclusive offers.</p>
+        </div>
+        <div class="col-lg-6">
+          <form class="d-flex gap-2">
+            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-la-red btn-lg">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="la-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-6">
+          <a class="la-brand la-brand-footer" href="#"><i class="bi bi-airplane-fill"></i> Liberty<span>Air</span></a>
+          <p>Fly farther. Fly for less. Booking flights to 350+ destinations worldwide.</p>
+          <div class="la-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h6>Book &amp; Travel</h6>
+          <ul>
+            <li><a href="#">Book a flight</a></li>
+            <li><a href="#">Flight status</a></li>
+            <li><a href="#">Check-in</a></li>
+            <li><a href="#">Vacation packages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h6>SkyMiles Club</h6>
+          <ul>
+            <li><a href="#">Join now</a></li>
+            <li><a href="#">Redeem miles</a></li>
+            <li><a href="#">Credit cards</a></li>
+            <li><a href="#">Partner airlines</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h6>Help &amp; Support</h6>
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Baggage policy</a></li>
+            <li><a href="#">Refunds</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="d-flex flex-wrap justify-content-between align-items-center la-footer-bottom">
+        <p class="mb-0">&copy; 2026 Liberty Air. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Site map</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="laBackToTop" class="la-back-to-top" title="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
