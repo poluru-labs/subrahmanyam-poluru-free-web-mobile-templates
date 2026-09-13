@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  PoluruCare — Modern Telehealth Clinic Platform
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
+  Brand Color: #780C28
   License: Free for Personal and Commercial Use
 -->
 <html lang="en">
@@ -10,17 +11,1559 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="description" content="PoluruCare Telehealth — 24/7 Virtual clinic with board-certified physicians, online appointment scheduling, e-prescriptions, and patient care." />
+  <title>PoluruCare — 24/7 Virtual Telehealth Clinic & Doctor Consultations</title>
+
+  <!-- Google Popular Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3.3 & Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
 
+  <a class="th-skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Top Emergency & Status Bar -->
+  <aside class="th-topbar" aria-label="Urgent Information Bar">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="th-live-pulse">
+          <span class="th-pulse-dot" aria-hidden="true"></span>
+          <span>Virtual Clinic Open 24/7 · Avg. Wait: <strong>4 mins</strong> · 12 Board-Certified Doctors Online</span>
+        </div>
+        <div class="d-none d-md-flex align-items-center gap-3">
+          <span><i class="bi bi-shield-check text-warning me-1"></i>HIPAA Compliant &amp; Encrypted</span>
+          <span class="text-white-50">|</span>
+          <a href="tel:18005557658"><i class="bi bi-telephone-fill me-1"></i>1-800-555-POLURU</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Primary Navigation -->
+  <nav class="navbar navbar-expand-lg th-navbar sticky-top" id="mainNavbar" aria-label="Primary Navigation">
+    <div class="container">
+      <a class="navbar-brand th-brand" href="#">
+        <div class="th-brand-icon">
+          <i class="bi bi-hospital"></i>
+        </div>
+        <div class="th-brand-text">
+          <span class="th-brand-title">PoluruCare</span>
+          <span class="th-brand-subtitle">Telehealth Clinic</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav mx-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#doctors">Our Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#triage">Symptom Checker</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing &amp; Insurance</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+          <button class="btn th-btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#patientPortalModal">
+            <i class="bi bi-person-lock me-1"></i>Patient Portal
+          </button>
+          <a href="#schedule" class="btn th-btn-primary btn-sm">
+            <i class="bi bi-camera-video-fill me-1"></i>Book Consult
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <header class="th-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="th-eyebrow">
+              <i class="bi bi-patch-check-fill"></i> Nationwide 50-State Telehealth Network
+            </div>
+            <h1 class="th-hero-title">
+              Top Board-Certified Doctors Online In <span>Under 10 Minutes</span>.
+            </h1>
+            <p class="th-hero-lead">
+              Consult with physician leaders like <strong>Dr. Subrahmanyam Poluru</strong>, <strong>Dr. Subbu Poluru</strong>, and <strong>Dr. Subra Poluru</strong> from any device. Same-day video visits, instant e-prescriptions sent to your pharmacy, and comprehensive virtual primary care.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#schedule" class="btn th-btn-primary btn-lg">
+                <i class="bi bi-calendar2-check-fill me-2"></i>Schedule Appointment
+              </a>
+              <button class="btn th-btn-outline btn-lg" data-bs-toggle="modal" data-bs-target="#videoRoomModal">
+                <i class="bi bi-play-circle-fill me-2"></i>Try Video Room Demo
+              </button>
+            </div>
+
+            <div class="th-hero-trust">
+              <div class="th-trust-item">
+                <div class="th-trust-icon"><i class="bi bi-shield-fill-check"></i></div>
+                <div class="th-trust-text">HIPAA Encrypted<small>256-Bit SSL Security</small></div>
+              </div>
+              <div class="th-trust-item">
+                <div class="th-trust-icon"><i class="bi bi-capsule"></i></div>
+                <div class="th-trust-text">15-Min eRx Delivery<small>Sent to Local Pharmacy</small></div>
+              </div>
+              <div class="th-trust-item">
+                <div class="th-trust-icon"><i class="bi bi-credit-card"></i></div>
+                <div class="th-trust-text">Insurance Friendly<small>$0–$15 Copay With Most Plans</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="th-quick-consult-card">
+              <div class="th-stat-badge-float">
+                <i class="bi bi-record-fill text-danger animate-pulse"></i> Ready for Walk-in
+              </div>
+              <h3 class="h4 mb-1">Instant Virtual Triage</h3>
+              <p class="text-muted small mb-3">Choose your condition to connect immediately.</p>
+
+              <form onsubmit="event.preventDefault();">
+                <div class="mb-3">
+                  <label for="heroReasonSelect" class="form-label small fw-bold">Reason for Visit</label>
+                  <select class="form-select" id="heroReasonSelect">
+                    <option value="urgent">Cold, Flu, COVID, or Fever</option>
+                    <option value="mental">Anxiety, Stress, or Tele-Therapy</option>
+                    <option value="pediatric">Pediatric Care (Infants &amp; Kids)</option>
+                    <option value="skin">Skin Rash, Acne, or Eczema</option>
+                    <option value="cardio">Hypertension &amp; Heart Review</option>
+                    <option value="rx">Instant Rx Refill &amp; Medication Check</option>
+                  </select>
+                </div>
+
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <label for="heroStateSelect" class="form-label small fw-bold">Your State</label>
+                    <select class="form-select" id="heroStateSelect">
+                      <option selected>California (CA)</option>
+                      <option>Texas (TX)</option>
+                      <option>New York (NY)</option>
+                      <option>Florida (FL)</option>
+                      <option>All 50 States Supported</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label for="heroCoverageSelect" class="form-label small fw-bold">Payment Option</label>
+                    <select class="form-select" id="heroCoverageSelect">
+                      <option selected>Commercial Insurance</option>
+                      <option>Medicare / Medicaid</option>
+                      <option>Direct Self-Pay ($49)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-light rounded mb-3 border">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <span class="small text-muted">Estimated Wait:</span>
+                    <span class="badge bg-success-subtle text-success fw-bold">&lt; 4 Minutes</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <span class="small text-muted">On-Duty Attending:</span>
+                    <span class="small fw-bold text-dark">Dr. Subrahmanyam Poluru</span>
+                  </div>
+                </div>
+
+                <a href="#schedule" class="btn th-btn-primary w-100 py-2">
+                  <i class="bi bi-lightning-charge-fill me-1"></i>Start Virtual Visit Now
+                </a>
+                <p class="text-center text-muted small mt-2 mb-0">
+                  <i class="bi bi-info-circle me-1"></i>No software download required. Works on any browser.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Key Statistics Counter -->
+    <section class="th-stats-section" aria-label="Clinic Statistics">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3">
+            <div class="th-stat-box">
+              <div class="th-stat-num">99.2%</div>
+              <div class="th-stat-label">Patient Satisfaction</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="th-stat-box">
+              <div class="th-stat-num">180K+</div>
+              <div class="th-stat-label">Virtual Visits Completed</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="th-stat-box">
+              <div class="th-stat-num">&lt; 5 Min</div>
+              <div class="th-stat-label">Average Wait Time</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="th-stat-box">
+              <div class="th-stat-num">50 States</div>
+              <div class="th-stat-label">Board-Certified Licensing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patient Services Section -->
+    <section class="py-5" id="services">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Comprehensive Patient Care</div>
+          <h2 class="th-section-title">Specialized Virtual Healthcare Services</h2>
+          <p class="th-section-subtitle">
+            From urgent acute relief to longitudinal chronic management, our board-certified clinical team delivers hospital-grade healthcare straight to your home.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="th-service-card">
+              <div class="th-service-icon-wrap">
+                <i class="bi bi-bandaid"></i>
+              </div>
+              <h3 class="th-service-title">Urgent Virtual Care</h3>
+              <p class="th-service-desc">
+                Fast diagnosis and treatment plans for colds, sinus infections, seasonal flu, fever, allergies, sore throat, and urinary tract infections.
+              </p>
+              <div class="th-service-tags">
+                <span class="th-service-tag">Flu &amp; COVID</span>
+                <span class="th-service-tag">Sinusitis</span>
+                <span class="th-service-tag">UTIs</span>
+                <span class="th-service-tag">Stomach Bug</span>
+              </div>
+              <div class="th-service-footer">
+                <div class="th-service-price">From <strong>$49</strong> <small class="text-muted">or $0–$10 copay</small></div>
+                <a href="#schedule" class="btn th-btn-outline btn-sm">Book Visit</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="th-service-card">
+              <div class="th-service-icon-wrap">
+                <i class="bi bi-heart-pulse"></i>
+              </div>
+              <h3 class="th-service-title">Cardiology &amp; Primary Care</h3>
+              <p class="th-service-desc">
+                Directed by Dr. Subrahmanyam Poluru. Hypertension monitoring, cardiovascular risk profiles, cholesterol management, and ECG data reviews.
+              </p>
+              <div class="th-service-tags">
+                <span class="th-service-tag">Blood Pressure</span>
+                <span class="th-service-tag">Cholesterol</span>
+                <span class="th-service-tag">Lipid Panels</span>
+                <span class="th-service-tag">Preventative</span>
+              </div>
+              <div class="th-service-footer">
+                <div class="th-service-price">From <strong>$69</strong> <small class="text-muted">or $15 copay</small></div>
+                <a href="#schedule" class="btn th-btn-outline btn-sm">Book Visit</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="th-service-card">
+              <div class="th-service-icon-wrap">
+                <i class="bi bi-emoji-smile"></i>
+              </div>
+              <h3 class="th-service-title">Mental &amp; Behavioral Health</h3>
+              <p class="th-service-desc">
+                Led by Dr. Subra Poluru. Compassionate, 100% confidential tele-psychiatry, anxiety counseling, clinical depression therapy, and stress management.
+              </p>
+              <div class="th-service-tags">
+                <span class="th-service-tag">Anxiety</span>
+                <span class="th-service-tag">Depression</span>
+                <span class="th-service-tag">ADHD Review</span>
+                <span class="th-service-tag">Therapy</span>
+              </div>
+              <div class="th-service-footer">
+                <div class="th-service-price">From <strong>$89</strong> <small class="text-muted">or $20 copay</small></div>
+                <a href="#schedule" class="btn th-btn-outline btn-sm">Book Visit</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="th-service-card">
+              <div class="th-service-icon-wrap">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h3 class="th-service-title">Pediatrics &amp; Family Care</h3>
+              <p class="th-service-desc">
+                Headed by Dr. Subbu Poluru. Caring consultations for newborns, toddlers, and teens covering childhood fevers, rashes, earaches, and growth checks.
+              </p>
+              <div class="th-service-tags">
+                <span class="th-service-tag">Childhood Fever</span>
+                <span class="th-service-tag">Ear Infections</span>
+                <span class="th-service-tag">Allergies</span>
+                <span class="th-service-tag">Nutrition</span>
+              </div>
+              <div class="th-service-footer">
+                <div class="th-service-price">From <strong>$49</strong> <small class="text-muted">or $10 copay</small></div>
+                <a href="#schedule" class="btn th-btn-outline btn-sm">Book Visit</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="th-service-card">
+              <div class="th-service-icon-wrap">
+                <i class="bi bi-camera"></i>
+              </div>
+              <h3 class="th-service-title">Tele-Dermatology &amp; Skin</h3>
+              <p class="th-service-desc">
+                Guided by Dr. Priya Subbu Poluru. High-resolution photo and live video diagnosis for cystic acne, eczema, psoriasis, hives, and skin lesions.
+              </p>
+              <div class="th-service-tags">
+                <span class="th-service-tag">Acne &amp; Rosacea</span>
+                <span class="th-service-tag">Eczema</span>
+                <span class="th-service-tag">Rash Analysis</span>
+                <span class="th-service-tag">Topical Rx</span>
+              </div>
+              <div class="th-service-footer">
+                <div class="th-service-price">From <strong>$59</strong> <small class="text-muted">or $15 copay</small></div>
+                <a href="#schedule" class="btn th-btn-outline btn-sm">Book Visit</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="th-service-card">
+              <div class="th-service-icon-wrap">
+                <i class="bi bi-prescription2"></i>
+              </div>
+              <h3 class="th-service-title">e-Prescriptions &amp; Refills</h3>
+              <p class="th-service-desc">
+                Fast medication evaluation and instant digital prescription routing to CVS, Walgreens, Walmart, or home delivery mail-order services.
+              </p>
+              <div class="th-service-tags">
+                <span class="th-service-tag">Maintenance Meds</span>
+                <span class="th-service-tag">Antibiotics</span>
+                <span class="th-service-tag">Inhalers</span>
+                <span class="th-service-tag">Local Pick-up</span>
+              </div>
+              <div class="th-service-footer">
+                <div class="th-service-price">From <strong>$39</strong> <small class="text-muted">or $0 copay</small></div>
+                <a href="#schedule" class="btn th-btn-outline btn-sm">Book Visit</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Symptom Triage Tool -->
+    <section class="py-5 bg-white border-top border-bottom" id="triage">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Smart Triage System</div>
+          <h2 class="th-section-title">Interactive Symptom &amp; Doctor Matcher</h2>
+          <p class="th-section-subtitle">
+            Not sure which specialist you need? Select your symptom below to get matched with the best clinical provider and view real-time availability.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="th-triage-card">
+              <h3 class="h5 mb-3 text-dark fw-bold">Step 1: Select Your Current Symptom or Concern</h3>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-4 col-sm-6">
+                  <div class="th-symptom-chip active" data-symptom="cough-flu">
+                    <i class="bi bi-thermometer-high"></i>
+                    <div>
+                      <div>Fever &amp; Severe Cough</div>
+                      <small class="text-muted">Flu, COVID, Chest congestion</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="th-symptom-chip" data-symptom="skin-rash">
+                    <i class="bi bi-magic"></i>
+                    <div>
+                      <div>Skin Rash or Acne</div>
+                      <small class="text-muted">Eczema, bites, allergic hives</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="th-symptom-chip" data-symptom="anxiety-mood">
+                    <i class="bi bi-chat-heart"></i>
+                    <div>
+                      <div>Anxiety &amp; Low Mood</div>
+                      <small class="text-muted">Sleep issues, stress, ADHD</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="th-symptom-chip" data-symptom="pediatric-fever">
+                    <i class="bi bi-balloon-heart"></i>
+                    <div>
+                      <div>Child Illness (Pediatric)</div>
+                      <small class="text-muted">Infant earache, fever, vomiting</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="th-symptom-chip" data-symptom="cardio-bp">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                    <div>
+                      <div>High BP &amp; Heart Check</div>
+                      <small class="text-muted">Palpitations, BP spikes, statins</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="th-symptom-chip" data-symptom="rx-refill">
+                    <i class="bi bi-capsule-pill"></i>
+                    <div>
+                      <div>Rx Renewal &amp; Med Refill</div>
+                      <small class="text-muted">Maintenance medication refill</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Triage Output Box -->
+              <div class="th-triage-result" id="triageResultBox">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                  <div>
+                    <span class="badge bg-danger text-white mb-2" id="triageSpecialist">Primary &amp; Urgent Virtual Care</span>
+                    <h4 class="h5 mb-1" id="triageDoctorName">Dr. Arvind Subra, MD / Dr. Subrahmanyam Poluru</h4>
+                    <p class="small text-muted mb-1" id="triageNote">
+                      Ideal for fever, sore throat, cough, rapid flu/COVID prescriptions.
+                    </p>
+                    <div class="d-flex align-items-center gap-2 text-success fw-bold small">
+                      <i class="bi bi-clock-history"></i> <span id="triageWaitTime">~5 mins wait</span>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#schedule" class="btn th-btn-primary" id="triageActionBtn" data-doc-id="doc-arvind">
+                      <i class="bi bi-calendar-check me-1"></i>Connect With This Doctor
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctor Profiles Section -->
+    <section class="py-5" id="doctors">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Meet Our Clinical Board</div>
+          <h2 class="th-section-title">Board-Certified Telehealth Physicians</h2>
+          <p class="th-section-subtitle">
+            Experienced medical practitioners dedicated to providing empathetic, evidence-based virtual care whenever you need it.
+          </p>
+        </div>
+
+        <!-- Specialty Filter Buttons -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" role="group" aria-label="Filter Doctors by Specialty">
+          <button class="th-filter-btn active" data-filter="all">All Specialists (6)</button>
+          <button class="th-filter-btn" data-filter="cardiology">Cardiology &amp; Heart</button>
+          <button class="th-filter-btn" data-filter="pediatrics">Pediatrics &amp; Family</button>
+          <button class="th-filter-btn" data-filter="mental-health">Psychiatry &amp; Mental Health</button>
+          <button class="th-filter-btn" data-filter="dermatology">Dermatology</button>
+          <button class="th-filter-btn" data-filter="primary-care">Primary &amp; Urgent Care</button>
+        </div>
+
+        <div class="row g-4" id="doctorGrid">
+          <!-- Doctor 1: Dr. Subrahmanyam Poluru -->
+          <div class="col-md-6 col-lg-4 th-doctor-card-item" data-specialty="cardiology">
+            <article class="th-doctor-card">
+              <div class="th-doctor-img-box">
+                <div class="th-doctor-avatar">
+                  <i class="bi bi-person-badge-fill"></i>
+                </div>
+                <div class="th-doctor-status-badge">
+                  <span class="th-badge-avail"><i class="bi bi-circle-fill text-success small"></i> Online Now</span>
+                </div>
+                <div class="th-doctor-rating-badge">
+                  <i class="bi bi-star-fill text-warning"></i> 4.98 (480)
+                </div>
+              </div>
+              <div class="th-doctor-body">
+                <h3 class="th-doctor-name">Dr. Subrahmanyam Poluru, MD</h3>
+                <div class="th-doctor-title">Chief Medical Officer · Cardiology &amp; Internal Med</div>
+                <ul class="th-doctor-meta">
+                  <li><i class="bi bi-mortarboard-fill"></i> Harvard Medical &amp; Stanford Fellow</li>
+                  <li><i class="bi bi-award-fill"></i> 18+ Years Clinical Experience</li>
+                  <li><i class="bi bi-translate"></i> English, Telugu, Hindi</li>
+                </ul>
+                <div class="th-doctor-footer">
+                  <div>
+                    <span class="small text-muted d-block">Consultation Fee</span>
+                    <span class="fw-bold text-dark">$69 <small class="text-success">($15 Copay)</small></span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn th-btn-outline btn-sm js-view-doctor-bio" data-doc-id="doc-subrahmanyam">Bio</button>
+                    <button class="btn th-btn-primary btn-sm js-book-doctor-direct" data-doc-id="doc-subrahmanyam">Book Slot</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Doctor 2: Dr. Subbu Poluru -->
+          <div class="col-md-6 col-lg-4 th-doctor-card-item" data-specialty="pediatrics">
+            <article class="th-doctor-card">
+              <div class="th-doctor-img-box">
+                <div class="th-doctor-avatar">
+                  <i class="bi bi-person-heart"></i>
+                </div>
+                <div class="th-doctor-status-badge">
+                  <span class="th-badge-avail"><i class="bi bi-circle-fill text-success small"></i> Available Today</span>
+                </div>
+                <div class="th-doctor-rating-badge">
+                  <i class="bi bi-star-fill text-warning"></i> 4.95 (390)
+                </div>
+              </div>
+              <div class="th-doctor-body">
+                <h3 class="th-doctor-name">Dr. Subbu Poluru, MD, FAAP</h3>
+                <div class="th-doctor-title">Head of Pediatric &amp; Adolescent Health</div>
+                <ul class="th-doctor-meta">
+                  <li><i class="bi bi-mortarboard-fill"></i> Johns Hopkins &amp; Boston Children’s</li>
+                  <li><i class="bi bi-award-fill"></i> 14+ Years Pediatric Practice</li>
+                  <li><i class="bi bi-translate"></i> English, Spanish</li>
+                </ul>
+                <div class="th-doctor-footer">
+                  <div>
+                    <span class="small text-muted d-block">Consultation Fee</span>
+                    <span class="fw-bold text-dark">$49 <small class="text-success">($10 Copay)</small></span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn th-btn-outline btn-sm js-view-doctor-bio" data-doc-id="doc-subbu">Bio</button>
+                    <button class="btn th-btn-primary btn-sm js-book-doctor-direct" data-doc-id="doc-subbu">Book Slot</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Doctor 3: Dr. Subra Poluru -->
+          <div class="col-md-6 col-lg-4 th-doctor-card-item" data-specialty="mental-health">
+            <article class="th-doctor-card">
+              <div class="th-doctor-img-box">
+                <div class="th-doctor-avatar">
+                  <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+                <div class="th-doctor-status-badge">
+                  <span class="th-badge-avail"><i class="bi bi-circle-fill text-success small"></i> Online Now</span>
+                </div>
+                <div class="th-doctor-rating-badge">
+                  <i class="bi bi-star-fill text-warning"></i> 4.96 (512)
+                </div>
+              </div>
+              <div class="th-doctor-body">
+                <h3 class="th-doctor-name">Dr. Subra Poluru, DO, FAPA</h3>
+                <div class="th-doctor-title">Director of Tele-Psychiatry &amp; Wellness</div>
+                <ul class="th-doctor-meta">
+                  <li><i class="bi bi-mortarboard-fill"></i> Columbia University &amp; NYU Psychiatry</li>
+                  <li><i class="bi bi-award-fill"></i> 12+ Years Behavioral Care</li>
+                  <li><i class="bi bi-translate"></i> English</li>
+                </ul>
+                <div class="th-doctor-footer">
+                  <div>
+                    <span class="small text-muted d-block">Consultation Fee</span>
+                    <span class="fw-bold text-dark">$89 <small class="text-success">($20 Copay)</small></span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn th-btn-outline btn-sm js-view-doctor-bio" data-doc-id="doc-subra">Bio</button>
+                    <button class="btn th-btn-primary btn-sm js-book-doctor-direct" data-doc-id="doc-subra">Book Slot</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Doctor 4: Dr. Priya Subbu Poluru -->
+          <div class="col-md-6 col-lg-4 th-doctor-card-item" data-specialty="dermatology">
+            <article class="th-doctor-card">
+              <div class="th-doctor-img-box">
+                <div class="th-doctor-avatar">
+                  <i class="bi bi-stars"></i>
+                </div>
+                <div class="th-doctor-status-badge">
+                  <span class="badge bg-secondary">Next: Tomorrow 9:30 AM</span>
+                </div>
+                <div class="th-doctor-rating-badge">
+                  <i class="bi bi-star-fill text-warning"></i> 4.92 (320)
+                </div>
+              </div>
+              <div class="th-doctor-body">
+                <h3 class="th-doctor-name">Dr. Priya Subbu Poluru, MD</h3>
+                <div class="th-doctor-title">Lead Dermatologist &amp; Tele-Derm Expert</div>
+                <ul class="th-doctor-meta">
+                  <li><i class="bi bi-mortarboard-fill"></i> Yale School of Medicine &amp; UCSF</li>
+                  <li><i class="bi bi-award-fill"></i> 11+ Years Teledermatology</li>
+                  <li><i class="bi bi-translate"></i> English, Hindi</li>
+                </ul>
+                <div class="th-doctor-footer">
+                  <div>
+                    <span class="small text-muted d-block">Consultation Fee</span>
+                    <span class="fw-bold text-dark">$59 <small class="text-success">($15 Copay)</small></span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn th-btn-outline btn-sm js-view-doctor-bio" data-doc-id="doc-priya">Bio</button>
+                    <button class="btn th-btn-primary btn-sm js-book-doctor-direct" data-doc-id="doc-priya">Book Slot</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Doctor 5: Dr. Ananya Poluru -->
+          <div class="col-md-6 col-lg-4 th-doctor-card-item" data-specialty="primary-care">
+            <article class="th-doctor-card">
+              <div class="th-doctor-img-box">
+                <div class="th-doctor-avatar">
+                  <i class="bi bi-hospital-fill"></i>
+                </div>
+                <div class="th-doctor-status-badge">
+                  <span class="th-badge-avail"><i class="bi bi-circle-fill text-success small"></i> Online Now</span>
+                </div>
+                <div class="th-doctor-rating-badge">
+                  <i class="bi bi-star-fill text-warning"></i> 4.94 (265)
+                </div>
+              </div>
+              <div class="th-doctor-body">
+                <h3 class="th-doctor-name">Dr. Ananya Poluru, MD</h3>
+                <div class="th-doctor-title">Primary Care &amp; Women’s Health Lead</div>
+                <ul class="th-doctor-meta">
+                  <li><i class="bi bi-mortarboard-fill"></i> UCLA David Geffen &amp; Mayo Clinic</li>
+                  <li><i class="bi bi-award-fill"></i> 9+ Years Preventative Care</li>
+                  <li><i class="bi bi-translate"></i> English, Telugu</li>
+                </ul>
+                <div class="th-doctor-footer">
+                  <div>
+                    <span class="small text-muted d-block">Consultation Fee</span>
+                    <span class="fw-bold text-dark">$49 <small class="text-success">($10 Copay)</small></span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn th-btn-outline btn-sm js-view-doctor-bio" data-doc-id="doc-ananya">Bio</button>
+                    <button class="btn th-btn-primary btn-sm js-book-doctor-direct" data-doc-id="doc-ananya">Book Slot</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Doctor 6: Dr. Arvind Subra -->
+          <div class="col-md-6 col-lg-4 th-doctor-card-item" data-specialty="primary-care">
+            <article class="th-doctor-card">
+              <div class="th-doctor-img-box">
+                <div class="th-doctor-avatar">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <div class="th-doctor-status-badge">
+                  <span class="th-badge-avail"><i class="bi bi-circle-fill text-success small"></i> Instant Triage</span>
+                </div>
+                <div class="th-doctor-rating-badge">
+                  <i class="bi bi-star-fill text-warning"></i> 4.91 (410)
+                </div>
+              </div>
+              <div class="th-doctor-body">
+                <h3 class="th-doctor-name">Dr. Arvind Subra, MD</h3>
+                <div class="th-doctor-title">Urgent Care &amp; Pulmonary Telehealth</div>
+                <ul class="th-doctor-meta">
+                  <li><i class="bi bi-mortarboard-fill"></i> Northwestern Feinberg &amp; Emory</li>
+                  <li><i class="bi bi-award-fill"></i> 15+ Years Emergency &amp; Urgent Care</li>
+                  <li><i class="bi bi-translate"></i> English, Spanish</li>
+                </ul>
+                <div class="th-doctor-footer">
+                  <div>
+                    <span class="small text-muted d-block">Consultation Fee</span>
+                    <span class="fw-bold text-dark">$49 <small class="text-success">($10 Copay)</small></span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn th-btn-outline btn-sm js-view-doctor-bio" data-doc-id="doc-arvind">Bio</button>
+                    <button class="btn th-btn-primary btn-sm js-book-doctor-direct" data-doc-id="doc-arvind">Book Slot</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-white border-top border-bottom" id="how-it-works">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Seamless Experience</div>
+          <h2 class="th-section-title">How Virtual Care Works</h2>
+          <p class="th-section-subtitle">
+            Get examined, diagnosed, and prescribed within minutes through our streamlined four-step telehealth journey.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="th-how-card">
+              <div class="th-how-number">1</div>
+              <div class="th-how-icon"><i class="bi bi-person-lines-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">Select Provider</h3>
+              <p class="text-muted small mb-0">
+                Pick your preferred doctor such as Dr. Subrahmanyam Poluru or use our instant triage match for rapid walk-in care.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="th-how-card">
+              <div class="th-how-number">2</div>
+              <div class="th-how-icon"><i class="bi bi-calendar-event-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">Choose Video Slot</h3>
+              <p class="text-muted small mb-0">
+                Reserve an immediate 5-minute queue or pick a scheduled video or phone consult time that matches your day.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="th-how-card">
+              <div class="th-how-number">3</div>
+              <div class="th-how-icon"><i class="bi bi-camera-video-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">HD Video Consult</h3>
+              <p class="text-muted small mb-0">
+                Connect directly through your smartphone or laptop in our secure, encrypted HIPAA-compliant virtual exam room.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="th-how-card">
+              <div class="th-how-number">4</div>
+              <div class="th-how-icon"><i class="bi bi-file-earmark-medical-fill"></i></div>
+              <h3 class="h5 fw-bold mb-2">Instant Rx &amp; Plan</h3>
+              <p class="text-muted small mb-0">
+                Receive electronic prescriptions sent directly to your nearest pharmacy, work sick notes, and visit summaries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Appointment Scheduling Section & Wizard -->
+    <section class="py-5" id="schedule">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Interactive Booking System</div>
+          <h2 class="th-section-title">Schedule Your Virtual Appointment</h2>
+          <p class="th-section-subtitle">
+            Select your preferred healthcare specialist, choose an available time slot, and confirm your telemedicine visit in seconds.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="th-wizard-card">
+              <!-- Wizard Header with Step Progress -->
+              <div class="th-wizard-header">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+                  <div>
+                    <h3 class="h4 text-white mb-1">Telehealth Booking Wizard</h3>
+                    <p class="text-white-50 small mb-0">Complete the 3 quick steps below to secure your consultation.</p>
+                  </div>
+                  <span class="badge bg-white text-dark px-3 py-2 fw-bold">
+                    <i class="bi bi-shield-lock-fill text-success me-1"></i> HIPAA Encrypted
+                  </span>
+                </div>
+
+                <div class="th-wizard-step-indicator">
+                  <div class="th-step-item active" id="stepIndicator1">
+                    <div class="th-step-circle">1</div>
+                    <span>Service &amp; Time</span>
+                  </div>
+                  <div class="th-step-item" id="stepIndicator2">
+                    <div class="th-step-circle">2</div>
+                    <span>Patient Details</span>
+                  </div>
+                  <div class="th-step-item" id="stepIndicator3">
+                    <div class="th-step-circle">3</div>
+                    <span>Review &amp; Confirm</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wizard Body -->
+              <div class="th-wizard-body">
+                <form id="telehealthWizardForm" onsubmit="event.preventDefault();">
+                  
+                  <!-- STEP 1: Service, Doctor & Time Selection -->
+                  <div id="wizardStep1">
+                    <h4 class="h5 fw-bold mb-4">Step 1: Choose Specialty, Doctor &amp; Time Slot</h4>
+
+                    <div class="row g-3 mb-4">
+                      <div class="col-md-6">
+                        <label for="wizardSpecialtySelect" class="form-label fw-semibold small">Specialty Area</label>
+                        <select class="form-select" id="wizardSpecialtySelect">
+                          <option value="all">All Specialties</option>
+                          <option value="cardiology">Cardiology &amp; Internal Medicine</option>
+                          <option value="pediatrics">Pediatrics &amp; Family Medicine</option>
+                          <option value="mental-health">Psychiatry &amp; Mental Health</option>
+                          <option value="dermatology">Dermatology &amp; Skin Care</option>
+                          <option value="primary-care">Urgent &amp; Primary Care</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="wizardDoctorSelect" class="form-label fw-semibold small">Select Physician</label>
+                        <select class="form-select" id="wizardDoctorSelect">
+                          <option value="doc-subrahmanyam">Dr. Subrahmanyam Poluru, MD (Cardiology &amp; CMO) — $69</option>
+                          <option value="doc-subbu">Dr. Subbu Poluru, MD (Pediatrics &amp; Family) — $49</option>
+                          <option value="doc-subra">Dr. Subra Poluru, DO (Tele-Psychiatry &amp; Wellness) — $89</option>
+                          <option value="doc-priya">Dr. Priya Subbu Poluru, MD (Dermatology) — $59</option>
+                          <option value="doc-ananya">Dr. Ananya Poluru, MD (Primary Care) — $49</option>
+                          <option value="doc-arvind">Dr. Arvind Subra, MD (Urgent Telehealth) — $49</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                      <div class="col-md-6">
+                        <label for="wizardVisitType" class="form-label fw-semibold small">Visit Medium</label>
+                        <select class="form-select" id="wizardVisitType">
+                          <option value="HD Video Call" selected>HD Video Call (Recommended)</option>
+                          <option value="Phone Audio Consult">Phone Audio Call</option>
+                          <option value="Secure Messaging Consult">Asynchronous Secure Chat &amp; Photo</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="wizardDateInput" class="form-label fw-semibold small">Consultation Date</label>
+                        <input type="date" class="form-control" id="wizardDateInput" />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold small">Select Available Time Slot</label>
+                      <div class="row g-2">
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn" data-time="09:00 AM">09:00 AM</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn" data-time="11:15 AM">11:15 AM</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn active" data-time="02:30 PM">02:30 PM (Today)</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn" data-time="04:45 PM">04:45 PM</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn" data-time="06:00 PM">06:00 PM</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn" data-time="07:30 PM">07:30 PM</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn" data-time="08:15 PM">08:15 PM</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                          <div class="th-time-slot-btn" data-time="Walk-in Instant (&lt; 5m)">Walk-in (&lt; 5m)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- STEP 2: Patient Information -->
+                  <div id="wizardStep2" style="display: none;">
+                    <h4 class="h5 fw-bold mb-4">Step 2: Patient Medical Information</h4>
+
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <label for="patientFullName" class="form-label fw-semibold small">Full Name *</label>
+                        <input type="text" class="form-control" id="patientFullName" placeholder="e.g., Subbu K." value="Subbu K." required />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="patientDob" class="form-label fw-semibold small">Date of Birth</label>
+                        <input type="date" class="form-control" id="patientDob" value="1992-06-15" />
+                      </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <label for="patientEmail" class="form-label fw-semibold small">Email Address *</label>
+                        <input type="email" class="form-control" id="patientEmail" placeholder="subbu@example.com" value="subbu@example.com" required />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="patientPhone" class="form-label fw-semibold small">Mobile Phone (for SMS link) *</label>
+                        <input type="tel" class="form-control" id="patientPhone" placeholder="(555) 019-2834" value="(555) 019-2834" required />
+                      </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                      <div class="col-md-6">
+                        <label for="patientInsurance" class="form-label fw-semibold small">Insurance Carrier (or Self-Pay)</label>
+                        <select class="form-select" id="patientInsurance">
+                          <option value="Self-Pay">Self-Pay / Direct Pay</option>
+                          <option value="Aetna" selected>Aetna Healthcare</option>
+                          <option value="BlueCross BlueShield">BlueCross BlueShield</option>
+                          <option value="Cigna">Cigna</option>
+                          <option value="UnitedHealthcare">UnitedHealthcare</option>
+                          <option value="Medicare">Medicare Part B</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="preferredPharmacy" class="form-label fw-semibold small">Preferred Pharmacy for eRx</label>
+                        <input type="text" class="form-control" id="preferredPharmacy" placeholder="e.g. CVS Pharmacy #4018, Austin TX" value="CVS Pharmacy #4018, Austin TX" />
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="patientSymptoms" class="form-label fw-semibold small">Briefly Describe Your Symptoms or Health Question</label>
+                      <textarea class="form-control" id="patientSymptoms" rows="3" placeholder="Describe symptoms, duration, current medications, or allergies..."></textarea>
+                    </div>
+                  </div>
+
+                  <!-- STEP 3: Summary & Confirmation -->
+                  <div id="wizardStep3" style="display: none;">
+                    <h4 class="h5 fw-bold mb-3">Step 3: Review Visit Summary</h4>
+
+                    <div class="card bg-light border-0 p-4 mb-4 rounded-3">
+                      <div class="row g-3">
+                        <div class="col-sm-6">
+                          <span class="text-muted small d-block">Selected Physician</span>
+                          <strong class="text-dark fs-6" id="summaryDoctorName">Dr. Subrahmanyam Poluru, MD</strong>
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="text-muted small d-block">Specialty</span>
+                          <strong class="text-dark fs-6" id="summarySpecialty">Cardiology &amp; Internal Medicine</strong>
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="text-muted small d-block">Date &amp; Time Slot</span>
+                          <strong class="text-dark fs-6" id="summaryDateTime">Today · 02:30 PM</strong>
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="text-muted small d-block">Consultation Format</span>
+                          <strong class="text-dark fs-6" id="summaryVisitType">HD Video Call</strong>
+                        </div>
+                        <div class="col-12 border-top pt-3 mt-3 d-flex justify-content-between align-items-center">
+                          <span class="fw-bold">Estimated Cost:</span>
+                          <span class="fs-5 fw-bold text-danger" id="summaryTotalFee">$69 (or $15 Copay)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="telehealthConsent" checked />
+                      <label class="form-check-label small" for="telehealthConsent">
+                        I consent to receive virtual telemedicine care from PoluruCare medical staff and acknowledge HIPAA privacy terms.
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Wizard Controls -->
+                  <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                    <button type="button" class="btn btn-outline-secondary" id="wizardPrevBtn" style="display: none;">
+                      <i class="bi bi-arrow-left me-1"></i> Back
+                    </button>
+                    <button type="button" class="btn th-btn-primary ms-auto" id="wizardNextBtn">
+                      Continue to Next Step <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing & Insurance Checker Section -->
+    <section class="py-5 bg-white border-top border-bottom" id="pricing">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Transparent Pricing</div>
+          <h2 class="th-section-title">Affordable Care With or Without Insurance</h2>
+          <p class="th-section-subtitle">
+            No surprise medical bills. 90% of insured patients pay $0 to $15 per virtual visit, and clear transparent self-pay rates for everyone.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch mb-5">
+          <!-- Tier 1 -->
+          <div class="col-md-4">
+            <div class="th-pricing-card">
+              <h3 class="h5 fw-bold mb-2">Urgent Walk-in Care</h3>
+              <p class="text-muted small mb-3">For acute issues, sore throat, allergies &amp; quick e-prescriptions.</p>
+              <div class="th-price-value mb-3">$49 <span>/ visit</span></div>
+              <p class="text-success small fw-semibold mb-4"><i class="bi bi-check-circle-fill me-1"></i>$0–$10 with most insurance</p>
+              <ul class="list-unstyled small text-muted mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Under 10-minute average wait</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Instant electronic prescription</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Work or school excuse note</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>72-hour follow-up secure chat</li>
+              </ul>
+              <a href="#schedule" class="btn th-btn-outline w-100">Select Plan</a>
+            </div>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="col-md-4">
+            <div class="th-pricing-card featured">
+              <div class="th-pricing-popular-badge">Most Popular</div>
+              <h3 class="h5 fw-bold mb-2">Specialist &amp; Primary Care</h3>
+              <p class="text-muted small mb-3">Consultations with Dr. Subrahmanyam Poluru &amp; senior clinical team.</p>
+              <div class="th-price-value mb-3">$69 <span>/ visit</span></div>
+              <p class="text-success small fw-semibold mb-4"><i class="bi bi-check-circle-fill me-1"></i>$15 copay with insurance</p>
+              <ul class="list-unstyled small text-muted mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Comprehensive 25-minute consultation</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Lab test ordering &amp; results analysis</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Cardiovascular &amp; chronic care roadmap</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>30-day continuous care management</li>
+              </ul>
+              <a href="#schedule" class="btn th-btn-primary w-100">Book Specialist</a>
+            </div>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="col-md-4">
+            <div class="th-pricing-card">
+              <h3 class="h5 fw-bold mb-2">Tele-Psychiatry &amp; Mental Health</h3>
+              <p class="text-muted small mb-3">Individual therapy &amp; clinical psychiatry with Dr. Subra Poluru.</p>
+              <div class="th-price-value mb-3">$89 <span>/ session</span></div>
+              <p class="text-success small fw-semibold mb-4"><i class="bi bi-check-circle-fill me-1"></i>$20 copay with insurance</p>
+              <ul class="list-unstyled small text-muted mb-4 flex-grow-1">
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>45-minute private 1-on-1 session</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Medication management &amp; therapy</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>100% confidential HIPAA encrypted room</li>
+                <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i>Personalized mental wellness care plan</li>
+              </ul>
+              <a href="#schedule" class="btn th-btn-outline w-100">Select Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insurance Eligibility Checker Widget -->
+        <div class="card border p-4 rounded-4 bg-light shadow-sm">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <h4 class="h5 fw-bold mb-1">Check Your Insurance Coverage Instantly</h4>
+              <p class="text-muted small mb-0">
+                We accept Aetna, BlueCross BlueShield, Cigna, UnitedHealthcare, Humana, Medicare, and leading regional networks.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-2">
+                <div class="col-sm-5">
+                  <select class="form-select" id="insuranceProviderSelect">
+                    <option value="Aetna" selected>Aetna Healthcare</option>
+                    <option value="BlueCross BlueShield">BlueCross BlueShield</option>
+                    <option value="Cigna">Cigna Health</option>
+                    <option value="UnitedHealthcare">UnitedHealthcare (Optum)</option>
+                    <option value="Medicare">Medicare Part B</option>
+                    <option value="Humana">Humana</option>
+                  </select>
+                </div>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="insuranceMemberId" placeholder="Member ID (e.g. W12849)" value="W8920194" />
+                </div>
+                <div class="col-sm-3">
+                  <button class="btn th-btn-primary w-100" id="checkInsuranceBtn">
+                    <i class="bi bi-search me-1"></i> Verify
+                  </button>
+                </div>
+              </div>
+              <div id="insuranceCheckResult" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patient Reviews & Testimonials Section -->
+    <section class="py-5" id="testimonials">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Verified Patient Reviews</div>
+          <h2 class="th-section-title">What Our Patients Say</h2>
+          <p class="th-section-subtitle">
+            Over 180,000 successful consultations with a 4.9+ star rating from verified patients nationwide.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="th-testimonial-card">
+              <div>
+                <div class="th-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="mb-4 text-dark fst-italic">
+                  "Dr. Subrahmanyam Poluru evaluated my elevated blood pressure readings over video on a Sunday morning. He adjusted my dosage, called in my prescription in 15 minutes, and followed up two days later. Remarkable service!"
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px;">SK</div>
+                <div>
+                  <strong class="d-block text-dark">Subbu K.</strong>
+                  <small class="text-muted">Hypertension Follow-up · Austin, TX</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="th-testimonial-card">
+              <div>
+                <div class="th-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="mb-4 text-dark fst-italic">
+                  "Having Dr. Subbu Poluru available when my 4-year-old daughter woke up with a high fever saved us an agonizing trip to the emergency room. His pediatric advice was crystal clear and extremely calming."
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px;">LP</div>
+                <div>
+                  <strong class="d-block text-dark">Lavanya Poluru</strong>
+                  <small class="text-muted">Pediatric Acute Visit · San Jose, CA</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="th-testimonial-card">
+              <div>
+                <div class="th-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="mb-4 text-dark fst-italic">
+                  "Dr. Subra Poluru's tele-psychiatry sessions have been transformative for my anxiety. Booking is effortless, the video connection is crystal clear, and the privacy of home makes speaking so much easier."
+                </p>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px;">SN</div>
+                <div>
+                  <strong class="d-block text-dark">Subra N.</strong>
+                  <small class="text-muted">Behavioral Health · Chicago, IL</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-white border-top border-bottom" id="faq">
+      <div class="container py-lg-4">
+        <div class="th-section-header text-center">
+          <div class="th-eyebrow">Got Questions?</div>
+          <h2 class="th-section-title">Frequently Asked Questions</h2>
+          <p class="th-section-subtitle">
+            Find instant answers to common questions regarding telehealth appointments, insurance copays, prescriptions, and technology.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <!-- Search & Filter Controls -->
+            <div class="mb-4">
+              <div class="input-group mb-3">
+                <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" class="form-control border-start-0 ps-0" id="faqSearchInput" placeholder="Search questions (e.g., prescriptions, insurance, video requirements)..." />
+              </div>
+
+              <div class="d-flex flex-wrap gap-2 justify-content-center">
+                <button class="th-filter-btn th-faq-cat-btn active" data-cat="all">All FAQs</button>
+                <button class="th-filter-btn th-faq-cat-btn" data-cat="general">General</button>
+                <button class="th-filter-btn th-faq-cat-btn" data-cat="prescriptions">Prescriptions</button>
+                <button class="th-filter-btn th-faq-cat-btn" data-cat="insurance">Insurance &amp; Billing</button>
+                <button class="th-filter-btn th-faq-cat-btn" data-cat="tech">Technical &amp; Privacy</button>
+              </div>
+            </div>
+
+            <!-- Accordion Items -->
+            <div class="accordion th-accordion" id="telehealthFaqAccordion">
+              
+              <!-- Item 1 -->
+              <div class="accordion-item th-faq-item" data-category="general">
+                <h3 class="accordion-header" id="faqHeading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                    What medical conditions can be treated through PoluruCare Telehealth?
+                  </button>
+                </h3>
+                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#telehealthFaqAccordion">
+                  <div class="accordion-body">
+                    Our board-certified physicians can diagnose and treat the vast majority of non-emergency conditions including cold, flu, COVID-19 symptoms, sinus infections, seasonal allergies, bronchitis, sore throats, pink eye, urinary tract infections, skin rashes, pediatric ailments, chronic hypertension monitoring, and mental health counseling.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item th-faq-item" data-category="prescriptions">
+                <h3 class="accordion-header" id="faqHeading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                    How do e-prescriptions work and how quickly can I pick them up?
+                  </button>
+                </h3>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#telehealthFaqAccordion">
+                  <div class="accordion-body">
+                    If your doctor determines medication is medically appropriate, an electronic prescription (eRx) is routed immediately through our secure SureScripts gateway to your preferred local pharmacy (CVS, Walgreens, Costco, Walmart, or independent pharmacy). Most pharmacies have it ready for pick-up within 15 to 30 minutes. Note: We do not prescribe DEA Schedule II controlled substances online.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="accordion-item th-faq-item" data-category="insurance">
+                <h3 class="accordion-header" id="faqHeading3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                    Is telehealth covered by my health insurance plan?
+                  </button>
+                </h3>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#telehealthFaqAccordion">
+                  <div class="accordion-body">
+                    Yes. PoluruCare is in-network with most major insurance providers including Aetna, BlueCross BlueShield, Cigna, UnitedHealthcare, Medicare Part B, and Humana. Most insured patients pay between $0 and $15 in copayments. If you are uninsured, our transparent self-pay visit rates start at just $49.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="accordion-item th-faq-item" data-category="tech">
+                <h3 class="accordion-header" id="faqHeading4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                    Do I need to download an application to join the video appointment?
+                  </button>
+                </h3>
+                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#telehealthFaqAccordion">
+                  <div class="accordion-body">
+                    No downloads or software installs are necessary! Our HIPAA-compliant telehealth rooms run directly in any modern browser (Chrome, Safari, Edge, Firefox) on your iPhone, Android, tablet, or desktop computer. You will receive an SMS and email link to enter the virtual waiting room with a single click.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="accordion-item th-faq-item" data-category="tech">
+                <h3 class="accordion-header" id="faqHeading5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                    How is my personal medical data and video call secured?
+                  </button>
+                </h3>
+                <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#telehealthFaqAccordion">
+                  <div class="accordion-body">
+                    PoluruCare is fully compliant with federal HIPAA and HITECH privacy standards. All video and audio streams are end-to-end encrypted using 256-bit AES encryption. Video consults are never recorded without explicit written consent, and electronic health records are stored in SOC-2 certified clinical vaults.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="accordion-item th-faq-item" data-category="general">
+                <h3 class="accordion-header" id="faqHeading6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                    What if I am experiencing a severe medical emergency?
+                  </button>
+                </h3>
+                <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#telehealthFaqAccordion">
+                  <div class="accordion-body">
+                    Telehealth is intended for non-emergency conditions. If you are experiencing chest pain, severe shortness of breath, signs of stroke (facial drooping, arm weakness, speech difficulty), severe uncontrolled bleeding, or suicidal thoughts, please dial <strong>911</strong> immediately or go to the nearest hospital emergency room.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="faqNoResults" class="text-center py-4 text-muted" style="display: none;">
+              <i class="bi bi-question-circle fs-2 d-block mb-2"></i>
+              No questions found matching your search. Try different terms or reach out to our 24/7 support.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Doctor Bio Preview Modal -->
+  <div class="modal fade" id="doctorBioModal" tabindex="-1" aria-labelledby="docModalName" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-light border-bottom">
+          <div>
+            <h4 class="modal-title h5 fw-bold" id="docModalName">Doctor Name</h4>
+            <span class="text-danger small fw-semibold" id="docModalRole">Specialty Role</span>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-md-5">
+              <div class="p-3 bg-light rounded-3 border mb-3 text-center">
+                <div class="display-4 text-danger mb-2"><i class="bi bi-person-circle"></i></div>
+                <div class="fw-bold" id="docModalSpecialty">Cardiology</div>
+                <div class="text-warning small my-1"><i class="bi bi-star-fill"></i> <span id="docModalRating">4.98</span></div>
+                <span class="badge bg-success-subtle text-success mt-1">Board Certified &amp; Verified</span>
+              </div>
+              <ul class="list-unstyled small text-muted">
+                <li class="mb-2"><strong class="text-dark">Experience:</strong> <span id="docModalExp">18+ Years</span></li>
+                <li class="mb-2"><strong class="text-dark">Languages:</strong> <span id="docModalLang">English, Spanish</span></li>
+                <li class="mb-2"><strong class="text-dark">Standard Fee:</strong> <span id="docModalFee" class="text-danger fw-bold">$69</span></li>
+                <li class="mb-2"><strong class="text-dark">With Insurance:</strong> <span id="docModalFeeIns" class="text-success fw-bold">$15 Copay</span></li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <h5 class="h6 fw-bold">Education &amp; Credentials</h5>
+              <p class="small text-muted mb-3" id="docModalEdu">Harvard Medical School (MD)</p>
+
+              <h5 class="h6 fw-bold">Biography &amp; Clinical Focus</h5>
+              <p class="text-muted small mb-4" id="docModalBio">Doctor biography and background details.</p>
+
+              <button class="btn th-btn-primary w-100 js-book-doctor-direct" id="docModalBookBtn" data-doc-id="doc-subrahmanyam">
+                <i class="bi bi-calendar-check me-2"></i>Select &amp; Book With This Doctor
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Telehealth Video Room Simulator Modal -->
+  <div class="modal fade" id="videoRoomModal" tabindex="-1" aria-labelledby="videoRoomModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg bg-dark text-white">
+        <div class="modal-header border-secondary">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-shield-check text-success fs-5"></i>
+            <span class="fw-bold text-white" id="videoRoomModalTitle">PoluruCare Virtual Exam Room (Interactive Simulator)</span>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">
+          <div class="small text-white-50 mb-2" id="videoRoomStatus">
+            <span class="spinner-grow spinner-grow-sm text-success me-2"></span>Encrypted Telehealth Session Active · Dr. Subrahmanyam Poluru Connected
+          </div>
+
+          <div class="th-video-mock-screen">
+            <div class="th-video-mock-remote">
+              <div class="display-1 text-danger mb-2"><i class="bi bi-person-video"></i></div>
+              <h5 class="text-white mb-1">Dr. Subrahmanyam Poluru, MD</h5>
+              <span class="badge bg-danger">Attending Physician · Live Feed</span>
+              <p class="small text-white-50 mt-2 mb-0">"Hello Subbu, I have reviewed your chart. How are you feeling today?"</p>
+            </div>
+
+            <!-- Self Preview Tile -->
+            <div class="th-video-mock-self" id="selfVideoFeed">
+              <span class="text-white small">Your Camera</span>
+            </div>
+
+            <!-- Video Controls Bar -->
+            <div class="th-video-controls">
+              <button class="th-video-btn mute-btn" id="videoMuteMicBtn" title="Mute/Unmute Mic">
+                <i class="bi bi-mic-fill"></i>
+              </button>
+              <button class="th-video-btn mute-btn" id="videoMuteCamBtn" title="Turn Camera On/Off">
+                <i class="bi bi-camera-video-fill"></i>
+              </button>
+              <button class="th-video-btn bg-primary text-white" title="Chat Box" onclick="alert('Secure Patient Chat: Doctor received your vital logs.');">
+                <i class="bi bi-chat-text-fill"></i>
+              </button>
+              <button class="th-video-btn end-btn" data-bs-dismiss="modal" title="End Call">
+                <i class="bi bi-telephone-x-fill"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="row g-2 mt-2 pt-2 border-top border-secondary text-white-50 small">
+            <div class="col-4"><i class="bi bi-wifi text-success me-1"></i> Connection: HD Excellent</div>
+            <div class="col-4 text-center"><i class="bi bi-lock-fill text-warning me-1"></i> 256-Bit TLS HIPAA Encrypted</div>
+            <div class="col-4 text-end"><i class="bi bi-capsule text-info me-1"></i> eRx Integration: Ready</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Confirmation Modal -->
+  <div class="modal fade" id="bookingConfirmationModal" tabindex="-1" aria-labelledby="bookingConfirmTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-body p-4 text-center">
+          <div class="display-3 text-success mb-2"><i class="bi bi-check-circle-fill"></i></div>
+          <h4 class="h5 fw-bold" id="bookingConfirmTitle">Appointment Confirmed!</h4>
+          <p class="text-muted small mb-3">Your telehealth session has been scheduled successfully.</p>
+
+          <div class="p-3 bg-light rounded-3 text-start small mb-3 border">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Booking Reference:</span>
+              <strong class="text-danger" id="confirmBookingRef">POLURU-894210</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Patient:</span>
+              <strong id="confirmPatientName">Subbu K.</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Physician:</span>
+              <strong id="confirmDoctorName">Dr. Subrahmanyam Poluru</strong>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted">Date &amp; Time:</span>
+              <strong id="confirmDateTime">Today at 02:30 PM</strong>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="text-muted">Visit Type:</span>
+              <strong id="confirmVisitType">HD Video Call</strong>
+            </div>
+          </div>
+
+          <p class="small text-muted mb-4">
+            We have sent an SMS &amp; email confirmation with your direct 1-click video room link.
+          </p>
+
+          <div class="d-flex gap-2">
+            <button class="btn th-btn-primary flex-grow-1" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#videoRoomModal">
+              <i class="bi bi-camera-video me-1"></i>Enter Waiting Room
+            </button>
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Patient Portal Sign-in Modal -->
+  <div class="modal fade" id="patientPortalModal" tabindex="-1" aria-labelledby="portalModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-light">
+          <div class="d-flex align-items-center gap-2">
+            <div class="th-brand-icon" style="width: 32px; height: 32px; font-size: 1rem;"><i class="bi bi-hospital"></i></div>
+            <h5 class="modal-title h6 fw-bold" id="portalModalTitle">PoluruCare Patient Portal</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="portalLoginForm">
+            <div class="mb-3">
+              <label for="portalEmail" class="form-label small fw-bold">Email or Patient ID</label>
+              <input type="email" class="form-control" id="portalEmail" placeholder="subbu@example.com" value="subbu@example.com" required />
+            </div>
+            <div class="mb-3">
+              <label for="portalPassword" class="form-label small fw-bold">Password</label>
+              <input type="password" class="form-control" id="portalPassword" value="••••••••••••" required />
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="portalRemember" checked />
+                <label class="form-check-label small" for="portalRemember">Remember device</label>
+              </div>
+              <a href="#schedule" class="small text-danger" onclick="alert('Password reset link sent to registered email.');">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn th-btn-primary w-100 py-2">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Portal
+            </button>
+          </form>
+          <div class="text-center mt-3">
+            <span class="small text-muted">New to PoluruCare?</span>
+            <a href="#schedule" class="small fw-bold text-danger ms-1" data-bs-dismiss="modal">Register New Patient Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="th-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="th-brand-icon"><i class="bi bi-hospital"></i></div>
+            <span class="h4 text-white fw-bold mb-0">PoluruCare</span>
+          </div>
+          <p class="small text-white-50 mb-3">
+            PoluruCare Telehealth is a nationwide virtual medical clinic connecting patients with certified medical doctors, pediatricians, and psychiatrists 24 hours a day, 7 days a week.
+          </p>
+          <div class="d-flex gap-2">
+            <span class="badge bg-secondary"><i class="bi bi-shield-check me-1"></i>HIPAA Compliant</span>
+            <span class="badge bg-secondary"><i class="bi bi-lock me-1"></i>256-Bit SSL</span>
+            <span class="badge bg-secondary"><i class="bi bi-check2-circle me-1"></i>50 States</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Virtual Services</h5>
+          <ul class="th-footer-links">
+            <li><a href="#services">Urgent Care</a></li>
+            <li><a href="#services">Cardiology</a></li>
+            <li><a href="#services">Tele-Psychiatry</a></li>
+            <li><a href="#services">Pediatrics</a></li>
+            <li><a href="#services">Tele-Dermatology</a></li>
+            <li><a href="#services">e-Prescriptions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5>Quick Links</h5>
+          <ul class="th-footer-links">
+            <li><a href="#doctors">Physician Directory</a></li>
+            <li><a href="#schedule">Book Appointment</a></li>
+            <li><a href="#pricing">Insurance Plans</a></li>
+            <li><a href="#triage">Symptom Checker</a></li>
+            <li><a href="#faq">Patient FAQs</a></li>
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#patientPortalModal">Patient Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>24/7 Clinical Support</h5>
+          <ul class="th-footer-links">
+            <li><i class="bi bi-telephone-fill text-danger me-2"></i><strong>1-800-555-POLURU</strong></li>
+            <li><i class="bi bi-envelope-fill text-danger me-2"></i>care@polurucare.com</li>
+            <li><i class="bi bi-geo-alt-fill text-danger me-2"></i>Medical Center Blvd, Austin, TX</li>
+            <li><i class="bi bi-clock-fill text-danger me-2"></i>Open 24/7 · 365 Days a Year</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Emergency Medical Disclaimer -->
+      <div class="p-3 rounded bg-dark border border-secondary text-white-50 small mt-4">
+        <strong>MEDICAL DISCLAIMER:</strong> PoluruCare is designed for non-emergency medical evaluations and follow-ups. If you are experiencing a life-threatening medical emergency (such as chest pain, severe breathing difficulty, sudden weakness or numbness, or acute trauma), please call <strong>911</strong> or proceed immediately to the nearest hospital emergency department.
+      </div>
+
+      <div class="th-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div>
+          &copy; 2026 <strong>PoluruCare Telehealth</strong>. Designed and Developed by <strong>Subrahmanyam Poluru</strong>.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#faq">Privacy Policy</a>
+          <a href="#faq">Terms of Telehealth Service</a>
+          <a href="#faq">Notice of Privacy Practices (HIPAA)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
