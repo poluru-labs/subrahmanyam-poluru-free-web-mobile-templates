@@ -1,0 +1,18 @@
+
+const $=(s,el=document)=>el.querySelector(s), $$=(s,el=document)=>[...el.querySelectorAll(s)];
+const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
+const save=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));return true}catch{toast('Saved for this session. Browser storage is unavailable.');return false}};
+let toastTimer;function toast(message){$('#toast').textContent=message;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').textContent='',4500)}
+$$('[data-open]').forEach(el=>el.addEventListener('click',()=>$('#'+el.dataset.open).showModal()));
+$$('[data-close]').forEach(el=>el.addEventListener('click',()=>el.closest('dialog').close()));
+$$('dialog').forEach(el=>el.addEventListener('click',e=>{if(e.target===el){const r=el.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)el.close()}}));
+$$('.menu-toggle').forEach(el=>el.addEventListener('click',()=>{const target=document.getElementById(el.getAttribute('aria-controls'));const open=target.classList.toggle('open');el.setAttribute('aria-expanded',String(open))}));
+$$('.nav-links a,.side-links a').forEach(a=>a.addEventListener('click',()=>{const parent=a.closest('.nav-links,.sidebar');if(parent){parent.classList.remove('open');const toggle=$('[aria-controls="'+parent.id+'"]');if(toggle)toggle.setAttribute('aria-expanded','false')}}));
+function downloadFile(name,contents,type='text/plain'){const url=URL.createObjectURL(new Blob([contents],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function csvCell(v){let s=String(v);if(/^[=+@\-\t\r]/.test(s))s="'"+s;return '"'+s.replaceAll('"','""')+'"'}
+
+$$('[data-filter]').forEach(button=>button.addEventListener('click',()=>{$$('[data-filter]').forEach(b=>{b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',b===button)});$$('.project').forEach(p=>p.hidden=button.dataset.filter!=='all'&&p.dataset.category!==button.dataset.filter)}));
+const projectInfo={"01":["Orbit — Brand identity","A movement brand built around the joy of getting outside. The concept includes a warm color palette, expressive typography, and a flexible identity system.","Strategy · Identity · Packaging"],"02":["Forma — Digital experience","A considered home and interiors experience. Calm layouts and a clear product hierarchy make room for the things that matter.","UX research · Website · Design system"],"03":["Off/Beat — Art direction","An independent culture festival with a playful voice. Bold type and unexpected layouts connect the campaign across print and digital.","Campaign concept · Editorial · Art direction"],"04":["Mellow — Digital product","A simple wellbeing app that helps people make room for small daily rituals. Designed for focus, accessibility, and a gentler pace.","Product strategy · Interface · Prototyping"]};
+$$('[data-project]').forEach(b=>b.addEventListener('click',()=>{const [name,desc,scope]=projectInfo[b.dataset.project];$('#project-detail h2').textContent=name;$('#project-content').innerHTML='<p>'+desc+'</p><span class="tag">'+scope+'</span><p class="fine divider">Fictional concept project · Design by Poluru</p>';$('#project-detail').showModal()}));
+$('#contact-form').addEventListener('submit',e=>{e.preventDefault();const item=Object.fromEntries(new FormData(e.target));save('poluru-portfolio-inquiry',item);$('#contact').close();e.target.reset();toast('Inquiry saved in this browser. No message was sent.')});
