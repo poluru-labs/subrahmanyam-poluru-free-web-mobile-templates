@@ -1,0 +1,34 @@
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const { JSDOM } = require(process.env.HLP_DSK_JSDOM || 'jsdom');
+const html = fs.readFileSync('index.html', 'utf8');
+const script = fs.readFileSync('assets/js/script.js', 'utf8');
+const dom = new JSDOM(html, {url:'http://localhost/helpdesk-support/',runScripts:'outside-only',pretendToBeVisual:true});
+const w=dom.window, d=w.document, errors=[];
+w.addEventListener('error',e=>errors.push(e.error));
+w.scrollTo=()=>{};
+w.Chart=class {constructor(el,config){assert.ok(config.data.datasets)} destroy(){}};
+w.HTMLDialogElement.prototype.showModal=function(){this.open=true};
+w.HTMLDialogElement.prototype.close=function(){this.open=false};
+w.eval(script+'\nwindow.testAPI={get db(){return db},state,render,stats,periodTickets,filteredTickets,businessDeadline};');
+const app=w.testAPI;
+const click=s=>{assert.ok(d.querySelector(s),'Missing '+s);d.querySelector(s).click()};
+const submit=(s,values)=>{const form=d.querySelector(s);assert.ok(form,s);Object.entries(values).forEach(([key,value])=>{form.elements.namedItem(key).value=value});form.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}))};
+const navigate=path=>{w.location.hash=path;app.render()};
+assert.equal(app.db.tickets.length,36);assert.equal(app.db.agents.length,6);assert.equal(app.db.articles.length,12);assert.equal(app.db.chats.length,8);
+for(const path of ['overview','tickets','my-tickets','unassigned','high-priority','sla-risk','resolved','ticket/1042','agents','sla','knowledge','article/3','chat','reports','settings','help']){navigate(path);assert.ok(d.querySelector('h1'),path);assert.ok(d.querySelector('#main').textContent.length>100,path)}
+navigate('tickets');click('[data-action="new-ticket"]');submit('#new-ticket-form',{subject:'Test password request',customer:'Ravi',email:'ravi@example.com',description:'Please help me sign in.',priority:'High',agent:'Anu'});assert.equal(app.db.tickets.length,37);const ticket=app.db.tickets[0];assert.equal(ticket.subject,'Test password request');assert.ok(ticket.firstDeadline);assert.ok(new Date(ticket.deadline)>new Date());
+navigate('ticket/'+ticket.id);submit('#reply-form',{type:'Internal note',message:'Verify identity before resetting access.'});assert.equal(ticket.messages.at(-1).type,'note');assert.ok(d.querySelector('.hlp-dsk-note'));submit('#reply-form',{type:'Public reply',message:'Thanks for getting in touch.'});assert.ok(ticket.response>0);
+submit('#ticket-properties',{agent:'Subra',priority:'Urgent',category:'Billing',status:'Pending'});assert.equal(ticket.agent,'Subra');assert.equal(ticket.status,'Pending');click('[data-action="resolve"]');assert.equal(ticket.status,'Resolved');click('[data-action="resolve"]');assert.equal(ticket.status,'Open');
+navigate('tickets');click('.hlp-dsk-ticket-check');click('[data-action="bulk-agent"]');submit('#bulk-form',{value:'Poluru'});assert.equal(app.db.tickets.find(t=>t.id===1042).agent,'Poluru');
+app.state.query='NONEXISTENT QUERY';app.render();assert.ok(d.querySelector('#main').textContent.includes('No tickets match'));click('[data-action="clear-filters"]');assert.equal(app.filteredTickets().length,37);
+navigate('knowledge');click('[data-action="new-article"]');submit('#article-form',{title:'Test guide',category:'Billing',excerpt:'A helpful billing guide.',body:'Step 1: Open billing.\nStep 2: Download invoice.',status:'Draft'});const article=app.db.articles[0];assert.equal(article.status,'Draft');navigate('article/'+article.id);click('[data-action="edit-article"]');click('[data-action="preview-article"]');assert.equal(d.querySelector('#article-preview').hidden,false);submit('#article-form',{status:'Published'});assert.equal(article.status,'Published');click('[data-action="feedback"][data-value="yes"]');assert.equal(app.db.feedback[article.id],'yes');
+navigate('chat');const conv=app.db.chats.find(c=>c.id===app.state.chat);submit('#chat-form',{message:'We are looking into this.'});assert.equal(conv.messages.at(-1).author,'You');click('[data-action="convert-chat"]');submit('#new-ticket-form',{});assert.ok(conv.ticket);assert.equal(app.db.tickets.length,38);
+navigate('settings');submit('#settings-form',{name:'Poluru Support',start:'18:00',end:'09:00'});assert.ok(d.querySelector('#settings-error').textContent);assert.notEqual(app.db.settings.name,'Poluru Support');submit('#settings-form',{name:'Poluru Support',start:'09:00',end:'17:00'});assert.equal(app.db.settings.name,'Poluru Support');
+navigate('overview');click('[data-action="range"][data-value="Custom"]');submit('#range-form',{from:'2026-09-15',to:'2026-09-01'});assert.ok(d.querySelector('#range-error').textContent);submit('#range-form',{from:'2026-09-01',to:'2026-09-30'});assert.equal(app.state.range,'Custom');
+assert.equal(app.businessDeadline(2,new Date('2026-09-18T21:00:00Z')),'2026-09-21T15:00:00.000Z');
+assert.equal(app.businessDeadline(2,new Date('2026-10-30T21:00:00Z')),'2026-11-02T16:00:00.000Z');
+for(const t of app.db.tickets){if(t.resolved)assert.ok(new Date(t.resolved)>=new Date(t.created),'Resolution must follow creation')}
+const saved=JSON.parse(w.localStorage.getItem('hlp-dsk-v1'));assert.equal(saved.tickets.length,38);assert.equal(saved.settings.name,'Poluru Support');assert.equal(errors.length,0,errors.map(String).join('\n'));
+console.log('Passed: 16 routes, seed counts, ticket create/reply/note/properties/resolve/reopen, bulk assignment, filters and empty state, article draft/preview/publish/feedback, chat send/conversion, validation, date ranges, local persistence.');
+w.close();
