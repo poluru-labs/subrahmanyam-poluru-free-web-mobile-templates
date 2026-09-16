@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<!--
+  Gridline — Analytics / BI dashboard
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="theme-color" content="#C45C26" />
+  <meta name="description" content="Gridline — Harbor & Co. analytics desk for Meera Poluru: reports, saved filters, exports, and workspace drill-downs." />
+  <title>Gridline — Harbor North · Meera Poluru</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #c45c26;
+      --color-brand-dark: #9a4519;
+      --color-brand-deep: #6b2e10;
+      --color-brand-soft: #f4e0d2;
+      --color-ink: #1c1914;
+      --color-muted: #6f665c;
+      --color-line: #e4d9cc;
+      --color-canvas: #f4efe8;
+      --color-panel: #fffbf6;
+      --color-night: #1c1914;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="gl-body bg-canvas text-ink font-sans antialiased">
+  <a class="gl-skip-link" href="#main-content">Skip to content</a>
+  <div class="gl-overlay" id="glOverlay" aria-hidden="true"></div>
+
+  <div class="gl-shell">
+    <aside class="gl-sidebar" id="glSidebar" aria-label="Primary">
+      <div class="gl-brand">
+        <a class="gl-brand-link" href="#overview" data-view="overview">
+          <span class="gl-brand-mark" aria-hidden="true"><i class="bi bi-intersect"></i></span>
+          <span>Gridline<em>.</em></span>
+        </a>
+        <button type="button" class="gl-sidebar-close lg:hidden" id="glSidebarClose" aria-label="Close navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <nav class="gl-nav">
+        <p class="gl-nav-label">Desk</p>
+        <ul class="gl-nav-list">
+          <li>
+            <a class="gl-nav-link is-active" href="#overview" data-view="overview" aria-current="page">
+              <i class="bi bi-grid-1x2"></i><span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a class="gl-nav-link" href="#reports" data-view="reports">
+              <i class="bi bi-file-earmark-bar-graph"></i><span>Reports</span>
+              <span class="gl-nav-badge">8</span>
+            </a>
+          </li>
+          <li>
+            <a class="gl-nav-link" href="#explore" data-view="explore">
+              <i class="bi bi-funnel"></i><span>Explore</span>
+            </a>
+          </li>
+          <li>
+            <a class="gl-nav-link" href="#exports" data-view="exports">
+              <i class="bi bi-download"></i><span>Exports</span>
+              <span class="gl-nav-badge">1</span>
+            </a>
+          </li>
+          <li>
+            <a class="gl-nav-link" href="#sources" data-view="sources">
+              <i class="bi bi-database"></i><span>Sources</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="gl-sidebar-foot">
+        <div class="gl-staff">
+          <span class="gl-avatar">MP</span>
+          <p><strong>Meera Poluru</strong>Analytics · Harbor North</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="gl-main">
+      <header class="gl-topbar">
+        <button type="button" class="gl-menu-btn lg:hidden" id="glMenuBtn" aria-label="Open navigation" aria-controls="glSidebar">
+          <i class="bi bi-list"></i>
+        </button>
+        <p class="gl-crumb mb-0">Harbor North / <strong id="glCrumb">Overview</strong></p>
+        <div class="gl-periods" role="group" aria-label="Date range">
+          <button type="button" class="gl-period" data-period="7d">7d</button>
+          <button type="button" class="gl-period is-active" data-period="30d">30d</button>
+          <button type="button" class="gl-period" data-period="q3">Q3</button>
+          <button type="button" class="gl-period" data-period="fy26">FY26</button>
+        </div>
+        <form class="gl-search" id="glTopSearchForm" role="search">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input id="glTopSearch" type="search" placeholder="Search reports…" aria-label="Search reports" />
+        </form>
+        <button type="button" class="gl-icon-btn" id="glBellBtn" aria-label="Alerts, 2 open">
+          <i class="bi bi-bell"></i>
+          <span class="gl-dot"></span>
+        </button>
+        <span class="gl-avatar gl-avatar-ink" aria-hidden="true">MP</span>
+      </header>
+
+      <main id="main-content" class="gl-content" tabindex="-1">
+        <section class="gl-view is-active" id="view-overview" data-title="Overview" aria-labelledby="overview-title">
+          <div class="gl-page-head">
+            <div>
+              <p class="gl-kicker" id="glClock">Tuesday, September 15</p>
+              <h1 class="gl-page-title font-display" id="overview-title">Harbor North close</h1>
+              <p class="gl-page-sub">Snowflake last synced 6 minutes ago. Board pack runs Monday 07:00 for Kavya Poluru. Checkout on Pro annual is still down versus last week.</p>
+            </div>
+            <div class="gl-actions">
+              <button type="button" class="gl-btn gl-btn-ghost" data-view-jump="exports"><i class="bi bi-download"></i> Queue CSV</button>
+              <button type="button" class="gl-btn gl-btn-primary" data-view-jump="explore"><i class="bi bi-funnel"></i> Open explore</button>
+            </div>
+          </div>
+
+          <div class="gl-kpis">
+            <article class="gl-stat is-focus">
+              <p class="gl-stat-label">Recognized revenue</p>
+              <p class="gl-stat-value font-display" id="kpiRevenue">$412,880</p>
+              <p class="gl-trend is-up" id="kpiRevenueDelta">+$24,610 vs prior 30d</p>
+            </article>
+            <article class="gl-stat">
+              <p class="gl-stat-label">Paying workspaces</p>
+              <p class="gl-stat-value font-display" id="kpiWorkspaces">1,184</p>
+              <p class="gl-stat-meta" id="kpiWorkspacesMeta">+22 net new</p>
+            </article>
+            <article class="gl-stat">
+              <p class="gl-stat-label">Net new MRR</p>
+              <p class="gl-stat-value font-display" id="kpiMrr">$18,420</p>
+              <p class="gl-trend is-up" id="kpiMrrDelta">Expansion $11.4k · new $9.8k · churn −$2.8k</p>
+            </article>
+            <article class="gl-stat">
+              <p class="gl-stat-label">Logo churn</p>
+              <p class="gl-stat-value font-display" id="kpiChurn">1.8%</p>
+              <p class="gl-trend is-down" id="kpiChurnDelta">4 logos left · 2 on Starter</p>
+            </article>
+          </div>
+
+          <div class="gl-split">
+            <article class="gl-card">
+              <div class="gl-card-head">
+                <div>
+                  <h2 class="gl-card-title">Monthly recognized revenue</h2>
+                  <p class="gl-result" id="glChartCaption">Mar–Sep 2026 · Harbor product, USD</p>
+                </div>
+                <button type="button" class="gl-text-btn" data-view-jump="explore">Slice by region</button>
+              </div>
+              <div class="gl-chart" id="glChart" role="img" aria-label="Monthly revenue from March to September">
+                <div class="gl-bar" style="--height:42%"><em>248</em><span>Mar</span></div>
+                <div class="gl-bar" style="--height:48%"><em>271</em><span>Apr</span></div>
+                <div class="gl-bar" style="--height:46%"><em>264</em><span>May</span></div>
+                <div class="gl-bar" style="--height:58%"><em>318</em><span>Jun</span></div>
+                <div class="gl-bar" style="--height:62%"><em>341</em><span>Jul</span></div>
+                <div class="gl-bar" style="--height:71%"><em>388</em><span>Aug</span></div>
+                <div class="gl-bar is-peak" style="--height:86%"><em>413</em><span>Sep</span></div>
+              </div>
+            </article>
+
+            <article class="gl-card">
+              <div class="gl-card-head">
+                <h2 class="gl-card-title">Revenue by office</h2>
+                <span class="gl-badge">USD mix</span>
+              </div>
+              <div class="gl-ring" aria-hidden="true">
+                <div>
+                  <strong>1,184</strong>
+                  <small>workspaces</small>
+                </div>
+              </div>
+              <div class="gl-legend"><span><i style="background:#c45c26"></i>Austin</span><strong>38%</strong></div>
+              <div class="gl-legend"><span><i style="background:#1c1914"></i>Hyderabad</span><strong>27%</strong></div>
+              <div class="gl-legend"><span><i style="background:#8a6a4a"></i>London</span><strong>21%</strong></div>
+              <div class="gl-legend"><span><i style="background:#e4d9cc"></i>Toronto</span><strong>14%</strong></div>
+            </article>
+          </div>
+
+          <div class="gl-split gl-split-3">
+            <article class="gl-card">
+              <div class="gl-card-head">
+                <h2 class="gl-card-title">Trial → paid, 30d</h2>
+                <button type="button" class="gl-text-btn" data-open-report="funnel">Open report</button>
+              </div>
+              <div class="gl-funnel">
+                <div class="gl-funnel-row">
+                  <span>Site visits</span>
+                  <div class="gl-funnel-track"><span style="width:100%"></span></div>
+                  <strong>18,420</strong>
+                </div>
+                <div class="gl-funnel-row">
+                  <span>Trials</span>
+                  <div class="gl-funnel-track"><span style="width:72%"></span></div>
+                  <strong>2,106</strong>
+                </div>
+                <div class="gl-funnel-row">
+                  <span>Activated</span>
+                  <div class="gl-funnel-track"><span style="width:50%"></span></div>
+                  <strong>1,448</strong>
+                </div>
+                <div class="gl-funnel-row">
+                  <span>Paid</span>
+                  <div class="gl-funnel-track"><span style="width:18%"></span></div>
+                  <strong>186</strong>
+                </div>
+              </div>
+              <p class="gl-note">Pro annual checkout conversion: 33%, down from 41% last week. Stripe 3DS on UK cards is the usual suspect — Kiran Poluru has the ticket.</p>
+            </article>
+
+            <article class="gl-card">
+              <div class="gl-card-head">
+                <h2 class="gl-card-title">Flags</h2>
+                <button type="button" class="gl-text-btn" data-view-jump="reports">All reports</button>
+              </div>
+              <ul class="gl-feed">
+                <li>
+                  <span class="gl-feed-when">Checkout</span>
+                  <div>
+                    <strong>Pro annual conversion 33%</strong>
+                    <span>Was 41% in the prior 7 days · UK cards</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="gl-feed-when">Expansion</span>
+                  <div>
+                    <strong>Hyderabad seats $4.2k under plan</strong>
+                    <span>Business plan attach is slow in Sep</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="gl-feed-when">Source</span>
+                  <div>
+                    <strong>HubSpot lag 41 minutes</strong>
+                    <span>Snowflake is current · CRM join is stale</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="gl-card">
+              <div class="gl-card-head">
+                <h2 class="gl-card-title">Seat activity</h2>
+                <span class="gl-badge is-mute">12 weeks</span>
+              </div>
+              <div class="gl-heat" aria-label="Weekly active seats heatmap" role="img">
+                <i data-n="2"></i><i data-n="3"></i><i data-n="2"></i><i data-n="4"></i><i data-n="3"></i><i data-n="2"></i><i data-n="1"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i><i data-n="3"></i><i data-n="2"></i>
+                <i data-n="3"></i><i data-n="4"></i><i data-n="3"></i><i data-n="5"></i><i data-n="4"></i><i data-n="2"></i><i data-n="1"></i><i data-n="4"></i><i data-n="5"></i><i data-n="4"></i><i data-n="3"></i><i data-n="2"></i>
+                <i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i><i data-n="4"></i><i data-n="3"></i><i data-n="1"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i><i data-n="5"></i><i data-n="3"></i>
+                <i data-n="3"></i><i data-n="4"></i><i data-n="4"></i><i data-n="5"></i><i data-n="5"></i><i data-n="3"></i><i data-n="2"></i><i data-n="4"></i><i data-n="5"></i><i data-n="5"></i><i data-n="4"></i><i data-n="3"></i>
+              </div>
+              <p class="gl-note">Weekdays hold. Sunday is quiet except Austin on-call. Peak week: Aug 24 after the Pro seat promo.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="gl-view" id="view-reports" hidden aria-labelledby="reports-title">
+          <div class="gl-page-head">
+            <div>
+              <p class="gl-kicker">Saved queries</p>
+              <h1 class="gl-page-title font-display" id="reports-title">Reports</h1>
+              <p class="gl-page-sub">Eight live packs for Harbor North. Owners sit in Austin and Hyderabad. Last run times are from Snowflake, not the browser.</p>
+            </div>
+            <button type="button" class="gl-btn gl-btn-primary" id="glNewReportBtn"><i class="bi bi-plus-lg"></i> New report</button>
+          </div>
+          <div class="gl-toolbar">
+            <div class="gl-chips" role="group" aria-label="Report category">
+              <button type="button" class="gl-chip is-active" data-report-filter="all">All</button>
+              <button type="button" class="gl-chip" data-report-filter="board">Board</button>
+              <button type="button" class="gl-chip" data-report-filter="growth">Growth</button>
+              <button type="button" class="gl-chip" data-report-filter="finance">Finance</button>
+              <button type="button" class="gl-chip" data-report-filter="product">Product</button>
+            </div>
+            <p class="gl-result" id="glReportCount">8 reports</p>
+          </div>
+          <div class="gl-cards" id="glReportGrid">
+            <article class="gl-report" data-category="board" data-search="weekly board pack kavya poluru mrr">
+              <span class="gl-badge">Board</span>
+              <h2>Weekly board pack</h2>
+              <p>MRR bridge, logo count, top ten expansion, and the two flags above. PDF to Kavya Poluru Mondays 07:00.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-ok">Ran Sep 15, 07:10</span>
+                <span class="gl-badge is-mute">Meera Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="Weekly board pack">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="exports">Schedule</button>
+              </div>
+            </article>
+            <article class="gl-report" data-category="growth" data-search="funnel trial paid checkout kiran">
+              <span class="gl-badge">Growth</span>
+              <h2>Trial → paid funnel</h2>
+              <p>Visits, trials, activated seats, paid. Split by plan and office. Kiran Poluru owns the checkout drop ticket.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-ok">Ran Sep 15, 06:42</span>
+                <span class="gl-badge is-mute">Kiran Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="Trial to paid funnel">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="explore">Drill down</button>
+              </div>
+            </article>
+            <article class="gl-report" data-category="finance" data-search="seat mix plan starter pro business leela">
+              <span class="gl-badge">Finance</span>
+              <h2>Seat mix by plan</h2>
+              <p>Starter 41%, Pro 38%, Business 21%. Attach rate for Business in Hyderabad is the gap versus plan.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-ok">Ran Sep 14, 18:05</span>
+                <span class="gl-badge is-mute">Leela Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="Seat mix by plan">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="explore">Drill down</button>
+              </div>
+            </article>
+            <article class="gl-report" data-category="growth" data-search="cohort retention fy26 ravi">
+              <span class="gl-badge">Growth</span>
+              <h2>Cohort retention FY26</h2>
+              <p>Monthly cohorts from Apr. Month-3 logo retention 91% on Pro, 84% on Starter. Ravi Poluru keeps the sheet.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-ok">Ran Sep 13, 09:20</span>
+                <span class="gl-badge is-mute">Ravi Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="Cohort retention FY26">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="exports">Export</button>
+              </div>
+            </article>
+            <article class="gl-report" data-category="product" data-search="nps workspace size nila">
+              <span class="gl-badge">Product</span>
+              <h2>NPS by workspace size</h2>
+              <p>NPS 42 overall. 1–10 seats: 31. 50+ seats: 58. Nila Poluru filed the 1–10 comment themes last Friday.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-warn">Ran Sep 12, 11:14</span>
+                <span class="gl-badge is-mute">Nila Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="NPS by workspace size">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="explore">Drill down</button>
+              </div>
+            </article>
+            <article class="gl-report" data-category="finance" data-search="austin hyderabad expansion ishaan">
+              <span class="gl-badge">Finance</span>
+              <h2>Austin vs Hyderabad expansion</h2>
+              <p>Austin expansion $7.1k this month. Hyderabad $2.9k versus a $7.1k plan. Ishaan Poluru tagged the AE list.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-ok">Ran Sep 15, 08:01</span>
+                <span class="gl-badge is-mute">Ishaan Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="Austin vs Hyderabad expansion">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="explore">Drill down</button>
+              </div>
+            </article>
+            <article class="gl-report" data-category="board" data-search="churn logos starter tara">
+              <span class="gl-badge">Board</span>
+              <h2>Churned logos, 30d</h2>
+              <p>Four logos. Two Starter, one Pro, one Business (Ridge Medical paused, not cancelled). Tara Poluru wrote the notes.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-ok">Ran Sep 15, 07:18</span>
+                <span class="gl-badge is-mute">Tara Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="Churned logos 30d">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="explore">Open list</button>
+              </div>
+            </article>
+            <article class="gl-report" data-category="product" data-search="feature usage reports export priya">
+              <span class="gl-badge">Product</span>
+              <h2>Feature usage: reports &amp; export</h2>
+              <p>62% of Business workspaces ran a report this week. Export CSV is 3× Starter. Priya Poluru wants this on the Q3 review.</p>
+              <div class="gl-report-meta">
+                <span class="gl-badge is-ok">Ran Sep 14, 16:40</span>
+                <span class="gl-badge is-mute">Priya Poluru</span>
+              </div>
+              <div class="gl-actions mt-2">
+                <button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-run-report="Feature usage reports export">Run now</button>
+                <button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-view-jump="exports">Schedule</button>
+              </div>
+            </article>
+          </div>
+          <p class="gl-empty" id="glReportEmpty" hidden>No reports match that filter.</p>
+        </section>
+
+        <section class="gl-view" id="view-explore" hidden aria-labelledby="explore-title">
+          <div class="gl-page-head">
+            <div>
+              <p class="gl-kicker">Workspace fact table</p>
+              <h1 class="gl-page-title font-display" id="explore-title">Explore</h1>
+              <p class="gl-page-sub">Filter the paying book, then click a row for invoices and seats. CSV downloads whatever is on screen.</p>
+            </div>
+            <button type="button" class="gl-btn gl-btn-primary" id="glExploreExport"><i class="bi bi-download"></i> Export visible</button>
+          </div>
+          <div class="gl-filters">
+            <label class="gl-field">Office
+              <select id="glFilterOffice" aria-label="Filter by office">
+                <option value="all">All offices</option>
+                <option value="Austin">Austin</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="London">London</option>
+                <option value="Toronto">Toronto</option>
+              </select>
+            </label>
+            <label class="gl-field">Plan
+              <select id="glFilterPlan" aria-label="Filter by plan">
+                <option value="all">All plans</option>
+                <option value="Starter">Starter</option>
+                <option value="Pro">Pro</option>
+                <option value="Business">Business</option>
+              </select>
+            </label>
+            <label class="gl-field">Channel
+              <select id="glFilterChannel" aria-label="Filter by channel">
+                <option value="all">All channels</option>
+                <option value="Direct">Direct</option>
+                <option value="Partner">Partner</option>
+                <option value="Self-serve">Self-serve</option>
+              </select>
+            </label>
+            <label class="gl-field">Search
+              <input id="glFilterSearch" type="search" placeholder="Workspace or owner" aria-label="Search workspaces" />
+            </label>
+          </div>
+          <p class="gl-result" id="glExploreCount">10 workspaces</p>
+          <div class="gl-card gl-card-flush mt-3">
+            <div class="gl-table-wrap">
+              <table class="gl-table" id="glExploreTable">
+                <thead>
+                  <tr>
+                    <th>Workspace</th>
+                    <th>Plan</th>
+                    <th>Office</th>
+                    <th>Seats</th>
+                    <th>MRR</th>
+                    <th>Channel</th>
+                    <th>Last invoice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-office="Austin" data-plan="Business" data-channel="Direct" data-search="ridge medical kavya poluru healthcare">
+                    <td><strong>Ridge Medical</strong><span>Healthcare · Kavya Poluru</span></td>
+                    <td><span class="gl-badge">Business</span></td>
+                    <td>Austin</td>
+                    <td>84</td>
+                    <td>$6,240</td>
+                    <td>Direct</td>
+                    <td>Sep 12 · paid</td>
+                  </tr>
+                  <tr data-office="Toronto" data-plan="Business" data-channel="Partner" data-search="cedar payroll ravi poluru fintech">
+                    <td><strong>Cedar Payroll</strong><span>Fintech · Ravi Poluru</span></td>
+                    <td><span class="gl-badge">Business</span></td>
+                    <td>Toronto</td>
+                    <td>61</td>
+                    <td>$5,020</td>
+                    <td>Partner</td>
+                    <td>Sep 10 · paid</td>
+                  </tr>
+                  <tr data-office="Toronto" data-plan="Business" data-channel="Direct" data-search="northline freight ishaan poluru logistics">
+                    <td><strong>Northline Freight</strong><span>Logistics · Ishaan Poluru</span></td>
+                    <td><span class="gl-badge">Business</span></td>
+                    <td>Toronto</td>
+                    <td>48</td>
+                    <td>$4,100</td>
+                    <td>Direct</td>
+                    <td>Sep 8 · paid</td>
+                  </tr>
+                  <tr data-office="Austin" data-plan="Business" data-channel="Direct" data-search="stride athletics subbu poluru fitness">
+                    <td><strong>Stride Athletics</strong><span>Fitness · Subbu Poluru</span></td>
+                    <td><span class="gl-badge">Business</span></td>
+                    <td>Austin</td>
+                    <td>40</td>
+                    <td>$3,600</td>
+                    <td>Direct</td>
+                    <td>Sep 11 · paid</td>
+                  </tr>
+                  <tr data-office="Austin" data-plan="Pro" data-channel="Partner" data-search="ashbury academy leela poluru education">
+                    <td><strong>Ashbury Academy</strong><span>Education · Leela Poluru</span></td>
+                    <td><span class="gl-badge">Pro</span></td>
+                    <td>Austin</td>
+                    <td>32</td>
+                    <td>$2,480</td>
+                    <td>Partner</td>
+                    <td>Sep 9 · paid</td>
+                  </tr>
+                  <tr data-office="London" data-plan="Pro" data-channel="Direct" data-search="alder hall nila poluru education">
+                    <td><strong>Alder Hall</strong><span>Education · Nila Poluru</span></td>
+                    <td><span class="gl-badge">Pro</span></td>
+                    <td>London</td>
+                    <td>24</td>
+                    <td>$1,920</td>
+                    <td>Direct</td>
+                    <td>Sep 7 · paid</td>
+                  </tr>
+                  <tr data-office="Hyderabad" data-plan="Pro" data-channel="Self-serve" data-search="mira clinics tara poluru healthcare">
+                    <td><strong>Mira Clinics</strong><span>Healthcare · Tara Poluru</span></td>
+                    <td><span class="gl-badge">Pro</span></td>
+                    <td>Hyderabad</td>
+                    <td>18</td>
+                    <td>$1,140</td>
+                    <td>Self-serve</td>
+                    <td>Sep 13 · paid</td>
+                  </tr>
+                  <tr data-office="London" data-plan="Pro" data-channel="Self-serve" data-search="quill press priya poluru media">
+                    <td><strong>Quill Press</strong><span>Media · Priya Poluru</span></td>
+                    <td><span class="gl-badge">Pro</span></td>
+                    <td>London</td>
+                    <td>11</td>
+                    <td>$880</td>
+                    <td>Self-serve</td>
+                    <td>Sep 6 · paid</td>
+                  </tr>
+                  <tr data-office="Hyderabad" data-plan="Starter" data-channel="Self-serve" data-search="kavya studio kiran poluru agency">
+                    <td><strong>Kavya Studio</strong><span>Agency · Kiran Poluru</span></td>
+                    <td><span class="gl-badge">Starter</span></td>
+                    <td>Hyderabad</td>
+                    <td>6</td>
+                    <td>$290</td>
+                    <td>Self-serve</td>
+                    <td>Sep 4 · paid</td>
+                  </tr>
+                  <tr data-office="Hyderabad" data-plan="Starter" data-channel="Self-serve" data-search="oak and thread meera poluru retail">
+                    <td><strong>Oak &amp; Thread</strong><span>Retail · Meera Poluru</span></td>
+                    <td><span class="gl-badge">Starter</span></td>
+                    <td>Hyderabad</td>
+                    <td>4</td>
+                    <td>$140</td>
+                    <td>Self-serve</td>
+                    <td>Sep 3 · paid</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="gl-empty" id="glExploreEmpty" hidden>No workspaces match those filters.</p>
+          </div>
+        </section>
+
+        <section class="gl-view" id="view-exports" hidden aria-labelledby="exports-title">
+          <div class="gl-page-head">
+            <div>
+              <p class="gl-kicker">Jobs</p>
+              <h1 class="gl-page-title font-display" id="exports-title">Exports</h1>
+              <p class="gl-page-sub">Scheduled packs and one-off downloads. Files stay in this demo; nothing leaves the browser.</p>
+            </div>
+            <button type="button" class="gl-btn gl-btn-primary" id="glQueueExport"><i class="bi bi-plus-lg"></i> Queue job</button>
+          </div>
+          <div class="gl-card gl-card-flush">
+            <div class="gl-table-wrap">
+              <table class="gl-table" id="glExportTable">
+                <thead>
+                  <tr>
+                    <th>Job</th>
+                    <th>Format</th>
+                    <th>Owner</th>
+                    <th>Cadence</th>
+                    <th>Last run</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Weekly board pack</strong><span>Kavya Poluru · Monday 07:00 CT</span></td>
+                    <td>PDF</td>
+                    <td>Meera Poluru</td>
+                    <td>Weekly</td>
+                    <td>Sep 15, 07:10</td>
+                    <td><span class="gl-badge is-ok">Delivered</span></td>
+                    <td><button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-retry="Weekly board pack">Download</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Funnel CSV</strong><span>Growth channel · visits to paid</span></td>
+                    <td>CSV</td>
+                    <td>Kiran Poluru</td>
+                    <td>Daily 06:30</td>
+                    <td>Sep 15, 06:42</td>
+                    <td><span class="gl-badge is-ok">Delivered</span></td>
+                    <td><button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-retry="Funnel CSV">Download</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Finance close workbook</strong><span>Recognized revenue + deferred</span></td>
+                    <td>XLSX</td>
+                    <td>Leela Poluru</td>
+                    <td>Month-end</td>
+                    <td>Sep 14, 22:18</td>
+                    <td><span class="gl-badge is-fail">Failed</span></td>
+                    <td><button type="button" class="gl-btn gl-btn-primary gl-btn-sm" data-retry="Finance close workbook">Retry</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Seat mix snapshot</strong><span>Starter / Pro / Business</span></td>
+                    <td>CSV</td>
+                    <td>Ravi Poluru</td>
+                    <td>Weekly</td>
+                    <td>Sep 14, 18:05</td>
+                    <td><span class="gl-badge is-ok">Delivered</span></td>
+                    <td><button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-retry="Seat mix snapshot">Download</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>NPS comments dump</strong><span>1–10 seat workspaces</span></td>
+                    <td>CSV</td>
+                    <td>Nila Poluru</td>
+                    <td>One-off</td>
+                    <td>Sep 12, 11:14</td>
+                    <td><span class="gl-badge is-warn">Queued</span></td>
+                    <td><button type="button" class="gl-btn gl-btn-ghost gl-btn-sm" data-retry="NPS comments dump">Run now</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="gl-view" id="view-sources" hidden aria-labelledby="sources-title">
+          <div class="gl-page-head">
+            <div>
+              <p class="gl-kicker">Warehouse</p>
+              <h1 class="gl-page-title font-display" id="sources-title">Sources</h1>
+              <p class="gl-page-sub">Four feeds into <code>harbor_prod</code>. HubSpot is the lag. Refresh is a demo toast; nothing is pulled live.</p>
+            </div>
+          </div>
+          <div class="gl-cards" style="grid-template-columns: 1fr">
+            <article class="gl-source">
+              <span class="gl-source-icon" aria-hidden="true"><i class="bi bi-snow"></i></span>
+              <div>
+                <h2>Snowflake · harbor_prod</h2>
+                <p><span class="gl-fresh"></span>Synced 6 min ago · 14 models · dbt run by Meera Poluru</p>
+              </div>
+              <button type="button" class="gl-btn gl-btn-ghost" data-refresh="Snowflake">Refresh</button>
+            </article>
+            <article class="gl-source">
+              <span class="gl-source-icon" aria-hidden="true"><i class="bi bi-broadcast"></i></span>
+              <div>
+                <h2>Segment events</h2>
+                <p><span class="gl-fresh"></span>2 min lag · page, signup, checkout, seat_added</p>
+              </div>
+              <button type="button" class="gl-btn gl-btn-ghost" data-refresh="Segment">Refresh</button>
+            </article>
+            <article class="gl-source">
+              <span class="gl-source-icon" aria-hidden="true"><i class="bi bi-credit-card"></i></span>
+              <div>
+                <h2>Stripe invoices</h2>
+                <p><span class="gl-fresh"></span>14 min lag · invoices, subscriptions, refunds</p>
+              </div>
+              <button type="button" class="gl-btn gl-btn-ghost" data-refresh="Stripe">Refresh</button>
+            </article>
+            <article class="gl-source">
+              <span class="gl-source-icon" aria-hidden="true"><i class="bi bi-people"></i></span>
+              <div>
+                <h2>HubSpot CRM</h2>
+                <p><span class="gl-fresh is-lag"></span>41 min lag · AE owner join is stale for Hyderabad</p>
+              </div>
+              <button type="button" class="gl-btn gl-btn-primary" data-refresh="HubSpot">Retry sync</button>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <dialog class="gl-dialog" id="glDialog" aria-labelledby="glDialogTitle">
+    <div class="gl-dialog-head">
+      <h2 id="glDialogTitle">Workspace</h2>
+      <button type="button" class="gl-icon-btn" id="glDialogClose" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <div id="glDialogBody"></div>
+  </dialog>
+
+  <div class="gl-toast" id="glToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <div>
+      <strong id="glToastTitle">Done</strong>
+      <p id="glToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
