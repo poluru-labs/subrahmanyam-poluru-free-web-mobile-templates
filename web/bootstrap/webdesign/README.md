@@ -10,20 +10,28 @@ A modern, responsive web design services template built with Bootstrap 5 and CSS
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Modern UI/UX**: Clean, professional design with smooth animations
 - **Bootstrap 5**: Built with the latest Bootstrap framework
-- **Interactive Elements**: Hover effects, animations, and carousel
+- **Interactive Elements**: Hover effects, animations, carousel, and portfolio filters
 - **SEO Optimized**: Well-structured HTML with proper meta tags
 - **Cross-Browser Compatible**: Works across all modern browsers
+- **Animated Stats**: Project, client, and satisfaction counters
+- **FAQ Accordion**: Common questions with Bootstrap collapse
+- **Contact & Newsletter**: Client-side validation with toast feedback
+- **Back to Top**: Scroll control and active navigation highlighting
 
 ## Sections Included
 
 - Hero Section with Carousel
 - Our Process
+- Animated Stats
 - Our Clients
 - Services
-- Portfolio
+- Filterable Portfolio
 - Pricing Plans
 - Testimonials
+- Team
+- FAQ
 - Contact Form
+- Newsletter
 - Footer
 
 ## Technologies Used
@@ -71,8 +79,10 @@ The template uses CSS custom properties for easy color customization. You can mo
 ```
 ├── index.html          # Main HTML file
 ├── assets/
-│   └── css/
-│       └── style.css   # Custom CSS styles
+│   ├── css/
+│   │   └── style.css   # Custom CSS styles
+│   └── js/
+│       └── script.js   # Counters, filters, forms, and navigation
 └── README.md           # Project documentation
 ```
 

@@ -10,6 +10,7 @@
    7. Footer
    8. Buttons
    9. Utility Classes
+  10. New Features (Stats, Team, FAQ, Newsletter, Toasts)
    =============================================== */
 
 /* ===============================================
@@ -65,8 +66,13 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 .ftl-main-content {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ===============================================
@@ -304,4 +310,227 @@ h6,
 
 .ftl-text-secondary {
   color: var(--ftl-secondary) !important;
+}
+
+/* ===============================================
+   10. NEW FEATURES
+   =============================================== */
+.ftl-skip-link {
+  background: var(--ftl-primary);
+  color: var(--ftl-white);
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: -3rem;
+  z-index: 2000;
+}
+
+.ftl-skip-link:focus {
+  top: 0.75rem;
+}
+
+.ftl-sticky-header .nav-link {
+  color: var(--ftl-primary);
+}
+
+.ftl-sticky-header .nav-link.active,
+.ftl-sticky-header .nav-link:hover {
+  color: var(--ftl-secondary);
+}
+
+.ftl-stats-section {
+  background: var(--ftl-primary);
+  color: var(--ftl-white);
+  padding: 2.5em 0;
+}
+
+.ftl-stat-card p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.ftl-stats-section .ftl-stat-number {
+  color: var(--ftl-white);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0.35rem 0 0.15rem;
+}
+
+.ftl-stats-section .ftl-icon {
+  color: var(--ftl-secondary);
+}
+
+.ftl-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.ftl-filter-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 2rem;
+  color: var(--ftl-white);
+  padding: 0.4rem 1.1rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ftl-filter-btn:hover,
+.ftl-filter-btn.active {
+  background: var(--ftl-white);
+  border-color: var(--ftl-white);
+  color: var(--ftl-primary);
+}
+
+.ftl-portfolio-card {
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ftl-portfolio-card:hover {
+  box-shadow: 0 0.75em 1.5em var(--ftl-shadow-hover);
+  transform: translateY(-0.25em);
+}
+
+.ftl-team-photo {
+  height: 6rem;
+  object-fit: cover;
+  width: 6rem;
+}
+
+.ftl-team-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ftl-team-card:hover {
+  box-shadow: 0 0.75em 1.5em var(--ftl-shadow-hover);
+  transform: translateY(-0.25em);
+}
+
+.ftl-accordion .accordion-item {
+  border: 1px solid var(--ftl-shadow-light);
+  margin: 0 0 0.75rem;
+  overflow: hidden;
+}
+
+.ftl-accordion .accordion-button {
+  color: var(--ftl-primary);
+  font-weight: 500;
+}
+
+.ftl-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255, 78, 0, 0.08);
+  box-shadow: none;
+  color: var(--ftl-secondary);
+}
+
+.ftl-accordion .accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 78, 0, 0.2);
+}
+
+.ftl-newsletter {
+  background: var(--ftl-secondary);
+  color: var(--ftl-white);
+  padding: 2.5em 0;
+}
+
+.ftl-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ftl-newsletter-form .form-control {
+  flex: 1 1 14rem;
+}
+
+.ftl-newsletter .btn-light {
+  color: var(--ftl-primary);
+  font-weight: 500;
+}
+
+.ftl-newsletter .btn-light:hover,
+.ftl-newsletter .btn-light:focus {
+  background: var(--ftl-primary);
+  color: var(--ftl-white);
+}
+
+.ftl-social {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.ftl-social a {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: var(--ftl-white);
+  display: inline-flex;
+  height: 2.25rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 2.25rem;
+}
+
+.ftl-social a:hover {
+  background: var(--ftl-secondary);
+  color: var(--ftl-white);
+  text-decoration: none;
+}
+
+.ftl-social-inline {
+  justify-content: center;
+  margin: 0;
+}
+
+.ftl-social-inline a {
+  background: rgba(0, 51, 78, 0.08);
+  color: var(--ftl-primary);
+}
+
+.ftl-social-inline a:hover {
+  background: var(--ftl-secondary);
+  color: var(--ftl-white);
+}
+
+.ftl-back-top {
+  align-items: center;
+  background: var(--ftl-secondary);
+  border: 0;
+  border-radius: 50%;
+  bottom: 1.5rem;
+  box-shadow: 0 0.35em 1em var(--ftl-shadow-hover);
+  color: var(--ftl-white);
+  display: inline-flex;
+  height: 2.75rem;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 1.5rem;
+  transition: opacity 0.2s, transform 0.2s;
+  width: 2.75rem;
+  z-index: 1040;
+}
+
+.ftl-back-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ftl-back-top:hover {
+  transform: translateY(-0.15em);
+}
+
+.ftl-toast .toast-header {
+  color: var(--ftl-primary);
+}
+
+@media (max-width: 575.98px) {
+  .ftl-newsletter-form .btn {
+    width: 100%;
+  }
 }
