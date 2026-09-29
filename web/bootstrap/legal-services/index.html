@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Meridian Hale — Legal services
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,709 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meridian Hale — Legal Counsel for People and Companies</title>
+  <meta name="description" content="Meridian Hale is a fictional Chicago counsel practice and a free Bootstrap template. Explore litigation, corporate, family, estate, and employment counsel, then request a sample consultation." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#C62828" />
+  <link rel="canonical" href="https://polurus.com/templates/legal-services/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Meridian Hale — Legal Counsel for People and Companies" />
+  <meta property="og:description" content="A clean, light legal services template with a mega menu, animated hero, practice areas, attorneys, and a consultation form." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Meridian Hale — Legal Counsel for People and Companies" />
+  <meta name="twitter:description" content="A clean, light legal services template with a mega menu, animated hero, practice areas, attorneys, and a consultation form." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Meridian Hale — Legal Counsel for People and Companies",
+        "description": "Fictional legal services website template by Subrahmanyam Poluru. It does not offer legal advice.",
+        "inLanguage": "en",
+        "about": {
+          "@type": "LegalService",
+          "name": "Meridian Hale",
+          "description": "Fictional Chicago counsel practice used as a website demonstration.",
+          "email": "hello@meridianhale.example",
+          "telephone": "+1-312-555-0148",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18 North Harbor Street, Suite 400",
+            "addressLocality": "Chicago",
+            "addressRegion": "IL",
+            "addressCountry": "US"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does a first conversation work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In this demonstration, a first conversation is a 30-minute sample booking. A working firm would use it to learn the facts, check for conflicts, and explain options before any engagement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does counsel cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fees on this page are illustrative. A real engagement would be quoted in writing as hourly, flat, or phased, with the scope and billing rhythm explained before work begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which matters do you take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The sample practice covers corporate transactions, civil litigation, employment, family law, estates, real estate, intellectual property, and immigration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help outside Chicago?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The fictional firm is based in Chicago and describes coordination with local counsel in other states. This template does not create an attorney-client relationship."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Meridian Hale a real law firm?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Meridian Hale is a fictional demonstration by Subrahmanyam Poluru. Do not send confidential information through the form."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="mh-skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="mh-utility">
+      <div class="container mh-utility-inner">
+        <span>Confidential sample consultations · Weekdays 8:30–6:00</span>
+        <div class="mh-utility-meta">
+          <a href="tel:+13125550148"><i class="bi bi-telephone"></i> (312) 555-0148</a>
+          <span>18 North Harbor Street, Chicago</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top mh-nav" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand mh-brand" href="#top">
+          <span class="mh-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 15.5V2.5h2.6v13H1zm13.4 0V2.5H17v13h-2.6zM5.2 7.4h7.6V9.6H5.2V7.4z" fill="#fff"/>
+            </svg>
+          </span>
+          Meridian <strong>Hale</strong>
+        </a>
+        <button class="navbar-toggler mh-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item dropdown mh-has-mega">
+              <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Practice</button>
+              <div class="dropdown-menu mh-mega">
+                <div class="container mh-mega-grid">
+                  <div>
+                    <p class="mh-mega-label">Transactions</p>
+                    <a class="mh-mega-link" href="#corporate"><i class="bi bi-building"></i><span><strong>Corporate</strong><small>Agreements, governance, and sales</small></span></a>
+                    <a class="mh-mega-link" href="#property"><i class="bi bi-houses"></i><span><strong>Real estate</strong><small>Acquisitions, leases, and closings</small></span></a>
+                    <a class="mh-mega-link" href="#ip"><i class="bi bi-lightbulb"></i><span><strong>Intellectual property</strong><small>Marks, licenses, and ownership</small></span></a>
+                  </div>
+                  <div>
+                    <p class="mh-mega-label">Advocacy</p>
+                    <a class="mh-mega-link" href="#litigation"><i class="bi bi-bank"></i><span><strong>Civil litigation</strong><small>Disputes prepared for negotiation or trial</small></span></a>
+                    <a class="mh-mega-link" href="#employment"><i class="bi bi-person-workspace"></i><span><strong>Employment</strong><small>Contracts, exits, and workplace claims</small></span></a>
+                  </div>
+                  <div>
+                    <p class="mh-mega-label">Private clients</p>
+                    <a class="mh-mega-link" href="#family"><i class="bi bi-people"></i><span><strong>Family law</strong><small>Divorce, parenting, and support</small></span></a>
+                    <a class="mh-mega-link" href="#estates"><i class="bi bi-journal-richtext"></i><span><strong>Estates</strong><small>Wills, trusts, and succession</small></span></a>
+                    <a class="mh-mega-link" href="#immigration"><i class="bi bi-globe2"></i><span><strong>Immigration</strong><small>Status, sponsorship, and filings</small></span></a>
+                  </div>
+                  <aside class="mh-mega-feature">
+                    <p>This week</p>
+                    <p class="mh-feature-title">A first conversation, with the clock explained.</p>
+                    <p class="mh-feature-copy">Tell us the matter in plain language. We will say whether the sample practice is a fit.</p>
+                    <a class="mh-btn" href="#consult">Book a consultation</a>
+                  </aside>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown mh-has-mega">
+              <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">The firm</button>
+              <div class="dropdown-menu mh-mega">
+                <div class="container mh-mega-grid">
+                  <div>
+                    <p class="mh-mega-label">The practice</p>
+                    <a class="mh-mega-link" href="#about"><i class="bi bi-compass"></i><span><strong>About Meridian Hale</strong><small>How the fictional firm is framed</small></span></a>
+                    <a class="mh-mega-link" href="#approach"><i class="bi bi-signpost-split"></i><span><strong>Approach</strong><small>Listen, map, act, and stay</small></span></a>
+                    <a class="mh-mega-link" href="#matters"><i class="bi bi-folder2-open"></i><span><strong>Selected matters</strong><small>Illustrative stories, not results</small></span></a>
+                  </div>
+                  <div>
+                    <p class="mh-mega-label">People</p>
+                    <a class="mh-mega-link" href="#attorneys"><i class="bi bi-person-badge"></i><span><strong>Attorneys</strong><small>Four sample counsel profiles</small></span></a>
+                    <a class="mh-mega-link" href="#careers"><i class="bi bi-briefcase"></i><span><strong>Careers</strong><small>How a hiring note would read</small></span></a>
+                  </div>
+                  <div>
+                    <p class="mh-mega-label">Visit</p>
+                    <a class="mh-mega-link" href="#consult"><i class="bi bi-calendar-check"></i><span><strong>Consultation</strong><small>Request a sample conversation</small></span></a>
+                    <a class="mh-mega-link" href="#faq"><i class="bi bi-question-circle"></i><span><strong>Questions</strong><small>Fees, fit, and what this site is</small></span></a>
+                  </div>
+                  <aside class="mh-mega-feature">
+                    <p>Chicago desk</p>
+                    <p class="mh-feature-title">Weekdays, with a real person on the line.</p>
+                    <p class="mh-feature-copy">Call (312) 555-0148 or write hello@meridianhale.example. Nothing sent here is confidential legal advice.</p>
+                    <a class="mh-btn" href="mailto:hello@meridianhale.example">Write the desk</a>
+                  </aside>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown mh-has-mega">
+              <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Insights</button>
+              <div class="dropdown-menu mh-mega">
+                <div class="container mh-mega-grid">
+                  <div>
+                    <p class="mh-mega-label">Briefs</p>
+                    <a class="mh-mega-link" href="#brief-meeting"><i class="bi bi-journal-text"></i><span><strong>First meeting</strong><small>What to gather before you talk</small></span></a>
+                    <a class="mh-mega-link" href="#brief-fees"><i class="bi bi-receipt"></i><span><strong>How fees are explained</strong><small>Scope, rhythm, and writing it down</small></span></a>
+                    <a class="mh-mega-link" href="#brief-documents"><i class="bi bi-files"></i><span><strong>Documents that move a deal</strong><small>The short list counsel actually uses</small></span></a>
+                  </div>
+                  <div>
+                    <p class="mh-mega-label">Answers</p>
+                    <a class="mh-mega-link" href="#faq"><i class="bi bi-chat-left-text"></i><span><strong>Common questions</strong><small>Five answers, written in plain language</small></span></a>
+                    <a class="mh-mega-link" href="#insights"><i class="bi bi-bookmarks"></i><span><strong>All insights</strong><small>Short briefs you can open on the page</small></span></a>
+                  </div>
+                  <div>
+                    <p class="mh-mega-label">Start</p>
+                    <a class="mh-mega-link" href="#consult"><i class="bi bi-send"></i><span><strong>Ask a question</strong><small>Use the sample consultation form</small></span></a>
+                    <a class="mh-mega-link" href="#approach"><i class="bi bi-diagram-3"></i><span><strong>See the path</strong><small>Four steps from first call to updates</small></span></a>
+                  </div>
+                  <aside class="mh-mega-feature">
+                    <p>Read slowly</p>
+                    <p class="mh-feature-title">Short briefs, written the way counsel should speak.</p>
+                    <p class="mh-feature-copy">Each note opens on this page. They are educational samples, not advice for your facts.</p>
+                    <a class="mh-btn" href="#insights">Browse insights</a>
+                  </aside>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#attorneys">Attorneys</a></li>
+            <li class="nav-item"><a class="nav-link" href="#consult">Contact</a></li>
+          </ul>
+          <a class="mh-btn mh-nav-cta d-none d-lg-inline-flex" href="#consult">Book a consultation</a>
+          <a class="mh-btn d-lg-none mt-3" href="#consult">Book a consultation</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="mh-hero" aria-labelledby="hero-title">
+      <div class="mh-orb" aria-hidden="true"></div>
+      <div class="container mh-hero-grid">
+        <div class="mh-hero-copy">
+          <p class="mh-kicker">Chicago counsel · People and companies</p>
+          <h1 class="mh-hero-title" id="hero-title">Clear counsel for matters with <em>real consequence.</em></h1>
+          <p class="mh-hero-lead">Meridian Hale advises families and companies through disputes, agreements, and plans that have to hold up later. The work starts with a conversation you can follow.</p>
+          <div class="mh-actions">
+            <a class="mh-btn" href="#consult">Schedule a consultation <i class="bi bi-arrow-right"></i></a>
+            <a class="mh-btn mh-btn-ghost" href="#practices">View practice areas</a>
+          </div>
+          <ul class="mh-hero-stats">
+            <li><strong>1986</strong><span>Sample founding year</span></li>
+            <li><strong>8</strong><span>Practice areas on this page</span></li>
+            <li><strong>30 min</strong><span>First conversation</span></li>
+          </ul>
+        </div>
+        <div class="mh-hero-panel">
+          <div class="mh-hero-panel-top">
+            <span class="mh-live"><i></i> Counsel available today</span>
+            <span>Chicago desk</span>
+          </div>
+          <p class="mh-hero-quote">“We will tell you what the law can do, and what it should be asked to do.”</p>
+          <div class="mh-float mh-float-a">
+            <i class="bi bi-journal-text"></i>
+            <div>
+              <strong>Matter brief</strong>
+              <span>Options mapped before any filing</span>
+            </div>
+          </div>
+          <div class="mh-float mh-float-b">
+            <i class="bi bi-shield-check"></i>
+            <div>
+              <strong>Confidential by design</strong>
+              <span>A real firm would confirm conflicts first</span>
+            </div>
+          </div>
+          <div class="mh-meter">
+            <span>How a matter begins</span>
+            <ol>
+              <li class="is-on">Listen</li>
+              <li class="is-on">Map</li>
+              <li>Act</li>
+              <li>Stay</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section" id="practices" aria-labelledby="practices-title">
+      <div class="container">
+        <div class="mh-section-head mh-reveal">
+          <p class="mh-kicker">Practice areas</p>
+          <h2 id="practices-title">Counsel across the matters that shape a life or a company.</h2>
+          <p>Choose a starting point. Every sample matter still begins with a conversation about fit, timing, and cost.</p>
+        </div>
+        <div class="mh-practice-grid">
+          <article class="mh-card mh-reveal" id="corporate">
+            <span class="mh-icon"><i class="bi bi-building"></i></span>
+            <h3>Corporate &amp; transactions</h3>
+            <p>Governance, commercial contracts, and the sale or purchase of a closely held company, written so both sides can sign with their eyes open.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+          <article class="mh-card mh-reveal" id="litigation">
+            <span class="mh-icon"><i class="bi bi-bank"></i></span>
+            <h3>Civil litigation</h3>
+            <p>Contract, partnership, and commercial disputes prepared for negotiation, arbitration, or the courtroom, with the budget visible early.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+          <article class="mh-card mh-reveal" id="employment">
+            <span class="mh-icon"><i class="bi bi-person-workspace"></i></span>
+            <h3>Employment</h3>
+            <p>Executive agreements, separations, handbooks, and workplace claims for employers and individuals who need a steady record.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+          <article class="mh-card mh-reveal" id="family">
+            <span class="mh-icon"><i class="bi bi-people"></i></span>
+            <h3>Family law</h3>
+            <p>Divorce, parenting plans, and support questions handled with discretion and a calendar that respects the people involved.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+          <article class="mh-card mh-reveal" id="estates">
+            <span class="mh-icon"><i class="bi bi-journal-richtext"></i></span>
+            <h3>Estate planning</h3>
+            <p>Wills, trusts, and succession for families who want the next generation to inherit a plan, not a puzzle.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+          <article class="mh-card mh-reveal" id="property">
+            <span class="mh-icon"><i class="bi bi-houses"></i></span>
+            <h3>Real estate</h3>
+            <p>Purchases, leases, and closings for owners and operators, with title, use, and risk called out before the wire leaves.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+          <article class="mh-card mh-reveal" id="ip">
+            <span class="mh-icon"><i class="bi bi-lightbulb"></i></span>
+            <h3>Intellectual property</h3>
+            <p>Trademarks, licenses, and ownership clauses that keep a brand, a product, and a collaborator in the right places.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+          <article class="mh-card mh-reveal" id="immigration">
+            <span class="mh-icon"><i class="bi bi-globe2"></i></span>
+            <h3>Immigration</h3>
+            <p>Family and employment-based filings, explained as a sequence of forms, evidence, and dates you can track.</p>
+            <a href="#consult">Discuss a matter <i class="bi bi-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section mh-section-paper" id="about" aria-labelledby="about-title">
+      <div class="container mh-about-grid">
+        <div class="mh-about-copy mh-reveal">
+          <p class="mh-kicker">The firm</p>
+          <h2 id="about-title">A calm desk for decisions that should not be rushed.</h2>
+          <p>Meridian Hale is written as a Chicago counsel practice for people and companies who want the law explained before it is used. The attorneys, matters, and phone number on this page are fictional. The structure is ready for a real firm to replace with its own story.</p>
+          <div class="mh-facts">
+            <div class="mh-fact">
+              <strong>Plain-language advice</strong>
+              <span>Options, risk, and cost in writing before a filing or a signature.</span>
+            </div>
+            <div class="mh-fact">
+              <strong>One responsible partner</strong>
+              <span>A named lawyer stays on the matter from the first call to the last update.</span>
+            </div>
+          </div>
+        </div>
+        <div class="mh-about-panel mh-reveal" id="careers">
+          <h3>Who the work is for</h3>
+          <p>Founders closing a round or a sale. Families rewriting a trust. Employers facing a difficult exit. Individuals who need a dispute handled without theater.</p>
+          <ul class="mh-checklist">
+            <li><i class="bi bi-check-lg"></i><span>Conflicts checked before any sample engagement would begin.</span></li>
+            <li><i class="bi bi-check-lg"></i><span>Pro bono hours reserved each quarter for housing and family clinics.</span></li>
+            <li><i class="bi bi-check-lg"></i><span>Careers are illustrated only. This template does not accept applications.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section" id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="mh-section-head mh-reveal">
+          <p class="mh-kicker">Approach</p>
+          <h2 id="approach-title">Four steps, and you always know which one you are in.</h2>
+          <p>Good counsel is a sequence. The sequence below is the one this sample firm would follow.</p>
+        </div>
+        <div class="mh-step-grid">
+          <article class="mh-step mh-reveal">
+            <span class="mh-step-num">1</span>
+            <h3>Listen</h3>
+            <p>A confidential first conversation. We learn the facts, the deadline, and what a good outcome looks like to you.</p>
+          </article>
+          <article class="mh-step mh-reveal">
+            <span class="mh-step-num">2</span>
+            <h3>Map</h3>
+            <p>Options, risk, and cost in plain language, including the path we would decline to take.</p>
+          </article>
+          <article class="mh-step mh-reveal">
+            <span class="mh-step-num">3</span>
+            <h3>Act</h3>
+            <p>Negotiation, a filing, or a transaction plan, with the draft you will actually read before it goes out.</p>
+          </article>
+          <article class="mh-step mh-reveal">
+            <span class="mh-step-num">4</span>
+            <h3>Stay</h3>
+            <p>Updates you can use: what changed, what it costs, and what happens next.</p>
+          </article>
+        </div>
+        <div class="mh-stats mh-reveal" aria-label="Sample firm figures">
+          <div class="mh-stat"><strong data-count="40">40</strong><span>Years in the sample story</span></div>
+          <div class="mh-stat"><strong data-count="1200">1,200</strong><span>Illustrative matters guided</span></div>
+          <div class="mh-stat"><strong data-count="28">28</strong><span>Attorneys and counsel</span></div>
+          <div class="mh-stat"><strong data-count="14">14</strong><span>States named in the fiction</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section mh-section-paper" id="matters" aria-labelledby="matters-title">
+      <div class="container">
+        <div class="mh-section-head mh-reveal">
+          <p class="mh-kicker">Selected matters</p>
+          <h2 id="matters-title">Illustrative work, told without a client’s name.</h2>
+          <p>These are sample narratives for the template. They are not case results, and they do not predict an outcome.</p>
+        </div>
+        <div class="mh-matter-grid">
+          <article class="mh-matter mh-reveal">
+            <span class="mh-tag">Corporate</span>
+            <h3>A family company, ready to be sold</h3>
+            <p>Counsel coordinated the letter of intent, the disclosure schedule, and the working-capital math so the founders could see the number they would actually keep.</p>
+          </article>
+          <article class="mh-matter mh-reveal">
+            <span class="mh-tag">Employment</span>
+            <h3>An exit that stayed on the record</h3>
+            <p>A separation was rewritten so the release, the reference, and the equity timeline matched. Both sides left with a document they could explain.</p>
+          </article>
+          <article class="mh-matter mh-reveal">
+            <span class="mh-tag">Estates</span>
+            <h3>Three generations, one plan</h3>
+            <p>A trust was restated to name a trustee, a distribution rhythm, and a way for the family to disagree without a lawsuit.</p>
+          </article>
+        </div>
+        <p class="mh-note">Illustrative samples only. Past stories on a real firm site would still not guarantee a future result.</p>
+      </div>
+    </section>
+
+    <section class="mh-section" id="attorneys" aria-labelledby="attorneys-title">
+      <div class="container">
+        <div class="mh-section-head mh-reveal">
+          <p class="mh-kicker">Attorneys</p>
+          <h2 id="attorneys-title">Named counsel, so you know who picks up the work.</h2>
+          <p>Profiles below are fictional. Swap in licensed attorneys, bar numbers, and real photographs when you use the template.</p>
+        </div>
+        <div class="mh-attorney-grid">
+          <article class="mh-attorney mh-reveal">
+            <div class="mh-avatar" aria-hidden="true">EH</div>
+            <h3>Elena Hale</h3>
+            <p class="mh-role">Managing partner · Corporate</p>
+            <p>Leads transactions and keeps the scope of a deal written down before the first markup.</p>
+          </article>
+          <article class="mh-attorney mh-reveal">
+            <div class="mh-avatar" aria-hidden="true">MA</div>
+            <h3>Marcus Adeyemi</h3>
+            <p class="mh-role">Partner · Litigation</p>
+            <p>Prepares commercial disputes for settlement or trial, and says early when a case should not be filed.</p>
+          </article>
+          <article class="mh-attorney mh-reveal">
+            <div class="mh-avatar" aria-hidden="true">PS</div>
+            <h3>Priya Shah</h3>
+            <p class="mh-role">Partner · Employment</p>
+            <p>Drafts executive agreements and guides workplace claims with a record the client can follow.</p>
+          </article>
+          <article class="mh-attorney mh-reveal">
+            <div class="mh-avatar" aria-hidden="true">JO</div>
+            <h3>James Okonkwo</h3>
+            <p class="mh-role">Counsel · Family &amp; estates</p>
+            <p>Helps families through divorce, trusts, and the documents that have to work years from now.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section mh-section-paper" id="voices" aria-labelledby="voices-title">
+      <div class="container">
+        <div class="mh-section-head mh-reveal">
+          <p class="mh-kicker">Clients</p>
+          <h2 id="voices-title">What a clear update feels like.</h2>
+        </div>
+        <div class="mh-quote-grid">
+          <blockquote class="mh-quote mh-reveal">
+            <span class="mh-quote-mark" aria-hidden="true">“</span>
+            <p>They told us the three ways the sale could fail, then removed two of them from the draft. We always knew the next date.</p>
+            <footer>
+              <strong>Helena Voss</strong>
+              Founder, Northmill Goods · sample client
+            </footer>
+          </blockquote>
+          <div class="mh-mini-stack">
+            <blockquote class="mh-mini-quote mh-reveal">
+              <p>The parenting plan was written in sentences we could both live with. That was the point.</p>
+              <footer>
+                <strong>David Chen</strong>
+                Private client · sample
+              </footer>
+            </blockquote>
+            <blockquote class="mh-mini-quote mh-reveal">
+              <p>Our employment question came back as a memo with a recommendation, a cost, and a no.</p>
+              <footer>
+                <strong>Amira Haddad</strong>
+                General counsel, Fieldnote · sample
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <div class="mh-section-head mh-reveal">
+          <p class="mh-kicker">Insights</p>
+          <h2 id="insights-title">Short briefs for the week you decide to call.</h2>
+          <p>Open a note for a little more detail. These are general samples, not advice for a specific matter.</p>
+        </div>
+        <div class="mh-post-grid">
+          <article class="mh-post mh-reveal" id="brief-meeting">
+            <span class="mh-tag">Preparation</span>
+            <h3>What to bring to a first meeting</h3>
+            <p>A timeline, the contract or order you already have, and the date you cannot miss. Leave the binder. Bring the question.</p>
+            <details>
+              <summary>Read the brief</summary>
+              <p class="mh-more">Write the story in one page: who, what changed, and what you want. Counsel can ask for the rest. A working firm would also send a conflicts list before the meeting is confirmed.</p>
+            </details>
+          </article>
+          <article class="mh-post mh-reveal" id="brief-fees">
+            <span class="mh-tag">Fees</span>
+            <h3>How fees are usually explained</h3>
+            <p>Hourly, flat, or phased. The useful version names the work included, the work that costs extra, and when you will see an invoice.</p>
+            <details>
+              <summary>Read the brief</summary>
+              <p class="mh-more">Ask for the scope in writing before anyone drafts. A sample firm on this page would rather decline a matter than hide the meter. Figures elsewhere on the site are illustrative.</p>
+            </details>
+          </article>
+          <article class="mh-post mh-reveal" id="brief-documents">
+            <span class="mh-tag">Transactions</span>
+            <h3>Documents that keep a deal moving</h3>
+            <p>A letter of intent, a disclosure list, and a closing checklist. Most delays start when one of those three is missing.</p>
+            <details>
+              <summary>Read the brief</summary>
+              <p class="mh-more">Put the economic terms in the letter before the long agreement. Name who owns the drafts. Set a date for the wires. The rest of the paper should serve those three decisions.</p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section mh-section-paper" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-4">
+            <div class="mh-section-head mh-reveal">
+              <p class="mh-kicker">Questions</p>
+              <h2 id="faq-title">Asked before the first call.</h2>
+              <p>Straight answers about this sample practice, including the most important one.</p>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion mh-accordion mh-reveal" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-h1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c1" aria-expanded="true" aria-controls="faq-c1">How does a first conversation work?</button>
+                </h3>
+                <div id="faq-c1" class="accordion-collapse collapse show" aria-labelledby="faq-h1" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">It is framed here as 30 minutes. A working firm would learn the facts, check for conflicts, and explain options before any engagement letter. Submitting the form on this demo does not book a real appointment.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-h2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c2" aria-expanded="false" aria-controls="faq-c2">What does counsel cost?</button>
+                </h3>
+                <div id="faq-c2" class="accordion-collapse collapse" aria-labelledby="faq-h2" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Fees on this page are illustrative. A real engagement would be quoted in writing as hourly, flat, or phased, with the scope and the billing rhythm explained before work begins.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-h3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c3" aria-expanded="false" aria-controls="faq-c3">Which matters do you take?</button>
+                </h3>
+                <div id="faq-c3" class="accordion-collapse collapse" aria-labelledby="faq-h3" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">The sample practice covers corporate transactions, civil litigation, employment, family law, estates, real estate, intellectual property, and immigration. A real firm would also say what it declines.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-h4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c4" aria-expanded="false" aria-controls="faq-c4">Can you help outside Chicago?</button>
+                </h3>
+                <div id="faq-c4" class="accordion-collapse collapse" aria-labelledby="faq-h4" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">The fictional firm is based in Chicago and describes coordination with local counsel in other states. Licensing rules are real; this template does not claim admission in any jurisdiction.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-h5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c5" aria-expanded="false" aria-controls="faq-c5">Is Meridian Hale a real law firm?</button>
+                </h3>
+                <div id="faq-c5" class="accordion-collapse collapse" aria-labelledby="faq-h5" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">No. Meridian Hale is a fictional demonstration by Subrahmanyam Poluru. Do not send confidential information through the form. Nothing on this page is legal advice or an offer of representation.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mh-section" id="consult" aria-labelledby="consult-title">
+      <div class="container mh-consult-grid">
+        <div class="mh-consult-copy mh-reveal">
+          <p class="mh-kicker">Consultation</p>
+          <h2 id="consult-title">Request a confidential conversation.</h2>
+          <p>Tell us the shape of the matter. On a live site this form would reach the desk. Here it stays in your browser so you can see the confirmation.</p>
+          <ul class="mh-checklist">
+            <li><i class="bi bi-clock"></i><span>Framed as a 30-minute first conversation.</span></li>
+            <li><i class="bi bi-shield-check"></i><span>A real firm would confirm conflicts before it listens to details.</span></li>
+            <li><i class="bi bi-envelope"></i><span>hello@meridianhale.example · (312) 555-0148</span></li>
+          </ul>
+        </div>
+        <div class="mh-form-card mh-reveal">
+          <form id="consult-form" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="consult-name">Full name</label>
+                <input class="form-control" id="consult-name" name="name" type="text" autocomplete="name" required />
+                <div class="invalid-feedback">Enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="consult-email">Email</label>
+                <input class="form-control" id="consult-email" name="email" type="email" autocomplete="email" required />
+                <div class="invalid-feedback">Enter a valid email address.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="consult-phone">Phone</label>
+                <input class="form-control" id="consult-phone" name="phone" type="tel" autocomplete="tel" required />
+                <div class="invalid-feedback">Enter a phone number.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="consult-practice">Practice area</label>
+                <select class="form-select" id="consult-practice" name="practice" required>
+                  <option value="">Select a practice</option>
+                  <option>Corporate &amp; transactions</option>
+                  <option>Civil litigation</option>
+                  <option>Employment</option>
+                  <option>Family law</option>
+                  <option>Estate planning</option>
+                  <option>Real estate</option>
+                  <option>Intellectual property</option>
+                  <option>Immigration</option>
+                </select>
+                <div class="invalid-feedback">Select a practice area.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="consult-message">How can we help?</label>
+                <textarea class="form-control" id="consult-message" name="message" required placeholder="Share only what you are comfortable putting in a demo form."></textarea>
+                <div class="invalid-feedback">Add a short note about the matter.</div>
+              </div>
+              <div class="col-12">
+                <button class="mh-btn" type="submit">Send the request <i class="bi bi-arrow-right"></i></button>
+                <p class="mh-fine">This demonstration does not create an attorney-client relationship and does not send your message anywhere.</p>
+              </div>
+            </div>
+          </form>
+          <div class="mh-success" id="consult-success" hidden tabindex="-1">
+            <h3>Request noted in this browser.</h3>
+            <p>Thank you. Nothing was sent, because Meridian Hale is a demonstration. A working firm would reply within one business day and would tell you if it cannot take the matter.</p>
+            <button class="mh-btn mh-btn-ghost" id="consult-reset" type="button">Write another note</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mh-footer">
+    <div class="container">
+      <div class="mh-footer-grid">
+        <div class="mh-footer-brand">
+          <a class="mh-brand" href="#top">
+            <span class="mh-mark" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M1 15.5V2.5h2.6v13H1zm13.4 0V2.5H17v13h-2.6zM5.2 7.4h7.6V9.6H5.2V7.4z" fill="#fff"/>
+              </svg>
+            </span>
+            Meridian <strong>Hale</strong>
+          </a>
+          <p class="mt-3">A light legal services template for counsel practices. Fictional firm. Free for personal and commercial use.</p>
+        </div>
+        <nav aria-label="Practice">
+          <h2>Practice</h2>
+          <a href="#corporate">Corporate</a>
+          <a href="#litigation">Litigation</a>
+          <a href="#employment">Employment</a>
+          <a href="#family">Family law</a>
+          <a href="#estates">Estates</a>
+        </nav>
+        <nav aria-label="Firm">
+          <h2>Firm</h2>
+          <a href="#about">About</a>
+          <a href="#approach">Approach</a>
+          <a href="#attorneys">Attorneys</a>
+          <a href="#insights">Insights</a>
+          <a href="#faq">Questions</a>
+        </nav>
+        <div>
+          <h2>Desk</h2>
+          <a href="tel:+13125550148">(312) 555-0148</a>
+          <a href="mailto:hello@meridianhale.example">hello@meridianhale.example</a>
+          <p>18 North Harbor Street<br />Suite 400, Chicago</p>
+        </div>
+      </div>
+      <div class="mh-legal">
+        <span>© <span id="year">2026</span> Meridian Hale. Fictional sample. Not legal advice.</span>
+        <span>Template by <a href="https://polurus.com" target="_blank" rel="noopener">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
