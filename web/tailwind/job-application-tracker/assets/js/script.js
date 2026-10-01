@@ -1,51 +1,277 @@
-(() => {
-'use strict';
-const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const key='poluru:'+document.body.dataset.template+':';
-const read=(k,f)=>{try{return JSON.parse(localStorage.getItem(key+k))??f}catch{return f}};
-const write=(k,v)=>{try{localStorage.setItem(key+k,JSON.stringify(v));return true}catch{return false}};
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let toastTimer;
-function toast(message){$('.toast')?.remove();const n=document.createElement('div');n.className='toast';n.setAttribute('role','status');n.textContent=message;document.body.append(n);clearTimeout(toastTimer);toastTimer=setTimeout(()=>n.remove(),4500)}
-const dialog=$('dialog');
-function show(title,body){$('#dialog-title').textContent=title;$('#dialog-body').innerHTML=body;dialog.showModal()}
-$('.close').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close()}});
-let filter='All';
-function search(){const q=($('.search')?.value||'').trim().toLowerCase();const items=$$('[data-search]');let visible=0;items.forEach(item=>{const match=(filter==='All'||item.dataset.category===filter)&&item.dataset.search.toLowerCase().includes(q);item.hidden=!match;if(match)visible++});$$('.empty').forEach(n=>n.hidden=visible>0)}
-$$('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;$$('[data-filter]').forEach(t=>{t.classList.toggle('active',t===b);t.setAttribute('aria-pressed',String(t===b))});search()}));
-$('.search')?.addEventListener('input',search);
-const saved=read('favorites',[]);$$('.favorite').forEach(b=>{if(saved.includes(b.getAttribute('aria-label'))){b.setAttribute('aria-pressed','true');b.textContent='♥'}});
-const habits=read('habits',{});$$('[data-action="habit"]').forEach(b=>{if(b.dataset.key in habits){b.setAttribute('aria-pressed',String(habits[b.dataset.key]));b.textContent=habits[b.dataset.key]?'✓':'·'}});
-function habitTotals(){const bs=$$('[data-action="habit"]');if(!bs.length)return;const n=bs.filter(b=>b.getAttribute('aria-pressed')==='true').length;$$('.metric')[1].textContent=`${n} / ${bs.length}`;const pct=Math.round(n/bs.length*100);$('.ring strong').textContent=pct+'%';$('.ring').style.background=`conic-gradient(var(--brand) 0 ${pct}%,var(--soft) ${pct}% 100%)`}
-habitTotals();if($('#journal'))$('#journal').value=read('journal','');
-$$('[data-grocery]').forEach(b=>{b.checked=read('grocery:'+b.dataset.grocery,false);b.addEventListener('change',()=>{if(!write('grocery:'+b.dataset.grocery,b.checked))toast('Browser storage is unavailable; this check lasts for this visit.')})});
-function totals(){if(!$('#invoice-lines'))return;let subtotal=0;$$('.invoice-line').forEach(r=>{const qty=Math.min(10000,Math.max(0,Number($('.item-qty',r).value)||0));const rate=Math.min(1000000,Math.max(0,Number($('.item-rate',r).value)||0));subtotal+=qty*rate});const pct=Math.min(100,Math.max(0,Number($('#tax-rate').value)||0));const tax=subtotal*pct/100;const fmt=n=>n.toLocaleString('en-US',{style:'currency',currency:'USD'});$('#subtotal').textContent=fmt(subtotal);$('#tax-total').textContent=fmt(tax);$('#tax-label').textContent=pct;$('#grand-total').textContent=fmt(subtotal+tax)}
-document.addEventListener('input',e=>{if(e.target.matches('.item-qty,.item-rate,#tax-rate'))totals()});
-$('[data-chart-period]')?.addEventListener('change',event=>{const values=event.target.selectedIndex?[27,32,38,45,42,51,48,60,64,69,72,78]:[35,48,42,58,51,66,62,78,69,83,76,90];$$('.bar').forEach((bar,i)=>bar.style.setProperty('--height',values[i]+'%'));$('.chart').setAttribute('aria-label',event.target.value+' monthly activity: '+values.join(', '))});
-let ctx,oscillators=[],playing=false;
-async function play(){try{if(playing){oscillators.forEach(o=>o.stop());oscillators=[];playing=false;await ctx.suspend()}else{ctx??=new(window.AudioContext||window.webkitAudioContext)();await ctx.resume();[130.81,164.81,196].forEach((f,i)=>{const osc=ctx.createOscillator(),g=ctx.createGain();osc.frequency.value=f;osc.type='sine';g.gain.value=.025;osc.connect(g);g.connect(ctx.destination);osc.start();oscillators.push(osc)});playing=true}const b=$('[data-action="play"]');if(b)b.textContent=playing?'Ⅱ Pause':'▶ Play'}catch{toast('Audio is unavailable in this browser.')}}
-function localForm(title,kind){const isBooking=/Book|Reserve|Meet|Plan/.test(kind);show(title,`<p class="small">${isBooking?'Choose a preferred date and leave your details.':'Leave your details and a short note.'} This template saves a demo request in this browser; nothing is sent.</p><form id="request-form"><label>Your name<input name="name" autocomplete="name" placeholder="Subra" required maxlength="100"></label><label>Email address<input name="email" type="email" autocomplete="email" placeholder="subra@example.com" required></label>${isBooking?'<label>Preferred date<input type="date" name="date" min="'+new Date().toLocaleDateString('en-CA')+'" required></label>':''}<label>Your note<textarea name="note" placeholder="Tell us a little more…" maxlength="2000"></textarea></label><button class="primary" type="submit">Save demo request</button></form>`);$('#request-form').addEventListener('submit',event=>{event.preventDefault();const data=Object.fromEntries(new FormData(event.target));const requests=read('requests',[]);requests.push({title,...data});if(write('requests',requests)){dialog.close();toast('Demo request saved in this browser. Nothing was sent.')}else toast('Browser storage is unavailable. Your request has not been saved.')})}
-document.addEventListener('click',async event=>{const b=event.target.closest('[data-action]');if(!b)return;const action=b.dataset.action,title=b.dataset.title||'Let’s make something good.';
-if(action==='favorite'){const active=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(active));b.textContent=active?'♥':'♡';const all=$$('.favorite').filter(x=>x.getAttribute('aria-pressed')==='true').map(x=>x.getAttribute('aria-label'));if(!write('favorites',all))toast('Saved for this visit; browser storage is unavailable.')}
-else if(action==='save'){const books=read('reading-list',[]);if(!books.includes(title))books.push(title);if(write('reading-list',books)){b.textContent='On your reading list ✓';toast('Saved to your reading list in this browser.')}else toast('Browser storage is unavailable.')}
-else if(action==='habit'){const active=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(active));b.textContent=active?'✓':'·';habits[b.dataset.key]=active;if(!write('habits',habits))toast('This check lasts for this visit; browser storage is unavailable.');habitTotals()}
-else if(action==='journal'){toast(write('journal',$('#journal').value)?'Reflection saved in this browser.':'Browser storage is unavailable. Your reflection was not saved.')}
-else if(action==='add-line'){const line=$('.invoice-line').cloneNode(true);$('.item-name',line).value='';$('.item-qty',line).value=1;$('.item-rate',line).value=0;$('#invoice-lines').append(line);$('.item-name',line).focus();totals()}
-else if(action==='remove-line'){if($$('.invoice-line').length>1){b.closest('.invoice-line').remove();totals()}else toast('Keep at least one invoice item.')}
-else if(action==='print'){window.print()}
-else if(action==='move'){const card=b.closest('.job-card'),col=card.closest('.kanban-column'),next=col.nextElementSibling;if(next){next.append(card);if(!next.nextElementSibling){b.textContent='At offer stage ✓';b.disabled=true}$$('.kanban-column').forEach(c=>$('.badge',c).textContent=$$('.job-card',c).length);toast('Opportunity moved to '+next.dataset.stage+'.')}}
-else if(action==='swap'){const card=b.closest('.day'),h=$('h4',card),alternate=h.textContent==='Roasted veggie & chickpea bowl';h.textContent=alternate?'Garden harvest bowl':'Roasted veggie & chickpea bowl';$('img',card).src='https://images.unsplash.com/'+(alternate?'photo-1512621776951-a57141f2eefd':'photo-1546069901-ba9599a7e63c')+'?auto=format&fit=crop&w=600&q=80';$('img',card).alt=h.textContent;toast('Dinner updated for '+$('h3',card).textContent+'.')}
-else if(action==='play'){await play()}
-else if(action==='workout'){show('Your full-body session','<p class="small">Coach Subra · 45 minutes · Check each exercise as you go.</p>'+['5-minute warm-up','Goblet squat · 3 × 12','Dumbbell row · 3 × 10','Push-ups · 3 × 8','Plank · 3 × 30 seconds','5-minute cool-down'].map(x=>'<label class="row"><input type="checkbox"><span>'+x+'</span></label>').join(''))}
-else if(action==='ticket'){show(title,'<p class="small">From '+esc(b.dataset.sender)+' · '+esc(b.dataset.status)+'</p><p>Hi team, '+esc(title.toLowerCase())+' I’d appreciate a hand when you have a moment. Thank you!</p><form id="reply-form"><label>Your reply<textarea required placeholder="Hi '+esc(b.dataset.sender)+', happy to help…"></textarea></label><button class="primary">Save reply draft</button><p class="small">A local demo draft. No message is sent.</p></form>');$('#reply-form').addEventListener('submit',event=>{event.preventDefault();if(write('reply:'+title,$('textarea',event.target).value)){dialog.close();toast('Reply draft saved locally. Nothing was sent.')}else toast('Browser storage is unavailable.')})}
-else if(action==='export'){const rows=$$('table tr').map(r=>$$('th,td',r).map(c=>'"'+c.textContent.replace(/"/g,'""')+'"').join(','));const data=rows.length?rows.join('\n'):'Metric,Value\n'+$$('.stat').map(n=>'"'+$('.small',n).textContent+'","'+$('.metric',n).textContent+'"').join('\n');const url=URL.createObjectURL(new Blob([data],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=document.body.dataset.template+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Your report has been downloaded.')}
-else if(action==='modal'){const kind=b.dataset.kind||'Send inquiry';if(kind==='Play mix'){if($('#track-name'))$('#track-name').textContent=title;if(!playing)await play();toast('Playing an original ambient demo for '+title+'.')}
-else if(kind==='Add to order'){const cart=read('cart',[]);cart.push(title);if(write('cart',cart)){b.textContent='Added ✓';toast(cart.length+' item'+(cart.length===1?'':'s')+' in your demo order.')}else toast('Browser storage is unavailable.')}
-else if(kind==='View recipe'){const pasta=/Sunday/.test(title),greens=/Garden/.test(title);const ingredients=pasta?['250 g pasta','2 tbsp olive oil','2 garlic cloves','2 cups cherry tomatoes','Fresh basil']:greens?['4 cups mixed greens','1 cucumber','1 avocado','2 tbsp lemon juice','2 tbsp olive oil']:['1 cup cooked grains','1 can chickpeas, drained','2 cups seasonal vegetables','2 tbsp tahini','Lemon juice and fresh herbs'];show(title,'<p class="small">From Subra, Poluru & Subbu’s kitchen · Serves '+(pasta?'4':'2')+'</p><h3>What you’ll need</h3><ul>'+ingredients.map(x=>'<li>'+x+'</li>').join('')+'</ul><h3>Make it yours</h3><ol><li>'+(pasta?'Cook the pasta in salted water until tender.':greens?'Wash and dry the greens. Slice the cucumber and avocado.':'Warm the grains and chickpeas. Chop the vegetables.')+'</li><li>'+(pasta?'Warm the oil, soften the garlic, then add tomatoes and cook for 10 minutes.':greens?'Whisk olive oil and lemon juice with a pinch of salt.':'Roast the vegetables with olive oil at 400°F for 20 minutes.')+'</li><li>'+(pasta?'Toss pasta with the sauce and finish with fresh basil.':greens?'Toss gently with the dressing and serve right away.':'Arrange in bowls, drizzle with tahini and lemon, and finish with herbs.')+'</li></ol>')}
-else if(/View course|View program/.test(kind)){show(title,'<p class="small">Led by Poluru, Subra & Subbu · Self-paced learning</p><h3>Your learning path</h3>'+['Start with the foundations','Practice the core concepts','Build a small project','Review, refine, and share'].map((x,i)=>'<div class="row"><span class="badge">0'+(i+1)+'</span><strong>'+x+'</strong></div>').join('')+'<p class="small" style="margin-top:20px">This is a course catalog demo. Lessons and enrollment are not connected.</p>')}
-else if(kind==='View property'||kind==='Explore celebration'||kind==='Offer details'){show(title,'<p class="eyebrow">THE DETAILS</p><h3>'+esc(title)+'</h3><p>'+(kind==='View property'?'A thoughtfully maintained property with bright shared spaces, a welcoming community, and a dedicated team. Your property contact is Subra.':kind==='Offer details'?'Senior designer · Remote · Full-time. Contact: Subbu. Review the role, discuss your next steps, and celebrate how far you’ve come.':'A warm, personal gathering brought to life with seasonal flowers, thoughtful details, and the people who matter most. Planned by Subra with Poluru and Subbu.')+'</p><p class="small">Sample content for this template.</p>')}
-else localForm(title,kind)}
-});
-totals();
+(function () {
+  "use strict";
+
+  var STORAGE = "folio:jobs";
+  var stages = [
+    { id: "saved", label: "Saved" },
+    { id: "applied", label: "Applied" },
+    { id: "interview", label: "Interview" },
+    { id: "offer", label: "Offer" }
+  ];
+  var order = stages.map(function (stage) { return stage.id; });
+
+  var seed = [
+    { id: "n1", company: "Northwind Press", role: "Editor", place: "Remote", stage: "applied", follow: "2026-10-08" },
+    { id: "n2", company: "Harbor & Co", role: "Product designer", place: "Chicago", stage: "interview", follow: "2026-10-06" },
+    { id: "n3", company: "Lumen Field", role: "Frontend developer", place: "Austin", stage: "saved", follow: "" },
+    { id: "n4", company: "Kindred Lab", role: "Researcher", place: "Remote", stage: "offer", follow: "2026-10-10" },
+    { id: "n5", company: "Paper Route", role: "Brand designer", place: "Chicago", stage: "applied", follow: "2026-10-15" },
+    { id: "n6", company: "Oak & Wire", role: "Support lead", place: "Remote", stage: "closed", follow: "" }
+  ];
+
+  var jobs = load();
+  var filter = "all";
+  var query = "";
+
+  var year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORAGE);
+      var parsed = raw ? JSON.parse(raw) : null;
+      if (Array.isArray(parsed) && parsed.length) return parsed;
+    } catch (error) {
+      return seed.map(copy);
+    }
+    return seed.map(copy);
+  }
+
+  function copy(job) {
+    return {
+      id: job.id,
+      company: job.company,
+      role: job.role,
+      place: job.place,
+      stage: job.stage,
+      follow: job.follow || ""
+    };
+  }
+
+  function save() {
+    try { localStorage.setItem(STORAGE, JSON.stringify(jobs)); } catch (error) { /* visit-only */ }
+  }
+
+  function esc(value) {
+    return String(value).replace(/[&<>"']/g, function (char) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char];
+    });
+  }
+
+  function labelFor(id) {
+    if (id === "closed") return "Passed";
+    var match = stages.find(function (stage) { return stage.id === id; });
+    return match ? match.label : id;
+  }
+
+  function visible(job) {
+    var hay = (job.company + " " + job.role + " " + job.place).toLowerCase();
+    var stageOk = filter === "all"
+      ? job.stage !== "closed"
+      : job.stage === filter;
+    return stageOk && (query === "" || hay.indexOf(query) !== -1);
+  }
+
+  function paintStats() {
+    var open = jobs.filter(function (job) { return job.stage !== "closed"; }).length;
+    var talk = jobs.filter(function (job) { return job.stage === "interview"; }).length;
+    var offers = jobs.filter(function (job) { return job.stage === "offer"; }).length;
+    var follows = jobs.filter(function (job) { return job.stage !== "closed" && job.follow; }).length;
+    setText("stat-open", String(open));
+    setText("stat-talk", String(talk));
+    setText("stat-offer", String(offers));
+    setText("stat-follow", String(follows));
+
+    var next = jobs
+      .filter(function (job) { return job.stage === "interview" || job.stage === "offer"; })
+      .sort(function (a, b) { return (a.follow || "9999").localeCompare(b.follow || "9999"); })[0];
+    setText("next-company", next ? next.company : "Nothing scheduled");
+    setText("next-meta", next ? next.role + " · " + labelFor(next.stage) : "Add a role to start the sample board.");
+  }
+
+  function setText(id, value) {
+    var node = document.getElementById(id);
+    if (node) node.textContent = value;
+  }
+
+  function card(job) {
+    var next = order.indexOf(job.stage);
+    var advance = next > -1 && next < order.length - 1;
+    var follow = job.follow ? "<p class=\"mt-2 text-sm text-muted\">Follow-up " + esc(job.follow) + "</p>" : "";
+    var move = advance
+      ? "<button type=\"button\" class=\"rounded-full bg-brand px-3 py-1.5 text-sm font-bold text-white hover:bg-brand-dark\" data-move=\"" + esc(job.id) + "\">Move forward</button>"
+      : "<span class=\"text-sm font-bold text-brand\">" + (job.stage === "offer" ? "Offer stage" : "Passed") + "</span>";
+    var pass = job.stage === "closed"
+      ? ""
+      : "<button type=\"button\" class=\"rounded-full border border-line px-3 py-1.5 text-sm font-bold text-ink hover:bg-brand-soft\" data-pass=\"" + esc(job.id) + "\">Pass</button>";
+    return "<article class=\"fo-card rounded-2xl border border-line bg-canvas p-4\">"
+      + "<p class=\"text-xs font-bold uppercase tracking-wide text-brand\">" + esc(job.place) + "</p>"
+      + "<h3 class=\"mt-1 font-display text-xl text-ink\">" + esc(job.role) + "</h3>"
+      + "<p class=\"text-muted\">" + esc(job.company) + "</p>"
+      + follow
+      + "<div class=\"mt-3 flex flex-wrap gap-2\">" + move + pass + "</div>"
+      + "</article>";
+  }
+
+  function paintBoard() {
+    var board = document.getElementById("board");
+    var empty = document.getElementById("board-empty");
+    if (!board) return;
+    var columns = filter === "all" ? stages : [{ id: filter, label: labelFor(filter) }];
+    var shown = 0;
+    board.className = filter === "all"
+      ? "grid gap-4 lg:grid-cols-4"
+      : "grid gap-4";
+    board.innerHTML = columns.map(function (stage) {
+      var items = jobs.filter(function (job) {
+        return job.stage === stage.id && visible(job);
+      });
+      shown += items.length;
+      var cards = items.length
+        ? items.map(card).join("")
+        : "<p class=\"text-sm text-muted\">Nothing in " + esc(stage.label.toLowerCase()) + ".</p>";
+      return "<section class=\"rounded-3xl border border-line bg-white p-4 shadow-[0_12px_30px_rgba(233,69,96,0.06)]\" aria-label=\"" + esc(stage.label) + "\">"
+        + "<header class=\"mb-3 flex items-center justify-between\">"
+        + "<h3 class=\"font-display text-lg text-ink\">" + esc(stage.label) + "</h3>"
+        + "<span class=\"rounded-full bg-brand-soft px-2.5 py-1 text-xs font-bold text-brand\">" + items.length + "</span>"
+        + "</header>"
+        + "<div class=\"grid gap-3\">" + cards + "</div>"
+        + "</section>";
+    }).join("");
+    if (empty) empty.hidden = shown !== 0;
+    setText("board-count", shown + (shown === 1 ? " role" : " roles"));
+  }
+
+  function paintFollows() {
+    var list = document.getElementById("follow-list");
+    if (!list) return;
+    var items = jobs
+      .filter(function (job) { return job.follow && job.stage !== "closed"; })
+      .sort(function (a, b) { return a.follow.localeCompare(b.follow); });
+    list.innerHTML = items.length
+      ? items.map(function (job) {
+        return "<li class=\"flex items-center justify-between gap-3 border-b border-line py-3 last:border-0\">"
+          + "<div><strong class=\"font-display\">" + esc(job.company) + "</strong>"
+          + "<p class=\"text-sm text-muted\">" + esc(job.role) + " · " + esc(labelFor(job.stage)) + "</p></div>"
+          + "<span class=\"text-sm font-bold text-brand\">" + esc(job.follow) + "</span></li>";
+      }).join("")
+      : "<li class=\"text-muted\">No follow-ups on the sample board.</li>";
+  }
+
+  function paint() {
+    paintStats();
+    paintBoard();
+    paintFollows();
+  }
+
+  document.querySelectorAll("[data-stage]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      filter = button.getAttribute("data-stage");
+      document.querySelectorAll("[data-stage]").forEach(function (other) {
+        var on = other === button;
+        other.setAttribute("aria-pressed", on ? "true" : "false");
+        other.classList.toggle("bg-brand", on);
+        other.classList.toggle("text-white", on);
+        other.classList.toggle("border-brand", on);
+        other.classList.toggle("bg-white", !on);
+        other.classList.toggle("text-ink", !on);
+      });
+      paintBoard();
+    });
+  });
+
+  var search = document.getElementById("role-search");
+  if (search) {
+    search.addEventListener("input", function () {
+      query = search.value.trim().toLowerCase();
+      paintBoard();
+    });
+  }
+
+  var board = document.getElementById("board");
+  if (board) {
+    board.addEventListener("click", function (event) {
+      var move = event.target.closest("[data-move]");
+      var pass = event.target.closest("[data-pass]");
+      var id = move ? move.getAttribute("data-move") : pass ? pass.getAttribute("data-pass") : "";
+      if (!id) return;
+      var job = jobs.find(function (item) { return item.id === id; });
+      if (!job) return;
+      if (move) {
+        var index = order.indexOf(job.stage);
+        if (index > -1 && index < order.length - 1) job.stage = order[index + 1];
+      }
+      if (pass) job.stage = "closed";
+      save();
+      paint();
+    });
+  }
+
+  var form = document.getElementById("add-form");
+  var success = document.getElementById("add-success");
+  var resetBtn = document.getElementById("add-reset");
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.classList.add("was-validated");
+        return;
+      }
+      var data = new FormData(form);
+      jobs.unshift({
+        id: "n" + Date.now(),
+        company: String(data.get("company")).trim(),
+        role: String(data.get("role")).trim(),
+        place: String(data.get("place")).trim() || "Remote",
+        stage: String(data.get("stage")),
+        follow: String(data.get("follow") || "")
+      });
+      save();
+      form.reset();
+      form.classList.remove("was-validated");
+      form.hidden = true;
+      if (success) {
+        success.hidden = false;
+        setText("add-success-line", "Added on this page. Nothing was sent.");
+      }
+      paint();
+    });
+  }
+  if (resetBtn && form) {
+    resetBtn.addEventListener("click", function () {
+      form.hidden = false;
+      if (success) success.hidden = true;
+      form.reset();
+      form.classList.remove("was-validated");
+    });
+  }
+
+  var restore = document.getElementById("restore-sample");
+  if (restore) {
+    restore.addEventListener("click", function () {
+      jobs = seed.map(copy);
+      try { localStorage.removeItem(STORAGE); } catch (error) { /* ignore */ }
+      filter = "all";
+      query = "";
+      if (search) search.value = "";
+      if (form) {
+        form.hidden = false;
+        form.reset();
+        form.classList.remove("was-validated");
+      }
+      if (success) success.hidden = true;
+      document.querySelectorAll("[data-stage]").forEach(function (button) {
+        var on = button.getAttribute("data-stage") === "all";
+        button.setAttribute("aria-pressed", on ? "true" : "false");
+        button.classList.toggle("bg-brand", on);
+        button.classList.toggle("text-white", on);
+        button.classList.toggle("border-brand", on);
+        button.classList.toggle("bg-white", !on);
+        button.classList.toggle("text-ink", !on);
+      });
+      paint();
+    });
+  }
+
+  paint();
 })();
