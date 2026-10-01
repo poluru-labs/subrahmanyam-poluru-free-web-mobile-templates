@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Cove">
+  <rect width="32" height="32" rx="8" fill="#0F3040"/>
+  <path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" d="M10 13.5v5M16 9.5v13M22 13.5v5"/>
+</svg>

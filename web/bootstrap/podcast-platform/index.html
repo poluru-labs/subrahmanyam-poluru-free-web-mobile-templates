@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Cove — Podcast platform
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,516 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cove — A quieter place to press play</title>
+  <meta name="description" content="Cove is a fictional podcast platform template. Browse sample shows, filter episodes, and use the demonstration player. Designed by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0F3040" />
+  <link rel="canonical" href="https://polurus.com/templates/podcast-platform/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Cove — A quieter place to press play" />
+  <meta property="og:description" content="A clean podcast platform template with shows, episode filters, a sample player, and a subscribe note." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cove — A quieter place to press play" />
+  <meta name="twitter:description" content="A clean podcast platform template with shows, episode filters, a sample player, and a subscribe note." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Cove — A quieter place to press play",
+        "description": "Fictional podcast platform template by Subrahmanyam Poluru. It does not publish or stream real shows.",
+        "inLanguage": "en",
+        "about": {
+          "@type": "PodcastSeries",
+          "name": "Cove",
+          "description": "Fictional podcast house used as a website demonstration."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Cove a real podcast network?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Cove is a fictional demonstration by Subrahmanyam Poluru. The shows, hosts, and episodes are samples."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the player stream audio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The player is a demonstration. It tracks time, speed, and episode order in the browser. No audio file is attached."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do new episodes arrive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The sample schedule is Thursday mornings. A working network would publish through its hosting service and RSS feed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I submit a show?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Sunday note form stays in this browser. It does not accept show submissions or send email."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="cv-skip" href="#main">Skip to content</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top cv-nav" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand cv-brand" href="#top">
+          <span class="cv-mark" aria-hidden="true"><i class="bi bi-soundwave"></i></span>
+          Cove
+        </a>
+        <button class="navbar-toggler cv-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#shows">Shows</a></li>
+            <li class="nav-item"><a class="nav-link" href="#episodes">Episodes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hosts">Hosts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
+          </ul>
+          <button class="cv-btn ms-lg-3 mt-3 mt-lg-0" type="button" data-play="ep-table">Listen <i class="bi bi-play-fill"></i></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="cv-hero" aria-labelledby="hero-title">
+      <div class="container cv-hero-grid">
+        <div class="cv-hero-copy">
+          <p class="cv-kicker">Podcast house · Sample catalog</p>
+          <h1 id="hero-title">Press play.<br />Stay for the <em>last minute.</em></h1>
+          <p class="cv-lead">Cove gathers reported shows, long conversations, and short field notes. Pick an episode. The player on this page keeps your place for the visit.</p>
+          <div class="cv-actions">
+            <button class="cv-btn" type="button" data-play="ep-table">Play the latest <i class="bi bi-play-fill"></i></button>
+            <a class="cv-btn cv-btn-ghost" href="#episodes">Browse episodes</a>
+          </div>
+          <ul class="cv-platforms" aria-label="Listening apps in this sample">
+            <li><i class="bi bi-apple"></i> Apple Podcasts</li>
+            <li><i class="bi bi-spotify"></i> Spotify</li>
+            <li><i class="bi bi-rss"></i> RSS</li>
+          </ul>
+        </div>
+
+        <article class="cv-hero-panel">
+          <div class="cv-hero-top">
+            <span class="cv-live"><i></i> Latest episode</span>
+            <span>42 min</span>
+          </div>
+          <div class="cv-feature">
+            <span class="cv-cover cv-cover-a" aria-hidden="true"><i class="bi bi-mic"></i></span>
+            <div>
+              <p class="cv-kicker">The Long Table</p>
+              <h2>A table for the people who stayed</h2>
+              <p>Mira Poluru sits with three guests who never left the dinner. A sample conversation, not a live recording.</p>
+            </div>
+          </div>
+          <div class="cv-wave" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="cv-hero-actions">
+            <button class="cv-btn" type="button" data-play="ep-table">Play episode <i class="bi bi-play-fill"></i></button>
+            <a class="cv-btn cv-btn-ghost" href="#ep-table">See it in the list</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cv-section" id="shows" aria-labelledby="shows-title">
+      <div class="container">
+        <div class="cv-section-head cv-reveal">
+          <div>
+            <p class="cv-kicker">Shows</p>
+            <h2 id="shows-title">Six shows. One quiet shelf.</h2>
+            <p>Each show is a sample. Open its episodes, or follow it for this visit only.</p>
+          </div>
+        </div>
+        <div class="cv-show-grid">
+          <article class="cv-show cv-reveal">
+            <span class="cv-cover cv-cover-a" aria-hidden="true"><i class="bi bi-mic"></i></span>
+            <h3>The Long Table</h3>
+            <p>Conversations that begin after the plates are cleared and nobody is performing.</p>
+            <div class="cv-show-actions">
+              <button class="cv-text-btn" type="button" data-filter-show="The Long Table">Episodes</button>
+              <button class="cv-follow" type="button" aria-pressed="false">Follow</button>
+            </div>
+          </article>
+          <article class="cv-show cv-reveal">
+            <span class="cv-cover cv-cover-b" aria-hidden="true"><i class="bi bi-receipt"></i></span>
+            <h3>Field Receipt</h3>
+            <p>Reported stories from ordinary rooms: a bakery, a library desk, a night bus.</p>
+            <div class="cv-show-actions">
+              <button class="cv-text-btn" type="button" data-filter-show="Field Receipt">Episodes</button>
+              <button class="cv-follow" type="button" aria-pressed="false">Follow</button>
+            </div>
+          </article>
+          <article class="cv-show cv-reveal">
+            <span class="cv-cover cv-cover-c" aria-hidden="true"><i class="bi bi-moon-stars"></i></span>
+            <h3>After the Bell</h3>
+            <p>Interviews recorded when the shift is over and the answer can be slower.</p>
+            <div class="cv-show-actions">
+              <button class="cv-text-btn" type="button" data-filter-show="After the Bell">Episodes</button>
+              <button class="cv-follow" type="button" aria-pressed="false">Follow</button>
+            </div>
+          </article>
+          <article class="cv-show cv-reveal">
+            <span class="cv-cover cv-cover-d" aria-hidden="true"><i class="bi bi-cloud-rain"></i></span>
+            <h3>Small Weather</h3>
+            <p>Field notes under twenty minutes. One place, one sound, no recap.</p>
+            <div class="cv-show-actions">
+              <button class="cv-text-btn" type="button" data-filter-show="Small Weather">Episodes</button>
+              <button class="cv-follow" type="button" aria-pressed="false">Follow</button>
+            </div>
+          </article>
+          <article class="cv-show cv-reveal">
+            <span class="cv-cover cv-cover-e" aria-hidden="true"><i class="bi bi-pencil"></i></span>
+            <h3>Second Draft</h3>
+            <p>How a piece actually gets made, including the paragraph that had to go.</p>
+            <div class="cv-show-actions">
+              <button class="cv-text-btn" type="button" data-filter-show="Second Draft">Episodes</button>
+              <button class="cv-follow" type="button" aria-pressed="false">Follow</button>
+            </div>
+          </article>
+          <article class="cv-show cv-reveal">
+            <span class="cv-cover cv-cover-f" aria-hidden="true"><i class="bi bi-chat-square-quote"></i></span>
+            <h3>Night Window</h3>
+            <p>One guest and the question they meant to ask the first time.</p>
+            <div class="cv-show-actions">
+              <button class="cv-text-btn" type="button" data-filter-show="Night Window">Episodes</button>
+              <button class="cv-follow" type="button" aria-pressed="false">Follow</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section cv-section-paper" id="episodes" aria-labelledby="episodes-title">
+      <div class="container">
+        <div class="cv-section-head cv-reveal">
+          <div>
+            <p class="cv-kicker">Episodes</p>
+            <h2 id="episodes-title">The shelf, in order.</h2>
+            <p>Filter by kind of show, search a title, or save a few for this visit. Nothing is stored after you leave.</p>
+          </div>
+        </div>
+        <div class="cv-toolbar">
+          <div class="cv-chips" role="toolbar" aria-label="Filter episodes">
+            <button class="cv-chip is-on" type="button" data-category="all" aria-pressed="true">All</button>
+            <button class="cv-chip" type="button" data-category="conversations" aria-pressed="false">Conversations</button>
+            <button class="cv-chip" type="button" data-category="reported" aria-pressed="false">Reported</button>
+            <button class="cv-chip" type="button" data-category="interviews" aria-pressed="false">Interviews</button>
+            <button class="cv-chip" type="button" data-category="field" aria-pressed="false">Field notes</button>
+            <button class="cv-chip" type="button" data-category="craft" aria-pressed="false">Craft</button>
+            <button class="cv-chip" type="button" data-category="saved" aria-pressed="false">Saved</button>
+          </div>
+          <div class="cv-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <label class="visually-hidden" for="episode-search">Search episodes</label>
+            <input id="episode-search" type="search" placeholder="Search shows or titles" autocomplete="off" />
+          </div>
+        </div>
+        <p class="cv-count" id="episode-count">8 episodes</p>
+        <div class="cv-list">
+          <article class="cv-episode" id="ep-table" data-show="The Long Table" data-title="A table for the people who stayed" data-category="conversations" data-minutes="42" data-cover="cv-cover-a">
+            <span class="cv-index">01</span>
+            <span class="cv-cover cv-cover-a" aria-hidden="true"><i class="bi bi-mic"></i></span>
+            <div>
+              <h3>A table for the people who stayed</h3>
+              <p class="cv-meta">The Long Table · Conversations · <time datetime="2026-09-24">Sep 24, 2026</time></p>
+            </div>
+            <span class="cv-time">42:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode A table for the people who stayed"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-table" aria-label="Play A table for the people who stayed"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+          <article class="cv-episode" id="ep-bakery" data-show="Field Receipt" data-title="The bakery that keeps the extra key" data-category="reported" data-minutes="36" data-cover="cv-cover-b">
+            <span class="cv-index">02</span>
+            <span class="cv-cover cv-cover-b" aria-hidden="true"><i class="bi bi-receipt"></i></span>
+            <div>
+              <h3>The bakery that keeps the extra key</h3>
+              <p class="cv-meta">Field Receipt · Reported · <time datetime="2026-09-22">Sep 22, 2026</time></p>
+            </div>
+            <span class="cv-time">36:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode The bakery that keeps the extra key"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-bakery" aria-label="Play The bakery that keeps the extra key"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+          <article class="cv-episode" id="ep-shift" data-show="After the Bell" data-title="What the night shift hears" data-category="interviews" data-minutes="29" data-cover="cv-cover-c">
+            <span class="cv-index">03</span>
+            <span class="cv-cover cv-cover-c" aria-hidden="true"><i class="bi bi-moon-stars"></i></span>
+            <div>
+              <h3>What the night shift hears</h3>
+              <p class="cv-meta">After the Bell · Interviews · <time datetime="2026-09-18">Sep 18, 2026</time></p>
+            </div>
+            <span class="cv-time">29:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode What the night shift hears"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-shift" aria-label="Play What the night shift hears"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+          <article class="cv-episode" id="ep-rain" data-show="Small Weather" data-title="Rain on a tin roof" data-category="field" data-minutes="14" data-cover="cv-cover-d">
+            <span class="cv-index">04</span>
+            <span class="cv-cover cv-cover-d" aria-hidden="true"><i class="bi bi-cloud-rain"></i></span>
+            <div>
+              <h3>Rain on a tin roof</h3>
+              <p class="cv-meta">Small Weather · Field notes · <time datetime="2026-09-16">Sep 16, 2026</time></p>
+            </div>
+            <span class="cv-time">14:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode Rain on a tin roof"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-rain" aria-label="Play Rain on a tin roof"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+          <article class="cv-episode" id="ep-draft" data-show="Second Draft" data-title="Cutting the third paragraph" data-category="craft" data-minutes="33" data-cover="cv-cover-e">
+            <span class="cv-index">05</span>
+            <span class="cv-cover cv-cover-e" aria-hidden="true"><i class="bi bi-pencil"></i></span>
+            <div>
+              <h3>Cutting the third paragraph</h3>
+              <p class="cv-meta">Second Draft · Craft · <time datetime="2026-09-11">Sep 11, 2026</time></p>
+            </div>
+            <span class="cv-time">33:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode Cutting the third paragraph"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-draft" aria-label="Play Cutting the third paragraph"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+          <article class="cv-episode" id="ep-window" data-show="Night Window" data-title="Ask the question you meant" data-category="interviews" data-minutes="48" data-cover="cv-cover-f">
+            <span class="cv-index">06</span>
+            <span class="cv-cover cv-cover-f" aria-hidden="true"><i class="bi bi-chat-square-quote"></i></span>
+            <div>
+              <h3>Ask the question you meant</h3>
+              <p class="cv-meta">Night Window · Interviews · <time datetime="2026-09-08">Sep 8, 2026</time></p>
+            </div>
+            <span class="cv-time">48:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode Ask the question you meant"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-window" aria-label="Play Ask the question you meant"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+          <article class="cv-episode" id="ep-bread" data-show="The Long Table" data-title="Bread, and the person who taught you" data-category="conversations" data-minutes="39" data-cover="cv-cover-a">
+            <span class="cv-index">07</span>
+            <span class="cv-cover cv-cover-a" aria-hidden="true"><i class="bi bi-mic"></i></span>
+            <div>
+              <h3>Bread, and the person who taught you</h3>
+              <p class="cv-meta">The Long Table · Conversations · <time datetime="2026-09-03">Sep 3, 2026</time></p>
+            </div>
+            <span class="cv-time">39:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode Bread, and the person who taught you"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-bread" aria-label="Play Bread, and the person who taught you"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+          <article class="cv-episode" id="ep-library" data-show="Field Receipt" data-title="A library fine, paid in stories" data-category="reported" data-minutes="31" data-cover="cv-cover-b">
+            <span class="cv-index">08</span>
+            <span class="cv-cover cv-cover-b" aria-hidden="true"><i class="bi bi-receipt"></i></span>
+            <div>
+              <h3>A library fine, paid in stories</h3>
+              <p class="cv-meta">Field Receipt · Reported · <time datetime="2026-08-28">Aug 28, 2026</time></p>
+            </div>
+            <span class="cv-time">31:00</span>
+            <div class="cv-episode-actions">
+              <button class="cv-save" type="button" aria-pressed="false" aria-label="Save episode A library fine, paid in stories"><i class="bi bi-bookmark"></i></button>
+              <button class="cv-icon-btn" type="button" data-play="ep-library" aria-label="Play A library fine, paid in stories"><i class="bi bi-play-fill"></i></button>
+            </div>
+          </article>
+        </div>
+        <p class="cv-empty" id="episode-empty" hidden>No episodes match that filter.</p>
+      </div>
+    </section>
+
+    <section class="cv-section" aria-labelledby="pull-title">
+      <div class="container">
+        <blockquote class="cv-pull cv-reveal">
+          <p id="pull-title">Finish the episode. Then tell someone the part you remember.</p>
+          <footer>A house rule at Cove, written for this template.</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="cv-section cv-section-paper" id="hosts" aria-labelledby="hosts-title">
+      <div class="container">
+        <div class="cv-section-head cv-reveal">
+          <div>
+            <p class="cv-kicker">Hosts</p>
+            <h2 id="hosts-title">Three voices on the sample slate.</h2>
+            <p>Names below are fictional. Replace them with working hosts when you use the template.</p>
+          </div>
+        </div>
+        <div class="cv-host-grid">
+          <article class="cv-host cv-reveal">
+            <div class="cv-avatar" aria-hidden="true">MP</div>
+            <h3>Mira Poluru</h3>
+            <p class="cv-role">Host · The Long Table</p>
+            <p>Keeps the conversation at the table until the useful sentence arrives, then leaves the silence in.</p>
+          </article>
+          <article class="cv-host cv-reveal">
+            <div class="cv-avatar" aria-hidden="true">AP</div>
+            <h3>Arun Poluru</h3>
+            <p class="cv-role">Host · Field Receipt</p>
+            <p>Reports from rooms most shows walk past. Asks who has the key, and who is trusted with it.</p>
+          </article>
+          <article class="cv-host cv-reveal">
+            <div class="cv-avatar" aria-hidden="true">LP</div>
+            <h3>Leela Poluru</h3>
+            <p class="cv-role">Host · After the Bell</p>
+            <p>Records when the shift is done. One guest, a clear question, and time enough to answer it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section" id="subscribe" aria-labelledby="subscribe-title">
+      <div class="container cv-split">
+        <div class="cv-reveal">
+          <p class="cv-kicker">Subscribe</p>
+          <h2 id="subscribe-title">A Sunday note, when a real house would send one.</h2>
+          <p>New sample episodes are marked for Thursday mornings. The note below confirms in this browser and is not emailed.</p>
+          <div class="cv-form-card mt-4">
+            <form id="join-form" class="cv-join" novalidate>
+              <label class="visually-hidden" for="join-email">Email</label>
+              <input id="join-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+              <button class="cv-btn" type="submit">Get the note</button>
+            </form>
+            <p class="cv-fine">Demonstration only. Cove does not store this address or add you to a list.</p>
+            <div id="join-success" hidden tabindex="-1">
+              <h3>Noted on this page.</h3>
+              <p>Nothing was sent. A working show would confirm from its own mail service and include an unsubscribe link.</p>
+              <button class="cv-btn cv-btn-ghost" id="join-reset" type="button">Use another address</button>
+            </div>
+          </div>
+        </div>
+        <div class="cv-reveal">
+          <p class="cv-kicker">Questions</p>
+          <h2 class="visually-hidden">Common questions</h2>
+          <div class="accordion cv-accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-h1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c1" aria-expanded="true" aria-controls="faq-c1">Is Cove a real podcast network?</button>
+              </h3>
+              <div id="faq-c1" class="accordion-collapse collapse show" aria-labelledby="faq-h1" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">No. Cove is a fictional demonstration by Subrahmanyam Poluru. The shows, hosts, and episodes are samples for this template.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-h2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c2" aria-expanded="false" aria-controls="faq-c2">Does the player stream audio?</button>
+              </h3>
+              <div id="faq-c2" class="accordion-collapse collapse" aria-labelledby="faq-h2" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">It tracks time, speed, and episode order in the browser. No audio file is attached, so headphones will stay quiet. Wire your own files to the same controls when you ship.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-h3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c3" aria-expanded="false" aria-controls="faq-c3">How do new episodes arrive?</button>
+              </h3>
+              <div id="faq-c3" class="accordion-collapse collapse" aria-labelledby="faq-h3" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">The sample schedule is Thursday mornings. A working network would publish through its host and an RSS feed. The app badges in the hero are labels, not store links.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faq-h4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c4" aria-expanded="false" aria-controls="faq-c4">Can I submit a show?</button>
+              </h3>
+              <div id="faq-c4" class="accordion-collapse collapse" aria-labelledby="faq-h4" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Not from this page. The Sunday note stays in the browser. It does not accept pitches or send email.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cv-footer">
+    <div class="container">
+      <div class="cv-footer-grid">
+        <div>
+          <a class="cv-brand" href="#top">
+            <span class="cv-mark" aria-hidden="true"><i class="bi bi-soundwave"></i></span>
+            Cove
+          </a>
+          <p class="mt-3">A clean podcast platform template. Fictional house. Free for personal and commercial use.</p>
+        </div>
+        <nav aria-label="Shows">
+          <p class="cv-foot-label">Shows</p>
+          <a href="#shows">The Long Table</a>
+          <a href="#shows">Field Receipt</a>
+          <a href="#shows">After the Bell</a>
+          <a href="#shows">Small Weather</a>
+        </nav>
+        <nav aria-label="Listen">
+          <p class="cv-foot-label">Listen</p>
+          <a href="#episodes">Episodes</a>
+          <a href="#hosts">Hosts</a>
+          <a href="#subscribe">Subscribe</a>
+          <a href="#faq-h1">Questions</a>
+        </nav>
+        <div>
+          <p class="cv-foot-label">Desk</p>
+          <p>Thursday mornings<br />Sample release day<br />hello@cove.example</p>
+        </div>
+      </div>
+      <div class="cv-credit">
+        <p>© <span id="year">2026</span> Cove. Fictional sample. No audio is streamed.</p>
+        <p>Author: <strong>Subrahmanyam Poluru</strong> <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Portfolio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <section class="cv-player" id="player" hidden aria-label="Episode player">
+    <div class="container cv-player-inner">
+      <div class="cv-player-meta">
+        <span class="cv-cover cv-cover-sm cv-cover-a" id="player-cover" aria-hidden="true"></span>
+        <div>
+          <p id="player-show">Show</p>
+          <strong id="player-title">Episode</strong>
+        </div>
+      </div>
+      <div class="cv-transport">
+        <button class="cv-icon-btn" id="player-prev" type="button" aria-label="Previous episode"><i class="bi bi-skip-start-fill"></i></button>
+        <button class="cv-icon-btn cv-play-main" id="player-toggle" type="button" aria-label="Play"><i class="bi bi-play-fill"></i></button>
+        <button class="cv-icon-btn" id="player-next" type="button" aria-label="Next episode"><i class="bi bi-skip-end-fill"></i></button>
+      </div>
+      <div class="cv-seek">
+        <span id="player-elapsed">0:00</span>
+        <input id="player-range" type="range" min="0" max="1" value="0" step="1" aria-label="Seek within the episode" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" />
+        <span id="player-total">0:00</span>
+        <button class="cv-speed" id="player-speed" type="button" aria-label="Playback speed">1×</button>
+      </div>
+    </div>
+    <p id="player-status" class="visually-hidden" aria-live="polite"></p>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
