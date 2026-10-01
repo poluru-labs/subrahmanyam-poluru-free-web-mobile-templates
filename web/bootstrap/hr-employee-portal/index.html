@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Linden — HR employee portal
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,489 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linden — The people desk, in one place</title>
+  <meta name="description" content="Linden is a fictional employee portal. Search a sample directory, preview time off, and read desk notices. Designed by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#00337C" />
+  <link rel="canonical" href="https://polurus.com/templates/hr-employee-portal/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Linden — The people desk, in one place" />
+  <meta property="og:description" content="A clean HR portal template with a directory, a time-off preview, benefits, and desk notices." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Linden — The people desk, in one place" />
+  <meta name="twitter:description" content="A clean HR portal template with a directory, a time-off preview, benefits, and desk notices." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Linden — The people desk, in one place",
+        "description": "Fictional HR employee portal by Subrahmanyam Poluru. It does not store employee records or process payroll.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Linden a real employer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Linden is a fictional demonstration by Subrahmanyam Poluru. The people, balances, and notices are samples."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the time-off form change a real balance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The preview subtracts the days you type from a sample balance of 18. Nothing is stored or sent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I search the directory?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Filter by team and city, or type a name or role. The list updates in the browser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the desk note send my message?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The form confirms on the page and does not email or store what you type."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="ln-skip" href="#content">Skip to content</a>
+  <header class="ln-header">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary">
+      <div class="container py-2">
+        <a class="ln-brand" href="#content">
+          <span class="ln-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+          Linden
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto ln-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#directory">Directory</a></li>
+            <li class="nav-item"><a class="nav-link" href="#leave">Time off</a></li>
+            <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+            <li class="nav-item"><a class="nav-link" href="#notices">Notices</a></li>
+            <li class="nav-item ms-lg-2"><a class="ln-btn" href="#ask">Ask the desk</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="ln-hero" aria-labelledby="hero-title">
+      <div class="container ln-hero-grid">
+        <div>
+          <p class="ln-kicker">People desk · Sample portal</p>
+          <h1 id="hero-title">The people desk, <span>in one place.</span></h1>
+          <p class="ln-lead">Linden is a fictional employee home. Find a teammate, preview a day off, and read the notices a real company would pin here. Nothing on this page is a personnel record.</p>
+          <div class="ln-actions">
+            <a class="ln-btn" href="#directory">Open the directory <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="ln-btn ln-btn-ghost" href="#leave">Preview time off</a>
+          </div>
+          <ul class="ln-pills">
+            <li>Directory</li>
+            <li>Time off</li>
+            <li>Benefits</li>
+            <li>Notices</li>
+          </ul>
+        </div>
+        <aside class="ln-card ln-today" aria-label="Sample day">
+          <div class="ln-today-top">
+            <span>Sample employee · Maya Chen</span>
+            <strong>Product</strong>
+          </div>
+          <h2 class="h3 mt-3 mb-1">Today at the desk</h2>
+          <p class="ln-meta mb-0">A model of what an employee might see after signing in. It is not a live account.</p>
+          <div class="ln-stat">
+            <div><strong>18</strong><span>Days left</span></div>
+            <div><strong>Fri</strong><span>Sample payday</span></div>
+            <div><strong>1</strong><span>Open request</span></div>
+          </div>
+          <div class="ln-meter" aria-hidden="true"><span></span></div>
+          <p class="ln-meta mb-0">6 of 24 sample days used this year.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ln-section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="ln-kicker">Desk</p>
+        <h2 id="services-title">Four things people actually open.</h2>
+        <p>Each block is a placeholder a real team can replace with its own policy, calendar, and tool links.</p>
+        <div class="ln-services">
+          <article class="ln-service ln-reveal">
+            <i class="bi bi-person-lines-fill" aria-hidden="true"></i>
+            <h3>Directory</h3>
+            <p>Names, teams, and cities you can filter without leaving the page.</p>
+          </article>
+          <article class="ln-service ln-reveal">
+            <i class="bi bi-calendar2-week" aria-hidden="true"></i>
+            <h3>Time off</h3>
+            <p>A balance preview that subtracts the days you type from 18.</p>
+          </article>
+          <article class="ln-service ln-reveal">
+            <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+            <h3>Benefits</h3>
+            <p>Sample coverage written so a studio can drop in its own plan names.</p>
+          </article>
+          <article class="ln-service ln-reveal">
+            <i class="bi bi-megaphone" aria-hidden="true"></i>
+            <h3>Notices</h3>
+            <p>Short desk notes, sorted by people, benefits, or the office.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ln-section pt-0" id="directory" aria-labelledby="directory-title">
+      <div class="container">
+        <p class="ln-kicker">Directory</p>
+        <h2 id="directory-title">Find someone on the sample team.</h2>
+        <p class="ln-intro">Eight fictional colleagues. Filter by team or city, or search a name and a role. The count updates as the list changes.</p>
+        <div class="ln-tools">
+          <label class="visually-hidden" for="directory-search">Search the directory</label>
+          <input class="ln-search" id="directory-search" type="search" placeholder="Search name or role" autocomplete="off" />
+          <p class="ln-meta mb-0" id="directory-count">8 people</p>
+        </div>
+        <div class="ln-tools" role="group" aria-label="Filter by team">
+          <button class="ln-chip" type="button" data-team-filter="all" aria-pressed="true">All teams</button>
+          <button class="ln-chip" type="button" data-team-filter="product" aria-pressed="false">Product</button>
+          <button class="ln-chip" type="button" data-team-filter="people" aria-pressed="false">People</button>
+          <button class="ln-chip" type="button" data-team-filter="design" aria-pressed="false">Design</button>
+          <button class="ln-chip" type="button" data-team-filter="engineering" aria-pressed="false">Engineering</button>
+          <button class="ln-chip" type="button" data-team-filter="finance" aria-pressed="false">Finance</button>
+        </div>
+        <div class="ln-tools" role="group" aria-label="Filter by place">
+          <button class="ln-chip" type="button" data-place-filter="all" aria-pressed="true">All places</button>
+          <button class="ln-chip" type="button" data-place-filter="chicago" aria-pressed="false">Chicago</button>
+          <button class="ln-chip" type="button" data-place-filter="austin" aria-pressed="false">Austin</button>
+          <button class="ln-chip" type="button" data-place-filter="remote" aria-pressed="false">Remote</button>
+        </div>
+        <div class="ln-directory">
+          <article class="ln-person" data-person data-team="product" data-place="chicago" data-search="maya chen product design systems chicago">
+            <span class="ln-avatar" aria-hidden="true">MC</span>
+            <div>
+              <h3>Maya Chen</h3>
+              <p>Design systems · Product · Chicago</p>
+            </div>
+          </article>
+          <article class="ln-person" data-person data-team="people" data-place="remote" data-search="jonah adeyemi people partner remote">
+            <span class="ln-avatar" aria-hidden="true">JA</span>
+            <div>
+              <h3>Jonah Adeyemi</h3>
+              <p>People partner · People · Remote</p>
+            </div>
+          </article>
+          <article class="ln-person" data-person data-team="finance" data-place="austin" data-search="priya shah payroll finance austin">
+            <span class="ln-avatar" aria-hidden="true">PS</span>
+            <div>
+              <h3>Priya Shah</h3>
+              <p>Payroll · Finance · Austin</p>
+            </div>
+          </article>
+          <article class="ln-person" data-person data-team="design" data-place="chicago" data-search="elena voss brand design chicago">
+            <span class="ln-avatar" aria-hidden="true">EV</span>
+            <div>
+              <h3>Elena Voss</h3>
+              <p>Brand · Design · Chicago</p>
+            </div>
+          </article>
+          <article class="ln-person" data-person data-team="engineering" data-place="remote" data-search="samir okonkwo platform engineering remote">
+            <span class="ln-avatar" aria-hidden="true">SO</span>
+            <div>
+              <h3>Samir Okonkwo</h3>
+              <p>Platform · Engineering · Remote</p>
+            </div>
+          </article>
+          <article class="ln-person" data-person data-team="people" data-place="austin" data-search="leah ortiz benefits people austin">
+            <span class="ln-avatar" aria-hidden="true">LO</span>
+            <div>
+              <h3>Leah Ortiz</h3>
+              <p>Benefits · People · Austin</p>
+            </div>
+          </article>
+          <article class="ln-person" data-person data-team="engineering" data-place="chicago" data-search="noah berg mobile engineering chicago">
+            <span class="ln-avatar" aria-hidden="true">NB</span>
+            <div>
+              <h3>Noah Berg</h3>
+              <p>Mobile · Engineering · Chicago</p>
+            </div>
+          </article>
+          <article class="ln-person" data-person data-team="design" data-place="remote" data-search="hana ito research design remote">
+            <span class="ln-avatar" aria-hidden="true">HI</span>
+            <div>
+              <h3>Hana Ito</h3>
+              <p>Research · Design · Remote</p>
+            </div>
+          </article>
+        </div>
+        <p class="ln-empty" id="directory-empty" hidden>No one matches that filter. Try another team or clear the search.</p>
+      </div>
+    </section>
+
+    <section class="ln-section pt-0" id="leave" aria-labelledby="leave-title">
+      <div class="container ln-split">
+        <div>
+          <p class="ln-kicker">Time off</p>
+          <h2 id="leave-title">See the balance before you ask.</h2>
+          <p>The sample year holds 24 days. Six are already used, so 18 remain. Type a length and the preview subtracts it. A request longer than 18 is refused on this page.</p>
+          <div class="ln-preview" aria-live="polite">
+            <span class="ln-meta">Days left after this request</span>
+            <strong id="leave-left">18</strong>
+            <p class="mb-0" id="leave-note">Enter at least one day to preview the balance.</p>
+          </div>
+        </div>
+        <div class="ln-card">
+          <form class="ln-form" id="leave-form" novalidate>
+            <div class="mb-3">
+              <label for="leave-name">Name</label>
+              <input class="form-control" id="leave-name" name="name" required autocomplete="name" />
+            </div>
+            <div class="mb-3">
+              <label for="leave-email">Work email</label>
+              <input class="form-control" id="leave-email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="mb-3">
+              <label for="leave-type">Type</label>
+              <select class="form-select" id="leave-type" name="type" required>
+                <option value="">Choose a type</option>
+                <option>Vacation</option>
+                <option>Sick</option>
+                <option>Personal</option>
+              </select>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="leave-start">First day</label>
+                <input class="form-control" id="leave-start" name="start" type="date" required />
+              </div>
+              <div class="col-sm-6">
+                <label for="leave-days">Days</label>
+                <input class="form-control" id="leave-days" name="days" type="number" min="1" max="18" value="1" required />
+              </div>
+            </div>
+            <p class="ln-help">This demonstration does not file a request and does not change a real balance.</p>
+            <button class="ln-btn" type="submit">Note the request</button>
+          </form>
+          <div class="ln-success" id="leave-success" hidden>
+            <h3>Noted on this page.</h3>
+            <p id="leave-success-line"></p>
+            <button class="ln-btn ln-btn-ghost" id="leave-reset" type="button">Start another</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ln-section pt-0" id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <p class="ln-kicker">Benefits</p>
+        <h2 id="benefits-title">Coverage, written in plain lines.</h2>
+        <p>These are sample descriptions, not a summary of benefits and not an enrollment offer.</p>
+        <div class="ln-benefits">
+          <article class="ln-benefit">
+            <i class="bi bi-shield-check" aria-hidden="true"></i>
+            <h3>Health</h3>
+            <p>A sample medical plan with a listed clinic network a studio can rename.</p>
+          </article>
+          <article class="ln-benefit">
+            <i class="bi bi-piggy-bank" aria-hidden="true"></i>
+            <h3>Retirement</h3>
+            <p>A sample match described as a percent, with no account and no contribution.</p>
+          </article>
+          <article class="ln-benefit">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+            <h3>Leave</h3>
+            <p>Vacation, sick, and personal days share the 24-day sample year on this page.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ln-section pt-0" id="notices" aria-labelledby="notices-title">
+      <div class="container">
+        <p class="ln-kicker">Notices</p>
+        <h2 id="notices-title">What the desk would pin this week.</h2>
+        <div class="ln-tools" role="group" aria-label="Filter notices">
+          <button class="ln-chip" type="button" data-notice-filter="all" aria-pressed="true">All</button>
+          <button class="ln-chip" type="button" data-notice-filter="people" aria-pressed="false">People</button>
+          <button class="ln-chip" type="button" data-notice-filter="benefits" aria-pressed="false">Benefits</button>
+          <button class="ln-chip" type="button" data-notice-filter="office" aria-pressed="false">Office</button>
+        </div>
+        <div class="ln-notices">
+          <article class="ln-notice" data-notice="people">
+            <span class="ln-tag">People</span>
+            <h3>New parent note</h3>
+            <p>A sample reminder that leave paperwork lives with the people partner, not in email threads.</p>
+          </article>
+          <article class="ln-notice" data-notice="benefits">
+            <span class="ln-tag">Benefits</span>
+            <h3>Open enrollment sample</h3>
+            <p>A dated window a real portal would use. This one does not collect elections.</p>
+          </article>
+          <article class="ln-notice" data-notice="office">
+            <span class="ln-tag">Office</span>
+            <h3>Quiet week on floor 4</h3>
+            <p>Desks along the south wall move on Thursday. The directory cities stay as they are.</p>
+          </article>
+          <article class="ln-notice" data-notice="benefits">
+            <span class="ln-tag">Benefits</span>
+            <h3>Payroll calendar</h3>
+            <p>The sample payday on the hero is a Friday. It is not a deposit and not a pay stub.</p>
+          </article>
+          <article class="ln-notice" data-notice="people">
+            <span class="ln-tag">People</span>
+            <h3>Review season sketch</h3>
+            <p>Managers get a one-page brief. The template does not store ratings or comments.</p>
+          </article>
+          <article class="ln-notice" data-notice="office">
+            <span class="ln-tag">Office</span>
+            <h3>Visitor desk hours</h3>
+            <p>Weekday sample hours, 9 to 5. hello@linden.example is not a monitored inbox.</p>
+          </article>
+        </div>
+        <p class="ln-empty" id="notice-empty" hidden>No notices in that group.</p>
+      </div>
+    </section>
+
+    <section class="ln-section pt-0" id="faq" aria-labelledby="faq-title">
+      <div class="container ln-split">
+        <div>
+          <p class="ln-kicker">Questions</p>
+          <h2 id="faq-title">Asked before someone writes in.</h2>
+          <div class="accordion" id="faq-list">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="q1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">Is Linden a real employer?</button>
+              </h3>
+              <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faq-list">
+                <div class="accordion-body">No. Linden is a fictional demonstration by Subrahmanyam Poluru. The people, balances, and notices are samples.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="q2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">Does the time-off form change a real balance?</button>
+              </h3>
+              <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faq-list">
+                <div class="accordion-body">No. The preview subtracts the days you type from a sample balance of 18. Nothing is stored or sent.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="q3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">Can I search the directory?</button>
+              </h3>
+              <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faq-list">
+                <div class="accordion-body">Yes. Filter by team and city, or type a name or role. The list updates in the browser.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="q4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">Does the desk note send my message?</button>
+              </h3>
+              <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faq-list">
+                <div class="accordion-body">No. The form confirms on the page and does not email or store what you type.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="ask">
+          <p class="ln-kicker">Desk note</p>
+          <h2>Write the people desk.</h2>
+          <div class="ln-card">
+            <form class="ln-form" id="ask-form" novalidate>
+              <div class="mb-3">
+                <label for="ask-name">Name</label>
+                <input class="form-control" id="ask-name" name="name" required autocomplete="name" />
+              </div>
+              <div class="mb-3">
+                <label for="ask-email">Work email</label>
+                <input class="form-control" id="ask-email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="mb-3">
+                <label for="ask-topic">Topic</label>
+                <select class="form-select" id="ask-topic" name="topic" required>
+                  <option value="">Choose a topic</option>
+                  <option>Payroll</option>
+                  <option>Benefits</option>
+                  <option>Time off</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="ask-message">Note</label>
+                <textarea class="form-control" id="ask-message" name="message" rows="4" required placeholder="What should the desk know?"></textarea>
+              </div>
+              <p class="ln-help">This demonstration does not create a ticket and does not send your message.</p>
+              <button class="ln-btn" type="submit">Leave the note</button>
+            </form>
+            <div class="ln-success" id="ask-success" hidden>
+              <h3>Noted on this page.</h3>
+              <p>Nothing was sent.</p>
+              <button class="ln-btn ln-btn-ghost" id="ask-reset" type="button">Write another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ln-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="ln-brand ln-foot-brand" href="#content">
+            <span class="ln-mark" aria-hidden="true"><i class="bi bi-people-fill"></i></span>
+            Linden
+          </a>
+          <p class="mt-3 mb-0">A clean HR employee portal template. Fictional desk. Free for personal and commercial use.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h2>Desk</h2>
+          <ul>
+            <li><a href="#directory">Directory</a></li>
+            <li><a href="#leave">Time off</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#notices">Notices</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2>Hours</h2>
+          <p class="mb-0">Weekday sample hours<br />9 to 5<br />hello@linden.example<br />Not an employer</p>
+        </div>
+      </div>
+      <p class="ln-legal">© <span id="year">2026</span> Linden. Fictional sample. Not an employment offer.</p>
+      <div class="ln-credit">
+        <p class="mb-0">Author: <strong>Subrahmanyam Poluru</strong> <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Portfolio</a></p>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
