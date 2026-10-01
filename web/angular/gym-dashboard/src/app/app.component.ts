@@ -3,7 +3,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
-import { navClub, navTemplate, staff } from './core/data';
+import { NavItem, navClub, navTemplate, staff } from './core/data';
 import { ToastService } from './core/toast.service';
 
 @Component({
@@ -33,9 +33,10 @@ export class AppComponent {
       )
       .subscribe((event) => {
         this.sidebarOpen.set(false);
-        const item = [...navClub, ...navTemplate].find((entry) =>
-          entry.exact ? event.urlAfterRedirects === '/' : event.urlAfterRedirects.startsWith(entry.path)
-        );
+        const path = event.urlAfterRedirects.split(/[?#]/)[0] || '/';
+        const item = [...navClub, ...navTemplate]
+          .filter((entry) => this.matchesNav(entry, path))
+          .sort((a, b) => b.path.length - a.path.length)[0];
         this.crumb.set(item?.label ?? 'Dashboard');
         this.section.set(item?.group ?? 'Home');
         this.title.setTitle(`${item?.label ?? 'Dashboard'} — Forge Athletic`);
@@ -58,6 +59,11 @@ export class AppComponent {
 
   protected onQuery(event: Event): void {
     this.query.set((event.target as HTMLInputElement).value);
+  }
+
+  private matchesNav(entry: NavItem, path: string): boolean {
+    if (entry.exact || entry.path === '/') return path === '/';
+    return path === entry.path || path.startsWith(`${entry.path}/`);
   }
 
   protected search(): void {

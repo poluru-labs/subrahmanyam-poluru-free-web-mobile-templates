@@ -1,13 +1,22 @@
 export type Tone = '' | 'ember' | 'ink';
 export type StatusTone = 'ok' | 'warn' | 'muted' | '';
 
+export interface NavItem {
+  path: string;
+  label: string;
+  icon: string;
+  group: string;
+  exact?: boolean;
+  badge?: string;
+}
+
 export const staff = {
   name: 'Maya Chen',
   initials: 'MC',
   role: 'Club manager · Downtown'
 };
 
-export const navClub = [
+export const navClub: NavItem[] = [
   { path: '/', label: 'Dashboard', icon: 'grid-1x2', exact: true, group: 'Home' },
   { path: '/members', label: 'Members', icon: 'people', group: 'Club' },
   { path: '/trainers', label: 'Trainers', icon: 'person-badge', group: 'Club' },
@@ -16,7 +25,7 @@ export const navClub = [
   { path: '/memberships', label: 'Memberships', icon: 'credit-card', group: 'Club' }
 ];
 
-export const navTemplate = [
+export const navTemplate: NavItem[] = [
   { path: '/about', label: 'About', icon: 'info-circle', group: 'Template' },
   { path: '/docs', label: 'Docs', icon: 'journal-text', group: 'Template' },
   { path: '/contact', label: 'Contact', icon: 'headset', group: 'Template' }
