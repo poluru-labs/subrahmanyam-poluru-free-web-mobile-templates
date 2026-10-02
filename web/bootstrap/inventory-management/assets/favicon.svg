@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Baystock">
+  <rect width="32" height="32" rx="8" fill="#1B6B43"/>
+  <rect x="7" y="8" width="8" height="7" rx="1.5" fill="#fff"/>
+  <rect x="17" y="8" width="8" height="7" rx="1.5" fill="#fff"/>
+  <rect x="7" y="17" width="8" height="7" rx="1.5" fill="#fff"/>
+  <rect x="17" y="17" width="8" height="7" rx="1.5" fill="#E6F1EB"/>
+</svg>

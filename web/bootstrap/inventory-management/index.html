@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Baystock — Inventory management
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,661 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baystock — Stock, vendors, and warehouses</title>
+  <meta name="description" content="Baystock is a fictional inventory desk for Harbor Goods: on-hand stock, vendors, purchase orders, and three warehouses. Designed by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1B6B43" />
+  <link rel="canonical" href="https://polurus.com/templates/inventory-management/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Baystock — Stock, vendors, and warehouses" />
+  <meta property="og:description" content="A clean inventory management website with live stock, warehouses, vendors, and purchase orders." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Baystock — Stock, vendors, and warehouses" />
+  <meta name="twitter:description" content="A clean inventory management website with live stock, warehouses, vendors, and purchase orders." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Baystock — Stock, vendors, and warehouses",
+        "description": "Fictional inventory management website by Subrahmanyam Poluru. It does not process real stock or payments.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Baystock move real inventory?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Counts, purchase orders, and receives stay in this browser. Nothing is posted to a warehouse."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which warehouses are in the sample?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Austin DC, Hyderabad DC, and London Bond. Filter the stock table by office."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I export the stock list?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Export downloads the rows currently visible after your search and warehouse filter."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="inv-skip" href="#main">Skip to content</a>
+
+  <div class="inv-utility">
+    <div class="container inv-utility-inner">
+      <span><i class="inv-dot" aria-hidden="true"></i>Austin DC · cycle count open on Aisle 4</span>
+      <div class="inv-utility-meta">
+        <a href="tel:+15125550118"><i class="bi bi-telephone"></i> (512) 555-0118</a>
+        <span>Harbor Goods · last sync 4 min ago</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top inv-nav" aria-label="Primary">
+    <div class="container">
+      <a class="inv-brand" href="#top">
+        <span class="inv-mark" aria-hidden="true"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+        Baystock<em>.</em>
+      </a>
+      <button class="inv-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stock">Stock</a></li>
+          <li class="nav-item"><a class="nav-link" href="#warehouses">Warehouses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vendors">Vendors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="inv-btn inv-btn-primary" href="#stock">Open stock desk</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="inv-hero">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 inv-hero-copy">
+            <p class="inv-kicker">Harbor Goods · inventory desk</p>
+            <h1>Know what is on the floor before the truck arrives.</h1>
+            <p>Baystock is the sample ops desk for Harbor Goods. On-hand counts, vendor POs, and three warehouses. Ravi Poluru runs Austin. Leela Poluru buys. Ishaan Poluru closes Hyderabad.</p>
+            <div class="inv-actions">
+              <a class="inv-btn inv-btn-primary" href="#stock"><i class="bi bi-box-seam"></i> View live stock</a>
+              <a class="inv-btn inv-btn-ghost" href="#contact">Talk to ops</a>
+            </div>
+            <ul class="inv-hero-stats">
+              <li><strong>2,418</strong><span>Active SKUs</span></li>
+              <li><strong>94%</strong><span>Austin fill rate</span></li>
+              <li><strong>3</strong><span>Warehouses</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="inv-panel" aria-label="Austin DC aisle snapshot">
+              <div class="inv-panel-bar">
+                <strong>Austin DC · Aisle 4</strong>
+                <span>Cycle 22 · Sep 30</span>
+              </div>
+              <div class="inv-aisle">
+                <div class="inv-bin"><strong>A4-01</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:86%"></i></div><small>Hex bolts · 428</small></div>
+                <div class="inv-bin is-low"><strong>A4-02</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:28%"></i></div><small>Pallet wrap · 18</small></div>
+                <div class="inv-bin"><strong>A4-03</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:72%"></i></div><small>Shipper L · 220</small></div>
+                <div class="inv-bin"><strong>A4-04</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:64%"></i></div><small>Gloves M · 64</small></div>
+                <div class="inv-bin is-out"><strong>A4-05</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:8%"></i></div><small>Tape 2" · 8</small></div>
+                <div class="inv-bin"><strong>A4-06</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:90%"></i></div><small>Kraft 10×13 · 1,240</small></div>
+                <div class="inv-bin"><strong>A4-07</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:55%"></i></div><small>Labels 4×6 · 310</small></div>
+                <div class="inv-bin is-low"><strong>A4-08</strong><div class="inv-fill" aria-hidden="true"><i style="--fill:22%"></i></div><small>Bins S · wait PO</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inv-section" id="product">
+      <div class="container">
+        <div class="inv-section-head inv-reveal">
+          <p class="inv-kicker">What sits on the desk</p>
+          <h2>Stock, receiving, vendors, and the three buildings.</h2>
+          <p>Built for a floor that already has a WMS rumor and a spreadsheet that is two days late. Baystock shows the book Harbor actually picks from.</p>
+        </div>
+        <div class="inv-features">
+          <article class="inv-card inv-reveal">
+            <span class="inv-icon" aria-hidden="true"><i class="bi bi-box-seam"></i></span>
+            <h3>On-hand stock</h3>
+            <p>SKU, bin, reorder point, and last count. Low and out are marked before pick. Filter by warehouse without leaving the table.</p>
+          </article>
+          <article class="inv-card inv-reveal">
+            <span class="inv-icon" aria-hidden="true"><i class="bi bi-truck"></i></span>
+            <h3>Receiving</h3>
+            <p>PO-4412 from Cedar Fasteners is on the dock in Hyderabad. Receive posts a demo count in this browser only.</p>
+          </article>
+          <article class="inv-card inv-reveal">
+            <span class="inv-icon" aria-hidden="true"><i class="bi bi-receipt"></i></span>
+            <h3>Purchase orders</h3>
+            <p>Open, partial, and closed. Leela Poluru owns buying. Status stays with the vendor row so ops is not hunting email.</p>
+          </article>
+          <article class="inv-card inv-reveal">
+            <span class="inv-icon" aria-hidden="true"><i class="bi bi-people"></i></span>
+            <h3>Vendors</h3>
+            <p>Cedar Fasteners, Mira Pack, Oak &amp; Thread Mill. Lead time and last receipt sit next to the buyer.</p>
+          </article>
+          <article class="inv-card inv-reveal">
+            <span class="inv-icon" aria-hidden="true"><i class="bi bi-building"></i></span>
+            <h3>Warehouses</h3>
+            <p>Austin DC, Hyderabad DC, London Bond. Fill rate, open POs, and who closed the last cycle count.</p>
+          </article>
+          <article class="inv-card inv-reveal">
+            <span class="inv-icon" aria-hidden="true"><i class="bi bi-clipboard-check"></i></span>
+            <h3>Cycle counts</h3>
+            <p>Aisle 4 is open in Austin. Variance toasts in the demo. Nothing writes to a warehouse system.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="inv-section inv-section-alt" id="stock">
+      <div class="container">
+        <div class="inv-split">
+          <div class="inv-section-head">
+            <p class="inv-kicker">Live book</p>
+            <h2>Stock that pickers actually see.</h2>
+            <p>Ten Harbor SKUs. Search a name or SKU, then cut by warehouse. Export writes a CSV of the rows still on screen.</p>
+          </div>
+          <div class="inv-actions">
+            <button type="button" class="inv-btn inv-btn-ghost" id="invExportBtn"><i class="bi bi-download"></i> Export CSV</button>
+            <button type="button" class="inv-btn inv-btn-primary" id="invReceiveBtn"><i class="bi bi-box-arrow-in-down"></i> Receive PO-4412</button>
+          </div>
+        </div>
+
+        <div class="inv-stats mb-4">
+          <article class="inv-stat">
+            <p class="inv-stat-label">SKUs on this page</p>
+            <p class="inv-stat-value" id="invSkuCount">10</p>
+            <p class="inv-stat-meta">After the current filter</p>
+          </article>
+          <article class="inv-stat">
+            <p class="inv-stat-label">Low / out</p>
+            <p class="inv-stat-value">3</p>
+            <p class="inv-stat-meta">Tape, wrap, hex bolts</p>
+          </article>
+          <article class="inv-stat">
+            <p class="inv-stat-label">Open POs</p>
+            <p class="inv-stat-value">4</p>
+            <p class="inv-stat-meta">Two waiting in Hyderabad</p>
+          </article>
+          <article class="inv-stat">
+            <p class="inv-stat-label">Last count</p>
+            <p class="inv-stat-value">Sep 30</p>
+            <p class="inv-stat-meta">Ravi Poluru · Aisle 4</p>
+          </article>
+        </div>
+
+        <div class="inv-toolbar">
+          <label class="inv-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input id="invSearch" type="search" placeholder="Search SKU or item…" aria-label="Search stock" />
+          </label>
+          <label class="inv-field" style="min-width:12rem">Warehouse
+            <select id="invWarehouse" aria-label="Filter by warehouse">
+              <option value="all">All warehouses</option>
+              <option value="Austin">Austin DC</option>
+              <option value="Hyderabad">Hyderabad DC</option>
+              <option value="London">London Bond</option>
+            </select>
+          </label>
+        </div>
+        <p class="inv-result" id="invResult">10 items</p>
+        <div class="inv-table-wrap">
+          <table class="inv-table" id="invTable">
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Item</th>
+                <th>Warehouse</th>
+                <th>On hand</th>
+                <th>Reorder</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-warehouse="Austin" data-search="hex-12 12mm hex bolts austin">
+                <td><strong>HEX-12</strong><span>Bin A4-01</span></td>
+                <td>12mm hex bolts, box of 500</td>
+                <td>Austin</td>
+                <td>42</td>
+                <td>80</td>
+                <td><span class="inv-badge is-low">Low</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="HEX-12">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="Austin" data-search="pal-48 pallet wrap austin">
+                <td><strong>PAL-48</strong><span>Bin A4-02</span></td>
+                <td>Pallet wrap 18"</td>
+                <td>Austin</td>
+                <td>18</td>
+                <td>24</td>
+                <td><span class="inv-badge is-low">Low</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="PAL-48">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="Austin" data-search="glove-n nitrile gloves austin">
+                <td><strong>GLOVE-N</strong><span>Bin A4-04</span></td>
+                <td>Nitrile gloves, medium</td>
+                <td>Austin</td>
+                <td>64</td>
+                <td>48</td>
+                <td><span class="inv-badge is-ok">Ok</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="GLOVE-N">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="Austin" data-search="bin-s small pick bins austin">
+                <td><strong>BIN-S</strong><span>Bin A4-08</span></td>
+                <td>Small pick bins</td>
+                <td>Austin</td>
+                <td>96</td>
+                <td>40</td>
+                <td><span class="inv-badge is-ok">Ok</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="BIN-S">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="Hyderabad" data-search="kraft-10 kraft mailer hyderabad">
+                <td><strong>KRAFT-10</strong><span>Bin B2-11</span></td>
+                <td>Kraft mailer 10×13</td>
+                <td>Hyderabad</td>
+                <td>1,240</td>
+                <td>400</td>
+                <td><span class="inv-badge is-ok">Ok</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="KRAFT-10">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="Hyderabad" data-search="tape-2 packing tape hyderabad">
+                <td><strong>TAPE-2</strong><span>Bin B2-09</span></td>
+                <td>Packing tape 2"</td>
+                <td>Hyderabad</td>
+                <td>8</td>
+                <td>36</td>
+                <td><span class="inv-badge is-out">Out</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="TAPE-2">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="Hyderabad" data-search="scale-5 bench scale hyderabad">
+                <td><strong>SCALE-5</strong><span>Cage C1</span></td>
+                <td>Bench scale 5kg</td>
+                <td>Hyderabad</td>
+                <td>3</td>
+                <td>2</td>
+                <td><span class="inv-badge is-ok">Ok</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="SCALE-5">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="London" data-search="lab-4x6 thermal labels london">
+                <td><strong>LAB-4x6</strong><span>Bin D3-02</span></td>
+                <td>Thermal labels 4×6</td>
+                <td>London</td>
+                <td>310</td>
+                <td>200</td>
+                <td><span class="inv-badge is-ok">Ok</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="LAB-4x6">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="London" data-search="ship-l shipper carton london">
+                <td><strong>SHIP-L</strong><span>Bin D1-14</span></td>
+                <td>Shipper carton L</td>
+                <td>London</td>
+                <td>220</td>
+                <td>100</td>
+                <td><span class="inv-badge is-ok">Ok</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="SHIP-L">Adjust</button></td>
+              </tr>
+              <tr data-warehouse="London" data-search="label-gun handheld labeler london">
+                <td><strong>LABEL-GUN</strong><span>Cage D0</span></td>
+                <td>Handheld labeler</td>
+                <td>London</td>
+                <td>11</td>
+                <td>6</td>
+                <td><span class="inv-badge is-ok">Ok</span></td>
+                <td><button type="button" class="inv-btn inv-btn-ghost inv-btn-sm" data-adjust="LABEL-GUN">Adjust</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="inv-form-note mt-3 mb-0">Adjust and receive change the number on this page. They do not write to a warehouse or send a PO.</p>
+      </div>
+    </section>
+
+    <section class="inv-section" id="warehouses">
+      <div class="container">
+        <div class="inv-section-head inv-reveal">
+          <p class="inv-kicker">Network</p>
+          <h2>Three buildings, one book.</h2>
+          <p>Austin picks same-day. Hyderabad holds inbound from Cedar Fasteners. London Bond is bonded cartons for EU labels.</p>
+        </div>
+        <div class="inv-places">
+          <article class="inv-place inv-reveal">
+            <div class="inv-place-top">
+              <p class="inv-kicker">North America</p>
+              <h3>Austin DC</h3>
+              <p>1204 E Cesar Chavez. Ravi Poluru closed Aisle 4 this morning. Fill rate is 94% against the September plan.</p>
+            </div>
+            <div class="inv-place-meta">
+              <div><span>SKUs</span><strong>1,102</strong></div>
+              <div><span>Open POs</span><strong>1</strong></div>
+              <div><span>Fill</span><strong>94%</strong></div>
+            </div>
+          </article>
+          <article class="inv-place inv-reveal">
+            <div class="inv-place-top">
+              <p class="inv-kicker">India</p>
+              <h3>Hyderabad DC</h3>
+              <p>HITEC dock 2. Ishaan Poluru is waiting on PO-4412. Packing tape is marked out until that receipt posts.</p>
+            </div>
+            <div class="inv-place-meta">
+              <div><span>SKUs</span><strong>864</strong></div>
+              <div><span>Open POs</span><strong>2</strong></div>
+              <div><span>Fill</span><strong>81%</strong></div>
+            </div>
+          </article>
+          <article class="inv-place inv-reveal">
+            <div class="inv-place-top">
+              <p class="inv-kicker">United Kingdom</p>
+              <h3>London Bond</h3>
+              <p>Tilbury unit 6. Labels and shippers only. Kavya Poluru signs the bonded log on Fridays.</p>
+            </div>
+            <div class="inv-place-meta">
+              <div><span>SKUs</span><strong>452</strong></div>
+              <div><span>Open POs</span><strong>1</strong></div>
+              <div><span>Fill</span><strong>88%</strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="inv-section inv-section-alt" id="vendors">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="inv-section-head">
+              <p class="inv-kicker">Buying</p>
+              <h2>Vendors Leela Poluru actually calls.</h2>
+              <p>Lead times are from the last five receipts. PO status is the sample book, not an EDI feed.</p>
+            </div>
+            <div class="inv-card">
+              <div class="inv-row">
+                <span class="inv-avatar">CF</span>
+                <div>
+                  <h3>Cedar Fasteners</h3>
+                  <p>HEX-12 · PO-4412 partial · 11 day lead · Hyderabad dock</p>
+                </div>
+                <span class="inv-badge is-low ms-auto">Partial</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-avatar">MP</span>
+                <div>
+                  <h3>Mira Pack Co.</h3>
+                  <p>KRAFT-10, TAPE-2, SHIP-L · PO-4388 closed Sep 24</p>
+                </div>
+                <span class="inv-badge is-ok ms-auto">Closed</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-avatar">OT</span>
+                <div>
+                  <h3>Oak &amp; Thread Mill</h3>
+                  <p>GLOVE-N · PO-4401 open · Austin · 6 day lead</p>
+                </div>
+                <span class="inv-badge ms-auto">Open</span>
+              </div>
+              <div class="inv-row">
+                <span class="inv-avatar">NL</span>
+                <div>
+                  <h3>Northline Labels</h3>
+                  <p>LAB-4x6, LABEL-GUN · London Bond · weekly</p>
+                </div>
+                <span class="inv-badge is-ok ms-auto">Closed</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="inv-section-head">
+              <p class="inv-kicker">How a week runs</p>
+              <h2>Count, buy, receive.</h2>
+            </div>
+            <div class="inv-steps">
+              <article class="inv-card">
+                <div class="inv-step-num">01</div>
+                <h3>Count</h3>
+                <p>Ravi walks Aisle 4. Variances stay on the SKU until someone adjusts.</p>
+              </article>
+              <article class="inv-card">
+                <div class="inv-step-num">02</div>
+                <h3>Buy</h3>
+                <p>Leela raises a PO when on-hand sits under reorder. Cedar is 11 days.</p>
+              </article>
+              <article class="inv-card">
+                <div class="inv-step-num">03</div>
+                <h3>Receive</h3>
+                <p>Ishaan posts the dock. The demo bumps TAPE-2. No warehouse API is called.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inv-section" id="pricing">
+      <div class="container">
+        <div class="inv-section-head inv-reveal">
+          <p class="inv-kicker">Sample plans</p>
+          <h2>Numbers for a sales conversation, not a checkout.</h2>
+          <p>Nothing is billed. Use the figures if you need a pricing block on a warehouse demo.</p>
+        </div>
+        <div class="inv-plans">
+          <article class="inv-plan inv-reveal">
+            <h3>Desk</h3>
+            <p class="inv-price">$0 <span>/ demo</span></p>
+            <ul>
+              <li>This template, in the browser</li>
+              <li>One warehouse view</li>
+              <li>CSV of visible rows</li>
+            </ul>
+            <a class="inv-btn inv-btn-ghost" href="#stock">Open the desk</a>
+          </article>
+          <article class="inv-plan is-featured inv-reveal">
+            <h3>Floor</h3>
+            <p class="inv-price">$49 <span>/ warehouse / mo</span></p>
+            <ul>
+              <li>Stock, POs, vendors</li>
+              <li>Cycle counts</li>
+              <li>Three sample buildings</li>
+            </ul>
+            <a class="inv-btn inv-btn-primary" href="#contact">Ask ops</a>
+          </article>
+          <article class="inv-plan inv-reveal">
+            <h3>Network</h3>
+            <p class="inv-price">$129 <span>/ warehouse / mo</span></p>
+            <ul>
+              <li>All Floor features</li>
+              <li>Bonded / 3PL notes</li>
+              <li>Scheduled CSV (demo)</li>
+            </ul>
+            <a class="inv-btn inv-btn-ghost" href="#contact">Ask ops</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="inv-section inv-section-alt" id="faq">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="inv-section-head">
+              <p class="inv-kicker">Questions</p>
+              <h2>What this page will and will not do.</h2>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion inv-faq" id="invFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Does Baystock move real inventory?</button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#invFaq">
+                  <div class="accordion-body">No. Counts, purchase orders, and receives stay in this browser. Nothing is posted to a warehouse.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Which warehouses are in the sample?</button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#invFaq">
+                  <div class="accordion-body">Austin DC, Hyderabad DC, and London Bond. Filter the stock table by office.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can I export the stock list?</button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#invFaq">
+                  <div class="accordion-body">Yes. Export downloads the rows currently visible after your search and warehouse filter.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Who is Harbor Goods?</button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#invFaq">
+                  <div class="accordion-body">A fictional shipper used to populate bins, vendors, and buyers. The people are sample names in the Poluru templates.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inv-section" id="contact">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <p class="inv-kicker">Ops desk</p>
+            <h2>Leave a note for Ravi Poluru.</h2>
+            <p>The form confirms on this page. It does not email Harbor, book a dock, or open a PO.</p>
+            <p class="mb-1"><strong>Phone</strong></p>
+            <p><a href="tel:+15125550118">(512) 555-0118</a></p>
+            <p class="mb-1"><strong>Austin DC</strong></p>
+            <p>1204 E Cesar Chavez, Austin, TX</p>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <form class="inv-form inv-card" id="invContactForm">
+              <label class="inv-field">Name
+                <input name="name" type="text" required maxlength="120" autocomplete="name" placeholder="Leela Poluru" />
+              </label>
+              <label class="inv-field">Email
+                <input name="email" type="email" required maxlength="160" autocomplete="email" placeholder="leela@example.com" />
+              </label>
+              <label class="inv-field">Warehouse
+                <select name="warehouse">
+                  <option>Austin DC</option>
+                  <option>Hyderabad DC</option>
+                  <option>London Bond</option>
+                </select>
+              </label>
+              <label class="inv-field">Note
+                <textarea name="note" required maxlength="2000" placeholder="PO number, SKU, or dock window"></textarea>
+              </label>
+              <button class="inv-btn inv-btn-primary" type="submit">Save demo note</button>
+              <p class="inv-form-note">Saved in this browser only.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="inv-footer">
+    <div class="container">
+      <div class="inv-footer-grid">
+        <div class="inv-footer-brand">
+          <a class="inv-brand" href="#top">
+            <span class="inv-mark" aria-hidden="true"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+            Baystock<em>.</em>
+          </a>
+          <p>Inventory template for stock, vendors, purchase orders, and warehouses. Fictional Harbor Goods book. Free for personal and commercial use.</p>
+        </div>
+        <nav aria-label="Product">
+          <h2>Product</h2>
+          <a href="#product">Desk</a>
+          <a href="#stock">Stock</a>
+          <a href="#warehouses">Warehouses</a>
+          <a href="#vendors">Vendors</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <nav aria-label="Ops">
+          <h2>Ops</h2>
+          <a href="#faq">Questions</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+15125550118">(512) 555-0118</a>
+          <a href="mailto:ops@baystock.example">ops@baystock.example</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="inv-author">
+            <span class="inv-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="inv-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inv-legal">
+        <span>© <span id="year">2026</span> Baystock. Fictional sample. No live warehouse connection.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="inv-toast" id="invToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <div>
+      <strong id="invToastTitle">Done</strong>
+      <p id="invToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
