@@ -1,2 +1,564 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Poluru Drive — The open road is calling.</title><meta name="description" content="Great cars. Thoughtful prices. Find a ride that feels like you."><meta name="theme-color" content="#145bcc"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="" data-template="car-rental-marketplace" style="--brand:#145bcc;--soft:#edf3fb;"><a class="skip-link" href="#main">Skip to content</a><div class="container"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">P</span>Poluru Drive</a><nav aria-label="Main navigation"><a href="#collection">Discover</a><a href="#about">Our story</a><a href="#contact">Get in touch</a></nav><button class="primary" data-action="modal" data-title="Hello from Poluru Drive" data-kind="Send inquiry">Say hello</button></header><main id="main"><section class="hero"><div class="hero-copy"><p class="eyebrow">A BETTER WAY TO GET AWAY.</p><h1>The open road is calling.</h1><p>Great cars. Thoughtful prices. Find a ride that feels like you.</p><div class="hero-actions"><a class="primary" href="#collection">Find your drive <span aria-hidden="true">↗</span></a><a class="text-button" href="#about">See what’s inside →</a></div><div class="proof"><div class="avatars"><span>P</span><span>S</span><span>S</span></div><div><span class="stars">★★★★★</span><br>Loved by Poluru, Subra &amp; Subbu</div></div></div><div class="hero-media"><img class="" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The open road is calling." loading="lazy" width="1200" height="800"><div class="hero-note"><span class="eyebrow">A LITTLE MORE EVERYDAY</span><strong>Find your kind of extraordinary</strong>Thoughtfully chosen. Ready for you.</div></div></section><section id="collection" class="section"><div class="section-head"><div><p class="eyebrow">MADE FOR YOUR EVERYDAY</p><h2>Explore the fleet</h2></div><p>A car for every kind of journey.</p></div><div class="filters"><button class="filter active" data-filter="All" aria-pressed="true">All</button><button class="filter " data-filter="Electric" aria-pressed="false">Electric</button><button class="filter " data-filter="Sport" aria-pressed="false">Sport</button><button class="filter " data-filter="SUV" aria-pressed="false">SUV</button><input class="search" type="search" placeholder="Search this collection…" aria-label="Search this collection"></div><div class="grid collection"><article class="product-card" data-search="The Weekend Coupe Automatic · 2 seats · 320 mi Sport" data-category="Sport"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The Weekend Coupe" loading="lazy" width="1200" height="800"><span class="image-tag">Sport</span><button class="favorite" aria-label="Save The Weekend Coupe" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Automatic · 2 seats · 320 mi</p><h3>The Weekend Coupe</h3><div class="card-bottom"><strong>$89 / day</strong><button class="text-button" data-action="modal" data-title="The Weekend Coupe" data-kind="Reserve">Reserve</button></div></div></article><article class="product-card" data-search="City Electric Electric · 5 seats · 280 mi Electric" data-category="Electric"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="City Electric" loading="lazy" width="1200" height="800"><span class="image-tag">Electric</span><button class="favorite" aria-label="Save City Electric" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Electric · 5 seats · 280 mi</p><h3>City Electric</h3><div class="card-bottom"><strong>$65 / day</strong><button class="text-button" data-action="modal" data-title="City Electric" data-kind="Reserve">Reserve</button></div></div></article><article class="product-card" data-search="The Adventure SUV Automatic · 5 seats · Unlimited miles SUV" data-category="SUV"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The Adventure SUV" loading="lazy" width="1200" height="800"><span class="image-tag">SUV</span><button class="favorite" aria-label="Save The Adventure SUV" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Automatic · 5 seats · Unlimited miles</p><h3>The Adventure SUV</h3><div class="card-bottom"><strong>$95 / day</strong><button class="text-button" data-action="modal" data-title="The Adventure SUV" data-kind="Reserve">Reserve</button></div></div></article><p class="empty" hidden>No matches yet. Try another search or category.</p></div></section><section id="about" class="feature-grid"><div><b>01 /</b><h3>Thoughtfully selected</h3><p>Good options, chosen with the details in mind.</p></div><div><b>02 /</b><h3>On your terms</h3><p>Find what fits your plans, your pace, and your everyday.</p></div><div><b>03 /</b><h3>People come first</h3><p>A personal touch from Poluru, Subra, and Subbu.</p></div></section><section class="banner" id="contact"><div><h2>Something good starts here.</h2><p>A car for every kind of journey.</p></div><button class="primary" data-action="modal" data-title="Something good starts here." data-kind="Send inquiry">Get in touch</button></section></main><footer class="site-footer"><span class="brand">Poluru Drive<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  Keyline — Car rental marketplace
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyline — Rent cars from trusted hosts</title>
+  <meta name="description" content="Keyline is a fictional car rental marketplace for Harbor Mobility: search the fleet, compare hosts, and hold a trip in the browser. Designed by Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#F4CE14" />
+  <link rel="canonical" href="https://polurus.com/templates/car-rental-marketplace/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Keyline — Rent cars from trusted hosts" />
+  <meta property="og:description" content="A clean car rental marketplace with fleet filters, airport desks, and demo booking." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Keyline — Rent cars from trusted hosts" />
+  <meta name="twitter:description" content="A clean car rental marketplace with fleet filters, airport desks, and demo booking." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #f4ce14;
+      --color-brand-dark: #c9a800;
+      --color-brand-soft: #fef9e0;
+      --color-ink: #1a1810;
+      --color-muted: #5c5744;
+      --color-line: #ebe4c4;
+      --color-canvas: #fcfaf3;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Keyline — Rent cars from trusted hosts",
+        "description": "Fictional car rental marketplace by Subrahmanyam Poluru. It does not process payments or real bookings.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Keyline charge a real card?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Holds and contact notes stay in this browser. Nothing is sent to a payment processor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who are the hosts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sample hosts and vehicles are fictional entries for Harbor Mobility."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="cr-body bg-canvas text-ink antialiased" id="top">
+  <a class="cr-skip" href="#main">Skip to content</a>
+
+  <div class="cr-ui bg-ink text-white/85 text-sm">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-brand mr-2 align-middle" aria-hidden="true"></span>142 cars available today · Austin &amp; Hyderabad desks open</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-white hover:text-brand" href="tel:+15125550177"><i class="bi bi-telephone"></i> (512) 555-0177</a>
+        <span class="hidden sm:inline">Harbor Mobility · verified hosts</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="crHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="cr-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-ink" aria-hidden="true"><i class="bi bi-key-fill"></i></span>
+        Keyline<em class="not-italic text-brand-dark">.</em>
+      </a>
+      <button class="cr-ui ml-auto inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="crNavToggle" aria-expanded="false" aria-controls="crNavPanel" aria-label="Open menu">
+        <i class="bi bi-list text-lg"></i>
+      </button>
+      <nav class="cr-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex" aria-label="Primary">
+        <a class="hover:text-ink" href="#product">How it works</a>
+        <a class="hover:text-ink" href="#fleet">Fleet</a>
+        <a class="hover:text-ink" href="#locations">Locations</a>
+        <a class="hover:text-ink" href="#hosts">Hosts</a>
+        <a class="hover:text-ink" href="#pricing">Pricing</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="cr-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-ink hover:bg-brand-dark md:inline-flex" href="#fleet">Browse fleet</a>
+    </div>
+    <div class="cr-nav-open border-t border-line bg-canvas md:hidden" id="crNavPanel">
+      <nav class="cr-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#product">How it works</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#fleet">Fleet</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#locations">Locations</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#hosts">Hosts</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#pricing">Pricing</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-ink" href="#fleet">Browse fleet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-canvas">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 lg:grid-cols-2 lg:py-16">
+        <div class="cr-reveal">
+          <p class="cr-ui mb-3 text-xs font-black uppercase tracking-[0.14em] text-brand-dark">Harbor Mobility marketplace</p>
+          <h1 class="cr-display text-4xl font-black leading-tight sm:text-5xl lg:text-[3.25rem]">Keys in hand,<br />trip on your terms.</h1>
+          <p class="mt-4 max-w-lg text-lg text-muted">Keyline connects travelers with vetted hosts and airport desks. Search dates, pick a class, and hold a vehicle—this demo never charges a card.</p>
+          <form class="mt-6 grid gap-3 rounded-2xl border border-line bg-white p-4 sm:grid-cols-2 lg:grid-cols-4" id="crSearchForm">
+            <label class="cr-ui grid gap-1 text-xs font-bold text-muted sm:col-span-2 lg:col-span-1">
+              Pickup
+              <select class="rounded-xl border border-line px-3 py-2.5 font-normal text-ink" id="crPickup" name="pickup">
+                <option>Austin AUS</option>
+                <option>Dallas DFW</option>
+                <option>Hyderabad HYD</option>
+                <option>London LHR</option>
+              </select>
+            </label>
+            <label class="cr-ui grid gap-1 text-xs font-bold text-muted">
+              From
+              <input class="rounded-xl border border-line px-3 py-2.5 font-normal" type="date" name="from" />
+            </label>
+            <label class="cr-ui grid gap-1 text-xs font-bold text-muted">
+              Until
+              <input class="rounded-xl border border-line px-3 py-2.5 font-normal" type="date" name="until" />
+            </label>
+            <button class="cr-ui rounded-xl bg-brand px-4 py-2.5 text-sm font-black text-ink hover:bg-brand-dark sm:col-span-2 lg:col-span-1 lg:self-end" type="submit">Search fleet</button>
+          </form>
+          <ul class="mt-8 flex flex-wrap gap-6 text-sm">
+            <li><strong class="cr-display block text-2xl text-ink">4.9</strong><span class="cr-ui font-bold text-muted">avg host rating</span></li>
+            <li><strong class="cr-display block text-2xl text-ink">38k</strong><span class="cr-ui font-bold text-muted">trips completed</span></li>
+            <li><strong class="cr-display block text-2xl text-ink">24/7</strong><span class="cr-ui font-bold text-muted">roadside line</span></li>
+          </ul>
+        </div>
+        <div class="cr-reveal">
+          <div class="overflow-hidden rounded-2xl border border-line bg-white shadow-[0_12px_32px_rgba(26,24,16,0.06)]">
+            <div class="cr-ui flex items-center justify-between border-b border-line px-4 py-3 text-sm font-bold">
+              <span class="text-muted">Featured · Weekend lane</span>
+              <span class="rounded-md bg-brand px-2 py-0.5 text-xs text-ink">Instant book</span>
+            </div>
+            <img class="h-56 w-full object-cover" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Silver coupe parked on an open road" width="1200" height="800" loading="eager" />
+            <div class="grid gap-3 p-4 sm:grid-cols-3">
+              <div class="rounded-xl bg-canvas p-3">
+                <p class="cr-ui text-xs font-bold uppercase text-muted">Vehicle</p>
+                <p class="cr-display font-bold">Austin GT Coupe</p>
+              </div>
+              <div class="rounded-xl bg-canvas p-3">
+                <p class="cr-ui text-xs font-bold uppercase text-muted">Host</p>
+                <p class="cr-display font-bold">Ravi Poluru</p>
+              </div>
+              <div class="rounded-xl bg-brand-soft p-3">
+                <p class="cr-ui text-xs font-bold uppercase text-muted">Daily</p>
+                <p class="cr-display font-bold">$89</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-14" id="product">
+      <div class="cr-reveal max-w-2xl">
+        <p class="cr-ui text-xs font-black uppercase tracking-[0.14em] text-brand-dark">How it works</p>
+        <h2 class="cr-display mt-2 text-3xl font-black sm:text-4xl">Search, verify, drive.</h2>
+        <p class="mt-3 text-muted">Three steps mirror production Keyline—here everything stays local so you can ship the UI first.</p>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-3 cr-reveal">
+        <article class="rounded-2xl border border-line bg-white p-5">
+          <span class="cr-display text-3xl font-black text-brand-dark">01</span>
+          <h3 class="cr-display mt-3 text-lg font-bold">Pick place &amp; dates</h3>
+          <p class="mt-2 text-sm text-muted">Airport counters and neighborhood hosts share one inventory board with clear pickup windows.</p>
+        </article>
+        <article class="rounded-2xl border border-line bg-white p-5">
+          <span class="cr-display text-3xl font-black text-brand-dark">02</span>
+          <h3 class="cr-display mt-3 text-lg font-bold">Compare verified listings</h3>
+          <p class="mt-2 text-sm text-muted">Photos, mileage caps, and insurance tier sit on every card—no hidden host fees in this sample.</p>
+        </article>
+        <article class="rounded-2xl border border-line bg-white p-5">
+          <span class="cr-display text-3xl font-black text-brand-dark">03</span>
+          <h3 class="cr-display mt-3 text-lg font-bold">Hold &amp; check in</h3>
+          <p class="mt-2 text-sm text-muted">Demo holds show a toast only. Production would send a QR check-in to your phone.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-brand-soft/50" id="fleet">
+      <div class="mx-auto max-w-6xl px-5 py-14">
+        <div class="cr-reveal flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="cr-ui text-xs font-black uppercase tracking-[0.14em] text-brand-dark">Fleet</p>
+            <h2 class="cr-display mt-2 text-3xl font-black sm:text-4xl">Cars ready this week.</h2>
+            <p class="mt-2 max-w-xl text-muted">Filter by class or search model and host. Favorites persist in your browser when storage is available.</p>
+          </div>
+          <p class="cr-ui text-sm font-bold text-muted" id="crFleetCount">6 vehicles</p>
+        </div>
+        <div class="cr-reveal mt-5 flex flex-wrap items-center gap-2">
+          <div class="flex min-w-[12rem] flex-1 items-center gap-2 rounded-xl border border-line bg-white px-3">
+            <i class="bi bi-search text-muted" aria-hidden="true"></i>
+            <label class="sr-only" for="crSearch">Search fleet</label>
+            <input class="min-h-11 flex-1 border-0 bg-transparent outline-none" id="crSearch" type="search" placeholder="Model, host, or keyword" autocomplete="off" />
+          </div>
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Vehicle class">
+            <button class="cr-ui rounded-full border border-brand bg-brand px-3 py-2 text-sm font-bold text-ink" type="button" data-cr-filter="all" aria-pressed="true">All</button>
+            <button class="cr-ui rounded-full border border-line bg-white px-3 py-2 text-sm font-bold text-ink" type="button" data-cr-filter="electric" aria-pressed="false">Electric</button>
+            <button class="cr-ui rounded-full border border-line bg-white px-3 py-2 text-sm font-bold text-ink" type="button" data-cr-filter="suv" aria-pressed="false">SUV</button>
+            <button class="cr-ui rounded-full border border-line bg-white px-3 py-2 text-sm font-bold text-ink" type="button" data-cr-filter="compact" aria-pressed="false">Compact</button>
+            <button class="cr-ui rounded-full border border-line bg-white px-3 py-2 text-sm font-bold text-ink" type="button" data-cr-filter="luxury" aria-pressed="false">Luxury</button>
+          </div>
+        </div>
+        <div class="cr-fleet-grid mt-6 cr-reveal">
+          <article class="cr-card overflow-hidden rounded-2xl border border-line bg-white" data-category="luxury" data-search="Austin GT Coupe Ravi Poluru sport automatic">
+            <div class="relative">
+              <img class="cr-card-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Silver sports coupe" width="800" height="540" loading="lazy" />
+              <span class="cr-ui absolute left-3 top-3 rounded-md bg-white px-2 py-1 text-xs font-bold">Luxury</span>
+              <button class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" type="button" data-cr-fav="austin-gt" aria-label="Save Austin GT Coupe" aria-pressed="false"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Automatic · 2 seats · 320 mi/day</p>
+              <h3 class="cr-display mt-1 text-lg font-bold">Austin GT Coupe</h3>
+              <p class="text-sm text-muted">Host · Ravi Poluru · 4.98 ★</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <strong class="cr-display text-lg">$89<span class="text-sm font-normal text-muted"> / day</span></strong>
+                <button class="cr-ui rounded-xl bg-brand px-3 py-2 text-sm font-bold text-ink hover:bg-brand-dark" type="button" data-cr-book="Austin GT Coupe">Hold</button>
+              </div>
+            </div>
+          </article>
+          <article class="cr-card overflow-hidden rounded-2xl border border-line bg-white" data-category="electric" data-search="City Spark EV Meera Poluru electric">
+            <div class="relative">
+              <img class="cr-card-img" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="White electric sedan" width="800" height="540" loading="lazy" />
+              <span class="cr-ui absolute left-3 top-3 rounded-md bg-white px-2 py-1 text-xs font-bold">Electric</span>
+              <button class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" type="button" data-cr-fav="city-spark" aria-label="Save City Spark EV" aria-pressed="false"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">EV · 5 seats · 280 mi range</p>
+              <h3 class="cr-display mt-1 text-lg font-bold">City Spark EV</h3>
+              <p class="text-sm text-muted">Host · Meera Poluru · 4.92 ★</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <strong class="cr-display text-lg">$65<span class="text-sm font-normal text-muted"> / day</span></strong>
+                <button class="cr-ui rounded-xl bg-brand px-3 py-2 text-sm font-bold text-ink hover:bg-brand-dark" type="button" data-cr-book="City Spark EV">Hold</button>
+              </div>
+            </div>
+          </article>
+          <article class="cr-card overflow-hidden rounded-2xl border border-line bg-white" data-category="suv" data-search="Trailhead SUV Ishaan Poluru adventure">
+            <div class="relative">
+              <img class="cr-card-img" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Blue SUV on coastal road" width="800" height="540" loading="lazy" />
+              <span class="cr-ui absolute left-3 top-3 rounded-md bg-white px-2 py-1 text-xs font-bold">SUV</span>
+              <button class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" type="button" data-cr-fav="trailhead" aria-label="Save Trailhead SUV" aria-pressed="false"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">AWD · 5 seats · unlimited miles</p>
+              <h3 class="cr-display mt-1 text-lg font-bold">Trailhead SUV</h3>
+              <p class="text-sm text-muted">Host · Ishaan Poluru · 4.95 ★</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <strong class="cr-display text-lg">$95<span class="text-sm font-normal text-muted"> / day</span></strong>
+                <button class="cr-ui rounded-xl bg-brand px-3 py-2 text-sm font-bold text-ink hover:bg-brand-dark" type="button" data-cr-book="Trailhead SUV">Hold</button>
+              </div>
+            </div>
+          </article>
+          <article class="cr-card overflow-hidden rounded-2xl border border-line bg-white" data-category="compact" data-search="Harbor Compact Kavya Poluru city">
+            <div class="relative">
+              <img class="cr-card-img" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Compact hatchback in city" width="800" height="540" loading="lazy" />
+              <span class="cr-ui absolute left-3 top-3 rounded-md bg-white px-2 py-1 text-xs font-bold">Compact</span>
+              <button class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" type="button" data-cr-fav="harbor-compact" aria-label="Save Harbor Compact" aria-pressed="false"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Manual · 4 seats · 200 mi/day</p>
+              <h3 class="cr-display mt-1 text-lg font-bold">Harbor Compact</h3>
+              <p class="text-sm text-muted">Host · Kavya Poluru · 4.88 ★</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <strong class="cr-display text-lg">$48<span class="text-sm font-normal text-muted"> / day</span></strong>
+                <button class="cr-ui rounded-xl bg-brand px-3 py-2 text-sm font-bold text-ink hover:bg-brand-dark" type="button" data-cr-book="Harbor Compact">Hold</button>
+              </div>
+            </div>
+          </article>
+          <article class="cr-card overflow-hidden rounded-2xl border border-line bg-white" data-category="electric" data-search="Hyderabad Volt EV electric host">
+            <div class="relative">
+              <img class="cr-card-img" src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Modern electric car charging" width="800" height="540" loading="lazy" />
+              <span class="cr-ui absolute left-3 top-3 rounded-md bg-white px-2 py-1 text-xs font-bold">Electric</span>
+              <button class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" type="button" data-cr-fav="hyd-volt" aria-label="Save Hyderabad Volt" aria-pressed="false"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">EV · 5 seats · charger included</p>
+              <h3 class="cr-display mt-1 text-lg font-bold">Hyderabad Volt</h3>
+              <p class="text-sm text-muted">Host · Anika Poluru · 4.91 ★</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <strong class="cr-display text-lg">$58<span class="text-sm font-normal text-muted"> / day</span></strong>
+                <button class="cr-ui rounded-xl bg-brand px-3 py-2 text-sm font-bold text-ink hover:bg-brand-dark" type="button" data-cr-book="Hyderabad Volt">Hold</button>
+              </div>
+            </div>
+          </article>
+          <article class="cr-card overflow-hidden rounded-2xl border border-line bg-white" data-category="luxury" data-search="Executive Sedan London luxury">
+            <div class="relative">
+              <img class="cr-card-img" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Black executive sedan" width="800" height="540" loading="lazy" />
+              <span class="cr-ui absolute left-3 top-3 rounded-md bg-white px-2 py-1 text-xs font-bold">Luxury</span>
+              <button class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" type="button" data-cr-fav="exec-sedan" aria-label="Save Executive Sedan" aria-pressed="false"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Automatic · leather · airport meet</p>
+              <h3 class="cr-display mt-1 text-lg font-bold">Executive Sedan</h3>
+              <p class="text-sm text-muted">Host · James Poluru · 4.97 ★</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <strong class="cr-display text-lg">$112<span class="text-sm font-normal text-muted"> / day</span></strong>
+                <button class="cr-ui rounded-xl bg-brand px-3 py-2 text-sm font-bold text-ink hover:bg-brand-dark" type="button" data-cr-book="Executive Sedan">Hold</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="cr-reveal mt-6 text-center text-muted" id="crFleetEmpty" hidden>No matches—try another class or search term.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-14" id="locations">
+      <div class="cr-reveal max-w-2xl">
+        <p class="cr-ui text-xs font-black uppercase tracking-[0.14em] text-brand-dark">Locations</p>
+        <h2 class="cr-display mt-2 text-3xl font-black sm:text-4xl">Airport desks &amp; city hubs.</h2>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-3 cr-reveal">
+        <article class="rounded-2xl border border-line bg-white overflow-hidden">
+          <div class="border-b border-line bg-canvas px-4 py-3 cr-ui text-sm font-bold">AUS · Terminal B</div>
+          <div class="p-4">
+            <h3 class="cr-display font-bold">Austin airport counter</h3>
+            <p class="mt-1 text-sm text-muted">24 vehicles staged · shuttle every 8 min</p>
+            <dl class="mt-4 grid grid-cols-3 gap-2 text-center text-sm">
+              <div class="rounded-lg bg-canvas p-2"><dt class="text-muted">Open</dt><dd class="cr-display font-bold">06:00</dd></div>
+              <div class="rounded-lg bg-canvas p-2"><dt class="text-muted">Close</dt><dd class="cr-display font-bold">23:00</dd></div>
+              <div class="rounded-lg bg-brand-soft p-2"><dt class="text-muted">On lot</dt><dd class="cr-display font-bold">41</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-line bg-white overflow-hidden">
+          <div class="border-b border-line bg-canvas px-4 py-3 cr-ui text-sm font-bold">HYD · Gate 4</div>
+          <div class="p-4">
+            <h3 class="cr-display font-bold">Hyderabad gateway</h3>
+            <p class="mt-1 text-sm text-muted">EV-first row · prepaid toll tag</p>
+            <dl class="mt-4 grid grid-cols-3 gap-2 text-center text-sm">
+              <div class="rounded-lg bg-canvas p-2"><dt class="text-muted">Open</dt><dd class="cr-display font-bold">05:30</dd></div>
+              <div class="rounded-lg bg-canvas p-2"><dt class="text-muted">Close</dt><dd class="cr-display font-bold">22:30</dd></div>
+              <div class="rounded-lg bg-brand-soft p-2"><dt class="text-muted">On lot</dt><dd class="cr-display font-bold">28</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-line bg-white overflow-hidden">
+          <div class="border-b border-line bg-canvas px-4 py-3 cr-ui text-sm font-bold">LHR · Zone C</div>
+          <div class="p-4">
+            <h3 class="cr-display font-bold">London meet &amp; greet</h3>
+            <p class="mt-1 text-sm text-muted">Bond-ready fleet · valet return</p>
+            <dl class="mt-4 grid grid-cols-3 gap-2 text-center text-sm">
+              <div class="rounded-lg bg-canvas p-2"><dt class="text-muted">Open</dt><dd class="cr-display font-bold">07:00</dd></div>
+              <div class="rounded-lg bg-canvas p-2"><dt class="text-muted">Close</dt><dd class="cr-display font-bold">21:00</dd></div>
+              <div class="rounded-lg bg-brand-soft p-2"><dt class="text-muted">On lot</dt><dd class="cr-display font-bold">19</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-white" id="hosts">
+      <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 lg:grid-cols-2">
+        <div class="cr-reveal">
+          <p class="cr-ui text-xs font-black uppercase tracking-[0.14em] text-brand-dark">Hosts</p>
+          <h2 class="cr-display mt-2 text-3xl font-black sm:text-4xl">Marketplace trust, fleet discipline.</h2>
+          <p class="mt-3 text-muted">Hosts set availability; Harbor Mobility verifies insurance and inspection dates. Travelers see the same policy block on every listing.</p>
+          <ul class="mt-6 space-y-4">
+            <li class="flex gap-3 rounded-xl border border-line p-4">
+              <span class="cr-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand font-black text-ink">RP</span>
+              <div>
+                <p class="cr-display font-bold">Ravi Poluru · Superhost</p>
+                <p class="text-sm text-muted">12 vehicles · Austin · 98% response within 1 hr</p>
+              </div>
+            </li>
+            <li class="flex gap-3 rounded-xl border border-line p-4">
+              <span class="cr-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-ink font-black text-brand">MP</span>
+              <div>
+                <p class="cr-display font-bold">Meera Poluru · EV specialist</p>
+                <p class="text-sm text-muted">6 EVs · home charger included on 4 listings</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="cr-reveal rounded-2xl border border-line bg-canvas p-6">
+          <div class="flex items-center gap-2 text-brand-dark"><i class="bi bi-shield-check text-xl"></i><span class="cr-ui text-sm font-black uppercase">Coverage snapshot</span></div>
+          <h3 class="cr-display mt-3 text-xl font-bold">What every trip includes</h3>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><i class="bi bi-check2 text-ink"></i> Liability up to sample limits (demo copy only)</li>
+            <li class="flex gap-2"><i class="bi bi-check2 text-ink"></i> 24/7 roadside and replacement vehicle line</li>
+            <li class="flex gap-2"><i class="bi bi-check2 text-ink"></i> Pre-trip photos stored with the booking ID</li>
+            <li class="flex gap-2"><i class="bi bi-check2 text-ink"></i> Host payout after return inspection window</li>
+          </ul>
+          <p class="mt-4 text-xs text-muted">Production policies would link to PDFs; this template keeps legal text minimal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-14" id="pricing">
+      <div class="cr-reveal max-w-2xl">
+        <p class="cr-ui text-xs font-black uppercase tracking-[0.14em] text-brand-dark">Pricing</p>
+        <h2 class="cr-display mt-2 text-3xl font-black sm:text-4xl">For guests and for hosts.</h2>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-3 cr-reveal">
+        <article class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="cr-display text-lg font-bold">Guest</h3>
+          <p class="cr-display mt-2 text-3xl font-black">Free<span class="text-base font-normal text-muted"> to join</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            <li>Search &amp; save favorites</li>
+            <li>Standard support line</li>
+            <li>Pay per trip at checkout</li>
+          </ul>
+          <a class="cr-ui mt-6 inline-flex rounded-xl border border-line px-4 py-2 text-sm font-bold hover:bg-brand-soft" href="#fleet">Browse fleet</a>
+        </article>
+        <article class="rounded-2xl border-2 border-ink bg-ink p-6 text-white">
+          <h3 class="cr-display text-lg font-bold">Host Pro</h3>
+          <p class="cr-display mt-2 text-3xl font-black">15%<span class="text-base font-normal text-white/70"> platform fee</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-white/75">
+            <li>Calendar sync &amp; pricing tips</li>
+            <li>Instant book badge</li>
+            <li>Priority damage review</li>
+          </ul>
+          <a class="cr-ui mt-6 inline-flex rounded-xl bg-brand px-4 py-2 text-sm font-black text-ink hover:bg-brand-dark" href="#contact">List a vehicle</a>
+        </article>
+        <article class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="cr-display text-lg font-bold">Business</h3>
+          <p class="cr-display mt-2 text-3xl font-black">Custom</p>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            <li>Central billing &amp; users</li>
+            <li>Policy caps per driver</li>
+            <li>Monthly utilization report</li>
+          </ul>
+          <a class="cr-ui mt-6 inline-flex rounded-xl border border-line px-4 py-2 text-sm font-bold hover:bg-brand-soft" href="#contact">Request demo</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-canvas" id="faq">
+      <div class="mx-auto max-w-6xl px-5 py-14">
+        <h2 class="cr-display cr-reveal text-3xl font-black">Questions before you book.</h2>
+        <div class="mt-6 grid gap-3 cr-reveal">
+          <details class="rounded-2xl border border-line bg-white p-4" open>
+            <summary class="cursor-pointer cr-ui font-bold">Does Keyline charge a real card?</summary>
+            <p class="mt-2 text-sm text-muted">No. Holds and contact notes stay in this browser. Nothing is sent to a payment processor.</p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white p-4">
+            <summary class="cursor-pointer cr-ui font-bold">Who are the hosts?</summary>
+            <p class="mt-2 text-sm text-muted">Sample hosts and vehicles are fictional entries for Harbor Mobility, authored as a UI template.</p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white p-4">
+            <summary class="cursor-pointer cr-ui font-bold">Where do favorites go?</summary>
+            <p class="mt-2 text-sm text-muted">Saved hearts persist in localStorage when your browser allows it; otherwise they last for the visit.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-14" id="contact">
+      <div class="grid gap-10 lg:grid-cols-2 cr-reveal">
+        <div>
+          <p class="cr-ui text-xs font-black uppercase tracking-[0.14em] text-brand-dark">Contact</p>
+          <h2 class="cr-display mt-2 text-3xl font-black">Talk to marketplace ops.</h2>
+          <p class="mt-3 text-muted">Ask about becoming a host, business accounts, or white-label checkout. Demo form only.</p>
+          <p class="mt-6 text-sm"><strong>Harbor Mobility</strong><br />ops@keyline.example · (512) 555-0177</p>
+        </div>
+        <form class="grid gap-3 rounded-2xl border border-line bg-white p-5" id="crContactForm">
+          <label class="cr-ui grid gap-1 text-xs font-bold text-muted">Name
+            <input class="rounded-xl border border-line px-3 py-2.5 font-normal" name="name" required maxlength="120" />
+          </label>
+          <label class="cr-ui grid gap-1 text-xs font-bold text-muted">Email
+            <input class="rounded-xl border border-line px-3 py-2.5 font-normal" type="email" name="email" required maxlength="120" />
+          </label>
+          <label class="cr-ui grid gap-1 text-xs font-bold text-muted">Message
+            <textarea class="min-h-28 rounded-xl border border-line px-3 py-2.5 font-normal" name="message" required maxlength="2000"></textarea>
+          </label>
+          <button class="cr-ui rounded-xl bg-brand px-4 py-3 text-sm font-black text-ink hover:bg-brand-dark" type="submit">Save demo message</button>
+          <p class="text-xs text-muted">Nothing is emailed. Saved in this browser only.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/75">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-1">
+        <a class="cr-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-ink" aria-hidden="true"><i class="bi bi-key-fill"></i></span>
+          Keyline.
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Car rental marketplace template with fleet filters, hosts, and airport desks. Fictional Harbor Mobility book.</p>
+      </div>
+      <nav aria-label="Product links">
+        <p class="cr-ui text-xs font-black uppercase tracking-widest text-white/40">Product</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand" href="#product">How it works</a></li>
+          <li><a class="hover:text-brand" href="#fleet">Fleet</a></li>
+          <li><a class="hover:text-brand" href="#locations">Locations</a></li>
+          <li><a class="hover:text-brand" href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support links">
+        <p class="cr-ui text-xs font-black uppercase tracking-widest text-white/40">Support</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand" href="#contact">Contact</a></li>
+          <li><a class="hover:text-brand" href="tel:+15125550177">(512) 555-0177</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="cr-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#2a2618] p-4">
+          <span class="cr-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand font-black text-ink" aria-hidden="true">SP</span>
+          <div>
+            <p class="cr-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> Keyline. Fictional sample. No live bookings.</span>
+      <span>Built by <a class="text-brand hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="cr-toast" id="crToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand-dark" aria-hidden="true"></i>
+    <div>
+      <strong class="cr-display text-sm" id="crToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="crToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
