@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Wayline — Logistics tracking
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,596 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wayline — Shipments, ETAs, and proof of delivery</title>
+  <meta name="description" content="Wayline is a fictional logistics desk for Harbor Freight Network: live loads, lane ETAs, exceptions, and POD. Designed by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#C4DFDF" />
+  <link rel="canonical" href="https://polurus.com/templates/logistics-tracking/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Wayline — Shipments, ETAs, and proof of delivery" />
+  <meta property="og:description" content="A clean logistics tracking website with loads, hubs, carriers, and shipment timelines." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Wayline — Shipments, ETAs, and proof of delivery" />
+  <meta name="twitter:description" content="A clean logistics tracking website with loads, hubs, carriers, and shipment timelines." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Wayline — Shipments, ETAs, and proof of delivery",
+        "description": "Fictional logistics tracking website by Subrahmanyam Poluru. It does not connect to real carriers.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Wayline ping real trucks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. GPS rows, ETAs, and POD uploads stay in this browser. Nothing is sent to a carrier API."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which hubs are in the sample?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Austin cross-dock, Hyderabad gateway, and Rotterdam bond. Filter loads by lane or status."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I export the load board?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Export downloads the rows currently visible after your search and status filter."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="lt-skip" href="#main">Skip to content</a>
+
+  <div class="lt-utility">
+    <div class="container lt-utility-inner">
+      <span><i class="lt-dot" aria-hidden="true"></i>Network green · <span id="ltLoadCount">6</span> active loads on board</span>
+      <div class="lt-utility-meta">
+        <a href="tel:+15125550144"><i class="bi bi-telephone"></i> (512) 555-0144</a>
+        <span>Harbor Freight Network · last ping 2 min ago</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top lt-nav" aria-label="Primary">
+    <div class="container">
+      <a class="lt-brand" href="#top">
+        <span class="lt-mark" aria-hidden="true"><i class="bi bi-truck"></i></span>
+        Wayline<em>.</em>
+      </a>
+      <button class="lt-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shipments">Shipments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hubs">Hubs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#carriers">Carriers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="lt-btn lt-btn-primary" href="#shipments">Track a load</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="lt-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 lt-hero-copy lt-reveal">
+            <p class="lt-kicker">Harbor Freight Network</p>
+            <h1>Every mile on one load board.</h1>
+            <p>Wayline is the fictional control tower Meera Poluru runs for regional LTL and bonded lanes. Search by reference, read ETAs, and open a milestone timeline—no carrier login required in this demo.</p>
+            <form class="lt-track-inline" id="ltTrackForm" action="#shipments">
+              <label class="visually-hidden" for="ltTrackInput">Tracking ID</label>
+              <input id="ltTrackInput" type="text" placeholder="WL-884021" autocomplete="off" />
+              <button class="lt-btn lt-btn-primary" type="submit">Track</button>
+            </form>
+            <div class="lt-actions">
+              <a class="lt-btn lt-btn-primary" href="#shipments">Open load board</a>
+              <button class="lt-btn lt-btn-ghost" type="button" id="ltAlertBtn">2 exceptions</button>
+            </div>
+            <ul class="lt-hero-stats">
+              <li><strong>847</strong><span>loads this week</span></li>
+              <li><strong>96.2%</strong><span>on-time hub departures</span></li>
+              <li><strong>18 min</strong><span>avg. exception response</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 lt-reveal">
+            <div class="lt-panel" aria-label="Sample shipment WL-884021">
+              <div class="lt-panel-bar">
+                <span>Live sample · WL-884021</span>
+                <span class="lt-badge is-transit">In transit</span>
+              </div>
+              <div class="lt-route">
+                <ol class="lt-route-steps">
+                  <li>
+                    <strong>Origin</strong>
+                    <span>Austin DC</span>
+                    <small>Picked 06:12</small>
+                  </li>
+                  <li class="is-active">
+                    <strong>En route</strong>
+                    <span>I-35 North</span>
+                    <small>GPS OK</small>
+                  </li>
+                  <li>
+                    <strong>Hub</strong>
+                    <span>Dallas dock 2</span>
+                    <small>ETA 18:00</small>
+                  </li>
+                  <li>
+                    <strong>POD</strong>
+                    <span>Pending</span>
+                    <small>Photo + sign</small>
+                  </li>
+                </ol>
+              </div>
+              <div class="lt-map-strip">
+                <span><i class="bi bi-geo-alt"></i> 142 mi remaining</span>
+                <span>Driver · Ravi Poluru · Unit 18</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lt-section" id="product">
+      <div class="container">
+        <div class="lt-section-head lt-reveal">
+          <p class="lt-kicker">Product</p>
+          <h2>Built for dispatch, not slide decks.</h2>
+          <p>One screen for references, lane health, and proof of delivery. Solid panels, no fluff—operators at Harbor Freight Network use it to answer “where is my freight?” in under ten seconds.</p>
+        </div>
+        <div class="lt-features lt-reveal">
+          <article class="lt-card">
+            <div class="lt-icon"><i class="bi bi-signpost-split"></i></div>
+            <h3>Lane-aware ETAs</h3>
+            <p>Hub departures, customs holds, and last-mile windows roll into a single ETA column—updated when GPS pings land.</p>
+          </article>
+          <article class="lt-card">
+            <div class="lt-icon"><i class="bi bi-camera"></i></div>
+            <h3>Proof of delivery</h3>
+            <p>Photo, signature, and receiver name attach to the load ID. Finance can close invoices without chasing email threads.</p>
+          </article>
+          <article class="lt-card">
+            <div class="lt-icon"><i class="bi bi-exclamation-triangle"></i></div>
+            <h3>Exception queue</h3>
+            <p>Delays, missed scans, and temperature excursions surface in one queue with owner and next action.</p>
+          </article>
+        </div>
+        <div class="lt-stats lt-reveal" style="margin-top: 1.4rem;">
+          <div class="lt-stat">
+            <p class="lt-stat-label">Cross-dock scans</p>
+            <p class="lt-stat-value">1.2M</p>
+            <p class="lt-stat-meta">last 90 days · sample book</p>
+          </div>
+          <div class="lt-stat">
+            <p class="lt-stat-label">Carriers connected</p>
+            <p class="lt-stat-value">38</p>
+            <p class="lt-stat-meta">EDI + API · fictional count</p>
+          </div>
+          <div class="lt-stat">
+            <p class="lt-stat-label">POD within 1 hr</p>
+            <p class="lt-stat-value">91%</p>
+            <p class="lt-stat-meta">of delivered loads</p>
+          </div>
+          <div class="lt-stat">
+            <p class="lt-stat-label">Lanes monitored</p>
+            <p class="lt-stat-value">124</p>
+            <p class="lt-stat-meta">NA · IN · EU corridors</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lt-section lt-section-alt" id="shipments">
+      <div class="container">
+        <div class="lt-split lt-reveal">
+          <div class="lt-section-head">
+            <p class="lt-kicker">Load board</p>
+            <h2>Shipments in motion.</h2>
+            <p>Filter by status or search reference, customer, or lane. Click Track to open the milestone timeline.</p>
+          </div>
+          <button class="lt-btn lt-btn-ghost" type="button" id="ltExportBtn"><i class="bi bi-download"></i> Export CSV</button>
+        </div>
+        <div class="lt-toolbar lt-reveal">
+          <label class="lt-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <span class="visually-hidden">Search loads</span>
+            <input id="ltSearch" type="search" placeholder="Reference, lane, or customer" autocomplete="off" />
+          </label>
+          <label class="lt-field" style="min-width: 11rem;">
+            <span class="visually-hidden">Status</span>
+            <select id="ltStatus">
+              <option value="all">All statuses</option>
+              <option value="transit">In transit</option>
+              <option value="delivered">Delivered</option>
+              <option value="delay">Delayed</option>
+              <option value="exception">Exception</option>
+            </select>
+          </label>
+        </div>
+        <p class="lt-result lt-reveal" id="ltResult">6 loads</p>
+        <div class="lt-table-wrap lt-reveal">
+          <table class="lt-table" id="ltTable">
+            <thead>
+              <tr>
+                <th scope="col">Reference</th>
+                <th scope="col">Lane</th>
+                <th scope="col">Customer</th>
+                <th scope="col">ETA</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-status="transit" data-search="WL-884021 Austin Dallas Harbor Retail Ravi">
+                <td><strong>WL-884021</strong><span>LTL · 12 pallets</span></td>
+                <td>Austin → Dallas</td>
+                <td>Harbor Retail</td>
+                <td>Oct 3 · 18:00</td>
+                <td><span class="lt-badge is-transit">In transit</span></td>
+                <td><button class="lt-btn lt-btn-sm lt-btn-ghost" type="button" data-track="WL-884021">Track</button></td>
+              </tr>
+              <tr data-status="transit" data-search="WL-883902 Hyderabad Chennai Poluru Medical Ishaan">
+                <td><strong>WL-883902</strong><span>FTL · pharma</span></td>
+                <td>Hyderabad → Chennai</td>
+                <td>Poluru Medical</td>
+                <td>Oct 3 · 21:15</td>
+                <td><span class="lt-badge is-transit">In transit</span></td>
+                <td><button class="lt-btn lt-btn-sm lt-btn-ghost" type="button" data-track="WL-883902">Track</button></td>
+              </tr>
+              <tr data-status="delivered" data-search="WL-883771 London Rotterdam Kavya">
+                <td><strong>WL-883771</strong><span>Bond · electronics</span></td>
+                <td>London → Rotterdam</td>
+                <td>North Sea Parts</td>
+                <td>Delivered Oct 1</td>
+                <td><span class="lt-badge is-delivered">Delivered</span></td>
+                <td><button class="lt-btn lt-btn-sm lt-btn-ghost" type="button" data-track="WL-883771">Track</button></td>
+              </tr>
+              <tr data-status="delay" data-search="WL-883654 Chicago Detroit delay">
+                <td><strong>WL-883654</strong><span>LTL · auto parts</span></td>
+                <td>Chicago → Detroit</td>
+                <td>Midwest OEM</td>
+                <td>Oct 4 · 09:00</td>
+                <td><span class="lt-badge is-delay">Delayed</span></td>
+                <td><button class="lt-btn lt-btn-sm lt-btn-ghost" type="button" data-track="WL-884021">Track</button></td>
+              </tr>
+              <tr data-status="exception" data-search="WL-883812 Miami POD exception">
+                <td><strong>WL-883812</strong><span>Last mile</span></td>
+                <td>Miami hub → store 44</td>
+                <td>Coast Grocers</td>
+                <td>Oct 3 · 14:00</td>
+                <td><span class="lt-badge is-exception">POD missing</span></td>
+                <td><button class="lt-btn lt-btn-sm lt-btn-ghost" type="button" data-track="WL-884021">Track</button></td>
+              </tr>
+              <tr data-status="delivered" data-search="WL-883701 Seattle Portland delivered">
+                <td><strong>WL-883701</strong><span>Parcel sort</span></td>
+                <td>Seattle → Portland</td>
+                <td>Cascade Home</td>
+                <td>Delivered Oct 2</td>
+                <td><span class="lt-badge is-delivered">Delivered</span></td>
+                <td><button class="lt-btn lt-btn-sm lt-btn-ghost" type="button" data-track="WL-883771">Track</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="lt-timeline-panel lt-reveal" id="ltTimeline" aria-live="polite">
+          <div class="lt-timeline-head">
+            <h3>Timeline · <span id="ltTimelineId">WL-884021</span></h3>
+            <button class="lt-btn lt-btn-sm lt-btn-ghost" type="button" id="ltTimelineClose">Close</button>
+          </div>
+          <div id="ltTimelineBody">
+            <p class="lt-timeline-route">Austin, TX → Dallas, TX</p>
+            <ol class="lt-timeline-list">
+              <li><span class="lt-timeline-when">Oct 3 · 06:12</span><strong>Picked up</strong><span>Harbor DC · Ravi Poluru signed</span></li>
+              <li><span class="lt-timeline-when">Oct 3 · 11:40</span><strong>In transit</strong><span>I-35 north · GPS ping OK</span></li>
+              <li><span class="lt-timeline-when">Est. Oct 3 · 18:00</span><strong>Out for delivery</strong><span>Dallas hub dock 2</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lt-section" id="hubs">
+      <div class="container">
+        <div class="lt-section-head lt-reveal">
+          <p class="lt-kicker">Hubs</p>
+          <h2>Three gateways, one board.</h2>
+          <p>Cross-dock capacity, bond status, and outbound cutoffs for the lanes in this sample book.</p>
+        </div>
+        <div class="lt-hubs lt-reveal">
+          <article class="lt-hub">
+            <div class="lt-hub-top">
+              <p class="lt-kicker">North America</p>
+              <h3>Austin cross-dock</h3>
+              <p>Regional LTL consolidation for I-35 and Gulf lanes. Night sort open until 23:00.</p>
+            </div>
+            <div class="lt-hub-meta">
+              <div><span>Doors</span><strong>24</strong></div>
+              <div><span>On dock</span><strong>118</strong></div>
+              <div><span>Cutoff</span><strong>19:30</strong></div>
+            </div>
+          </article>
+          <article class="lt-hub">
+            <div class="lt-hub-top">
+              <p class="lt-kicker">South Asia</p>
+              <h3>Hyderabad gateway</h3>
+              <p>Customs pre-clear and pharma cold chain. Ishaan Poluru owns exception desk.</p>
+            </div>
+            <div class="lt-hub-meta">
+              <div><span>Doors</span><strong>16</strong></div>
+              <div><span>On dock</span><strong>64</strong></div>
+              <div><span>Cutoff</span><strong>17:00</strong></div>
+            </div>
+          </article>
+          <article class="lt-hub">
+            <div class="lt-hub-top">
+              <p class="lt-kicker">Europe</p>
+              <h3>Rotterdam bond</h3>
+              <p>Bonded storage and North Sea ferry connections. Kavya Poluru signs POD audits.</p>
+            </div>
+            <div class="lt-hub-meta">
+              <div><span>Doors</span><strong>12</strong></div>
+              <div><span>On dock</span><strong>41</strong></div>
+              <div><span>Cutoff</span><strong>16:00</strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lt-section lt-section-alt" id="carriers">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-7 lt-reveal">
+            <div class="lt-section-head">
+              <p class="lt-kicker">Carriers</p>
+              <h2>Partners on the same timeline.</h2>
+              <p>EDI 214 status, API GPS, and manual check calls merge into one event stream per load.</p>
+            </div>
+            <div class="lt-panel" style="padding: 0.5rem 1.15rem;">
+              <div class="lt-row">
+                <span class="lt-avatar" aria-hidden="true">GP</span>
+                <div>
+                  <h3>Gulf Parcel · SCAC GLFP</h3>
+                  <p>Last mile in TX/LA · 214 every 15 min · on-time 94%</p>
+                </div>
+              </div>
+              <div class="lt-row">
+                <span class="lt-avatar" aria-hidden="true">IN</span>
+                <div>
+                  <h3>Indus National · SCAC INDL</h3>
+                  <p>NH16 pharma lanes · temp log attached · on-time 97%</p>
+                </div>
+              </div>
+              <div class="lt-row">
+                <span class="lt-avatar" aria-hidden="true">NS</span>
+                <div>
+                  <h3>North Sea Line · SCAC NSLF</h3>
+                  <p>Bond moves EU-UK · customs docs in portal · on-time 92%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 lt-reveal">
+            <div class="lt-card">
+              <div class="lt-icon"><i class="bi bi-shield-check"></i></div>
+              <h3>Audit-ready handoffs</h3>
+              <p>Every scan stores who touched the load, which dock, and which device—exportable for customer audits.</p>
+              <p style="margin-top: 0.85rem;">Harbor Freight Network runs SOC-style reviews quarterly; this template shows the read-only view ops shares with shippers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lt-section" id="pricing">
+      <div class="container">
+        <div class="lt-section-head lt-reveal">
+          <p class="lt-kicker">Pricing</p>
+          <h2>Simple tiers for growing fleets.</h2>
+          <p>Fictional plans for the template. No checkout—use Contact to leave a demo note.</p>
+        </div>
+        <div class="lt-plans lt-reveal">
+          <article class="lt-plan">
+            <h3>Dispatch</h3>
+            <p class="lt-price">$89 <span>/ mo</span></p>
+            <ul>
+              <li>500 active references</li>
+              <li>Email ETAs to customers</li>
+              <li>CSV export</li>
+            </ul>
+            <a class="lt-btn lt-btn-ghost" href="#contact">Start demo</a>
+          </article>
+          <article class="lt-plan is-featured">
+            <h3>Network</h3>
+            <p class="lt-price">$249 <span>/ mo</span></p>
+            <ul>
+              <li>Unlimited loads</li>
+              <li>Exception queue + SLA</li>
+              <li>Carrier EDI + API</li>
+            </ul>
+            <a class="lt-btn lt-btn-primary" href="#contact">Talk to ops</a>
+          </article>
+          <article class="lt-plan">
+            <h3>Enterprise</h3>
+            <p class="lt-price">Custom</p>
+            <ul>
+              <li>Multi-tenant shippers</li>
+              <li>Bond + customs modules</li>
+              <li>Dedicated onboarding</li>
+            </ul>
+            <a class="lt-btn lt-btn-ghost" href="#contact">Request scope</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lt-section lt-section-alt" id="faq">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 lt-reveal">
+            <div class="lt-section-head">
+              <p class="lt-kicker">Questions</p>
+              <h2>Before you wire a carrier.</h2>
+              <p>Short answers for shippers evaluating a tracking portal.</p>
+            </div>
+          </div>
+          <div class="col-lg-7 lt-reveal">
+            <div class="accordion lt-faq" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Does Wayline ping real trucks?</button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">No. GPS rows, ETAs, and POD uploads stay in this browser. Nothing is sent to a carrier API.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Which hubs are in the sample?</button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Austin cross-dock, Hyderabad gateway, and Rotterdam bond. Filter loads by lane or status on the board.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Can customers see the same timeline?</button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">In production you would share a read-only link per reference. Here, use Track on the load board or search WL-884021 in the hero field.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lt-section" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-5 lt-reveal">
+            <div class="lt-section-head">
+              <p class="lt-kicker">Contact</p>
+              <h2>Message dispatch.</h2>
+              <p>Leave a note about lanes, EDI, or white-label tracking. Demo only—nothing is emailed.</p>
+            </div>
+            <p><strong>Ops desk</strong><br />Meera Poluru · meera@wayline.example<br />(512) 555-0144</p>
+          </div>
+          <div class="col-lg-7 lt-reveal">
+            <form class="lt-form lt-panel" style="padding: 1.35rem 1.3rem;" id="ltContactForm">
+              <label class="lt-field">Name
+                <input name="name" required maxlength="120" placeholder="Your name" />
+              </label>
+              <label class="lt-field">Work email
+                <input name="email" type="email" required maxlength="120" placeholder="you@company.com" />
+              </label>
+              <label class="lt-field">Note
+                <textarea name="note" required maxlength="2000" placeholder="Load volume, lanes, or integration needs"></textarea>
+              </label>
+              <button class="lt-btn lt-btn-primary" type="submit">Save demo note</button>
+              <p class="lt-form-note">Saved in this browser only.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lt-footer">
+    <div class="container">
+      <div class="lt-footer-grid">
+        <div class="lt-footer-brand">
+          <a class="lt-brand" href="#top">
+            <span class="lt-mark" aria-hidden="true"><i class="bi bi-truck"></i></span>
+            Wayline<em>.</em>
+          </a>
+          <p>Logistics tracking template for loads, hubs, carriers, and milestones. Fictional Harbor Freight Network book. Free for personal and commercial use.</p>
+        </div>
+        <nav aria-label="Product">
+          <h2>Product</h2>
+          <a href="#product">Desk</a>
+          <a href="#shipments">Shipments</a>
+          <a href="#hubs">Hubs</a>
+          <a href="#carriers">Carriers</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <nav aria-label="Ops">
+          <h2>Ops</h2>
+          <a href="#faq">Questions</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+15125550144">(512) 555-0144</a>
+          <a href="mailto:ops@wayline.example">ops@wayline.example</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="lt-author">
+            <span class="lt-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="lt-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lt-legal">
+        <span>© <span id="year">2026</span> Wayline. Fictional sample. No live carrier connection.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lt-toast" id="ltToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <div>
+      <strong id="ltToastTitle">Done</strong>
+      <p id="ltToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
