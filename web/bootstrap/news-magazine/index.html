@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Harbor Ledger — News magazine
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,502 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harbor Ledger — Independent news for Harbor Media</title>
+  <meta name="description" content="Harbor Ledger is a fictional news magazine for Harbor Media: world, tech, culture, and opinion. Designed by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0C7B93" />
+  <link rel="canonical" href="https://polurus.com/templates/news-magazine/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Harbor Ledger — Independent news for Harbor Media" />
+  <meta property="og:description" content="A clean news magazine with lead stories, desk filters, and a demo reader." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Harbor Ledger — Independent news for Harbor Media" />
+  <meta name="twitter:description" content="A clean news magazine with lead stories, desk filters, and a demo reader." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Harbor Ledger — Independent news for Harbor Media",
+        "description": "Fictional news magazine template by Subrahmanyam Poluru. Articles are sample copy only.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      },
+      {
+        "@type": "NewsMediaOrganization",
+        "name": "Harbor Ledger",
+        "description": "Fictional publication in the Harbor Media sample book."
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="nm-skip" href="#main">Skip to content</a>
+
+  <div class="nm-ticker">
+    <div class="container nm-ticker-inner">
+      <span><i class="bi bi-lightning-fill" aria-hidden="true"></i> Breaking · Grid battery deal signed in Texas</span>
+      <a href="#feed">Read the lead story</a>
+    </div>
+  </div>
+
+  <div class="nm-utility">
+    <div class="container nm-utility-inner">
+      <span><i class="nm-dot" aria-hidden="true"></i>Saturday edition · Oct 4, 2026</span>
+      <div class="nm-utility-meta">
+        <a href="tel:+15125550199"><i class="bi bi-telephone"></i> (512) 555-0199</a>
+        <span>Harbor Media · 1.2M monthly readers (sample)</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top nm-nav" aria-label="Primary">
+    <div class="container">
+      <a class="nm-brand" href="#top">
+        <span class="nm-mark" aria-hidden="true"><i class="bi bi-newspaper"></i></span>
+        Harbor Ledger<em>.</em>
+      </a>
+      <button class="nm-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#desks">Desks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#feed">Latest</a></li>
+          <li class="nav-item"><a class="nav-link" href="#editors">Editors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="nm-btn nm-btn-primary" href="#subscribe">Get the app</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="nm-hero" id="lead">
+      <div class="container">
+        <div class="nm-lead-grid nm-reveal">
+          <article class="nm-lead">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Wind turbines at sunset" width="1200" height="640" loading="eager" />
+            <div class="nm-lead-body">
+              <span class="nm-tag">World</span>
+              <h1>Grid-scale battery deal signed in Texas</h1>
+              <p class="nm-meta">Meera Poluru · Austin bureau · 6 min read</p>
+              <p>Overnight storage will anchor Gulf wind exports as Harbor North Utilities clears a 400 MWh contract—regulators approved the rider Friday.</p>
+              <button class="nm-btn nm-btn-primary nm-btn-sm mt-2" type="button" data-nm-read="grid-battery">Read full story</button>
+            </div>
+          </article>
+          <ul class="nm-side-list">
+            <li class="nm-side-item">
+              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="" width="400" height="300" loading="lazy" />
+              <div>
+                <span class="nm-tag">Tech</span>
+                <h3><button class="btn btn-link p-0 text-start text-decoration-none fw-bold text-dark" type="button" data-nm-read="ai-editor">Newsrooms pilot AI editing desks</button></h3>
+                <span class="nm-meta">Ravi Poluru · 5 min</span>
+              </div>
+            </li>
+            <li class="nm-side-item">
+              <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="" width="400" height="300" loading="lazy" />
+              <div>
+                <span class="nm-tag">World</span>
+                <h3><button class="btn btn-link p-0 text-start text-decoration-none fw-bold text-dark" type="button" data-nm-read="chennai-metro">Chennai metro opens two stations early</button></h3>
+                <span class="nm-meta">Ishaan Poluru · 4 min</span>
+              </div>
+            </li>
+            <li class="nm-side-item">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="" width="400" height="300" loading="lazy" />
+              <div>
+                <span class="nm-tag is-culture">Culture</span>
+                <h3><button class="btn btn-link p-0 text-start text-decoration-none fw-bold text-dark" type="button" data-nm-read="culture-jazz">Austin jazz week returns to Rainey</button></h3>
+                <span class="nm-meta">Anika Poluru · 4 min</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-section" id="desks">
+      <div class="container">
+        <div class="nm-section-head nm-reveal">
+          <p class="nm-kicker">Desks</p>
+          <h2>Reporting beats, one clean home page.</h2>
+          <p>World, tech, culture, and opinion share the same typography and spacing—built for readers who skim on mobile and read long on Sunday.</p>
+        </div>
+        <div class="nm-columns nm-reveal">
+          <div class="nm-column">
+            <h3>World</h3>
+            <ul>
+              <li><a href="#feed">Gulf wind storage contract clears regulators</a><span>Meera Poluru · Oct 4</span></li>
+              <li><a href="#feed">Chennai metro extension beats ridership forecast</a><span>Ishaan Poluru · Oct 3</span></li>
+              <li><a href="#feed">Rotterdam bond traffic rerouted for dredging</a><span>James Poluru · Oct 2</span></li>
+            </ul>
+          </div>
+          <div class="nm-column">
+            <h3>Tech</h3>
+            <ul>
+              <li><a href="#feed">Editors pilot AI-assisted headline desk</a><span>Ravi Poluru · Oct 3</span></li>
+              <li><a href="#feed">Design systems cut city form drop-off</a><span>Kavya Poluru · Oct 2</span></li>
+              <li><a href="#feed">Open source audit for voting portals</a><span>Subra Poluru · Oct 1</span></li>
+            </ul>
+          </div>
+          <div class="nm-column">
+            <h3>Culture &amp; opinion</h3>
+            <ul>
+              <li><a href="#feed">Rainey Street jazz week capacity limits</a><span>Anika Poluru · Oct 1</span></li>
+              <li><a href="#feed">Opinion: Flood maps need quarterly updates</a><span>James Poluru · Oct 2</span></li>
+              <li><a href="#feed">Long read: Harbor food halls in 2026</a><span>Meera Poluru · Sep 30</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-section nm-section-alt" id="feed">
+      <div class="container">
+        <div class="nm-split nm-reveal">
+          <div class="nm-section-head">
+            <p class="nm-kicker">Latest</p>
+            <h2>Stories on the wire.</h2>
+            <p>Filter by desk or search headlines. Read opens a sample article panel—no paywall in this demo.</p>
+          </div>
+          <p class="nm-result" id="nmResult">6 stories</p>
+        </div>
+        <div class="nm-toolbar nm-reveal">
+          <label class="nm-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <span class="visually-hidden">Search stories</span>
+            <input id="nmSearch" type="search" placeholder="Headline, author, or keyword" autocomplete="off" />
+          </label>
+          <div class="nm-chips" role="group" aria-label="Desk filter">
+            <button class="nm-chip is-active" type="button" data-nm-filter="all" aria-pressed="true">All</button>
+            <button class="nm-chip" type="button" data-nm-filter="world" aria-pressed="false">World</button>
+            <button class="nm-chip" type="button" data-nm-filter="tech" aria-pressed="false">Tech</button>
+            <button class="nm-chip" type="button" data-nm-filter="culture" aria-pressed="false">Culture</button>
+            <button class="nm-chip" type="button" data-nm-filter="opinion" aria-pressed="false">Opinion</button>
+          </div>
+        </div>
+        <div class="nm-grid nm-reveal">
+          <article class="nm-article" data-category="world" data-search="grid battery Texas Meera energy">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="520" loading="lazy" />
+            <div class="nm-article-body">
+              <span class="nm-tag">World</span>
+              <h3>Grid-scale battery deal signed in Texas</h3>
+              <p>400 MWh storage anchors overnight wind from the Gulf corridor.</p>
+              <div class="nm-article-foot">
+                <span class="nm-meta">Meera Poluru</span>
+                <button class="nm-btn nm-btn-sm nm-btn-ghost" type="button" data-nm-read="grid-battery">Read</button>
+              </div>
+            </div>
+          </article>
+          <article class="nm-article" data-category="tech" data-search="AI newsroom editing Ravi">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="520" loading="lazy" />
+            <div class="nm-article-body">
+              <span class="nm-tag">Tech</span>
+              <h3>Newsrooms pilot AI-assisted editing desks</h3>
+              <p>Human editors approve every headline in the Harbor Media pilot.</p>
+              <div class="nm-article-foot">
+                <span class="nm-meta">Ravi Poluru</span>
+                <button class="nm-btn nm-btn-sm nm-btn-ghost" type="button" data-nm-read="ai-editor">Read</button>
+              </div>
+            </div>
+          </article>
+          <article class="nm-article" data-category="world" data-search="Chennai metro Ishaan">
+            <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="520" loading="lazy" />
+            <div class="nm-article-body">
+              <span class="nm-tag">World</span>
+              <h3>Chennai metro extension opens two stations early</h3>
+              <p>Weekend crowds exceeded forecasts after feeder bus sync.</p>
+              <div class="nm-article-foot">
+                <span class="nm-meta">Ishaan Poluru</span>
+                <button class="nm-btn nm-btn-sm nm-btn-ghost" type="button" data-nm-read="chennai-metro">Read</button>
+              </div>
+            </div>
+          </article>
+          <article class="nm-article" data-category="tech" data-search="design systems city Kavya">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="520" loading="lazy" />
+            <div class="nm-article-body">
+              <span class="nm-tag">Tech</span>
+              <h3>Why design systems belong in city portals</h3>
+              <p>Permit abandonment fell 18% in a Hyderabad pilot.</p>
+              <div class="nm-article-foot">
+                <span class="nm-meta">Kavya Poluru</span>
+                <button class="nm-btn nm-btn-sm nm-btn-ghost" type="button" data-nm-read="design-systems">Read</button>
+              </div>
+            </div>
+          </article>
+          <article class="nm-article" data-category="opinion" data-search="flood maps opinion James climate">
+            <img src="https://images.unsplash.com/photo-1527482791422-62b2524d05d4?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="520" loading="lazy" />
+            <div class="nm-article-body">
+              <span class="nm-tag is-opinion">Opinion</span>
+              <h3>Flood maps should update quarterly</h3>
+              <p>Open GIS feeds would keep FEMA layers honest, argues the editorial board.</p>
+              <div class="nm-article-foot">
+                <span class="nm-meta">James Poluru</span>
+                <button class="nm-btn nm-btn-sm nm-btn-ghost" type="button" data-nm-read="opinion-climate">Read</button>
+              </div>
+            </div>
+          </article>
+          <article class="nm-article" data-category="culture" data-search="jazz Austin culture Anika">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="520" loading="lazy" />
+            <div class="nm-article-body">
+              <span class="nm-tag is-culture">Culture</span>
+              <h3>Austin jazz week returns to Rainey Street</h3>
+              <p>Forty venues join the festival with new sound limits.</p>
+              <div class="nm-article-foot">
+                <span class="nm-meta">Anika Poluru</span>
+                <button class="nm-btn nm-btn-sm nm-btn-ghost" type="button" data-nm-read="culture-jazz">Read</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="nm-reader nm-reveal" id="nmReader" aria-live="polite">
+          <div class="nm-reader-head">
+            <div>
+              <h3 id="nmReaderTitle">Grid-scale battery deal signed in Texas</h3>
+              <p class="nm-meta" id="nmReaderByline">Meera Poluru · Oct 4 · 6 min read</p>
+            </div>
+            <button class="nm-btn nm-btn-sm nm-btn-ghost" type="button" id="nmReaderClose">Close</button>
+          </div>
+          <p class="nm-reader-body" id="nmReaderBody">Sample article body for the Harbor Ledger demo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-section" id="editors">
+      <div class="container">
+        <div class="nm-section-head nm-reveal">
+          <p class="nm-kicker">Editors</p>
+          <h2>Bylines you can trust.</h2>
+          <p>Fictional desk leads for this template—each links to stories in the feed above.</p>
+        </div>
+        <div class="nm-team nm-reveal">
+          <div class="nm-person">
+            <span class="nm-avatar">MP</span>
+            <h3 class="h6 mb-1">Meera Poluru</h3>
+            <p class="small mb-0">World editor · Austin</p>
+          </div>
+          <div class="nm-person">
+            <span class="nm-avatar">RP</span>
+            <h3 class="h6 mb-1">Ravi Poluru</h3>
+            <p class="small mb-0">Tech editor · Remote</p>
+          </div>
+          <div class="nm-person">
+            <span class="nm-avatar">KP</span>
+            <h3 class="h6 mb-1">Kavya Poluru</h3>
+            <p class="small mb-0">Design &amp; cities · London</p>
+          </div>
+          <div class="nm-person">
+            <span class="nm-avatar">JP</span>
+            <h3 class="h6 mb-1">James Poluru</h3>
+            <p class="small mb-0">Opinion · Rotterdam</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-section nm-section-alt" id="subscribe">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-6 nm-reveal">
+            <p class="nm-kicker">Subscribe</p>
+            <h2 class="mb-3">Morning briefing &amp; weekend long reads.</h2>
+            <p>Fictional plans for the magazine app. Checkout is not connected—use the form to demo signup toasts.</p>
+            <div class="nm-plans mt-4">
+              <article class="nm-plan">
+                <h3>Digital</h3>
+                <p class="nm-price">$9<span style="font-size:0.95rem;font-weight:500;color:var(--nm-muted)"> / mo</span></p>
+                <ul>
+                  <li>Unlimited articles</li>
+                  <li>Offline app reading</li>
+                  <li>Daily newsletter</li>
+                </ul>
+              </article>
+              <article class="nm-plan is-featured">
+                <h3>Print + digital</h3>
+                <p class="nm-price">$18<span style="font-size:0.95rem;font-weight:500;color:rgba(255,255,255,0.62)"> / mo</span></p>
+                <ul>
+                  <li>Saturday print edition</li>
+                  <li>All digital access</li>
+                  <li>Events invite list</li>
+                </ul>
+                <a class="nm-btn nm-btn-primary" href="#subscribe-form">Choose plan</a>
+              </article>
+              <article class="nm-plan">
+                <h3>Student</h3>
+                <p class="nm-price">$4<span style="font-size:0.95rem;font-weight:500;color:var(--nm-muted)"> / mo</span></p>
+                <ul>
+                  <li>.edu email required</li>
+                  <li>Digital only</li>
+                  <li>Campus licensing</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <div class="col-lg-6 nm-reveal" id="subscribe-form">
+            <div class="nm-panel p-4 rounded-3 border bg-white" style="border-color:var(--nm-line)!important;">
+              <h3 class="h5">Newsletter signup</h3>
+              <form class="nm-form mt-3" id="nmNewsletterForm">
+                <label class="nm-field">Email
+                  <input type="email" name="email" required maxlength="120" placeholder="you@example.com" />
+                </label>
+                <label class="nm-field">Edition
+                  <select name="edition">
+                    <option>Daily briefing</option>
+                    <option>Weekend long reads</option>
+                    <option>Tech desk only</option>
+                  </select>
+                </label>
+                <button class="nm-btn nm-btn-primary" type="submit">Subscribe (demo)</button>
+                <p class="nm-form-note">No messages sent. Saved in this browser only.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-section" id="faq">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 nm-reveal">
+            <div class="nm-section-head">
+              <p class="nm-kicker">FAQ</p>
+              <h2>About this magazine template.</h2>
+            </div>
+          </div>
+          <div class="col-lg-7 nm-reveal">
+            <div class="accordion nm-faq" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Is Harbor Ledger a real newsroom?</button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">No. Stories, bylines, and reader counts are fictional samples for layout and UX by Subrahmanyam Poluru.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Does subscribe send email?</button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">The newsletter form shows a toast only. Nothing is posted to a list provider.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Can I reuse the design?</button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">Yes. Free for personal and commercial use. Credit via the author footer is appreciated.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nm-section nm-section-alt" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 nm-reveal">
+            <p class="nm-kicker">Contact</p>
+            <h2>News tips &amp; corrections.</h2>
+            <p>Send a demo tip for the newsroom UI. Production would route encrypted submissions to editors.</p>
+            <p class="mt-4"><strong>Tips line</strong><br />tips@harborledger.example<br />(512) 555-0199</p>
+          </div>
+          <div class="col-lg-7 nm-reveal">
+            <form class="nm-form nm-panel p-4 rounded-3 border bg-white" style="border-color:var(--nm-line)!important;" id="nmContactForm">
+              <label class="nm-field">Name
+                <input name="name" required maxlength="120" />
+              </label>
+              <label class="nm-field">Email
+                <input type="email" name="email" required maxlength="120" />
+              </label>
+              <label class="nm-field">Tip or correction
+                <textarea name="message" required maxlength="2000" placeholder="What happened, where, and when?"></textarea>
+              </label>
+              <button class="nm-btn nm-btn-primary" type="submit">Send demo tip</button>
+              <p class="nm-form-note">Demo only. Not delivered to journalists.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nm-footer">
+    <div class="container">
+      <div class="nm-footer-grid">
+        <div class="nm-footer-brand">
+          <a class="nm-brand" href="#top">
+            <span class="nm-mark" aria-hidden="true"><i class="bi bi-newspaper"></i></span>
+            Harbor Ledger<em>.</em>
+          </a>
+          <p>News magazine template for Harbor Media: desks, feed, reader, and subscriptions. Fictional journalism. Free for personal and commercial use.</p>
+        </div>
+        <nav aria-label="Sections">
+          <h2>Sections</h2>
+          <a href="#desks">Desks</a>
+          <a href="#feed">Latest</a>
+          <a href="#editors">Editors</a>
+          <a href="#subscribe">Subscribe</a>
+        </nav>
+        <nav aria-label="Help">
+          <h2>Help</h2>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+15125550199">(512) 555-0199</a>
+          <a href="mailto:hello@harborledger.example">hello@harborledger.example</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="nm-author">
+            <span class="nm-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="nm-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nm-legal">
+        <span>© <span id="year">2026</span> Harbor Ledger. Fictional sample. Not a live news service.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="nm-toast" id="nmToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <div>
+      <strong id="nmToastTitle">Done</strong>
+      <p id="nmToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
