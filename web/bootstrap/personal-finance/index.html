@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Clearpath — Personal finance
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,553 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clearpath — Budgets, goals, and calm money</title>
+  <meta name="description" content="Clearpath is a fictional personal finance app for Harbor Households: spending, budgets, and savings goals. Designed by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#9A3F3F" />
+  <link rel="canonical" href="https://polurus.com/templates/personal-finance/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Clearpath — Budgets, goals, and calm money" />
+  <meta property="og:description" content="A clean personal finance website with transactions, budgets, goals, and demo signup." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Clearpath — Budgets, goals, and calm money" />
+  <meta name="twitter:description" content="A clean personal finance website with transactions, budgets, goals, and demo signup." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Clearpath — Budgets, goals, and calm money",
+        "description": "Fictional personal finance template by Subrahmanyam Poluru. It does not connect to banks.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Clearpath link to my bank?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Balances and transactions in this demo are sample data in the browser."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="pf-skip" href="#main">Skip to content</a>
+
+  <div class="pf-utility">
+    <div class="container pf-utility-inner">
+      <span><i class="pf-dot" aria-hidden="true"></i>Accounts synced · sample data · Oct 2026</span>
+      <div class="pf-utility-meta">
+        <a href="tel:+15125550208"><i class="bi bi-telephone"></i> (512) 555-0208</a>
+        <span>Harbor Households · read-only demo</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top pf-nav" aria-label="Primary">
+    <div class="container">
+      <a class="pf-brand" href="#top">
+        <span class="pf-mark" aria-hidden="true"><i class="bi bi-piggy-bank"></i></span>
+        Clearpath<em>.</em>
+      </a>
+      <button class="pf-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="#transactions">Spending</a></li>
+          <li class="nav-item"><a class="nav-link" href="#budget">Budget</a></li>
+          <li class="nav-item"><a class="nav-link" href="#goals">Goals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="pf-btn pf-btn-primary" href="#signup">Start free</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="pf-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 pf-hero-copy pf-reveal">
+            <p class="pf-kicker">Harbor Households</p>
+            <h1>See where every dollar goes.</h1>
+            <p>Clearpath is the fictional finance app Meera Poluru uses to track checking, cards, and shared household budgets—without spreadsheets or bank logins in this demo.</p>
+            <div class="pf-actions">
+              <a class="pf-btn pf-btn-primary" href="#signup">Create free account</a>
+              <a class="pf-btn pf-btn-ghost" href="#transactions">View sample spending</a>
+            </div>
+            <ul class="pf-hero-stats">
+              <li><strong>$12,480</strong><span>monthly inflow (sample)</span></li>
+              <li><strong>94%</strong><span>budget adherence</span></li>
+              <li><strong>3</strong><span>linked accounts (demo)</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pf-reveal">
+            <div class="pf-panel" aria-label="Sample dashboard">
+              <div class="pf-panel-bar">
+                <span>October overview</span>
+                <span class="pf-badge">On track</span>
+              </div>
+              <div class="pf-dash-top">
+                <div><span>Cash</span><strong>$4,218</strong></div>
+                <div><span>Spent</span><strong>$3,104</strong></div>
+                <div><span>Saved</span><strong>$890</strong></div>
+              </div>
+              <div class="pf-categories">
+                <p class="pf-kicker mb-2">Top categories</p>
+                <div class="pf-cat-row">
+                  <label>Housing</label>
+                  <div class="pf-bar is-ok" style="--w:72%"><i></i></div>
+                  <span>$1,450</span>
+                </div>
+                <div class="pf-cat-row">
+                  <label>Groceries</label>
+                  <div class="pf-bar" style="--w:58%"><i></i></div>
+                  <span>$612</span>
+                </div>
+                <div class="pf-cat-row">
+                  <label>Dining</label>
+                  <div class="pf-bar is-warn" style="--w:88%"><i></i></div>
+                  <span>$384</span>
+                </div>
+                <div class="pf-cat-row">
+                  <label>Transit</label>
+                  <div class="pf-bar" style="--w:41%"><i></i></div>
+                  <span>$186</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section" id="product">
+      <div class="container">
+        <div class="pf-section-head pf-reveal">
+          <p class="pf-kicker">Product</p>
+          <h2>Clarity without clutter.</h2>
+          <p>One calm home for balances, categories, and goals. Solid panels and readable type—no chart gradients or noisy widgets.</p>
+        </div>
+        <div class="pf-features pf-reveal">
+          <article class="pf-card">
+            <div class="pf-icon"><i class="bi bi-wallet2"></i></div>
+            <h3>Unified accounts</h3>
+            <p>Checking, savings, and cards roll into one timeline with manual or imported entries in production.</p>
+          </article>
+          <article class="pf-card">
+            <div class="pf-icon"><i class="bi bi-pie-chart"></i></div>
+            <h3>Flexible budgets</h3>
+            <p>Set monthly caps by category. Clearpath flags overspend early with simple bars, not alarmist colors.</p>
+          </article>
+          <article class="pf-card">
+            <div class="pf-icon"><i class="bi bi-flag"></i></div>
+            <h3>Goal jars</h3>
+            <p>Emergency fund, travel, and debt payoff each get a target and automatic sweep rules in the full product story.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section pf-section-alt" id="transactions">
+      <div class="container">
+        <div class="pf-split pf-reveal">
+          <div class="pf-section-head">
+            <p class="pf-kicker">Spending</p>
+            <h2>Recent transactions.</h2>
+            <p>Filter by category or search merchants. Export downloads visible rows. Filtered spend total updates below.</p>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="pf-btn pf-btn-ghost pf-btn-sm" type="button" id="pfAddBtn"><i class="bi bi-plus-lg"></i> Add expense</button>
+            <button class="pf-btn pf-btn-ghost pf-btn-sm" type="button" id="pfExportBtn"><i class="bi bi-download"></i> Export</button>
+          </div>
+        </div>
+        <div class="pf-toolbar pf-reveal">
+          <label class="pf-search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <span class="visually-hidden">Search transactions</span>
+            <input id="pfSearch" type="search" placeholder="Merchant or note" autocomplete="off" />
+          </label>
+          <div class="pf-chips" role="group" aria-label="Category filter">
+            <button class="pf-chip is-active" type="button" data-pf-filter="all" aria-pressed="true">All</button>
+            <button class="pf-chip" type="button" data-pf-filter="housing" aria-pressed="false">Housing</button>
+            <button class="pf-chip" type="button" data-pf-filter="food" aria-pressed="false">Food</button>
+            <button class="pf-chip" type="button" data-pf-filter="transport" aria-pressed="false">Transport</button>
+            <button class="pf-chip" type="button" data-pf-filter="income" aria-pressed="false">Income</button>
+          </div>
+        </div>
+        <p class="pf-result pf-reveal"><span id="pfResult">8 transactions</span> · filtered spend <strong id="pfSpentFiltered">$0</strong></p>
+        <div class="pf-table-wrap pf-reveal">
+          <table class="pf-table" id="pfTable">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Merchant</th>
+                <th scope="col">Category</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-category="income" data-amount="6200" data-search="Payroll Harbor North salary">
+                <td>Oct 1</td>
+                <td><strong>Harbor North Payroll</strong><span>Direct deposit</span></td>
+                <td><span class="pf-badge">Income</span></td>
+                <td class="pf-amount is-credit">+$6,200</td>
+              </tr>
+              <tr data-category="housing" data-amount="-1450" data-search="Rent Austin lease">
+                <td>Oct 1</td>
+                <td><strong>Eastside Lease Co.</strong><span>Rent · autopay</span></td>
+                <td><span class="pf-badge">Housing</span></td>
+                <td class="pf-amount is-debit">−$1,450</td>
+              </tr>
+              <tr data-category="food" data-amount="-142" data-search="H-E-B groceries Meera">
+                <td>Oct 2</td>
+                <td><strong>H-E-B</strong><span>Groceries</span></td>
+                <td><span class="pf-badge">Food</span></td>
+                <td class="pf-amount is-debit">−$142</td>
+              </tr>
+              <tr data-category="food" data-amount="-68" data-search="Coast Grocers dining">
+                <td>Oct 3</td>
+                <td><strong>Coast Grocers Café</strong><span>Lunch</span></td>
+                <td><span class="pf-badge">Food</span></td>
+                <td class="pf-amount is-debit">−$68</td>
+              </tr>
+              <tr data-category="transport" data-amount="-45" data-search="Cap Metro transit">
+                <td>Oct 3</td>
+                <td><strong>Cap Metro</strong><span>Monthly pass</span></td>
+                <td><span class="pf-badge">Transport</span></td>
+                <td class="pf-amount is-debit">−$45</td>
+              </tr>
+              <tr data-category="transport" data-amount="-52" data-search="Shell gas Ravi">
+                <td>Oct 4</td>
+                <td><strong>Shell · I-35</strong><span>Fuel</span></td>
+                <td><span class="pf-badge">Transport</span></td>
+                <td class="pf-amount is-debit">−$52</td>
+              </tr>
+              <tr data-category="food" data-amount="-89" data-search="Rainey jazz dinner">
+                <td>Oct 4</td>
+                <td><strong>Rainey Bistro</strong><span>Dining out</span></td>
+                <td><span class="pf-badge">Food</span></td>
+                <td class="pf-amount is-debit">−$89</td>
+              </tr>
+              <tr data-category="income" data-amount="280" data-search="Freelance invoice Poluru">
+                <td>Oct 4</td>
+                <td><strong>Poluru Design</strong><span>Freelance</span></td>
+                <td><span class="pf-badge">Income</span></td>
+                <td class="pf-amount is-credit">+$280</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section" id="budget">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-5 pf-reveal">
+            <p class="pf-kicker">Budget</p>
+            <h2>October caps, plain language.</h2>
+            <p>Each bar shows spend against cap. Dining is near limit in this sample—adjust caps anytime in a real app.</p>
+            <ul class="list-unstyled mt-4 small">
+              <li class="mb-2"><i class="bi bi-check2 text-success"></i> Rollover unused grocery budget</li>
+              <li class="mb-2"><i class="bi bi-check2 text-success"></i> Shared household view for partners</li>
+              <li><i class="bi bi-check2 text-success"></i> Weekly summary email (demo copy)</li>
+            </ul>
+          </div>
+          <div class="col-lg-7 pf-reveal">
+            <div class="pf-panel p-4">
+              <div class="pf-cat-row">
+                <label>Housing</label>
+                <div class="pf-bar is-ok" style="--w:100%"><i></i></div>
+                <span>$1,450 / $1,450</span>
+              </div>
+              <div class="pf-cat-row">
+                <label>Groceries</label>
+                <div class="pf-bar" style="--w:61%"><i></i></div>
+                <span>$612 / $1,000</span>
+              </div>
+              <div class="pf-cat-row">
+                <label>Dining</label>
+                <div class="pf-bar is-warn" style="--w:96%"><i></i></div>
+                <span>$384 / $400</span>
+              </div>
+              <div class="pf-cat-row">
+                <label>Transport</label>
+                <div class="pf-bar" style="--w:62%"><i></i></div>
+                <span>$186 / $300</span>
+              </div>
+              <div class="pf-cat-row">
+                <label>Fun</label>
+                <div class="pf-bar" style="--w:35%"><i></i></div>
+                <span>$105 / $300</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section pf-section-alt" id="goals">
+      <div class="container">
+        <div class="pf-section-head pf-reveal">
+          <p class="pf-kicker">Goals</p>
+          <h2>Savings you can name.</h2>
+          <p>Progress bars use solid fills only. Numbers are fictional for the Harbor Household sample book.</p>
+        </div>
+        <div class="pf-goals pf-reveal">
+          <article class="pf-goal">
+            <h3>Emergency fund</h3>
+            <p class="small mb-0">Target $15,000 · priority high</p>
+            <div class="pf-bar mt-3" style="--w:68%"><i></i></div>
+            <div class="pf-goal-meta"><span>$10,200 saved</span><span>68%</span></div>
+          </article>
+          <article class="pf-goal">
+            <h3>Hyderabad trip</h3>
+            <p class="small mb-0">Target $3,200 · travel 2027</p>
+            <div class="pf-bar mt-3" style="--w:42%"><i></i></div>
+            <div class="pf-goal-meta"><span>$1,344 saved</span><span>42%</span></div>
+          </article>
+          <article class="pf-goal">
+            <h3>Pay off card</h3>
+            <p class="small mb-0">Remaining $2,180 · 0% promo ends Apr</p>
+            <div class="pf-bar is-ok mt-3" style="--w:55%"><i></i></div>
+            <div class="pf-goal-meta"><span>$1,200 paid</span><span>55%</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section" id="security">
+      <div class="container">
+        <div class="row g-4 align-items-center pf-reveal">
+          <div class="col-lg-6">
+            <p class="pf-kicker">Security</p>
+            <h2>Built for trust, explained simply.</h2>
+            <p>Production Clearpath would use bank-grade encryption and read-only aggregation. This template shows messaging only—no credentials are collected.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="pf-card">
+              <div class="pf-icon"><i class="bi bi-shield-lock"></i></div>
+              <h3>What we promise in copy</h3>
+              <p class="mb-0">256-bit transport, device biometrics, and instant card freeze toggles—described here for layout, not wired to services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section pf-section-alt" id="pricing">
+      <div class="container">
+        <div class="pf-section-head pf-reveal">
+          <p class="pf-kicker">Pricing</p>
+          <h2>Free to start, plus household plus.</h2>
+        </div>
+        <div class="pf-plans pf-reveal">
+          <article class="pf-plan">
+            <h3>Free</h3>
+            <p class="pf-price">$0</p>
+            <ul>
+              <li>2 accounts</li>
+              <li>Monthly budgets</li>
+              <li>CSV export</li>
+            </ul>
+            <a class="pf-btn pf-btn-ghost" href="#signup">Start free</a>
+          </article>
+          <article class="pf-plan is-featured">
+            <h3>Household</h3>
+            <p class="pf-price">$8<span style="font-size:0.95rem;font-weight:500;opacity:0.7"> / mo</span></p>
+            <ul>
+              <li>Unlimited accounts</li>
+              <li>Shared budgets &amp; goals</li>
+              <li>Cash-flow forecasts</li>
+            </ul>
+            <a class="pf-btn pf-btn-primary" href="#signup">Try Household</a>
+          </article>
+          <article class="pf-plan">
+            <h3>Advisor</h3>
+            <p class="pf-price">Custom</p>
+            <ul>
+              <li>White-label for CFPs</li>
+              <li>Client workspaces</li>
+              <li>Compliance exports</li>
+            </ul>
+            <a class="pf-btn pf-btn-ghost" href="#contact">Contact sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section" id="faq">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 pf-reveal">
+            <div class="pf-section-head">
+              <p class="pf-kicker">FAQ</p>
+              <h2>Before you connect real money.</h2>
+            </div>
+          </div>
+          <div class="col-lg-7 pf-reveal">
+            <div class="accordion pf-faq" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Does Clearpath link to my bank?</button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">No. Balances and transactions on this page are sample data. Signup is a demo toast only.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Can partners share a budget?</button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">The Household plan in this fictional pricing block includes shared caps and goal jars with role-based access.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Is this financial advice?</button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">No. Clearpath is a UI template by Subrahmanyam Poluru. Consult a qualified advisor for personal finance decisions.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section pf-section-alt" id="signup">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 pf-reveal">
+            <p class="pf-kicker">Sign up</p>
+            <h2>Start your demo account.</h2>
+            <p>Enter an email to see the success toast. No account is created and no mail is sent.</p>
+          </div>
+          <div class="col-lg-7 pf-reveal">
+            <form class="pf-form pf-panel p-4" id="pfSignupForm">
+              <label class="pf-field">Email
+                <input type="email" name="email" required maxlength="120" placeholder="you@example.com" />
+              </label>
+              <label class="pf-field">Household name
+                <input name="household" maxlength="80" placeholder="Poluru household" />
+              </label>
+              <button class="pf-btn pf-btn-primary" type="submit">Create demo account</button>
+              <p class="pf-form-note">Demo only. Nothing is stored on a server.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 pf-reveal">
+            <p class="pf-kicker">Contact</p>
+            <h2>Questions for product or support.</h2>
+            <p>help@clearpath.example · (512) 555-0208</p>
+          </div>
+          <div class="col-lg-7 pf-reveal">
+            <form class="pf-form pf-panel p-4" id="pfContactForm">
+              <label class="pf-field">Email
+                <input type="email" name="email" required maxlength="120" />
+              </label>
+              <label class="pf-field">Message
+                <textarea name="message" required maxlength="2000"></textarea>
+              </label>
+              <button class="pf-btn pf-btn-primary" type="submit">Send demo message</button>
+              <p class="pf-form-note">Saved in this browser only.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pf-footer">
+    <div class="container">
+      <div class="pf-footer-grid">
+        <div class="pf-footer-brand">
+          <a class="pf-brand" href="#top">
+            <span class="pf-mark" aria-hidden="true"><i class="bi bi-piggy-bank"></i></span>
+            Clearpath<em>.</em>
+          </a>
+          <p>Personal finance template for budgets, transactions, and goals. Fictional Harbor Households data. Free for personal and commercial use.</p>
+        </div>
+        <nav aria-label="Product">
+          <h2>Product</h2>
+          <a href="#product">Features</a>
+          <a href="#transactions">Spending</a>
+          <a href="#budget">Budget</a>
+          <a href="#goals">Goals</a>
+        </nav>
+        <nav aria-label="Account">
+          <h2>Account</h2>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#signup">Sign up</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="pf-author">
+            <span class="pf-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="pf-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pf-legal">
+        <span>© <span id="year">2026</span> Clearpath. Fictional sample. Not a bank or advisor.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="pf-toast" id="pfToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <div>
+      <strong id="pfToastTitle">Done</strong>
+      <p id="pfToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
