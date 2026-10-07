@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  RxHarbor — Pharmacy e-commerce
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,582 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RxHarbor — OTC, wellness, and prescription care</title>
+  <meta name="description" content="RxHarbor is a fictional Harbor Health pharmacy shop: search products, transfer prescriptions, and same-day delivery. Template by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#BC0202" />
+  <link rel="canonical" href="https://polurus.com/templates/pharmacy-ecommerce/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RxHarbor — OTC, wellness, and prescription care" />
+  <meta property="og:description" content="Clean pharmacy e-commerce demo with catalog filters, cart toasts, and Rx transfer form." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="RxHarbor — OTC, wellness, and prescription care" />
+  <meta name="twitter:description" content="Clean pharmacy e-commerce demo with catalog filters, cart toasts, and Rx transfer form." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "RxHarbor — Pharmacy e-commerce",
+        "description": "Fictional pharmacy storefront template. No real prescriptions or payments are processed.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I fill a real prescription on this site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. RxHarbor is a design template. Upload and checkout actions show demo toasts only."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="ph-skip" href="#main">Skip to content</a>
+
+  <div class="ph-utility">
+    <div class="container ph-utility-inner">
+      <span><i class="ph-dot" aria-hidden="true"></i>Licensed pharmacy · Harbor Health · same-day slots open</span>
+      <div class="ph-utility-meta">
+        <a href="tel:+15125550319"><i class="bi bi-telephone"></i> (512) 555-0319</a>
+        <span>Pharmacist on call until 9 PM · demo storefront</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top ph-nav" aria-label="Primary">
+    <div class="container">
+      <a class="ph-brand" href="#top">
+        <span class="ph-mark" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+        RxHarbor<em>.</em>
+      </a>
+      <div class="d-flex align-items-center gap-2 order-lg-3 ms-auto ms-lg-0">
+        <a class="ph-cart-link d-none d-sm-inline-flex" href="#shop" aria-label="Cart items">
+          <i class="bi bi-bag"></i> Cart <span id="phCartCount">0</span>
+        </a>
+        <button class="navbar-toggler ph-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+        <ul class="navbar-nav ms-lg-4 me-lg-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prescriptions">Prescriptions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#delivery">Delivery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 pb-3 pb-lg-0">
+          <a class="ph-btn ph-btn-ghost ph-btn-sm" href="#prescriptions">Transfer Rx</a>
+          <a class="ph-btn ph-btn-primary ph-btn-sm" href="#shop">Browse OTC</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="ph-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-xl-5">
+          <div class="col-lg-6 ph-reveal">
+            <p class="ph-kicker">Harbor Health pharmacy</p>
+            <div class="ph-hero-copy">
+              <h1>Pharmacy care that fits your day.</h1>
+              <p>Order vitamins, pain relief, and baby essentials. Transfer prescriptions from your old pharmacy and pick up or get Harbor delivery in Austin—this page is a polished demo, not a live dispensary.</p>
+            </div>
+            <div class="ph-actions">
+              <a class="ph-btn ph-btn-primary" href="#shop"><i class="bi bi-search"></i> Shop catalog</a>
+              <a class="ph-btn ph-btn-ghost" href="#prescriptions">Send a prescription</a>
+            </div>
+            <form class="ph-hero-search" id="phHeroSearch" role="search" aria-label="Find a product">
+              <input type="search" id="phHeroQuery" placeholder="Search ibuprofen, vitamin D, allergy…" autocomplete="off" />
+              <button type="submit" class="ph-btn ph-btn-primary">Search</button>
+            </form>
+            <ul class="ph-hero-stats">
+              <li><strong>4.9</strong><span>Patient rating (sample)</span></li>
+              <li><strong>2 hr</strong><span>Average delivery window</span></li>
+              <li><strong>24/7</strong><span>Refill reminders (demo)</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 ph-reveal">
+            <div class="ph-panel" aria-label="Sample order preview">
+              <div class="ph-panel-bar">
+                <span>Today’s pickup · Lane B</span>
+                <span class="text-success"><i class="bi bi-check-circle-fill"></i> Ready 4:20 PM</span>
+              </div>
+              <div class="ph-order-preview">
+                <div class="ph-order-row">
+                  <span>Harbor Relief 200 · 24 ct</span>
+                  <strong>$12.99</strong>
+                </div>
+                <div class="ph-order-row">
+                  <span>Poluru Omega-3 · 60 softgels</span>
+                  <strong>$22.00</strong>
+                </div>
+                <div class="ph-order-row">
+                  <span>Delivery · Harbor Same-Day</span>
+                  <strong>$4.99</strong>
+                </div>
+                <div class="ph-order-total">
+                  <span>Estimated total</span>
+                  <span>$39.98</span>
+                </div>
+                <p class="small text-muted mb-0 mt-2">Sample totals only. Cart in this template does not charge a card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="ph-section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="ph-section-head ph-reveal">
+          <p class="ph-kicker">Why RxHarbor</p>
+          <h2 id="why-heading">Clinical clarity, retail speed.</h2>
+          <p>Every product card, filter, and form on this page is static demo content—built to show how a modern pharmacy storefront can feel calm, trustworthy, and easy to scan.</p>
+        </div>
+        <div class="ph-features">
+          <article class="ph-card ph-reveal">
+            <div class="ph-icon"><i class="bi bi-shield-check"></i></div>
+            <h3>Pharmacist-reviewed catalog</h3>
+            <p>OTC items are grouped by use case with plain-language descriptions, not medical jargon walls.</p>
+          </article>
+          <article class="ph-card ph-reveal">
+            <div class="ph-icon"><i class="bi bi-arrow-left-right"></i></div>
+            <h3>Rx transfer in minutes</h3>
+            <p>Patients enter prescriber and pharmacy details; your backend would route to verification staff.</p>
+          </article>
+          <article class="ph-card ph-reveal">
+            <div class="ph-icon"><i class="bi bi-truck"></i></div>
+            <h3>Delivery with cold-chain notes</h3>
+            <p>Temperature-sensitive items show handling badges—here they are sample labels for layout only.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section ph-section-alt" id="shop" aria-labelledby="shop-heading">
+      <div class="container">
+        <div class="ph-split ph-reveal">
+          <div class="ph-section-head">
+            <p class="ph-kicker">Shop</p>
+            <h2 id="shop-heading">Everyday essentials</h2>
+            <p>Filter by category or search by name. Adding to cart updates the badge and shows a toast—nothing is sent to a server.</p>
+          </div>
+        </div>
+        <div class="ph-toolbar ph-reveal">
+          <label class="ph-search">
+            <i class="bi bi-search text-muted" aria-hidden="true"></i>
+            <input type="search" id="phSearch" placeholder="Search products…" autocomplete="off" aria-label="Search products" />
+          </label>
+          <div class="ph-chips" role="group" aria-label="Filter by category">
+            <button type="button" class="ph-chip is-active" data-ph-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="ph-chip" data-ph-filter="vitamins" aria-pressed="false">Vitamins</button>
+            <button type="button" class="ph-chip" data-ph-filter="pain" aria-pressed="false">Pain relief</button>
+            <button type="button" class="ph-chip" data-ph-filter="cold" aria-pressed="false">Cold &amp; allergy</button>
+            <button type="button" class="ph-chip" data-ph-filter="baby" aria-pressed="false">Baby care</button>
+            <button type="button" class="ph-chip" data-ph-filter="wellness" aria-pressed="false">Wellness</button>
+          </div>
+        </div>
+        <p class="ph-result" id="phResult" aria-live="polite">9 products</p>
+        <div class="ph-catalog ph-reveal">
+          <article class="ph-product" data-category="pain" data-search="harbor relief ibuprofen pain fever">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Pain</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>Harbor Relief 200</h3>
+              <p>Coated tablets for headaches and minor aches. Take with food unless your clinician says otherwise.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$12.99</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="Harbor Relief 200">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="vitamins" data-search="daily vita d3 vitamin sunshine poluru">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1550572017-edd951aaee75?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Vitamins</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>Daily Vita D3</h3>
+              <p>2000 IU softgels formulated for Harbor Health wellness plans. One daily with a meal.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$18.50</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="Daily Vita D3">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="cold" data-search="clearspring nasal spray cold flu congestion">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Cold</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>ClearSpring Nasal Mist</h3>
+              <p>Saline rinse for seasonal stuffiness. Non-medicated option suitable for frequent use.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$9.75</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="ClearSpring Nasal Mist">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="baby" data-search="harbor baby drops infant vitamin">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Baby</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>Harbor Baby Drops</h3>
+              <p>Pediatrician-favorite D drops for infants. Dropper marked in 0.25 mL steps for easy dosing.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$14.20</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="Harbor Baby Drops">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="vitamins" data-search="poluru omega 3 fish oil heart">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1505751172879-077ad59c88a2?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Vitamins</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>Poluru Omega-3</h3>
+              <p>Burpless softgels with EPA and DHA. Named after the Harbor Health nutrition lead—fictional brand.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$22.00</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="Poluru Omega-3">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="wellness" data-search="nightcalm sleep melatonin rest">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1541783245831-14463b9cde9d?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Wellness</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>NightCalm Sleep</h3>
+              <p>Low-dose melatonin gummies for travel nights. Not for children under 12 in this sample copy.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$16.40</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="NightCalm Sleep">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="wellness" data-search="first aid kit harbor bandage">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Wellness</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>Harbor First Aid Kit</h3>
+              <p>65-piece home kit with gauze, tape, and antiseptic wipes. Refill packs sold separately.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$24.99</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="Harbor First Aid Kit">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="cold" data-search="allergyease loratadine allergy hay fever">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Allergy</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>AllergyEase Loratadine</h3>
+              <p>Once-daily non-drowsy tablets for pollen season. Compare to leading store brands.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$11.30</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="AllergyEase Loratadine">Add</button>
+              </div>
+            </div>
+          </article>
+          <article class="ph-product" data-category="baby" data-search="gentle skin repair lotion diaper rash">
+            <div class="ph-product-media">
+              <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="ph-tag">Baby</span>
+            </div>
+            <div class="ph-product-body">
+              <h3>Gentle Skin Repair</h3>
+              <p>Fragrance-free barrier cream for dry patches. Pediatric-tested labeling in demo layout.</p>
+              <div class="ph-product-foot">
+                <span class="ph-price">$13.85</span>
+                <button type="button" class="ph-btn ph-btn-primary ph-btn-sm" data-ph-add="Gentle Skin Repair">Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="ph-empty mt-3" id="phEmpty" hidden>
+          <p class="mb-0"><strong>No matches.</strong> Try another category or clear your search.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section" id="categories" aria-labelledby="cat-heading">
+      <div class="container">
+        <div class="ph-section-head ph-reveal">
+          <p class="ph-kicker">Browse</p>
+          <h2 id="cat-heading">Shop by aisle</h2>
+          <p>Jump straight to the catalog with a category in mind.</p>
+        </div>
+        <div class="ph-categories ph-reveal">
+          <a class="ph-cat-tile" href="#shop"><i class="bi bi-capsule"></i> Vitamins <small>D3, omega, multis</small></a>
+          <a class="ph-cat-tile" href="#shop"><i class="bi bi-bandaid"></i> Pain &amp; fever <small>Tablets, topical gels</small></a>
+          <a class="ph-cat-tile" href="#shop"><i class="bi bi-wind"></i> Cold &amp; allergy <small>Sprays, antihistamines</small></a>
+          <a class="ph-cat-tile" href="#prescriptions"><i class="bi bi-file-medical"></i> Prescriptions <small>Transfer or refill</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section ph-section-alt" id="prescriptions" aria-labelledby="rx-heading">
+      <div class="container">
+        <div class="ph-rx-grid">
+          <div class="ph-reveal">
+            <p class="ph-kicker">Prescriptions</p>
+            <h2 id="rx-heading">Move your Rx to Harbor</h2>
+            <p>We call your previous pharmacy, confirm remaining refills, and text you when the first fill is ready. Submitting this form triggers a demo toast only.</p>
+            <ol class="ph-steps">
+              <li><strong>Share prescriber info</strong> Provider name, phone, and medication help us verify quickly.</li>
+              <li><strong>Harbor verifies coverage</strong> Your plan details would sync through a secure API in production.</li>
+              <li><strong>Choose pickup or delivery</strong> Cold-chain meds get an insulated bag and time window.</li>
+            </ol>
+          </div>
+          <div class="ph-panel ph-reveal">
+            <div class="ph-panel-bar"><span>Rx transfer (demo)</span><span class="ph-tag is-rx">Rx</span></div>
+            <form class="ph-form p-3 p-md-4" id="phRxForm">
+              <label for="rxName">Full name</label>
+              <input id="rxName" name="name" type="text" required placeholder="Jordan Lee" />
+              <label for="rxMed">Medication</label>
+              <input id="rxMed" name="medication" type="text" required placeholder="Atorvastatin 10 mg" />
+              <label for="rxFrom">Current pharmacy</label>
+              <input id="rxFrom" name="pharmacy" type="text" required placeholder="Bayview Pharmacy on 6th" />
+              <label for="rxPhone">Mobile for updates</label>
+              <input id="rxPhone" name="phone" type="tel" required placeholder="(512) 555-0142" />
+              <button type="submit" class="ph-btn ph-btn-primary w-100">Submit transfer request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section" id="delivery" aria-labelledby="del-heading">
+      <div class="container">
+        <div class="ph-section-head ph-reveal">
+          <p class="ph-kicker">Delivery</p>
+          <h2 id="del-heading">To your door or curbside</h2>
+          <p>Harbor Same-Day covers central Austin in this story. Fees and windows are sample numbers for the layout.</p>
+        </div>
+        <div class="ph-trust ph-reveal">
+          <div class="ph-trust-item">
+            <strong><i class="bi bi-clock text-danger"></i> Two-hour windows</strong>
+            <p class="mb-0">Choose 11–1, 2–4, or 5–7 PM. Drivers confirm with a text when they are two stops away.</p>
+          </div>
+          <div class="ph-trust-item">
+            <strong><i class="bi bi-snow text-danger"></i> Cold-chain ready</strong>
+            <p class="mb-0">Insulin and biologics ship with gel packs and a tamper seal—badges appear on eligible SKUs.</p>
+          </div>
+          <div class="ph-trust-item">
+            <strong><i class="bi bi-person-check text-danger"></i> ID at handoff</strong>
+            <p class="mb-0">Controlled substances require photo ID and signature capture on the driver app.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section ph-section-alt" id="membership" aria-labelledby="mem-heading">
+      <div class="container">
+        <div class="ph-section-head ph-reveal">
+          <p class="ph-kicker">Harbor Plus</p>
+          <h2 id="mem-heading">Simple membership tiers</h2>
+          <p>Flat delivery, generic pricing, and refill reminders—pick the plan that matches how often you order.</p>
+        </div>
+        <div class="ph-plans ph-reveal">
+          <article class="ph-plan">
+            <p class="ph-plan-label">Starter</p>
+            <h3>Essentials</h3>
+            <p class="mb-0">Free pickup and standard shipping over $35.</p>
+            <p class="ph-plan-price">$0<span class="fs-6 text-muted">/mo</span></p>
+            <ul>
+              <li>Monthly wellness digest</li>
+              <li>Generic savings list</li>
+              <li>SMS refill nudges</li>
+            </ul>
+            <a class="ph-btn ph-btn-ghost w-100" href="#contact">Stay on Essentials</a>
+          </article>
+          <article class="ph-plan is-featured">
+            <p class="ph-plan-label">Most popular</p>
+            <h3>Harbor Plus</h3>
+            <p class="mb-0">Unlimited same-day delivery in the demo metro.</p>
+            <p class="ph-plan-price">$8<span class="fs-6 text-muted">/mo</span></p>
+            <ul>
+              <li>Free Same-Day under 10 mi</li>
+              <li>Pharmacist chat (business hours)</li>
+              <li>Family profiles (up to 4)</li>
+            </ul>
+            <a class="ph-btn ph-btn-primary w-100" href="#contact">Join Harbor Plus</a>
+          </article>
+          <article class="ph-plan">
+            <p class="ph-plan-label">Clinical</p>
+            <h3>Care Team</h3>
+            <p class="mb-0">For chronic care coordination samples.</p>
+            <p class="ph-plan-price">$19<span class="fs-6 text-muted">/mo</span></p>
+            <ul>
+              <li>Sync refills to one date</li>
+              <li>Prior auth status board</li>
+              <li>Nurse check-in quarterly</li>
+            </ul>
+            <a class="ph-btn ph-btn-ghost w-100" href="#contact">Talk to care team</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="ph-section-head ph-reveal">
+          <p class="ph-kicker">FAQ</p>
+          <h2 id="faq-heading">Common questions</h2>
+        </div>
+        <div class="ph-faq ph-reveal accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Is this a real pharmacy?</button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted">No. RxHarbor is a free Bootstrap template by Subrahmanyam Poluru. Product names, prices, and staff are fictional.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Do you accept insurance?</button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted">In a live build you would connect to a claims API. Here, insurance is mentioned only as sample UX copy.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Where is my cart stored?</button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted">Only a item count is saved in your browser localStorage for the demo badge. Line items are not persisted.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ph-section ph-section-alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="ph-contact-grid ph-reveal">
+          <div>
+            <p class="ph-kicker">Contact</p>
+            <h2 id="contact-heading">Visit Harbor Health Annex</h2>
+            <p>Questions about this template or licensing? Reach the author at the links in the footer. For in-story pharmacy hours, see below.</p>
+            <ul class="ph-contact-list">
+              <li><i class="bi bi-geo-alt"></i><span>2200 Red River St, Austin, TX 78705 · fictional address</span></li>
+              <li><i class="bi bi-clock"></i><span>Mon–Sat 8 AM – 9 PM · Sun 9 AM – 6 PM</span></li>
+              <li><i class="bi bi-envelope"></i><span><a href="mailto:care@rxharbor.demo">care@rxharbor.demo</a> (not monitored)</span></li>
+            </ul>
+          </div>
+          <div class="ph-panel">
+            <div class="ph-panel-bar"><span>Message the team</span></div>
+            <form class="ph-form p-3 p-md-4" id="phContactForm">
+              <label for="contactName">Name</label>
+              <input id="contactName" name="name" type="text" required />
+              <label for="contactEmail">Email</label>
+              <input id="contactEmail" name="email" type="email" required />
+              <label for="contactMsg">How can we help?</label>
+              <textarea id="contactMsg" name="message" required placeholder="Refill question, delivery note, or template feedback…"></textarea>
+              <button type="submit" class="ph-btn ph-btn-primary w-100">Send message (demo)</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ph-footer">
+    <div class="container">
+      <div class="ph-footer-grid">
+        <div class="ph-footer-brand">
+          <a class="ph-brand" href="#top">
+            <span class="ph-mark" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+            RxHarbor<em>.</em>
+          </a>
+          <p>Fictional Harbor Health storefront. OTC catalog, Rx transfer UI, and delivery story—no live dispensing.</p>
+        </div>
+        <div>
+          <h2>Shop</h2>
+          <div class="ph-footer-links">
+            <a href="#shop">Catalog</a>
+            <a href="#categories">Categories</a>
+            <a href="#membership">Harbor Plus</a>
+          </div>
+        </div>
+        <div>
+          <h2>Care</h2>
+          <div class="ph-footer-links">
+            <a href="#prescriptions">Prescriptions</a>
+            <a href="#delivery">Delivery</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <h2>Template author</h2>
+          <div class="ph-author">
+            <span class="ph-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="ph-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-legal">
+        <span>© <span id="year">2026</span> RxHarbor demo · Not medical advice</span>
+        <span>Free for personal &amp; commercial use · <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">polurus.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="ph-toast" id="phToast" role="status" aria-live="polite" aria-atomic="true">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="phToastTitle">Saved</strong>
+      <p id="phToastBody">Demo notification.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
