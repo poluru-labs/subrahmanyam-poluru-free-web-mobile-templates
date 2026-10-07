@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="PlateHarbor">
+  <rect width="32" height="32" rx="8" fill="#8E1EA2"/>
+  <path fill="#fff" d="M10 12h12v2H10v-2zm0 4h12v2H10v-2zm0 4h8v2h-8v-2z"/>
+  <circle cx="22" cy="22" r="4" fill="#fff"/>
+</svg>
