@@ -1,2 +1,531 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subra Support — Let’s make someone’s day</title><meta name="description" content="Your team’s conversations, together in one place."><meta name="theme-color" content="#087f91"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="dashboard" data-template="customer-support-helpdesk" style="--brand:#087f91;--soft:#e7f5f7;"><a class="skip-link" href="#main">Skip to content</a><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">S</span>Subra Support</a><p class="nav-label">YOUR WORKSPACE</p><nav><a href="#overview"><span aria-hidden="true">◫</span>Overview</a><a href="#activity"><span aria-hidden="true">≋</span>Activity</a></nav><div class="side-bottom"><span class="profile">S</span><div><strong>Subra Poluru</strong><br><span class="small">Personal workspace</span></div></div></aside><div class="workspace"><header class="topbar"><span>Workspace <span style="color:#a0a8af">/ Overview</span></span><div><span class="small">Monday, September 14</span><span class="profile">SP</span></div></header><main id="main"><div class="dash-heading"><div><p class="eyebrow">A LITTLE HELP GOES A LONG WAY.</p><h1>Let’s make someone’s day</h1><p>Your team’s conversations, together in one place.</p></div><button class="secondary" data-action="export" >Export report ↗</button></div><div class="stats"><article class="stat"><span class="small">Open conversations</span><div class="metric">24</div><span class="trend">8 need your attention</span></article><article class="stat"><span class="small">Avg. response time</span><div class="metric">12 min</div><span class="trend">↓ 4 min this week</span></article><article class="stat"><span class="small">Resolved today</span><div class="metric">38</div><span class="trend">A lot of days made better</span></article><article class="stat"><span class="small">Customer happiness</span><div class="metric">98%</div><span class="trend">Based on 124 conversations</span></article></div><div class="two-col"><section class="panel" id="overview"><div class="panel-head"><div><h3>Your team inbox</h3><p></p></div></div><div class="filters"><button class="filter active" data-filter="All" aria-pressed="true">All</button><button class="filter " data-filter="Open" aria-pressed="false">Open</button><button class="filter " data-filter="Waiting" aria-pressed="false">Waiting</button><button class="filter " data-filter="Resolved" aria-pressed="false">Resolved</button><input class="search" type="search" placeholder="Search this collection…" aria-label="Search this collection"></div><div class="collection"><article data-search="Poluru A little help with my workspace" data-category="Open"><div class="row"><div><strong>A little help with my workspace</strong><p class="small">Poluru · 2 min ago</p></div><button class="text-button" data-action="ticket" data-title="A little help with my workspace" data-sender="Poluru" data-status="Open">Read</button></div><span class="badge">Open</span></article><article data-search="Subra Can I update my billing details?" data-category="Waiting"><div class="row"><div><strong>Can I update my billing details?</strong><p class="small">Subra · 18 min ago</p></div><button class="text-button" data-action="ticket" data-title="Can I update my billing details?" data-sender="Subra" data-status="Waiting">Read</button></div><span class="badge">Waiting</span></article><article data-search="Subbu Thanks for helping us get started!" data-category="Resolved"><div class="row"><div><strong>Thanks for helping us get started!</strong><p class="small">Subbu · 35 min ago</p></div><button class="text-button" data-action="ticket" data-title="Thanks for helping us get started!" data-sender="Subbu" data-status="Resolved">Read</button></div><span class="badge">Resolved</span></article><p class="empty" hidden>Your inbox is clear for this filter.</p></div></section><section class="panel"><div class="panel-head"><div><h3>People, helping people</h3><p></p></div></div><div class="row"><div><strong>Poluru</strong><p class="small">12 conversations resolved</p></div><span class="badge">Online</span></div><div class="row"><div><strong>Subra</strong><p class="small">16 conversations resolved</p></div><span class="badge">Online</span></div><div class="row"><div><strong>Subbu</strong><p class="small">10 conversations resolved</p></div><span class="badge">Away</span></div><div class="banner" style="padding:20px;margin-bottom:0"><div><h3>A good reply starts with listening.</h3><p class="small">Take a moment. You’ve got this.</p></div></div></section></div><section class="panel" id="activity"><div class="panel-head"><div><h3>This week’s small victories</h3><p>Resolved conversations across the year</p></div></div><div class="chart" role="img" aria-label="Monthly activity chart, rising from 35 in January to 90 in December"><div class="bar" style="--height:35%"><span>Jan</span></div><div class="bar" style="--height:48%"><span>Feb</span></div><div class="bar" style="--height:42%"><span>Mar</span></div><div class="bar" style="--height:58%"><span>Apr</span></div><div class="bar" style="--height:51%"><span>May</span></div><div class="bar" style="--height:66%"><span>Jun</span></div><div class="bar" style="--height:62%"><span>Jul</span></div><div class="bar" style="--height:78%"><span>Aug</span></div><div class="bar" style="--height:69%"><span>Sep</span></div><div class="bar" style="--height:83%"><span>Oct</span></div><div class="bar" style="--height:76%"><span>Nov</span></div><div class="bar" style="--height:90%"><span>Dec</span></div></div></section></main><footer class="site-footer"><span class="brand">Subra Support<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  CaseHarbor — Customer support helpdesk
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CaseHarbor — Shared inbox for support teams</title>
+  <meta name="description" content="CaseHarbor is a fictional helpdesk for Harbor SaaS: unified inbox, SLAs, and macros. Designed by Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#DE7272" />
+  <link rel="canonical" href="https://polurus.com/templates/customer-support-helpdesk/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CaseHarbor — Shared inbox for support teams" />
+  <meta property="og:description" content="Clean helpdesk landing page with ticket filters, reply dialog, and demo forms." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CaseHarbor — Shared inbox for support teams" />
+  <meta name="twitter:description" content="Clean helpdesk landing page with ticket filters, reply dialog, and demo forms." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #de7272;
+      --color-brand-dark: #c85a5a;
+      --color-brand-soft: #fdeeee;
+      --color-ink: #1a1414;
+      --color-muted: #6b5a5a;
+      --color-line: #ead8d8;
+      --color-canvas: #fcfaf9;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "CaseHarbor — Customer support helpdesk",
+        "description": "Fictional helpdesk template by Subrahmanyam Poluru. No live ticketing backend.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does CaseHarbor send real emails?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Replies and contact forms show demo toasts only."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="hd-body bg-canvas text-ink antialiased" id="top">
+  <a class="hd-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-ink text-white/85 text-sm">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-brand mr-2 align-middle" aria-hidden="true"></span>SLA on track · 18 open · median first reply 11 min</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-white hover:text-brand-soft" href="tel:+15125550342"><i class="bi bi-telephone"></i> (512) 555-0342</a>
+        <span class="hidden sm:inline">Harbor SaaS · support demo</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="hdHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white" aria-hidden="true"><i class="bi bi-headset"></i></span>
+        CaseHarbor<em class="not-italic text-brand">.</em>
+      </a>
+      <button class="font-ui ml-auto inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="hdNavToggle" aria-expanded="false" aria-controls="hdNavPanel" aria-label="Open menu">
+        <i class="bi bi-list text-lg"></i>
+      </button>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex" aria-label="Primary">
+        <a class="hover:text-ink" href="#inbox">Inbox</a>
+        <a class="hover:text-ink" href="#features">Features</a>
+        <a class="hover:text-ink" href="#channels">Channels</a>
+        <a class="hover:text-ink" href="#automation">Automation</a>
+        <a class="hover:text-ink" href="#pricing">Pricing</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-white hover:bg-brand-dark md:inline-flex" href="#demo">Start free trial</a>
+    </div>
+    <div class="hd-nav-open border-t border-line bg-canvas md:hidden" id="hdNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#inbox">Inbox</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#features">Features</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#channels">Channels</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#automation">Automation</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#pricing">Pricing</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-white" href="#demo">Start free trial</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-canvas px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="hd-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Harbor SaaS support</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-tight md:text-5xl">Every conversation, one calm inbox.</h1>
+          <p class="mt-4 max-w-lg text-muted">CaseHarbor gives Poluru’s support leads a shared queue across email, chat, and billing—without tab chaos. This site is a marketing + product demo; no tickets leave your browser.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="font-ui inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-black text-white hover:bg-brand-dark" href="#inbox"><i class="bi bi-inbox"></i> Open demo inbox</a>
+            <a class="font-ui inline-flex items-center gap-2 rounded-xl border border-line bg-white px-5 py-3 text-sm font-black text-ink hover:bg-brand-soft" href="#features">See features</a>
+          </div>
+          <ul class="mt-8 flex flex-wrap gap-6 border-t border-line pt-6 text-sm">
+            <li><strong class="font-display block text-2xl text-ink">98%</strong><span class="font-ui font-bold text-muted">CSAT (sample)</span></li>
+            <li><strong class="font-display block text-2xl text-ink">11m</strong><span class="font-ui font-bold text-muted">Median first reply</span></li>
+            <li><strong class="font-display block text-2xl text-ink">4</strong><span class="font-ui font-bold text-muted">Channels unified</span></li>
+          </ul>
+        </div>
+        <div class="hd-reveal rounded-2xl border border-line bg-white shadow-sm">
+          <div class="flex items-center justify-between border-b border-line px-4 py-3 font-ui text-sm font-bold">
+            <span>Team queue · Today</span>
+            <span class="text-muted">Updated live (demo)</span>
+          </div>
+          <div class="hd-metric-grid p-4">
+            <div class="rounded-xl border border-line bg-canvas p-3">
+              <span class="font-ui text-xs font-bold text-muted">Open</span>
+              <p class="font-display mt-1 text-2xl font-black">18</p>
+            </div>
+            <div class="rounded-xl border border-line bg-canvas p-3">
+              <span class="font-ui text-xs font-bold text-muted">Pending</span>
+              <p class="font-display mt-1 text-2xl font-black">6</p>
+            </div>
+            <div class="rounded-xl border border-line bg-canvas p-3">
+              <span class="font-ui text-xs font-bold text-muted">Resolved</span>
+              <p class="font-display mt-1 text-2xl font-black">42</p>
+            </div>
+            <div class="rounded-xl border border-line bg-canvas p-3">
+              <span class="font-ui text-xs font-bold text-muted">At risk SLA</span>
+              <p class="font-display mt-1 text-2xl font-black text-brand">2</p>
+            </div>
+          </div>
+          <div class="border-t border-line px-4 py-3">
+            <p class="font-ui text-xs font-bold text-muted">Next up</p>
+            <p class="mt-1 text-sm"><strong>Billing export timing</strong> · Meera · <span class="text-brand">Due in 24m</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="features" aria-labelledby="features-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="hd-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Features</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="features-heading">Built for humans answering humans.</h2>
+          <p class="mt-3 text-muted">Solid panels, readable type, and zero gradient chrome—so agents focus on the customer story.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="hd-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand"><i class="bi bi-people"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Collision-free inbox</h3>
+            <p class="mt-2 text-sm text-muted">See who is viewing a thread, claim ownership, and leave internal notes agents-only.</p>
+          </article>
+          <article class="hd-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand"><i class="bi bi-stopwatch"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">SLA clocks you trust</h3>
+            <p class="mt-2 text-sm text-muted">Business-hour aware timers, breach warnings, and a morning digest for team leads.</p>
+          </article>
+          <article class="hd-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand"><i class="bi bi-journal-text"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Macros with context</h3>
+            <p class="mt-2 text-sm text-muted">Insert snippets with customer name, plan tier, and last invoice—pulled from sample fields here.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-white px-5 py-16" id="inbox" aria-labelledby="inbox-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="hd-reveal flex flex-wrap items-end justify-between gap-4">
+          <div class="max-w-xl">
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Live demo</p>
+            <h2 class="font-display mt-2 text-3xl font-black" id="inbox-heading">Shared team inbox</h2>
+            <p class="mt-3 text-muted">Filter by status, search subjects, open a thread, or assign to an agent. All actions are local demos.</p>
+          </div>
+        </div>
+        <div class="hd-reveal mt-8 flex flex-wrap items-center gap-3">
+          <label class="flex min-w-[min(100%,18rem)] flex-1 items-center gap-2 rounded-xl border border-line bg-canvas px-3">
+            <i class="bi bi-search text-muted" aria-hidden="true"></i>
+            <input class="min-h-11 w-full border-0 bg-transparent outline-none" type="search" id="hdSearch" placeholder="Search conversations…" aria-label="Search conversations" />
+          </label>
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by status">
+            <button type="button" class="font-ui rounded-full border border-brand bg-brand px-4 py-2 text-xs font-black text-white" data-hd-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black text-muted" data-hd-filter="open" aria-pressed="false">Open</button>
+            <button type="button" class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black text-muted" data-hd-filter="pending" aria-pressed="false">Pending</button>
+            <button type="button" class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black text-muted" data-hd-filter="resolved" aria-pressed="false">Resolved</button>
+          </div>
+        </div>
+        <p class="font-ui mt-4 text-xs font-bold text-muted" id="hdTicketCount" aria-live="polite">6 conversations</p>
+        <div class="hd-ticket-list hd-reveal mt-3">
+          <article class="hd-ticket" data-status="open" data-search="meera billing export csv harbor">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="font-display text-base font-black">Billing export is missing last week</h3>
+                <p class="mt-1 text-sm text-muted">Meera Poluru · Enterprise · 4 min ago</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="font-ui rounded-lg border border-line bg-white px-3 py-1.5 text-xs font-bold hover:bg-brand-soft" data-hd-assign="Kiran">Assign</button>
+                <button type="button" class="font-ui rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-white hover:bg-brand-dark" data-hd-open data-title="Billing export is missing last week" data-sender="Meera Poluru" data-status="Open">Open</button>
+              </div>
+            </div>
+            <span class="hd-status is-open mt-3 inline-block">Open</span>
+          </article>
+          <article class="hd-ticket" data-status="pending" data-search="subra sso login saml">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="font-display text-base font-black">SSO login loops after IdP update</h3>
+                <p class="mt-1 text-sm text-muted">Subra · Growth plan · 22 min ago</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="font-ui rounded-lg border border-line bg-white px-3 py-1.5 text-xs font-bold hover:bg-brand-soft" data-hd-assign="Poluru">Assign</button>
+                <button type="button" class="font-ui rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-white hover:bg-brand-dark" data-hd-open data-title="SSO login loops after IdP update" data-sender="Subra" data-status="Pending">Open</button>
+              </div>
+            </div>
+            <span class="hd-status is-pending mt-3 inline-block">Pending</span>
+          </article>
+          <article class="hd-ticket" data-status="open" data-search="kiran seat limit workspace">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="font-display text-base font-black">Need two more seats before renewal</h3>
+                <p class="mt-1 text-sm text-muted">Kiran · Starter · 38 min ago</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="font-ui rounded-lg border border-line bg-white px-3 py-1.5 text-xs font-bold hover:bg-brand-soft" data-hd-assign="You">Assign</button>
+                <button type="button" class="font-ui rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-white hover:bg-brand-dark" data-hd-open data-title="Need two more seats before renewal" data-sender="Kiran" data-status="Open">Open</button>
+              </div>
+            </div>
+            <span class="hd-status is-open mt-3 inline-block">Open</span>
+          </article>
+          <article class="hd-ticket" data-status="resolved" data-search="nila thank you onboarding">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="font-display text-base font-black">Thanks for the onboarding walkthrough</h3>
+                <p class="mt-1 text-sm text-muted">Nila · Pro · 1 hr ago</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="font-ui rounded-lg border border-line bg-white px-3 py-1.5 text-xs font-bold hover:bg-brand-soft" data-hd-open data-title="Thanks for the onboarding walkthrough" data-sender="Nila" data-status="Resolved">Open</button>
+              </div>
+            </div>
+            <span class="hd-status is-resolved mt-3 inline-block">Resolved</span>
+          </article>
+          <article class="hd-ticket" data-status="pending" data-search="arjun api rate limit webhook">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="font-display text-base font-black">Webhook retries after rate limit</h3>
+                <p class="mt-1 text-sm text-muted">Arjun · API user · 2 hr ago</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="font-ui rounded-lg border border-line bg-white px-3 py-1.5 text-xs font-bold hover:bg-brand-soft" data-hd-assign="Poluru">Assign</button>
+                <button type="button" class="font-ui rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-white hover:bg-brand-dark" data-hd-open data-title="Webhook retries after rate limit" data-sender="Arjun" data-status="Pending">Open</button>
+              </div>
+            </div>
+            <span class="hd-status is-pending mt-3 inline-block">Pending</span>
+          </article>
+          <article class="hd-ticket" data-status="resolved" data-search="subbu password reset">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h3 class="font-display text-base font-black">Password reset link expired</h3>
+                <p class="mt-1 text-sm text-muted">Subbu · Starter · Yesterday</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="font-ui rounded-lg border border-line bg-white px-3 py-1.5 text-xs font-bold hover:bg-brand-soft" data-hd-open data-title="Password reset link expired" data-sender="Subbu" data-status="Resolved">Open</button>
+              </div>
+            </div>
+            <span class="hd-status is-resolved mt-3 inline-block">Resolved</span>
+          </article>
+        </div>
+        <p class="hd-reveal mt-4 rounded-xl border border-dashed border-line bg-canvas p-6 text-center text-sm text-muted" id="hdTicketEmpty" hidden>No conversations match this filter.</p>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="channels" aria-labelledby="channels-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="hd-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Channels</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="channels-heading">Meet customers where they write.</h2>
+        </div>
+        <div class="hd-channel-grid hd-reveal mt-10">
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <i class="bi bi-envelope text-2xl text-brand"></i>
+            <h3 class="font-display mt-3 font-black">Email</h3>
+            <p class="mt-2 text-sm text-muted">support@harbor.example threads land in the same queue with full history.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <i class="bi bi-chat-dots text-2xl text-brand"></i>
+            <h3 class="font-display mt-3 font-black">Live chat</h3>
+            <p class="mt-2 text-sm text-muted">Widget hands off to agents with page URL and plan tier attached.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <i class="bi bi-telephone text-2xl text-brand"></i>
+            <h3 class="font-display mt-3 font-black">Phone callbacks</h3>
+            <p class="mt-2 text-sm text-muted">Schedule return calls; transcripts attach to the customer profile in demo copy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-canvas px-5 py-16" id="automation" aria-labelledby="auto-heading">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="hd-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Automation</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="auto-heading">Rules that stay out of the way.</h2>
+          <p class="mt-3 text-muted">Route billing tags to finance, bump VIP accounts, and auto-close “thank you” replies after 48 hours—sample rules listed for layout.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex gap-3 rounded-xl border border-line bg-white p-4"><i class="bi bi-tag text-brand"></i><span><strong class="font-display">Tag router</strong> — #billing → Queue: Revenue care</span></li>
+            <li class="flex gap-3 rounded-xl border border-line bg-white p-4"><i class="bi bi-star text-brand"></i><span><strong class="font-display">VIP lift</strong> — Enterprise plan → Priority: High</span></li>
+            <li class="flex gap-3 rounded-xl border border-line bg-white p-4"><i class="bi bi-moon text-brand"></i><span><strong class="font-display">After hours</strong> — Auto-reply with on-call window</span></li>
+          </ul>
+        </div>
+        <div class="hd-reveal rounded-2xl border border-line bg-white p-6">
+          <p class="font-ui text-xs font-black uppercase tracking-widest text-muted">Resolved volume (sample)</p>
+          <div class="hd-bar-chart mt-4" role="img" aria-label="Bar chart of monthly resolved tickets rising through the year">
+            <span><i style="--h: 42%"></i>Jan</span>
+            <span><i style="--h: 48%"></i>Feb</span>
+            <span><i style="--h: 55%"></i>Mar</span>
+            <span><i style="--h: 52%"></i>Apr</span>
+            <span><i style="--h: 61%"></i>May</span>
+            <span><i style="--h: 58%"></i>Jun</span>
+            <span><i style="--h: 66%"></i>Jul</span>
+            <span><i style="--h: 72%"></i>Aug</span>
+            <span><i style="--h: 68%"></i>Sep</span>
+            <span><i style="--h: 78%"></i>Oct</span>
+            <span><i style="--h: 74%"></i>Nov</span>
+            <span><i style="--h: 88%"></i>Dec</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="pricing" aria-labelledby="pricing-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="hd-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Pricing</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="pricing-heading">Per seat, predictable.</h2>
+        </div>
+        <div class="hd-plan-grid hd-reveal mt-10">
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display text-lg font-black">Starter</h3>
+            <p class="mt-2 text-sm text-muted">For small teams getting off shared Gmail.</p>
+            <p class="font-display mt-4 text-3xl font-black">$29<span class="text-base font-bold text-muted">/seat</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-brand"></i> 2 shared inboxes</li>
+              <li><i class="bi bi-check2 text-brand"></i> Email + chat</li>
+              <li><i class="bi bi-check2 text-brand"></i> 7-day history</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border-2 border-brand bg-white p-6 shadow-sm">
+            <p class="font-ui text-xs font-black uppercase text-brand">Popular</p>
+            <h3 class="font-display text-lg font-black">Growth</h3>
+            <p class="mt-2 text-sm text-muted">SLAs, macros, and light automation.</p>
+            <p class="font-display mt-4 text-3xl font-black">$59<span class="text-base font-bold text-muted">/seat</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-brand"></i> Unlimited inboxes</li>
+              <li><i class="bi bi-check2 text-brand"></i> SLA + collision detect</li>
+              <li><i class="bi bi-check2 text-brand"></i> 1 year history</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display text-lg font-black">Enterprise</h3>
+            <p class="mt-2 text-sm text-muted">SSO, audit logs, custom roles.</p>
+            <p class="font-display mt-4 text-3xl font-black">Custom</p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-brand"></i> Dedicated success</li>
+              <li><i class="bi bi-check2 text-brand"></i> HIPAA-ready story</li>
+              <li><i class="bi bi-check2 text-brand"></i> 99.9% SLA</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-canvas px-5 py-16" id="demo" aria-labelledby="demo-heading">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+        <div class="hd-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Try it</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="demo-heading">Spin up a demo workspace</h2>
+          <p class="mt-3 text-muted">No credit card. We will not email you—this form shows a toast only.</p>
+        </div>
+        <form class="hd-reveal grid gap-3 rounded-2xl border border-line bg-white p-6" id="hdDemoForm">
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Work email
+            <input class="rounded-xl border border-line px-3 py-2.5 font-normal" type="email" name="email" required maxlength="120" />
+          </label>
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Team name
+            <input class="rounded-xl border border-line px-3 py-2.5 font-normal" type="text" name="team" required maxlength="80" placeholder="Harbor Support" />
+          </label>
+          <button class="font-ui rounded-xl bg-brand px-4 py-3 text-sm font-black text-white hover:bg-brand-dark" type="submit">Create demo workspace</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="faq" aria-labelledby="faq-heading">
+      <div class="mx-auto max-w-3xl">
+        <div class="hd-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="faq-heading">Quick answers</h2>
+        </div>
+        <div class="hd-reveal mt-8 space-y-3">
+          <details class="rounded-xl border border-line bg-white p-4" open>
+            <summary class="font-ui cursor-pointer font-black text-ink">Is CaseHarbor connected to email?</summary>
+            <p class="mt-3 text-sm text-muted">No. This template demonstrates UI patterns only. Replies and assignments stay in your browser session.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-ui cursor-pointer font-black text-ink">Can I use my own brand color?</summary>
+            <p class="mt-3 text-sm text-muted">Yes. Update the <code class="text-ink">@theme</code> block in <code class="text-ink">index.html</code> and the favicon SVG.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-ui cursor-pointer font-black text-ink">Who built this template?</summary>
+            <p class="mt-3 text-sm text-muted">Subrahmanyam Poluru — portfolio and contact at <a href="https://polurus.com" class="font-bold text-brand hover:text-brand-dark">polurus.com</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-white px-5 py-16" id="contact" aria-labelledby="contact-heading">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+        <div class="hd-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Contact</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="contact-heading">Talk to Harbor sales</h2>
+          <p class="mt-3 text-muted">sales@caseharbor.demo · (512) 555-0342 · fictional contacts for this layout.</p>
+        </div>
+        <form class="hd-reveal grid gap-3 rounded-2xl border border-line bg-canvas p-6" id="hdContactForm">
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Email
+            <input class="rounded-xl border border-line bg-white px-3 py-2.5 font-normal" type="email" name="email" required maxlength="120" />
+          </label>
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Message
+            <textarea class="min-h-28 rounded-xl border border-line bg-white px-3 py-2.5 font-normal" name="message" required maxlength="2000"></textarea>
+          </label>
+          <button class="font-ui rounded-xl bg-brand px-4 py-3 text-sm font-black text-white hover:bg-brand-dark" type="submit">Send demo message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/75">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-white" aria-hidden="true"><i class="bi bi-headset"></i></span>
+          CaseHarbor.
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Helpdesk marketing template for shared inboxes, SLAs, and macros. Fictional Harbor SaaS product.</p>
+      </div>
+      <nav aria-label="Product">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Product</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#inbox">Inbox demo</a></li>
+          <li><a class="hover:text-brand-soft" href="#channels">Channels</a></li>
+          <li><a class="hover:text-brand-soft" href="#automation">Automation</a></li>
+          <li><a class="hover:text-brand-soft" href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Support</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand-soft" href="#demo">Free trial</a></li>
+          <li><a class="hover:text-brand-soft" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#2a1818] p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft font-black text-brand" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand-soft hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> CaseHarbor. Fictional sample. No live ticketing.</span>
+      <span>Built by <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog class="hd-dialog" id="hdDialog" aria-labelledby="hdDialogTitle">
+    <div class="hd-dialog-head">
+      <h2 class="font-display text-lg font-black" id="hdDialogTitle">Conversation</h2>
+      <button type="button" class="hd-dialog-close" id="hdDialogClose" aria-label="Close dialog">×</button>
+    </div>
+    <div class="hd-dialog-body" id="hdDialogBody"></div>
+  </dialog>
+
+  <div class="hd-toast" id="hdToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="hdToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="hdToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
