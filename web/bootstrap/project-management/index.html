@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  PlanHarbor — Project management
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,496 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlanHarbor — Projects, tasks, and calm delivery</title>
+  <meta name="description" content="PlanHarbor is a fictional project management app for Harbor Labs: boards, filters, and team views. Designed by Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#030164" />
+  <link rel="canonical" href="https://polurus.com/templates/project-management/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PlanHarbor — Projects, tasks, and calm delivery" />
+  <meta property="og:description" content="Clean project management website with kanban demo, filters, and signup." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PlanHarbor — Projects, tasks, and calm delivery" />
+  <meta name="twitter:description" content="Clean project management website with kanban demo, filters, and signup." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "PlanHarbor — Project management",
+        "description": "Fictional PM template by Subrahmanyam Poluru. No live workspace backend.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="pm-skip" href="#main">Skip to content</a>
+
+  <div class="pm-utility">
+    <div class="container pm-utility-inner">
+      <span><i class="pm-dot" aria-hidden="true"></i>Sprint 24 · 18 tasks in flight · Harbor Labs</span>
+      <div class="pm-utility-meta">
+        <a href="tel:+15125550455"><i class="bi bi-telephone"></i> (512) 555-0455</a>
+        <span>Read-only marketing demo · Oct 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top pm-nav" aria-label="Primary">
+    <div class="container">
+      <a class="pm-brand" href="#top">
+        <span class="pm-mark" aria-hidden="true"><i class="bi bi-kanban"></i></span>
+        PlanHarbor<em>.</em>
+      </a>
+      <button class="navbar-toggler pm-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-lg-4 me-lg-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#board">Board</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teams">Teams</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 pb-3 pb-lg-0">
+          <a class="pm-btn pm-btn-ghost pm-btn-sm" href="#demo">Start trial</a>
+          <a class="pm-btn pm-btn-primary pm-btn-sm" href="#board">Open board</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="pm-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-xl-5">
+          <div class="col-lg-6 pm-reveal">
+            <p class="pm-kicker">Harbor Labs delivery</p>
+            <div class="pm-hero-copy">
+              <h1>Ship work without the chaos.</h1>
+              <p>PlanHarbor gives Poluru’s product squads a shared board, clear owners, and honest status—this page is a marketing + UI demo, not a connected workspace.</p>
+            </div>
+            <div class="pm-actions">
+              <a class="pm-btn pm-btn-primary" href="#board"><i class="bi bi-columns-gap"></i> View kanban demo</a>
+              <a class="pm-btn pm-btn-ghost" href="#features">Explore features</a>
+            </div>
+            <ul class="pm-hero-stats">
+              <li><strong>24</strong><span>Active projects (sample)</span></li>
+              <li><strong>96%</strong><span>On-time milestones</span></li>
+              <li><strong>38</strong><span>Team members</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pm-reveal">
+            <div class="pm-panel" aria-label="Sprint snapshot">
+              <div class="pm-panel-bar">
+                <span>Release 4.2 · Harbor Web</span>
+                <span><i class="bi bi-calendar3"></i> Due Oct 18</span>
+              </div>
+              <div class="pm-dash-rows">
+                <div class="pm-dash-row">
+                  <span>Design QA sign-off</span>
+                  <strong class="text-success">Done</strong>
+                </div>
+                <div class="pm-dash-row">
+                  <span>API rate limits</span>
+                  <strong>In progress</strong>
+                </div>
+                <div class="pm-dash-row">
+                  <span>Mobile push copy</span>
+                  <strong>Backlog</strong>
+                </div>
+                <div class="pm-dash-row">
+                  <span>Load test · staging</span>
+                  <strong>Oct 12</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="pm-section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="pm-section-head pm-reveal">
+          <p class="pm-kicker">Features</p>
+          <h2 id="features-heading">Clarity for builders and stakeholders.</h2>
+          <p>Flat navy brand, crisp type, and panels that read like a real PM tool—without gradient chrome or fake 3D charts.</p>
+        </div>
+        <div class="pm-features">
+          <article class="pm-card pm-reveal">
+            <div class="pm-icon"><i class="bi bi-kanban-fill"></i></div>
+            <h3>Boards &amp; backlogs</h3>
+            <p>Columns, WIP limits, and quick filters—demo board below moves tasks with a single click.</p>
+          </article>
+          <article class="pm-card pm-reveal">
+            <div class="pm-icon"><i class="bi bi-diagram-3"></i></div>
+            <h3>Timeline view</h3>
+            <p>Dependencies and milestones in a Gantt-style layout—described here, not rendered as a busy chart.</p>
+          </article>
+          <article class="pm-card pm-reveal">
+            <div class="pm-icon"><i class="bi bi-people"></i></div>
+            <h3>Roles &amp; approvals</h3>
+            <p>Owners, reviewers, and read-only guests with audit-friendly activity feeds in production copy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pm-section pm-section-alt" id="board" aria-labelledby="board-heading">
+      <div class="container">
+        <div class="pm-section-head pm-reveal">
+          <p class="pm-kicker">Live demo</p>
+          <h2 id="board-heading">Sprint board</h2>
+          <p>Filter by project, search tasks, then use <strong>Advance</strong> to move a card to the next column. Counts update automatically.</p>
+        </div>
+        <div class="pm-toolbar pm-reveal">
+          <label class="pm-search">
+            <i class="bi bi-search text-muted" aria-hidden="true"></i>
+            <input type="search" id="pmSearch" placeholder="Search tasks…" autocomplete="off" aria-label="Search tasks" />
+          </label>
+          <div class="pm-chips" role="group" aria-label="Filter by project">
+            <button type="button" class="pm-chip is-active" data-pm-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="pm-chip" data-pm-filter="harbor" aria-pressed="false">Harbor Web</button>
+            <button type="button" class="pm-chip" data-pm-filter="mobile" aria-pressed="false">Mobile</button>
+            <button type="button" class="pm-chip" data-pm-filter="ops" aria-pressed="false">Ops</button>
+          </div>
+        </div>
+        <p class="pm-result" id="pmResult" aria-live="polite">8 tasks visible</p>
+        <div class="pm-kanban pm-reveal">
+          <div class="pm-kanban-col" data-pm-column="Backlog">
+            <div class="pm-kanban-head">
+              Backlog <span class="pm-kanban-count" data-pm-count>0</span>
+            </div>
+            <div class="pm-kanban-cards">
+              <article class="pm-task" data-project="mobile" data-search="push notification copy subbu">
+                <span class="pm-tag">Mobile</span>
+                <h3 class="pm-task-title">Push notification copy</h3>
+                <p class="pm-task-meta">Subbu · P2 · Oct 14</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>SB</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance>Advance</button>
+                </div>
+              </article>
+              <article class="pm-task" data-project="ops" data-search="backup restore drill kiran">
+                <span class="pm-tag">Ops</span>
+                <h3 class="pm-task-title">Backup restore drill</h3>
+                <p class="pm-task-meta">Kiran · P1 · Oct 20</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>KP</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance>Advance</button>
+                </div>
+              </article>
+              <article class="pm-task" data-project="harbor" data-search="accessibility audit poluru">
+                <span class="pm-tag is-harbor">Harbor</span>
+                <h3 class="pm-task-title">Accessibility audit</h3>
+                <p class="pm-task-meta">Poluru · P2 · Oct 16</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>PP</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance>Advance</button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="pm-kanban-col" data-pm-column="In progress">
+            <div class="pm-kanban-head">
+              In progress <span class="pm-kanban-count" data-pm-count>0</span>
+            </div>
+            <div class="pm-kanban-cards">
+              <article class="pm-task" data-project="harbor" data-search="api rate limits subra">
+                <span class="pm-tag is-harbor">Harbor</span>
+                <h3 class="pm-task-title">API rate limits</h3>
+                <p class="pm-task-meta">Subra · P0 · Oct 11</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>SP</span><span>PP</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance>Advance</button>
+                </div>
+              </article>
+              <article class="pm-task" data-project="mobile" data-search="offline cache meera">
+                <span class="pm-tag">Mobile</span>
+                <h3 class="pm-task-title">Offline cache layer</h3>
+                <p class="pm-task-meta">Meera · P1 · Oct 13</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>MP</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance>Advance</button>
+                </div>
+              </article>
+              <article class="pm-task" data-project="ops" data-search="incident runbook update">
+                <span class="pm-tag">Ops</span>
+                <h3 class="pm-task-title">Incident runbook update</h3>
+                <p class="pm-task-meta">Ops guild · P2 · Oct 9</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>OG</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance>Advance</button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="pm-kanban-col" data-pm-column="Done">
+            <div class="pm-kanban-head">
+              Done <span class="pm-kanban-count" data-pm-count>0</span>
+            </div>
+            <div class="pm-kanban-cards">
+              <article class="pm-task" data-project="harbor" data-search="design qa sign-off nila">
+                <span class="pm-tag is-harbor">Harbor</span>
+                <h3 class="pm-task-title">Design QA sign-off</h3>
+                <p class="pm-task-meta">Nila · Shipped Oct 6</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>NP</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance disabled>Advance</button>
+                </div>
+              </article>
+              <article class="pm-task" data-project="mobile" data-search="app store screenshots">
+                <span class="pm-tag">Mobile</span>
+                <h3 class="pm-task-title">App Store screenshots</h3>
+                <p class="pm-task-meta">Creative · Shipped Oct 5</p>
+                <div class="pm-task-foot">
+                  <div class="pm-avatars"><span>CR</span></div>
+                  <button type="button" class="pm-btn pm-btn-ghost pm-btn-sm" data-pm-advance disabled>Advance</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pm-section" id="teams" aria-labelledby="teams-heading">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 pm-reveal">
+            <p class="pm-kicker">Teams</p>
+            <h2 id="teams-heading">One workspace, many squads.</h2>
+            <p>Harbor Web, Mobile, and Platform Ops each get a filtered view—try the project chips on the board. @mentions, file previews, and Slack digests are described for layout only.</p>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li class="mb-2"><i class="bi bi-check2 text-primary"></i> Cross-project dependencies flagged in weekly digest</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary"></i> Guest access for agencies with expiry dates</li>
+              <li><i class="bi bi-check2 text-primary"></i> Export to CSV for leadership readouts (demo button elsewhere)</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pm-reveal">
+            <div class="pm-panel">
+              <div class="pm-panel-bar"><span>Activity · Today</span></div>
+              <div class="pm-dash-rows">
+                <div class="pm-dash-row">
+                  <span><strong>Poluru</strong> moved API rate limits</span>
+                  <span class="small text-muted">2h</span>
+                </div>
+                <div class="pm-dash-row">
+                  <span><strong>Subra</strong> commented on audit</span>
+                  <span class="small text-muted">4h</span>
+                </div>
+                <div class="pm-dash-row">
+                  <span><strong>Meera</strong> attached Figma link</span>
+                  <span class="small text-muted">6h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pm-section pm-section-alt" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="pm-section-head pm-reveal">
+          <p class="pm-kicker">Pricing</p>
+          <h2 id="pricing-heading">Per seat, billed monthly</h2>
+          <p>Sample tiers for the landing page—no checkout connected.</p>
+        </div>
+        <div class="pm-plans">
+          <article class="pm-plan pm-reveal">
+            <h3>Starter</h3>
+            <p class="mb-0">For small teams shipping one product.</p>
+            <p class="pm-plan-price">$12<span class="fs-6 text-muted">/user</span></p>
+            <ul>
+              <li>3 projects</li>
+              <li>Kanban &amp; list</li>
+              <li>7-day history</li>
+            </ul>
+            <a class="pm-btn pm-btn-ghost w-100" href="#demo">Start trial</a>
+          </article>
+          <article class="pm-plan is-featured pm-reveal">
+            <p class="pm-plan-label">Popular</p>
+            <h3>Business</h3>
+            <p class="mb-0">Timeline, automations, and SSO-ready story.</p>
+            <p class="pm-plan-price">$24<span class="fs-6 text-muted">/user</span></p>
+            <ul>
+              <li>Unlimited projects</li>
+              <li>Timeline &amp; dependencies</li>
+              <li>90-day audit log</li>
+            </ul>
+            <a class="pm-btn pm-btn-primary w-100" href="#demo">Start trial</a>
+          </article>
+          <article class="pm-plan pm-reveal">
+            <h3>Enterprise</h3>
+            <p class="mb-0">Dedicated success and custom contracts.</p>
+            <p class="pm-plan-price">Custom</p>
+            <ul>
+              <li>SAML / SCIM</li>
+              <li>Data residency options</li>
+              <li>99.9% SLA</li>
+            </ul>
+            <a class="pm-btn pm-btn-ghost w-100" href="#contact">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pm-section" id="demo" aria-labelledby="demo-heading">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5 pm-reveal">
+            <p class="pm-kicker">Try it</p>
+            <h2 id="demo-heading">Create a demo workspace</h2>
+            <p>No credit card. Submitting the form shows a toast only.</p>
+          </div>
+          <div class="col-lg-7 pm-reveal">
+            <form class="pm-form pm-panel p-4" id="pmDemoForm">
+              <label for="demoEmail">Work email</label>
+              <input id="demoEmail" name="email" type="email" required maxlength="120" />
+              <label for="demoTeam">Team name</label>
+              <input id="demoTeam" name="team" type="text" required maxlength="80" placeholder="Harbor Labs" />
+              <button type="submit" class="pm-btn pm-btn-primary">Create workspace (demo)</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pm-section pm-section-alt" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="pm-section-head pm-reveal mx-auto text-center" style="max-width: 36rem">
+          <p class="pm-kicker">FAQ</p>
+          <h2 id="faq-heading">Common questions</h2>
+        </div>
+        <div class="pm-faq pm-reveal mx-auto" style="max-width: 40rem">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Is PlanHarbor a real PM tool?</button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">No. It is a free Bootstrap template by Subrahmanyam Poluru. Board moves stay in your browser session.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Does task data sync to the cloud?</button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Not in this demo. Refreshing the page resets card positions unless you extend the script with localStorage.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Can I change the brand color?</button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Yes. Update CSS variables at the top of <code>assets/css/style.css</code> and the favicon SVG.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pm-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="pm-contact-grid">
+          <div class="pm-reveal">
+            <p class="pm-kicker">Contact</p>
+            <h2 id="contact-heading">Talk to Harbor sales</h2>
+            <p>sales@planharbor.demo · (512) 555-0455 · fictional contacts for this layout.</p>
+          </div>
+          <div class="pm-reveal">
+            <form class="pm-form pm-panel p-4" id="pmContactForm">
+              <label for="contactEmail">Email</label>
+              <input id="contactEmail" name="email" type="email" required maxlength="120" />
+              <label for="contactMsg">Message</label>
+              <textarea id="contactMsg" name="message" required maxlength="2000" placeholder="Team size, integrations, or template feedback…"></textarea>
+              <button type="submit" class="pm-btn pm-btn-primary w-100">Send message (demo)</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pm-footer">
+    <div class="container">
+      <div class="pm-footer-grid">
+        <div class="pm-footer-brand">
+          <a class="pm-brand" href="#top">
+            <span class="pm-mark" aria-hidden="true"><i class="bi bi-kanban"></i></span>
+            PlanHarbor<em>.</em>
+          </a>
+          <p>Fictional project management storefront for Harbor Labs. Kanban demo, filters, and signup toasts only.</p>
+        </div>
+        <div>
+          <h2>Product</h2>
+          <div class="pm-footer-links">
+            <a href="#board">Board demo</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <div class="pm-footer-links">
+            <a href="#teams">Teams</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h2>Template author</h2>
+          <div class="pm-author">
+            <span class="pm-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="pm-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pm-legal">
+        <span>© <span id="year">2026</span> PlanHarbor demo · Not affiliated with any PM vendor</span>
+        <span>Free for personal &amp; commercial use · <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">polurus.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="pm-toast" id="pmToast" role="status" aria-live="polite" aria-atomic="true">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="pmToastTitle">Saved</strong>
+      <p id="pmToastBody">Demo notification.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
