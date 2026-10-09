@@ -2,6 +2,12 @@
 
 A standalone responsive Bootstrap 5 website implemented from `prompt.md`.
 
+## Screenshot
+
+<img width="3360" height="5860" alt="creative-portfolio" src="https://github.com/user-attachments/assets/772b1aa4-f987-4982-8aaa-0715b5dc3ba8" />
+
+
+
 ## Run
 
 From the parent `codex-bootstrap` directory:
