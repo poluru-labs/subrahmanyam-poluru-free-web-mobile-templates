@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  HireHarbor — Recruitment platform
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,454 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HireHarbor — Hire and get hired with clarity</title>
+  <meta name="description" content="HireHarbor is a fictional recruitment platform for Harbor Companies: job search, ATS demo, and employer signup. By Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#30497D" />
+  <link rel="canonical" href="https://polurus.com/templates/recruitment-platform/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HireHarbor — Hire and get hired with clarity" />
+  <meta property="og:description" content="Clean recruitment website with job filters, save &amp; apply demos, and employer forms." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="HireHarbor — Hire and get hired with clarity" />
+  <meta name="twitter:description" content="Clean recruitment website with job filters, save &amp; apply demos, and employer forms." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "HireHarbor — Recruitment platform",
+        "description": "Fictional hiring template by Subrahmanyam Poluru. Applications are demo toasts only.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="rp-skip" href="#main">Skip to content</a>
+
+  <div class="rp-utility">
+    <div class="container rp-utility-inner">
+      <span><i class="rp-dot" aria-hidden="true"></i>142 open roles · 48 Harbor companies hiring</span>
+      <div class="rp-utility-meta">
+        <a href="tel:+15125550472"><i class="bi bi-telephone"></i> (512) 555-0472</a>
+        <span>Equal opportunity demo · Oct 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top rp-nav" aria-label="Primary">
+    <div class="container">
+      <a class="rp-brand" href="#top">
+        <span class="rp-mark" aria-hidden="true"><i class="bi bi-person-badge"></i></span>
+        HireHarbor<em>.</em>
+      </a>
+      <button class="navbar-toggler rp-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-lg-4 me-lg-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#jobs">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#employers">Employers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 pb-3 pb-lg-0">
+          <a class="rp-btn rp-btn-ghost rp-btn-sm" href="#employers">Post a job</a>
+          <a class="rp-btn rp-btn-primary rp-btn-sm" href="#jobs">Find work</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="rp-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-xl-5">
+          <div class="col-lg-6 rp-reveal">
+            <p class="rp-kicker">Harbor Companies hiring</p>
+            <div class="rp-hero-copy">
+              <h1>Roles worth saying yes to.</h1>
+              <p>Search engineering, design, and go-to-market openings from fictional Harbor employers. Save jobs locally, apply with a demo toast—no résumés leave your browser.</p>
+            </div>
+            <form class="rp-actions flex-column flex-sm-row align-items-stretch" id="rpHeroSearch" role="search" style="max-width: 28rem">
+              <input class="form-control rounded-3 border-line" type="search" id="rpHeroQuery" placeholder="Title, skill, or city…" autocomplete="off" aria-label="Search jobs" />
+              <button type="submit" class="rp-btn rp-btn-primary">Search jobs</button>
+            </form>
+            <ul class="rp-hero-stats">
+              <li><strong>142</strong><span>Open roles (sample)</span></li>
+              <li><strong>18</strong><span>Days avg time-to-hire</span></li>
+              <li><strong>92%</strong><span>Candidate satisfaction</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 rp-reveal">
+            <div class="rp-panel" aria-label="Hiring pipeline snapshot">
+              <div class="rp-panel-bar">
+                <span>Product Designer · Harbor Labs</span>
+                <span class="text-success"><i class="bi bi-circle-fill small"></i> Active</span>
+              </div>
+              <div class="rp-dash-rows">
+                <div class="rp-dash-row"><span>Applied</span><strong>86</strong></div>
+                <div class="rp-dash-row"><span>Phone screen</span><strong>24</strong></div>
+                <div class="rp-dash-row"><span>On-site</span><strong>8</strong></div>
+                <div class="rp-dash-row"><span>Offer</span><strong>2</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="rp-section rp-section-alt" aria-labelledby="logos-heading">
+      <div class="container rp-reveal text-center">
+        <p class="rp-kicker" id="logos-heading">Trusted by teams like</p>
+        <div class="rp-logos justify-content-center">
+          <span class="rp-logo-pill">Harbor Labs</span>
+          <span class="rp-logo-pill">Poluru Health</span>
+          <span class="rp-logo-pill">Subra Finance</span>
+          <span class="rp-logo-pill">Meera Mobility</span>
+          <span class="rp-logo-pill">Kiran Ops</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="rp-section-head rp-reveal">
+          <p class="rp-kicker">Features</p>
+          <h2 id="features-heading">Hiring without the spreadsheet maze.</h2>
+          <p>Solid steel-blue brand, readable job cards, and ATS-style pipeline stats—no gradients, no stock-photo heroes required.</p>
+        </div>
+        <div class="rp-features">
+          <article class="rp-card rp-reveal">
+            <div class="rp-icon"><i class="bi bi-search"></i></div>
+            <h3>Smart job search</h3>
+            <p>Filter by department and keyword. Hero search scrolls to the live listing demo below.</p>
+          </article>
+          <article class="rp-card rp-reveal">
+            <div class="rp-icon"><i class="bi bi-funnel"></i></div>
+            <h3>Employer pipelines</h3>
+            <p>Stage counts, scorecards, and shared notes—sample funnel in the hero panel.</p>
+          </article>
+          <article class="rp-card rp-reveal">
+            <div class="rp-icon"><i class="bi bi-shield-check"></i></div>
+            <h3>Fair process</h3>
+            <p>Structured rubrics and DEI-friendly job templates described for layout credibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section rp-section-alt" id="jobs" aria-labelledby="jobs-heading">
+      <div class="container">
+        <div class="rp-section-head rp-reveal">
+          <p class="rp-kicker">Open roles</p>
+          <h2 id="jobs-heading">Featured jobs</h2>
+          <p>Save roles to bookmarks (localStorage) or tap Apply for a demo confirmation toast.</p>
+        </div>
+        <div class="rp-toolbar rp-reveal">
+          <label class="rp-search">
+            <i class="bi bi-search text-muted" aria-hidden="true"></i>
+            <input type="search" id="rpSearch" placeholder="Search jobs…" autocomplete="off" aria-label="Search jobs" />
+          </label>
+          <div class="rp-chips" role="group" aria-label="Filter by department">
+            <button type="button" class="rp-chip is-active" data-rp-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="rp-chip" data-rp-filter="engineering" aria-pressed="false">Engineering</button>
+            <button type="button" class="rp-chip" data-rp-filter="design" aria-pressed="false">Design</button>
+            <button type="button" class="rp-chip" data-rp-filter="sales" aria-pressed="false">Sales</button>
+            <button type="button" class="rp-chip" data-rp-filter="remote" aria-pressed="false">Remote</button>
+          </div>
+        </div>
+        <p class="rp-result" id="rpResult" aria-live="polite">6 roles</p>
+        <div class="rp-job-list rp-reveal">
+          <article class="rp-job" data-dept="design" data-search="senior product designer harbor labs remote figma">
+            <div class="rp-job-main">
+              <span class="rp-tag is-featured">Design</span>
+              <span class="rp-tag">Remote</span>
+              <h3>Senior Product Designer</h3>
+              <p class="rp-job-meta">Harbor Labs · Full-time · $140k–$165k · Poluru hiring manager</p>
+            </div>
+            <div class="rp-job-actions">
+              <button type="button" class="rp-btn rp-btn-ghost rp-btn-sm" data-rp-save="job-design-sr" aria-pressed="false"><i class="bi bi-bookmark"></i> Save</button>
+              <button type="button" class="rp-btn rp-btn-primary rp-btn-sm" data-rp-apply="Senior Product Designer">Apply</button>
+            </div>
+          </article>
+          <article class="rp-job" data-dept="engineering" data-search="backend engineer austin node postgres">
+            <div class="rp-job-main">
+              <span class="rp-tag">Engineering</span>
+              <h3>Backend Engineer</h3>
+              <p class="rp-job-meta">Subra Finance · Austin, TX · Full-time · Subra tech lead</p>
+            </div>
+            <div class="rp-job-actions">
+              <button type="button" class="rp-btn rp-btn-ghost rp-btn-sm" data-rp-save="job-be" aria-pressed="false"><i class="bi bi-bookmark"></i> Save</button>
+              <button type="button" class="rp-btn rp-btn-primary rp-btn-sm" data-rp-apply="Backend Engineer">Apply</button>
+            </div>
+          </article>
+          <article class="rp-job" data-dept="sales" data-search="account executive hybrid saas">
+            <div class="rp-job-main">
+              <span class="rp-tag">Sales</span>
+              <h3>Account Executive</h3>
+              <p class="rp-job-meta">Meera Mobility · Hybrid · OTE $190k · Enterprise</p>
+            </div>
+            <div class="rp-job-actions">
+              <button type="button" class="rp-btn rp-btn-ghost rp-btn-sm" data-rp-save="job-ae" aria-pressed="false"><i class="bi bi-bookmark"></i> Save</button>
+              <button type="button" class="rp-btn rp-btn-primary rp-btn-sm" data-rp-apply="Account Executive">Apply</button>
+            </div>
+          </article>
+          <article class="rp-job" data-dept="remote" data-search="devops engineer remote kubernetes terraform">
+            <div class="rp-job-main">
+              <span class="rp-tag">Remote</span>
+              <span class="rp-tag">Engineering</span>
+              <h3>DevOps Engineer</h3>
+              <p class="rp-job-meta">Kiran Ops · Remote · Full-time · Platform team</p>
+            </div>
+            <div class="rp-job-actions">
+              <button type="button" class="rp-btn rp-btn-ghost rp-btn-sm" data-rp-save="job-devops" aria-pressed="false"><i class="bi bi-bookmark"></i> Save</button>
+              <button type="button" class="rp-btn rp-btn-primary rp-btn-sm" data-rp-apply="DevOps Engineer">Apply</button>
+            </div>
+          </article>
+          <article class="rp-job" data-dept="design" data-search="ux researcher new york user interviews">
+            <div class="rp-job-main">
+              <span class="rp-tag">Design</span>
+              <h3>UX Researcher</h3>
+              <p class="rp-job-meta">Poluru Health · New York, NY · Full-time</p>
+            </div>
+            <div class="rp-job-actions">
+              <button type="button" class="rp-btn rp-btn-ghost rp-btn-sm" data-rp-save="job-uxr" aria-pressed="false"><i class="bi bi-bookmark"></i> Save</button>
+              <button type="button" class="rp-btn rp-btn-primary rp-btn-sm" data-rp-apply="UX Researcher">Apply</button>
+            </div>
+          </article>
+          <article class="rp-job" data-dept="remote" data-search="customer success lead remote harbor">
+            <div class="rp-job-main">
+              <span class="rp-tag">Remote</span>
+              <span class="rp-tag">Sales</span>
+              <h3>Customer Success Lead</h3>
+              <p class="rp-job-meta">Harbor SaaS · Remote · Full-time · Subbu people lead</p>
+            </div>
+            <div class="rp-job-actions">
+              <button type="button" class="rp-btn rp-btn-ghost rp-btn-sm" data-rp-save="job-cs" aria-pressed="false"><i class="bi bi-bookmark"></i> Save</button>
+              <button type="button" class="rp-btn rp-btn-primary rp-btn-sm" data-rp-apply="Customer Success Lead">Apply</button>
+            </div>
+          </article>
+        </div>
+        <p class="rp-empty mt-3 rounded-3 border border-dashed border-line bg-white p-4 text-center text-muted" id="rpEmpty" hidden>No roles match. Try another filter or search.</p>
+      </div>
+    </section>
+
+    <section class="rp-section" id="employers" aria-labelledby="employers-heading">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5 rp-reveal">
+            <p class="rp-kicker">For employers</p>
+            <h2 id="employers-heading">Post once, reach Harbor talent.</h2>
+            <p>Branded career pages, collaborative scorecards, and interview kits—this form triggers a demo toast only.</p>
+            <div class="rp-pipeline mt-4">
+              <div class="rp-pipeline-item">
+                <strong>3.2×</strong>
+                <span class="text-muted small">More qualified applicants (sample)</span>
+              </div>
+              <div class="rp-pipeline-item">
+                <strong>18d</strong>
+                <span class="text-muted small">Median time-to-fill</span>
+              </div>
+              <div class="rp-pipeline-item">
+                <strong>48</strong>
+                <span class="text-muted small">Active company accounts</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 rp-reveal">
+            <form class="rp-form rp-panel p-4" id="rpEmployerForm">
+              <label for="empCompany">Company name</label>
+              <input id="empCompany" name="company" type="text" required maxlength="80" placeholder="Harbor Labs" />
+              <label for="empEmail">Work email</label>
+              <input id="empEmail" name="email" type="email" required maxlength="120" />
+              <label for="empRoles">Roles hiring for</label>
+              <input id="empRoles" name="roles" type="text" required maxlength="120" placeholder="2 engineers, 1 designer" />
+              <button type="submit" class="rp-btn rp-btn-primary">Request employer demo</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section rp-section-alt" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="rp-section-head rp-reveal">
+          <p class="rp-kicker">Pricing</p>
+          <h2 id="pricing-heading">Plans for every stage</h2>
+        </div>
+        <div class="rp-plans">
+          <article class="rp-plan rp-reveal">
+            <h3>Starter</h3>
+            <p class="mb-0">One active job, basic pipeline.</p>
+            <p class="rp-plan-price">$99<span class="fs-6 text-muted">/mo</span></p>
+            <ul>
+              <li>Career page embed</li>
+              <li>Email apply forwarding</li>
+              <li>30-day history</li>
+            </ul>
+            <a class="rp-btn rp-btn-ghost w-100" href="#employers">Get started</a>
+          </article>
+          <article class="rp-plan is-featured rp-reveal">
+            <p class="rp-plan-label">Popular</p>
+            <h3>Growth</h3>
+            <p class="mb-0">Collaborative hiring for scaling teams.</p>
+            <p class="rp-plan-price">$249<span class="fs-6 text-muted">/mo</span></p>
+            <ul>
+              <li>10 active jobs</li>
+              <li>Scorecards &amp; kits</li>
+              <li>Slack &amp; calendar sync (copy)</li>
+            </ul>
+            <a class="rp-btn rp-btn-primary w-100" href="#employers">Start trial</a>
+          </article>
+          <article class="rp-plan rp-reveal">
+            <h3>Enterprise</h3>
+            <p class="mb-0">SSO, analytics, and dedicated support.</p>
+            <p class="rp-plan-price">Custom</p>
+            <ul>
+              <li>Unlimited jobs</li>
+              <li>Audit &amp; compliance exports</li>
+              <li>99.9% SLA</li>
+            </ul>
+            <a class="rp-btn rp-btn-ghost w-100" href="#contact">Contact sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="rp-section-head rp-reveal mx-auto text-center" style="max-width: 36rem">
+          <p class="rp-kicker">FAQ</p>
+          <h2 id="faq-heading">Candidates &amp; employers</h2>
+        </div>
+        <div class="rp-faq rp-reveal mx-auto" style="max-width: 40rem">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Are applications real?</button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">No. Apply and employer forms show demo toasts. Saved jobs use localStorage only.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">How does the Remote filter work?</button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Jobs tagged with data-dept <code>remote</code> appear when that chip is selected, in addition to their primary department.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Who created this template?</button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Subrahmanyam Poluru — portfolio at <a href="https://polurus.com">polurus.com</a>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rp-section rp-section-alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="rp-contact-grid">
+          <div class="rp-reveal">
+            <p class="rp-kicker">Contact</p>
+            <h2 id="contact-heading">Talk to our team</h2>
+            <p>hello@hireharbor.demo · (512) 555-0472 · fictional support contacts.</p>
+          </div>
+          <div class="rp-reveal">
+            <form class="rp-form rp-panel p-4" id="rpContactForm">
+              <label for="contactEmail">Email</label>
+              <input id="contactEmail" name="email" type="email" required maxlength="120" />
+              <label for="contactMsg">Message</label>
+              <textarea id="contactMsg" name="message" required maxlength="2000" placeholder="Hiring needs, partnerships, template feedback…"></textarea>
+              <button type="submit" class="rp-btn rp-btn-primary w-100">Send message (demo)</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rp-footer">
+    <div class="container">
+      <div class="rp-footer-grid">
+        <div class="rp-footer-brand">
+          <a class="rp-brand" href="#top">
+            <span class="rp-mark" aria-hidden="true"><i class="bi bi-person-badge"></i></span>
+            HireHarbor<em>.</em>
+          </a>
+          <p>Fictional recruitment platform for Harbor Companies. Job search demo, bookmarks, and ATS-style stats.</p>
+        </div>
+        <div>
+          <h2>Candidates</h2>
+          <div class="rp-footer-links">
+            <a href="#jobs">Browse jobs</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <h2>Employers</h2>
+          <div class="rp-footer-links">
+            <a href="#employers">Post jobs</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h2>Template author</h2>
+          <div class="rp-author">
+            <span class="rp-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="rp-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rp-legal">
+        <span>© <span id="year">2026</span> HireHarbor demo · Sample employers &amp; salaries</span>
+        <span>Free for personal &amp; commercial use · <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">polurus.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="rp-toast" id="rpToast" role="status" aria-live="polite" aria-atomic="true">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="rpToastTitle">Saved</strong>
+      <p id="rpToastBody">Demo notification.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
