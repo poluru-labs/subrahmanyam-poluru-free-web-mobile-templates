@@ -2,6 +2,11 @@
 
 A focused sales workspace with a searchable pipeline, deal tracking, and CSV exports.
 
+## Screenshot
+
+<img width="3360" height="3748" alt="crm-sales-dashboard" src="https://github.com/user-attachments/assets/e22f9706-c531-47d0-9d0a-eb99d2409fba" />
+
+
 ## Run
 
 Open `index.html` directly, or from the parent directory run:
