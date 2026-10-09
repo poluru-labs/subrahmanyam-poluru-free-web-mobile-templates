@@ -1,2 +1,386 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Poluru Plate — A good week starts with good food</title><meta name="description" content="A little planning. A lot more delicious."><meta name="theme-color" content="#298156"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="dashboard" data-template="meal-planner-dashboard" style="--brand:#298156;--soft:#eaf4eb;"><a class="skip-link" href="#main">Skip to content</a><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">P</span>Poluru Plate</a><p class="nav-label">YOUR WORKSPACE</p><nav><a href="#overview"><span aria-hidden="true">◫</span>Overview</a><a href="#activity"><span aria-hidden="true">≋</span>Activity</a></nav><div class="side-bottom"><span class="profile">S</span><div><strong>Subra Poluru</strong><br><span class="small">Personal workspace</span></div></div></aside><div class="workspace"><header class="topbar"><span>Workspace <span style="color:#a0a8af">/ Overview</span></span><div><span class="small">Monday, September 14</span><span class="profile">SP</span></div></header><main id="main"><div class="dash-heading"><div><p class="eyebrow">A FRESH START, EVERY WEEK.</p><h1>A good week starts with good food</h1><p>A little planning. A lot more delicious.</p></div><button class="secondary" data-action="export" >Export report ↗</button></div><div class="stats"><article class="stat"><span class="small">Meals planned</span><div class="metric">6 / 7</div><span class="trend">One less thing to think about</span></article><article class="stat"><span class="small">Weekly grocery budget</span><div class="metric">$85</div><span class="trend">Good food, thoughtfully planned</span></article><article class="stat"><span class="small">Recipes saved</span><div class="metric">24</div><span class="trend">Your personal little cookbook</span></article><article class="stat"><span class="small">Time saved</span><div class="metric">3.5 hrs</div><span class="trend">More time around the table</span></article></div><div class="two-col"><section id="overview"><div class="panel-head"><h3>A delicious week ahead</h3><span class="badge">Sep 14–20</span></div><div class="week"><article class="day"><h3>Monday</h3><img class="" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Garden harvest bowl" loading="lazy" width="1200" height="800"><div><p class="eyebrow">DINNER · 20 MIN</p><h4>Garden harvest bowl</h4><button class="text-button" data-action="swap" >Swap meal</button></div></article><article class="day"><h3>Tuesday</h3><img class="" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sunday-style pasta" loading="lazy" width="1200" height="800"><div><p class="eyebrow">DINNER · 30 MIN</p><h4>Sunday-style pasta</h4><button class="text-button" data-action="swap" >Swap meal</button></div></article><article class="day"><h3>Wednesday</h3><img class="" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The everyday nourish bowl" loading="lazy" width="1200" height="800"><div><p class="eyebrow">DINNER · 25 MIN</p><h4>The everyday nourish bowl</h4><button class="text-button" data-action="swap" >Swap meal</button></div></article><article class="day"><h3>Thursday</h3><img class="" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Homemade margherita" loading="lazy" width="1200" height="800"><div><p class="eyebrow">DINNER · 35 MIN</p><h4>Homemade margherita</h4><button class="text-button" data-action="swap" >Swap meal</button></div></article><article class="day"><h3>Friday</h3><img class="" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Fresh greens &amp; grains" loading="lazy" width="1200" height="800"><div><p class="eyebrow">DINNER · 20 MIN</p><h4>Fresh greens & grains</h4><button class="text-button" data-action="swap" >Swap meal</button></div></article><article class="day"><h3>Saturday</h3><img class="" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The weekend burger" loading="lazy" width="1200" height="800"><div><p class="eyebrow">DINNER · 30 MIN</p><h4>The weekend burger</h4><button class="text-button" data-action="swap" >Swap meal</button></div></article></div></section><section class="panel" id="activity"><div class="panel-head"><div><h3>Your shopping list</h3><p></p></div></div><p class="small">A few essentials for the week.</p><label class="row"><input type="checkbox" data-grocery="0"><span>Fresh greens</span></label><label class="row"><input type="checkbox" data-grocery="1"><span>Cherry tomatoes</span></label><label class="row"><input type="checkbox" data-grocery="2"><span>Whole grain pasta</span></label><label class="row"><input type="checkbox" data-grocery="3"><span>Chickpeas</span></label><label class="row"><input type="checkbox" data-grocery="4"><span>Mozzarella</span></label><label class="row"><input type="checkbox" data-grocery="5"><span>Avocados</span></label><label class="row"><input type="checkbox" data-grocery="6"><span>Sourdough bread</span></label><p class="small" style="margin-top:20px">Checks are saved in this browser.</p></section></div></main><footer class="site-footer"><span class="brand">Poluru Plate<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  MealHarbor — Meal planner dashboard
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MealHarbor — Plan meals, shop once, eat well</title>
+  <meta name="description" content="MealHarbor is a fictional meal planner for Harbor Households: weekly dinners, grocery list, and swap demos. By Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#FF0000" />
+  <link rel="canonical" href="https://polurus.com/templates/meal-planner-dashboard/" />
+  <meta property="og:title" content="MealHarbor — Plan meals, shop once, eat well" />
+  <meta property="og:description" content="Clean meal planner landing page with weekly grid, grocery checks, and swap demo." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #ff0000;
+      --color-brand-dark: #cc0000;
+      --color-brand-soft: #fff5f5;
+      --color-ink: #1a1212;
+      --color-muted: #6b5858;
+      --color-line: #ecd8d8;
+      --color-canvas: #fcfaf9;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="mp-body bg-canvas text-ink antialiased" id="top">
+  <a class="mp-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-brand text-white text-sm">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-white mr-2 align-middle" aria-hidden="true"></span>Week of Oct 7 · 6 dinners planned · Harbor Households</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-white hover:opacity-90" href="tel:+15125550495"><i class="bi bi-telephone"></i> (512) 555-0495</a>
+        <span class="hidden sm:inline opacity-90">Demo planner · no nutrition API</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="mpHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white" aria-hidden="true"><i class="bi bi-egg-fried"></i></span>
+        MealHarbor<em class="not-italic text-brand">.</em>
+      </a>
+      <button class="font-ui ml-auto inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="mpNavToggle" aria-expanded="false" aria-controls="mpNavPanel" aria-label="Open menu">
+        <i class="bi bi-list text-lg"></i>
+      </button>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex" aria-label="Primary">
+        <a class="hover:text-ink" href="#planner">Planner</a>
+        <a class="hover:text-ink" href="#features">Features</a>
+        <a class="hover:text-ink" href="#grocery">Grocery</a>
+        <a class="hover:text-ink" href="#pricing">Pricing</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-white hover:bg-brand-dark md:inline-flex" href="#signup">Start free</a>
+    </div>
+    <div class="mp-nav-open border-t border-line bg-canvas md:hidden" id="mpNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#planner">Planner</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#features">Features</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#grocery">Grocery</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#pricing">Pricing</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-white" href="#signup">Start free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-canvas px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="mp-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Harbor Households</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-tight md:text-5xl">A good week starts with good food.</h1>
+          <p class="mt-4 max-w-lg text-muted">Poluru, Subra, and Subbu plan dinners, auto-build a grocery list, and swap meals when life shifts—this demo saves checks in your browser and lets you swap recipes with one tap.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="font-ui inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-black text-white hover:bg-brand-dark" href="#planner"><i class="bi bi-calendar-week"></i> Open weekly plan</a>
+            <a class="font-ui inline-flex items-center gap-2 rounded-xl border border-line bg-white px-5 py-3 text-sm font-black text-ink hover:bg-brand-soft" href="#grocery">Grocery list</a>
+          </div>
+          <ul class="mt-8 flex flex-wrap gap-6 border-t border-line pt-6 text-sm">
+            <li><strong class="font-display block text-2xl text-ink">6/7</strong><span class="font-ui font-bold text-muted">Meals planned</span></li>
+            <li><strong class="font-display block text-2xl text-ink">$85</strong><span class="font-ui font-bold text-muted">Sample budget</span></li>
+            <li><strong class="font-display block text-2xl text-ink">3.5h</strong><span class="font-ui font-bold text-muted">Time saved / wk</span></li>
+          </ul>
+        </div>
+        <div class="mp-reveal rounded-2xl border border-line bg-white p-5 shadow-sm">
+          <p class="font-ui text-xs font-black uppercase text-muted">Tonight</p>
+          <p class="font-display mt-2 text-2xl font-black">Garden harvest bowl</p>
+          <p class="text-sm text-muted">20 min · vegetarian · Poluru family favorite</p>
+          <p class="mt-4 text-sm text-muted">Swap any day in the planner to see alternate meals and images update instantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="features" aria-labelledby="features-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="mp-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Features</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="features-heading">Planning that stays simple.</h2>
+          <p class="mt-3 text-muted">Bold red accent, white panels, and readable type—no gradients or cluttered macro rings.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="mp-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand"><i class="bi bi-calendar3"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Weekly board</h3>
+            <p class="mt-2 text-sm text-muted">Scan Mon–Sat dinners at a glance with cook times and quick swap actions.</p>
+          </article>
+          <article class="mp-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand"><i class="bi bi-cart3"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Smart grocery list</h3>
+            <p class="mt-2 text-sm text-muted">Check off items as you shop; progress persists locally in this template.</p>
+          </article>
+          <article class="mp-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand"><i class="bi bi-heart"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Household prefs</h3>
+            <p class="mt-2 text-sm text-muted">Allergies, servings, and leftover nights—sample copy for a full product story.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-white px-5 py-16" id="planner" aria-labelledby="planner-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="mp-reveal flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Live demo</p>
+            <h2 class="font-display mt-2 text-3xl font-black" id="planner-heading">A delicious week ahead</h2>
+            <p class="mt-2 text-muted max-w-xl">Oct 7–12 · Tap <strong>Swap meal</strong> to toggle an alternate dish and photo.</p>
+          </div>
+          <span class="font-ui rounded-full border border-line bg-brand-soft px-4 py-1.5 text-xs font-black text-brand">Sep 14–20 style week</span>
+        </div>
+        <div class="mp-week mp-reveal mt-8">
+          <article class="mp-day">
+            <div class="mp-day-head">Monday</div>
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=640&q=80" alt="Garden harvest bowl" width="640" height="480" loading="lazy" />
+            <div class="mp-day-body">
+              <p class="font-ui text-xs font-black uppercase text-brand">Dinner · 20 min</p>
+              <h3 class="font-display mt-1 text-lg font-black" data-mp-title>Garden harvest bowl</h3>
+              <button type="button" class="font-ui mt-3 text-sm font-bold text-brand hover:text-brand-dark" data-mp-swap data-mp-alt-title="Roasted veggie &amp; chickpea bowl" data-mp-alt-img="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=640&q=80">Swap meal</button>
+            </div>
+          </article>
+          <article class="mp-day">
+            <div class="mp-day-head">Tuesday</div>
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=640&q=80" alt="Sunday-style pasta" width="640" height="480" loading="lazy" />
+            <div class="mp-day-body">
+              <p class="font-ui text-xs font-black uppercase text-brand">Dinner · 30 min</p>
+              <h3 class="font-display mt-1 text-lg font-black" data-mp-title>Sunday-style pasta</h3>
+              <button type="button" class="font-ui mt-3 text-sm font-bold text-brand hover:text-brand-dark" data-mp-swap data-mp-alt-title="Creamy tomato rigatoni" data-mp-alt-img="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=640&q=80">Swap meal</button>
+            </div>
+          </article>
+          <article class="mp-day">
+            <div class="mp-day-head">Wednesday</div>
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=640&q=80" alt="Everyday nourish bowl" width="640" height="480" loading="lazy" />
+            <div class="mp-day-body">
+              <p class="font-ui text-xs font-black uppercase text-brand">Dinner · 25 min</p>
+              <h3 class="font-display mt-1 text-lg font-black" data-mp-title>Everyday nourish bowl</h3>
+              <button type="button" class="font-ui mt-3 text-sm font-bold text-brand hover:text-brand-dark" data-mp-swap data-mp-alt-title="Miso ginger salmon bowl" data-mp-alt-img="https://images.unsplash.com/photo-1519708227418-c8fd9a32b8a2?w=640&q=80">Swap meal</button>
+            </div>
+          </article>
+          <article class="mp-day">
+            <div class="mp-day-head">Thursday</div>
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=640&q=80" alt="Homemade margherita" width="640" height="480" loading="lazy" />
+            <div class="mp-day-body">
+              <p class="font-ui text-xs font-black uppercase text-brand">Dinner · 35 min</p>
+              <h3 class="font-display mt-1 text-lg font-black" data-mp-title>Homemade margherita</h3>
+              <button type="button" class="font-ui mt-3 text-sm font-bold text-brand hover:text-brand-dark" data-mp-swap data-mp-alt-title="Flatbread veggie pizza" data-mp-alt-img="https://images.unsplash.com/photo-1574071318508-1cdbab80b002?w=640&q=80">Swap meal</button>
+            </div>
+          </article>
+          <article class="mp-day">
+            <div class="mp-day-head">Friday</div>
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=640&q=80" alt="Fresh greens and grains" width="640" height="480" loading="lazy" />
+            <div class="mp-day-body">
+              <p class="font-ui text-xs font-black uppercase text-brand">Dinner · 20 min</p>
+              <h3 class="font-display mt-1 text-lg font-black" data-mp-title>Fresh greens &amp; grains</h3>
+              <button type="button" class="font-ui mt-3 text-sm font-bold text-brand hover:text-brand-dark" data-mp-swap data-mp-alt-title="Lemon herb chicken salad" data-mp-alt-img="https://images.unsplash.com/photo-1607534709817-4620d3752a8d?w=640&q=80">Swap meal</button>
+            </div>
+          </article>
+          <article class="mp-day">
+            <div class="mp-day-head">Saturday</div>
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=640&q=80" alt="Weekend burger" width="640" height="480" loading="lazy" />
+            <div class="mp-day-body">
+              <p class="font-ui text-xs font-black uppercase text-brand">Dinner · 30 min</p>
+              <h3 class="font-display mt-1 text-lg font-black" data-mp-title>Weekend burger</h3>
+              <button type="button" class="font-ui mt-3 text-sm font-bold text-brand hover:text-brand-dark" data-mp-swap data-mp-alt-title="Grilled portobello stack" data-mp-alt-img="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=640&q=80">Swap meal</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16 bg-canvas" id="grocery" aria-labelledby="grocery-heading">
+      <div class="mx-auto max-w-6xl grid gap-8 lg:grid-cols-2">
+        <div class="mp-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Grocery</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="grocery-heading">Your shopping list</h2>
+          <p class="mt-3 text-muted">Checks save in localStorage. Count updates as you shop.</p>
+          <p class="font-ui mt-4 text-sm font-bold text-brand" id="mpGroceryCount" aria-live="polite">0 / 7 picked up</p>
+        </div>
+        <div class="mp-grocery mp-reveal">
+          <label><input type="checkbox" data-mp-grocery="greens" /><span>Fresh greens</span></label>
+          <label><input type="checkbox" data-mp-grocery="tomatoes" /><span>Cherry tomatoes</span></label>
+          <label><input type="checkbox" data-mp-grocery="pasta" /><span>Whole grain pasta</span></label>
+          <label><input type="checkbox" data-mp-grocery="chickpeas" /><span>Chickpeas</span></label>
+          <label><input type="checkbox" data-mp-grocery="mozzarella" /><span>Mozzarella</span></label>
+          <label><input type="checkbox" data-mp-grocery="avocado" /><span>Avocados</span></label>
+          <label><input type="checkbox" data-mp-grocery="bread" /><span>Sourdough bread</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="pricing" aria-labelledby="pricing-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="mp-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Pricing</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="pricing-heading">Feed the whole household</h2>
+        </div>
+        <div class="mp-plan-grid mp-reveal mt-10">
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display font-black">Free</h3>
+            <p class="font-display mt-3 text-3xl font-black">$0</p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-brand"></i> 1 weekly plan</li>
+              <li><i class="bi bi-check2 text-brand"></i> Grocery list</li>
+              <li><i class="bi bi-check2 text-brand"></i> 12 recipes</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border-2 border-brand bg-white p-6 shadow-sm">
+            <p class="font-ui text-xs font-black uppercase text-brand">Popular</p>
+            <h3 class="font-display font-black">Family</h3>
+            <p class="font-display mt-3 text-3xl font-black">$9<span class="text-base font-bold text-muted">/mo</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-brand"></i> Unlimited plans</li>
+              <li><i class="bi bi-check2 text-brand"></i> Swap &amp; leftovers</li>
+              <li><i class="bi bi-check2 text-brand"></i> 4 profiles</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display font-black">Chef</h3>
+            <p class="font-display mt-3 text-3xl font-black">$19<span class="text-base font-bold text-muted">/mo</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-brand"></i> Nutrition targets</li>
+              <li><i class="bi bi-check2 text-brand"></i> Instacart handoff (copy)</li>
+              <li><i class="bi bi-check2 text-brand"></i> Shared cook mode</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-canvas px-5 py-16" id="signup" aria-labelledby="signup-heading">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+        <div class="mp-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Get started</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="signup-heading">Plan your first week</h2>
+          <p class="mt-3 text-muted">Demo signup only.</p>
+        </div>
+        <form class="mp-reveal grid gap-3 rounded-2xl border border-line bg-white p-6" id="mpSignupForm">
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Email
+            <input class="rounded-xl border border-line px-3 py-2.5" type="email" name="email" required maxlength="120" />
+          </label>
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Household name
+            <input class="rounded-xl border border-line px-3 py-2.5" type="text" name="household" required maxlength="80" placeholder="Poluru Kitchen" />
+          </label>
+          <button class="font-ui rounded-xl bg-brand px-4 py-3 text-sm font-black text-white hover:bg-brand-dark" type="submit">Start free (demo)</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="faq" aria-labelledby="faq-heading">
+      <div class="mx-auto max-w-3xl">
+        <div class="mp-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="faq-heading">Meal planning basics</h2>
+        </div>
+        <div class="mp-reveal mt-8 space-y-3">
+          <details class="rounded-xl border border-line bg-white p-4" open>
+            <summary class="font-ui cursor-pointer font-black text-ink">Does MealHarbor calculate calories?</summary>
+            <p class="mt-3 text-sm text-muted">Not in this template. Nutrition is mentioned on paid tiers as sample product copy only.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-ui cursor-pointer font-black text-ink">Where is my grocery list stored?</summary>
+            <p class="mt-3 text-sm text-muted">Checkbox state is saved per item in localStorage in your browser.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-ui cursor-pointer font-black text-ink">Who built this template?</summary>
+            <p class="mt-3 text-sm text-muted">Subrahmanyam Poluru — <a href="https://polurus.com" class="font-bold text-brand hover:text-brand-dark">polurus.com</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-white px-5 py-16" id="contact" aria-labelledby="contact-heading">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+        <div class="mp-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Contact</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="contact-heading">Questions?</h2>
+          <p class="mt-3 text-muted">hello@mealharbor.demo · (512) 555-0495</p>
+        </div>
+        <form class="mp-reveal grid gap-3 rounded-2xl border border-line bg-canvas p-6" id="mpContactForm">
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Email
+            <input class="rounded-xl border border-line bg-white px-3 py-2.5" type="email" name="email" required maxlength="120" />
+          </label>
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Message
+            <textarea class="min-h-28 rounded-xl border border-line bg-white px-3 py-2.5" name="message" required maxlength="2000"></textarea>
+          </label>
+          <button class="font-ui rounded-xl bg-brand px-4 py-3 text-sm font-black text-white hover:bg-brand-dark" type="submit">Send message (demo)</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/75">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-white" aria-hidden="true"><i class="bi bi-egg-fried"></i></span>
+          MealHarbor.
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Meal planner dashboard template with weekly grid, swap demo, and grocery checks. Fictional Harbor Households app.</p>
+      </div>
+      <nav aria-label="Product">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Product</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#planner">Weekly plan</a></li>
+          <li><a class="hover:text-brand-soft" href="#grocery">Grocery</a></li>
+          <li><a class="hover:text-brand-soft" href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Support</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand-soft" href="#signup">Sign up</a></li>
+          <li><a class="hover:text-brand-soft" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#2a1818] p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft font-black text-brand" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand-soft hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> MealHarbor. Fictional sample. Not dietary advice.</span>
+      <span>Built by <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="mp-toast" id="mpToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="mpToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="mpToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
