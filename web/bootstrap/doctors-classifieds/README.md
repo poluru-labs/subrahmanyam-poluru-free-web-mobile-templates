@@ -4,7 +4,8 @@ A modern, multi-page **doctors classifieds marketplace** template for physicians
 
 ## Run
 
-![Uploading doctors-classifieds.png…]()
+<img width="3360" height="7846" alt="doctors-classifieds" src="https://github.com/user-attachments/assets/e344ca2a-a332-47b7-aa39-b5ffed1ae8e3" />
+
 
 
 ## Brand
