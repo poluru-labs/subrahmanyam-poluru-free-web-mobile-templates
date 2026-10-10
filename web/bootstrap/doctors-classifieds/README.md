@@ -2,6 +2,11 @@
 
 A modern, multi-page **doctors classifieds marketplace** template for physicians, clinics, hospitals, recruiters, and medical suppliers. Built with **Bootstrap 5**, **Bootstrap Icons**, **Vite**, and **`@poluru-labs/enterprise-design-system-wc`**.
 
+## Run
+
+![Uploading doctors-classifieds.png…]()
+
+
 ## Brand
 
 | Token | Value | Use |
