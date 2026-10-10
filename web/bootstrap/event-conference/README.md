@@ -2,6 +2,11 @@
 
 An energetic conference website with a personal agenda, speaker profiles, and demo passes.
 
+## Screenshot
+
+<img width="3360" height="7932" alt="event-conference" src="https://github.com/user-attachments/assets/e4e53312-e8dc-4651-8c5f-c2ef210c9ae5" />
+
+
 ## Run
 
 Open `index.html` directly, or from the parent directory run:
