@@ -2,6 +2,11 @@
 
 A dark portfolio dashboard with period charts, a saved watchlist, and a transaction journal.
 
+## Screenshot
+
+<img width="3360" height="3624" alt="crypto-portfolio-dashboard" src="https://github.com/user-attachments/assets/6a3fae91-696b-44f9-984a-b1a42302f6f9" />
+
+
 ## Run
 
 Open `index.html` directly, or from the parent directory run:
