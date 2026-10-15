@@ -1,2 +1,436 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subbu Sounds — Your day. Your soundtrack.</title><meta name="description" content="New discoveries and familiar favorites, all in your own rhythm."><meta name="theme-color" content="#d7abf4"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="music" data-template="music-streaming-ui" style="--brand:#d7abf4;--soft:#32233e;--on:#192018;"><a class="skip-link" href="#main">Skip to content</a><div class="container"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">S</span>Subbu Sounds</a><nav aria-label="Main navigation"><a href="#collection">Discover</a><a href="#about">Our story</a><a href="#collection">Your mixes</a></nav><button class="primary" data-action="modal" data-title="Hello from Subbu Sounds" data-kind="Send inquiry">Say hello</button></header><main id="main"><section class="hero"><div class="hero-copy"><p class="eyebrow">FIND YOUR FREQUENCY.</p><h1>Your day.<br>Your soundtrack.</h1><p>New discoveries and familiar favorites, all in your own rhythm.</p><div class="hero-actions"><a class="primary" href="#collection">Find your rhythm <span aria-hidden="true">↗</span></a><a class="text-button" href="#about">Meet the artists →</a></div><div class="proof"><div class="avatars"><span>P</span><span>S</span><span>S</span></div><div><span class="stars">★★★★★</span><br>Loved by Poluru, Subra &amp; Subbu</div></div></div><div class="hero-media"><img class="" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Your day. Your soundtrack." loading="lazy" width="1200" height="800"><div class="hero-note"><span class="eyebrow">A LITTLE MORE EVERYDAY</span><strong>Find your kind of extraordinary</strong>Thoughtfully chosen. Ready for you.</div></div></section><section id="collection" class="section"><div class="section-head"><div><p class="eyebrow">MADE FOR YOUR EVERYDAY</p><h2>Made for this moment</h2></div><p>Soundtracks for wherever the day takes you.</p></div><div class="filters"><button class="filter active" data-filter="All" aria-pressed="true">All</button><button class="filter " data-filter="Chill" aria-pressed="false">Chill</button><button class="filter " data-filter="Focus" aria-pressed="false">Focus</button><button class="filter " data-filter="Energy" aria-pressed="false">Energy</button><input class="search" type="search" placeholder="Search this collection…" aria-label="Search this collection"></div><div class="grid collection"><article class="product-card" data-search="Golden hour Poluru · 12 tracks Chill" data-category="Chill"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Golden hour" loading="lazy" width="1200" height="800"><span class="image-tag">Chill</span><button class="favorite" aria-label="Save Golden hour" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Poluru · 12 tracks</p><h3>Golden hour</h3><div class="card-bottom"><strong>32 min</strong><button class="text-button" data-action="modal" data-title="Golden hour" data-kind="Play mix">Play mix</button></div></div></article><article class="product-card" data-search="Somewhere after midnight Subra · 18 tracks Focus" data-category="Focus"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Somewhere after midnight" loading="lazy" width="1200" height="800"><span class="image-tag">Focus</span><button class="favorite" aria-label="Save Somewhere after midnight" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Subra · 18 tracks</p><h3>Somewhere after midnight</h3><div class="card-bottom"><strong>48 min</strong><button class="text-button" data-action="modal" data-title="Somewhere after midnight" data-kind="Play mix">Play mix</button></div></div></article><article class="product-card" data-search="A little more alive Subbu · 15 tracks Energy" data-category="Energy"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="A little more alive" loading="lazy" width="1200" height="800"><span class="image-tag">Energy</span><button class="favorite" aria-label="Save A little more alive" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Subbu · 15 tracks</p><h3>A little more alive</h3><div class="card-bottom"><strong>42 min</strong><button class="text-button" data-action="modal" data-title="A little more alive" data-kind="Play mix">Play mix</button></div></div></article><p class="empty" hidden>No mixes match your search.</p></div></section><section id="about" class="feature-grid"><div><b>01 /</b><h3>Poluru</h3><p>Warm textures and slow Sunday mornings.</p></div><div><b>02 /</b><h3>Subra</h3><p>Late-night ideas and a little room to focus.</p></div><div><b>03 /</b><h3>Subbu</h3><p>Fresh energy for the everyday journey.</p></div></section><div class="player"><div><p id="track-name">Golden hour</p><small>Poluru · Synthesized ambient demo</small></div><button class="primary" data-action="play" aria-label="Play or pause demo audio">▶ Play</button><span class="small">An original ambient preview · volume low</span></div></main><footer class="site-footer"><span class="brand">Subbu Sounds<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  WaveHarbor — Music streaming UI
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WaveHarbor — Your day, your soundtrack</title>
+  <meta name="description" content="WaveHarbor is a fictional music app for Harbor listeners: mixes, moods, and a demo player. By Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#FFCED8" />
+  <link rel="canonical" href="https://polurus.com/templates/music-streaming-ui/" />
+  <meta property="og:title" content="WaveHarbor — Your day, your soundtrack" />
+  <meta property="og:description" content="Clean music streaming landing page with mood filters and demo audio." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #ffced8;
+      --color-brand-dark: #f5b8c8;
+      --color-brand-soft: #fff5f7;
+      --color-ink: #1a1418;
+      --color-muted: #6b5a62;
+      --color-line: #ecdce2;
+      --color-canvas: #fcfafb;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body class="ms-body bg-canvas text-ink antialiased" id="top">
+  <a class="ms-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-brand text-ink text-sm border-b border-line">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-ink/30 mr-2 align-middle" aria-hidden="true"></span>New mixes from Poluru, Subra &amp; Subbu · ad-free demo</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-ink hover:opacity-80" href="tel:+15125550505"><i class="bi bi-telephone"></i> (512) 555-0505</a>
+        <span class="hidden sm:inline text-muted">Harbor Audio · sample catalog</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="msHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-ink" aria-hidden="true"><i class="bi bi-music-note-beamed"></i></span>
+        WaveHarbor<em class="not-italic text-muted">.</em>
+      </a>
+      <button class="font-ui ml-auto inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="msNavToggle" aria-expanded="false" aria-controls="msNavPanel" aria-label="Open menu">
+        <i class="bi bi-list text-lg"></i>
+      </button>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex" aria-label="Primary">
+        <a class="hover:text-ink" href="#discover">Discover</a>
+        <a class="hover:text-ink" href="#features">Features</a>
+        <a class="hover:text-ink" href="#artists">Artists</a>
+        <a class="hover:text-ink" href="#pricing">Pricing</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-ink hover:bg-brand-dark md:inline-flex" href="#signup">Listen free</a>
+    </div>
+    <div class="ms-nav-open border-t border-line bg-canvas md:hidden" id="msNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#discover">Discover</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#features">Features</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#artists">Artists</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#pricing">Pricing</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-ink" href="#signup">Listen free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-brand-soft px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="ms-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">Harbor Audio</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-tight md:text-5xl">Your day. Your soundtrack.</h1>
+          <p class="mt-4 max-w-lg text-muted">Discover chill, focus, and energy mixes curated by fictional Harbor artists. Filter the catalog, save favorites, and preview a quiet ambient demo from the player bar—no streaming backend attached.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="font-ui inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-black text-ink hover:bg-brand-dark" href="#discover"><i class="bi bi-play-circle"></i> Browse mixes</a>
+            <a class="font-ui inline-flex items-center gap-2 rounded-xl border border-line bg-white px-5 py-3 text-sm font-black text-ink hover:bg-brand" href="#artists">Meet artists</a>
+          </div>
+          <ul class="mt-8 flex flex-wrap gap-6 border-t border-line pt-6 text-sm">
+            <li><strong class="font-display block text-2xl text-ink">80M+</strong><span class="font-ui font-bold text-muted">Tracks (story)</span></li>
+            <li><strong class="font-display block text-2xl text-ink">Lossless</strong><span class="font-ui font-bold text-muted">On Premium tier</span></li>
+            <li><strong class="font-display block text-2xl text-ink">0</strong><span class="font-ui font-bold text-muted">Ads on Free (demo)</span></li>
+          </ul>
+        </div>
+        <div class="ms-reveal overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
+          <img class="h-72 w-full object-cover md:h-80" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=900&q=80" alt="" width="900" height="600" loading="eager" />
+          <div class="border-t border-line p-4">
+            <p class="font-ui text-xs font-black uppercase text-muted">Featured mix</p>
+            <p class="font-display mt-1 text-lg font-black">Golden hour</p>
+            <p class="text-sm text-muted">Poluru · 12 tracks · Chill</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="features" aria-labelledby="features-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="ms-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">Features</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="features-heading">Sound designed for calm UI.</h2>
+          <p class="mt-3 text-muted">Soft blush brand panels, dark ink type, and solid buttons—no gradients or neon glow effects.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand text-ink"><i class="bi bi-shuffle"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Smart shuffle</h3>
+            <p class="mt-2 text-sm text-muted">Mood-aware ordering described for product copy; demo uses fixed preview tones.</p>
+          </article>
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand text-ink"><i class="bi bi-download"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Offline mode</h3>
+            <p class="mt-2 text-sm text-muted">Download mixes for flights and commutes—Premium feature in this fictional tier list.</p>
+          </article>
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand text-ink"><i class="bi bi-broadcast"></i></span>
+            <h3 class="font-display mt-4 text-lg font-black">Cross-device</h3>
+            <p class="mt-2 text-sm text-muted">Handoff from phone to speaker without losing your place—layout story only here.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-white px-5 py-16" id="discover" aria-labelledby="discover-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="ms-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">Discover</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="discover-heading">Made for this moment</h2>
+          <p class="mt-3 text-muted">Filter by mood, search titles, save hearts, and play a demo preview.</p>
+        </div>
+        <div class="ms-reveal mt-8 flex flex-wrap items-center gap-3">
+          <label class="flex min-w-[min(100%,18rem)] flex-1 items-center gap-2 rounded-xl border border-line bg-canvas px-3">
+            <i class="bi bi-search text-muted" aria-hidden="true"></i>
+            <input class="min-h-11 w-full border-0 bg-transparent outline-none" type="search" id="msSearch" placeholder="Search mixes…" aria-label="Search mixes" />
+          </label>
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by mood">
+            <button type="button" class="font-ui rounded-full border border-brand bg-brand px-4 py-2 text-xs font-black text-ink" data-ms-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black text-muted" data-ms-filter="chill" aria-pressed="false">Chill</button>
+            <button type="button" class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black text-muted" data-ms-filter="focus" aria-pressed="false">Focus</button>
+            <button type="button" class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black text-muted" data-ms-filter="energy" aria-pressed="false">Energy</button>
+            <button type="button" class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black text-muted" data-ms-filter="podcast" aria-pressed="false">Podcasts</button>
+          </div>
+        </div>
+        <p class="font-ui mt-4 text-xs font-bold text-muted" id="msResult" aria-live="polite">6 mixes</p>
+        <div class="ms-mix-grid ms-reveal mt-3">
+          <article class="ms-mix overflow-hidden rounded-2xl border border-line bg-white shadow-sm" data-mood="chill" data-search="golden hour poluru chill ambient">
+            <div class="relative">
+              <img class="ms-mix-img" src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-md bg-white/95 px-2 py-0.5 text-xs font-black uppercase text-muted">Chill</span>
+              <button type="button" class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" data-ms-fav="golden-hour" aria-label="Save Golden hour" aria-pressed="false"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Poluru · 12 tracks · 32 min</p>
+              <h3 class="font-display mt-1 text-lg font-black">Golden hour</h3>
+              <button type="button" class="font-ui mt-3 rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-ink hover:bg-brand-dark" data-ms-play="Golden hour" data-ms-meta="Poluru · Synthesized ambient demo">Play mix</button>
+            </div>
+          </article>
+          <article class="ms-mix overflow-hidden rounded-2xl border border-line bg-white shadow-sm" data-mood="focus" data-search="somewhere after midnight subra focus">
+            <div class="relative">
+              <img class="ms-mix-img" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-md bg-white/95 px-2 py-0.5 text-xs font-black uppercase text-muted">Focus</span>
+              <button type="button" class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" data-ms-fav="after-midnight" aria-pressed="false" aria-label="Save Somewhere after midnight"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Subra · 18 tracks · 48 min</p>
+              <h3 class="font-display mt-1 text-lg font-black">Somewhere after midnight</h3>
+              <button type="button" class="font-ui mt-3 rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-ink hover:bg-brand-dark" data-ms-play="Somewhere after midnight" data-ms-meta="Subra · Deep work demo">Play mix</button>
+            </div>
+          </article>
+          <article class="ms-mix overflow-hidden rounded-2xl border border-line bg-white shadow-sm" data-mood="energy" data-search="alive subbu energy run">
+            <div class="relative">
+              <img class="ms-mix-img" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-md bg-white/95 px-2 py-0.5 text-xs font-black uppercase text-muted">Energy</span>
+              <button type="button" class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" data-ms-fav="alive" aria-pressed="false" aria-label="Save A little more alive"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Subbu · 15 tracks · 42 min</p>
+              <h3 class="font-display mt-1 text-lg font-black">A little more alive</h3>
+              <button type="button" class="font-ui mt-3 rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-ink hover:bg-brand-dark" data-ms-play="A little more alive" data-ms-meta="Subbu · Movement demo">Play mix</button>
+            </div>
+          </article>
+          <article class="ms-mix overflow-hidden rounded-2xl border border-line bg-white shadow-sm" data-mood="chill" data-search="harbor rain meera lo-fi">
+            <div class="relative">
+              <img class="ms-mix-img" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-md bg-white/95 px-2 py-0.5 text-xs font-black uppercase text-muted">Chill</span>
+              <button type="button" class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" data-ms-fav="harbor-rain" aria-pressed="false" aria-label="Save Harbor rain"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Meera · 10 tracks · 28 min</p>
+              <h3 class="font-display mt-1 text-lg font-black">Harbor rain</h3>
+              <button type="button" class="font-ui mt-3 rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-ink hover:bg-brand-dark" data-ms-play="Harbor rain" data-ms-meta="Meera · Lo-fi demo">Play mix</button>
+            </div>
+          </article>
+          <article class="ms-mix overflow-hidden rounded-2xl border border-line bg-white shadow-sm" data-mood="focus" data-search="code tide kiran instrumental">
+            <div class="relative">
+              <img class="ms-mix-img" src="https://images.unsplash.com/photo-1511379938546-c1f69419868d?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-md bg-white/95 px-2 py-0.5 text-xs font-black uppercase text-muted">Focus</span>
+              <button type="button" class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" data-ms-fav="code-tide" aria-pressed="false" aria-label="Save Code tide"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Kiran · 14 tracks · 40 min</p>
+              <h3 class="font-display mt-1 text-lg font-black">Code tide</h3>
+              <button type="button" class="font-ui mt-3 rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-ink hover:bg-brand-dark" data-ms-play="Code tide" data-ms-meta="Kiran · Instrumental demo">Play mix</button>
+            </div>
+          </article>
+          <article class="ms-mix overflow-hidden rounded-2xl border border-line bg-white shadow-sm" data-mood="podcast" data-search="between tracks nila podcast interview">
+            <div class="relative">
+              <img class="ms-mix-img" src="https://images.unsplash.com/photo-1478737271069-7708133c2d56?w=640&q=80" alt="" width="640" height="480" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-md bg-white/95 px-2 py-0.5 text-xs font-black uppercase text-muted">Podcast</span>
+              <button type="button" class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink" data-ms-fav="between-tracks" aria-pressed="false" aria-label="Save Between the tracks"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="text-sm text-muted">Nila · 8 episodes · Series</p>
+              <h3 class="font-display mt-1 text-lg font-black">Between the tracks</h3>
+              <button type="button" class="font-ui mt-3 rounded-lg bg-brand px-3 py-1.5 text-xs font-black text-ink hover:bg-brand-dark" data-ms-play="Between the tracks" data-ms-meta="Nila · Podcast preview">Play mix</button>
+            </div>
+          </article>
+        </div>
+        <p class="ms-reveal mt-4 rounded-xl border border-dashed border-line bg-canvas p-6 text-center text-sm text-muted" id="msEmpty" hidden>No mixes match. Try another mood or search.</p>
+      </div>
+    </section>
+
+    <section class="px-5 py-16 bg-brand-soft" id="artists" aria-labelledby="artists-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="ms-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">Artists</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="artists-heading">Voices from Harbor</h2>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6">
+            <p class="font-ui text-xs font-black text-brand bg-brand inline-block rounded-md px-2 py-0.5">01</p>
+            <h3 class="font-display mt-3 font-black">Poluru</h3>
+            <p class="mt-2 text-sm text-muted">Warm textures and slow Sunday mornings—Golden hour is the flagship chill mix.</p>
+          </article>
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6">
+            <p class="font-ui text-xs font-black text-brand bg-brand inline-block rounded-md px-2 py-0.5">02</p>
+            <h3 class="font-display mt-3 font-black">Subra</h3>
+            <p class="mt-2 text-sm text-muted">Late-night ideas and room to focus. Pairs well with design sprints and journaling.</p>
+          </article>
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6">
+            <p class="font-ui text-xs font-black text-brand bg-brand inline-block rounded-md px-2 py-0.5">03</p>
+            <h3 class="font-display mt-3 font-black">Subbu</h3>
+            <p class="mt-2 text-sm text-muted">Fresh energy for commutes and workouts. Turn it up when the day needs momentum.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="pricing" aria-labelledby="pricing-heading">
+      <div class="mx-auto max-w-6xl">
+        <div class="ms-reveal max-w-xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">Pricing</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="pricing-heading">Listen your way</h2>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display font-black">Free</h3>
+            <p class="font-display mt-3 text-3xl font-black">$0</p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-ink"></i> Shuffle play</li>
+              <li><i class="bi bi-check2 text-ink"></i> Ad-supported story</li>
+              <li><i class="bi bi-check2 text-ink"></i> Mobile app (copy)</li>
+            </ul>
+          </article>
+          <article class="ms-reveal rounded-2xl border-2 border-brand bg-white p-6 shadow-sm">
+            <p class="font-ui text-xs font-black uppercase text-muted">Popular</p>
+            <h3 class="font-display font-black">Premium</h3>
+            <p class="font-display mt-3 text-3xl font-black">$10<span class="text-base font-bold text-muted">/mo</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-ink"></i> Offline downloads</li>
+              <li><i class="bi bi-check2 text-ink"></i> On-demand play</li>
+              <li><i class="bi bi-check2 text-ink"></i> Lossless audio</li>
+            </ul>
+          </article>
+          <article class="ms-reveal rounded-2xl border border-line bg-white p-6">
+            <h3 class="font-display font-black">Family</h3>
+            <p class="font-display mt-3 text-3xl font-black">$16<span class="text-base font-bold text-muted">/mo</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-muted">
+              <li><i class="bi bi-check2 text-ink"></i> 6 accounts</li>
+              <li><i class="bi bi-check2 text-ink"></i> Parental controls</li>
+              <li><i class="bi bi-check2 text-ink"></i> Shared playlists</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-canvas px-5 py-16" id="signup" aria-labelledby="signup-heading">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+        <div class="ms-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">Get started</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="signup-heading">Create your listener account</h2>
+          <p class="mt-3 text-muted">Demo signup only.</p>
+        </div>
+        <form class="ms-reveal grid gap-3 rounded-2xl border border-line bg-white p-6" id="msSignupForm">
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Email
+            <input class="rounded-xl border border-line px-3 py-2.5" type="email" name="email" required maxlength="120" />
+          </label>
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Display name
+            <input class="rounded-xl border border-line px-3 py-2.5" type="text" name="name" required maxlength="80" placeholder="Subra" />
+          </label>
+          <button class="font-ui rounded-xl bg-brand px-4 py-3 text-sm font-black text-ink hover:bg-brand-dark" type="submit">Listen free (demo)</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="px-5 py-16" id="faq" aria-labelledby="faq-heading">
+      <div class="mx-auto max-w-3xl">
+        <div class="ms-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="faq-heading">Listening questions</h2>
+        </div>
+        <div class="ms-reveal mt-8 space-y-3">
+          <details class="rounded-xl border border-line bg-white p-4" open>
+            <summary class="font-ui cursor-pointer font-black text-ink">Is this real music streaming?</summary>
+            <p class="mt-3 text-sm text-muted">No. Play mix triggers a short synthesized ambient preview and updates the player bar. No licensed tracks are streamed.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-ui cursor-pointer font-black text-ink">Where are saved mixes stored?</summary>
+            <p class="mt-3 text-sm text-muted">Heart icons save mix IDs in localStorage on your device.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-ui cursor-pointer font-black text-ink">Who designed WaveHarbor?</summary>
+            <p class="mt-3 text-sm text-muted">Subrahmanyam Poluru — <a href="https://polurus.com" class="font-bold text-ink underline decoration-brand">polurus.com</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-white px-5 py-16 pb-24" id="contact" aria-labelledby="contact-heading">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+        <div class="ms-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-muted">Contact</p>
+          <h2 class="font-display mt-2 text-3xl font-black" id="contact-heading">Support</h2>
+          <p class="mt-3 text-muted">help@waveharbor.demo · (512) 555-0505</p>
+        </div>
+        <form class="ms-reveal grid gap-3 rounded-2xl border border-line bg-canvas p-6" id="msContactForm">
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Email
+            <input class="rounded-xl border border-line bg-white px-3 py-2.5" type="email" name="email" required maxlength="120" />
+          </label>
+          <label class="font-ui grid gap-1 text-xs font-bold text-muted">Message
+            <textarea class="min-h-28 rounded-xl border border-line bg-white px-3 py-2.5" name="message" required maxlength="2000"></textarea>
+          </label>
+          <button class="font-ui rounded-xl bg-brand px-4 py-3 text-sm font-black text-ink hover:bg-brand-dark" type="submit">Send message (demo)</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="ms-player" role="region" aria-label="Now playing">
+    <div class="ms-player-inner px-5">
+      <div>
+        <p class="font-display text-sm font-black" id="msTrackName">Golden hour</p>
+        <p class="text-xs text-muted" id="msTrackMeta">Poluru · Tap Play for ambient demo</p>
+      </div>
+      <button type="button" class="font-ui inline-flex items-center gap-2 rounded-xl bg-brand px-4 py-2 text-sm font-black text-ink hover:bg-brand-dark" id="msPlay" aria-label="Play or pause demo audio">
+        <i class="bi bi-play-fill"></i> Play
+      </button>
+    </div>
+  </div>
+
+  <footer class="bg-ink text-white/75 pb-24">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-ink" aria-hidden="true"><i class="bi bi-music-note-beamed"></i></span>
+          WaveHarbor.
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Music streaming UI template with mood filters, favorites, and demo player. Fictional Harbor Audio catalog.</p>
+      </div>
+      <nav aria-label="Listen">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Listen</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand" href="#discover">Discover</a></li>
+          <li><a class="hover:text-brand" href="#artists">Artists</a></li>
+          <li><a class="hover:text-brand" href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Help</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand" href="#signup">Sign up</a></li>
+          <li><a class="hover:text-brand" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#2a1820] p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand font-black text-ink" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> WaveHarbor. Fictional sample. No licensed audio.</span>
+      <span>Built by <a class="text-brand hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="ms-toast" id="msToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-ink" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="msToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="msToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
