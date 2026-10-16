@@ -1,6 +1,4 @@
-# =========================
-# macOS
-# =========================
+# --- Operating systems ---
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -19,9 +17,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# =========================
-# Windows
-# =========================
 Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
@@ -34,40 +29,74 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
-*.StackDump
+*.stackdump
 
-# =========================
-# Linux / editors
-# =========================
 *~
 .fuse_hidden*
 .directory
 .Trash-*
 .nfs*
-*.swp
-*.swo
-*.swn
+
+# --- Editors & IDEs ---
 .idea/
+*.iml
+.fleet/
+.zed/
 .vscode/
 *.code-workspace
 *.sublime-project
 *.sublime-workspace
+.cursor/
+.history/
 
-# =========================
-# Python
-# =========================
+# Vim / merge artifacts
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig
+*.rej
+
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+credentials.json
+secrets.json
+*.secret
+
+# --- Logs & temporary files ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+tmp/
+temp/
+*.tmp
+*.temp
+*.pid
+*.seed
+
+# --- Python ---
 __pycache__/
 *.py[cod]
 *$py.class
-*.py
 *.pyo
 *.pyd
 .Python
 *.egg
 *.egg-info/
 .eggs/
-dist/
-build/
 develop-eggs/
 downloads/
 lib64/
@@ -77,15 +106,12 @@ var/
 wheels/
 share/python-wheels/
 pip-wheel-metadata/
-*.manifest
-*.spec
 pip-log.txt
 pip-delete-this-directory.txt
 .venv/
 venv/
 ENV/
 env/
-.env/
 .python-version
 .mypy_cache/
 .pytest_cache/
@@ -100,29 +126,30 @@ dmypy.json
 .pyre/
 .pytype/
 cython_debug/
+*.manifest
+*.spec
 
-# =========================
-# Frontend / Node
-# =========================
+# --- Node / JavaScript / TypeScript ---
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.npm/
 .pnpm-store/
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.prettiercache
 
-# Build / cache outputs
+# Build & bundler output
 dist/
 build/
 out/
 .next/
 .nuxt/
+.output/
 .vuepress/dist/
 .cache/
 .parcel-cache/
@@ -130,23 +157,15 @@ out/
 .vercel/
 .netlify/
 .svelte-kit/
+storybook-static/
+.serverless/
+.firebase/
+.vite/
+.angular/
+.sass-cache/
 coverage/
-*.tsbuildinfo
-.eslintcache
-.stylelintcache
+*.local
 
-# Env / secrets
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-*.crt
-
-# Logs / temp
-logs/
-*.log
-tmp/
-temp/
-*.tmp
-*.temp
+# Deploy / hosting
+.wrangler/
+.dev.vars
