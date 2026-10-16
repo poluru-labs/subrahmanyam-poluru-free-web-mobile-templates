@@ -1,2 +1,532 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Poluru Books — Your next chapter is waiting.</title><meta name="description" content="Small discoveries. Big ideas. A thoughtfully curated home for curious readers."><meta name="theme-color" content="#87472d"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="books" data-template="online-bookstore" style="--brand:#87472d;--soft:#f5ece2;"><a class="skip-link" href="#main">Skip to content</a><div class="container"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">P</span>Poluru Books</a><nav aria-label="Main navigation"><a href="#collection">Discover</a><a href="#about">Our story</a><a href="#contact">Get in touch</a></nav><button class="primary" data-action="modal" data-title="Hello from Poluru Books" data-kind="Send inquiry">Say hello</button></header><main id="main"><section class="hero"><div class="hero-copy"><p class="eyebrow">FOR THE LOVE OF THE NEXT PAGE.</p><h1>Your next chapter<br>is waiting.</h1><p>Small discoveries. Big ideas. A thoughtfully curated home for curious readers.</p><div class="hero-actions"><a class="primary" href="#collection">Browse the shelves <span aria-hidden="true">↗</span></a><a class="text-button" href="#about">See what’s inside →</a></div><div class="proof"><div class="avatars"><span>P</span><span>S</span><span>S</span></div><div><span class="stars">★★★★★</span><br>Loved by Poluru, Subra &amp; Subbu</div></div></div><div class="hero-media"><img class="" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Your next chapter is waiting." loading="lazy" width="1200" height="800"><div class="hero-note"><span class="eyebrow">A LITTLE MORE EVERYDAY</span><strong>Find your kind of extraordinary</strong>Thoughtfully chosen. Ready for you.</div></div></section><section id="collection" class="section"><div class="section-head"><div><p class="eyebrow">MADE FOR YOUR EVERYDAY</p><h2>Good books. Lasting company.</h2></div><p>Meet your next can’t-put-it-down read.</p></div><div class="filters"><button class="filter active" data-filter="All" aria-pressed="true">All</button><button class="filter " data-filter="Fiction" aria-pressed="false">Fiction</button><button class="filter " data-filter="Personal growth" aria-pressed="false">Personal growth</button><button class="filter " data-filter="Creative living" aria-pressed="false">Creative living</button><input class="search" type="search" placeholder="Search this collection…" aria-label="Search this collection"></div><div class="grid collection"><article class="product-card" data-search="The Art of Starting Small Subra" data-category="Personal growth"><div class="card-image"><div class="book-cover" style="--cover:#426451"><span>POLURU EDITIONS</span><strong>The Art of Starting Small</strong><em>✳</em><span>SUBRA</span></div></div><div class="card-body"><p class="small">Subra · Paperback</p><h3>The Art of Starting Small</h3><div class="card-bottom"><strong>$18</strong><button class="text-button" data-action="save" data-title="The Art of Starting Small">Add to reading list</button></div></div></article><article class="product-card" data-search="Somewhere, Slowly Poluru" data-category="Fiction"><div class="card-image"><div class="book-cover" style="--cover:#b66f4b"><span>POLURU EDITIONS</span><strong>Somewhere, Slowly</strong><em>◒</em><span>POLURU</span></div></div><div class="card-body"><p class="small">Poluru · Paperback</p><h3>Somewhere, Slowly</h3><div class="card-bottom"><strong>$22</strong><button class="text-button" data-action="save" data-title="Somewhere, Slowly">Add to reading list</button></div></div></article><article class="product-card" data-search="A Mind of Your Own Subbu" data-category="Creative living"><div class="card-image"><div class="book-cover" style="--cover:#5a5b85"><span>POLURU EDITIONS</span><strong>A Mind of Your Own</strong><em>✦</em><span>SUBBU</span></div></div><div class="card-body"><p class="small">Subbu · Paperback</p><h3>A Mind of Your Own</h3><div class="card-bottom"><strong>$20</strong><button class="text-button" data-action="save" data-title="A Mind of Your Own">Add to reading list</button></div></div></article><p class="empty" hidden>No matching books. Try another search.</p></div></section><section id="about" class="feature-grid"><div><b>01 /</b><h3>Independent in spirit</h3><p>A small bookshop with a wide-open imagination.</p></div><div><b>02 /</b><h3>Chosen by readers</h3><p>Personal recommendations from Subra and Subbu.</p></div><div><b>03 /</b><h3>Room for discovery</h3><p>New voices and familiar favorites, side by side.</p></div></section><section class="banner" id="contact"><div><h2>A reading list with your name on it.</h2><p>Tell us what you love. We’ll help you find your next chapter.</p></div><button class="primary" data-action="modal" data-title="A reading list with your name on it." data-kind="Send inquiry">Ask a bookseller</button></section></main><footer class="site-footer"><span class="brand">Poluru Books<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  BookHarbor — Online bookstore
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookHarbor — Curated books, delivered to your door</title>
+  <meta name="description" content="BookHarbor is a fictional online bookstore for Harbor City: browse genres, save titles, and demo cart. By Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#007DCC" />
+  <link rel="canonical" href="https://polurus.com/templates/online-bookstore/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BookHarbor — Curated books, delivered to your door" />
+  <meta property="og:description" content="Clean online bookstore landing page with genre filters, wishlist, and cart demo." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BookHarbor — Curated books, delivered to your door" />
+  <meta name="twitter:description" content="Clean online bookstore landing page with genre filters, wishlist, and cart demo." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #007dcc;
+      --color-brand-dark: #0066a8;
+      --color-brand-soft: #e6f3fb;
+      --color-ink: #101820;
+      --color-muted: #5a6570;
+      --color-line: #d4e4f0;
+      --color-canvas: #f8fbfd;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "BookHarbor — Online bookstore",
+        "description": "Fictional bookstore template by Subrahmanyam Poluru. No live checkout or inventory.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bk-body bg-canvas text-ink antialiased" id="top">
+  <a class="bk-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-ink text-white/85 text-sm">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-brand mr-2 align-middle" aria-hidden="true"></span>Free shipping over $35 · 2–4 day delivery · Harbor City</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-white hover:text-brand-soft" href="tel:+15125550707"><i class="bi bi-telephone"></i> (512) 555-0707</a>
+        <span class="hidden sm:inline">Member perks · demo storefront</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="bkHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white" aria-hidden="true"><i class="bi bi-book"></i></span>
+        BookHarbor<em class="not-italic text-brand">.</em>
+      </a>
+      <div class="ml-auto flex items-center gap-2 md:order-3">
+        <a class="font-ui hidden items-center gap-2 rounded-xl border border-line bg-white px-3 py-2 text-sm font-bold text-ink hover:bg-brand-soft sm:inline-flex" href="#catalog" aria-label="Cart">
+          <i class="bi bi-bag"></i> Cart <span class="grid min-w-[1.25rem] place-items-center rounded-full bg-brand px-1.5 text-xs text-white" id="bkCartCount">0</span>
+        </a>
+        <button class="font-ui inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="bkNavToggle" aria-expanded="false" aria-controls="bkNavPanel" aria-label="Open menu">
+          <i class="bi bi-list text-lg"></i>
+        </button>
+      </div>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex md:order-2" aria-label="Primary">
+        <a class="hover:text-ink" href="#catalog">Shop</a>
+        <a class="hover:text-ink" href="#how">How it works</a>
+        <a class="hover:text-ink" href="#membership">Membership</a>
+        <a class="hover:text-ink" href="#events">Events</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-white hover:bg-brand-dark md:order-4 md:inline-flex" href="#catalog">Browse books</a>
+    </div>
+    <div class="bk-nav-open border-t border-line bg-canvas md:hidden" id="bkNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#catalog">Shop</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#how">How it works</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#membership">Membership</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#events">Events</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-white" href="#catalog">Browse books</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-canvas px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="bk-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Harbor City books</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-tight md:text-5xl">Independent reads, shipped with care.</h1>
+          <p class="mt-4 max-w-lg text-muted">BookHarbor is a demo storefront for fiction, nonfiction, and kids’ shelves. Filter by genre, save favorites, and try the cart — no payment backend.</p>
+          <form class="mt-8 flex flex-col gap-3 sm:flex-row" id="bkHeroSearch">
+            <label class="sr-only" for="bkHeroQuery">Search books</label>
+            <input class="font-ui flex-1 rounded-xl border border-line bg-white px-4 py-3 text-sm font-semibold text-ink placeholder:text-muted/70 focus:border-brand" id="bkHeroQuery" type="search" placeholder="Title, author, or topic…" autocomplete="off" />
+            <button class="font-ui rounded-xl bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark" type="submit">Search catalog</button>
+          </form>
+          <ul class="mt-8 flex flex-wrap gap-6 text-sm text-muted">
+            <li class="flex items-center gap-2"><i class="bi bi-truck text-brand"></i> Flat-rate shipping</li>
+            <li class="flex items-center gap-2"><i class="bi bi-arrow-repeat text-brand"></i> Easy returns (demo)</li>
+            <li class="flex items-center gap-2"><i class="bi bi-shield-check text-brand"></i> Secure checkout UI</li>
+          </ul>
+        </div>
+        <div class="bk-reveal grid grid-cols-2 gap-4">
+          <figure class="col-span-2 overflow-hidden rounded-2xl border border-line bg-white p-3 shadow-sm">
+            <img class="bk-cover rounded-xl" src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Stack of books on a table" width="900" height="600" loading="eager" />
+            <figcaption class="font-ui mt-3 text-xs font-bold uppercase tracking-wider text-muted">Staff picks · refreshed weekly</figcaption>
+          </figure>
+          <div class="rounded-2xl border border-line bg-brand-soft p-5">
+            <p class="font-display text-3xl font-black text-brand">12k+</p>
+            <p class="font-ui text-sm font-bold text-ink">Titles in catalog (sample data)</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-white p-5">
+            <p class="font-display text-3xl font-black text-ink">4.9</p>
+            <p class="font-ui text-sm font-bold text-muted"><i class="bi bi-star-fill text-brand"></i> Reader rating · demo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="catalog">
+      <div class="mx-auto max-w-6xl">
+        <div class="bk-reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Catalog</p>
+            <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">This week’s shelves</h2>
+            <p class="mt-2 text-muted">Filter by genre or search. Wishlist and cart persist in your browser only.</p>
+          </div>
+          <p class="font-ui text-sm font-bold text-brand" id="bkResult">9 titles</p>
+        </div>
+
+        <div class="bk-reveal mt-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Genre filters">
+            <button class="font-ui rounded-full border border-brand bg-brand px-4 py-2 text-xs font-black uppercase tracking-wide text-white" type="button" data-bk-filter="all" aria-pressed="true">All</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-bk-filter="fiction" aria-pressed="false">Fiction</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-bk-filter="nonfiction" aria-pressed="false">Nonfiction</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-bk-filter="kids" aria-pressed="false">Kids</button>
+          </div>
+          <label class="font-ui flex items-center gap-2 text-sm font-bold text-muted">
+            <span class="sr-only">Search catalog</span>
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input class="w-full min-w-[14rem] rounded-xl border border-line bg-canvas px-3 py-2 text-ink lg:w-64" id="bkSearch" type="search" placeholder="Search titles…" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="bk-book-grid mt-10">
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="nonfiction" data-search="The Art of Starting Small Subra Poluru personal growth">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Nonfiction · Subra Poluru</p>
+              <h3 class="font-display mt-1 text-lg font-bold">The Art of Starting Small</h3>
+              <p class="mt-2 text-sm text-muted">Habits, focus, and gentle momentum for busy Harbor City lives.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$18</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="start-small" aria-pressed="false" aria-label="Save The Art of Starting Small"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="The Art of Starting Small">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="fiction" data-search="Somewhere Slowly Poluru novel harbor">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Fiction · Poluru N.</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Somewhere, Slowly</h3>
+              <p class="mt-2 text-sm text-muted">A quiet novel about trains, letters, and second chances.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$22</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="somewhere" aria-pressed="false" aria-label="Save Somewhere, Slowly"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="Somewhere, Slowly">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="nonfiction" data-search="Harbor Maps Subbu travel essays">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1524995997947-a1c2e315a42f?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Nonfiction · Subbu K.</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Harbor Maps</h3>
+              <p class="mt-2 text-sm text-muted">Essays on waterfront walks, coffee stops, and hidden book nooks.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$24</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="harbor-maps" aria-pressed="false" aria-label="Save Harbor Maps"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="Harbor Maps">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="fiction" data-search="Midnight Ledger mystery Mara Poluru">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Fiction · Mara Poluru</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Midnight Ledger</h3>
+              <p class="mt-2 text-sm text-muted">A bookstore clerk uncovers a ledger that rewrites Harbor history.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$19</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="midnight" aria-pressed="false" aria-label="Save Midnight Ledger"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="Midnight Ledger">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="kids" data-search="Captain Page kids adventure Subra">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Kids · Subra Poluru</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Captain Page</h3>
+              <p class="mt-2 text-sm text-muted">Illustrated adventure for ages 7–10 — bravery with a bookmark.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$14</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="captain" aria-pressed="false" aria-label="Save Captain Page"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="Captain Page">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="nonfiction" data-search="Design Without Noise creative living">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1456513080460-8c8ed2a3a2?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Nonfiction · L. Harbor</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Design Without Noise</h3>
+              <p class="mt-2 text-sm text-muted">Calm interfaces, clear type, and rooms that breathe.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$26</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="design-noise" aria-pressed="false" aria-label="Save Design Without Noise"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="Design Without Noise">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="fiction" data-search="Glass Harbor literary Poluru">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Fiction · R. Poluru</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Glass Harbor</h3>
+              <p class="mt-2 text-sm text-muted">Linked stories along the pier — love, work, and weather.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$21</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="glass" aria-pressed="false" aria-label="Save Glass Harbor"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="Glass Harbor">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="kids" data-search="Moon Library bedtime Subbu">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Kids · Subbu K.</p>
+              <h3 class="font-display mt-1 text-lg font-bold">The Moon Library</h3>
+              <p class="mt-2 text-sm text-muted">Bedtime tales where every chapter glows a little softer.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$16</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="moon" aria-pressed="false" aria-label="Save The Moon Library"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="The Moon Library">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bk-book bk-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-genre="kids" data-search="Puzzle Pier activity book">
+            <img class="bk-cover" src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="" width="600" height="900" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Kids · Harbor Press</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Puzzle Pier</h3>
+              <p class="mt-2 text-sm text-muted">Mazes, riddles, and dock-side doodles for rainy afternoons.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$12</span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-bk-wish="puzzle" aria-pressed="false" aria-label="Save Puzzle Pier"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-bk-add="Puzzle Pier">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="bk-reveal mt-10 rounded-xl border border-dashed border-line bg-brand-soft p-8 text-center text-muted" id="bkEmpty" hidden>No matching books. Try another genre or search term.</p>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="how">
+      <div class="mx-auto max-w-6xl">
+        <div class="bk-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">How it works</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">From shelf to doorstep</h2>
+        </div>
+        <ol class="mt-10 grid gap-6 md:grid-cols-3">
+          <li class="bk-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display text-4xl font-black text-brand">1</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Browse &amp; filter</h3>
+            <p class="mt-2 text-sm text-muted">Use genre chips and search to narrow the demo catalog.</p>
+          </li>
+          <li class="bk-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display text-4xl font-black text-brand">2</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Save or cart</h3>
+            <p class="mt-2 text-sm text-muted">Wishlist and cart counts stay in localStorage on this device.</p>
+          </li>
+          <li class="bk-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display text-4xl font-black text-brand">3</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Checkout (UI only)</h3>
+            <p class="mt-2 text-sm text-muted">Wire your payment provider — this template stops at the demo toast.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="membership">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div class="bk-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">BookHarbor Plus</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Membership that respects readers</h2>
+          <p class="mt-4 text-muted">Early access to signed editions, free shipping on every order, and monthly staff picks — fictional perks for layout only.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex gap-3"><i class="bi bi-check2-circle text-brand"></i> Member price on new releases</li>
+            <li class="flex gap-3"><i class="bi bi-check2-circle text-brand"></i> Birthday book credit (demo)</li>
+            <li class="flex gap-3"><i class="bi bi-check2-circle text-brand"></i> Invite-only author chats</li>
+          </ul>
+        </div>
+        <div class="bk-reveal grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-line bg-canvas p-6">
+            <p class="font-ui text-xs font-black uppercase text-muted">Reader</p>
+            <p class="font-display mt-2 text-3xl font-black">Free</p>
+            <p class="mt-2 text-sm text-muted">Standard shipping rates · wishlist · newsletter</p>
+            <a class="font-ui mt-6 inline-flex rounded-xl border border-brand px-4 py-2 text-sm font-bold text-brand hover:bg-brand-soft" href="#catalog">Shop as guest</a>
+          </div>
+          <div class="rounded-2xl border-2 border-brand bg-brand-soft p-6">
+            <p class="font-ui text-xs font-black uppercase text-brand">Plus</p>
+            <p class="font-display mt-2 text-3xl font-black">$6<span class="text-lg font-bold text-muted">/mo</span></p>
+            <p class="mt-2 text-sm text-muted">Free shipping · early drops · demo pricing card</p>
+            <a class="font-ui mt-6 inline-flex rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" href="#newsletter">Join waitlist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="events">
+      <div class="mx-auto max-w-6xl">
+        <div class="bk-reveal flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Events</p>
+            <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Meet authors at the harbor</h2>
+          </div>
+          <a class="font-ui text-sm font-bold text-brand hover:text-brand-dark" href="#contact">Host an event →</a>
+        </div>
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <article class="bk-reveal rounded-2xl border border-line bg-white p-5">
+            <time class="font-ui text-xs font-black uppercase text-brand" datetime="2026-04-12">Apr 12 · 6 PM</time>
+            <h3 class="font-display mt-2 font-bold">Poluru &amp; friends — fiction night</h3>
+            <p class="mt-2 text-sm text-muted">Readings at Pier 4 Community Room. RSVP via contact form.</p>
+          </article>
+          <article class="bk-reveal rounded-2xl border border-line bg-white p-5">
+            <time class="font-ui text-xs font-black uppercase text-brand" datetime="2026-04-20">Apr 20 · 10 AM</time>
+            <h3 class="font-display mt-2 font-bold">Kids story hour</h3>
+            <p class="mt-2 text-sm text-muted">Captain Page crafts and bookmarks for families.</p>
+          </article>
+          <article class="bk-reveal rounded-2xl border border-line bg-white p-5">
+            <time class="font-ui text-xs font-black uppercase text-brand" datetime="2026-05-03">May 3 · 7 PM</time>
+            <h3 class="font-display mt-2 font-bold">Harbor Maps launch</h3>
+            <p class="mt-2 text-sm text-muted">Subbu K. signs copies; local map vendors on site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="faq">
+      <div class="mx-auto max-w-3xl">
+        <div class="bk-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Common questions</h2>
+        </div>
+        <div class="bk-reveal mt-8 space-y-4">
+          <details class="rounded-xl border border-line bg-canvas p-4">
+            <summary class="font-display cursor-pointer font-bold">Is this a real bookstore?</summary>
+            <p class="mt-3 text-sm text-muted">No. BookHarbor is a front-end template with sample titles and demo cart behavior.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-canvas p-4">
+            <summary class="font-display cursor-pointer font-bold">Where is my cart stored?</summary>
+            <p class="mt-3 text-sm text-muted">Only in your browser’s localStorage. Clearing site data resets counts.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-canvas p-4">
+            <summary class="font-display cursor-pointer font-bold">Can I use the design commercially?</summary>
+            <p class="mt-3 text-sm text-muted">Yes — free for personal and commercial use. Credit to Subrahmanyam Poluru is appreciated.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="contact">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="bk-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Contact</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Talk to a bookseller</h2>
+          <p class="mt-4 text-muted">Questions about orders, events, or bulk sales — this form is demo-only and does not send email.</p>
+          <address class="mt-6 space-y-2 text-sm not-italic text-muted">
+            <p><i class="bi bi-geo-alt text-brand"></i> 707 Harbor Lane, Harbor City</p>
+            <p><a class="font-bold text-brand hover:text-brand-dark" href="mailto:hello@bookharbor.demo">hello@bookharbor.demo</a></p>
+          </address>
+        </div>
+        <form class="bk-reveal space-y-4 rounded-2xl border border-line bg-white p-6" id="bkContactForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="bkName">Name</label>
+            <input class="mt-1 w-full rounded-xl border border-line px-3 py-2 text-sm" id="bkName" name="name" required autocomplete="name" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="bkEmail">Email</label>
+            <input class="mt-1 w-full rounded-xl border border-line px-3 py-2 text-sm" id="bkEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="bkMessage">Message</label>
+            <textarea class="mt-1 w-full rounded-xl border border-line px-3 py-2 text-sm" id="bkMessage" name="message" rows="4" required></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-brand py-3 text-sm font-bold text-white hover:bg-brand-dark" type="submit">Send message (demo)</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="bg-brand px-5 py-12 text-white" id="newsletter">
+      <div class="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center md:flex-row md:text-left">
+        <div class="flex-1">
+          <h2 class="font-display text-2xl font-black md:text-3xl">New releases in your inbox</h2>
+          <p class="mt-2 text-white/85 text-sm">Monthly picks from the Harbor desk. No spam — demo signup only.</p>
+        </div>
+        <form class="flex w-full max-w-md flex-col gap-2 sm:flex-row" id="bkNewsletterForm">
+          <label class="sr-only" for="bkNewsEmail">Email</label>
+          <input class="font-ui flex-1 rounded-xl border border-white/30 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/60" id="bkNewsEmail" type="email" placeholder="you@email.com" required />
+          <button class="font-ui rounded-xl bg-white px-5 py-3 text-sm font-bold text-brand hover:bg-brand-soft" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/75">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-white" aria-hidden="true"><i class="bi bi-book"></i></span>
+          BookHarbor.
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Online bookstore marketing template with genre filters, wishlist, and cart demo. Fictional Harbor City brand.</p>
+      </div>
+      <nav aria-label="Shop">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Shop</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#catalog">Catalog</a></li>
+          <li><a class="hover:text-brand-soft" href="#membership">Membership</a></li>
+          <li><a class="hover:text-brand-soft" href="#events">Events</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Help</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#how">How it works</a></li>
+          <li><a class="hover:text-brand-soft" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand-soft" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#0c1824] p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft font-black text-brand" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand-soft hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> BookHarbor. Fictional sample. No live checkout.</span>
+      <span>Built by <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="bk-toast" id="bkToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="bkToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="bkToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
