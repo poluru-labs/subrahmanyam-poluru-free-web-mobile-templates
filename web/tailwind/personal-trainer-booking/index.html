@@ -1,2 +1,506 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subra Strength — Find your strong. Make it yours.</title><meta name="description" content="Personal coaching that meets you where you are and helps you go further."><meta name="theme-color" content="#b3e454"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="dark" data-template="personal-trainer-booking" style="--brand:#b3e454;--soft:#223024;--on:#192018;"><a class="skip-link" href="#main">Skip to content</a><div class="container"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">S</span>Subra Strength</a><nav aria-label="Main navigation"><a href="#collection">Discover</a><a href="#about">Our story</a><a href="#contact">Get in touch</a></nav><button class="primary" data-action="modal" data-title="Hello from Subra Strength" data-kind="Send inquiry">Say hello</button></header><main id="main"><section class="hero"><div class="hero-copy"><p class="eyebrow">MOVE WITH PURPOSE.</p><h1>Find your strong.<br>Make it yours.</h1><p>Personal coaching that meets you where you are and helps you go further.</p><div class="hero-actions"><a class="primary" href="#collection">Meet your coaches <span aria-hidden="true">↗</span></a><a class="text-button" href="#about">See what’s inside →</a></div><div class="proof"><div class="avatars"><span>P</span><span>S</span><span>S</span></div><div><span class="stars">★★★★★</span><br>Loved by Poluru, Subra &amp; Subbu</div></div></div><div class="hero-media"><img class="" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Find your strong. Make it yours." loading="lazy" width="1200" height="800"><div class="hero-note"><span class="eyebrow">A LITTLE MORE EVERYDAY</span><strong>Find your kind of extraordinary</strong>Thoughtfully chosen. Ready for you.</div></div></section><section id="about" class="feature-grid"><div><b>01 /</b><h3>Built around you</h3><p>Coaching shaped by your goals, your schedule, and your starting point.</p></div><div><b>02 /</b><h3>Progress you can feel</h3><p>Build strength, move with confidence, and find joy in showing up.</p></div><div><b>03 /</b><h3>Someone in your corner</h3><p>A dedicated coach for the good days and the harder ones.</p></div></section><section id="collection" class="section"><div class="section-head"><div><p class="eyebrow">MADE FOR YOUR EVERYDAY</p><h2>Good people. Stronger together.</h2></div><p>Thoughtfully made for wherever you are right now.</p></div><div class="grid"><article class="product-card" data-search="Train with Subra Strength &amp; conditioning · 50 minutes Strength" data-category="Strength"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Train with Subra" loading="lazy" width="1200" height="800"><span class="image-tag">Strength</span><button class="favorite" aria-label="Save Train with Subra" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Strength & conditioning · 50 minutes</p><h3>Train with Subra</h3><div class="card-bottom"><strong>$65 / session</strong><button class="text-button" data-action="modal" data-title="Train with Subra" data-kind="Book session">Book session</button></div></div></article><article class="product-card" data-search="Move with Poluru Endurance &amp; mobility · 45 minutes Endurance" data-category="Endurance"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Move with Poluru" loading="lazy" width="1200" height="800"><span class="image-tag">Endurance</span><button class="favorite" aria-label="Save Move with Poluru" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Endurance & mobility · 45 minutes</p><h3>Move with Poluru</h3><div class="card-bottom"><strong>$55 / session</strong><button class="text-button" data-action="modal" data-title="Move with Poluru" data-kind="Book session">Book session</button></div></div></article><article class="product-card" data-search="Reset with Subbu Functional fitness · 50 minutes Movement" data-category="Movement"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Reset with Subbu" loading="lazy" width="1200" height="800"><span class="image-tag">Movement</span><button class="favorite" aria-label="Save Reset with Subbu" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Functional fitness · 50 minutes</p><h3>Reset with Subbu</h3><div class="card-bottom"><strong>$60 / session</strong><button class="text-button" data-action="modal" data-title="Reset with Subbu" data-kind="Book session">Book session</button></div></div></article></div></section><section class="banner" id="contact"><div><h2>Your next chapter starts here.</h2><p>Let’s find the right fit for you.</p></div><button class="primary" data-action="modal" data-title="Your next chapter starts here." data-kind="Send inquiry">Get in touch</button></section></main><footer class="site-footer"><span class="brand">Subra Strength<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  TrainHarbor — Personal trainer booking
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrainHarbor — Book personal training that fits your life</title>
+  <meta name="description" content="TrainHarbor is a fictional personal trainer booking app for Harbor City: browse coaches, pick slots, and demo bookings. By Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#007DCC" />
+  <link rel="canonical" href="https://polurus.com/templates/personal-trainer-booking/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TrainHarbor — Book personal training that fits your life" />
+  <meta property="og:description" content="Clean trainer booking landing page with specialty filters, time slots, and demo scheduling." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TrainHarbor — Book personal training that fits your life" />
+  <meta name="twitter:description" content="Clean trainer booking landing page with specialty filters, time slots, and demo scheduling." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #007dcc;
+      --color-brand-dark: #0066a8;
+      --color-brand-soft: #e6f3fb;
+      --color-ink: #101820;
+      --color-muted: #5a6570;
+      --color-line: #d4e4f0;
+      --color-canvas: #f8fbfd;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "TrainHarbor — Personal trainer booking",
+        "description": "Fictional trainer booking template by Subrahmanyam Poluru. No live payments or calendar sync.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="pt-body bg-canvas text-ink antialiased" id="top">
+  <a class="pt-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-ink text-white/85 text-sm">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-brand mr-2 align-middle" aria-hidden="true"></span>First session 20% off · cancel 24h ahead · Harbor City</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-white hover:text-brand-soft" href="tel:+15125550808"><i class="bi bi-telephone"></i> (512) 555-0808</a>
+        <span class="hidden sm:inline">Studio + virtual · demo booking</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="ptHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white" aria-hidden="true"><i class="bi bi-activity"></i></span>
+        TrainHarbor<em class="not-italic text-brand">.</em>
+      </a>
+      <div class="ml-auto flex items-center gap-2 md:order-3">
+        <a class="font-ui hidden items-center gap-2 rounded-xl border border-line bg-white px-3 py-2 text-sm font-bold text-ink hover:bg-brand-soft sm:inline-flex" href="#booking" aria-label="Your bookings">
+          <i class="bi bi-calendar-check"></i> Bookings <span class="grid min-w-[1.25rem] place-items-center rounded-full bg-brand px-1.5 text-xs text-white" id="ptBookingCount">0</span>
+        </a>
+        <button class="font-ui inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="ptNavToggle" aria-expanded="false" aria-controls="ptNavPanel" aria-label="Open menu">
+          <i class="bi bi-list text-lg"></i>
+        </button>
+      </div>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex md:order-2" aria-label="Primary">
+        <a class="hover:text-ink" href="#coaches">Coaches</a>
+        <a class="hover:text-ink" href="#how">How it works</a>
+        <a class="hover:text-ink" href="#plans">Plans</a>
+        <a class="hover:text-ink" href="#studio">Studio</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-white hover:bg-brand-dark md:order-4 md:inline-flex" href="#booking">Book a session</a>
+    </div>
+    <div class="pt-nav-open border-t border-line bg-canvas md:hidden" id="ptNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#coaches">Coaches</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#how">How it works</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#plans">Plans</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#studio">Studio</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-white" href="#booking">Book a session</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-canvas px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="pt-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Harbor City coaching</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-tight md:text-5xl">Personal training, booked in minutes.</h1>
+          <p class="mt-4 max-w-lg text-muted">Match with a coach by specialty, choose an open slot, and confirm — this demo saves bookings locally. No payment or calendar integration.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a class="font-ui rounded-xl bg-brand px-6 py-3 text-center text-sm font-bold text-white hover:bg-brand-dark" href="#coaches">Meet coaches</a>
+            <a class="font-ui rounded-xl border border-line bg-white px-6 py-3 text-center text-sm font-bold text-ink hover:bg-brand-soft" href="#booking">Go to scheduler</a>
+          </div>
+          <ul class="mt-8 flex flex-wrap gap-6 text-sm text-muted">
+            <li class="flex items-center gap-2"><i class="bi bi-person-check text-brand"></i> Certified coaches</li>
+            <li class="flex items-center gap-2"><i class="bi bi-camera-video text-brand"></i> In-studio or virtual</li>
+            <li class="flex items-center gap-2"><i class="bi bi-graph-up-arrow text-brand"></i> Progress check-ins</li>
+          </ul>
+        </div>
+        <div class="pt-reveal overflow-hidden rounded-2xl border border-line bg-white p-3 shadow-sm">
+          <img class="aspect-[4/3] w-full rounded-xl object-cover" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Personal trainer guiding a client through a workout" width="1200" height="900" loading="eager" />
+          <div class="font-ui mt-4 grid grid-cols-3 gap-3 text-center text-xs font-bold uppercase tracking-wide text-muted">
+            <div class="rounded-xl bg-brand-soft py-3 text-brand">Strength</div>
+            <div class="rounded-xl border border-line py-3">Endurance</div>
+            <div class="rounded-xl border border-line py-3">Mobility</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="coaches">
+      <div class="mx-auto max-w-6xl">
+        <div class="pt-reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Coaches</p>
+            <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Find your fit</h2>
+            <p class="mt-2 text-muted">Filter by focus area. Save favorites and jump straight to booking.</p>
+          </div>
+          <p class="font-ui text-sm font-bold text-brand" id="ptTrainerCount">6 coaches</p>
+        </div>
+
+        <div class="pt-reveal mt-8 flex flex-wrap gap-2" role="group" aria-label="Specialty filters">
+          <button class="font-ui rounded-full border border-brand bg-brand px-4 py-2 text-xs font-black uppercase tracking-wide text-white" type="button" data-pt-filter="all" aria-pressed="true">All</button>
+          <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-pt-filter="strength" aria-pressed="false">Strength</button>
+          <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-pt-filter="endurance" aria-pressed="false">Endurance</button>
+          <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-pt-filter="mobility" aria-pressed="false">Mobility</button>
+        </div>
+
+        <div class="pt-trainer-grid mt-10">
+          <article class="pt-trainer pt-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-specialty="strength">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Strength · 50 min</p>
+                  <h3 class="font-display mt-1 text-lg font-bold">Subra Poluru</h3>
+                </div>
+                <button class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-pt-fav="subra" aria-pressed="false" aria-label="Save Subra Poluru"><i class="bi bi-heart"></i></button>
+              </div>
+              <p class="mt-2 text-sm text-muted">Compound lifts, progressive overload, form-first programming.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="font-display text-xl font-black">$65<span class="text-sm font-bold text-muted">/session</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-pt-book="subra" data-pt-name="Subra Poluru">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pt-trainer pt-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-specialty="endurance">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Endurance · 45 min</p>
+                  <h3 class="font-display mt-1 text-lg font-bold">Poluru N.</h3>
+                </div>
+                <button class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-pt-fav="poluru" aria-pressed="false" aria-label="Save Poluru N."><i class="bi bi-heart"></i></button>
+              </div>
+              <p class="mt-2 text-sm text-muted">Running mechanics, zone training, and race-day prep.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="font-display text-xl font-black">$55<span class="text-sm font-bold text-muted">/session</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-pt-book="poluru" data-pt-name="Poluru N.">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pt-trainer pt-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-specialty="mobility">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Mobility · 50 min</p>
+                  <h3 class="font-display mt-1 text-lg font-bold">Subbu K.</h3>
+                </div>
+                <button class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-pt-fav="subbu" aria-pressed="false" aria-label="Save Subbu K."><i class="bi bi-heart"></i></button>
+              </div>
+              <p class="mt-2 text-sm text-muted">Functional movement, recovery flows, desk-to-gym transitions.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="font-display text-xl font-black">$60<span class="text-sm font-bold text-muted">/session</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-pt-book="subbu" data-pt-name="Subbu K.">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pt-trainer pt-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-specialty="strength">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1583454110551-21f2fe2ee61b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Strength · 55 min</p>
+                  <h3 class="font-display mt-1 text-lg font-bold">Mara Poluru</h3>
+                </div>
+                <button class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-pt-fav="mara" aria-pressed="false" aria-label="Save Mara Poluru"><i class="bi bi-heart"></i></button>
+              </div>
+              <p class="mt-2 text-sm text-muted">Athletic performance, kettlebells, and small-group formats.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="font-display text-xl font-black">$68<span class="text-sm font-bold text-muted">/session</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-pt-book="mara" data-pt-name="Mara Poluru">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pt-trainer pt-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-specialty="endurance">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Endurance · 40 min</p>
+                  <h3 class="font-display mt-1 text-lg font-bold">Alex Harbor</h3>
+                </div>
+                <button class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-pt-fav="alex" aria-pressed="false" aria-label="Save Alex Harbor"><i class="bi bi-heart"></i></button>
+              </div>
+              <p class="mt-2 text-sm text-muted">Cycling intervals, HIIT finishers, heart-rate guided sessions.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="font-display text-xl font-black">$52<span class="text-sm font-bold text-muted">/session</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-pt-book="alex" data-pt-name="Alex Harbor">Book</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pt-trainer pt-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-specialty="mobility">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Mobility · 45 min</p>
+                  <h3 class="font-display mt-1 text-lg font-bold">Jordan Lee</h3>
+                </div>
+                <button class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-pt-fav="jordan" aria-pressed="false" aria-label="Save Jordan Lee"><i class="bi bi-heart"></i></button>
+              </div>
+              <p class="mt-2 text-sm text-muted">Yoga-informed strength, breath work, and injury-aware scaling.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="font-display text-xl font-black">$58<span class="text-sm font-bold text-muted">/session</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-pt-book="jordan" data-pt-name="Jordan Lee">Book</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="booking">
+      <div class="mx-auto max-w-6xl">
+        <div class="pt-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Scheduler</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Book your session</h2>
+          <p class="mt-2 max-w-2xl text-muted">Sample slots for the next few days. Confirming adds a record to localStorage — connect your backend for real availability.</p>
+        </div>
+
+        <form class="pt-reveal mt-10 grid gap-8 rounded-2xl border border-line bg-white p-6 lg:grid-cols-2 lg:p-8" id="ptBookingForm">
+          <div class="space-y-4">
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="ptTrainerSelect">Coach</label>
+              <select class="font-ui mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm font-semibold" id="ptTrainerSelect" name="trainer" required>
+                <option value="subra">Subra Poluru — Strength</option>
+                <option value="poluru">Poluru N. — Endurance</option>
+                <option value="subbu">Subbu K. — Mobility</option>
+                <option value="mara">Mara Poluru — Strength</option>
+                <option value="alex">Alex Harbor — Endurance</option>
+                <option value="jordan">Jordan Lee — Mobility</option>
+              </select>
+            </div>
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="ptClientName">Your name</label>
+              <input class="mt-1 w-full rounded-xl border border-line px-3 py-2.5 text-sm" id="ptClientName" name="name" required autocomplete="name" />
+            </div>
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="ptClientEmail">Email</label>
+              <input class="mt-1 w-full rounded-xl border border-line px-3 py-2.5 text-sm" id="ptClientEmail" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="ptGoal">Session focus</label>
+              <input class="mt-1 w-full rounded-xl border border-line px-3 py-2.5 text-sm" id="ptGoal" name="goal" placeholder="e.g. squat form, 5K prep" />
+            </div>
+          </div>
+          <div>
+            <p class="font-ui text-xs font-black uppercase text-muted">Available times (demo)</p>
+            <div class="pt-slot-grid mt-3" role="group" aria-label="Time slots">
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Mon · 7:00 AM" aria-pressed="false">Mon · 7:00 AM</button>
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Mon · 12:30 PM" aria-pressed="false">Mon · 12:30 PM</button>
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Tue · 6:00 PM" aria-pressed="false">Tue · 6:00 PM</button>
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Wed · 8:00 AM" aria-pressed="false">Wed · 8:00 AM</button>
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Wed · 5:30 PM" aria-pressed="false">Wed · 5:30 PM</button>
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Thu · 7:30 AM" aria-pressed="false">Thu · 7:30 AM</button>
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Fri · 12:00 PM" aria-pressed="false">Fri · 12:00 PM</button>
+              <button class="pt-slot font-ui rounded-xl border border-line bg-canvas px-2 py-2.5 text-xs font-bold text-muted hover:border-brand" type="button" data-pt-slot="Sat · 9:00 AM" aria-pressed="false">Sat · 9:00 AM</button>
+            </div>
+            <button class="font-ui mt-6 w-full rounded-xl bg-brand py-3 text-sm font-bold text-white hover:bg-brand-dark" type="submit">Confirm booking (demo)</button>
+            <p class="mt-3 text-xs text-muted">By booking you agree to the demo cancellation policy — 24 hours notice, no charges processed.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="how">
+      <div class="mx-auto max-w-6xl">
+        <div class="pt-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">How it works</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Three steps to your first session</h2>
+        </div>
+        <ol class="mt-10 grid gap-6 md:grid-cols-3">
+          <li class="pt-reveal rounded-2xl border border-line bg-canvas p-6">
+            <span class="font-display text-4xl font-black text-brand">1</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Choose a coach</h3>
+            <p class="mt-2 text-sm text-muted">Filter by specialty and read how each coach trains Harbor City clients.</p>
+          </li>
+          <li class="pt-reveal rounded-2xl border border-line bg-canvas p-6">
+            <span class="font-display text-4xl font-black text-brand">2</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Pick a slot</h3>
+            <p class="mt-2 text-sm text-muted">Tap an open time in the scheduler — replace with live API data in production.</p>
+          </li>
+          <li class="pt-reveal rounded-2xl border border-line bg-canvas p-6">
+            <span class="font-display text-4xl font-black text-brand">3</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Show up ready</h3>
+            <p class="mt-2 text-sm text-muted">Studio floor or video link sent in a real app; here you get a confirmation toast.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="plans">
+      <div class="mx-auto max-w-6xl">
+        <div class="pt-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Plans</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Simple session packs</h2>
+          <p class="mx-auto mt-2 max-w-xl text-muted">Display pricing only — checkout is not wired in this template.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <div class="pt-reveal rounded-2xl border border-line bg-white p-6">
+            <p class="font-ui text-xs font-black uppercase text-muted">Single</p>
+            <p class="font-display mt-2 text-3xl font-black">$65</p>
+            <p class="mt-2 text-sm text-muted">One 50-minute session · any coach</p>
+            <a class="font-ui mt-6 inline-flex rounded-xl border border-brand px-4 py-2 text-sm font-bold text-brand hover:bg-brand-soft" href="#booking">Book once</a>
+          </div>
+          <div class="pt-reveal rounded-2xl border-2 border-brand bg-brand-soft p-6">
+            <p class="font-ui text-xs font-black uppercase text-brand">Popular · 5 pack</p>
+            <p class="font-display mt-2 text-3xl font-black">$299</p>
+            <p class="mt-2 text-sm text-muted">Save $26 · valid 60 days · studio or virtual</p>
+            <a class="font-ui mt-6 inline-flex rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark" href="#booking">Start pack</a>
+          </div>
+          <div class="pt-reveal rounded-2xl border border-line bg-white p-6">
+            <p class="font-ui text-xs font-black uppercase text-muted">Monthly</p>
+            <p class="font-display mt-2 text-3xl font-black">$220</p>
+            <p class="mt-2 text-sm text-muted">4 sessions · priority scheduling · demo tier</p>
+            <a class="font-ui mt-6 inline-flex rounded-xl border border-brand px-4 py-2 text-sm font-bold text-brand hover:bg-brand-soft" href="#contact">Ask about corporate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="studio">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div class="pt-reveal overflow-hidden rounded-2xl border border-line">
+          <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Bright training studio with free weights" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="pt-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Studio</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Harbor Pier Training Floor</h2>
+          <p class="mt-4 text-muted">Racks, turf, and recovery space two blocks from the waterfront. Virtual sessions use the same coaches with Harbor-branded programming.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex gap-3"><i class="bi bi-geo-alt text-brand"></i> 120 Pier Lane, Harbor City</li>
+            <li class="flex gap-3"><i class="bi bi-clock text-brand"></i> Mon–Sat 6 AM – 8 PM</li>
+            <li class="flex gap-3"><i class="bi bi-droplet text-brand"></i> Showers &amp; lockers · demo copy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="faq">
+      <div class="mx-auto max-w-3xl">
+        <div class="pt-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Before you book</h2>
+        </div>
+        <div class="pt-reveal mt-8 space-y-4">
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Are payments processed here?</summary>
+            <p class="mt-3 text-sm text-muted">No. TrainHarbor is a front-end demo. Integrate Stripe or your billing stack for production.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Can I cancel or reschedule?</summary>
+            <p class="mt-3 text-sm text-muted">Policy copy only. Wire your calendar provider to enforce real cutoffs and notifications.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Do virtual sessions work on mobile?</summary>
+            <p class="mt-3 text-sm text-muted">This layout is responsive; a live app would add video links and reminder emails.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-5 py-14" id="contact">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="pt-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Contact</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Questions before you train?</h2>
+          <p class="mt-4 text-muted">Corporate wellness, coach matching, or accessibility needs — form is demo-only.</p>
+          <p class="mt-6 text-sm text-muted"><a class="font-bold text-brand hover:text-brand-dark" href="mailto:hello@trainharbor.demo">hello@trainharbor.demo</a></p>
+        </div>
+        <form class="pt-reveal space-y-4 rounded-2xl border border-line bg-canvas p-6" id="ptContactForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="ptContactName">Name</label>
+            <input class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm" id="ptContactName" name="name" required autocomplete="name" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="ptContactEmail">Email</label>
+            <input class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm" id="ptContactEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="ptContactMsg">Message</label>
+            <textarea class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm" id="ptContactMsg" name="message" rows="4" required></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-brand py-3 text-sm font-bold text-white hover:bg-brand-dark" type="submit">Send (demo)</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/75">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-white" aria-hidden="true"><i class="bi bi-activity"></i></span>
+          TrainHarbor.
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Personal trainer booking template with coach filters, slot picker, and local demo bookings. Fictional Harbor City brand.</p>
+      </div>
+      <nav aria-label="Train">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Train</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#coaches">Coaches</a></li>
+          <li><a class="hover:text-brand-soft" href="#booking">Scheduler</a></li>
+          <li><a class="hover:text-brand-soft" href="#plans">Plans</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Visit">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Visit</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#studio">Studio</a></li>
+          <li><a class="hover:text-brand-soft" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand-soft" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#0c1824] p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft font-black text-brand" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand-soft hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> TrainHarbor. Fictional sample. No live payments.</span>
+      <span>Built by <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="pt-toast" id="ptToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="ptToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="ptToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
