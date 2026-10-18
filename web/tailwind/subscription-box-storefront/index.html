@@ -1,2 +1,486 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subbu Curated — Every box. A new little joy.</title><meta name="description" content="Thoughtfully chosen essentials and unexpected discoveries, delivered every month."><meta name="theme-color" content="#525f99"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="" data-template="subscription-box-storefront" style="--brand:#525f99;--soft:#eef0fa;"><a class="skip-link" href="#main">Skip to content</a><div class="container"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">S</span>Subbu Curated</a><nav aria-label="Main navigation"><a href="#collection">Discover</a><a href="#about">Our story</a><a href="#contact">Get in touch</a></nav><button class="primary" data-action="modal" data-title="Hello from Subbu Curated" data-kind="Send inquiry">Say hello</button></header><main id="main"><section class="hero"><div class="hero-copy"><p class="eyebrow">A LITTLE SOMETHING TO LOOK FORWARD TO.</p><h1>Every box.<br>A new little joy.</h1><p>Thoughtfully chosen essentials and unexpected discoveries, delivered every month.</p><div class="hero-actions"><a class="primary" href="#collection">Find your box <span aria-hidden="true">↗</span></a><a class="text-button" href="#about">See what’s inside →</a></div><div class="proof"><div class="avatars"><span>P</span><span>S</span><span>S</span></div><div><span class="stars">★★★★★</span><br>Loved by Poluru, Subra &amp; Subbu</div></div></div><div class="hero-media"><img class="" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Every box. A new little joy." loading="lazy" width="1200" height="800"><div class="hero-note"><span class="eyebrow">A LITTLE MORE EVERYDAY</span><strong>Find your kind of extraordinary</strong>Thoughtfully chosen. Ready for you.</div></div></section><section id="about" class="feature-grid"><div><b>01 /</b><h3>Choose your little joy</h3><p>Find a box that speaks to the things you love.</p></div><div><b>02 /</b><h3>Leave the discovery to us</h3><p>Poluru, Subra, and Subbu find the small makers worth knowing.</p></div><div><b>03 /</b><h3>Make room for a surprise</h3><p>A thoughtful delivery. A reason to slow down and enjoy.</p></div></section><section id="collection" class="section"><div class="section-head"><div><p class="eyebrow">MADE FOR YOUR EVERYDAY</p><h2>A box that feels like you.</h2></div><p>Thoughtfully made for wherever you are right now.</p></div><div class="grid"><article class="product-card" data-search="The Slow Morning Specialty coffee, small-batch treats, and a moment to yourself. Bestseller" data-category="Bestseller"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The Slow Morning" loading="lazy" width="1200" height="800"><span class="image-tag">Bestseller</span><button class="favorite" aria-label="Save The Slow Morning" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Specialty coffee, small-batch treats, and a moment to yourself.</p><h3>The Slow Morning</h3><div class="card-bottom"><strong>$29 / month</strong><button class="text-button" data-action="modal" data-title="The Slow Morning" data-kind="Choose box">Choose box</button></div></div></article><article class="product-card" data-search="The Little Green Box Seasonal greenery and lovely things for your home. For your space" data-category="For your space"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The Little Green Box" loading="lazy" width="1200" height="800"><span class="image-tag">For your space</span><button class="favorite" aria-label="Save The Little Green Box" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">Seasonal greenery and lovely things for your home.</p><h3>The Little Green Box</h3><div class="card-bottom"><strong>$35 / month</strong><button class="text-button" data-action="modal" data-title="The Little Green Box" data-kind="Choose box">Choose box</button></div></div></article><article class="product-card" data-search="The Curious Mind A great read, a fresh notebook, and room for ideas. For your mind" data-category="For your mind"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The Curious Mind" loading="lazy" width="1200" height="800"><span class="image-tag">For your mind</span><button class="favorite" aria-label="Save The Curious Mind" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">A great read, a fresh notebook, and room for ideas.</p><h3>The Curious Mind</h3><div class="card-bottom"><strong>$32 / month</strong><button class="text-button" data-action="modal" data-title="The Curious Mind" data-kind="Choose box">Choose box</button></div></div></article></div></section><section class="banner" id="contact"><div><h2>Your next chapter starts here.</h2><p>Let’s find the right fit for you.</p></div><button class="primary" data-action="modal" data-title="Your next chapter starts here." data-kind="Send inquiry">Get in touch</button></section></main><footer class="site-footer"><span class="brand">Subbu Curated<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  BoxHarbor — Subscription box storefront
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoxHarbor — Curated subscription boxes, delivered monthly</title>
+  <meta name="description" content="BoxHarbor is a fictional subscription box storefront for Harbor City: browse themes, save favorites, and demo cart. By Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#000080" />
+  <link rel="canonical" href="https://polurus.com/templates/subscription-box-storefront/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BoxHarbor — Curated subscription boxes, delivered monthly" />
+  <meta property="og:description" content="Clean subscription box landing page with category filters, watchlist, and cart demo." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="BoxHarbor — Curated subscription boxes, delivered monthly" />
+  <meta name="twitter:description" content="Clean subscription box landing page with category filters, watchlist, and cart demo." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #000080;
+      --color-brand-dark: #000066;
+      --color-brand-soft: #e8e8f5;
+      --color-ink: #101820;
+      --color-muted: #5a6570;
+      --color-line: #d8d8e8;
+      --color-canvas: #f9f9fc;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "BoxHarbor — Subscription box storefront",
+        "description": "Fictional subscription box template by Subrahmanyam Poluru. No live checkout or billing.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="sb-body bg-canvas text-ink antialiased" id="top">
+  <a class="sb-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-ink text-white/85 text-sm">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-brand mr-2 align-middle" aria-hidden="true"></span>Free shipping on every box · skip or pause anytime · Harbor City</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-white hover:text-brand-soft" href="tel:+15125550909"><i class="bi bi-telephone"></i> (512) 555-0909</a>
+        <span class="hidden sm:inline">Gift subscriptions · demo storefront</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="sbHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white" aria-hidden="true"><i class="bi bi-box-seam"></i></span>
+        BoxHarbor<em class="not-italic text-brand">.</em>
+      </a>
+      <div class="ml-auto flex items-center gap-2 md:order-3">
+        <a class="font-ui hidden items-center gap-2 rounded-xl border border-line bg-white px-3 py-2 text-sm font-bold text-ink hover:bg-brand-soft sm:inline-flex" href="#boxes" aria-label="Cart">
+          <i class="bi bi-bag"></i> Cart <span class="grid min-w-[1.25rem] place-items-center rounded-full bg-brand px-1.5 text-xs text-white" id="sbCartCount">0</span>
+        </a>
+        <button class="font-ui inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="sbNavToggle" aria-expanded="false" aria-controls="sbNavPanel" aria-label="Open menu">
+          <i class="bi bi-list text-lg"></i>
+        </button>
+      </div>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex md:order-2" aria-label="Primary">
+        <a class="hover:text-ink" href="#boxes">Boxes</a>
+        <a class="hover:text-ink" href="#how">How it works</a>
+        <a class="hover:text-ink" href="#customize">Customize</a>
+        <a class="hover:text-ink" href="#gift">Gifts</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-white hover:bg-brand-dark md:order-4 md:inline-flex" href="#boxes">Shop boxes</a>
+    </div>
+    <div class="sb-nav-open border-t border-line bg-canvas md:hidden" id="sbNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#boxes">Boxes</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#how">How it works</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#customize">Customize</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#gift">Gifts</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-white" href="#boxes">Shop boxes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-canvas px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="sb-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Harbor City unboxing</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-tight md:text-5xl">Monthly boxes you’ll actually use.</h1>
+          <p class="mt-4 max-w-lg text-muted">Snacks, wellness, books, and kid-friendly surprises — curated by the Harbor team. Filter, save, and try the subscribe demo. No billing backend.</p>
+          <form class="mt-8 flex flex-col gap-3 sm:flex-row" id="sbHeroSearch">
+            <label class="sr-only" for="sbHeroQuery">Search boxes</label>
+            <input class="font-ui flex-1 rounded-xl border border-line bg-white px-4 py-3 text-sm font-semibold text-ink placeholder:text-muted/70 focus:border-brand" id="sbHeroQuery" type="search" placeholder="Theme, mood, or keyword…" autocomplete="off" />
+            <button class="font-ui rounded-xl bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark" type="submit">Search boxes</button>
+          </form>
+          <ul class="mt-8 flex flex-wrap gap-6 text-sm text-muted">
+            <li class="flex items-center gap-2"><i class="bi bi-truck text-brand"></i> Always free shipping</li>
+            <li class="flex items-center gap-2"><i class="bi bi-pause-circle text-brand"></i> Pause or skip a month</li>
+            <li class="flex items-center gap-2"><i class="bi bi-recycle text-brand"></i> Recyclable packaging</li>
+          </ul>
+        </div>
+        <div class="sb-reveal overflow-hidden rounded-2xl border border-line bg-white p-3 shadow-sm">
+          <img class="aspect-[4/3] w-full rounded-xl object-cover" src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Gift-wrapped subscription box with ribbon on a table" width="1200" height="900" loading="eager" />
+          <p class="font-ui mt-3 text-center text-xs font-bold uppercase tracking-wider text-muted">April curation · 6–8 items per box</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="boxes">
+      <div class="mx-auto max-w-6xl">
+        <div class="sb-reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Subscriptions</p>
+            <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Choose your box</h2>
+            <p class="mt-2 text-muted">Monthly plans shown as sample pricing. Cart count persists in your browser only.</p>
+          </div>
+          <p class="font-ui text-sm font-bold text-brand" id="sbResult">6 boxes</p>
+        </div>
+
+        <div class="sb-reveal mt-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Category filters">
+            <button class="font-ui rounded-full border border-brand bg-brand px-4 py-2 text-xs font-black uppercase tracking-wide text-white" type="button" data-sb-filter="all" aria-pressed="true">All</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-sb-filter="snacks" aria-pressed="false">Snacks</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-sb-filter="wellness" aria-pressed="false">Wellness</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-sb-filter="books" aria-pressed="false">Books</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-muted" type="button" data-sb-filter="kids" aria-pressed="false">Kids</button>
+          </div>
+          <label class="font-ui flex items-center gap-2 text-sm font-bold text-muted">
+            <span class="sr-only">Search boxes</span>
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input class="w-full min-w-[14rem] rounded-xl border border-line bg-canvas px-3 py-2 text-ink lg:w-64" id="sbSearch" type="search" placeholder="Search…" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="sb-box-grid mt-10">
+          <article class="sb-box sb-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-category="snacks" data-search="Harbor Bites Subra snacks artisan">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Snacks · Monthly</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Harbor Bites</h3>
+              <p class="mt-2 text-sm text-muted">Small-batch treats from Harbor makers — sweet, savory, and seasonal.</p>
+              <p class="mt-2 text-xs text-muted">Curated by Subra Poluru</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$29<span class="text-sm font-bold text-muted">/mo</span></span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-sb-save="bites" aria-pressed="false" aria-label="Save Harbor Bites"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-sb-subscribe="Harbor Bites">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sb-box sb-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-category="wellness" data-search="Calm Crate Poluru wellness self-care">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1612817288484-6f916006177a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Wellness · Monthly</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Calm Crate</h3>
+              <p class="mt-2 text-sm text-muted">Teas, balms, and quiet rituals for reset weekends.</p>
+              <p class="mt-2 text-xs text-muted">Curated by Poluru N.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$34<span class="text-sm font-bold text-muted">/mo</span></span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-sb-save="calm" aria-pressed="false" aria-label="Save Calm Crate"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-sb-subscribe="Calm Crate">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sb-box sb-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-category="books" data-search="Page Harbor Subbu reading fiction">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Books · Monthly</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Page Harbor</h3>
+              <p class="mt-2 text-sm text-muted">One featured title plus short reads and stationery.</p>
+              <p class="mt-2 text-xs text-muted">Curated by Subbu K.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$32<span class="text-sm font-bold text-muted">/mo</span></span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-sb-save="page" aria-pressed="false" aria-label="Save Page Harbor"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-sb-subscribe="Page Harbor">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sb-box sb-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-category="kids" data-search="Little Lighthouse kids Mara crafts">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Kids · Monthly</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Little Lighthouse</h3>
+              <p class="mt-2 text-sm text-muted">Ages 4–8 · crafts, stories, and screen-free play.</p>
+              <p class="mt-2 text-xs text-muted">Curated by Mara Poluru</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$27<span class="text-sm font-bold text-muted">/mo</span></span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-sb-save="lighthouse" aria-pressed="false" aria-label="Save Little Lighthouse"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-sb-subscribe="Little Lighthouse">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sb-box sb-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-category="wellness" data-search="Move &amp; Fuel fitness protein">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Wellness · Monthly</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Move &amp; Fuel</h3>
+              <p class="mt-2 text-sm text-muted">Protein samples, recovery tools, and workout-friendly snacks.</p>
+              <p class="mt-2 text-xs text-muted">Harbor Fitness desk</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$36<span class="text-sm font-bold text-muted">/mo</span></span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-sb-save="fuel" aria-pressed="false" aria-label="Save Move and Fuel"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-sb-subscribe="Move &amp; Fuel">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sb-box sb-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-category="snacks" data-search="Coffee Pier beans Harbor morning">
+            <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand">Snacks · Monthly</p>
+              <h3 class="font-display mt-1 text-lg font-bold">Coffee Pier</h3>
+              <p class="mt-2 text-sm text-muted">Rotating roasts, pour-over gear, and pier-side tasting notes.</p>
+              <p class="mt-2 text-xs text-muted">Harbor Roasters collab</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display text-xl font-black">$31<span class="text-sm font-bold text-muted">/mo</span></span>
+                <div class="flex gap-2">
+                  <button class="grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-brand hover:bg-brand-soft" type="button" data-sb-save="coffee" aria-pressed="false" aria-label="Save Coffee Pier"><i class="bi bi-bookmark"></i></button>
+                  <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-white hover:bg-brand-dark" type="button" data-sb-subscribe="Coffee Pier">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="sb-reveal mt-10 rounded-xl border border-dashed border-line bg-brand-soft p-8 text-center text-muted" id="sbEmpty" hidden>No matching boxes. Try another category or search.</p>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="how">
+      <div class="mx-auto max-w-6xl">
+        <div class="sb-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">How it works</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Subscribe in three steps</h2>
+        </div>
+        <ol class="mt-10 grid gap-6 md:grid-cols-3">
+          <li class="sb-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display text-4xl font-black text-brand">1</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Pick a box</h3>
+            <p class="mt-2 text-sm text-muted">Filter by category or search keywords in the demo catalog.</p>
+          </li>
+          <li class="sb-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display text-4xl font-black text-brand">2</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Set preferences</h3>
+            <p class="mt-2 text-sm text-muted">Tell us dietary notes and gift options — saved locally in this template.</p>
+          </li>
+          <li class="sb-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display text-4xl font-black text-brand">3</span>
+            <h3 class="font-display mt-3 text-xl font-bold">Unbox monthly</h3>
+            <p class="mt-2 text-sm text-muted">Ships from Harbor City on the 15th. Connect Stripe for real billing.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="customize">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="sb-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Customize</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Tailor your Harbor box</h2>
+          <p class="mt-4 text-muted">Sample preference form — use it as UI for onboarding or account settings in your app.</p>
+        </div>
+        <form class="sb-reveal space-y-4 rounded-2xl border border-line bg-canvas p-6" id="sbCustomizeForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="sbDiet">Dietary notes</label>
+            <select class="font-ui mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold" id="sbDiet" name="diet">
+              <option value="none">No restrictions</option>
+              <option value="veg">Vegetarian-friendly</option>
+              <option value="gf">Gluten-aware</option>
+              <option value="nut-free">Nut-free when possible</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="sbFrequency">Billing cadence</label>
+            <select class="font-ui mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold" id="sbFrequency" name="frequency">
+              <option value="monthly">Monthly</option>
+              <option value="quarterly">Every 3 months (demo)</option>
+              <option value="annual">Annual prepay (demo)</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="sbNotes">Allergies or favorites</label>
+            <textarea class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm" id="sbNotes" name="notes" rows="3" placeholder="e.g. no lavender, love dark chocolate"></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-brand py-3 text-sm font-bold text-white hover:bg-brand-dark" type="submit">Save preferences (demo)</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="gift">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div class="sb-reveal overflow-hidden rounded-2xl border border-line bg-white p-3">
+          <img class="aspect-[4/3] w-full rounded-xl object-cover" src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Wrapped gift boxes with ribbon" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="sb-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Gifts</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Send a box to someone you love</h2>
+          <p class="mt-4 text-muted">3-, 6-, or 12-month gift codes — this form captures intent only for the demo.</p>
+          <form class="mt-6 space-y-4" id="sbGiftForm">
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="sbGiftEmail">Recipient email</label>
+              <input class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm" id="sbGiftEmail" name="email" type="email" required />
+            </div>
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="sbGiftMsg">Gift message</label>
+              <textarea class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2 text-sm" id="sbGiftMsg" name="message" rows="3" required></textarea>
+            </div>
+            <button class="font-ui rounded-xl bg-brand px-6 py-3 text-sm font-bold text-white hover:bg-brand-dark" type="submit">Preview gift (demo)</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14">
+      <div class="mx-auto max-w-6xl">
+        <div class="sb-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">Unboxings</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">What subscribers say</h2>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <blockquote class="sb-reveal rounded-2xl border border-line bg-canvas p-5">
+            <p class="text-sm text-muted">“Harbor Bites introduced us to three local makers we now order from directly.”</p>
+            <footer class="font-ui mt-3 text-xs font-bold text-brand">— Poluru family, Pier District</footer>
+          </blockquote>
+          <blockquote class="sb-reveal rounded-2xl border border-line bg-canvas p-5">
+            <p class="text-sm text-muted">“Calm Crate is our Sunday reset. No clutter, just useful self-care.”</p>
+            <footer class="font-ui mt-3 text-xs font-bold text-brand">— Subra P.</footer>
+          </blockquote>
+          <blockquote class="sb-reveal rounded-2xl border border-line bg-canvas p-5">
+            <p class="text-sm text-muted">“Little Lighthouse keeps our kids excited for mail day — worth every dollar.”</p>
+            <footer class="font-ui mt-3 text-xs font-bold text-brand">— Subbu K.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="faq">
+      <div class="mx-auto max-w-3xl">
+        <div class="sb-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Subscription questions</h2>
+        </div>
+        <div class="sb-reveal mt-8 space-y-4">
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">When am I charged?</summary>
+            <p class="mt-3 text-sm text-muted">This template does not process payments. In production, charge on subscribe and on each renewal date.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Can I skip a month?</summary>
+            <p class="mt-3 text-sm text-muted">Copy explains pause/skip — wire your subscription engine (Stripe Billing, etc.) to enforce it.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Is shipping really free?</summary>
+            <p class="mt-3 text-sm text-muted">Yes in this fictional brand. Adjust pricing tables for your real shipping rules.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-5 py-12 text-white" id="contact">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="sb-reveal">
+          <h2 class="font-display text-2xl font-black md:text-3xl">Need help choosing a box?</h2>
+          <p class="mt-2 text-sm text-white/85">Corporate gifts, bulk orders, or accessibility requests — contact form is demo-only.</p>
+          <p class="mt-4 text-sm"><a class="font-bold underline decoration-white/40 hover:decoration-white" href="mailto:hello@boxharbor.demo">hello@boxharbor.demo</a></p>
+        </div>
+        <form class="sb-reveal space-y-4 rounded-2xl border border-white/20 bg-white/5 p-6" id="sbContactForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-white/70" for="sbName">Name</label>
+            <input class="mt-1 w-full rounded-xl border border-white/25 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50" id="sbName" name="name" required />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-white/70" for="sbEmail">Email</label>
+            <input class="mt-1 w-full rounded-xl border border-white/25 bg-white/10 px-3 py-2 text-sm text-white" id="sbEmail" name="email" type="email" required />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-white/70" for="sbMessage">Message</label>
+            <textarea class="mt-1 w-full rounded-xl border border-white/25 bg-white/10 px-3 py-2 text-sm text-white" id="sbMessage" name="message" rows="3" required></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-white py-3 text-sm font-bold text-brand hover:bg-brand-soft" type="submit">Send (demo)</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/75">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-white" aria-hidden="true"><i class="bi bi-box-seam"></i></span>
+          BoxHarbor.
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Subscription box storefront with category filters, watchlist, and cart demo. Fictional Harbor City brand.</p>
+      </div>
+      <nav aria-label="Shop">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Shop</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#boxes">All boxes</a></li>
+          <li><a class="hover:text-brand-soft" href="#customize">Customize</a></li>
+          <li><a class="hover:text-brand-soft" href="#gift">Gifts</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Help</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand-soft" href="#how">How it works</a></li>
+          <li><a class="hover:text-brand-soft" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand-soft" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#0c1824] p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft font-black text-brand" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand-soft hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> BoxHarbor. Fictional sample. No live billing.</span>
+      <span>Built by <a class="text-brand-soft hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="sb-toast" id="sbToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="sbToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="sbToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
