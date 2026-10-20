@@ -1,2 +1,605 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subbu &amp; Friends — Your new best friend is out there.</title><meta name="description" content="Meet wonderful companions waiting for a place in your heart and your home."><meta name="theme-color" content="#a25c2d"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="" data-template="pet-adoption-platform" style="--brand:#a25c2d;--soft:#fcf0df;"><a class="skip-link" href="#main">Skip to content</a><div class="container"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">S</span>Subbu & Friends</a><nav aria-label="Main navigation"><a href="#collection">Discover</a><a href="#about">Our story</a><a href="#contact">Get in touch</a></nav><button class="primary" data-action="modal" data-title="Hello from Subbu &amp; Friends" data-kind="Send inquiry">Say hello</button></header><main id="main"><section class="hero"><div class="hero-copy"><p class="eyebrow">A LITTLE LOVE CHANGES EVERYTHING.</p><h1>Your new best friend<br>is out there.</h1><p>Meet wonderful companions waiting for a place in your heart and your home.</p><div class="hero-actions"><a class="primary" href="#collection">Meet your match <span aria-hidden="true">↗</span></a><a class="text-button" href="#about">See what’s inside →</a></div><div class="proof"><div class="avatars"><span>P</span><span>S</span><span>S</span></div><div><span class="stars">★★★★★</span><br>Loved by Poluru, Subra &amp; Subbu</div></div></div><div class="hero-media"><img class="" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Your new best friend is out there." loading="lazy" width="1200" height="800"><div class="hero-note"><span class="eyebrow">A LITTLE MORE EVERYDAY</span><strong>Find your kind of extraordinary</strong>Thoughtfully chosen. Ready for you.</div></div></section><section id="collection" class="section"><div class="section-head"><div><p class="eyebrow">MADE FOR YOUR EVERYDAY</p><h2>A few faces to fall for</h2></div><p>A lifetime of love starts with a hello.</p></div><div class="filters"><button class="filter active" data-filter="All" aria-pressed="true">All</button><button class="filter " data-filter="Dogs" aria-pressed="false">Dogs</button><button class="filter " data-filter="Cats" aria-pressed="false">Cats</button><input class="search" type="search" placeholder="Search this collection…" aria-label="Search this collection"></div><div class="grid collection"><article class="product-card" data-search="Milo 2 years · Gentle soul · Medium Dogs" data-category="Dogs"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Milo" loading="lazy" width="1200" height="800"><span class="image-tag">Dogs</span><button class="favorite" aria-label="Save Milo" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">2 years · Gentle soul · Medium</p><h3>Milo</h3><div class="card-bottom"><strong>Ready for a home</strong><button class="text-button" data-action="modal" data-title="Milo" data-kind="Meet Milo">Meet Milo</button></div></div></article><article class="product-card" data-search="Cleo 1 year · Curious companion · Small Cats" data-category="Cats"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Cleo" loading="lazy" width="1200" height="800"><span class="image-tag">Cats</span><button class="favorite" aria-label="Save Cleo" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">1 year · Curious companion · Small</p><h3>Cleo</h3><div class="card-bottom"><strong>Ready for a home</strong><button class="text-button" data-action="modal" data-title="Cleo" data-kind="Meet Cleo">Meet Cleo</button></div></div></article><article class="product-card" data-search="Sunny 3 years · Adventure buddy · Medium Dogs" data-category="Dogs"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sunny" loading="lazy" width="1200" height="800"><span class="image-tag">Dogs</span><button class="favorite" aria-label="Save Sunny" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">3 years · Adventure buddy · Medium</p><h3>Sunny</h3><div class="card-bottom"><strong>Ready for a home</strong><button class="text-button" data-action="modal" data-title="Sunny" data-kind="Meet Sunny">Meet Sunny</button></div></div></article><p class="empty" hidden>No matches yet. Try another search or category.</p></div></section><section id="about" class="feature-grid"><div><b>01 /</b><h3>Find a connection</h3><p>Explore each companion’s personality and find the right fit.</p></div><div><b>02 /</b><h3>Say hello</h3><p>Meet your new friend and talk with their care team.</p></div><div><b>03 /</b><h3>Bring love home</h3><p>We’ll help you prepare for a happy beginning together.</p></div></section><section class="banner" id="contact"><div><h2>Something good starts here.</h2><p>A lifetime of love starts with a hello.</p></div><button class="primary" data-action="modal" data-title="Something good starts here." data-kind="Send inquiry">Get in touch</button></section></main><footer class="site-footer"><span class="brand">Subbu & Friends<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  Pawlane — Pet adoption platform
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawlane — A quieter way to bring someone home</title>
+  <meta name="description" content="Pawlane is a fictional pet adoption platform for Austin: browse dogs, cats, and small companions, save favorites, and send a demo meet request. By Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#FFC349" />
+  <link rel="canonical" href="https://polurus.com/templates/pet-adoption-platform/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pawlane — A quieter way to bring someone home" />
+  <meta property="og:description" content="Clean pet adoption landing page with species filters, saved companions, and demo meet requests." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pawlane — A quieter way to bring someone home" />
+  <meta name="twitter:description" content="Clean pet adoption landing page with species filters, saved companions, and demo meet requests." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #ffc349;
+      --color-brand-dark: #f0b42e;
+      --color-brand-ink: #7a5200;
+      --color-brand-soft: #fff4d6;
+      --color-ink: #1c1915;
+      --color-muted: #5e574e;
+      --color-line: #e7e0d4;
+      --color-canvas: #fbf8f3;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Pawlane — Pet adoption platform",
+        "description": "Fictional pet adoption template by Subrahmanyam Poluru. No live applications or payments.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="pl-body bg-canvas text-ink antialiased" id="top">
+  <a class="pl-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-ink text-sm text-white/85">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="mr-2 inline-block h-2 w-2 rounded-full bg-brand align-middle" aria-hidden="true"></span>Visits daily 10–6 · East Shelter, Austin · demo only</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-white hover:text-brand" href="tel:+15125550148"><i class="bi bi-telephone"></i> (512) 555-0148</a>
+        <span class="hidden sm:inline">Dogs, cats, and small companions</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="plHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-ink" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
+            <ellipse cx="6.2" cy="9" rx="2.1" ry="2.6"></ellipse>
+            <ellipse cx="11.2" cy="6.4" rx="2.1" ry="2.6"></ellipse>
+            <ellipse cx="16.4" cy="7.2" rx="2" ry="2.5"></ellipse>
+            <ellipse cx="19.2" cy="11.2" rx="1.7" ry="2.2"></ellipse>
+            <path d="M8.2 13.4c-1.2 1.6-.6 4.8 2.2 6.2 1.4.7 2.6.8 3.6.2 2.2-1.2 3.4-4.2 2.2-6.4-1-1.8-6.2-1.8-8 0z"></path>
+          </svg>
+        </span>
+        Pawlane
+      </a>
+      <div class="ml-auto flex items-center gap-2 md:order-3">
+        <button class="font-ui inline-flex items-center gap-2 rounded-xl border border-line bg-white px-3 py-2 text-sm font-bold text-ink hover:bg-brand-soft" type="button" id="plSavedNav" aria-label="Show saved companions">
+          <i class="bi bi-heart"></i>
+          <span class="hidden sm:inline">Saved</span>
+          <span class="grid min-w-[1.25rem] place-items-center rounded-full bg-brand px-1.5 text-xs text-ink" id="plSavedNavCount">0</span>
+        </button>
+        <button class="font-ui inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="plNavToggle" aria-expanded="false" aria-controls="plNavPanel" aria-label="Open menu">
+          <i class="bi bi-list text-lg"></i>
+        </button>
+      </div>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex md:order-2" aria-label="Primary">
+        <a class="hover:text-ink" href="#pets">Pets</a>
+        <a class="hover:text-ink" href="#how">How it works</a>
+        <a class="hover:text-ink" href="#stories">Stories</a>
+        <a class="hover:text-ink" href="#visit">Visit</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-ink hover:bg-brand-dark md:order-4 md:inline-flex" href="#apply">Start a request</a>
+    </div>
+    <div class="pl-nav-open border-t border-line bg-canvas md:hidden" id="plNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-ink" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#pets">Pets</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#how">How it works</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#stories">Stories</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#visit">Visit</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-ink" href="#apply">Start a request</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-canvas px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="pl-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Austin adoption</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-[1.05] tracking-tight md:text-5xl">A quieter way to bring someone home.</h1>
+          <p class="mt-4 max-w-lg text-lg text-muted">Browse dogs, cats, and small companions from partner shelters. Save the ones you like, then send a meet request. This demo stays in your browser.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a class="font-ui rounded-xl bg-brand px-6 py-3 text-center text-sm font-bold text-ink hover:bg-brand-dark" href="#pets">Browse companions</a>
+            <a class="font-ui rounded-xl border border-line bg-white px-6 py-3 text-center text-sm font-bold text-ink hover:bg-brand-soft" href="#apply">Start a meet request</a>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-2" role="group" aria-label="Jump to a species">
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-ink hover:bg-brand-soft" type="button" data-pl-jump="dogs">Dogs</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-ink hover:bg-brand-soft" type="button" data-pl-jump="cats">Cats</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-ink hover:bg-brand-soft" type="button" data-pl-jump="small">Small pets</button>
+          </div>
+        </div>
+        <figure class="pl-reveal overflow-hidden rounded-2xl border border-line bg-white">
+          <img class="aspect-[5/4] w-full object-cover" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Two dogs running together on a sunny path" width="1400" height="1120" />
+          <figcaption class="flex flex-wrap items-center justify-between gap-4 bg-brand px-5 py-4 text-ink">
+            <div>
+              <p class="font-ui text-xs font-black uppercase tracking-wide">This week’s spotlight</p>
+              <p class="font-display text-lg font-bold">Milo · 2 years · gentle with kids</p>
+            </div>
+            <a class="font-ui shrink-0 rounded-xl bg-ink px-4 py-2 text-sm font-bold text-white" href="#milo">See Milo</a>
+          </figcaption>
+        </figure>
+      </div>
+      <dl class="mx-auto mt-12 grid max-w-6xl gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white px-5 py-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-muted">Ready now</dt>
+          <dd class="font-display mt-1 text-3xl font-black">86</dd>
+        </div>
+        <div class="bg-white px-5 py-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-muted">Partner shelters</dt>
+          <dd class="font-display mt-1 text-3xl font-black">14</dd>
+        </div>
+        <div class="bg-white px-5 py-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-muted">Family rating</dt>
+          <dd class="font-display mt-1 text-3xl font-black">4.9</dd>
+        </div>
+        <div class="bg-white px-5 py-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-muted">Typical sample fee</dt>
+          <dd class="font-display mt-1 text-3xl font-black">$85</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="pets">
+      <div class="mx-auto max-w-6xl">
+        <div class="pl-reveal flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Companions</p>
+            <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Meet who is waiting</h2>
+            <p class="mt-2 max-w-xl text-muted">Filter by species or search a name. Hearts stay on this device. Fees are sample copy, not a checkout.</p>
+          </div>
+          <p class="font-ui text-sm font-bold text-brand-ink" id="plPetCount">8 companions</p>
+        </div>
+
+        <div class="pl-reveal mt-8 flex flex-col gap-3 lg:flex-row lg:items-center">
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Species filters">
+            <button class="font-ui rounded-full border border-brand bg-brand px-4 py-2 text-xs font-black uppercase tracking-wide text-ink" type="button" data-pl-filter="all" aria-pressed="true">All</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-ink" type="button" data-pl-filter="dogs" aria-pressed="false">Dogs</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-ink" type="button" data-pl-filter="cats" aria-pressed="false">Cats</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-xs font-black uppercase tracking-wide text-ink" type="button" data-pl-filter="small" aria-pressed="false">Small pets</button>
+          </div>
+          <div class="flex flex-1 flex-col gap-3 sm:flex-row lg:justify-end">
+            <label class="sr-only" for="plSearch">Search companions</label>
+            <input class="font-ui w-full rounded-xl border border-line bg-canvas px-4 py-2.5 text-sm sm:max-w-xs" id="plSearch" type="search" placeholder="Search name, breed, or trait" />
+            <button class="font-ui inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-white px-4 py-2.5 text-sm font-bold text-ink" type="button" id="plSavedToggle" aria-pressed="false">
+              <i class="bi bi-heart"></i> Saved <span id="plSavedCount">0</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="pl-pet-grid mt-10">
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" id="milo" data-id="milo" data-species="dogs" data-search="milo golden retriever mix gentle kids medium east shelter">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Golden retriever looking at the camera" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Dog</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="milo" data-pl-name="Milo" aria-pressed="false" aria-label="Save Milo"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">2 years · Medium · East Shelter</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Milo</h3>
+              <p class="mt-1 text-sm text-muted">Golden retriever mix. Gentle, house-trained, and easy with children.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">$85 <span class="text-sm font-bold text-muted">sample fee</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="milo" data-pl-name="Milo">Meet Milo</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-id="cleo" data-species="cats" data-search="cleo domestic shorthair curious apartment small riverside">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Grey cat with green eyes" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Cat</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="cleo" data-pl-name="Cleo" aria-pressed="false" aria-label="Save Cleo"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">1 year · Small · Riverside</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Cleo</h3>
+              <p class="mt-1 text-sm text-muted">Curious shorthair who settles quickly in apartments and likes a window seat.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">$65 <span class="text-sm font-bold text-muted">sample fee</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="cleo" data-pl-name="Cleo">Meet Cleo</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-id="sunny" data-species="dogs" data-search="sunny labrador active yard large east shelter">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Labrador sitting outdoors" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Dog</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="sunny" data-pl-name="Sunny" aria-pressed="false" aria-label="Save Sunny"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">4 years · Large · East Shelter</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Sunny</h3>
+              <p class="mt-1 text-sm text-muted">Labrador who wants a yard, a long walk, and a person who likes mornings.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">$90 <span class="text-sm font-bold text-muted">sample fee</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="sunny" data-pl-name="Sunny">Meet Sunny</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-id="nori" data-species="cats" data-search="nori senior tabby calm lap medium riverside">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Tabby cat sitting and looking aside" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Cat</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="nori" data-pl-name="Nori" aria-pressed="false" aria-label="Save Nori"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">9 years · Medium · Riverside</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Nori</h3>
+              <p class="mt-1 text-sm text-muted">Senior tabby. Quiet, already litter trained, happiest on a lap in the afternoon.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">Fee waived</span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="nori" data-pl-name="Nori">Meet Nori</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-id="otto" data-species="dogs" data-search="otto mixed puppy playful training medium north kennel">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Young dog with a calm expression" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Dog</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="otto" data-pl-name="Otto" aria-pressed="false" aria-label="Save Otto"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">5 months · Medium · North Kennel</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Otto</h3>
+              <p class="mt-1 text-sm text-muted">Mixed puppy in basic training. Best with a home that can keep a short daily routine.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">$120 <span class="text-sm font-bold text-muted">sample fee</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="otto" data-pl-name="Otto">Meet Otto</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-id="luna" data-species="dogs" data-search="luna corgi mix bright cats small east shelter">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Corgi standing in grass" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Dog</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="luna" data-pl-name="Luna" aria-pressed="false" aria-label="Save Luna"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">3 years · Small · East Shelter</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Luna</h3>
+              <p class="mt-1 text-sm text-muted">Corgi mix with a bright pace. Already shares space calmly with resident cats.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">$95 <span class="text-sm font-bold text-muted">sample fee</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="luna" data-pl-name="Luna">Meet Luna</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-id="pepper" data-species="small" data-search="pepper holland lop rabbit quiet small friends">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Light brown rabbit sitting on a white surface" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Small</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="pepper" data-pl-name="Pepper" aria-pressed="false" aria-label="Save Pepper"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">2 years · Small · Small Friends</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Pepper</h3>
+              <p class="mt-1 text-sm text-muted">Holland lop. Quiet, litter-box familiar, and available with a bonded partner.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">$40 <span class="text-sm font-bold text-muted">sample fee</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="pepper" data-pl-name="Pepper">Meet Pepper</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pl-pet pl-reveal overflow-hidden rounded-2xl border border-line bg-canvas" data-id="bean" data-species="cats" data-search="bean kitten social foster small riverside">
+            <div class="relative">
+              <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Small kitten sitting upright" width="900" height="675" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-black uppercase tracking-wide text-ink">Cat</span>
+              <button class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl border border-line bg-white text-ink hover:bg-brand-soft" type="button" data-pl-fav="bean" data-pl-name="Bean" aria-pressed="false" aria-label="Save Bean"><i class="bi bi-heart"></i></button>
+            </div>
+            <div class="p-4">
+              <p class="font-ui text-xs font-bold uppercase tracking-wide text-brand-ink">4 months · Small · Riverside</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Bean</h3>
+              <p class="mt-1 text-sm text-muted">Foster-raised kitten. Social with people and ready for a second young cat in the home.</p>
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <span class="font-display text-lg font-black">$75 <span class="text-sm font-bold text-muted">sample fee</span></span>
+                <button class="font-ui rounded-xl bg-brand px-3 py-2 text-xs font-bold text-ink hover:bg-brand-dark" type="button" data-pl-meet="bean" data-pl-name="Bean">Meet Bean</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="mt-8 rounded-2xl border border-dashed border-line bg-canvas px-5 py-8 text-center text-muted" id="plEmpty" hidden>No companions match that search. Try another species or clear the saved filter.</p>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="how">
+      <div class="mx-auto max-w-6xl">
+        <div class="pl-reveal max-w-2xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">How it works</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Three calm steps</h2>
+          <p class="mt-2 text-muted">The real shelter would confirm visits by email. Here, the request is stored only in this browser.</p>
+        </div>
+        <ol class="mt-10 grid gap-4 md:grid-cols-3">
+          <li class="pl-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display grid h-12 w-12 place-items-center rounded-xl bg-brand text-2xl font-black text-ink">1</span>
+            <h3 class="font-display mt-4 text-xl font-bold">Choose a companion</h3>
+            <p class="mt-2 text-sm text-muted">Read age, size, and temperament. Save a short list before you decide.</p>
+          </li>
+          <li class="pl-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display grid h-12 w-12 place-items-center rounded-xl bg-brand text-2xl font-black text-ink">2</span>
+            <h3 class="font-display mt-4 text-xl font-bold">Send a meet request</h3>
+            <p class="mt-2 text-sm text-muted">Tell us your home type. A coordinator would reply with open visit times.</p>
+          </li>
+          <li class="pl-reveal rounded-2xl border border-line bg-white p-6">
+            <span class="font-display grid h-12 w-12 place-items-center rounded-xl bg-brand text-2xl font-black text-ink">3</span>
+            <h3 class="font-display mt-4 text-xl font-bold">Visit, then decide</h3>
+            <p class="mt-2 text-sm text-muted">Meet in person at East Shelter. Adoption paperwork stays with the shelter team.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="apply">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="pl-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Meet request</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Tell us who you want to meet</h2>
+          <p class="mt-3 text-muted">Pick a companion and leave a note about your home. Submitting saves a demo record on this device. Nothing is emailed and no fee is charged.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex gap-3"><i class="bi bi-check2 text-brand-ink"></i> Same-week visits when the shelter calendar is open</li>
+            <li class="flex gap-3"><i class="bi bi-check2 text-brand-ink"></i> Sample fees cover vaccines and a starter kit in the story only</li>
+            <li class="flex gap-3"><i class="bi bi-check2 text-brand-ink"></i> You can remove a saved request at any time</li>
+          </ul>
+          <div class="mt-8">
+            <h3 class="font-display text-lg font-bold">Your demo requests</h3>
+            <p class="mt-2 text-sm text-muted" id="plInquiryEmpty">No meet requests yet.</p>
+            <ul class="pl-inquiry-list mt-3" id="plInquiryList"></ul>
+          </div>
+        </div>
+        <form class="pl-reveal space-y-4 rounded-2xl border border-line bg-canvas p-6" id="plApplyForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="plPetSelect">Companion</label>
+            <select class="font-ui mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold" id="plPetSelect" name="pet" required>
+              <option value="milo">Milo — Golden retriever mix</option>
+              <option value="cleo">Cleo — Domestic shorthair</option>
+              <option value="sunny">Sunny — Labrador</option>
+              <option value="nori">Nori — Senior tabby</option>
+              <option value="otto">Otto — Mixed puppy</option>
+              <option value="luna">Luna — Corgi mix</option>
+              <option value="pepper">Pepper — Holland lop</option>
+              <option value="bean">Bean — Kitten</option>
+            </select>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="plApplyName">Your name</label>
+              <input class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm" id="plApplyName" name="name" required autocomplete="name" maxlength="80" />
+            </div>
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="plApplyEmail">Email</label>
+              <input class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm" id="plApplyEmail" name="email" type="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="plApplyHome">Home</label>
+            <select class="font-ui mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm font-semibold" id="plApplyHome" name="home" required>
+              <option value="Apartment">Apartment</option>
+              <option value="House, no yard">House, no yard</option>
+              <option value="House with yard">House with yard</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="plApplyNote">Note for the shelter</label>
+            <textarea class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm" id="plApplyNote" name="note" rows="4" maxlength="500" placeholder="Other pets, schedule, or questions"></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-brand py-3 text-sm font-bold text-ink hover:bg-brand-dark" type="submit">Save meet request</button>
+          <p class="text-xs text-muted">By sending this demo you agree it is stored locally and is not an adoption application.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="stories">
+      <div class="mx-auto max-w-6xl">
+        <div class="pl-reveal max-w-2xl">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Stories</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Homes that started with a visit</h2>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <figure class="pl-reveal rounded-2xl border border-line bg-white p-6">
+            <div class="font-ui grid h-11 w-11 place-items-center rounded-xl bg-brand font-black text-ink" aria-hidden="true">AP</div>
+            <blockquote class="mt-4 text-sm leading-relaxed text-ink">“Milo settled in by the second evening. The visit was unhurried, and the team answered every question about walks.”</blockquote>
+            <figcaption class="mt-4 text-sm text-muted">Asha Poluru · adopted a retriever mix</figcaption>
+          </figure>
+          <figure class="pl-reveal rounded-2xl border border-line bg-white p-6">
+            <div class="font-ui grid h-11 w-11 place-items-center rounded-xl bg-brand font-black text-ink" aria-hidden="true">RN</div>
+            <blockquote class="mt-4 text-sm leading-relaxed text-ink">“We wanted a quiet cat for a small apartment. Cleo’s profile matched, and the meet-and-greet confirmed it.”</blockquote>
+            <figcaption class="mt-4 text-sm text-muted">Ravi N. · Riverside foster</figcaption>
+          </figure>
+          <figure class="pl-reveal rounded-2xl border border-line bg-white p-6">
+            <div class="font-ui grid h-11 w-11 place-items-center rounded-xl bg-brand font-black text-ink" aria-hidden="true">SK</div>
+            <blockquote class="mt-4 text-sm leading-relaxed text-ink">“Pepper came home with a simple care sheet. The fee was clear before we ever filled out a form.”</blockquote>
+            <figcaption class="mt-4 text-sm text-muted">Subbu K. · small-pet adopter</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="visit">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="pl-reveal overflow-hidden rounded-2xl border border-line">
+          <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Dog and cat resting together indoors" width="1200" height="900" loading="lazy" />
+        </div>
+        <div class="pl-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Visit</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">East Shelter</h2>
+          <p class="mt-3 text-muted">A bright lobby, quiet meet rooms, and a yard for leash introductions. Bring a photo ID. Children are welcome with an adult.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex gap-3"><i class="bi bi-geo-alt text-brand-ink"></i> 418 Lantern Street, Austin, TX</li>
+            <li class="flex gap-3"><i class="bi bi-clock text-brand-ink"></i> Open daily, 10:00 AM – 6:00 PM</li>
+            <li class="flex gap-3"><i class="bi bi-telephone text-brand-ink"></i> (512) 555-0148 · hello@pawlane.demo</li>
+          </ul>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl border border-line bg-canvas p-4">
+              <p class="font-ui text-xs font-black uppercase tracking-wide text-brand-ink">Saturday</p>
+              <p class="font-display mt-1 font-bold">Adoption morning</p>
+              <p class="mt-1 text-sm text-muted">10 AM · first-come meet rooms</p>
+            </div>
+            <div class="rounded-2xl border border-line bg-canvas p-4">
+              <p class="font-ui text-xs font-black uppercase tracking-wide text-brand-ink">Wednesday</p>
+              <p class="font-display mt-1 font-bold">Volunteer hour</p>
+              <p class="mt-1 text-sm text-muted">4 PM · walking and social time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="faq">
+      <div class="mx-auto max-w-3xl">
+        <div class="pl-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Before you visit</h2>
+        </div>
+        <div class="pl-reveal mt-8 space-y-3">
+          <details class="rounded-xl border border-line bg-white p-4" open>
+            <summary class="font-display cursor-pointer font-bold">Is this a real shelter application?</summary>
+            <p class="mt-3 text-sm text-muted">No. Pawlane is a front-end demo. Meet requests stay in local storage and are never sent to a shelter.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Are the adoption fees charged?</summary>
+            <p class="mt-3 text-sm text-muted">Fees on the cards are sample numbers for the layout. There is no payment form.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Can I adopt if I rent?</summary>
+            <p class="mt-3 text-sm text-muted">Apartments are a home option in the demo form. A live shelter would ask for your lease pet policy.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-white p-4">
+            <summary class="font-display cursor-pointer font-bold">Where do saved pets go?</summary>
+            <p class="mt-3 text-sm text-muted">Hearts are stored in this browser. Use Saved in the header or next to search to see only those companions.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-5 py-14" id="contact">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="pl-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Contact</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Questions before a visit?</h2>
+          <p class="mt-4 text-muted">Foster interest, volunteer hours, or a question about a companion. The form is demo-only.</p>
+          <p class="mt-6 text-sm">
+            <a class="font-bold text-brand-ink hover:text-ink" href="mailto:hello@pawlane.demo">hello@pawlane.demo</a>
+          </p>
+        </div>
+        <form class="pl-reveal space-y-4 rounded-2xl border border-line bg-canvas p-6" id="plContactForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="plContactName">Name</label>
+            <input class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm" id="plContactName" name="name" required autocomplete="name" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="plContactEmail">Email</label>
+            <input class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm" id="plContactEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="plContactMsg">Message</label>
+            <textarea class="mt-1 w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm" id="plContactMsg" name="message" rows="4" required></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-brand py-3 text-sm font-bold text-ink hover:bg-brand-dark" type="submit">Send note</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white/75">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-white" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-ink" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
+              <ellipse cx="6.2" cy="9" rx="2.1" ry="2.6"></ellipse>
+              <ellipse cx="11.2" cy="6.4" rx="2.1" ry="2.6"></ellipse>
+              <ellipse cx="16.4" cy="7.2" rx="2" ry="2.5"></ellipse>
+              <ellipse cx="19.2" cy="11.2" rx="1.7" ry="2.2"></ellipse>
+              <path d="M8.2 13.4c-1.2 1.6-.6 4.8 2.2 6.2 1.4.7 2.6.8 3.6.2 2.2-1.2 3.4-4.2 2.2-6.4-1-1.8-6.2-1.8-8 0z"></path>
+            </svg>
+          </span>
+          Pawlane
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Pet adoption template with companion filters, saved favorites, and local meet requests. Fictional Austin shelters.</p>
+      </div>
+      <nav aria-label="Browse">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Browse</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand" href="#pets">Companions</a></li>
+          <li><a class="hover:text-brand" href="#how">How it works</a></li>
+          <li><a class="hover:text-brand" href="#apply">Meet request</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Shelter">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Shelter</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:text-brand" href="#visit">Visit</a></li>
+          <li><a class="hover:text-brand" href="#stories">Stories</a></li>
+          <li><a class="hover:text-brand" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-brand" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-white/40">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-white/15 bg-[#26221c] p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand font-black text-ink" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-white">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-white/65">Designer and template author. Portfolio, work, and contact on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand hover:text-white" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-white/15 px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> Pawlane. Fictional sample. No live applications.</span>
+      <span>Built by <a class="text-brand hover:text-white" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="pl-toast" id="plToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand-ink" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="plToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="plToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
