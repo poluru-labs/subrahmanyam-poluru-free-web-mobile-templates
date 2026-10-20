@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Bayline Auto — Auto repair service
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,536 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bayline Auto — Honest repair, booked in minutes</title>
+  <meta name="description" content="Bayline Auto is a fictional Austin repair shop: oil service, brakes, diagnostics, and tires. Book a demo visit in the browser. By Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#34A99D" />
+  <link rel="canonical" href="https://polurus.com/templates/auto-repair-service/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bayline Auto — Honest repair, booked in minutes" />
+  <meta property="og:description" content="Clean auto repair site with service filters, shop hours, and a demo booking form." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bayline Auto — Honest repair, booked in minutes" />
+  <meta name="twitter:description" content="Clean auto repair site with service filters, shop hours, and a demo booking form." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Bayline Auto — Auto repair service",
+        "description": "Fictional auto repair template by Subrahmanyam Poluru. No live scheduling or payments.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="ar-skip" href="#main">Skip to content</a>
+
+  <div class="ar-utility">
+    <div class="container ar-utility-inner">
+      <span><i class="ar-dot" aria-hidden="true"></i>Open Mon–Sat · 7:30 AM – 6:00 PM · Austin</span>
+      <div class="ar-utility-meta">
+        <a href="tel:+15125550194"><i class="bi bi-telephone"></i> (512) 555-0194</a>
+        <span>Same-week bays · demo booking</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top ar-nav" aria-label="Primary">
+    <div class="container">
+      <a class="ar-brand" href="#top">
+        <span class="ar-mark" aria-hidden="true"><i class="bi bi-wrench-adjustable"></i></span>
+        <span>Bayline<em>.</em></span>
+      </a>
+      <button class="ar-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="ar-btn ar-btn-ghost" href="#book">Visits <span class="ar-count" id="arVisitCount">0</span></a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="ar-btn ar-btn-primary" href="#book">Book a bay</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="ar-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 ar-reveal">
+            <p class="ar-kicker">Neighborhood repair · Austin</p>
+            <h1>Service you can read before you hand over the keys.</h1>
+            <p class="ar-lead">Bayline is a fictional shop for oil, brakes, diagnostics, and tires. Pick a service, choose a day, and save a demo visit on this device. Nothing is charged.</p>
+            <div class="ar-actions">
+              <a class="ar-btn ar-btn-primary" href="#services">Browse services</a>
+              <a class="ar-btn ar-btn-ghost" href="#book">Book a bay</a>
+            </div>
+            <ul class="ar-hero-points">
+              <li><i class="bi bi-clock"></i> Written estimates before work starts</li>
+              <li><i class="bi bi-shield-check"></i> 12-month / 12,000-mile sample warranty</li>
+              <li><i class="bi bi-geo-alt"></i> 220 Harbor Lane, Austin</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 ar-reveal">
+            <figure class="ar-figure">
+              <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Open engine bay in a bright workshop" width="1400" height="1120" />
+              <figcaption class="ar-caption">
+                <div>
+                  <p class="ar-kicker">This week</p>
+                  <p><strong>Brake and oil bays still open Thursday</strong></p>
+                </div>
+                <a class="ar-btn ar-btn-ghost" href="#book">Hold a time</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <dl class="ar-stats ar-reveal">
+          <div class="ar-stat">
+            <span>Sample jobs / week</span>
+            <strong>86</strong>
+          </div>
+          <div class="ar-stat">
+            <span>Bays</span>
+            <strong>8</strong>
+          </div>
+          <div class="ar-stat">
+            <span>Guest rating</span>
+            <strong>4.8</strong>
+          </div>
+          <div class="ar-stat">
+            <span>Loaner cars</span>
+            <strong>3</strong>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="ar-section" id="services">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 ar-reveal">
+          <div class="ar-section-head mb-0">
+            <p class="ar-kicker">Services</p>
+            <h2>Work we do every day</h2>
+            <p>Prices are sample starting points for the layout. Filter by bay, or search a job name.</p>
+          </div>
+          <p class="ar-kicker mb-md-2" id="arServiceCount">8 services</p>
+        </div>
+        <div class="ar-toolbar ar-reveal">
+          <div class="ar-filters" role="group" aria-label="Service categories">
+            <button class="ar-chip is-active" type="button" data-ar-filter="all" aria-pressed="true">All</button>
+            <button class="ar-chip" type="button" data-ar-filter="maintenance" aria-pressed="false">Maintenance</button>
+            <button class="ar-chip" type="button" data-ar-filter="brakes" aria-pressed="false">Brakes</button>
+            <button class="ar-chip" type="button" data-ar-filter="diagnostics" aria-pressed="false">Diagnostics</button>
+            <button class="ar-chip" type="button" data-ar-filter="tires" aria-pressed="false">Tires</button>
+          </div>
+          <label class="visually-hidden" for="arSearch">Search services</label>
+          <input class="ar-search" id="arSearch" type="search" placeholder="Search a service" />
+        </div>
+        <div class="ar-service-grid">
+          <article class="ar-card ar-service ar-reveal" data-category="maintenance" data-search="oil filter change maintenance">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-droplet"></i></div>
+            <p class="ar-meta">Maintenance · 45 min</p>
+            <h3>Oil and filter</h3>
+            <p>Conventional or synthetic, with a fluid top-off and a printed sticker for the windshield.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$79 <span>from</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="oil" data-ar-name="Oil and filter">Book</button>
+            </div>
+          </article>
+          <article class="ar-card ar-service ar-reveal" data-category="brakes" data-search="brake pads rotors inspection">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-disc"></i></div>
+            <p class="ar-meta">Brakes · 2 hr</p>
+            <h3>Brake service</h3>
+            <p>Pad measurement, rotor check, and a written quote before any parts are ordered.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$189 <span>from</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="brakes" data-ar-name="Brake service">Book</button>
+            </div>
+          </article>
+          <article class="ar-card ar-service ar-reveal" data-category="diagnostics" data-search="check engine light scan diagnostics">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-cpu"></i></div>
+            <p class="ar-meta">Diagnostics · 1 hr</p>
+            <h3>Check-engine scan</h3>
+            <p>Codes, freeze-frame data, and a plain-language note about what can wait.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$129 <span>from</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="scan" data-ar-name="Check-engine scan">Book</button>
+            </div>
+          </article>
+          <article class="ar-card ar-service ar-reveal" data-category="tires" data-search="tire rotation balance">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-life-preserver"></i></div>
+            <p class="ar-meta">Tires · 40 min</p>
+            <h3>Rotate and balance</h3>
+            <p>Four-wheel rotation, balance, and a tread note you can keep with the invoice.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$59 <span>from</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="rotate" data-ar-name="Rotate and balance">Book</button>
+            </div>
+          </article>
+          <article class="ar-card ar-service ar-reveal" data-category="maintenance" data-search="battery test replace">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-battery-charging"></i></div>
+            <p class="ar-meta">Maintenance · 30 min</p>
+            <h3>Battery test</h3>
+            <p>Load test and terminal clean. Replacement only if the reading says it should go.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$49 <span>test</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="battery" data-ar-name="Battery test">Book</button>
+            </div>
+          </article>
+          <article class="ar-card ar-service ar-reveal" data-category="tires" data-search="wheel alignment">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-arrows-angle-expand"></i></div>
+            <p class="ar-meta">Tires · 1 hr</p>
+            <h3>Alignment</h3>
+            <p>Four-wheel printout before and after, with a note if a part is holding the spec.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$119 <span>from</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="align" data-ar-name="Alignment">Book</button>
+            </div>
+          </article>
+          <article class="ar-card ar-service ar-reveal" data-category="diagnostics" data-search="air conditioning ac performance">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-snow"></i></div>
+            <p class="ar-meta">Diagnostics · 90 min</p>
+            <h3>A/C performance</h3>
+            <p>Vent temperature, pressure check, and a leak note. Refrigerant is quoted separately.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$159 <span>from</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="ac" data-ar-name="A/C performance">Book</button>
+            </div>
+          </article>
+          <article class="ar-card ar-service ar-reveal" data-category="maintenance" data-search="multipoint inspection">
+            <div class="ar-icon" aria-hidden="true"><i class="bi bi-clipboard-check"></i></div>
+            <p class="ar-meta">Maintenance · 45 min</p>
+            <h3>Multi-point inspection</h3>
+            <p>Belts, fluids, lights, and tires on one sheet. Useful before a trip or a sale.</p>
+            <div class="ar-service-foot">
+              <span class="ar-price">$49 <span>flat</span></span>
+              <button class="ar-btn ar-btn-primary" type="button" data-ar-book="inspect" data-ar-name="Multi-point inspection">Book</button>
+            </div>
+          </article>
+        </div>
+        <p class="ar-empty" id="arEmpty" hidden>No services match that search. Try another category.</p>
+      </div>
+    </section>
+
+    <section class="ar-section ar-section-soft" id="how">
+      <div class="container">
+        <div class="ar-section-head ar-reveal">
+          <p class="ar-kicker">How it works</p>
+          <h2>Three steps, then the keys</h2>
+          <p>A live shop would confirm the bay by text. Here the request stays in this browser.</p>
+        </div>
+        <ol class="ar-step-grid list-unstyled mb-0">
+          <li class="ar-step ar-reveal">
+            <span class="ar-step-num">1</span>
+            <h3>Choose the work</h3>
+            <p>Filter the board or tell us the noise, light, or mileage in the note.</p>
+          </li>
+          <li class="ar-step ar-reveal">
+            <span class="ar-step-num">2</span>
+            <h3>Pick a morning</h3>
+            <p>Drop-off starts at 7:30. Most maintenance jobs leave the same day in this story.</p>
+          </li>
+          <li class="ar-step ar-reveal">
+            <span class="ar-step-num">3</span>
+            <h3>Approve the sheet</h3>
+            <p>You see parts and labor before anyone turns a wrench. Decline anything you do not want.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ar-section" id="book">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 ar-reveal">
+            <p class="ar-kicker">Booking</p>
+            <h2>Hold a bay</h2>
+            <p>Tell us the vehicle and the day. Submitting saves a demo visit on this device. The shop is not called, and no card is charged.</p>
+            <h3 class="h5 mt-4">Your demo visits</h3>
+            <p id="arVisitEmpty">No visits saved yet.</p>
+            <ul class="ar-appt" id="arVisitList"></ul>
+          </div>
+          <div class="col-lg-7 ar-reveal">
+            <form class="ar-panel" id="arBookForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="ar-field" for="arService">Service
+                    <select id="arService" name="service" required>
+                      <option value="oil">Oil and filter</option>
+                      <option value="brakes">Brake service</option>
+                      <option value="scan">Check-engine scan</option>
+                      <option value="rotate">Rotate and balance</option>
+                      <option value="battery">Battery test</option>
+                      <option value="align">Alignment</option>
+                      <option value="ac">A/C performance</option>
+                      <option value="inspect">Multi-point inspection</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="ar-field" for="arVehicle">Vehicle
+                    <input id="arVehicle" name="vehicle" required maxlength="80" placeholder="2018 Honda Civic" autocomplete="off" />
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="ar-field" for="arDate">Preferred day
+                    <input id="arDate" name="date" type="date" required />
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="ar-field" for="arName">Your name
+                    <input id="arName" name="name" required maxlength="80" autocomplete="name" />
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="ar-field" for="arPhone">Phone
+                    <input id="arPhone" name="phone" type="tel" required autocomplete="tel" />
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="ar-field" for="arEmail">Email
+                    <input id="arEmail" name="email" type="email" required autocomplete="email" />
+                  </label>
+                </div>
+              </div>
+              <label class="ar-field" for="arNote">What should we know?
+                <textarea id="arNote" name="note" maxlength="500" placeholder="Noise, warning light, or a time you need the car back"></textarea>
+              </label>
+              <button class="ar-btn ar-btn-primary" type="submit">Save demo visit</button>
+              <p class="ar-form-note">Stored locally. This is not a confirmed appointment.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ar-section ar-section-soft" id="team">
+      <div class="container">
+        <div class="ar-section-head ar-reveal">
+          <p class="ar-kicker">Team</p>
+          <h2>The people on the floor</h2>
+          <p>Fictional technicians for this template. A live shop would list licenses and years on the bay.</p>
+        </div>
+        <div class="ar-tech-grid">
+          <article class="ar-tech ar-reveal">
+            <div class="ar-initials" aria-hidden="true">SP</div>
+            <p class="ar-meta">Brakes · lead tech</p>
+            <h3>Subra Poluru</h3>
+            <p>Writes the estimate before parts move. Prefers a quiet bay and a clear rotor measurement.</p>
+          </article>
+          <article class="ar-tech ar-reveal">
+            <div class="ar-initials" aria-hidden="true">MP</div>
+            <p class="ar-meta">Diagnostics</p>
+            <h3>Meera Poluru</h3>
+            <p>Reads codes in plain language and tells you which lights can wait until the next oil change.</p>
+          </article>
+          <article class="ar-tech ar-reveal">
+            <div class="ar-initials" aria-hidden="true">RP</div>
+            <p class="ar-meta">Tires · alignment</p>
+            <h3>Ravi Poluru</h3>
+            <p>Runs the alignment rack and keeps the before-and-after printout with your invoice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ar-section" id="shop">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-6 ar-reveal">
+            <div class="ar-shop-photo">
+              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Parked car in daylight outside a service drive" width="1400" height="1050" />
+            </div>
+          </div>
+          <div class="col-lg-6 ar-reveal">
+            <p class="ar-kicker">Shop</p>
+            <h2>Harbor Lane service drive</h2>
+            <p>Eight bays, a waiting room with coffee, and a shuttle that loops downtown on the hour in this sample story. Loaner cars are first-come.</p>
+            <ul class="ar-hours">
+              <li><i class="bi bi-geo-alt"></i> 220 Harbor Lane, Austin, TX</li>
+              <li><i class="bi bi-clock"></i> Mon–Sat 7:30 AM – 6:00 PM · Sunday closed</li>
+              <li><i class="bi bi-telephone"></i> (512) 555-0194 · hello@bayline.demo</li>
+            </ul>
+            <div class="ar-visit-cards">
+              <div>
+                <p class="ar-kicker mb-1">Drop-off</p>
+                <strong>Keys in the lockbox</strong>
+                <p>After 7:30 if you cannot wait. Leave a phone number on the tag.</p>
+              </div>
+              <div>
+                <p class="ar-kicker mb-1">Shuttle</p>
+                <strong>Downtown loop</strong>
+                <p>Sample route only. A live shop would publish the day’s stops.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ar-section ar-section-soft" id="reviews">
+      <div class="container">
+        <div class="ar-section-head ar-reveal">
+          <p class="ar-kicker">Reviews</p>
+          <h2>What neighbors wrote</h2>
+        </div>
+        <div class="ar-quote-grid">
+          <figure class="ar-quote ar-reveal">
+            <div class="ar-initials" aria-hidden="true">AP</div>
+            <blockquote>“The brake quote listed pads and labor before anyone ordered parts. I approved it from the waiting room.”</blockquote>
+            <figcaption class="mt-3 text-secondary">Asha Poluru · Civic</figcaption>
+          </figure>
+          <figure class="ar-quote ar-reveal">
+            <div class="ar-initials" aria-hidden="true">KN</div>
+            <blockquote>“Meera explained the check-engine light without selling me a sensor I did not need.”</blockquote>
+            <figcaption class="mt-3 text-secondary">Kavya N. · RAV4</figcaption>
+          </figure>
+          <figure class="ar-quote ar-reveal">
+            <div class="ar-initials" aria-hidden="true">JL</div>
+            <blockquote>“Alignment printout was in the folder with the invoice. The car stopped pulling the same afternoon.”</blockquote>
+            <figcaption class="mt-3 text-secondary">Jordan Lee · Outback</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ar-section" id="faq">
+      <div class="container">
+        <div class="ar-section-head text-center mx-auto ar-reveal">
+          <p class="ar-kicker">FAQ</p>
+          <h2>Before you drop the car off</h2>
+        </div>
+        <div class="ar-faq ar-reveal">
+          <details open>
+            <summary>Is this a real appointment?</summary>
+            <p>No. Bayline is a front-end demo. Visits stay in local storage and are never sent to a shop.</p>
+          </details>
+          <details>
+            <summary>Are the prices charged?</summary>
+            <p>Starting prices are sample numbers for the cards. There is no checkout.</p>
+          </details>
+          <details>
+            <summary>Do you take every make?</summary>
+            <p>The story covers common passenger cars and light trucks. A live shop would confirm diesel, EV, or exotic work by phone.</p>
+          </details>
+          <details>
+            <summary>Can I wait on site?</summary>
+            <p>Oil, batteries, and rotations are written as wait jobs. Brakes and diagnostics are drop-off in this sample.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="ar-section ar-section-soft" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 ar-reveal">
+            <p class="ar-kicker">Contact</p>
+            <h2>A question before the visit?</h2>
+            <p>Fleet accounts, a noise you cannot name, or a warranty copy. The form is demo-only.</p>
+            <p><a href="mailto:hello@bayline.demo">hello@bayline.demo</a><br />(512) 555-0194</p>
+          </div>
+          <div class="col-lg-7 ar-reveal">
+            <form class="ar-panel" id="arContactForm">
+              <label class="ar-field" for="arContactName">Name
+                <input id="arContactName" name="name" required autocomplete="name" />
+              </label>
+              <label class="ar-field" for="arContactEmail">Email
+                <input id="arContactEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="ar-field" for="arContactMsg">Message
+                <textarea id="arContactMsg" name="message" required></textarea>
+              </label>
+              <button class="ar-btn ar-btn-primary" type="submit">Send note</button>
+              <p class="ar-form-note">Nothing is emailed.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ar-footer">
+    <div class="container">
+      <div class="ar-footer-grid">
+        <div class="ar-footer-brand">
+          <a class="ar-brand" href="#top">
+            <span class="ar-mark" aria-hidden="true"><i class="bi bi-wrench-adjustable"></i></span>
+            <span>Bayline<em>.</em></span>
+          </a>
+          <p>Auto repair template with service filters, shop hours, and local demo bookings. Fictional Austin shop.</p>
+        </div>
+        <nav aria-label="Services">
+          <h2>Services</h2>
+          <a href="#services">Service board</a>
+          <a href="#book">Book a bay</a>
+          <a href="#how">How it works</a>
+        </nav>
+        <nav aria-label="Shop">
+          <h2>Shop</h2>
+          <a href="#shop">Visit</a>
+          <a href="#team">Team</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="ar-author">
+            <span class="ar-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="ar-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ar-legal">
+        <span>© <span id="year">2026</span> Bayline Auto. Fictional sample. No live scheduling.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="ar-toast" id="arToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="arToastTitle">Done</strong>
+      <p id="arToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
