@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Sable Room — Beauty salon booking
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,550 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sable Room — A quiet chair, booked before you arrive</title>
+  <meta name="description" content="Sable Room is a fictional Austin salon: cuts, color, skin, and nails. Pick a stylist and save a demo chair in the browser. By Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#34A99D" />
+  <link rel="canonical" href="https://polurus.com/templates/beauty-salon-booking/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sable Room — A quiet chair, booked before you arrive" />
+  <meta property="og:description" content="Clean salon booking page with service filters, stylists, and demo time slots." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sable Room — A quiet chair, booked before you arrive" />
+  <meta name="twitter:description" content="Clean salon booking page with service filters, stylists, and demo time slots." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Sable Room — Beauty salon booking",
+        "description": "Fictional salon booking template by Subrahmanyam Poluru. No live scheduling or payments.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="sb-skip" href="#main">Skip to content</a>
+
+  <div class="sb-utility">
+    <div class="container sb-utility-inner">
+      <span><i class="sb-dot" aria-hidden="true"></i>Tue–Sat 9–7 · Sunday 10–4 · Austin</span>
+      <div class="sb-utility-meta">
+        <a href="tel:+15125550172"><i class="bi bi-telephone"></i> (512) 555-0172</a>
+        <span>Chairs held in this browser only</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top sb-nav" aria-label="Primary">
+    <div class="container">
+      <a class="sb-brand" href="#top">
+        <span class="sb-mark" aria-hidden="true"><i class="bi bi-scissors"></i></span>
+        <span>Sable Room<em>.</em></span>
+      </a>
+      <button class="sb-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stylists">Stylists</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visit">Visit</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="sb-btn sb-btn-ghost" href="#book">Visits <span class="sb-count" id="sbVisitCount">0</span></a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="sb-btn sb-btn-primary" href="#book">Book a chair</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="sb-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 sb-reveal">
+            <p class="sb-kicker">Neighborhood salon · Austin</p>
+            <h1>A quiet chair, booked before you arrive.</h1>
+            <p class="sb-lead">Sable Room is a fictional salon for cuts, color, skin, and nails. Choose a service, a stylist, and an open time. The visit stays on this device. Nothing is charged.</p>
+            <div class="sb-actions">
+              <a class="sb-btn sb-btn-primary" href="#services">See the menu</a>
+              <a class="sb-btn sb-btn-ghost" href="#book">Book a chair</a>
+            </div>
+            <ul class="sb-hero-points">
+              <li><i class="bi bi-clock"></i> 24-hour sample cancellation</li>
+              <li><i class="bi bi-person-check"></i> Same stylist when the book allows</li>
+              <li><i class="bi bi-geo-alt"></i> 48 Linden Street, Austin</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 sb-reveal">
+            <figure class="sb-figure">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Bright salon interior with styling chairs" width="1400" height="1120" />
+              <figcaption class="sb-caption">
+                <div>
+                  <p class="sb-kicker">Next opening</p>
+                  <p><strong>Thursday 2:00 · color chair with Meera</strong></p>
+                </div>
+                <a class="sb-btn sb-btn-ghost" href="#book">Hold it</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <dl class="sb-stats sb-reveal">
+          <div class="sb-stat">
+            <span>Chairs</span>
+            <strong>6</strong>
+          </div>
+          <div class="sb-stat">
+            <span>Stylists</span>
+            <strong>3</strong>
+          </div>
+          <div class="sb-stat">
+            <span>Guest rating</span>
+            <strong>4.9</strong>
+          </div>
+          <div class="sb-stat">
+            <span>Sample cut</span>
+            <strong>$85</strong>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="sb-section" id="services">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 sb-reveal">
+          <div class="sb-section-head mb-0">
+            <p class="sb-kicker">Services</p>
+            <h2>The menu, written plainly</h2>
+            <p>Times and prices are samples for the layout. Filter by room, or search a service name.</p>
+          </div>
+          <p class="sb-kicker mb-md-2" id="sbServiceCount">8 services</p>
+        </div>
+        <div class="sb-toolbar sb-reveal">
+          <div class="sb-filters" role="group" aria-label="Service categories">
+            <button class="sb-chip is-active" type="button" data-sb-filter="all" aria-pressed="true">All</button>
+            <button class="sb-chip" type="button" data-sb-filter="hair" aria-pressed="false">Hair</button>
+            <button class="sb-chip" type="button" data-sb-filter="color" aria-pressed="false">Color</button>
+            <button class="sb-chip" type="button" data-sb-filter="skin" aria-pressed="false">Skin</button>
+            <button class="sb-chip" type="button" data-sb-filter="nails" aria-pressed="false">Nails</button>
+          </div>
+          <label class="visually-hidden" for="sbSearch">Search services</label>
+          <input class="sb-search" id="sbSearch" type="search" placeholder="Search a service" />
+        </div>
+        <div class="sb-service-grid">
+          <article class="sb-card sb-service sb-reveal" data-category="hair" data-search="cut style hair asha">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-scissors"></i></div>
+            <p class="sb-meta">Hair · 60 min · Asha</p>
+            <h3>Cut and style</h3>
+            <p>Consultation, cut, and a finish you can repeat at home. Includes a short note on your shape.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$85</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="cut" data-sb-name="Cut and style" data-sb-stylist="asha">Book</button>
+            </div>
+          </article>
+          <article class="sb-card sb-service sb-reveal" data-category="hair" data-search="blowout hair asha">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-wind"></i></div>
+            <p class="sb-meta">Hair · 45 min · Asha</p>
+            <h3>Blowout</h3>
+            <p>Wash, blow-dry, and a smooth finish. Best the morning of an event in this sample menu.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$65</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="blowout" data-sb-name="Blowout" data-sb-stylist="asha">Book</button>
+            </div>
+          </article>
+          <article class="sb-card sb-service sb-reveal" data-category="color" data-search="root color meera">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-palette"></i></div>
+            <p class="sb-meta">Color · 2 hr · Meera</p>
+            <h3>Root color</h3>
+            <p>Regrowth only, matched to your last formula. A patch test is part of the story for new guests.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$145</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="roots" data-sb-name="Root color" data-sb-stylist="meera">Book</button>
+            </div>
+          </article>
+          <article class="sb-card sb-service sb-reveal" data-category="color" data-search="gloss shine color meera">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-droplet"></i></div>
+            <p class="sb-meta">Color · 75 min · Meera</p>
+            <h3>Gloss</h3>
+            <p>A clear or tonal gloss for shine between full color appointments. No lift in this sample.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$95</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="gloss" data-sb-name="Gloss" data-sb-stylist="meera">Book</button>
+            </div>
+          </article>
+          <article class="sb-card sb-service sb-reveal" data-category="skin" data-search="facial skin kavya">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-moisture"></i></div>
+            <p class="sb-meta">Skin · 60 min · Kavya</p>
+            <h3>Signature facial</h3>
+            <p>Cleanse, a short massage, and a mask chosen for the day. No devices, no add-on menu.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$110</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="facial" data-sb-name="Signature facial" data-sb-stylist="kavya">Book</button>
+            </div>
+          </article>
+          <article class="sb-card sb-service sb-reveal" data-category="skin" data-search="brow shape skin kavya">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-eye"></i></div>
+            <p class="sb-meta">Skin · 30 min · Kavya</p>
+            <h3>Brow shape</h3>
+            <p>Map, tidy, and a soft fill if you want it. The shape is written down for the next visit.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$35</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="brow" data-sb-name="Brow shape" data-sb-stylist="kavya">Book</button>
+            </div>
+          </article>
+          <article class="sb-card sb-service sb-reveal" data-category="nails" data-search="gel manicure nails kavya">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-hand-index"></i></div>
+            <p class="sb-meta">Nails · 50 min · Kavya</p>
+            <h3>Gel manicure</h3>
+            <p>Shape, cuticle care, and a gel color from the house shelf. Removal of old gel is extra in the story.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$55</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="mani" data-sb-name="Gel manicure" data-sb-stylist="kavya">Book</button>
+            </div>
+          </article>
+          <article class="sb-card sb-service sb-reveal" data-category="nails" data-search="spa pedicure nails kavya">
+            <div class="sb-icon" aria-hidden="true"><i class="bi bi-flower1"></i></div>
+            <p class="sb-meta">Nails · 70 min · Kavya</p>
+            <h3>Spa pedicure</h3>
+            <p>Soak, shape, and polish. Callus work stays light. A longer treatment would be quoted first.</p>
+            <div class="sb-service-foot">
+              <span class="sb-price">$75</span>
+              <button class="sb-btn sb-btn-primary" type="button" data-sb-book="pedi" data-sb-name="Spa pedicure" data-sb-stylist="kavya">Book</button>
+            </div>
+          </article>
+        </div>
+        <p class="sb-empty" id="sbEmpty" hidden>No services match that search. Try another room.</p>
+      </div>
+    </section>
+
+    <section class="sb-section sb-section-soft" id="how">
+      <div class="container">
+        <div class="sb-section-head sb-reveal">
+          <p class="sb-kicker">How it works</p>
+          <h2>Three steps to the chair</h2>
+          <p>A live salon would confirm by text. Here the request stays in this browser.</p>
+        </div>
+        <ol class="sb-step-grid list-unstyled mb-0">
+          <li class="sb-step sb-reveal">
+            <span class="sb-step-num">1</span>
+            <h3>Pick the work</h3>
+            <p>Read the time and the price. Book from the card if you already know the stylist.</p>
+          </li>
+          <li class="sb-step sb-reveal">
+            <span class="sb-step-num">2</span>
+            <h3>Choose a slot</h3>
+            <p>Sample openings for the week. One chair, one time. Nothing is held on a server.</p>
+          </li>
+          <li class="sb-step sb-reveal">
+            <span class="sb-step-num">3</span>
+            <h3>Arrive a few minutes early</h3>
+            <p>Tea is in the front room. Color guests get a strand check before the bowl is mixed.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="sb-section" id="book">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 sb-reveal">
+            <p class="sb-kicker">Booking</p>
+            <h2>Hold a chair</h2>
+            <p>Choose the service, the stylist, a day, and one open time. Submitting saves a demo visit on this device. The salon is not called, and no card is charged.</p>
+            <h3 class="h5 mt-4">Your demo visits</h3>
+            <p id="sbVisitEmpty">No chairs saved yet.</p>
+            <ul class="sb-appt" id="sbVisitList"></ul>
+          </div>
+          <div class="col-lg-7 sb-reveal">
+            <form class="sb-panel" id="sbBookForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="sb-field" for="sbService">Service
+                    <select id="sbService" name="service" required>
+                      <option value="cut">Cut and style</option>
+                      <option value="blowout">Blowout</option>
+                      <option value="roots">Root color</option>
+                      <option value="gloss">Gloss</option>
+                      <option value="facial">Signature facial</option>
+                      <option value="brow">Brow shape</option>
+                      <option value="mani">Gel manicure</option>
+                      <option value="pedi">Spa pedicure</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="sb-field" for="sbStylist">Stylist
+                    <select id="sbStylist" name="stylist" required>
+                      <option value="any">First available</option>
+                      <option value="asha">Asha Poluru · hair</option>
+                      <option value="meera">Meera Poluru · color</option>
+                      <option value="kavya">Kavya Poluru · skin and nails</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="sb-field" for="sbDate">Day
+                    <input id="sbDate" name="date" type="date" required />
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="sb-field" for="sbName">Your name
+                    <input id="sbName" name="name" required maxlength="80" autocomplete="name" />
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="sb-field" for="sbPhone">Phone
+                    <input id="sbPhone" name="phone" type="tel" required autocomplete="tel" />
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label class="sb-field" for="sbEmail">Email
+                    <input id="sbEmail" name="email" type="email" required autocomplete="email" />
+                  </label>
+                </div>
+              </div>
+              <p class="sb-field">Open times</p>
+              <div class="sb-slots" role="group" aria-label="Open times">
+                <button class="sb-slot" type="button" data-sb-slot="Tue · 10:00" aria-pressed="false">Tue · 10:00</button>
+                <button class="sb-slot" type="button" data-sb-slot="Tue · 1:30" aria-pressed="false">Tue · 1:30</button>
+                <button class="sb-slot" type="button" data-sb-slot="Wed · 11:00" aria-pressed="false">Wed · 11:00</button>
+                <button class="sb-slot" type="button" data-sb-slot="Wed · 4:00" aria-pressed="false">Wed · 4:00</button>
+                <button class="sb-slot" type="button" data-sb-slot="Thu · 9:30" aria-pressed="false">Thu · 9:30</button>
+                <button class="sb-slot" type="button" data-sb-slot="Thu · 2:00" aria-pressed="false">Thu · 2:00</button>
+                <button class="sb-slot" type="button" data-sb-slot="Fri · 12:00" aria-pressed="false">Fri · 12:00</button>
+                <button class="sb-slot" type="button" data-sb-slot="Sat · 10:30" aria-pressed="false">Sat · 10:30</button>
+              </div>
+              <label class="sb-field" for="sbNote">Note for the stylist
+                <textarea id="sbNote" name="note" maxlength="500" placeholder="Length, formula, or anything to avoid"></textarea>
+              </label>
+              <button class="sb-btn sb-btn-primary" type="submit">Save demo visit</button>
+              <p class="sb-form-note">Stored locally. This is not a confirmed appointment.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sb-section sb-section-soft" id="stylists">
+      <div class="container">
+        <div class="sb-section-head sb-reveal">
+          <p class="sb-kicker">Stylists</p>
+          <h2>Three chairs, three books</h2>
+          <p>Fictional stylists for this template. A live salon would list licenses beside each name.</p>
+        </div>
+        <div class="sb-people-grid">
+          <article class="sb-person sb-reveal">
+            <div class="sb-initials" aria-hidden="true">AP</div>
+            <p class="sb-meta">Hair · cuts and blowouts</p>
+            <h3>Asha Poluru</h3>
+            <p>Starts with the shape you already like, then trims only what has grown out of it.</p>
+          </article>
+          <article class="sb-person sb-reveal">
+            <div class="sb-initials" aria-hidden="true">MP</div>
+            <p class="sb-meta">Color</p>
+            <h3>Meera Poluru</h3>
+            <p>Keeps a written formula and will not lift a new guest without a strand check.</p>
+          </article>
+          <article class="sb-person sb-reveal">
+            <div class="sb-initials" aria-hidden="true">KP</div>
+            <p class="sb-meta">Skin and nails</p>
+            <h3>Kavya Poluru</h3>
+            <p>Runs the facial room and the nail table. Brows and gel color share her afternoon book.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sb-section" id="visit">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-6 sb-reveal">
+            <div class="sb-photo">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Stylist working on a guest's hair in a bright room" width="1400" height="1050" />
+            </div>
+          </div>
+          <div class="col-lg-6 sb-reveal">
+            <p class="sb-kicker">Visit</p>
+            <h2>Linden Street</h2>
+            <p>Six chairs, one color bowl station, and a nail table by the window. The front room is quiet on purpose. Monday is closed for deep cleaning in this story.</p>
+            <ul class="sb-hours">
+              <li><i class="bi bi-geo-alt"></i> 48 Linden Street, Austin, TX</li>
+              <li><i class="bi bi-clock"></i> Tue–Sat 9:00 AM – 7:00 PM · Sunday 10–4</li>
+              <li><i class="bi bi-telephone"></i> (512) 555-0172 · hello@sableroom.demo</li>
+            </ul>
+            <div class="sb-visit-cards">
+              <div>
+                <p class="sb-kicker mb-1">Arrival</p>
+                <strong>Ten minutes early</strong>
+                <p>Color guests fill a short card. Cuts can sit straight down.</p>
+              </div>
+              <div>
+                <p class="sb-kicker mb-1">Parking</p>
+                <strong>Lot behind the shop</strong>
+                <p>Six spaces in the sample. Street parking is free after 6.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sb-section sb-section-soft" id="reviews">
+      <div class="container">
+        <div class="sb-section-head sb-reveal">
+          <p class="sb-kicker">Reviews</p>
+          <h2>Notes from the book</h2>
+        </div>
+        <div class="sb-quote-grid">
+          <figure class="sb-quote sb-reveal">
+            <div class="sb-initials" aria-hidden="true">RN</div>
+            <blockquote>“Asha wrote down the cut so the next visit started where the last one ended. No surprise layers.”</blockquote>
+            <figcaption class="mt-3 text-secondary">Rina N. · cut and style</figcaption>
+          </figure>
+          <figure class="sb-quote sb-reveal">
+            <div class="sb-initials" aria-hidden="true">JL</div>
+            <blockquote>“Meera matched the roots and stopped there. The gloss was offered, not added to the ticket.”</blockquote>
+            <figcaption class="mt-3 text-secondary">Jordan Lee · root color</figcaption>
+          </figure>
+          <figure class="sb-quote sb-reveal">
+            <div class="sb-initials" aria-hidden="true">SP</div>
+            <blockquote>“The brow map was in the file. Kavya followed it and the room stayed quiet the whole half hour.”</blockquote>
+            <figcaption class="mt-3 text-secondary">Sana Poluru · brow shape</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="sb-section" id="faq">
+      <div class="container">
+        <div class="sb-section-head text-center mx-auto sb-reveal">
+          <p class="sb-kicker">FAQ</p>
+          <h2>Before you book</h2>
+        </div>
+        <div class="sb-faq sb-reveal">
+          <details open>
+            <summary>Is this a real appointment?</summary>
+            <p>No. Sable Room is a front-end demo. Visits stay in local storage and are never sent to a salon.</p>
+          </details>
+          <details>
+            <summary>Are the prices charged?</summary>
+            <p>Menu prices are sample numbers. There is no checkout.</p>
+          </details>
+          <details>
+            <summary>Can I request a stylist?</summary>
+            <p>Yes, in the booking form. “First available” is a label only. A live book would check that stylist’s real calendar.</p>
+          </details>
+          <details>
+            <summary>What is the cancellation story?</summary>
+            <p>The sample policy is 24 hours. This page does not send reminders or charge a fee.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sb-section sb-section-soft" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 sb-reveal">
+            <p class="sb-kicker">Contact</p>
+            <h2>A question before the chair?</h2>
+            <p>Bridal parties, a formula from another salon, or access needs. The form is demo-only.</p>
+            <p><a href="mailto:hello@sableroom.demo">hello@sableroom.demo</a><br />(512) 555-0172</p>
+          </div>
+          <div class="col-lg-7 sb-reveal">
+            <form class="sb-panel" id="sbContactForm">
+              <label class="sb-field" for="sbContactName">Name
+                <input id="sbContactName" name="name" required autocomplete="name" />
+              </label>
+              <label class="sb-field" for="sbContactEmail">Email
+                <input id="sbContactEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="sb-field" for="sbContactMsg">Message
+                <textarea id="sbContactMsg" name="message" required></textarea>
+              </label>
+              <button class="sb-btn sb-btn-primary" type="submit">Send note</button>
+              <p class="sb-form-note">Nothing is emailed.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sb-footer">
+    <div class="container">
+      <div class="sb-footer-grid">
+        <div class="sb-footer-brand">
+          <a class="sb-brand" href="#top">
+            <span class="sb-mark" aria-hidden="true"><i class="bi bi-scissors"></i></span>
+            <span>Sable Room<em>.</em></span>
+          </a>
+          <p>Salon booking template with a service menu, stylist choice, and local demo visits. Fictional Austin shop.</p>
+        </div>
+        <nav aria-label="Menu">
+          <h2>Menu</h2>
+          <a href="#services">Services</a>
+          <a href="#book">Book a chair</a>
+          <a href="#how">How it works</a>
+        </nav>
+        <nav aria-label="Salon">
+          <h2>Salon</h2>
+          <a href="#stylists">Stylists</a>
+          <a href="#visit">Visit</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="sb-author">
+            <span class="sb-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="sb-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sb-legal">
+        <span>© <span id="year">2026</span> Sable Room. Fictional sample. No live scheduling.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sb-toast" id="sbToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="sbToastTitle">Done</strong>
+      <p id="sbToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
