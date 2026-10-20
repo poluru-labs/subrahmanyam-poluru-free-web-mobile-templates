@@ -1,2 +1,563 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Poluru Living — Welcome home, Poluru</title><meta name="description" content="Everything you need to keep your properties thriving."><meta name="theme-color" content="#426f7d"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/script.js" defer></script></head><body class="dashboard" data-template="property-management-portal" style="--brand:#426f7d;--soft:#edf4f5;"><a class="skip-link" href="#main">Skip to content</a><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">P</span>Poluru Living</a><p class="nav-label">YOUR WORKSPACE</p><nav><a href="#overview"><span aria-hidden="true">◫</span>Overview</a><a href="#activity"><span aria-hidden="true">≋</span>Activity</a></nav><div class="side-bottom"><span class="profile">S</span><div><strong>Subra Poluru</strong><br><span class="small">Personal workspace</span></div></div></aside><div class="workspace"><header class="topbar"><span>Workspace <span style="color:#a0a8af">/ Overview</span></span><div><span class="small">Monday, September 14</span><span class="profile">SP</span></div></header><main id="main"><div class="dash-heading"><div><p class="eyebrow">THOUGHTFUL SPACES. HAPPY PEOPLE.</p><h1>Welcome home, Poluru</h1><p>Everything you need to keep your properties thriving.</p></div><button class="secondary" data-action="export" >Export report ↗</button></div><div class="stats"><article class="stat"><span class="small">Total properties</span><div class="metric">12</div><span class="trend">Thoughtfully managed</span></article><article class="stat"><span class="small">Occupancy</span><div class="metric">94%</div><span class="trend">↑ 3% this quarter</span></article><article class="stat"><span class="small">Monthly rent</span><div class="metric">$24,850</div><span class="trend">96% collected</span></article><article class="stat"><span class="small">Open requests</span><div class="metric">4</div><span class="trend">Two scheduled for today</span></article></div><div class="two-col"><section class="panel" id="overview"><div class="panel-head"><div><h3>Places people call home</h3><p></p></div></div><div class="grid" style="grid-template-columns:1fr 1fr"><article class="product-card" data-search="The Poluru House 12 homes · Downtown 96% occupied" data-category="96% occupied"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="The Poluru House" loading="lazy" width="1200" height="800"><span class="image-tag">96% occupied</span><button class="favorite" aria-label="Save The Poluru House" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">12 homes · Downtown</p><h3>The Poluru House</h3><div class="card-bottom"><strong>$12,800 / mo</strong><button class="text-button" data-action="modal" data-title="The Poluru House" data-kind="View property">View property</button></div></div></article><article class="product-card" data-search="Subra Residences 8 homes · Riverside 92% occupied" data-category="92% occupied"><div class="card-image"><img class="" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Subra Residences" loading="lazy" width="1200" height="800"><span class="image-tag">92% occupied</span><button class="favorite" aria-label="Save Subra Residences" aria-pressed="false" data-action="favorite">♡</button></div><div class="card-body"><p class="small">8 homes · Riverside</p><h3>Subra Residences</h3><div class="card-bottom"><strong>$8,450 / mo</strong><button class="text-button" data-action="modal" data-title="Subra Residences" data-kind="View property">View property</button></div></div></article></div></section><section class="panel"><div class="panel-head"><div><h3>A little care goes a long way</h3><p></p></div></div><div class="row"><div><strong>Kitchen tap repair</strong><p class="small">Subbu · Unit 204</p></div><span class="badge">Scheduled</span></div><div class="row"><div><strong>Welcome home inspection</strong><p class="small">Subra · Unit 108</p></div><span class="badge">Today</span></div><div class="row"><div><strong>Garden maintenance</strong><p class="small">Poluru House · Common area</p></div><span class="badge">Tomorrow</span></div></section></div><section class="panel" id="activity"><div class="panel-head"><div><h3>Recent rent payments</h3><p></p></div></div><div class="table-wrap"><table><thead><tr><th scope="col">Resident</th><th scope="col">Property</th><th scope="col">Amount</th><th scope="col">Date</th><th scope="col">Status</th></tr></thead><tbody><tr><td><div class="person"><span class="profile">S</span><div><strong>Subra</strong><small>Resident</small></div></div></td><td>Poluru House · 204</td><td>$1,850</td><td>Sep 14</td><td><span class="badge">Received</span></td></tr><tr><td><div class="person"><span class="profile">S</span><div><strong>Subbu</strong><small>Resident</small></div></div></td><td>Subra Residences · 108</td><td>$2,100</td><td>Sep 14</td><td><span class="badge">Received</span></td></tr><tr><td><div class="person"><span class="profile">P</span><div><strong>Poluru</strong><small>Resident</small></div></div></td><td>The Garden · 302</td><td>$1,650</td><td>Sep 14</td><td><span class="badge">Received</span></td></tr></tbody></table></div></section></main><footer class="site-footer"><span class="brand">Poluru Living<span style="color:var(--brand)">.</span></span><span>Created and Generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span></footer></div><dialog aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button class="close" aria-label="Close dialog">×</button></div><div id="dialog-body"></div></dialog></body></html>
+<!DOCTYPE html>
+<!--
+  Parkline — Property management portal
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parkline — Property management that stays readable</title>
+  <meta name="description" content="Parkline is a fictional property management portal for Austin portfolios: buildings, rent metrics, maintenance tickets, and tenant snapshots. By Subrahmanyam Poluru." />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#C2D099" />
+  <link rel="canonical" href="https://polurus.com/templates/property-management-portal/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Parkline — Property management that stays readable" />
+  <meta property="og:description" content="Clean property portal with portfolio filters, metrics, and demo maintenance tickets." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Parkline — Property management that stays readable" />
+  <meta name="twitter:description" content="Clean property portal with portfolio filters, metrics, and demo maintenance tickets." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #c2d099;
+      --color-brand-dark: #a8bc7e;
+      --color-brand-ink: #4a5a32;
+      --color-brand-soft: #eef3e4;
+      --color-ink: #1e2418;
+      --color-muted: #5c6352;
+      --color-line: #dde5cf;
+      --color-canvas: #fafbf7;
+      --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif;
+      --font-ui: "Lato", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Parkline — Property management portal",
+        "description": "Fictional property portal template by Subrahmanyam Poluru. No live rent or maintenance dispatch.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="pm-body bg-canvas text-ink antialiased" id="top">
+  <a class="pm-skip" href="#main">Skip to content</a>
+
+  <div class="font-ui bg-brand-soft text-ink text-sm border-b border-line">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-2">
+      <span><span class="inline-block h-2 w-2 rounded-full bg-brand mr-2 align-middle" aria-hidden="true"></span>142 units · Austin metro · demo workspace</span>
+      <div class="flex flex-wrap items-center gap-4">
+        <a class="font-bold text-brand-ink hover:text-ink" href="tel:+15125550188"><i class="bi bi-telephone"></i> (512) 555-0188</a>
+        <span class="hidden sm:inline">Metrics refresh on this page only</span>
+      </div>
+    </div>
+  </div>
+
+  <header id="pmHeader" class="sticky top-0 z-40 border-b border-transparent bg-canvas/95 backdrop-blur-sm">
+    <div class="mx-auto flex max-w-6xl items-center gap-3 px-5 py-4">
+      <a class="font-display flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand text-ink" aria-hidden="true"><i class="bi bi-buildings"></i></span>
+        <span>Parkline<em class="not-italic text-brand-ink">.</em></span>
+      </a>
+      <div class="ml-auto flex items-center gap-2 md:order-3">
+        <a class="font-ui hidden items-center gap-2 rounded-xl border border-line bg-white px-3 py-2 text-sm font-bold text-ink hover:bg-brand-soft sm:inline-flex" href="#portfolio" aria-label="Watchlist">
+          <i class="bi bi-bookmark"></i> Saved <span class="grid min-w-[1.25rem] place-items-center rounded-full bg-brand px-1.5 text-xs text-ink" data-pm-watch-count>0</span>
+        </a>
+        <button class="font-ui inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-white md:hidden" type="button" id="pmNavToggle" aria-expanded="false" aria-controls="pmNavPanel" aria-label="Open menu">
+          <i class="bi bi-list text-lg"></i>
+        </button>
+      </div>
+      <nav class="font-ui ml-auto hidden items-center gap-6 text-sm font-bold text-muted md:flex md:order-2" aria-label="Primary">
+        <a class="hover:text-ink" href="#portfolio">Portfolio</a>
+        <a class="hover:text-ink" href="#metrics">Metrics</a>
+        <a class="hover:text-ink" href="#maintenance">Maintenance</a>
+        <a class="hover:text-ink" href="#tenants">Tenants</a>
+        <a class="hover:text-ink" href="#faq">FAQ</a>
+        <a class="hover:text-ink" href="#contact">Contact</a>
+      </nav>
+      <a class="font-ui hidden rounded-xl bg-brand px-4 py-2.5 text-sm font-bold text-ink hover:bg-brand-dark md:order-4 md:inline-flex" href="#maintenance">Open ticket</a>
+    </div>
+    <div class="pm-nav-open border-t border-line bg-canvas md:hidden" id="pmNavPanel">
+      <nav class="font-ui flex flex-col gap-1 px-5 py-3 text-sm font-bold text-muted" aria-label="Mobile">
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#portfolio">Portfolio</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#metrics">Metrics</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#maintenance">Maintenance</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#tenants">Tenants</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-brand-soft" href="#contact">Contact</a>
+        <a class="mt-2 rounded-xl bg-brand px-3 py-2.5 text-center text-ink" href="#maintenance">Open ticket</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="border-b border-line bg-white px-5 py-14 md:py-16">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+        <div class="pm-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Owner-operator workspace</p>
+          <h1 class="font-display mt-3 text-4xl font-black leading-tight md:text-5xl">Every building, one calm screen.</h1>
+          <p class="mt-4 max-w-lg text-muted">Parkline is a fictional portal for rent roll, occupancy, and maintenance. Filter the portfolio, save buildings to a watchlist, and log demo tickets. Nothing syncs to a live property system.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="font-ui inline-flex rounded-xl bg-brand px-5 py-3 text-sm font-bold text-ink hover:bg-brand-dark" href="#portfolio">View portfolio</a>
+            <a class="font-ui inline-flex rounded-xl border border-line bg-white px-5 py-3 text-sm font-bold text-ink hover:bg-brand-soft" href="#metrics">See metrics</a>
+          </div>
+          <ul class="mt-8 space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><i class="bi bi-check2-circle text-brand-ink"></i> 96% portfolio occupancy in this sample</li>
+            <li class="flex gap-2"><i class="bi bi-check2-circle text-brand-ink"></i> Maintenance queue stays on this device</li>
+            <li class="flex gap-2"><i class="bi bi-check2-circle text-brand-ink"></i> 220 Congress Avenue · Austin HQ</li>
+          </ul>
+        </div>
+        <div class="pm-reveal overflow-hidden rounded-2xl border border-line">
+          <img class="aspect-[4/3] w-full object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Modern glass office tower against a clear sky" width="1400" height="1050" loading="eager" />
+        </div>
+      </div>
+      <dl class="pm-reveal mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-line bg-brand-soft p-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-brand-ink">Units</dt>
+          <dd class="font-display mt-2 text-3xl font-black">142</dd>
+        </div>
+        <div class="rounded-2xl border border-line bg-white p-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-brand-ink">Occupancy</dt>
+          <dd class="font-display mt-2 text-3xl font-black">96%</dd>
+        </div>
+        <div class="rounded-2xl border border-line bg-white p-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-brand-ink">Rent collected</dt>
+          <dd class="font-display mt-2 text-3xl font-black">$284k</dd>
+        </div>
+        <div class="rounded-2xl border border-line bg-white p-5">
+          <dt class="font-ui text-xs font-black uppercase tracking-wide text-brand-ink">Open tickets</dt>
+          <dd class="font-display mt-2 text-3xl font-black"><span id="pmTicketCount">0</span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="portfolio">
+      <div class="mx-auto max-w-6xl">
+        <div class="pm-reveal flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Portfolio</p>
+            <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">Buildings on the book</h2>
+            <p class="mt-2 max-w-xl text-muted">Sample assets across residential, mixed-use, and commercial. Filter by type or search by name.</p>
+          </div>
+          <p class="font-ui text-sm font-bold text-brand-ink" id="pmPropertyCount">6 properties</p>
+        </div>
+        <div class="pm-reveal mt-6 flex flex-col gap-3 lg:flex-row lg:items-center">
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Property type">
+            <button class="font-ui rounded-full border border-brand bg-brand px-4 py-2 text-sm font-bold text-ink" type="button" data-pm-filter="all" aria-pressed="true">All</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-sm font-bold text-muted" type="button" data-pm-filter="residential" aria-pressed="false">Residential</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-sm font-bold text-muted" type="button" data-pm-filter="mixed" aria-pressed="false">Mixed-use</button>
+            <button class="font-ui rounded-full border border-line bg-white px-4 py-2 text-sm font-bold text-muted" type="button" data-pm-filter="commercial" aria-pressed="false">Commercial</button>
+          </div>
+          <div class="flex flex-1 flex-wrap items-center gap-2 lg:justify-end">
+            <button class="font-ui inline-flex items-center gap-2 rounded-xl border border-line bg-white px-3 py-2 text-sm font-bold text-muted hover:bg-brand-soft" type="button" id="pmSavedToggle" aria-pressed="false">
+              <i class="bi bi-bookmark"></i> Saved only
+            </button>
+            <label class="sr-only" for="pmSearch">Search properties</label>
+            <input class="font-ui w-full max-w-xs rounded-xl border border-line bg-white px-3 py-2 text-sm lg:w-56" id="pmSearch" type="search" placeholder="Search a building" />
+          </div>
+        </div>
+        <div class="pm-property-grid mt-8">
+          <article class="pm-property pm-reveal overflow-hidden rounded-2xl border border-line bg-white" data-pm-id="linden" data-category="residential" data-search="linden court residential east austin 24 units">
+            <div class="relative">
+              <img class="aspect-[16/10] w-full object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Tree-lined residential courtyard" width="1200" height="750" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-lg bg-white px-2 py-1 text-xs font-bold text-ink">96% occupied</span>
+              <button class="font-ui absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brand-ink hover:bg-brand-soft" type="button" data-pm-watch="linden" aria-label="Save Linden Court" aria-pressed="false"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <div class="p-5">
+              <p class="font-ui text-xs font-black uppercase text-muted">Residential · 24 units</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Linden Court</h3>
+              <p class="mt-2 text-sm text-muted">Garden-style flats with covered parking and a shared laundry room.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display font-bold">$38,400 / mo</span>
+                <button class="font-ui text-sm font-bold text-brand-ink hover:text-ink" type="button" data-pm-ticket="linden">Open ticket</button>
+              </div>
+            </div>
+          </article>
+          <article class="pm-property pm-reveal overflow-hidden rounded-2xl border border-line bg-white" data-pm-id="harbor" data-category="mixed" data-search="harbor row mixed use downtown retail">
+            <div class="relative">
+              <img class="aspect-[16/10] w-full object-cover" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Bright lobby with glass and wood" width="1200" height="750" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-lg bg-white px-2 py-1 text-xs font-bold text-ink">Retail + lofts</span>
+              <button class="font-ui absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brand-ink hover:bg-brand-soft" type="button" data-pm-watch="harbor" aria-label="Save Harbor Row" aria-pressed="false"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <div class="p-5">
+              <p class="font-ui text-xs font-black uppercase text-muted">Mixed-use · 18 units</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Harbor Row</h3>
+              <p class="mt-2 text-sm text-muted">Street-level retail with loft residences above Congress Avenue.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display font-bold">$52,100 / mo</span>
+                <button class="font-ui text-sm font-bold text-brand-ink hover:text-ink" type="button" data-pm-ticket="harbor">Open ticket</button>
+              </div>
+            </div>
+          </article>
+          <article class="pm-property pm-reveal overflow-hidden rounded-2xl border border-line bg-white" data-pm-id="ridge" data-category="residential" data-search="east ridge apartments residential">
+            <div class="relative">
+              <img class="aspect-[16/10] w-full object-cover" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Mid-rise apartment building exterior" width="1200" height="750" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-lg bg-white px-2 py-1 text-xs font-bold text-ink">94% occupied</span>
+              <button class="font-ui absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brand-ink hover:bg-brand-soft" type="button" data-pm-watch="ridge" aria-label="Save East Ridge" aria-pressed="false"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <div class="p-5">
+              <p class="font-ui text-xs font-black uppercase text-muted">Residential · 36 units</p>
+              <h3 class="font-display mt-1 text-xl font-bold">East Ridge</h3>
+              <p class="mt-2 text-sm text-muted">Mid-rise with a fitness room and rooftop deck facing the greenbelt.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display font-bold">$61,200 / mo</span>
+                <button class="font-ui text-sm font-bold text-brand-ink hover:text-ink" type="button" data-pm-ticket="ridge">Open ticket</button>
+              </div>
+            </div>
+          </article>
+          <article class="pm-property pm-reveal overflow-hidden rounded-2xl border border-line bg-white" data-pm-id="stonefield" data-category="mixed" data-search="stonefield lofts mixed warehouse">
+            <div class="relative">
+              <img class="aspect-[16/10] w-full object-cover" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Industrial loft interior with large windows" width="1200" height="750" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-lg bg-white px-2 py-1 text-xs font-bold text-ink">Loft conversion</span>
+              <button class="font-ui absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brand-ink hover:bg-brand-soft" type="button" data-pm-watch="stonefield" aria-label="Save Stonefield Lofts" aria-pressed="false"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <div class="p-5">
+              <p class="font-ui text-xs font-black uppercase text-muted">Mixed-use · 14 units</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Stonefield Lofts</h3>
+              <p class="mt-2 text-sm text-muted">Converted warehouse with tall windows and a shared maker studio.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display font-bold">$44,800 / mo</span>
+                <button class="font-ui text-sm font-bold text-brand-ink hover:text-ink" type="button" data-pm-ticket="stonefield">Open ticket</button>
+              </div>
+            </div>
+          </article>
+          <article class="pm-property pm-reveal overflow-hidden rounded-2xl border border-line bg-white" data-pm-id="canvas" data-category="residential" data-search="canvas apartments residential south">
+            <div class="relative">
+              <img class="aspect-[16/10] w-full object-cover" src="https://images.unsplash.com/photo-1560448204-e02f11c457d0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Modern apartment living room" width="1200" height="750" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-lg bg-white px-2 py-1 text-xs font-bold text-ink">Pet friendly</span>
+              <button class="font-ui absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brand-ink hover:bg-brand-soft" type="button" data-pm-watch="canvas" aria-label="Save Canvas Apartments" aria-pressed="false"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <div class="p-5">
+              <p class="font-ui text-xs font-black uppercase text-muted">Residential · 28 units</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Canvas Apartments</h3>
+              <p class="mt-2 text-sm text-muted">Walk-up flats with in-unit laundry and a shaded dog run.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display font-bold">$49,600 / mo</span>
+                <button class="font-ui text-sm font-bold text-brand-ink hover:text-ink" type="button" data-pm-ticket="canvas">Open ticket</button>
+              </div>
+            </div>
+          </article>
+          <article class="pm-property pm-reveal overflow-hidden rounded-2xl border border-line bg-white" data-pm-id="merchant" data-category="commercial" data-search="merchant lane commercial office retail">
+            <div class="relative">
+              <img class="aspect-[16/10] w-full object-cover" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Open plan office with natural light" width="1200" height="750" loading="lazy" />
+              <span class="font-ui absolute left-3 top-3 rounded-lg bg-white px-2 py-1 text-xs font-bold text-ink">Triple net</span>
+              <button class="font-ui absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-brand-ink hover:bg-brand-soft" type="button" data-pm-watch="merchant" aria-label="Save Merchant Lane" aria-pressed="false"><i class="bi bi-bookmark"></i></button>
+            </div>
+            <div class="p-5">
+              <p class="font-ui text-xs font-black uppercase text-muted">Commercial · 22 suites</p>
+              <h3 class="font-display mt-1 text-xl font-bold">Merchant Lane</h3>
+              <p class="mt-2 text-sm text-muted">Flex office and showrooms with shared conference rooms.</p>
+              <div class="mt-4 flex items-center justify-between gap-2">
+                <span class="font-display font-bold">$37,900 / mo</span>
+                <button class="font-ui text-sm font-bold text-brand-ink hover:text-ink" type="button" data-pm-ticket="merchant">Open ticket</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="pm-reveal mt-6 text-center text-sm text-muted" id="pmEmpty" hidden>No properties match. Try another filter or search.</p>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="metrics">
+      <div class="mx-auto max-w-6xl">
+        <div class="pm-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Metrics</p>
+          <h2 class="font-display mt-2 text-3xl font-black md:text-4xl">September snapshot</h2>
+          <p class="mt-2 max-w-2xl text-muted">Sample numbers for layout only. Bars use flat fills, no chart gradients.</p>
+        </div>
+        <div class="pm-reveal mt-8 grid gap-6 lg:grid-cols-2">
+          <div class="rounded-2xl border border-line bg-canvas p-6">
+            <h3 class="font-display text-lg font-bold">Rent collected by week</h3>
+            <div class="pm-bar-chart mt-6" aria-hidden="true">
+              <div class="pm-bar" style="height: 52%"></div>
+              <div class="pm-bar is-accent" style="height: 78%"></div>
+              <div class="pm-bar" style="height: 65%"></div>
+              <div class="pm-bar is-accent" style="height: 88%"></div>
+              <div class="pm-bar" style="height: 71%"></div>
+            </div>
+            <p class="mt-4 font-ui text-xs font-bold uppercase text-muted">Week 1 · 2 · 3 · 4 · 5</p>
+          </div>
+          <div class="rounded-2xl border border-line bg-canvas p-6">
+            <h3 class="font-display text-lg font-bold">Collection health</h3>
+            <ul class="mt-6 space-y-4 text-sm">
+              <li class="flex justify-between gap-4 border-b border-line pb-3"><span class="text-muted">On-time payments</span><strong class="font-display">91%</strong></li>
+              <li class="flex justify-between gap-4 border-b border-line pb-3"><span class="text-muted">Late (under 5 days)</span><strong class="font-display">5%</strong></li>
+              <li class="flex justify-between gap-4 border-b border-line pb-3"><span class="text-muted">In conversation</span><strong class="font-display">4%</strong></li>
+              <li class="flex justify-between gap-4"><span class="text-muted">Vacancy loss</span><strong class="font-display">$11,200</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="maintenance">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="pm-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Maintenance</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Open a demo ticket</h2>
+          <p class="mt-4 text-muted">Describe the work, pick a building, and save it here. Vendors are not called in this template.</p>
+          <h3 class="font-display mt-8 text-lg font-bold">Queue on this device</h3>
+          <p class="mt-2 text-sm text-muted" id="pmTicketEmpty">No tickets yet.</p>
+          <ul class="mt-4 space-y-3" id="pmTicketList"></ul>
+        </div>
+        <form class="pm-reveal space-y-4 rounded-2xl border border-line bg-white p-6" id="pmTicketForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="pmTicketTitle">Title</label>
+            <input class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmTicketTitle" name="title" required maxlength="120" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="pmTicketProperty">Property</label>
+            <select class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmTicketProperty" name="property" required>
+              <option value="linden">Linden Court</option>
+              <option value="harbor">Harbor Row</option>
+              <option value="ridge">East Ridge</option>
+              <option value="stonefield">Stonefield Lofts</option>
+              <option value="canvas">Canvas Apartments</option>
+              <option value="merchant">Merchant Lane</option>
+            </select>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="pmTicketUnit">Unit or suite</label>
+              <input class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmTicketUnit" name="unit" required maxlength="40" placeholder="204" />
+            </div>
+            <div>
+              <label class="font-ui text-xs font-black uppercase text-muted" for="pmTicketPriority">Priority</label>
+              <select class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmTicketPriority" name="priority">
+                <option value="Normal">Normal</option>
+                <option value="Today">Today</option>
+                <option value="Emergency">Emergency</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="pmTicketNote">Note</label>
+            <textarea class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmTicketNote" name="note" rows="3" maxlength="500" placeholder="Leak under sink, key code, access hours"></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-brand py-3 text-sm font-bold text-ink hover:bg-brand-dark" type="submit">Save demo ticket</button>
+          <p class="text-center text-xs text-muted">Stored locally. Not dispatched to a vendor.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="tenants">
+      <div class="mx-auto max-w-6xl">
+        <div class="pm-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Tenants</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Recent rent activity</h2>
+          <p class="mt-2 text-muted">Fictional ledger rows for the table layout. No payment processing.</p>
+        </div>
+        <div class="pm-table-wrap pm-reveal mt-8 rounded-2xl border border-line bg-canvas">
+          <table class="w-full min-w-[640px] text-left text-sm">
+            <thead class="font-ui text-xs font-black uppercase text-muted">
+              <tr class="border-b border-line bg-white">
+                <th class="px-4 py-3" scope="col">Resident</th>
+                <th class="px-4 py-3" scope="col">Property</th>
+                <th class="px-4 py-3" scope="col">Amount</th>
+                <th class="px-4 py-3" scope="col">Due</th>
+                <th class="px-4 py-3" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-line bg-white">
+                <td class="px-4 py-3"><strong>Asha Poluru</strong><br /><span class="text-muted">Lease through Apr 2027</span></td>
+                <td class="px-4 py-3">Linden Court · 204</td>
+                <td class="px-4 py-3 font-display font-bold">$1,850</td>
+                <td class="px-4 py-3">Oct 1</td>
+                <td class="px-4 py-3"><span class="font-ui rounded-lg bg-brand-soft px-2 py-1 text-xs font-bold text-brand-ink">Paid</span></td>
+              </tr>
+              <tr class="border-b border-line">
+                <td class="px-4 py-3"><strong>Meera Poluru</strong><br /><span class="text-muted">Commercial suite</span></td>
+                <td class="px-4 py-3">Harbor Row · B2</td>
+                <td class="px-4 py-3 font-display font-bold">$3,400</td>
+                <td class="px-4 py-3">Oct 1</td>
+                <td class="px-4 py-3"><span class="font-ui rounded-lg bg-brand-soft px-2 py-1 text-xs font-bold text-brand-ink">Paid</span></td>
+              </tr>
+              <tr class="border-b border-line bg-white">
+                <td class="px-4 py-3"><strong>Kavya Poluru</strong><br /><span class="text-muted">Month-to-month</span></td>
+                <td class="px-4 py-3">East Ridge · 1108</td>
+                <td class="px-4 py-3 font-display font-bold">$2,050</td>
+                <td class="px-4 py-3">Oct 1</td>
+                <td class="px-4 py-3"><span class="font-ui rounded-lg border border-line bg-white px-2 py-1 text-xs font-bold text-muted">Reminder sent</span></td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3"><strong>Ravi Poluru</strong><br /><span class="text-muted">Annual lease</span></td>
+                <td class="px-4 py-3">Canvas · 12</td>
+                <td class="px-4 py-3 font-display font-bold">$1,675</td>
+                <td class="px-4 py-3">Oct 1</td>
+                <td class="px-4 py-3"><span class="font-ui rounded-lg bg-brand-soft px-2 py-1 text-xs font-bold text-brand-ink">Paid</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-canvas px-5 py-14" id="team">
+      <div class="mx-auto max-w-6xl">
+        <div class="pm-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Team</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Managers on the book</h2>
+        </div>
+        <div class="pm-reveal mt-8 grid gap-4 md:grid-cols-3">
+          <article class="rounded-2xl border border-line bg-white p-6 text-center">
+            <span class="font-ui mx-auto grid h-14 w-14 place-items-center rounded-xl bg-brand text-lg font-black text-ink" aria-hidden="true">SP</span>
+            <h3 class="font-display mt-4 font-bold">Subrahmanyam Poluru</h3>
+            <p class="font-ui text-xs font-black uppercase text-brand-ink">Portfolio lead</p>
+            <p class="mt-2 text-sm text-muted">Oversees Linden, Harbor, and owner reporting in this sample org.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6 text-center">
+            <span class="font-ui mx-auto grid h-14 w-14 place-items-center rounded-xl bg-brand text-lg font-black text-ink" aria-hidden="true">AP</span>
+            <h3 class="font-display mt-4 font-bold">Asha Poluru</h3>
+            <p class="font-ui text-xs font-black uppercase text-brand-ink">Residential</p>
+            <p class="mt-2 text-sm text-muted">Turns, renewals, and resident messages for the garden-style assets.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6 text-center">
+            <span class="font-ui mx-auto grid h-14 w-14 place-items-center rounded-xl bg-brand text-lg font-black text-ink" aria-hidden="true">MP</span>
+            <h3 class="font-display mt-4 font-bold">Meera Poluru</h3>
+            <p class="font-ui text-xs font-black uppercase text-brand-ink">Commercial</p>
+            <p class="mt-2 text-sm text-muted">NNN leases, CAM reconciliations, and vendor walk-throughs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-line bg-white px-5 py-14" id="faq">
+      <div class="mx-auto max-w-3xl">
+        <div class="pm-reveal text-center">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">FAQ</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Before you wire this up</h2>
+        </div>
+        <div class="pm-reveal mt-8 space-y-3">
+          <details class="rounded-xl border border-line bg-canvas p-4" open>
+            <summary class="font-display cursor-pointer font-bold">Is this a live property system?</summary>
+            <p class="mt-3 text-sm text-muted">No. Parkline is a front-end demo. Tickets and watchlist items stay in local storage.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-canvas p-4">
+            <summary class="font-display cursor-pointer font-bold">Can tenants pay rent here?</summary>
+            <p class="mt-3 text-sm text-muted">The ledger table is sample data. There is no payment processor or bank link.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-canvas p-4">
+            <summary class="font-display cursor-pointer font-bold">What does the watchlist do?</summary>
+            <p class="mt-3 text-sm text-muted">Bookmark icons save buildings in this browser. Use Saved only beside search to filter.</p>
+          </details>
+          <details class="rounded-xl border border-line bg-canvas p-4">
+            <summary class="font-display cursor-pointer font-bold">Are the metrics real time?</summary>
+            <p class="mt-3 text-sm text-muted">Numbers and bars are static samples for the layout. They do not pull from an API.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-canvas px-5 py-14" id="contact">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div class="pm-reveal">
+          <p class="font-ui text-xs font-black uppercase tracking-[0.14em] text-brand-ink">Contact</p>
+          <h2 class="font-display mt-2 text-3xl font-black">Owner questions?</h2>
+          <p class="mt-4 text-muted">Acquisition decks, reporting cadence, or access for your team. The form is demo-only.</p>
+          <p class="mt-6 text-sm">
+            <a class="font-bold text-brand-ink hover:text-ink" href="mailto:hello@parkline.demo">hello@parkline.demo</a><br />
+            220 Congress Avenue · Austin, TX
+          </p>
+        </div>
+        <form class="pm-reveal space-y-4 rounded-2xl border border-line bg-white p-6" id="pmContactForm">
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="pmContactName">Name</label>
+            <input class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmContactName" name="name" required autocomplete="name" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="pmContactEmail">Email</label>
+            <input class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmContactEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div>
+            <label class="font-ui text-xs font-black uppercase text-muted" for="pmContactMsg">Message</label>
+            <textarea class="mt-1 w-full rounded-xl border border-line bg-canvas px-3 py-2.5 text-sm" id="pmContactMsg" name="message" rows="4" required></textarea>
+          </div>
+          <button class="font-ui w-full rounded-xl bg-brand py-3 text-sm font-bold text-ink hover:bg-brand-dark" type="submit">Send note</button>
+          <p class="text-center text-xs text-muted">Nothing is emailed.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line bg-white text-muted">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a class="font-display inline-flex items-center gap-2 text-xl font-bold text-ink" href="#top">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand text-ink" aria-hidden="true"><i class="bi bi-buildings"></i></span>
+          <span>Parkline<em class="not-italic text-brand-ink">.</em></span>
+        </a>
+        <p class="mt-3 max-w-xs text-sm">Property portal template with portfolio filters, metrics, and local maintenance tickets. Fictional Austin portfolio.</p>
+      </div>
+      <nav aria-label="Workspace">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-brand-ink">Workspace</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="font-bold text-brand-ink hover:text-ink" href="#portfolio">Portfolio</a></li>
+          <li><a class="font-bold text-brand-ink hover:text-ink" href="#metrics">Metrics</a></li>
+          <li><a class="font-bold text-brand-ink hover:text-ink" href="#maintenance">Maintenance</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-brand-ink">Company</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="font-bold text-brand-ink hover:text-ink" href="#tenants">Tenants</a></li>
+          <li><a class="font-bold text-brand-ink hover:text-ink" href="#team">Team</a></li>
+          <li><a class="font-bold text-brand-ink hover:text-ink" href="#faq">FAQ</a></li>
+          <li><a class="font-bold text-brand-ink hover:text-ink" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-ui text-xs font-black uppercase tracking-widest text-brand-ink">Author</p>
+        <div class="mt-3 flex gap-3 rounded-xl border border-line bg-canvas p-4">
+          <span class="font-ui grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand font-black text-ink" aria-hidden="true">SP</span>
+          <div>
+            <p class="font-display font-bold text-ink">Subrahmanyam Poluru</p>
+            <p class="mt-1 text-xs text-muted">Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+            <div class="mt-2 flex flex-wrap gap-3 text-sm font-bold">
+              <a class="text-brand-ink hover:text-ink" href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+              <a class="text-brand-ink hover:text-ink" href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 border-t border-line px-5 py-4 text-sm">
+      <span>© <span id="year">2026</span> Parkline. Fictional sample. No live rent or dispatch.</span>
+      <span>Built by <a class="font-bold text-brand-ink hover:text-ink" href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="pm-toast" id="pmToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill text-brand-ink" aria-hidden="true"></i>
+    <div>
+      <strong class="font-display text-sm" id="pmToastTitle">Done</strong>
+      <p class="text-xs text-muted" id="pmToastBody">Action completed.</p>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

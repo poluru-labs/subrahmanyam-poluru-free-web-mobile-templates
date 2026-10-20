@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Parkline">
+  <rect width="32" height="32" rx="8" fill="#C2D099"/>
+  <g fill="#1E2418">
+    <path d="M8 24V12.5L16 8l8 4.5V24h-5v-7h-6v7H8z"/>
+    <rect x="13" y="17" width="6" height="7" rx="0.5"/>
+  </g>
+</svg>
