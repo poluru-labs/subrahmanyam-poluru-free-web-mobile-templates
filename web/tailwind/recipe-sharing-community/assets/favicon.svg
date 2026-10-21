@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Simmerbox">
+  <rect width="32" height="32" rx="8" fill="#CA6180"/>
+  <g fill="#1F1418">
+    <path d="M9 22h14v2H9z"/>
+    <path d="M11 10c0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.4-.7 2.6-1.8 3.3V16h-4.4v-2.7C11.7 12.6 11 11.4 11 10z"/>
+    <path d="M13.5 18h5v1.5h-5z"/>
+  </g>
+</svg>
