@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Fieldrow — Farmer marketplace
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,540 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fieldrow — From the row to your kitchen table</title>
+  <meta name="description" content="Fieldrow is a fictional Austin farm marketplace: seasonal produce, local vendors, and a demo basket saved in the browser. By Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#27391C" />
+  <link rel="canonical" href="https://polurus.com/templates/farmer-marketplace/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fieldrow — From the row to your kitchen table" />
+  <meta property="og:description" content="Clean farmer marketplace with category filters, basket, and demo pickup requests." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Fieldrow — From the row to your kitchen table" />
+  <meta name="twitter:description" content="Clean farmer marketplace with category filters, basket, and demo pickup requests." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Fieldrow — Farmer marketplace",
+        "description": "Fictional farm marketplace template by Subrahmanyam Poluru. No live payments or delivery.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="fm-skip" href="#main">Skip to content</a>
+
+  <div class="fm-utility">
+    <div class="container fm-utility-inner">
+      <span><i class="fm-dot" aria-hidden="true"></i>Sat 8–1 · Mueller Lake Park · Austin</span>
+      <div class="fm-utility-meta">
+        <a href="tel:+15125550194"><i class="bi bi-telephone"></i> (512) 555-0194</a>
+        <span>Basket stays in this browser only</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top fm-nav" aria-label="Primary">
+    <div class="container">
+      <a class="fm-brand" href="#top">
+        <span class="fm-mark" aria-hidden="true"><i class="bi bi-basket2"></i></span>
+        <span>Fieldrow<em>.</em></span>
+      </a>
+      <button class="fm-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#produce">Produce</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vendors">Vendors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#market">Market day</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="fm-btn fm-btn-ghost" href="#basket">Basket <span class="fm-count" id="fmBasketCount">0</span></a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="fm-btn fm-btn-primary" href="#pickup">Reserve pickup</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="fm-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 fm-reveal">
+            <p class="fm-kicker">Farm marketplace · Austin</p>
+            <h1>From the row to your kitchen table.</h1>
+            <p class="fm-lead">Fieldrow is a fictional market for vegetables, fruit, dairy, and pantry goods from nearby growers. Filter the board, fill a demo basket, and save a pickup slot. Nothing is charged or shipped from this page.</p>
+            <div class="fm-actions">
+              <a class="fm-btn fm-btn-primary" href="#produce">Shop the board</a>
+              <a class="fm-btn fm-btn-ghost" href="#pickup">Reserve pickup</a>
+            </div>
+            <ul class="fm-hero-points">
+              <li><i class="bi bi-flower1"></i> Seasonal tags on every card</li>
+              <li><i class="bi bi-recycle"></i> Sample compostable bag story</li>
+              <li><i class="bi bi-geo-alt"></i> Mueller Lake Park, booth row B</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 fm-reveal">
+            <figure class="fm-figure">
+              <img src="https://images.unsplash.com/photo-1488459716781-31db51742c9c?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Fresh vegetables displayed at an outdoor farmers market" width="1400" height="1120" />
+              <figcaption class="fm-caption">
+                <div>
+                  <p class="fm-kicker">This week</p>
+                  <p><strong>Heirloom tomatoes · first pick of the season</strong></p>
+                </div>
+                <a class="fm-btn fm-btn-ghost fm-btn-on-dark" href="#produce">See produce</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-stats" aria-label="Market metrics">
+      <div class="container">
+        <ul class="fm-stats-grid fm-reveal">
+          <li><strong>32</strong><span>Vendors in this story</span></li>
+          <li><strong>120+</strong><span>Sample SKUs on the board</span></li>
+          <li><strong>4</strong><span>Categories to filter</span></li>
+          <li><strong>0</strong><span>Platform fees in the demo</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="fm-section" id="produce">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-kicker">Produce</p>
+          <h2>What is on the table today</h2>
+          <p>Filter by aisle or search by ingredient. Add items to your basket for a demo pickup request.</p>
+        </div>
+        <div class="fm-toolbar fm-reveal" role="toolbar" aria-label="Produce filters">
+          <div class="fm-filters" id="fmProduceFilters">
+            <button type="button" class="fm-chip is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="fm-chip" data-filter="vegetables" aria-pressed="false">Vegetables</button>
+            <button type="button" class="fm-chip" data-filter="fruit" aria-pressed="false">Fruit</button>
+            <button type="button" class="fm-chip" data-filter="dairy" aria-pressed="false">Dairy</button>
+            <button type="button" class="fm-chip" data-filter="pantry" aria-pressed="false">Pantry</button>
+          </div>
+          <label class="fm-search">
+            <span class="visually-hidden">Search produce</span>
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" id="fmProduceSearch" placeholder="Tomato, honey, loaf…" autocomplete="off" />
+          </label>
+        </div>
+        <p class="fm-result fm-reveal" id="fmProduceCount" aria-live="polite">8 items</p>
+        <div class="fm-produce-grid fm-reveal" id="fmProduceGrid">
+          <article class="fm-produce" data-id="tomato" data-category="vegetables" data-tags="tomato heirloom" data-price="4.50" data-unit="lb">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1592924358216-275e1f772c36?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Vegetables</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Heirloom tomatoes</h3>
+              <p class="fm-vendor">Sunline Farm · Asha Poluru</p>
+              <p class="fm-price"><strong>$4.50</strong> / lb</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="tomato">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="fm-produce" data-id="strawberry" data-category="fruit" data-tags="berry strawberry" data-price="6.00" data-unit="pint">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1464965911861-746a04a4b936?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Fruit</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Early strawberries</h3>
+              <p class="fm-vendor">Barton Creek Berries · Meera Poluru</p>
+              <p class="fm-price"><strong>$6.00</strong> / pint</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="strawberry">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="fm-produce" data-id="eggs" data-category="dairy" data-tags="egg pasture" data-price="7.00" data-unit="dozen">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1582722870445-44c95f5427a5?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Dairy</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Pasture eggs</h3>
+              <p class="fm-vendor">Hillock Hens · Kavya Poluru</p>
+              <p class="fm-price"><strong>$7.00</strong> / dozen</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="eggs">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="fm-produce" data-id="honey" data-category="pantry" data-tags="honey wildflower jar" data-price="12.00" data-unit="jar">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1587049352846-4a222e784422?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Pantry</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Wildflower honey</h3>
+              <p class="fm-vendor">Cedar Hive Co · Subrahmanyam Poluru</p>
+              <p class="fm-price"><strong>$12.00</strong> / jar</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="honey">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="fm-produce" data-id="kale" data-category="vegetables" data-tags="kale greens" data-price="3.50" data-unit="bunch">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1515543909619-37a2898b93d3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Vegetables</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Lacinato kale</h3>
+              <p class="fm-vendor">Greenbelt Greens · Meera Poluru</p>
+              <p class="fm-price"><strong>$3.50</strong> / bunch</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="kale">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="fm-produce" data-id="peach" data-category="fruit" data-tags="peach stone fruit" data-price="5.50" data-unit="lb">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1629828737559-995b1eaa92e5?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Fruit</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Hill country peaches</h3>
+              <p class="fm-vendor">Orchard 12 · Asha Poluru</p>
+              <p class="fm-price"><strong>$5.50</strong> / lb</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="peach">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="fm-produce" data-id="cheese" data-category="dairy" data-tags="cheese goat" data-price="9.00" data-unit="wheel">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1452195100506-4447f9748a5e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Dairy</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Fresh chèvre</h3>
+              <p class="fm-vendor">Lone Star Creamery · Kavya Poluru</p>
+              <p class="fm-price"><strong>$9.00</strong> / wheel</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="cheese">Add to basket</button>
+              </div>
+            </div>
+          </article>
+          <article class="fm-produce" data-id="bread" data-category="pantry" data-tags="bread sourdough loaf" data-price="8.00" data-unit="loaf">
+            <div class="fm-produce-media">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="fm-tag">Pantry</span>
+            </div>
+            <div class="fm-produce-body">
+              <h3>Country sourdough</h3>
+              <p class="fm-vendor">Mill &amp; Ember · Subrahmanyam Poluru</p>
+              <p class="fm-price"><strong>$8.00</strong> / loaf</p>
+              <div class="fm-produce-actions">
+                <button type="button" class="fm-btn fm-btn-primary fm-btn-sm fm-add" data-id="bread">Add to basket</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-section fm-section-soft" id="how">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-kicker">How it works</p>
+          <h2>Market morning, step by step</h2>
+        </div>
+        <ol class="fm-step-grid fm-reveal">
+          <li>
+            <span class="fm-step-num">1</span>
+            <h3>Browse the board</h3>
+            <p>Filter by aisle or search an ingredient. Prices and vendors are sample data.</p>
+          </li>
+          <li>
+            <span class="fm-step-num">2</span>
+            <h3>Fill your basket</h3>
+            <p>Add items on this device. Quantities bump when you tap again.</p>
+          </li>
+          <li>
+            <span class="fm-step-num">3</span>
+            <h3>Pick a window</h3>
+            <p>Choose a Saturday slot at Mueller Lake Park in the demo form.</p>
+          </li>
+          <li>
+            <span class="fm-step-num">4</span>
+            <h3>Pay at the booth</h3>
+            <p>In this story, you settle with each vendor at pickup. No card flow here.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="fm-section" id="vendors">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-kicker">Vendors</p>
+          <h2>Growers behind the labels</h2>
+          <p>Fictional Austin-area farms for this layout. Photos are from Unsplash.</p>
+        </div>
+        <div class="fm-people-grid fm-reveal">
+          <article class="fm-person">
+            <span class="fm-avatar" aria-hidden="true">AP</span>
+            <h3>Asha Poluru</h3>
+            <p class="fm-role">Sunline Farm</p>
+            <p>Tomatoes, peppers, and summer squash from a three-acre plot.</p>
+          </article>
+          <article class="fm-person">
+            <span class="fm-avatar" aria-hidden="true">MP</span>
+            <h3>Meera Poluru</h3>
+            <p class="fm-role">Barton Creek Berries</p>
+            <p>Berries and leafy greens with pick-your-own weekends in the story.</p>
+          </article>
+          <article class="fm-person">
+            <span class="fm-avatar" aria-hidden="true">KP</span>
+            <h3>Kavya Poluru</h3>
+            <p class="fm-role">Hillock Hens</p>
+            <p>Pasture eggs and small-batch cheese from a family dairy line.</p>
+          </article>
+          <article class="fm-person">
+            <span class="fm-avatar" aria-hidden="true">SP</span>
+            <h3>Subrahmanyam Poluru</h3>
+            <p class="fm-role">Cedar Hive Co</p>
+            <p>Honey, beeswax candles, and the Mill &amp; Ember bread table.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-section fm-section-soft" id="market">
+      <div class="container">
+        <div class="row g-4 align-items-center fm-reveal">
+          <div class="col-lg-6">
+            <p class="fm-kicker">Market day</p>
+            <h2>Mueller Lake Park · row B</h2>
+            <p>Weekly outdoor market in this fictional community. Bring bags, cash, or tap-to-pay at booths — not through this demo.</p>
+            <ul class="fm-checklist">
+              <li><i class="bi bi-check2"></i> Saturdays 8:00 AM – 1:00 PM</li>
+              <li><i class="bi bi-check2"></i> Demo pickup slots every 30 minutes</li>
+              <li><i class="bi bi-check2"></i> Compost drop near the north entrance</li>
+              <li><i class="bi bi-check2"></i> ADA parking on Arthur Stiles Blvd</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <figure class="fm-figure fm-figure-plain">
+              <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Shoppers walking through an outdoor farmers market" width="1200" height="900" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-section" id="basket">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-5 fm-reveal">
+            <p class="fm-kicker">Basket</p>
+            <h2>Your demo order</h2>
+            <p>Adjust quantities or clear lines. Totals are illustrative — no checkout runs here.</p>
+            <div class="fm-panel">
+              <ul class="fm-basket-list" id="fmBasketList">
+                <li class="fm-empty">Your basket is empty. Add produce from the board.</li>
+              </ul>
+              <p class="fm-basket-total" id="fmBasketTotal" hidden>Estimated total: <strong>$0.00</strong></p>
+            </div>
+          </div>
+          <div class="col-lg-7 fm-reveal" id="pickup">
+            <p class="fm-kicker">Pickup</p>
+            <h2>Reserve a Saturday window</h2>
+            <p>Save a demo request with your basket attached. Stored locally — not sent to vendors.</p>
+            <div class="fm-panel fm-panel-compact">
+              <h3>Saved on this device</h3>
+              <ul class="fm-pickup-list" id="fmPickupList">
+                <li class="fm-empty">No pickup requests yet.</li>
+              </ul>
+            </div>
+            <form class="fm-panel" id="fmPickupForm">
+              <label class="fm-field" for="fmPickupName">Name
+                <input id="fmPickupName" name="name" required autocomplete="name" />
+              </label>
+              <label class="fm-field" for="fmPickupEmail">Email
+                <input id="fmPickupEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="fm-field" for="fmPickupSlot">Saturday slot
+                <select id="fmPickupSlot" name="slot" required>
+                  <option value="">Choose a time</option>
+                  <option value="8:00">8:00 AM</option>
+                  <option value="8:30">8:30 AM</option>
+                  <option value="9:00">9:00 AM</option>
+                  <option value="9:30">9:30 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:30">11:30 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                </select>
+              </label>
+              <label class="fm-field" for="fmPickupNotes">Notes
+                <textarea id="fmPickupNotes" name="notes" placeholder="Allergies, substitute ok, etc."></textarea>
+              </label>
+              <button class="fm-btn fm-btn-primary" type="submit">Save demo pickup</button>
+              <p class="fm-form-note">Nothing is emailed. Basket snapshot attaches to the request.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-section fm-section-soft" id="faq">
+      <div class="container">
+        <div class="fm-section-head fm-reveal">
+          <p class="fm-kicker">FAQ</p>
+          <h2>Before you head to the park</h2>
+        </div>
+        <div class="accordion fm-accordion fm-reveal" id="fmFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fmFaq1" aria-expanded="true" aria-controls="fmFaq1">Is Fieldrow a live grocery app?</button>
+            </h3>
+            <div id="fmFaq1" class="accordion-collapse collapse show" data-bs-parent="#fmFaq">
+              <div class="accordion-body">No. This is a front-end demo. Baskets and pickup requests stay in local storage on your device.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fmFaq2" aria-expanded="false" aria-controls="fmFaq2">Can I pay on this website?</button>
+            </h3>
+            <div id="fmFaq2" class="accordion-collapse collapse" data-bs-parent="#fmFaq">
+              <div class="accordion-body">There is no payment processor. The copy assumes you pay vendors at the booth in the fictional market.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fmFaq3" aria-expanded="false" aria-controls="fmFaq3">What happens when I add to basket twice?</button>
+            </h3>
+            <div id="fmFaq3" class="accordion-collapse collapse" data-bs-parent="#fmFaq">
+              <div class="accordion-body">Quantity increases by one. Use the minus control in the basket panel to step down or remove a line.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fmFaq4" aria-expanded="false" aria-controls="fmFaq4">Are vendor photos real?</button>
+            </h3>
+            <div id="fmFaq4" class="accordion-collapse collapse" data-bs-parent="#fmFaq">
+              <div class="accordion-body">Product and market images are from Unsplash. Vendor names and farms are fictional sample content.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fm-section" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 fm-reveal">
+            <p class="fm-kicker">Contact</p>
+            <h2>Want a booth in the story?</h2>
+            <p>Vendor onboarding, SNAP/EBT questions, or accessibility at the market. The form is demo-only.</p>
+            <p><a href="mailto:hello@fieldrow.demo">hello@fieldrow.demo</a><br />(512) 555-0194</p>
+          </div>
+          <div class="col-lg-7 fm-reveal">
+            <form class="fm-panel" id="fmContactForm">
+              <label class="fm-field" for="fmContactName">Name
+                <input id="fmContactName" name="name" required autocomplete="name" />
+              </label>
+              <label class="fm-field" for="fmContactEmail">Email
+                <input id="fmContactEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="fm-field" for="fmContactMsg">Message
+                <textarea id="fmContactMsg" name="message" required></textarea>
+              </label>
+              <button class="fm-btn fm-btn-primary" type="submit">Send note</button>
+              <p class="fm-form-note">Nothing is emailed.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fm-footer">
+    <div class="container">
+      <div class="fm-footer-grid">
+        <div class="fm-footer-brand">
+          <a class="fm-brand" href="#top">
+            <span class="fm-mark" aria-hidden="true"><i class="bi bi-basket2"></i></span>
+            <span>Fieldrow<em>.</em></span>
+          </a>
+          <p>Farmer marketplace template with produce filters, local basket, and demo pickup slots. Fictional Austin market.</p>
+        </div>
+        <nav aria-label="Shop">
+          <h2>Shop</h2>
+          <a href="#produce">Produce</a>
+          <a href="#basket">Basket</a>
+          <a href="#pickup">Reserve pickup</a>
+        </nav>
+        <nav aria-label="Market">
+          <h2>Market</h2>
+          <a href="#vendors">Vendors</a>
+          <a href="#how">How it works</a>
+          <a href="#market">Market day</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="fm-author">
+            <span class="fm-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="fm-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fm-legal">
+        <span>© <span id="year">2026</span> Fieldrow. Fictional sample. No live checkout.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fm-toast" id="fmToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="fmToastTitle">Done</strong>
+      <p id="fmToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
