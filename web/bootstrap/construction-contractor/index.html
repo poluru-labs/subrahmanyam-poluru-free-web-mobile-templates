@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Keelframe — Construction contractor
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,586 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keelframe — Built on schedule, explained in plain language</title>
+  <meta name="description" content="Keelframe is a fictional Austin contractor: remodels, commercial build-outs, and exterior work. Filter sample projects and save demo quotes in the browser. By Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#D92C54" />
+  <link rel="canonical" href="https://polurus.com/templates/construction-contractor/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Keelframe — Built on schedule, explained in plain language" />
+  <meta property="og:description" content="Clean contractor page with services, project filters, and local demo quotes." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Keelframe — Built on schedule, explained in plain language" />
+  <meta name="twitter:description" content="Clean contractor page with services, project filters, and local demo quotes." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Keelframe — Construction contractor",
+        "description": "Fictional contractor template by Subrahmanyam Poluru. No live bidding or scheduling.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="kf-skip" href="#main">Skip to content</a>
+
+  <div class="kf-utility">
+    <div class="container kf-utility-inner">
+      <span><i class="kf-dot" aria-hidden="true"></i>Mon–Fri 7–5 · Licensed demo · Austin</span>
+      <div class="kf-utility-meta">
+        <a href="tel:+15125550188"><i class="bi bi-telephone"></i> (512) 555-0188</a>
+        <span>Quotes saved in this browser only</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top kf-nav" aria-label="Primary">
+    <div class="container">
+      <a class="kf-brand" href="#top">
+        <span class="kf-mark" aria-hidden="true"><i class="bi bi-hammer"></i></span>
+        <span>Keelframe<em>.</em></span>
+      </a>
+      <button class="kf-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="#crew">Crew</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="kf-btn kf-btn-ghost" href="#quote">Shortlist <span class="kf-count" id="kfShortlistCount">0</span></a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="kf-btn kf-btn-primary" href="#quote">Request quote</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="kf-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 kf-reveal">
+            <p class="kf-kicker">General contractor · Austin</p>
+            <h1>Built on schedule, explained in plain language.</h1>
+            <p class="kf-lead">Keelframe is a fictional crew for remodels, tenant improvements, and exterior work. Browse sample jobs, flag what fits your scope, and save a demo quote request. Nothing is sent to a server.</p>
+            <div class="kf-actions">
+              <a class="kf-btn kf-btn-primary" href="#projects">See recent work</a>
+              <a class="kf-btn kf-btn-ghost" href="#quote">Request quote</a>
+            </div>
+            <ul class="kf-hero-points">
+              <li><i class="bi bi-shield-check"></i> Sample OSHA-minded site rules in copy</li>
+              <li><i class="bi bi-calendar3"></i> Weekly client walk-throughs in the story</li>
+              <li><i class="bi bi-geo-alt"></i> 2200 Red River St, Austin yard</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 kf-reveal">
+            <figure class="kf-figure">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Construction crew reviewing plans at a job site" width="1400" height="1120" />
+              <figcaption class="kf-caption">
+                <div>
+                  <p class="kf-kicker">Active lane</p>
+                  <p><strong>Mueller reception · week 6 of 10</strong></p>
+                </div>
+                <a class="kf-btn kf-btn-ghost" href="#projects">Open board</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-stats" aria-label="Company metrics">
+      <div class="container">
+        <ul class="kf-stats-grid kf-reveal">
+          <li><strong>18</strong><span>Years on residential lanes</span></li>
+          <li><strong>142</strong><span>Sample projects in this story</span></li>
+          <li><strong>96%</strong><span>On-time handoffs in demo data</span></li>
+          <li><strong>24</strong><span>Field crew in the narrative</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="kf-section" id="projects">
+      <div class="container">
+        <div class="kf-section-head kf-reveal">
+          <p class="kf-kicker">Projects</p>
+          <h2>Board from the last two seasons</h2>
+          <p>Filter by job type or search by material. Hearts add a project to your shortlist for the quote form.</p>
+        </div>
+        <div class="kf-toolbar kf-reveal" role="toolbar" aria-label="Project filters">
+          <div class="kf-filters" id="kfProjectFilters">
+            <button type="button" class="kf-chip is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="kf-chip" data-filter="residential" aria-pressed="false">Residential</button>
+            <button type="button" class="kf-chip" data-filter="commercial" aria-pressed="false">Commercial</button>
+            <button type="button" class="kf-chip" data-filter="outdoor" aria-pressed="false">Outdoor</button>
+          </div>
+          <label class="kf-search">
+            <span class="visually-hidden">Search projects</span>
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" id="kfProjectSearch" placeholder="Steel, tile, storefront…" autocomplete="off" />
+          </label>
+        </div>
+        <p class="kf-result kf-reveal" id="kfProjectCount" aria-live="polite">6 projects</p>
+        <div class="kf-project-grid kf-reveal" id="kfProjectGrid">
+          <article class="kf-project" data-id="kitchen" data-type="residential" data-tags="kitchen tile cabinet">
+            <div class="kf-project-media">
+              <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="kf-tag">Residential</span>
+            </div>
+            <div class="kf-project-body">
+              <h3>Riverside kitchen refresh</h3>
+              <p>Cabinets to ceiling, quartz tops, and one load-bearing wall opened with a flush beam.</p>
+              <ul class="kf-meta">
+                <li><i class="bi bi-clock"></i> 9 weeks</li>
+                <li><i class="bi bi-rulers"></i> 420 sq ft</li>
+              </ul>
+              <div class="kf-project-actions">
+                <button type="button" class="kf-icon-btn kf-save" data-id="kitchen" aria-pressed="false" aria-label="Save Riverside kitchen refresh">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+                <a class="kf-btn kf-btn-ghost kf-btn-sm" href="#quote">Quote similar</a>
+              </div>
+            </div>
+          </article>
+          <article class="kf-project" data-id="reception" data-type="commercial" data-tags="office reception drywall">
+            <div class="kf-project-media">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="kf-tag">Commercial</span>
+            </div>
+            <div class="kf-project-body">
+              <h3>Mueller office reception</h3>
+              <p>Demising walls, MEP coordination, and a feature wall with integrated lighting.</p>
+              <ul class="kf-meta">
+                <li><i class="bi bi-clock"></i> 10 weeks</li>
+                <li><i class="bi bi-building"></i> 2,800 sq ft</li>
+              </ul>
+              <div class="kf-project-actions">
+                <button type="button" class="kf-icon-btn kf-save" data-id="reception" aria-pressed="false" aria-label="Save Mueller office reception">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+                <a class="kf-btn kf-btn-ghost kf-btn-sm" href="#quote">Quote similar</a>
+              </div>
+            </div>
+          </article>
+          <article class="kf-project" data-id="deck" data-type="outdoor" data-tags="deck cedar pergola">
+            <div class="kf-project-media">
+              <img src="https://images.unsplash.com/photo-1591825729369-62b2f5f0d8a2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="kf-tag">Outdoor</span>
+            </div>
+            <div class="kf-project-body">
+              <h3>Cedar deck rebuild</h3>
+              <p>New footings, hidden fasteners, and cable rail to keep the view open.</p>
+              <ul class="kf-meta">
+                <li><i class="bi bi-clock"></i> 4 weeks</li>
+                <li><i class="bi bi-arrows-angle-expand"></i> 640 sq ft</li>
+              </ul>
+              <div class="kf-project-actions">
+                <button type="button" class="kf-icon-btn kf-save" data-id="deck" aria-pressed="false" aria-label="Save Cedar deck rebuild">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+                <a class="kf-btn kf-btn-ghost kf-btn-sm" href="#quote">Quote similar</a>
+              </div>
+            </div>
+          </article>
+          <article class="kf-project" data-id="addition" data-type="residential" data-tags="addition steel second story">
+            <div class="kf-project-media">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="kf-tag">Residential</span>
+            </div>
+            <div class="kf-project-body">
+              <h3>Bungalow second story</h3>
+              <p>Steel moment frame, two bedrooms, and a shared bath tied into existing plumbing.</p>
+              <ul class="kf-meta">
+                <li><i class="bi bi-clock"></i> 16 weeks</li>
+                <li><i class="bi bi-rulers"></i> 780 sq ft new</li>
+              </ul>
+              <div class="kf-project-actions">
+                <button type="button" class="kf-icon-btn kf-save" data-id="addition" aria-pressed="false" aria-label="Save Bungalow second story">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+                <a class="kf-btn kf-btn-ghost kf-btn-sm" href="#quote">Quote similar</a>
+              </div>
+            </div>
+          </article>
+          <article class="kf-project" data-id="storefront" data-type="commercial" data-tags="storefront glass retail">
+            <div class="kf-project-media">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="kf-tag">Commercial</span>
+            </div>
+            <div class="kf-project-body">
+              <h3>South Lamar storefront</h3>
+              <p>New storefront system, polished slab, and back-of-house prep with grease intercept.</p>
+              <ul class="kf-meta">
+                <li><i class="bi bi-clock"></i> 12 weeks</li>
+                <li><i class="bi bi-shop"></i> 1,950 sq ft</li>
+              </ul>
+              <div class="kf-project-actions">
+                <button type="button" class="kf-icon-btn kf-save" data-id="storefront" aria-pressed="false" aria-label="Save South Lamar storefront">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+                <a class="kf-btn kf-btn-ghost kf-btn-sm" href="#quote">Quote similar</a>
+              </div>
+            </div>
+          </article>
+          <article class="kf-project" data-id="patio" data-type="outdoor" data-tags="patio concrete pergola">
+            <div class="kf-project-media">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="kf-tag">Outdoor</span>
+            </div>
+            <div class="kf-project-body">
+              <h3>Patio and pergola</h3>
+              <p>Stamped concrete, drainage swale, and a steel pergola anchored to the slab.</p>
+              <ul class="kf-meta">
+                <li><i class="bi bi-clock"></i> 5 weeks</li>
+                <li><i class="bi bi-sun"></i> 520 sq ft</li>
+              </ul>
+              <div class="kf-project-actions">
+                <button type="button" class="kf-icon-btn kf-save" data-id="patio" aria-pressed="false" aria-label="Save Patio and pergola">
+                  <i class="bi bi-bookmark"></i>
+                </button>
+                <a class="kf-btn kf-btn-ghost kf-btn-sm" href="#quote">Quote similar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-section kf-section-soft" id="services">
+      <div class="container">
+        <div class="kf-section-head kf-reveal">
+          <p class="kf-kicker">Services</p>
+          <h2>Scopes we carry on the truck</h2>
+          <p>Sample lanes for this demo. Real pricing, permits, and subs are not wired up.</p>
+        </div>
+        <div class="kf-service-grid kf-reveal">
+          <article class="kf-service">
+            <span class="kf-service-icon" aria-hidden="true"><i class="bi bi-tools"></i></span>
+            <h3>General contracting</h3>
+            <p>Single contract, one schedule, and a superintendent who owns the punch list.</p>
+          </article>
+          <article class="kf-service">
+            <span class="kf-service-icon" aria-hidden="true"><i class="bi bi-cup-straw"></i></span>
+            <h3>Kitchen &amp; bath</h3>
+            <p>Layout, rough-in coordination, and finish trades sequenced to keep dust down.</p>
+          </article>
+          <article class="kf-service">
+            <span class="kf-service-icon" aria-hidden="true"><i class="bi bi-building"></i></span>
+            <h3>Commercial build-out</h3>
+            <p>Tenant improvements with after-hours work when the lease requires it.</p>
+          </article>
+          <article class="kf-service">
+            <span class="kf-service-icon" aria-hidden="true"><i class="bi bi-house"></i></span>
+            <h3>Roofing &amp; exterior</h3>
+            <p>Envelope repairs, siding, and windows with moisture details spelled out.</p>
+          </article>
+          <article class="kf-service">
+            <span class="kf-service-icon" aria-hidden="true"><i class="bi bi-bricks"></i></span>
+            <h3>Concrete &amp; foundation</h3>
+            <p>Flatwork, footings, and small structural patches with engineered calcs when needed.</p>
+          </article>
+          <article class="kf-service">
+            <span class="kf-service-icon" aria-hidden="true"><i class="bi bi-clipboard-check"></i></span>
+            <h3>Project management</h3>
+            <p>Weekly logs, photo reports, and change orders written before extra work starts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-section" id="process">
+      <div class="container">
+        <div class="kf-section-head kf-reveal">
+          <p class="kf-kicker">Process</p>
+          <h2>From walk-through to keys</h2>
+        </div>
+        <ol class="kf-step-grid kf-reveal">
+          <li>
+            <span class="kf-step-num">1</span>
+            <h3>Site walk</h3>
+            <p>Measure existing conditions, note access, and flag permit paths in plain language.</p>
+          </li>
+          <li>
+            <span class="kf-step-num">2</span>
+            <h3>Fixed-scope bid</h3>
+            <p>Line items you can compare. Allowances called out so finishes stay predictable.</p>
+          </li>
+          <li>
+            <span class="kf-step-num">3</span>
+            <h3>Build weeks</h3>
+            <p>Daily tidy, labeled temp power, and a single point of contact for your team.</p>
+          </li>
+          <li>
+            <span class="kf-step-num">4</span>
+            <h3>Punch &amp; handoff</h3>
+            <p>Walk the list together, collect manuals, and close permits before final draw.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="kf-section kf-section-soft" id="quote">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-start">
+          <div class="col-lg-5 kf-reveal">
+            <p class="kf-kicker">Quote</p>
+            <h2>Tell us about your lane</h2>
+            <p>Save a demo request with your shortlist attached. Stored locally — not emailed or bid live.</p>
+            <div class="kf-panel kf-panel-compact">
+              <h3>Shortlisted projects</h3>
+              <ul class="kf-shortlist" id="kfShortlistView">
+                <li class="kf-empty">None yet. Bookmark a project above.</li>
+              </ul>
+            </div>
+            <div class="kf-panel kf-panel-compact">
+              <h3>Saved on this device</h3>
+              <ul class="kf-quote-list" id="kfQuoteList">
+                <li class="kf-empty">No quote requests yet.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-7 kf-reveal">
+            <form class="kf-panel" id="kfQuoteForm">
+              <label class="kf-field" for="kfQuoteName">Name
+                <input id="kfQuoteName" name="name" required autocomplete="name" />
+              </label>
+              <label class="kf-field" for="kfQuoteEmail">Email
+                <input id="kfQuoteEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="kf-field" for="kfQuoteType">Project type
+                <select id="kfQuoteType" name="type" required>
+                  <option value="">Choose one</option>
+                  <option value="residential">Residential remodel</option>
+                  <option value="commercial">Commercial build-out</option>
+                  <option value="outdoor">Outdoor / exterior</option>
+                  <option value="other">Other / not sure</option>
+                </select>
+              </label>
+              <label class="kf-field" for="kfQuoteTimeline">Target start
+                <select id="kfQuoteTimeline" name="timeline" required>
+                  <option value="">Select window</option>
+                  <option value="0-3">Next 0–3 months</option>
+                  <option value="3-6">3–6 months</option>
+                  <option value="6+">6+ months</option>
+                </select>
+              </label>
+              <label class="kf-field" for="kfQuoteMsg">Scope notes
+                <textarea id="kfQuoteMsg" name="message" placeholder="Square footage, address area, must-haves"></textarea>
+              </label>
+              <button class="kf-btn kf-btn-primary" type="submit">Save demo quote</button>
+              <p class="kf-form-note">Nothing is emailed. Shortlist ids attach automatically.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-section" id="crew">
+      <div class="container">
+        <div class="kf-section-head kf-reveal">
+          <p class="kf-kicker">Crew</p>
+          <h2>People on the job story</h2>
+        </div>
+        <div class="kf-people-grid kf-reveal">
+          <article class="kf-person">
+            <span class="kf-avatar" aria-hidden="true">SP</span>
+            <h3>Subrahmanyam Poluru</h3>
+            <p class="kf-role">Superintendent</p>
+            <p>Schedules, subs, and the conversation when the plan meets the field.</p>
+          </article>
+          <article class="kf-person">
+            <span class="kf-avatar" aria-hidden="true">AP</span>
+            <h3>Asha Poluru</h3>
+            <p class="kf-role">Preconstruction</p>
+            <p>Scopes, allowances, and permit packets before mobilization.</p>
+          </article>
+          <article class="kf-person">
+            <span class="kf-avatar" aria-hidden="true">MP</span>
+            <h3>Meera Poluru</h3>
+            <p class="kf-role">Commercial lead</p>
+            <p>TI schedules, owner reps, and after-hours coordination.</p>
+          </article>
+          <article class="kf-person">
+            <span class="kf-avatar" aria-hidden="true">KP</span>
+            <h3>Kavya Poluru</h3>
+            <p class="kf-role">Finish carpentry</p>
+            <p>Trim, casework, and the detail layer clients touch every day.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-section kf-section-soft" id="safety">
+      <div class="container">
+        <div class="row g-4 align-items-center kf-reveal">
+          <div class="col-lg-6">
+            <p class="kf-kicker">Commitments</p>
+            <h2>Site rules we talk about on every job</h2>
+            <ul class="kf-checklist">
+              <li><i class="bi bi-check2"></i> Hard hats and hi-vis in active zones in this narrative</li>
+              <li><i class="bi bi-check2"></i> Daily sweep and labeled debris paths</li>
+              <li><i class="bi bi-check2"></i> Subcontractor COI on file before keys</li>
+              <li><i class="bi bi-check2"></i> Client walk-through notes shared every Friday</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <figure class="kf-figure kf-figure-plain">
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Workers in safety gear at a construction site" width="1200" height="900" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-section" id="faq">
+      <div class="container">
+        <div class="kf-section-head kf-reveal">
+          <p class="kf-kicker">FAQ</p>
+          <h2>Before you mobilize</h2>
+        </div>
+        <div class="accordion kf-accordion kf-reveal" id="kfFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#kfFaq1" aria-expanded="true" aria-controls="kfFaq1">Is Keelframe a live bidding portal?</button>
+            </h3>
+            <div id="kfFaq1" class="accordion-collapse collapse show" data-bs-parent="#kfFaq">
+              <div class="accordion-body">No. This is a front-end demo. Quote requests and shortlists stay in local storage on your device.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kfFaq2" aria-expanded="false" aria-controls="kfFaq2">Do you pull permits in the story?</button>
+            </h3>
+            <div id="kfFaq2" class="accordion-collapse collapse" data-bs-parent="#kfFaq">
+              <div class="accordion-body">Copy references permits as part of a typical GC scope. There is no permit API or city integration here.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kfFaq3" aria-expanded="false" aria-controls="kfFaq3">What happens when I bookmark a project?</button>
+            </h3>
+            <div id="kfFaq3" class="accordion-collapse collapse" data-bs-parent="#kfFaq">
+              <div class="accordion-body">The project id is saved in this browser. When you submit a quote, those ids are stored with the request for the demo list.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kfFaq4" aria-expanded="false" aria-controls="kfFaq4">Are the photos real Keelframe jobs?</button>
+            </h3>
+            <div id="kfFaq4" class="accordion-collapse collapse" data-bs-parent="#kfFaq">
+              <div class="accordion-body">Images are from Unsplash for layout only. Names, timelines, and metrics are fictional sample data.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kf-section kf-section-soft" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 kf-reveal">
+            <p class="kf-kicker">Contact</p>
+            <h2>Questions about a scope?</h2>
+            <p>Access, insurance certificates, or bringing Keelframe to your property manager. The form is demo-only.</p>
+            <p><a href="mailto:hello@keelframe.demo">hello@keelframe.demo</a><br />(512) 555-0188</p>
+          </div>
+          <div class="col-lg-7 kf-reveal">
+            <form class="kf-panel" id="kfContactForm">
+              <label class="kf-field" for="kfContactName">Name
+                <input id="kfContactName" name="name" required autocomplete="name" />
+              </label>
+              <label class="kf-field" for="kfContactEmail">Email
+                <input id="kfContactEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="kf-field" for="kfContactMsg">Message
+                <textarea id="kfContactMsg" name="message" required></textarea>
+              </label>
+              <button class="kf-btn kf-btn-primary" type="submit">Send note</button>
+              <p class="kf-form-note">Nothing is emailed.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kf-footer">
+    <div class="container">
+      <div class="kf-footer-grid">
+        <div class="kf-footer-brand">
+          <a class="kf-brand" href="#top">
+            <span class="kf-mark" aria-hidden="true"><i class="bi bi-hammer"></i></span>
+            <span>Keelframe<em>.</em></span>
+          </a>
+          <p>Construction contractor template with project filters, shortlist, and local demo quotes. Fictional Austin crew.</p>
+        </div>
+        <nav aria-label="Work">
+          <h2>Work</h2>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#quote">Request quote</a>
+        </nav>
+        <nav aria-label="Company">
+          <h2>Company</h2>
+          <a href="#process">Process</a>
+          <a href="#crew">Crew</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="kf-author">
+            <span class="kf-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="kf-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kf-legal">
+        <span>© <span id="year">2026</span> Keelframe. Fictional sample. No live bidding.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="kf-toast" id="kfToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="kfToastTitle">Done</strong>
+      <p id="kfToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
