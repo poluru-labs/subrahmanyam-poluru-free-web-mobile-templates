@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Brightfold — Home cleaning services
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -9,17 +9,546 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brightfold — Calm, thorough home cleaning in Austin</title>
+  <meta name="description" content="Brightfold is a fictional Austin home cleaning demo: service filters, saved plan, and local booking requests in the browser. By Subrahmanyam Poluru." />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#FEFAF3" />
+  <link rel="canonical" href="https://polurus.com/templates/home-cleaning-services/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Brightfold — Calm, thorough home cleaning" />
+  <meta property="og:description" content="Clean Bootstrap template with service filters, plan builder, and demo bookings." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Brightfold — Home cleaning services" />
+  <meta name="twitter:description" content="Clean Bootstrap template with service filters, plan builder, and demo bookings." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Brightfold — Home cleaning services",
+        "description": "Fictional cleaning services template by Subrahmanyam Poluru. No live scheduling or payments.",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Subrahmanyam Poluru",
+          "url": "https://polurus.com",
+          "email": "mail.polurus@gmail.com"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="hc-skip" href="#main">Skip to content</a>
+
+  <div class="hc-utility">
+    <div class="container hc-utility-inner">
+      <span><i class="hc-dot" aria-hidden="true"></i>Mon–Sat · 8am–6pm · Austin metro</span>
+      <div class="hc-utility-meta">
+        <a href="tel:+15125550218"><i class="bi bi-telephone"></i> (512) 555-0218</a>
+        <span>Plan and bookings stay in this browser only</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top hc-nav" aria-label="Primary">
+    <div class="container">
+      <a class="hc-brand" href="#top">
+        <span class="hc-mark" aria-hidden="true"><i class="bi bi-house-heart"></i></span>
+        <span>Brightfold<em>.</em></span>
+      </a>
+      <button class="hc-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="hc-btn hc-btn-ghost" href="#plan">My plan <span class="hc-count" id="hcPlanCount">0</span></a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a class="hc-btn hc-btn-primary" href="#book">Book a visit</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hc-hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 hc-reveal">
+            <p class="hc-kicker">Home cleaning · Austin</p>
+            <h1>A quiet reset for every room you live in.</h1>
+            <p class="hc-lead">Brightfold is a fictional crew for tidy-ups, deep cleans, and move-day details. Browse services, build a demo plan, and save a visit request. Nothing is charged or scheduled from this page.</p>
+            <div class="hc-actions">
+              <a class="hc-btn hc-btn-primary" href="#services">Browse services</a>
+              <a class="hc-btn hc-btn-ghost" href="#book">Request a slot</a>
+            </div>
+            <ul class="hc-hero-points">
+              <li><i class="bi bi-droplet"></i> Flat surfaces, no gradients — just calm light</li>
+              <li><i class="bi bi-shield-check"></i> Sample bonded &amp; insured story</li>
+              <li><i class="bi bi-geo-alt"></i> Hyde Park · Zilker · Mueller routes</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 hc-reveal">
+            <figure class="hc-figure">
+              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Bright, tidy living room after a professional home clean" width="1400" height="1120" />
+              <figcaption class="hc-caption">
+                <div>
+                  <p class="hc-kicker">This week</p>
+                  <p><strong>Deep kitchen detail · 2 hr avg · supplies included</strong></p>
+                </div>
+                <a class="hc-btn hc-btn-ghost hc-btn-on-dark" href="#services">See services</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hc-stats" aria-label="Service metrics">
+      <div class="container">
+        <ul class="hc-stats-grid hc-reveal">
+          <li><strong>8</strong><span>Services on the board</span></li>
+          <li><strong>4.9</strong><span>Sample client rating</span></li>
+          <li><strong>48h</strong><span>Typical first visit window</span></li>
+          <li><strong>0</strong><span>Hidden fees in the demo</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="hc-section" id="services">
+      <div class="container">
+        <div class="hc-section-head hc-reveal">
+          <p class="hc-kicker">Services</p>
+          <h2>Pick what your home needs today</h2>
+          <p>Filter by clean type or search by room. Add lines to your plan for a demo booking snapshot.</p>
+        </div>
+        <div class="hc-toolbar hc-reveal" role="toolbar" aria-label="Service filters">
+          <div class="hc-filters" id="hcServiceFilters">
+            <button type="button" class="hc-chip is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="hc-chip" data-filter="standard" aria-pressed="false">Standard</button>
+            <button type="button" class="hc-chip" data-filter="deep" aria-pressed="false">Deep</button>
+            <button type="button" class="hc-chip" data-filter="move" aria-pressed="false">Move</button>
+            <button type="button" class="hc-chip" data-filter="recurring" aria-pressed="false">Recurring</button>
+          </div>
+          <label class="hc-search">
+            <span class="visually-hidden">Search services</span>
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input type="search" id="hcServiceSearch" placeholder="Kitchen, move-out, weekly…" autocomplete="off" />
+          </label>
+        </div>
+        <p class="hc-result hc-reveal" id="hcServiceCount" aria-live="polite">8 items</p>
+        <div class="hc-produce-grid hc-reveal" id="hcServiceGrid">
+          <article class="hc-produce" data-id="tidy" data-category="standard" data-tags="standard tidy living bedroom" data-price="95.00" data-unit="visit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Standard</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Whole-home tidy</h3>
+              <p class="hc-vendor">~2.5 hr · up to 1,800 sq ft</p>
+              <p class="hc-price"><strong>$95</strong> / visit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="tidy">Add to plan</button>
+              </div>
+            </div>
+          </article>
+          <article class="hc-produce" data-id="kitchen" data-category="deep" data-tags="deep kitchen appliances" data-price="145.00" data-unit="visit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Deep</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Deep kitchen detail</h3>
+              <p class="hc-vendor">Counters, backsplash, appliance fronts</p>
+              <p class="hc-price"><strong>$145</strong> / visit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="kitchen">Add to plan</button>
+              </div>
+            </div>
+          </article>
+          <article class="hc-produce" data-id="bath" data-category="deep" data-tags="deep bathroom tile" data-price="85.00" data-unit="visit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Deep</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Bathroom refresh</h3>
+              <p class="hc-vendor">Two baths · grout touch &amp; fixtures</p>
+              <p class="hc-price"><strong>$85</strong> / visit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="bath">Add to plan</button>
+              </div>
+            </div>
+          </article>
+          <article class="hc-produce" data-id="moveout" data-category="move" data-tags="move out empty home" data-price="220.00" data-unit="visit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Move</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Move-out reset</h3>
+              <p class="hc-vendor">Empty home · cabinets &amp; closets</p>
+              <p class="hc-price"><strong>$220</strong> / visit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="moveout">Add to plan</button>
+              </div>
+            </div>
+          </article>
+          <article class="hc-produce" data-id="weekly" data-category="recurring" data-tags="recurring weekly rhythm" data-price="89.00" data-unit="visit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Recurring</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Weekly rhythm</h3>
+              <p class="hc-vendor">Same crew · standing Tuesday slot</p>
+              <p class="hc-price"><strong>$89</strong> / visit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="weekly">Add to plan</button>
+              </div>
+            </div>
+          </article>
+          <article class="hc-produce" data-id="office" data-category="standard" data-tags="standard office desk" data-price="75.00" data-unit="visit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Standard</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Home office reset</h3>
+              <p class="hc-vendor">Desk, shelves, cable tidy</p>
+              <p class="hc-price"><strong>$75</strong> / visit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="office">Add to plan</button>
+              </div>
+            </div>
+          </article>
+          <article class="hc-produce" data-id="party" data-category="deep" data-tags="deep gathering post party" data-price="160.00" data-unit="visit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Deep</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Post-gathering clean</h3>
+              <p class="hc-vendor">Kitchen &amp; common areas priority</p>
+              <p class="hc-price"><strong>$160</strong> / visit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="party">Add to plan</button>
+              </div>
+            </div>
+          </article>
+          <article class="hc-produce" data-id="supplies" data-category="standard" data-tags="eco supplies kit" data-price="25.00" data-unit="kit">
+            <div class="hc-produce-media">
+              <img src="https://images.unsplash.com/photo-1563453392212-3261995ed842?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" width="800" height="600" loading="lazy" />
+              <span class="hc-tag">Add-on</span>
+            </div>
+            <div class="hc-produce-body">
+              <h3>Eco supply kit</h3>
+              <p class="hc-vendor">Sprays, cloths, glass concentrate</p>
+              <p class="hc-price"><strong>$25</strong> / kit</p>
+              <div class="hc-produce-actions">
+                <button type="button" class="hc-btn hc-btn-primary hc-btn-sm hc-add" data-id="supplies">Add to plan</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="hc-section hc-section-soft" id="plans">
+      <div class="container">
+        <div class="hc-section-head hc-reveal">
+          <p class="hc-kicker">Plans</p>
+          <h2>Simple visit packages</h2>
+          <p>Sample pricing tiers for apartments and family homes. Real quotes would follow a walkthrough.</p>
+        </div>
+        <div class="hc-service-grid hc-reveal">
+          <article class="hc-service">
+            <span class="hc-service-icon" aria-hidden="true"><i class="bi bi-key"></i></span>
+            <h3>Starter</h3>
+            <p>One standard tidy per month for studios and one-beds.</p>
+            <p class="hc-price"><strong>$95</strong> / visit</p>
+          </article>
+          <article class="hc-service">
+            <span class="hc-service-icon" aria-hidden="true"><i class="bi bi-calendar2-week"></i></span>
+            <h3>Steady</h3>
+            <p>Bi-weekly rhythm with the same lead cleaner when routes allow.</p>
+            <p class="hc-price"><strong>$89</strong> / visit</p>
+          </article>
+          <article class="hc-service">
+            <span class="hc-service-icon" aria-hidden="true"><i class="bi bi-stars"></i></span>
+            <h3>Refresh</h3>
+            <p>Quarterly deep pass plus monthly standard tidies.</p>
+            <p class="hc-price"><strong>$310</strong> / quarter</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="hc-section" id="how">
+      <div class="container">
+        <div class="hc-section-head hc-reveal">
+          <p class="hc-kicker">How it works</p>
+          <h2>From request to folded towel</h2>
+        </div>
+        <ol class="hc-step-grid hc-reveal">
+          <li>
+            <span class="hc-step-num">1</span>
+            <h3>Build your plan</h3>
+            <p>Add services from the board. Adjust quantities in the plan panel.</p>
+          </li>
+          <li>
+            <span class="hc-step-num">2</span>
+            <h3>Pick a window</h3>
+            <p>Choose a demo morning or afternoon slot that fits your calendar.</p>
+          </li>
+          <li>
+            <span class="hc-step-num">3</span>
+            <h3>Meet your crew</h3>
+            <p>Sample checklist walkthrough at the door — fictional in this template.</p>
+          </li>
+          <li>
+            <span class="hc-step-num">4</span>
+            <h3>Walk the rooms</h3>
+            <p>Final pass with you for anything to tweak before we lock the visit note.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="hc-section hc-section-soft" id="plan">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 hc-reveal">
+            <p class="hc-kicker">My plan</p>
+            <h2>Your demo visit list</h2>
+            <p>Quantities and totals are sample math. Attach this plan when you save a booking below.</p>
+          </div>
+          <div class="col-lg-7 hc-reveal">
+            <div class="hc-panel">
+              <ul class="hc-basket-list" id="hcPlanList"></ul>
+              <p class="hc-basket-total" id="hcPlanTotal" hidden></p>
+              <a class="hc-btn hc-btn-primary" href="#book">Continue to booking</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hc-section" id="book">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 hc-reveal">
+            <p class="hc-kicker">Book</p>
+            <h2>Request a visit slot</h2>
+            <p>Save a demo booking with your plan snapshot. Nothing is sent to a live calendar.</p>
+            <ul class="hc-pickup-list" id="hcBookingList"></ul>
+          </div>
+          <div class="col-lg-7 hc-reveal">
+            <form class="hc-panel" id="hcBookingForm">
+              <label class="hc-field" for="hcBookName">Name
+                <input id="hcBookName" name="name" required autocomplete="name" />
+              </label>
+              <label class="hc-field" for="hcBookEmail">Email
+                <input id="hcBookEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="hc-field" for="hcBookSlot">Preferred window
+                <select id="hcBookSlot" name="slot" required>
+                  <option value="">Choose a slot</option>
+                  <option value="Tue 9–12">Tue 9–12</option>
+                  <option value="Wed 1–4">Wed 1–4</option>
+                  <option value="Thu 9–12">Thu 9–12</option>
+                  <option value="Sat 10–1">Sat 10–1</option>
+                </select>
+              </label>
+              <label class="hc-field" for="hcBookNotes">Notes
+                <textarea id="hcBookNotes" name="notes" placeholder="Gate code, pets, focus rooms…"></textarea>
+              </label>
+              <button class="hc-btn hc-btn-primary" type="submit">Save booking request</button>
+              <p class="hc-form-note">Stored locally only — not emailed.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hc-section hc-section-soft" id="team">
+      <div class="container">
+        <div class="hc-section-head hc-reveal">
+          <p class="hc-kicker">Team</p>
+          <h2>Leads on the Austin routes</h2>
+        </div>
+        <div class="hc-people-grid hc-reveal">
+          <article class="hc-person">
+            <span class="hc-avatar" aria-hidden="true">AP</span>
+            <h3>Asha Poluru</h3>
+            <p class="hc-role">Route lead · Hyde Park</p>
+            <p>Checklists, supply restock, and training for new crew members.</p>
+          </article>
+          <article class="hc-person">
+            <span class="hc-avatar" aria-hidden="true">MP</span>
+            <h3>Meera Poluru</h3>
+            <p class="hc-role">Deep clean specialist</p>
+            <p>Kitchens, baths, and move-out details with photo notes.</p>
+          </article>
+          <article class="hc-person">
+            <span class="hc-avatar" aria-hidden="true">KP</span>
+            <h3>Kavya Poluru</h3>
+            <p class="hc-role">Client care</p>
+            <p>Reschedules, access instructions, and visit summaries.</p>
+          </article>
+          <article class="hc-person">
+            <span class="hc-avatar" aria-hidden="true">SP</span>
+            <h3>Subrahmanyam Poluru</h3>
+            <p class="hc-role">Operations · sample</p>
+            <p>Quality walks and eco supply standards for the demo brand.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="hc-section" id="faq">
+      <div class="container hc-reveal">
+        <div class="hc-section-head">
+          <p class="hc-kicker">FAQ</p>
+          <h2>Common questions</h2>
+        </div>
+        <div class="accordion hc-accordion" id="hcFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#hcFaq1" aria-expanded="true" aria-controls="hcFaq1">Do you bring supplies?</button>
+            </h3>
+            <div id="hcFaq1" class="accordion-collapse collapse show" data-bs-parent="#hcFaq">
+              <div class="accordion-body">In this story, yes — eco-minded sprays and microfiber kits. The add-on card is optional sample pricing.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hcFaq2" aria-expanded="false" aria-controls="hcFaq2">Is booking live?</button>
+            </h3>
+            <div id="hcFaq2" class="accordion-collapse collapse" data-bs-parent="#hcFaq">
+              <div class="accordion-body">No. Requests save to localStorage in your browser for demo purposes only.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hcFaq3" aria-expanded="false" aria-controls="hcFaq3">What areas do you cover?</button>
+            </h3>
+            <div id="hcFaq3" class="accordion-collapse collapse" data-bs-parent="#hcFaq">
+              <div class="accordion-body">Copy references central Austin neighborhoods. Real service maps would appear on a production site.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hcFaq4" aria-expanded="false" aria-controls="hcFaq4">Are photos real?</button>
+            </h3>
+            <div id="hcFaq4" class="accordion-collapse collapse" data-bs-parent="#hcFaq">
+              <div class="accordion-body">Room and cleaning images are from Unsplash. Names, prices, and crew are fictional sample content.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hc-section" id="contact">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 hc-reveal">
+            <p class="hc-kicker">Contact</p>
+            <h2>Questions before you book?</h2>
+            <p>Partnerships, recurring plans, or accessibility requests. The form is demo-only.</p>
+            <p><a href="mailto:hello@brightfold.demo">hello@brightfold.demo</a><br />(512) 555-0218</p>
+          </div>
+          <div class="col-lg-7 hc-reveal">
+            <form class="hc-panel" id="hcContactForm">
+              <label class="hc-field" for="hcContactName">Name
+                <input id="hcContactName" name="name" required autocomplete="name" />
+              </label>
+              <label class="hc-field" for="hcContactEmail">Email
+                <input id="hcContactEmail" name="email" type="email" required autocomplete="email" />
+              </label>
+              <label class="hc-field" for="hcContactMsg">Message
+                <textarea id="hcContactMsg" name="message" required></textarea>
+              </label>
+              <button class="hc-btn hc-btn-primary" type="submit">Send note</button>
+              <p class="hc-form-note">Nothing is emailed.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hc-footer">
+    <div class="container">
+      <div class="hc-footer-grid">
+        <div class="hc-footer-brand">
+          <a class="hc-brand" href="#top">
+            <span class="hc-mark" aria-hidden="true"><i class="bi bi-house-heart"></i></span>
+            <span>Brightfold<em>.</em></span>
+          </a>
+          <p>Home cleaning template with service filters, plan builder, and demo bookings. Fictional Austin crew.</p>
+        </div>
+        <nav aria-label="Services">
+          <h2>Services</h2>
+          <a href="#services">Browse board</a>
+          <a href="#plans">Plans</a>
+          <a href="#plan">My plan</a>
+        </nav>
+        <nav aria-label="Company">
+          <h2>Company</h2>
+          <a href="#how">How it works</a>
+          <a href="#team">Team</a>
+          <a href="#faq">FAQ</a>
+          <a href="#book">Book</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div>
+          <h2>Author</h2>
+          <div class="hc-author">
+            <span class="hc-avatar" aria-hidden="true">SP</span>
+            <div>
+              <strong>Subrahmanyam Poluru</strong>
+              <p>Designer and template author. Portfolio, work, and contact live on polurus.com.</p>
+              <div class="hc-author-links">
+                <a href="https://polurus.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> polurus.com</a>
+                <a href="mailto:mail.polurus@gmail.com"><i class="bi bi-envelope"></i> mail.polurus@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hc-legal">
+        <span>© <span id="year">2026</span> Brightfold. Fictional sample. No live scheduling.</span>
+        <span>Built by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="hc-toast" id="hcToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <div>
+      <strong id="hcToastTitle">Done</strong>
+      <p id="hcToastBody">Action completed.</p>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
