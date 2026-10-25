@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Lotline — Real estate marketplace
+  Atelier Form — Interior design studio
   Author: Subrahmanyam Poluru
   Website: https://polurus.com
   License: Free for Personal and Commercial Use
@@ -10,16 +10,412 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Subrahmanyam Poluru" />
-  <meta name="description" content="" />
-  <title></title>
+  <meta name="description" content="Atelier Form — thoughtful interior design for homes and workspaces. Residential, commercial, and styling services." />
+  <title>Atelier Form — Interior Design Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
+
+  <header class="ids-header fixed-top">
+    <nav class="navbar navbar-expand-lg ids-nav" aria-label="Main">
+      <div class="container ids-container">
+        <a class="navbar-brand ids-brand" href="#home">
+          <span class="ids-brand-mark" aria-hidden="true"></span>
+          Atelier Form
+        </a>
+        <button class="navbar-toggler ids-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#idsNav" aria-controls="idsNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="ids-nav-toggle-bar"></span>
+          <span class="ids-nav-toggle-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-lg-end" id="idsNav">
+          <ul class="navbar-nav ids-nav-list align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link ids-nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link ids-nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link ids-nav-link" href="#work">Work</a></li>
+            <li class="nav-item"><a class="nav-link ids-nav-link" href="#process">Process</a></li>
+            <li class="nav-item"><a class="nav-link ids-nav-link" href="#about">About</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn ids-btn ids-btn-primary ids-btn-sm" href="#contact">Book a consult</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="ids-hero" aria-labelledby="hero-heading">
+      <div class="container ids-container">
+        <div class="row align-items-center g-5 g-lg-4">
+          <div class="col-lg-6">
+            <p class="ids-eyebrow">Interior design studio</p>
+            <h1 id="hero-heading" class="ids-hero-title">Spaces that feel calm, considered, and entirely yours.</h1>
+            <p class="ids-hero-lead">We design residential and commercial interiors with natural light, honest materials, and layouts that support how you actually live and work.</p>
+            <div class="ids-hero-actions">
+              <a class="btn ids-btn ids-btn-primary" href="#contact">Start your project</a>
+              <a class="btn ids-btn ids-btn-outline" href="#work">View selected work</a>
+            </div>
+            <dl class="ids-hero-stats">
+              <div>
+                <dt>120+</dt>
+                <dd>Projects delivered</dd>
+              </div>
+              <div>
+                <dt>14</dt>
+                <dd>Years in practice</dd>
+              </div>
+              <div>
+                <dt>98%</dt>
+                <dd>Client satisfaction</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="col-lg-6">
+            <figure class="ids-hero-media">
+              <img src="https://images.unsplash.com/photo-1618221193310-864f395a5ee6?w=960&q=80" alt="Bright living room with neutral sofa and natural wood accents" width="960" height="720" loading="eager" />
+              <figcaption class="ids-hero-caption">Linden Residence — living room refresh, 2025</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ids-trust" aria-label="Featured in">
+      <div class="container ids-container">
+        <p class="ids-trust-label">Trusted by homeowners and teams at</p>
+        <ul class="ids-trust-list">
+          <li>North &amp; Co.</li>
+          <li>Harbor Labs</li>
+          <li>Studio Nine</li>
+          <li>Elm Street Collective</li>
+          <li>Verde Hospitality</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="ids-section" aria-labelledby="services-heading">
+      <div class="container ids-container">
+        <div class="ids-section-head ids-section-head-center">
+          <p class="ids-eyebrow">Services</p>
+          <h2 id="services-heading" class="ids-section-title">Design support at every scale</h2>
+          <p class="ids-section-desc">From a single room to a full build-out, we tailor scope, timeline, and budget without compromising clarity or craft.</p>
+        </div>
+        <div class="row g-4">
+          <article class="col-md-6 col-lg-4">
+            <div class="ids-card ids-service-card h-100">
+              <span class="ids-icon-wrap" aria-hidden="true"><i class="bi bi-house-door"></i></span>
+              <h3 class="ids-card-title">Residential design</h3>
+              <p class="ids-card-text">Full-home planning, kitchen and bath remodels, and furniture layouts that maximize comfort and flow.</p>
+              <a class="ids-text-link" href="#contact">Discuss residential <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <div class="ids-card ids-service-card h-100">
+              <span class="ids-icon-wrap" aria-hidden="true"><i class="bi bi-building"></i></span>
+              <h3 class="ids-card-title">Commercial interiors</h3>
+              <p class="ids-card-text">Offices, boutiques, and hospitality spaces designed for brand identity, acoustics, and daily use.</p>
+              <a class="ids-text-link" href="#contact">Discuss commercial <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <div class="ids-card ids-service-card h-100">
+              <span class="ids-icon-wrap" aria-hidden="true"><i class="bi bi-palette"></i></span>
+              <h3 class="ids-card-title">Styling &amp; sourcing</h3>
+              <p class="ids-card-text">Art, textiles, and finishing touches—curated pieces with trade access and white-glove installation.</p>
+              <a class="ids-text-link" href="#contact">Discuss styling <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="ids-section ids-section-muted" aria-labelledby="work-heading">
+      <div class="container ids-container">
+        <div class="row align-items-end ids-section-head-row g-4 mb-4 mb-lg-5">
+          <div class="col-lg-7">
+            <p class="ids-eyebrow">Selected work</p>
+            <h2 id="work-heading" class="ids-section-title">Recent interiors</h2>
+          </div>
+          <div class="col-lg-5">
+            <p class="ids-section-desc mb-0">A sample of calm, light-filled spaces shaped with our clients’ routines and collections in mind.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <article class="col-md-6 col-lg-4">
+            <a class="ids-project-card" href="#contact">
+              <div class="ids-project-image">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="Minimal kitchen with marble counters" width="800" height="600" loading="lazy" />
+              </div>
+              <div class="ids-project-body">
+                <span class="ids-project-tag">Kitchen</span>
+                <h3 class="ids-project-title">Maple Court</h3>
+                <p class="ids-project-meta">Chicago · 2025</p>
+              </div>
+            </a>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <a class="ids-project-card" href="#contact">
+              <div class="ids-project-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Open-plan living area with large windows" width="800" height="600" loading="lazy" />
+              </div>
+              <div class="ids-project-body">
+                <span class="ids-project-tag">Living</span>
+                <h3 class="ids-project-title">River House</h3>
+                <p class="ids-project-meta">Austin · 2024</p>
+              </div>
+            </a>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <a class="ids-project-card" href="#contact">
+              <div class="ids-project-image">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Modern office lounge with soft seating" width="800" height="600" loading="lazy" />
+              </div>
+              <div class="ids-project-body">
+                <span class="ids-project-tag">Office</span>
+                <h3 class="ids-project-title">Harbor Labs HQ</h3>
+                <p class="ids-project-meta">Seattle · 2024</p>
+              </div>
+            </a>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <a class="ids-project-card" href="#contact">
+              <div class="ids-project-image">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Bedroom with linen bedding and soft light" width="800" height="600" loading="lazy" />
+              </div>
+              <div class="ids-project-body">
+                <span class="ids-project-tag">Bedroom</span>
+                <h3 class="ids-project-title">Willow Suite</h3>
+                <p class="ids-project-meta">Portland · 2025</p>
+              </div>
+            </a>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <a class="ids-project-card" href="#contact">
+              <div class="ids-project-image">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Dining room with wooden table and pendant light" width="800" height="600" loading="lazy" />
+              </div>
+              <div class="ids-project-body">
+                <span class="ids-project-tag">Dining</span>
+                <h3 class="ids-project-title">Cedar Lane</h3>
+                <p class="ids-project-meta">Denver · 2023</p>
+              </div>
+            </a>
+          </article>
+          <article class="col-md-6 col-lg-4">
+            <a class="ids-project-card" href="#contact">
+              <div class="ids-project-image">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Boutique retail interior with display shelving" width="800" height="600" loading="lazy" />
+              </div>
+              <div class="ids-project-body">
+                <span class="ids-project-tag">Retail</span>
+                <h3 class="ids-project-title">Studio Nine Flagship</h3>
+                <p class="ids-project-meta">Brooklyn · 2024</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="ids-section" aria-labelledby="process-heading">
+      <div class="container ids-container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <p class="ids-eyebrow">Process</p>
+            <h2 id="process-heading" class="ids-section-title">A clear path from first call to install day</h2>
+            <p class="ids-section-desc">We keep decisions structured and communication steady so you always know what happens next.</p>
+          </div>
+          <div class="col-lg-7">
+            <ol class="ids-steps">
+              <li class="ids-step">
+                <span class="ids-step-num">01</span>
+                <div>
+                  <h3 class="ids-step-title">Discovery</h3>
+                  <p class="ids-step-text">We learn how you use each room, gather inspiration, and define scope, schedule, and investment range.</p>
+                </div>
+              </li>
+              <li class="ids-step">
+                <span class="ids-step-num">02</span>
+                <div>
+                  <h3 class="ids-step-title">Concept &amp; layout</h3>
+                  <p class="ids-step-text">Floor plans, material palettes, and 3D visuals align the direction before anything is ordered.</p>
+                </div>
+              </li>
+              <li class="ids-step">
+                <span class="ids-step-num">03</span>
+                <div>
+                  <h3 class="ids-step-title">Documentation</h3>
+                  <p class="ids-step-text">Detailed specs for contractors, lighting plans, and FF&amp;E schedules keep builds on track.</p>
+                </div>
+              </li>
+              <li class="ids-step">
+                <span class="ids-step-num">04</span>
+                <div>
+                  <h3 class="ids-step-title">Install &amp; styling</h3>
+                  <p class="ids-step-text">We coordinate deliveries, site visits, and the final layer of art and accessories.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="ids-section ids-section-muted" aria-labelledby="about-heading">
+      <div class="container ids-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2">
+            <p class="ids-eyebrow">About the studio</p>
+            <h2 id="about-heading" class="ids-section-title">Design rooted in restraint and warmth</h2>
+            <p class="ids-about-text">Atelier Form is a small team of designers and project leads based in Chicago. We believe interiors should age well—fewer trends, more texture, light, and pieces with story.</p>
+            <p class="ids-about-text">Every engagement includes a dedicated lead designer and transparent milestones, whether you are refreshing one room or opening a new location.</p>
+            <ul class="ids-about-list">
+              <li><i class="bi bi-check2" aria-hidden="true"></i> NCIDQ-certified leadership</li>
+              <li><i class="bi bi-check2" aria-hidden="true"></i> Trade partnerships nationwide</li>
+              <li><i class="bi bi-check2" aria-hidden="true"></i> Remote and on-site options</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <figure class="ids-about-media">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=960&q=80" alt="Architectural interior with staircase and natural light" width="960" height="720" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ids-testimonials ids-section" aria-labelledby="testimonials-heading">
+      <div class="container ids-container">
+        <div class="ids-section-head ids-section-head-center mb-5">
+          <p class="ids-eyebrow">Clients</p>
+          <h2 id="testimonials-heading" class="ids-section-title">Kind words</h2>
+        </div>
+        <div class="row g-4">
+          <blockquote class="col-md-6">
+            <div class="ids-quote-card h-100">
+              <p class="ids-quote-text">“They listened more than they pitched. Our home finally feels cohesive—and the kitchen is the heart of it.”</p>
+              <footer class="ids-quote-footer">
+                <cite class="ids-quote-name">Elena Morris</cite>
+                <span class="ids-quote-role">Linden Residence</span>
+              </footer>
+            </div>
+          </blockquote>
+          <blockquote class="col-md-6">
+            <div class="ids-quote-card h-100">
+              <p class="ids-quote-text">“Professional, organized, and calm under construction chaos. The office morale shift after move-in was immediate.”</p>
+              <footer class="ids-quote-footer">
+                <cite class="ids-quote-name">James Okonkwo</cite>
+                <span class="ids-quote-role">Harbor Labs</span>
+              </footer>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="ids-section ids-contact" aria-labelledby="contact-heading">
+      <div class="container ids-container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <p class="ids-eyebrow">Contact</p>
+            <h2 id="contact-heading" class="ids-section-title">Tell us about your space</h2>
+            <p class="ids-section-desc">Share a few details and we will respond within two business days to schedule a complimentary 30-minute consultation.</p>
+            <ul class="ids-contact-details">
+              <li>
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+                <a href="mailto:hello@atelierform.studio">hello@atelierform.studio</a>
+              </li>
+              <li>
+                <i class="bi bi-telephone" aria-hidden="true"></i>
+                <a href="tel:+13125550142">(312) 555-0142</a>
+              </li>
+              <li>
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                <span>1420 W Fulton St, Chicago, IL</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <form class="ids-form" action="#" method="post" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="ids-label" for="contact-name">Name</label>
+                  <input class="form-control ids-input" type="text" id="contact-name" name="name" autocomplete="name" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="ids-label" for="contact-email">Email</label>
+                  <input class="form-control ids-input" type="email" id="contact-email" name="email" autocomplete="email" required />
+                </div>
+                <div class="col-12">
+                  <label class="ids-label" for="contact-type">Project type</label>
+                  <select class="form-select ids-input" id="contact-type" name="project_type">
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="styling">Styling only</option>
+                    <option value="other">Not sure yet</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="ids-label" for="contact-message">Message</label>
+                  <textarea class="form-control ids-input" id="contact-message" name="message" rows="4" placeholder="Square footage, timeline, neighborhood…"></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn ids-btn ids-btn-primary" type="submit">Send inquiry</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ids-footer">
+    <div class="container ids-container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-4">
+          <a class="ids-footer-brand ids-brand" href="#home">
+            <span class="ids-brand-mark" aria-hidden="true"></span>
+            Atelier Form
+          </a>
+          <p class="ids-footer-tagline">Interior design for homes, workplaces, and hospitality—quiet confidence, lasting materials.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3 class="ids-footer-heading">Explore</h3>
+          <ul class="ids-footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3 class="ids-footer-heading">Connect</h3>
+          <ul class="ids-footer-links">
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://instagram.com" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+            <li><a href="https://pinterest.com" rel="noopener noreferrer" target="_blank">Pinterest</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="ids-footer-heading">Studio hours</h3>
+          <p class="ids-footer-hours">Mon–Fri, 9am–6pm CT<br />Visits by appointment</p>
+        </div>
+      </div>
+      <div class="ids-footer-bottom">
+        <p class="ids-footer-copy">&copy; <span id="ids-year"></span> Atelier Form. All rights reserved.</p>
+        <p class="ids-footer-author">
+          Website by <a href="https://polurus.com" rel="noopener noreferrer" target="_blank">Subrahmanyam Poluru</a>
+          · <a href="https://polurus.com" rel="noopener noreferrer" target="_blank">Portfolio</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
