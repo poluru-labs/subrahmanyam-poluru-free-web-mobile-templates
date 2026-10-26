@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Signaldesk">
+  <rect width="32" height="32" rx="8" fill="#492828"/>
+  <path fill="#fff" d="M9 10h14v2H9v-2zm0 5h10v2H9v-2zm0 5h14v2H9v-2z"/>
+  <circle cx="23" cy="22" r="3.5" fill="#F7F0F0"/>
+</svg>
