@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Commonroom">
+  <rect width="32" height="32" rx="8" fill="#281C59"/>
+  <path fill="#fff" d="M8 11h16v2H8v-2zm0 5h12v2H8v-2zm0 5h9v2H8v-2z"/>
+  <circle cx="22" cy="21" r="4" fill="#F3F1F8" stroke="#fff"/>
+</svg>
