@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Table — Restaurant reservation app</title>
+  <meta name="description" content="Discover restaurants, check availability, and book tables in seconds—with clear menus and calm design.">
+  <meta name="theme-color" content="#DC0083">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="restaurant-reservation" data-template="restaurant-reservation-app" style="--brand:#DC0083;--soft:#fceef6;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="dine-header">
+    <div class="container dine-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        Poluru Table
+      </a>
+      <nav class="dine-nav" aria-label="Main navigation">
+        <a href="#restaurants">Restaurants</a>
+        <a href="#availability">Availability</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#help">Help</a>
+      </nav>
+      <div class="dine-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Your reservations" data-kind="View reservations">My bookings</button>
+        <button class="primary" type="button" data-action="modal" data-title="Book a table" data-kind="Book table">Book a table</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#availability">Availability</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#help">Help</a>
+      <button class="primary" type="button" data-action="modal" data-title="Book a table" data-kind="Book table">Book a table</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="dine-hero">
+      <div class="container dine-hero-grid">
+        <div class="dine-hero-copy">
+          <p class="eyebrow">RESTAURANT RESERVATION APP</p>
+          <h1>Dine out.<br>Book in a tap.</h1>
+          <p>Search by cuisine or neighborhood, see real-time table times, and hold a reservation—no phone tag, no clutter.</p>
+          <form class="dine-search" role="search" aria-label="Search restaurants">
+            <label class="sr-only" for="restaurant-search">Search restaurants</label>
+            <input class="search dine-search-input" id="restaurant-search" type="search" placeholder="Restaurant, cuisine, or city…" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <div class="dine-kpi">
+            <div>
+              <strong>320+</strong>
+              <span>Partner restaurants</span>
+            </div>
+            <div>
+              <strong>Today</strong>
+              <span>Tables from 5:00 PM</span>
+            </div>
+            <div>
+              <strong>Free</strong>
+              <span>Cancel up to 2h</span>
+            </div>
+          </div>
+        </div>
+        <aside class="dine-quickbook" aria-label="Quick booking">
+          <h3>Quick book</h3>
+          <p class="small">Demo only—saves in this browser.</p>
+          <form class="quickbook-form" id="quickbook">
+            <label>Party size
+              <select name="party">
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+                <option>5+ guests</option>
+              </select>
+            </label>
+            <label>Date
+              <input type="date" name="date" required>
+            </label>
+            <label>Time
+              <select name="time">
+                <option>5:30 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:30 PM</option>
+              </select>
+            </label>
+            <button class="primary" type="submit">Find tables</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid dine-features">
+      <div>
+        <b>01 /</b>
+        <h3>Live availability</h3>
+        <p>See open times before you commit—updated by the restaurant, not guesswork.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Preferences saved</h3>
+        <p>Dietary notes, seating requests, and celebrations travel with your booking.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Trusted reviews</h3>
+        <p>Verified diners only—no inflated stars from one-off promos.</p>
+      </div>
+    </section>
+
+    <section id="restaurants" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">RESTAURANTS</p>
+          <h2>Places worth the reservation.</h2>
+        </div>
+        <p>Demo venues—filter by cuisine or search by name and city.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Italian" aria-pressed="false">Italian</button>
+        <button class="filter" type="button" data-filter="Japanese" aria-pressed="false">Japanese</button>
+        <button class="filter" type="button" data-filter="Mexican" aria-pressed="false">Mexican</button>
+        <button class="filter" type="button" data-filter="American" aria-pressed="false">American</button>
+        <button class="filter" type="button" data-filter="Fine dining" aria-pressed="false">Fine dining</button>
+        <input class="search" type="search" placeholder="Filter restaurants…" aria-label="Filter restaurants">
+      </div>
+      <div class="grid collection">
+        <article class="restaurant-card" data-search="Trattoria Poluru Italian Austin pasta Subra" data-category="Italian">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Elegant restaurant dining room" loading="lazy" width="1200" height="800">
+            <span class="cuisine-pill cuisine-italian">Italian</span>
+            <button class="favorite" aria-label="Save Trattoria Poluru" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Austin · $$$ · 4.8 ★</p>
+            <h3>Trattoria Poluru</h3>
+            <p class="small">Hand-rolled pasta, natural wine, and a sunny patio.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Trattoria Poluru" data-kind="View restaurant">View</button>
+              <button class="primary card-book" type="button" data-action="modal" data-title="Trattoria Poluru" data-kind="Book table">Reserve</button>
+            </div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-search="Sakura House Japanese sushi Denver Poluru" data-category="Japanese">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1579027989539-b0b0055815fb?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sushi platter on a counter" loading="lazy" width="1200" height="800">
+            <span class="cuisine-pill cuisine-japanese">Japanese</span>
+            <button class="favorite" aria-label="Save Sakura House" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Denver · $$ · 4.9 ★</p>
+            <h3>Sakura House</h3>
+            <p class="small">Omakase counter and late-night ramen bar.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Sakura House" data-kind="View restaurant">View</button>
+              <button class="primary card-book" type="button" data-action="modal" data-title="Sakura House" data-kind="Book table">Reserve</button>
+            </div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-search="Casa Subbu Mexican tacos Chicago" data-category="Mexican">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Tacos on a plate" loading="lazy" width="1200" height="800">
+            <span class="cuisine-pill cuisine-mexican">Mexican</span>
+            <button class="favorite" aria-label="Save Casa Subbu" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Chicago · $$ · 4.7 ★</p>
+            <h3>Casa Subbu</h3>
+            <p class="small">Wood-fired tacos, mezcal flights, and live música weekends.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Casa Subbu" data-kind="View restaurant">View</button>
+              <button class="primary card-book" type="button" data-action="modal" data-title="Casa Subbu" data-kind="Book table">Reserve</button>
+            </div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-search="Harbor Grill American seafood Seattle Subra" data-category="American">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Waterfront restaurant at dusk" loading="lazy" width="1200" height="800">
+            <span class="cuisine-pill cuisine-american">American</span>
+            <button class="favorite" aria-label="Save Harbor Grill" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Seattle · $$$ · 4.6 ★</p>
+            <h3>Harbor Grill</h3>
+            <p class="small">Pacific catch, oyster bar, and sunset deck seating.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Harbor Grill" data-kind="View restaurant">View</button>
+              <button class="primary card-book" type="button" data-action="modal" data-title="Harbor Grill" data-kind="Book table">Reserve</button>
+            </div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-search="Velvet Room Fine dining tasting menu New York Poluru" data-category="Fine dining">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0983b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Fine dining table setting" loading="lazy" width="1200" height="800">
+            <span class="cuisine-pill cuisine-fine">Fine dining</span>
+            <button class="favorite" aria-label="Save Velvet Room" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">New York · $$$$ · 4.9 ★</p>
+            <h3>Velvet Room</h3>
+            <p class="small">Seasonal tasting menu · jacket preferred · wine pairings.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Velvet Room" data-kind="View restaurant">View</button>
+              <button class="primary card-book" type="button" data-action="modal" data-title="Velvet Room" data-kind="Book table">Reserve</button>
+            </div>
+          </div>
+        </article>
+        <article class="restaurant-card" data-search="Morning Table American brunch Portland Subbu" data-category="American">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Brunch spread on a table" loading="lazy" width="1200" height="800">
+            <span class="cuisine-pill cuisine-american">American</span>
+            <button class="favorite" aria-label="Save Morning Table" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Portland · $$ · 4.8 ★</p>
+            <h3>Morning Table</h3>
+            <p class="small">All-day brunch, local roasts, and vegan-friendly plates.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Morning Table" data-kind="View restaurant">View</button>
+              <button class="primary card-book" type="button" data-action="modal" data-title="Morning Table" data-kind="Book table">Reserve</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No restaurants match your search.</p>
+      </div>
+      <p class="dine-disclaimer">Demo app only. Restaurants, times, and reviews are fictional. No live reservation or payment system is connected.</p>
+    </section>
+
+    <section id="availability" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">TONIGHT</p>
+          <h2>Open tables near you.</h2>
+        </div>
+        <p>Sample slots for layout—tap a time to start a demo booking.</p>
+      </div>
+      <div class="slot-grid">
+        <article class="slot-card">
+          <p class="footer-label">Trattoria Poluru</p>
+          <div class="slot-times">
+            <button type="button" class="slot-btn" data-action="modal" data-title="Trattoria Poluru" data-kind="Book table" data-time="5:30 PM">5:30</button>
+            <button type="button" class="slot-btn" data-action="modal" data-title="Trattoria Poluru" data-kind="Book table" data-time="6:15 PM">6:15</button>
+            <button type="button" class="slot-btn" data-action="modal" data-title="Trattoria Poluru" data-kind="Book table" data-time="8:00 PM">8:00</button>
+          </div>
+        </article>
+        <article class="slot-card">
+          <p class="footer-label">Sakura House</p>
+          <div class="slot-times">
+            <button type="button" class="slot-btn" data-action="modal" data-title="Sakura House" data-kind="Book table" data-time="6:00 PM">6:00</button>
+            <button type="button" class="slot-btn" data-action="modal" data-title="Sakura House" data-kind="Book table" data-time="7:30 PM">7:30</button>
+            <button type="button" class="slot-btn slot-muted" disabled>9:00</button>
+          </div>
+        </article>
+        <article class="slot-card">
+          <p class="footer-label">Casa Subbu</p>
+          <div class="slot-times">
+            <button type="button" class="slot-btn" data-action="modal" data-title="Casa Subbu" data-kind="Book table" data-time="5:45 PM">5:45</button>
+            <button type="button" class="slot-btn" data-action="modal" data-title="Casa Subbu" data-kind="Book table" data-time="7:00 PM">7:00</button>
+            <button type="button" class="slot-btn" data-action="modal" data-title="Casa Subbu" data-kind="Book table" data-time="8:45 PM">8:45</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiences" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">EXPERIENCES</p>
+          <h2>More than dinner.</h2>
+        </div>
+        <p>Chef’s tables and events—search applies; cuisine filters do not hide these.</p>
+      </div>
+      <div class="grid collection">
+        <article class="guide-card" data-search="Chef counter omakase Experience">
+          <span class="doc-icon" aria-hidden="true">👨‍🍳</span>
+          <p class="small">8 seats · Japanese</p>
+          <h3>Chef’s counter night</h3>
+          <p class="small">Seven-course omakase with sake pairings at Sakura House.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Chef’s counter night" data-kind="Book table">Book experience</button>
+        </article>
+        <article class="guide-card" data-search="Wine dinner Italian Experience">
+          <span class="doc-icon" aria-hidden="true">🍷</span>
+          <p class="small">24 seats · Italian</p>
+          <h3>Natural wine supper</h3>
+          <p class="small">Four courses with small-producer pours at Trattoria Poluru.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Natural wine supper" data-kind="Book table">Book experience</button>
+        </article>
+        <article class="guide-card" data-search="Private dining room groups Experience">
+          <span class="doc-icon" aria-hidden="true">🎉</span>
+          <p class="small">Up to 14 · Any cuisine</p>
+          <h3>Private dining</h3>
+          <p class="small">Birthdays, team dinners, and prefixed menus—demo inquiry only.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Private dining" data-kind="Private event">Inquire</button>
+        </article>
+        <p class="empty" hidden>No experiences match your search.</p>
+      </div>
+    </section>
+
+    <section class="banner dine-banner" id="help">
+      <div>
+        <h2>Need to change a booking?</h2>
+        <p>Modify party size or cancel within the free window—demo support only.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Reservation support" data-kind="Contact support">Get help</button>
+    </section>
+  </main>
+
+  <footer class="site-footer dine-footer">
+    <div class="container dine-footer-grid">
+      <div class="dine-footer-brand">
+        <span class="brand">Poluru Table<span style="color:var(--brand)">.</span></span>
+        <p class="small">Restaurant reservation app template. Venues, times, and reviews are fictional demo content.</p>
+      </div>
+      <div class="dine-footer-links">
+        <p class="footer-label">App</p>
+        <a href="#restaurants">Restaurants</a>
+        <a href="#availability">Availability</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#help">Help</a>
+      </div>
+      <div class="dine-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container dine-footer-bottom">
+      <span>© 2026 Poluru Table</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
