@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Seller — Ecommerce seller dashboard</title>
+  <meta name="description" content="Track orders, products, and revenue in one clean seller workspace.">
+  <meta name="theme-color" content="#1B4EF5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="dashboard seller-dash" data-template="ecommerce-seller-dashboard" style="--brand:#1B4EF5;--soft:#eef2fe;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      Poluru Seller
+    </a>
+    <p class="nav-label">STORE</p>
+    <nav aria-label="Dashboard navigation">
+      <a href="#overview" aria-current="page"><span aria-hidden="true">◫</span> Overview</a>
+      <a href="#orders"><span aria-hidden="true">▣</span> Orders</a>
+      <a href="#products"><span aria-hidden="true">▤</span> Products</a>
+      <a href="#customers"><span aria-hidden="true">◎</span> Customers</a>
+    </nav>
+    <div class="side-bottom">
+      <span class="profile" aria-hidden="true">S</span>
+      <div>
+        <strong>Subra Poluru</strong><br>
+        <span class="small">Poluru Home Goods</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <span>Seller hub <span style="color:var(--muted)">/ Overview</span></span>
+      <div>
+        <span class="small">Monday, October 26, 2026</span>
+        <span class="profile" title="Subra Poluru">SP</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="dash-heading">
+        <div>
+          <p class="eyebrow">ECOMMERCE SELLER DASHBOARD</p>
+          <h1>Your store at a glance</h1>
+          <p>Sales, fulfillment, and inventory—organized for decisions that move your shop forward.</p>
+        </div>
+        <button class="secondary" type="button" data-action="export">Export report ↗</button>
+      </div>
+
+      <div class="stats" id="overview">
+        <article class="stat">
+          <span class="small">Total sales</span>
+          <div class="metric">$84,320</div>
+          <span class="trend">↗ 14.2% vs. last month</span>
+        </article>
+        <article class="stat">
+          <span class="small">Orders</span>
+          <div class="metric">1,248</div>
+          <span class="trend">↗ 9.6% vs. last month</span>
+        </article>
+        <article class="stat">
+          <span class="small">Active listings</span>
+          <div class="metric">86</div>
+          <span class="trend">3 drafts pending review</span>
+        </article>
+        <article class="stat">
+          <span class="small">Conversion rate</span>
+          <div class="metric">3.42%</div>
+          <span class="trend">↗ 0.8% vs. last month</span>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Sales performance</h3>
+              <p>Monthly gross merchandise volume</p>
+            </div>
+            <select aria-label="Chart period" data-chart-period>
+              <option>This year</option>
+              <option>Last year</option>
+            </select>
+          </div>
+          <div class="chart" role="img" aria-label="Monthly sales chart, rising from 35 in January to 90 in December">
+            <div class="bar" style="--height:35%"><span>Jan</span></div>
+            <div class="bar" style="--height:48%"><span>Feb</span></div>
+            <div class="bar" style="--height:42%"><span>Mar</span></div>
+            <div class="bar" style="--height:58%"><span>Apr</span></div>
+            <div class="bar" style="--height:51%"><span>May</span></div>
+            <div class="bar" style="--height:66%"><span>Jun</span></div>
+            <div class="bar" style="--height:62%"><span>Jul</span></div>
+            <div class="bar" style="--height:78%"><span>Aug</span></div>
+            <div class="bar" style="--height:69%"><span>Sep</span></div>
+            <div class="bar" style="--height:83%"><span>Oct</span></div>
+            <div class="bar" style="--height:76%"><span>Nov</span></div>
+            <div class="bar" style="--height:90%"><span>Dec</span></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Fulfillment snapshot</h3>
+              <p>Orders by status today</p>
+            </div>
+          </div>
+          <div class="fulfillment-card">
+            <div class="fulfillment-row">
+              <span>Ready to ship</span>
+              <strong>42</strong>
+            </div>
+            <div class="progress" style="--progress:72%"><span></span></div>
+            <div class="fulfillment-row">
+              <span>In transit</span>
+              <strong>28</strong>
+            </div>
+            <div class="progress" style="--progress:48%"><span></span></div>
+            <div class="fulfillment-row">
+              <span>Needs attention</span>
+              <strong>6</strong>
+            </div>
+            <div class="progress" style="--progress:18%"><span></span></div>
+          </div>
+          <div class="fulfillment-card" style="margin-top:16px">
+            <h4>Top sales channels</h4>
+            <div class="legend"><span><i></i>Online store</span><strong>54%</strong></div>
+            <div class="legend"><span><i></i>Marketplace</span><strong>31%</strong></div>
+            <div class="legend"><span><i></i>Social shop</span><strong>15%</strong></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel" id="orders">
+        <div class="panel-head">
+          <div>
+            <h3>Recent orders</h3>
+            <p>Latest transactions across your storefront</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="All orders" data-kind="View orders">View all</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Items</th>
+                <th scope="col">Total</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#ORD-4821</strong></td>
+                <td>
+                  <div class="person">
+                    <span class="profile">P</span>
+                    <div><strong>Poluru</strong><small>poluru@example.com</small></div>
+                  </div>
+                </td>
+                <td>2</td>
+                <td>$186.00</td>
+                <td><span class="badge">Shipped</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Order #ORD-4821" data-kind="View order">Details</button></td>
+              </tr>
+              <tr>
+                <td><strong>#ORD-4820</strong></td>
+                <td>
+                  <div class="person">
+                    <span class="profile">S</span>
+                    <div><strong>Subra</strong><small>subra@example.com</small></div>
+                  </div>
+                </td>
+                <td>1</td>
+                <td>$64.00</td>
+                <td><span class="badge">Processing</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Order #ORD-4820" data-kind="View order">Details</button></td>
+              </tr>
+              <tr>
+                <td><strong>#ORD-4819</strong></td>
+                <td>
+                  <div class="person">
+                    <span class="profile">S</span>
+                    <div><strong>Subbu</strong><small>subbu@example.com</small></div>
+                  </div>
+                </td>
+                <td>3</td>
+                <td>$242.50</td>
+                <td><span class="badge">Delivered</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Order #ORD-4819" data-kind="View order">Details</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" id="products">
+        <div class="panel-head">
+          <div>
+            <h3>Top products</h3>
+            <p>Best performers this month</p>
+          </div>
+        </div>
+        <div class="filters">
+          <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="Home" aria-pressed="false">Home</button>
+          <button class="filter" type="button" data-filter="Kitchen" aria-pressed="false">Kitchen</button>
+          <button class="filter" type="button" data-filter="Outdoor" aria-pressed="false">Outdoor</button>
+          <input class="search" type="search" placeholder="Search products…" aria-label="Search products">
+        </div>
+        <div class="table-wrap collection">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">SKU</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Sold</th>
+                <th scope="col">Revenue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-search="Ceramic dinner set Poluru Home PH-204 Home" data-category="Home">
+                <td>
+                  <div class="product-mini">
+                    <img src="https://images.unsplash.com/photo-1615874959472-d609969a20ed?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" width="44" height="44">
+                    <strong>Ceramic dinner set</strong>
+                  </div>
+                </td>
+                <td>PH-204</td>
+                <td>48</td>
+                <td>126</td>
+                <td>$8,820</td>
+              </tr>
+              <tr data-search="Pour-over kettle Subra Studio SS-K12 Kitchen" data-category="Kitchen">
+                <td>
+                  <div class="product-mini">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" width="44" height="44">
+                    <strong>Pour-over kettle</strong>
+                  </div>
+                </td>
+                <td>SS-K12</td>
+                <td>22</td>
+                <td>89</td>
+                <td>$4,450</td>
+              </tr>
+              <tr data-search="Linen throw bundle Subbu Living SL-T08 Home" data-category="Home">
+                <td>
+                  <div class="product-mini">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" width="44" height="44">
+                    <strong>Linen throw bundle</strong>
+                  </div>
+                </td>
+                <td>SL-T08</td>
+                <td>15</td>
+                <td>64</td>
+                <td>$3,840</td>
+              </tr>
+              <tr data-search="Garden lantern set Poluru Outdoor PO-L03 Outdoor" data-category="Outdoor">
+                <td>
+                  <div class="product-mini">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="" width="44" height="44">
+                    <strong>Garden lantern set</strong>
+                  </div>
+                </td>
+                <td>PO-L03</td>
+                <td>31</td>
+                <td>52</td>
+                <td>$2,600</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty" hidden>No products match your search.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="customers">
+        <div class="panel-head">
+          <div>
+            <h3>Customer highlights</h3>
+            <p>Repeat buyers driving growth</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Customer</th>
+                <th scope="col">Orders</th>
+                <th scope="col">Lifetime value</th>
+                <th scope="col">Last order</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="person"><span class="profile">P</span><div><strong>Poluru</strong><small>Member since 2024</small></div></div></td>
+                <td>18</td>
+                <td>$2,940</td>
+                <td>Oct 24, 2026</td>
+              </tr>
+              <tr>
+                <td><div class="person"><span class="profile">S</span><div><strong>Subra</strong><small>Member since 2025</small></div></div></td>
+                <td>11</td>
+                <td>$1,680</td>
+                <td>Oct 22, 2026</td>
+              </tr>
+              <tr>
+                <td><div class="person"><span class="profile">S</span><div><strong>Subbu</strong><small>Member since 2023</small></div></div></td>
+                <td>24</td>
+                <td>$4,120</td>
+                <td>Oct 20, 2026</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer seller-footer">
+      <div class="seller-footer-grid">
+        <div>
+          <span class="brand">Poluru Seller<span style="color:var(--brand)">.</span></span>
+          <p class="small" style="margin-top:12px">Ecommerce seller dashboard template. Metrics and orders are fictional demo data.</p>
+        </div>
+        <div class="seller-footer-links">
+          <p class="footer-label">Dashboard</p>
+          <a href="#overview">Overview</a>
+          <a href="#orders">Orders</a>
+          <a href="#products">Products</a>
+          <a href="#customers">Customers</a>
+        </div>
+        <div>
+          <p class="footer-label">Author</p>
+          <p><strong>Subrahmanyam Poluru</strong></p>
+          <p class="small">Designer &amp; developer · Poluru Labs</p>
+          <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+        </div>
+      </div>
+      <div class="seller-footer-bottom">
+        <span>© 2026 Poluru Seller</span>
+        <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </footer>
+  </div>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
