@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Cast — Podcast discovery app</title>
+  <meta name="description" content="Discover podcasts, follow shows, and queue episodes in a calm, focused listening experience.">
+  <meta name="theme-color" content="#273F4F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="podcast-app" data-template="podcast-discovery-app" style="--brand:#273F4F;--soft:#e8eef2;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="cast-header">
+    <div class="container cast-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        Poluru Cast
+      </a>
+      <nav class="cast-nav" aria-label="Main navigation">
+        <a href="#shows">Browse</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#curated">Curated</a>
+        <a href="#creators">Creators</a>
+      </nav>
+      <div class="cast-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Your library" data-kind="View library">Library</button>
+        <button class="primary" type="button" data-action="modal" data-title="Start listening" data-kind="Play episode" data-show="Poluru Daily">Listen now</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#shows">Browse</a>
+      <a href="#episodes">Episodes</a>
+      <a href="#curated">Curated</a>
+      <a href="#creators">Creators</a>
+      <button class="primary" type="button" data-action="modal" data-title="Your library" data-kind="View library">Library</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cast-hero">
+      <div class="container cast-hero-grid">
+        <div class="cast-hero-copy">
+          <p class="eyebrow">PODCAST DISCOVERY APP</p>
+          <h1>Find your next<br>favorite show.</h1>
+          <p>Search by topic or host, follow shows you love, and build a queue that fits your commute, workout, or wind-down.</p>
+          <form class="cast-search" role="search" aria-label="Search podcasts">
+            <label class="sr-only" for="podcast-search">Search podcasts</label>
+            <input class="search cast-search-input" id="podcast-search" type="search" placeholder="Show, host, or topic…" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <ul class="cast-chips" aria-label="Popular topics">
+            <li>True crime</li>
+            <li>Startup stories</li>
+            <li>15-min listens</li>
+          </ul>
+        </div>
+        <aside class="cast-featured" aria-label="Featured episode">
+          <div class="cast-art" aria-hidden="true">PC</div>
+          <div class="cast-featured-body">
+            <span class="genre-pill genre-culture">Culture</span>
+            <strong id="track-name">Poluru Daily · Morning brief</strong>
+            <p class="small">Subra &amp; Poluru · 22 min · New today</p>
+            <button class="primary" type="button" data-action="play" aria-label="Play featured episode">▶ Play episode</button>
+            <button class="text-button" type="button" data-action="modal" data-title="Poluru Daily" data-kind="View show">View show</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid cast-features">
+      <div>
+        <b>01 /</b>
+        <h3>Smart discovery</h3>
+        <p>Recommendations from your follows, skips, and completion history—no noisy feeds.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Sync everywhere</h3>
+        <p>Pick up mid-episode on phone, tablet, or web with one account.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Creator-first</h3>
+        <p>Transparent show pages, episode notes, and links to support hosts directly.</p>
+      </div>
+    </section>
+
+    <section id="shows" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">BROWSE SHOWS</p>
+          <h2>Top picks this week.</h2>
+        </div>
+        <p>Demo catalog—filter by genre or search by title and host.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Technology" aria-pressed="false">Technology</button>
+        <button class="filter" type="button" data-filter="Business" aria-pressed="false">Business</button>
+        <button class="filter" type="button" data-filter="Culture" aria-pressed="false">Culture</button>
+        <button class="filter" type="button" data-filter="Science" aria-pressed="false">Science</button>
+        <button class="filter" type="button" data-filter="News" aria-pressed="false">News</button>
+        <input class="search" type="search" placeholder="Filter shows…" aria-label="Filter shows">
+      </div>
+      <div class="grid collection">
+        <article class="show-card" data-search="Ship It Weekly Technology engineering Subra Poluru" data-category="Technology">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1478737272769-f99995ee160c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Microphone in a studio" loading="lazy" width="1200" height="800">
+            <span class="genre-pill genre-tech">Technology</span>
+            <button class="favorite" aria-label="Follow Ship It Weekly" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subra &amp; Poluru · Weekly</p>
+            <h3>Ship It Weekly</h3>
+            <p class="small">Product, engineering, and the humans behind the roadmap.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Ship It Weekly" data-kind="View show">View show</button>
+              <button class="secondary card-sub" type="button" data-action="modal" data-title="Ship It Weekly" data-kind="Subscribe">Follow</button>
+            </div>
+          </div>
+        </article>
+        <article class="show-card" data-search="Ledger & Latte Business finance Subbu" data-category="Business">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Notebook and coffee on a desk" loading="lazy" width="1200" height="800">
+            <span class="genre-pill genre-business">Business</span>
+            <button class="favorite" aria-label="Follow Ledger &amp; Latte" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subbu · Twice weekly</p>
+            <h3>Ledger &amp; Latte</h3>
+            <p class="small">Founders, operators, and honest numbers over coffee.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Ledger &amp; Latte" data-kind="View show">View show</button>
+              <button class="secondary card-sub" type="button" data-action="modal" data-title="Ledger &amp; Latte" data-kind="Subscribe">Follow</button>
+            </div>
+          </div>
+        </article>
+        <article class="show-card" data-search="Midnight Essays Culture stories Poluru" data-category="Culture">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Headphones on a wooden surface" loading="lazy" width="1200" height="800">
+            <span class="genre-pill genre-culture">Culture</span>
+            <button class="favorite" aria-label="Follow Midnight Essays" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Poluru · Weekly</p>
+            <h3>Midnight Essays</h3>
+            <p class="small">Film, music, and the ideas that stick after credits roll.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Midnight Essays" data-kind="View show">View show</button>
+              <button class="secondary card-sub" type="button" data-action="modal" data-title="Midnight Essays" data-kind="Subscribe">Follow</button>
+            </div>
+          </div>
+        </article>
+        <article class="show-card" data-search="Lab Notes Science research Subra" data-category="Science">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Scientist working in a lab" loading="lazy" width="1200" height="800">
+            <span class="genre-pill genre-science">Science</span>
+            <button class="favorite" aria-label="Follow Lab Notes" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subra · Weekly</p>
+            <h3>Lab Notes</h3>
+            <p class="small">Breakthroughs explained without the jargon wall.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Lab Notes" data-kind="View show">View show</button>
+              <button class="secondary card-sub" type="button" data-action="modal" data-title="Lab Notes" data-kind="Subscribe">Follow</button>
+            </div>
+          </div>
+        </article>
+        <article class="show-card" data-search="World in Ten News global Subbu Poluru" data-category="News">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Newspapers stacked on a table" loading="lazy" width="1200" height="800">
+            <span class="genre-pill genre-news">News</span>
+            <button class="favorite" aria-label="Follow World in Ten" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subbu &amp; Poluru · Daily</p>
+            <h3>World in Ten</h3>
+            <p class="small">Ten minutes of context on the stories that matter.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="World in Ten" data-kind="View show">View show</button>
+              <button class="secondary card-sub" type="button" data-action="modal" data-title="World in Ten" data-kind="Subscribe">Follow</button>
+            </div>
+          </div>
+        </article>
+        <article class="show-card" data-search="Design Systems Technology UX Subra" data-category="Technology">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Team collaborating at a whiteboard" loading="lazy" width="1200" height="800">
+            <span class="genre-pill genre-tech">Technology</span>
+            <button class="favorite" aria-label="Follow Design Systems FM" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subra · Biweekly</p>
+            <h3>Design Systems FM</h3>
+            <p class="small">Tokens, accessibility, and scaling UI with your team.</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Design Systems FM" data-kind="View show">View show</button>
+              <button class="secondary card-sub" type="button" data-action="modal" data-title="Design Systems FM" data-kind="Subscribe">Follow</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No shows match your search.</p>
+      </div>
+      <p class="cast-disclaimer">Demo app only. Shows, episodes, and playback are sample content—not a live podcast service.</p>
+    </section>
+
+    <section id="episodes" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">NEW EPISODES</p>
+          <h2>Fresh in your feed.</h2>
+        </div>
+        <p>Tap play for a demo ambient preview—no account required.</p>
+      </div>
+      <div class="episode-list collection">
+        <article class="episode-row" data-search="Roadmaps without drama Ship It Weekly Technology">
+          <button class="episode-play" type="button" data-action="play" data-title="Roadmaps without drama" aria-label="Play Roadmaps without drama">▶</button>
+          <div>
+            <strong>Roadmaps without drama</strong>
+            <p class="small">Ship It Weekly · 38 min · Oct 26, 2026</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Roadmaps without drama" data-kind="Play episode" data-show="Ship It Weekly">Queue</button>
+        </article>
+        <article class="episode-row" data-search="Q3 burn rate check Ledger Latte Business">
+          <button class="episode-play" type="button" data-action="play" data-title="Q3 burn rate check" aria-label="Play Q3 burn rate check">▶</button>
+          <div>
+            <strong>Q3 burn rate check</strong>
+            <p class="small">Ledger &amp; Latte · 29 min · Oct 25, 2026</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Q3 burn rate check" data-kind="Play episode" data-show="Ledger &amp; Latte">Queue</button>
+        </article>
+        <article class="episode-row" data-search="Neuroscience of focus Lab Notes Science">
+          <button class="episode-play" type="button" data-action="play" data-title="Neuroscience of focus" aria-label="Play Neuroscience of focus">▶</button>
+          <div>
+            <strong>Neuroscience of focus</strong>
+            <p class="small">Lab Notes · 41 min · Oct 24, 2026</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Neuroscience of focus" data-kind="Play episode" data-show="Lab Notes">Queue</button>
+        </article>
+        <article class="episode-row" data-search="Election maps explained World in Ten News">
+          <button class="episode-play" type="button" data-action="play" data-title="Election maps explained" aria-label="Play Election maps explained">▶</button>
+          <div>
+            <strong>Election maps explained</strong>
+            <p class="small">World in Ten · 10 min · Oct 26, 2026</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Election maps explained" data-kind="Play episode" data-show="World in Ten">Queue</button>
+        </article>
+        <p class="empty" hidden>No episodes match your search.</p>
+      </div>
+    </section>
+
+    <section id="curated" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CURATED</p>
+          <h2>Lists for every mood.</h2>
+        </div>
+        <p>Editor picks—search applies; genre filters do not hide these lists.</p>
+      </div>
+      <div class="grid collection">
+        <article class="guide-card" data-search="Commute under 20 minutes playlist Curated">
+          <span class="doc-icon" aria-hidden="true">🚇</span>
+          <p class="small">Playlist · 12 shows</p>
+          <h3>Commute under 20</h3>
+          <p class="small">Quick listens for trains, buses, and school drop-off.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Commute under 20" data-kind="View playlist">Open list</button>
+        </article>
+        <article class="guide-card" data-search="Founder interviews startup Curated">
+          <span class="doc-icon" aria-hidden="true">🚀</span>
+          <p class="small">Playlist · 8 shows</p>
+          <h3>Founder interviews</h3>
+          <p class="small">Honest stories from first idea to scale.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Founder interviews" data-kind="View playlist">Open list</button>
+        </article>
+        <article class="guide-card" data-search="Wind down evening calm Curated">
+          <span class="doc-icon" aria-hidden="true">🌙</span>
+          <p class="small">Playlist · 10 shows</p>
+          <h3>Wind-down hour</h3>
+          <p class="small">Calm voices and slow stories before sleep.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Wind-down hour" data-kind="View playlist">Open list</button>
+        </article>
+        <p class="empty" hidden>No lists match your search.</p>
+      </div>
+    </section>
+
+    <section id="creators" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CREATORS</p>
+          <h2>Hosts you’ll hear again.</h2>
+        </div>
+        <p>Sample profiles for the discovery layout.</p>
+      </div>
+      <div class="creator-grid">
+        <article class="creator-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Subra</h3>
+          <p class="small">Ship It Weekly · Design Systems FM</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subra" data-kind="View creator">View profile</button>
+        </article>
+        <article class="creator-card">
+          <span class="profile" aria-hidden="true">P</span>
+          <h3>Poluru</h3>
+          <p class="small">Poluru Daily · Midnight Essays</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru" data-kind="View creator">View profile</button>
+        </article>
+        <article class="creator-card">
+          <span class="profile" aria-hidden="true">K</span>
+          <h3>Subbu</h3>
+          <p class="small">Ledger &amp; Latte · World in Ten</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subbu" data-kind="View creator">View profile</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner cast-banner">
+      <div>
+        <h2>Start your own show.</h2>
+        <p>Hosting tools, analytics, and distribution—demo signup only.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Creator application" data-kind="Contact team">Become a creator</button>
+    </section>
+  </main>
+
+  <footer class="site-footer cast-footer">
+    <div class="container cast-footer-grid">
+      <div class="cast-footer-brand">
+        <span class="brand">Poluru Cast<span style="color:var(--brand)">.</span></span>
+        <p class="small">Podcast discovery app template. Shows, hosts, and episodes are fictional demo content.</p>
+      </div>
+      <div class="cast-footer-links">
+        <p class="footer-label">App</p>
+        <a href="#shows">Browse</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#curated">Curated</a>
+        <a href="#creators">Creators</a>
+      </div>
+      <div class="cast-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container cast-footer-bottom">
+      <span>© 2026 Poluru Cast</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <div class="cast-player" aria-label="Now playing">
+    <div class="cast-player-meta">
+      <span class="cast-art cast-art-sm" aria-hidden="true">PC</span>
+      <div>
+        <strong class="cast-now-playing">Poluru Daily · Morning brief</strong>
+        <p class="small" style="margin:0">Demo preview · Subra &amp; Poluru</p>
+      </div>
+    </div>
+    <button class="primary cast-player-btn" type="button" data-action="play">▶ Play</button>
+  </div>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
