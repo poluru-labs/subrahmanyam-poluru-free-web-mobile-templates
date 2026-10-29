@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Claims — Insurance claims portal</title>
+  <meta name="description" content="File, track, and manage insurance claims in one secure member portal.">
+  <meta name="theme-color" content="#077A7D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="claims-portal" data-template="insurance-claims-portal" style="--brand:#077A7D;--soft:#e6f3f3;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="claims-header">
+    <div class="container claims-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        Poluru Claims
+      </a>
+      <nav class="claims-nav" aria-label="Main navigation">
+        <a href="#claims">My claims</a>
+        <a href="#file">File a claim</a>
+        <a href="#guides">Guides</a>
+        <a href="#support">Support</a>
+      </nav>
+      <div class="claims-header-actions">
+        <button class="secondary" type="button" data-action="export">Download summary</button>
+        <button class="primary" type="button" data-action="modal" data-title="Start a new claim" data-kind="File claim">File claim</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#claims">My claims</a>
+      <a href="#file">File a claim</a>
+      <a href="#guides">Guides</a>
+      <a href="#support">Support</a>
+      <button class="primary" type="button" data-action="modal" data-title="Start a new claim" data-kind="File claim">File claim</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="claims-hero">
+      <div class="container claims-hero-grid">
+        <div class="claims-hero-copy">
+          <p class="eyebrow">INSURANCE CLAIMS PORTAL</p>
+          <h1>Claims made clear.<br>Progress you can see.</h1>
+          <p>File a new claim, upload documents, and follow every step—from first notice to settlement—in one calm dashboard.</p>
+          <form class="claims-lookup" role="search" aria-label="Look up a claim">
+            <label class="sr-only" for="claim-search">Claim number</label>
+            <input class="search claims-lookup-input" id="claim-search" type="search" placeholder="Search by claim # or policy…" autocomplete="off">
+            <button class="primary" type="submit">Track claim</button>
+          </form>
+          <div class="claims-kpi">
+            <div>
+              <strong>2</strong>
+              <span>Open claims</span>
+            </div>
+            <div>
+              <strong>48h</strong>
+              <span>Avg first response</span>
+            </div>
+            <div>
+              <strong>Policy</strong>
+              <span>PL-8842-Subra</span>
+            </div>
+          </div>
+        </div>
+        <aside class="claims-status-card" aria-label="Featured claim progress">
+          <h3>Claim #CLM-2026-1842</h3>
+          <p class="small">Auto · Minor collision · Adjuster: Poluru</p>
+          <ol class="claims-timeline">
+            <li class="done">
+              <span class="claims-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Report submitted</strong>
+                <time datetime="2026-10-20">Oct 20, 2026</time>
+              </div>
+            </li>
+            <li class="done">
+              <span class="claims-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Documents received</strong>
+                <time datetime="2026-10-22">Oct 22, 2026</time>
+              </div>
+            </li>
+            <li class="active">
+              <span class="claims-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Adjuster review</strong>
+                <time datetime="2026-10-26">In progress</time>
+              </div>
+            </li>
+            <li>
+              <span class="claims-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Estimate &amp; settlement</strong>
+                <time datetime="2026-10-30">Estimated</time>
+              </div>
+            </li>
+          </ol>
+          <button class="text-button" type="button" data-action="modal" data-title="Claim #CLM-2026-1842" data-kind="View claim">View full claim</button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid claims-features">
+      <div>
+        <b>01 /</b>
+        <h3>Guided filing</h3>
+        <p>Step-by-step flows for auto, home, and health—with plain-language prompts.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Secure documents</h3>
+        <p>Upload photos, police reports, and receipts; track what we still need.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Human support</h3>
+        <p>Message your adjuster or call the care line when you want a person.</p>
+      </div>
+    </section>
+
+    <section id="claims" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MY CLAIMS</p>
+          <h2>Your active files.</h2>
+        </div>
+        <p>Demo data for layout—filter or open details for each claim.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Open" aria-pressed="false">Open</button>
+        <button class="filter" type="button" data-filter="In review" aria-pressed="false">In review</button>
+        <button class="filter" type="button" data-filter="Closed" aria-pressed="false">Closed</button>
+        <input class="search" type="search" placeholder="Filter claims…" aria-label="Filter claims">
+      </div>
+      <div class="table-wrap collection">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Claim #</th>
+              <th scope="col">Type</th>
+              <th scope="col">Date filed</th>
+              <th scope="col">Status</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-search="CLM-2026-1842 auto collision Open" data-category="In review">
+              <td><strong>CLM-2026-1842</strong></td>
+              <td>Auto</td>
+              <td>Oct 20, 2026</td>
+              <td><span class="status-pill status-review">In review</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="CLM-2026-1842" data-kind="View claim">Open</button></td>
+            </tr>
+            <tr data-search="CLM-2026-1798 home water damage Open" data-category="Open">
+              <td><strong>CLM-2026-1798</strong></td>
+              <td>Home</td>
+              <td>Oct 12, 2026</td>
+              <td><span class="status-pill status-open">Open</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="CLM-2026-1798" data-kind="View claim">Open</button></td>
+            </tr>
+            <tr data-search="CLM-2026-1602 auto glass Closed" data-category="Closed">
+              <td><strong>CLM-2026-1602</strong></td>
+              <td>Auto</td>
+              <td>Aug 3, 2026</td>
+              <td><span class="status-pill status-closed">Closed</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="CLM-2026-1602" data-kind="View claim">Open</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="empty" hidden>No claims match your filter.</p>
+      </div>
+      <p class="claims-disclaimer">Demo portal only. Not an insurance product. Do not use for emergencies—for urgent help, contact your insurer or local services directly.</p>
+    </section>
+
+    <section id="guides" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">GUIDES</p>
+          <h2>What to prepare.</h2>
+        </div>
+        <p>Checklists and FAQs before you file or upload documents.</p>
+      </div>
+      <div class="grid collection">
+        <article class="guide-card" data-search="Auto accident checklist photos police report Guides">
+          <span class="doc-icon" aria-hidden="true">🚗</span>
+          <p class="small">Auto · Checklist</p>
+          <h3>After an accident</h3>
+          <p class="small">What to photograph, when to call police, and how to reach roadside help.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="After an accident" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Home damage water fire checklist Guides">
+          <span class="doc-icon" aria-hidden="true">🏠</span>
+          <p class="small">Home · Checklist</p>
+          <h3>Home damage first steps</h3>
+          <p class="small">Mitigate further loss, document damage, and keep receipts for temporary repairs.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Home damage first steps" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Upload documents photos PDF Guides">
+          <span class="doc-icon" aria-hidden="true">📎</span>
+          <p class="small">Portal · How-to</p>
+          <h3>Uploading documents</h3>
+          <p class="small">Accepted file types, size limits, and tips for clear photos of damage.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Uploading documents" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Deductible coverage FAQ policy Guides">
+          <span class="doc-icon" aria-hidden="true">📋</span>
+          <p class="small">Policy · FAQ</p>
+          <h3>Deductibles &amp; coverage</h3>
+          <p class="small">How deductibles apply, rental coverage, and what your policy may exclude.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Deductibles &amp; coverage" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Health claim medical bills Guides">
+          <span class="doc-icon" aria-hidden="true">🩺</span>
+          <p class="small">Health · Overview</p>
+          <h3>Health claim basics</h3>
+          <p class="small">EOBs, out-of-network care, and coordinating with your provider.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Health claim basics" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Contact adjuster message support Guides">
+          <span class="doc-icon" aria-hidden="true">💬</span>
+          <p class="small">Support · FAQ</p>
+          <h3>Working with your adjuster</h3>
+          <p class="small">Response times, what to include in messages, and escalation paths.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Working with your adjuster" data-kind="View guide">Read guide</button>
+        </article>
+        <p class="empty" hidden>No guides match your search.</p>
+      </div>
+    </section>
+
+    <section class="section" id="file">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FILE A CLAIM</p>
+          <h2>Start in minutes.</h2>
+        </div>
+        <p>Choose a line of business—demo forms save locally only.</p>
+      </div>
+      <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+        <article class="guide-card">
+          <h3>Auto</h3>
+          <p class="small">Collision, glass, theft, and roadside events.</p>
+          <button class="primary" type="button" data-action="modal" data-title="File auto claim" data-kind="File claim">Start auto claim</button>
+        </article>
+        <article class="guide-card">
+          <h3>Home</h3>
+          <p class="small">Water, fire, weather, and property damage.</p>
+          <button class="primary" type="button" data-action="modal" data-title="File home claim" data-kind="File claim">Start home claim</button>
+        </article>
+        <article class="guide-card">
+          <h3>Health</h3>
+          <p class="small">Medical bills and out-of-network care.</p>
+          <button class="primary" type="button" data-action="modal" data-title="File health claim" data-kind="File claim">Start health claim</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner claims-banner" id="support">
+      <div>
+        <h2>Questions about a claim?</h2>
+        <p>Member services can help with status, documents, and policy questions—demo contact only.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Contact member services" data-kind="Contact support">Contact support</button>
+    </section>
+  </main>
+
+  <footer class="site-footer claims-footer">
+    <div class="container claims-footer-grid">
+      <div class="claims-footer-brand">
+        <span class="brand">Poluru Claims<span style="color:var(--brand)">.</span></span>
+        <p class="small">Insurance claims portal template. Claims, policies, and timelines are fictional demo content.</p>
+      </div>
+      <div class="claims-footer-links">
+        <p class="footer-label">Portal</p>
+        <a href="#claims">My claims</a>
+        <a href="#file">File a claim</a>
+        <a href="#guides">Guides</a>
+        <a href="#support">Support</a>
+      </div>
+      <div class="claims-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container claims-footer-bottom">
+      <span>© 2026 Poluru Claims</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
