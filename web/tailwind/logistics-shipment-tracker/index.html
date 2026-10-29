@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Track — Logistics shipment tracker</title>
+  <meta name="description" content="Track parcels, manage shipments, and see delivery milestones in one clean logistics portal.">
+  <meta name="theme-color" content="#0046FF">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="logistics-tracker" data-template="logistics-shipment-tracker" style="--brand:#0046FF;--soft:#e8efff;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="logistics-header">
+    <div class="container logistics-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">▣</span>
+        Poluru Track
+      </a>
+      <nav class="logistics-nav" aria-label="Main navigation">
+        <a href="#shipments">Shipments</a>
+        <a href="#create">New shipment</a>
+        <a href="#resources">Resources</a>
+        <a href="#support">Support</a>
+      </nav>
+      <div class="logistics-header-actions">
+        <button class="secondary" type="button" data-action="export">Export CSV</button>
+        <button class="primary" type="button" data-action="modal" data-title="Create a shipment" data-kind="Create shipment">New shipment</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#shipments">Shipments</a>
+      <a href="#create">New shipment</a>
+      <a href="#resources">Resources</a>
+      <a href="#support">Support</a>
+      <button class="primary" type="button" data-action="modal" data-title="Create a shipment" data-kind="Create shipment">New shipment</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="logistics-hero">
+      <div class="container logistics-hero-grid">
+        <div class="logistics-hero-copy">
+          <p class="eyebrow">LOGISTICS SHIPMENT TRACKER</p>
+          <h1>Every mile.<br>One clear view.</h1>
+          <p>Track parcels across carriers, see live milestones, and manage outbound loads from a single operations desk—built for clarity, not clutter.</p>
+          <form class="logistics-lookup" role="search" aria-label="Track a shipment">
+            <label class="sr-only" for="track-search">Tracking number</label>
+            <input class="search logistics-lookup-input" id="track-search" type="search" placeholder="Tracking #, PO, or reference…" autocomplete="off">
+            <button class="primary" type="submit">Track shipment</button>
+          </form>
+          <div class="logistics-kpi">
+            <div>
+              <strong>847</strong>
+              <span>Active shipments</span>
+            </div>
+            <div>
+              <strong>98.2%</strong>
+              <span>On-time this week</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>Exceptions open</span>
+            </div>
+          </div>
+        </div>
+        <aside class="logistics-status-card" aria-label="Featured shipment progress">
+          <h3>PLR-8842-Subra</h3>
+          <p class="small">Ground · 42 lb · Dallas → Chicago · Carrier: Poluru Freight</p>
+          <ol class="logistics-timeline">
+            <li class="done">
+              <span class="logistics-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Label created</strong>
+                <time datetime="2026-10-24">Oct 24, 2026</time>
+              </div>
+            </li>
+            <li class="done">
+              <span class="logistics-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Picked up · Dallas hub</strong>
+                <time datetime="2026-10-25">Oct 25, 2026</time>
+              </div>
+            </li>
+            <li class="active">
+              <span class="logistics-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>In transit · Memphis sort</strong>
+                <time datetime="2026-10-26">Updated today</time>
+              </div>
+            </li>
+            <li>
+              <span class="logistics-timeline-dot" aria-hidden="true"></span>
+              <div>
+                <strong>Out for delivery</strong>
+                <time datetime="2026-10-27">Est. Oct 27</time>
+              </div>
+            </li>
+          </ol>
+          <button class="text-button" type="button" data-action="modal" data-title="PLR-8842-Subra" data-kind="View shipment">View full journey</button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid logistics-features">
+      <div>
+        <b>01 /</b>
+        <h3>Unified tracking</h3>
+        <p>One search for tracking IDs, purchase orders, and customer references—no switching tabs.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Exception alerts</h3>
+        <p>Delays, customs holds, and address issues surface early with plain-language next steps.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Carrier-ready exports</h3>
+        <p>Download shipment lists for billing, SLA reviews, and warehouse handoffs.</p>
+      </div>
+    </section>
+
+    <section id="shipments" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">SHIPMENTS</p>
+          <h2>Live board.</h2>
+        </div>
+        <p>Demo data for layout—filter by status or open details for each shipment.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="In transit" aria-pressed="false">In transit</button>
+        <button class="filter" type="button" data-filter="Out for delivery" aria-pressed="false">Out for delivery</button>
+        <button class="filter" type="button" data-filter="Delivered" aria-pressed="false">Delivered</button>
+        <button class="filter" type="button" data-filter="Exception" aria-pressed="false">Exception</button>
+        <input class="search" type="search" placeholder="Filter shipments…" aria-label="Filter shipments">
+      </div>
+      <div class="table-wrap collection">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Tracking #</th>
+              <th scope="col">Route</th>
+              <th scope="col">Carrier</th>
+              <th scope="col">ETA</th>
+              <th scope="col">Status</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-search="PLR-8842-Subra Dallas Chicago In transit Poluru Freight" data-category="In transit">
+              <td><strong>PLR-8842-Subra</strong></td>
+              <td>Dallas → Chicago</td>
+              <td>Poluru Freight</td>
+              <td>Oct 27, 2026</td>
+              <td><span class="status-pill status-transit">In transit</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="PLR-8842-Subra" data-kind="View shipment">Open</button></td>
+            </tr>
+            <tr data-search="PLR-9011-Subbu Austin Denver Out for delivery SwiftLine" data-category="Out for delivery">
+              <td><strong>PLR-9011-Subbu</strong></td>
+              <td>Austin → Denver</td>
+              <td>SwiftLine</td>
+              <td>Oct 26, 2026</td>
+              <td><span class="status-pill status-delivery">Out for delivery</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="PLR-9011-Subbu" data-kind="View shipment">Open</button></td>
+            </tr>
+            <tr data-search="PLR-7720-Poluru Seattle Portland Delivered Northwest Cargo" data-category="Delivered">
+              <td><strong>PLR-7720-Poluru</strong></td>
+              <td>Seattle → Portland</td>
+              <td>Northwest Cargo</td>
+              <td>Oct 24, 2026</td>
+              <td><span class="status-pill status-delivered">Delivered</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="PLR-7720-Poluru" data-kind="View shipment">Open</button></td>
+            </tr>
+            <tr data-search="PLR-6602-Subra Miami Customs Exception GlobalPost" data-category="Exception">
+              <td><strong>PLR-6602-Subra</strong></td>
+              <td>Miami → Customs hold</td>
+              <td>GlobalPost</td>
+              <td>Pending</td>
+              <td><span class="status-pill status-exception">Exception</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="PLR-6602-Subra" data-kind="View shipment">Open</button></td>
+            </tr>
+            <tr data-search="PLR-8103-Subbu Atlanta Charlotte In transit Poluru Freight" data-category="In transit">
+              <td><strong>PLR-8103-Subbu</strong></td>
+              <td>Atlanta → Charlotte</td>
+              <td>Poluru Freight</td>
+              <td>Oct 28, 2026</td>
+              <td><span class="status-pill status-transit">In transit</span></td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="PLR-8103-Subbu" data-kind="View shipment">Open</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="empty" hidden>No shipments match your filter.</p>
+      </div>
+      <p class="logistics-disclaimer">Demo tracker only. Shipments, carriers, and ETAs are fictional. Not connected to live carrier APIs.</p>
+    </section>
+
+    <section class="section logistics-hubs">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">NETWORK</p>
+          <h2>Hub snapshot.</h2>
+        </div>
+        <p>Throughput and dwell time at key sort centers—flat metrics for quick ops review.</p>
+      </div>
+      <div class="hub-grid">
+        <article class="hub-card">
+          <p class="footer-label">Dallas</p>
+          <strong class="hub-metric">2,140</strong>
+          <p class="small">Parcels processed (24h)</p>
+          <div class="progress" aria-hidden="true"><span style="--progress:78%"></span></div>
+          <p class="small">Capacity 78%</p>
+        </article>
+        <article class="hub-card">
+          <p class="footer-label">Memphis</p>
+          <strong class="hub-metric">3,420</strong>
+          <p class="small">Parcels processed (24h)</p>
+          <div class="progress" aria-hidden="true"><span style="--progress:64%"></span></div>
+          <p class="small">Capacity 64%</p>
+        </article>
+        <article class="hub-card">
+          <p class="footer-label">Chicago</p>
+          <strong class="hub-metric">1,890</strong>
+          <p class="small">Parcels processed (24h)</p>
+          <div class="progress" aria-hidden="true"><span style="--progress:52%"></span></div>
+          <p class="small">Capacity 52%</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">RESOURCES</p>
+          <h2>Ship smarter.</h2>
+        </div>
+        <p>Guides for labels, customs, and proof of delivery—search applies here too.</p>
+      </div>
+      <div class="grid collection">
+        <article class="guide-card" data-search="Label printing barcode ZPL Resources">
+          <span class="doc-icon" aria-hidden="true">🏷</span>
+          <p class="small">Warehouse · How-to</p>
+          <h3>Printing labels</h3>
+          <p class="small">ZPL vs PDF, printer calibration, and reprint rules for damaged barcodes.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Printing labels" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Customs international commercial invoice Resources">
+          <span class="doc-icon" aria-hidden="true">🌐</span>
+          <p class="small">International · Checklist</p>
+          <h3>Customs paperwork</h3>
+          <p class="small">Commercial invoices, HS codes, and when to escalate to a broker.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Customs paperwork" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Proof of delivery signature photo Resources">
+          <span class="doc-icon" aria-hidden="true">📦</span>
+          <p class="small">Last mile · FAQ</p>
+          <h3>Proof of delivery</h3>
+          <p class="small">Signature capture, photo POD, and what to do when delivery fails.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Proof of delivery" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="SLA on-time carrier scorecard Resources">
+          <span class="doc-icon" aria-hidden="true">📊</span>
+          <p class="small">Ops · Overview</p>
+          <h3>SLA scorecards</h3>
+          <p class="small">How on-time % is calculated and exporting weekly carrier reviews.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="SLA scorecards" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Returns RMA reverse logistics Resources">
+          <span class="doc-icon" aria-hidden="true">↩</span>
+          <p class="small">Returns · Workflow</p>
+          <h3>Reverse logistics</h3>
+          <p class="small">RMA labels, inspection steps, and restocking timelines.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Reverse logistics" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="API webhook tracking events Resources">
+          <span class="doc-icon" aria-hidden="true">⚙</span>
+          <p class="small">Integrations · Dev</p>
+          <h3>Tracking webhooks</h3>
+          <p class="small">Event payloads, retries, and mapping carrier codes to your OMS.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Tracking webhooks" data-kind="View guide">Read guide</button>
+        </article>
+        <p class="empty" hidden>No resources match your search.</p>
+      </div>
+    </section>
+
+    <section class="section" id="create">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">NEW SHIPMENT</p>
+          <h2>Book a load.</h2>
+        </div>
+        <p>Choose a service level—demo forms save locally only.</p>
+      </div>
+      <div class="grid logistics-create-grid">
+        <article class="guide-card">
+          <h3>Ground</h3>
+          <p class="small">Economy parcel and LTL within domestic lanes.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Book ground shipment" data-kind="Create shipment">Book ground</button>
+        </article>
+        <article class="guide-card">
+          <h3>Express</h3>
+          <p class="small">Next-day and two-day with time-definite windows.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Book express shipment" data-kind="Create shipment">Book express</button>
+        </article>
+        <article class="guide-card">
+          <h3>International</h3>
+          <p class="small">Air freight, customs docs, and broker handoff.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Book international shipment" data-kind="Create shipment">Book international</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner logistics-banner" id="support">
+      <div>
+        <h2>Need help with a shipment?</h2>
+        <p>Operations support can assist with exceptions, reroutes, and carrier claims—demo contact only.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Contact operations" data-kind="Contact support">Contact support</button>
+    </section>
+  </main>
+
+  <footer class="site-footer logistics-footer">
+    <div class="container logistics-footer-grid">
+      <div class="logistics-footer-brand">
+        <span class="brand">Poluru Track<span style="color:var(--brand)">.</span></span>
+        <p class="small">Logistics shipment tracker template. Tracking numbers, carriers, and hub metrics are fictional demo content.</p>
+      </div>
+      <div class="logistics-footer-links">
+        <p class="footer-label">Tracker</p>
+        <a href="#shipments">Shipments</a>
+        <a href="#create">New shipment</a>
+        <a href="#resources">Resources</a>
+        <a href="#support">Support</a>
+      </div>
+      <div class="logistics-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container logistics-footer-bottom">
+      <span>© 2026 Poluru Track</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
