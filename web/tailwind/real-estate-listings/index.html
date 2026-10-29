@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Homes — Real estate listings</title>
+  <meta name="description" content="Browse homes for sale and rent, explore neighborhoods, and schedule tours in one clean listings experience.">
+  <meta name="theme-color" content="#8FD14F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="real-estate-listings" data-template="real-estate-listings" style="--brand:#8FD14F;--soft:#eef8e8;--on:#152118;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="estate-header">
+    <div class="container estate-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">⌂</span>
+        Poluru Homes
+      </a>
+      <nav class="estate-nav" aria-label="Main navigation">
+        <a href="#listings">Listings</a>
+        <a href="#neighborhoods">Neighborhoods</a>
+        <a href="#agents">Agents</a>
+        <a href="#sell">Sell</a>
+      </nav>
+      <div class="estate-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Saved homes" data-kind="View saved">Saved</button>
+        <button class="primary" type="button" data-action="modal" data-title="Schedule a tour" data-kind="Schedule tour">Schedule tour</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#listings">Listings</a>
+      <a href="#neighborhoods">Neighborhoods</a>
+      <a href="#agents">Agents</a>
+      <a href="#sell">Sell</a>
+      <button class="primary" type="button" data-action="modal" data-title="Schedule a tour" data-kind="Schedule tour">Schedule tour</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="estate-hero">
+      <div class="container estate-hero-grid">
+        <div class="estate-hero-copy">
+          <p class="eyebrow">REAL ESTATE LISTINGS</p>
+          <h1>Find home.<br>Feel at ease.</h1>
+          <p>Search sale and rental listings with clear pricing, honest photos, and neighborhood context—no clutter, no guesswork.</p>
+          <form class="estate-search" role="search" aria-label="Search listings">
+            <label class="sr-only" for="listing-search">City or ZIP</label>
+            <input class="search estate-search-input" id="listing-search" type="search" placeholder="City, ZIP, or neighborhood…" autocomplete="off">
+            <button class="primary" type="submit">Search homes</button>
+          </form>
+          <div class="estate-kpi">
+            <div>
+              <strong>248</strong>
+              <span>Active listings</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>Open houses this week</span>
+            </div>
+            <div>
+              <strong>4.9</strong>
+              <span>Agent rating</span>
+            </div>
+          </div>
+        </div>
+        <aside class="estate-featured" aria-label="Featured listing">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Modern home exterior with large windows" loading="eager" width="1200" height="800">
+          <div class="estate-featured-body">
+            <span class="listing-pill listing-buy">For sale</span>
+            <strong>Willow Creek Modern</strong>
+            <p class="small">Austin, TX · 4 bed · 3 bath · 2,450 sq ft</p>
+            <p class="price-tag">$875,000</p>
+            <button class="primary" type="button" data-action="modal" data-title="Willow Creek Modern" data-kind="View property">View listing</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid estate-features">
+      <div>
+        <b>01 /</b>
+        <h3>Verified listings</h3>
+        <p>Photos, floor plans, and status updated by partner agents—not stale syndication feeds.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Neighborhood intel</h3>
+        <p>Schools, commute times, and walk scores on every listing detail page.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Easy tours</h3>
+        <p>Book in-person or video walkthroughs; demo requests save locally only.</p>
+      </div>
+    </section>
+
+    <section id="listings" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">LISTINGS</p>
+          <h2>Homes on the market.</h2>
+        </div>
+        <p>Demo properties—filter by listing type or search by city and features.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Buy" aria-pressed="false">Buy</button>
+        <button class="filter" type="button" data-filter="Rent" aria-pressed="false">Rent</button>
+        <button class="filter" type="button" data-filter="New" aria-pressed="false">New build</button>
+        <input class="search" type="search" placeholder="Filter listings…" aria-label="Filter listings">
+      </div>
+      <div class="grid collection">
+        <article class="listing-card" data-search="Willow Creek Modern Austin Buy 875000 4 bed" data-category="Buy">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Contemporary house with pool" loading="lazy" width="1200" height="800">
+            <span class="listing-pill listing-buy">Buy</span>
+            <button class="favorite" aria-label="Save Willow Creek Modern" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="price-tag">$875,000</p>
+            <h3>Willow Creek Modern</h3>
+            <p class="small">Austin, TX · 4 bd · 3 ba · 2,450 sq ft</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Willow Creek Modern" data-kind="View property">Details</button>
+              <button class="secondary card-tour" type="button" data-action="modal" data-title="Willow Creek Modern" data-kind="Schedule tour">Tour</button>
+            </div>
+          </div>
+        </article>
+        <article class="listing-card" data-search="Lakeview Loft Denver Rent 3200 2 bed" data-category="Rent">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Bright apartment living room" loading="lazy" width="1200" height="800">
+            <span class="listing-pill listing-rent">Rent</span>
+            <button class="favorite" aria-label="Save Lakeview Loft" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="price-tag">$3,200/mo</p>
+            <h3>Lakeview Loft</h3>
+            <p class="small">Denver, CO · 2 bd · 2 ba · 1,180 sq ft</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Lakeview Loft" data-kind="View property">Details</button>
+              <button class="secondary card-tour" type="button" data-action="modal" data-title="Lakeview Loft" data-kind="Schedule tour">Tour</button>
+            </div>
+          </div>
+        </article>
+        <article class="listing-card" data-search="Maple Street Craftsman Seattle Buy 1250000" data-category="Buy">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Classic craftsman home" loading="lazy" width="1200" height="800">
+            <span class="listing-pill listing-buy">Buy</span>
+            <button class="favorite" aria-label="Save Maple Street Craftsman" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="price-tag">$1,250,000</p>
+            <h3>Maple Street Craftsman</h3>
+            <p class="small">Seattle, WA · 5 bd · 3 ba · 3,100 sq ft</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Maple Street Craftsman" data-kind="View property">Details</button>
+              <button class="secondary card-tour" type="button" data-action="modal" data-title="Maple Street Craftsman" data-kind="Schedule tour">Tour</button>
+            </div>
+          </div>
+        </article>
+        <article class="listing-card" data-search="Harbor View Townhome Boston New 989000" data-category="New">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="New townhome row" loading="lazy" width="1200" height="800">
+            <span class="listing-pill listing-new">New</span>
+            <button class="favorite" aria-label="Save Harbor View Townhome" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="price-tag">$989,000</p>
+            <h3>Harbor View Townhome</h3>
+            <p class="small">Boston, MA · 3 bd · 2.5 ba · 2,020 sq ft</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Harbor View Townhome" data-kind="View property">Details</button>
+              <button class="secondary card-tour" type="button" data-action="modal" data-title="Harbor View Townhome" data-kind="Schedule tour">Tour</button>
+            </div>
+          </div>
+        </article>
+        <article class="listing-card" data-search="Sunset Bungalow Phoenix Rent 2400" data-category="Rent">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Single-story bungalow" loading="lazy" width="1200" height="800">
+            <span class="listing-pill listing-rent">Rent</span>
+            <button class="favorite" aria-label="Save Sunset Bungalow" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="price-tag">$2,400/mo</p>
+            <h3>Sunset Bungalow</h3>
+            <p class="small">Phoenix, AZ · 3 bd · 2 ba · 1,650 sq ft</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Sunset Bungalow" data-kind="View property">Details</button>
+              <button class="secondary card-tour" type="button" data-action="modal" data-title="Sunset Bungalow" data-kind="Schedule tour">Tour</button>
+            </div>
+          </div>
+        </article>
+        <article class="listing-card" data-search="Greenfield Estate New Charlotte 720000" data-category="New">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="New construction home" loading="lazy" width="1200" height="800">
+            <span class="listing-pill listing-new">New</span>
+            <button class="favorite" aria-label="Save Greenfield Estate" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="price-tag">$720,000</p>
+            <h3>Greenfield Estate</h3>
+            <p class="small">Charlotte, NC · 4 bd · 3 ba · 2,800 sq ft</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Greenfield Estate" data-kind="View property">Details</button>
+              <button class="secondary card-tour" type="button" data-action="modal" data-title="Greenfield Estate" data-kind="Schedule tour">Tour</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No listings match your search.</p>
+      </div>
+      <p class="estate-disclaimer">Demo listings only. Prices, photos, and availability are fictional. Not connected to MLS or payment systems.</p>
+    </section>
+
+    <section id="neighborhoods" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">NEIGHBORHOODS</p>
+          <h2>Explore before you visit.</h2>
+        </div>
+        <p>Area guides—search applies; listing-type filters do not hide guides.</p>
+      </div>
+      <div class="grid collection">
+        <article class="guide-card" data-search="East Austin food parks walkable Neighborhoods">
+          <span class="doc-icon" aria-hidden="true">📍</span>
+          <p class="small">Austin · Guide</p>
+          <h3>East Austin</h3>
+          <p class="small">Walkable dining, live music, and quick access to downtown employers.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="East Austin" data-kind="View neighborhood">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Capitol Hill Seattle coffee transit Neighborhoods">
+          <span class="doc-icon" aria-hidden="true">📍</span>
+          <p class="small">Seattle · Guide</p>
+          <h3>Capitol Hill</h3>
+          <p class="small">Transit-rich, vibrant nightlife, and classic Seattle architecture.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Capitol Hill" data-kind="View neighborhood">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="RiNo Denver art district Neighborhoods">
+          <span class="doc-icon" aria-hidden="true">📍</span>
+          <p class="small">Denver · Guide</p>
+          <h3>RiNo Art District</h3>
+          <p class="small">Lofts, murals, and brewery alleys between downtown and the highway.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="RiNo Art District" data-kind="View neighborhood">Read guide</button>
+        </article>
+        <p class="empty" hidden>No neighborhoods match your search.</p>
+      </div>
+    </section>
+
+    <section id="agents" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">AGENTS</p>
+          <h2>Local experts.</h2>
+        </div>
+        <p>Demo agent profiles—replace with your brokerage roster.</p>
+      </div>
+      <div class="agent-grid">
+        <article class="agent-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Subra Poluru</h3>
+          <p class="small">Austin · Buyer specialist · 120+ closings</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subra Poluru" data-kind="Contact agent">Contact</button>
+        </article>
+        <article class="agent-card">
+          <span class="profile" aria-hidden="true">P</span>
+          <h3>Poluru Labs Team</h3>
+          <p class="small">Denver · Listing agent · New construction</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru Labs Team" data-kind="Contact agent">Contact</button>
+        </article>
+        <article class="agent-card">
+          <span class="profile" aria-hidden="true">K</span>
+          <h3>Subbu Kumar</h3>
+          <p class="small">Seattle · Rental advisor · Relocation</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subbu Kumar" data-kind="Contact agent">Contact</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="sell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">SELL WITH US</p>
+          <h2>List your home.</h2>
+        </div>
+        <p>Marketing, staging consults, and offer review—demo signup only.</p>
+      </div>
+      <div class="grid estate-sell-grid">
+        <article class="guide-card">
+          <h3>Free valuation</h3>
+          <p class="small">Comparables and market trends for your address.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Home valuation" data-kind="Schedule tour">Get estimate</button>
+        </article>
+        <article class="guide-card">
+          <h3>Listing prep</h3>
+          <p class="small">Photo day, minor repairs, and launch timeline.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Listing consultation" data-kind="Contact agent">Talk to an agent</button>
+        </article>
+        <article class="guide-card">
+          <h3>Offer strategy</h3>
+          <p class="small">Review terms, contingencies, and closing costs.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Offer strategy session" data-kind="Contact agent">Book session</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner estate-banner">
+      <div>
+        <h2>Ready to walk through?</h2>
+        <p>Pick a listing and request a tour—demo form saves locally; no calendar integration.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Schedule a tour" data-kind="Schedule tour">Schedule tour</button>
+    </section>
+  </main>
+
+  <footer class="site-footer estate-footer">
+    <div class="container estate-footer-grid">
+      <div class="estate-footer-brand">
+        <span class="brand">Poluru Homes<span style="color:var(--brand)">.</span></span>
+        <p class="small">Real estate listings template. Properties, agents, and prices are fictional demo content.</p>
+      </div>
+      <div class="estate-footer-links">
+        <p class="footer-label">Site</p>
+        <a href="#listings">Listings</a>
+        <a href="#neighborhoods">Neighborhoods</a>
+        <a href="#agents">Agents</a>
+        <a href="#sell">Sell</a>
+      </div>
+      <div class="estate-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container estate-footer-bottom">
+      <span>© 2026 Poluru Homes</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
