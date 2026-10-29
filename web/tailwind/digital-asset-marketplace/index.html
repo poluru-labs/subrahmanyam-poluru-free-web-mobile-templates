@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Assets — Digital asset marketplace</title>
+  <meta name="description" content="Browse UI kits, icons, templates, and illustrations from independent creators.">
+  <meta name="theme-color" content="#E87F24">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="marketplace" data-template="digital-asset-marketplace" style="--brand:#E87F24;--soft:#fef3eb;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="market-header">
+    <div class="container market-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        Poluru Assets
+      </a>
+      <nav class="market-nav" aria-label="Main navigation">
+        <a href="#browse">Browse</a>
+        <a href="#categories">Categories</a>
+        <a href="#creators">Creators</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="market-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Start selling on Poluru Assets" data-kind="Sell assets">Sell assets</button>
+        <button class="primary" type="button" data-action="modal" data-title="Your cart" data-kind="View cart">Cart <span aria-hidden="true">·</span> 0</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#browse">Browse</a>
+      <a href="#categories">Categories</a>
+      <a href="#creators">Creators</a>
+      <a href="#pricing">Pricing</a>
+      <button class="primary" type="button" data-action="modal" data-title="Start selling on Poluru Assets" data-kind="Sell assets">Sell assets</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="market-hero">
+      <div class="container market-hero-grid">
+        <div class="market-hero-copy">
+          <p class="eyebrow">DIGITAL ASSET MARKETPLACE</p>
+          <h1>Premium assets.<br>Ready for your next build.</h1>
+          <p>Discover UI kits, icon sets, templates, and illustrations from trusted creators—curated for clean, production-ready work.</p>
+          <form class="market-search" role="search" aria-label="Search assets">
+            <label class="sr-only" for="asset-search">Search assets</label>
+            <input class="search market-search-input" id="asset-search" type="search" placeholder="Search UI kits, icons, templates…" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <div class="market-stats">
+            <div class="market-stat">
+              <strong>12k+</strong>
+              <span>Assets</span>
+            </div>
+            <div class="market-stat">
+              <strong>840</strong>
+              <span>Creators</span>
+            </div>
+            <div class="market-stat">
+              <strong>4.9</strong>
+              <span>Avg rating</span>
+            </div>
+          </div>
+        </div>
+        <div class="market-hero-visual">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Abstract digital artwork preview" loading="eager" width="1200" height="800">
+          <div class="market-hero-badge">
+            <div>
+              <strong>Featured drop</strong>
+              Aurora UI Kit · 120 components
+            </div>
+            <span class="badge">New</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid market-features">
+      <div>
+        <b>01 /</b>
+        <h3>Curated quality</h3>
+        <p>Every listing is reviewed for consistency, licensing clarity, and production readiness.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Instant download</h3>
+        <p>Get organized source files, previews, and documentation the moment you purchase.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Creator-first</h3>
+        <p>Independent artists and designers earn fairly with transparent marketplace terms.</p>
+      </div>
+    </section>
+
+    <section id="browse" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">BROWSE</p>
+          <h2 id="categories">Find your next asset.</h2>
+        </div>
+        <p>Filter by category or search the catalog. Save favorites to revisit later.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="UI Kits" aria-pressed="false">UI Kits</button>
+        <button class="filter" type="button" data-filter="Icons" aria-pressed="false">Icons</button>
+        <button class="filter" type="button" data-filter="Templates" aria-pressed="false">Templates</button>
+        <button class="filter" type="button" data-filter="Illustrations" aria-pressed="false">Illustrations</button>
+        <input class="search" type="search" placeholder="Filter this collection…" aria-label="Filter assets">
+      </div>
+      <div class="grid collection">
+        <article class="product-card" data-search="Aurora UI Kit Subra Studio 120 components Figma UI Kits" data-category="UI Kits">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Aurora UI Kit preview" loading="lazy" width="1200" height="800">
+            <span class="image-tag">UI Kits</span>
+            <button class="favorite" type="button" aria-label="Save Aurora UI Kit" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subra Studio · ★ 4.9</p>
+            <h3>Aurora UI Kit</h3>
+            <div class="card-bottom">
+              <strong>$49</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Aurora UI Kit" data-kind="View asset">View asset</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Nimbus Icon Pack Poluru 480 icons SVG Icons" data-category="Icons">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Nimbus Icon Pack preview" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Icons</span>
+            <button class="favorite" type="button" aria-label="Save Nimbus Icon Pack" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Poluru · ★ 5.0</p>
+            <h3>Nimbus Icon Pack</h3>
+            <div class="card-bottom">
+              <strong>$24</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Nimbus Icon Pack" data-kind="View asset">View asset</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Launchpad Dashboard Template Subbu Labs React Templates" data-category="Templates">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Launchpad Dashboard Template preview" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Templates</span>
+            <button class="favorite" type="button" aria-label="Save Launchpad Dashboard Template" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subbu Labs · ★ 4.8</p>
+            <h3>Launchpad Dashboard</h3>
+            <div class="card-bottom">
+              <strong>$59</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Launchpad Dashboard" data-kind="View asset">View asset</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Warmline Illustrations Subra 24 scenes Illustrations" data-category="Illustrations">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Warmline Illustrations preview" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Illustrations</span>
+            <button class="favorite" type="button" aria-label="Save Warmline Illustrations" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subra · ★ 4.9</p>
+            <h3>Warmline Illustrations</h3>
+            <div class="card-bottom">
+              <strong>$35</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Warmline Illustrations" data-kind="View asset">View asset</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Formcraft UI Kit Poluru Works inputs forms UI Kits" data-category="UI Kits">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1507238691740-187aa725e117?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Formcraft UI Kit preview" loading="lazy" width="1200" height="800">
+            <span class="image-tag">UI Kits</span>
+            <button class="favorite" type="button" aria-label="Save Formcraft UI Kit" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Poluru Works · ★ 4.7</p>
+            <h3>Formcraft UI Kit</h3>
+            <div class="card-bottom">
+              <strong>$39</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Formcraft UI Kit" data-kind="View asset">View asset</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Pixel Bloom Icons Subbu 320 glyphs Icons" data-category="Icons">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Pixel Bloom Icons preview" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Icons</span>
+            <button class="favorite" type="button" aria-label="Save Pixel Bloom Icons" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Subbu · ★ 4.8</p>
+            <h3>Pixel Bloom Icons</h3>
+            <div class="card-bottom">
+              <strong>$19</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Pixel Bloom Icons" data-kind="View asset">View asset</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No assets match your search. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <section id="creators" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CREATORS</p>
+          <h2>Meet the makers.</h2>
+        </div>
+        <p>Independent designers and studios publishing on Poluru Assets.</p>
+      </div>
+      <div class="creators-grid">
+        <article class="creator-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Subra Studio</h3>
+          <div class="creator-meta"><span>48 assets</span><span>★ 4.9</span></div>
+          <p class="small">Product UI systems and dashboard kits for SaaS teams.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subra Studio" data-kind="View creator">View shop</button>
+        </article>
+        <article class="creator-card">
+          <span class="profile" aria-hidden="true">P</span>
+          <h3>Poluru</h3>
+          <div class="creator-meta"><span>62 assets</span><span>★ 5.0</span></div>
+          <p class="small">Iconography and illustration sets with crisp, scalable SVGs.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru" data-kind="View creator">View shop</button>
+        </article>
+        <article class="creator-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Subbu Labs</h3>
+          <div class="creator-meta"><span>31 assets</span><span>★ 4.8</span></div>
+          <p class="small">React templates and landing pages built for fast customization.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subbu Labs" data-kind="View creator">View shop</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FOR CREATORS</p>
+          <h2>Simple, transparent plans.</h2>
+        </div>
+        <p>Publish assets, track sales, and grow your audience on the marketplace.</p>
+      </div>
+      <div class="pricing-row">
+        <article class="pricing-card">
+          <h3>Starter</h3>
+          <p class="price">Free <small>/ to list</small></p>
+          <ul>
+            <li>Up to 5 published assets</li>
+            <li>Standard marketplace visibility</li>
+            <li>Email support</li>
+          </ul>
+          <button class="secondary" type="button" data-action="modal" data-title="Starter plan" data-kind="Sell assets">Get started</button>
+        </article>
+        <article class="pricing-card featured">
+          <h3>Pro</h3>
+          <p class="price">$12 <small>/ month</small></p>
+          <ul>
+            <li>Unlimited published assets</li>
+            <li>Featured placement eligibility</li>
+            <li>Analytics dashboard</li>
+          </ul>
+          <button class="primary" type="button" data-action="modal" data-title="Pro plan" data-kind="Sell assets">Start Pro trial</button>
+        </article>
+        <article class="pricing-card">
+          <h3>Studio</h3>
+          <p class="price">$29 <small>/ month</small></p>
+          <ul>
+            <li>Team seats and shared library</li>
+            <li>Priority review queue</li>
+            <li>Custom storefront URL</li>
+          </ul>
+          <button class="secondary" type="button" data-action="modal" data-title="Studio plan" data-kind="Sell assets">Contact sales</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner market-banner" id="contact">
+      <div>
+        <h2>Have assets to share?</h2>
+        <p>Join Poluru Assets and reach teams looking for polished digital products. Listing is free to start.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Apply to sell on Poluru Assets" data-kind="Sell assets">Become a creator</button>
+    </section>
+  </main>
+
+  <footer class="site-footer market-footer">
+    <div class="container market-footer-grid">
+      <div class="market-footer-brand">
+        <span class="brand">Poluru Assets<span style="color:var(--brand)">.</span></span>
+        <p class="small">Digital asset marketplace template. All products, creators, and prices are fictional demo content.</p>
+      </div>
+      <div class="market-footer-links">
+        <p class="footer-label">Marketplace</p>
+        <a href="#browse">Browse assets</a>
+        <a href="#creators">Creators</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Sell with us</a>
+      </div>
+      <div class="market-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container market-footer-bottom">
+      <span>© 2026 Poluru Assets</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
