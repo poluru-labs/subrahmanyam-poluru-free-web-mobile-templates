@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Stock — Inventory management dashboard</title>
+  <meta name="description" content="Track SKUs, stock levels, warehouses, and replenishment in one workspace.">
+  <meta name="theme-color" content="#161E54">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="dashboard inventory-dash" data-template="inventory-management-dashboard" style="--brand:#161E54;--soft:#e8eaf3;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">▣</span>
+      Poluru Stock
+    </a>
+    <p class="nav-label">INVENTORY</p>
+    <nav aria-label="Dashboard navigation">
+      <a href="#overview" aria-current="page"><span aria-hidden="true">◫</span> Overview</a>
+      <a href="#inventory"><span aria-hidden="true">▤</span> Stock</a>
+      <a href="#warehouses"><span aria-hidden="true">⌂</span> Warehouses</a>
+      <a href="#alerts"><span aria-hidden="true">!</span> Alerts</a>
+    </nav>
+    <div class="side-bottom">
+      <span class="profile" aria-hidden="true">S</span>
+      <div>
+        <strong>Subra Poluru</strong><br>
+        <span class="small">Ops · Poluru Supply</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <span>Inventory hub <span style="color:var(--muted)">/ Overview</span></span>
+      <div>
+        <span class="small">Monday, October 26, 2026</span>
+        <span class="profile" title="Subra Poluru">SP</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="dash-heading">
+        <div>
+          <p class="eyebrow">INVENTORY MANAGEMENT DASHBOARD</p>
+          <h1>Stock you can trust.</h1>
+          <p>Real-time counts, reorder signals, and warehouse visibility—without spreadsheet chaos.</p>
+        </div>
+        <button class="secondary" type="button" data-action="export">Export CSV ↗</button>
+      </div>
+
+      <div class="stats" id="overview">
+        <article class="stat">
+          <span class="small">Total SKUs</span>
+          <div class="metric">1,842</div>
+          <span class="trend">↗ 24 added this month</span>
+        </article>
+        <article class="stat">
+          <span class="small">Units on hand</span>
+          <div class="metric">284,500</div>
+          <span class="trend">↗ 3.2% vs. last month</span>
+        </article>
+        <article class="stat">
+          <span class="small">Low stock items</span>
+          <div class="metric">18</div>
+          <span class="trend warn">Needs reorder</span>
+        </article>
+        <article class="stat">
+          <span class="small">Incoming shipments</span>
+          <div class="metric">6</div>
+          <span class="trend">ETA within 7 days</span>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Inventory movement</h3>
+              <p>Units shipped vs. received</p>
+            </div>
+            <select aria-label="Chart period" data-chart-period>
+              <option>This year</option>
+              <option>Last year</option>
+            </select>
+          </div>
+          <div class="chart" role="img" aria-label="Monthly inventory activity chart">
+            <div class="bar" style="--height:35%"><span>Jan</span></div>
+            <div class="bar" style="--height:48%"><span>Feb</span></div>
+            <div class="bar" style="--height:42%"><span>Mar</span></div>
+            <div class="bar" style="--height:58%"><span>Apr</span></div>
+            <div class="bar" style="--height:51%"><span>May</span></div>
+            <div class="bar" style="--height:66%"><span>Jun</span></div>
+            <div class="bar" style="--height:62%"><span>Jul</span></div>
+            <div class="bar" style="--height:78%"><span>Aug</span></div>
+            <div class="bar" style="--height:69%"><span>Sep</span></div>
+            <div class="bar" style="--height:83%"><span>Oct</span></div>
+            <div class="bar" style="--height:76%"><span>Nov</span></div>
+            <div class="bar" style="--height:90%"><span>Dec</span></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Stock health</h3>
+              <p>By category</p>
+            </div>
+          </div>
+          <div class="stock-card">
+            <div class="stock-row">
+              <span>Electronics</span>
+              <strong>92% in range</strong>
+            </div>
+            <div class="progress" style="--progress:92%"><span></span></div>
+            <div class="stock-row">
+              <span>Apparel</span>
+              <strong>78% in range</strong>
+            </div>
+            <div class="progress" style="--progress:78%"><span></span></div>
+            <div class="stock-row">
+              <span>Home &amp; garden</span>
+              <strong>64% in range</strong>
+            </div>
+            <div class="progress" style="--progress:64%"><span></span></div>
+          </div>
+          <div class="stock-card" style="margin-top:16px">
+            <h4>Top reorder priority</h4>
+            <div class="stock-row"><span>SKU-8842 · USB-C hub</span><strong>12 left</strong></div>
+            <div class="stock-row"><span>SKU-3310 · Work gloves (L)</span><strong>48 left</strong></div>
+            <div class="stock-row"><span>SKU-1099 · Filter packs</span><strong>6 left</strong></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel" id="inventory">
+        <div class="panel-head">
+          <div>
+            <h3>Stock catalog</h3>
+            <p>Search and filter active SKUs</p>
+          </div>
+          <button class="primary" type="button" data-action="modal" data-title="Create purchase order" data-kind="Restock">Create PO</button>
+        </div>
+        <div class="filters">
+          <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="Electronics" aria-pressed="false">Electronics</button>
+          <button class="filter" type="button" data-filter="Apparel" aria-pressed="false">Apparel</button>
+          <button class="filter" type="button" data-filter="Home" aria-pressed="false">Home</button>
+          <input class="search" type="search" placeholder="Search SKUs…" aria-label="Search inventory">
+        </div>
+        <div class="table-wrap collection">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">SKU</th>
+                <th scope="col">Product</th>
+                <th scope="col">On hand</th>
+                <th scope="col">Reserved</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-search="SKU-8842 USB-C hub 7-port Electronics" data-category="Electronics">
+                <td><strong>SKU-8842</strong></td>
+                <td>USB-C hub · 7-port</td>
+                <td>12</td>
+                <td>4</td>
+                <td><span class="level-low">Low</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="SKU-8842" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="SKU-2201 Organic cotton tee Apparel" data-category="Apparel">
+                <td><strong>SKU-2201</strong></td>
+                <td>Organic cotton tee · M</td>
+                <td>840</td>
+                <td>120</td>
+                <td><span class="level-ok">Healthy</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="SKU-2201" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="SKU-3310 Work gloves large Apparel" data-category="Apparel">
+                <td><strong>SKU-3310</strong></td>
+                <td>Work gloves · L</td>
+                <td>48</td>
+                <td>12</td>
+                <td><span class="level-low">Low</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="SKU-3310" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="SKU-1099 HEPA filter 3-pack Home" data-category="Home">
+                <td><strong>SKU-1099</strong></td>
+                <td>HEPA filter · 3-pack</td>
+                <td>6</td>
+                <td>2</td>
+                <td><span class="level-low">Critical</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="SKU-1099" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="SKU-5500 Wireless mouse Electronics" data-category="Electronics">
+                <td><strong>SKU-5500</strong></td>
+                <td>Wireless mouse · graphite</td>
+                <td>1,240</td>
+                <td>86</td>
+                <td><span class="level-ok">Healthy</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="SKU-5500" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="SKU-7712 Ceramic planter set Home" data-category="Home">
+                <td><strong>SKU-7712</strong></td>
+                <td>Ceramic planter set</td>
+                <td>215</td>
+                <td>18</td>
+                <td><span class="level-ok">Healthy</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="SKU-7712" data-kind="View SKU">Details</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty" hidden>No SKUs match your search.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="warehouses">
+        <div class="panel-head">
+          <div>
+            <h3>Warehouses</h3>
+            <p>Capacity and utilization by site</p>
+          </div>
+        </div>
+        <div class="warehouse-grid">
+          <article class="warehouse-card">
+            <h3>Austin · Central</h3>
+            <p class="small">Primary fulfillment · 42,000 sq ft</p>
+            <p class="small"><strong>Utilization:</strong> 81%</p>
+            <div class="progress" style="--progress:81%"><span></span></div>
+            <button class="text-button" type="button" data-action="modal" data-title="Austin · Central" data-kind="View warehouse">View bins</button>
+          </article>
+          <article class="warehouse-card">
+            <h3>Dallas · North</h3>
+            <p class="small">Overflow &amp; bulk · 28,000 sq ft</p>
+            <p class="small"><strong>Utilization:</strong> 67%</p>
+            <div class="progress" style="--progress:67%"><span></span></div>
+            <button class="text-button" type="button" data-action="modal" data-title="Dallas · North" data-kind="View warehouse">View bins</button>
+          </article>
+          <article class="warehouse-card">
+            <h3>Houston · Gulf</h3>
+            <p class="small">Regional hub · 19,500 sq ft</p>
+            <p class="small"><strong>Utilization:</strong> 54%</p>
+            <div class="progress" style="--progress:54%"><span></span></div>
+            <button class="text-button" type="button" data-action="modal" data-title="Houston · Gulf" data-kind="View warehouse">View bins</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="alerts">
+        <div class="panel-head">
+          <div>
+            <h3>Alerts</h3>
+            <p>Items needing attention today</p>
+          </div>
+        </div>
+        <ul class="alert-list">
+          <li>
+            <div>
+              <strong>Below reorder point</strong>
+              <p class="small">SKU-1099 · HEPA filter · 6 units remaining</p>
+            </div>
+            <button class="text-button" type="button" data-action="modal" data-title="Restock SKU-1099" data-kind="Restock">Restock</button>
+          </li>
+          <li>
+            <div>
+              <strong>Shipment delayed</strong>
+              <p class="small">PO-4481 from Poluru Supply · ETA +2 days</p>
+            </div>
+            <button class="text-button" type="button" data-action="modal" data-title="PO-4481" data-kind="View shipment">Track</button>
+          </li>
+          <li>
+            <div>
+              <strong>Cycle count due</strong>
+              <p class="small">Aisle B · Electronics · Scheduled Oct 28</p>
+            </div>
+            <button class="text-button" type="button" data-action="modal" data-title="Cycle count · Aisle B" data-kind="View task">Open task</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer inv-footer">
+      <div class="inv-footer-grid">
+        <div>
+          <span class="brand">Poluru Stock<span style="color:var(--brand)">.</span></span>
+          <p class="small" style="margin-top:12px">Inventory management dashboard template. All SKUs, counts, and sites are fictional demo data.</p>
+        </div>
+        <div class="inv-footer-links">
+          <p class="footer-label">Dashboard</p>
+          <a href="#overview">Overview</a>
+          <a href="#inventory">Stock</a>
+          <a href="#warehouses">Warehouses</a>
+          <a href="#alerts">Alerts</a>
+        </div>
+        <div>
+          <p class="footer-label">Author</p>
+          <p><strong>Subrahmanyam Poluru</strong></p>
+          <p class="small">Designer &amp; developer · Poluru Labs</p>
+          <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+        </div>
+      </div>
+      <div class="inv-footer-bottom">
+        <span>© 2026 Poluru Stock</span>
+        <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </footer>
+  </div>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
