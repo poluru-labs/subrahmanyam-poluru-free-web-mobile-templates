@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Legal — Legal case management</title>
+  <meta name="description" content="Manage matters, clients, deadlines, and documents in one calm workspace.">
+  <meta name="theme-color" content="#41A67E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="dashboard legal-dash" data-template="legal-case-management" style="--brand:#41A67E;--soft:#e8f5ef;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">§</span>
+      Poluru Legal
+    </a>
+    <p class="nav-label">PRACTICE</p>
+    <nav aria-label="Dashboard navigation">
+      <a href="#overview" aria-current="page"><span aria-hidden="true">◫</span> Overview</a>
+      <a href="#matters"><span aria-hidden="true">▣</span> Matters</a>
+      <a href="#clients"><span aria-hidden="true">◎</span> Clients</a>
+      <a href="#calendar"><span aria-hidden="true">▦</span> Calendar</a>
+    </nav>
+    <div class="side-bottom">
+      <span class="profile" aria-hidden="true">S</span>
+      <div>
+        <strong>Subra Poluru</strong><br>
+        <span class="small">Partner · Litigation</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <span>Case hub <span style="color:var(--muted)">/ Overview</span></span>
+      <div>
+        <span class="small">Monday, October 26, 2026</span>
+        <span class="profile" title="Subra Poluru">SP</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="dash-heading">
+        <div>
+          <p class="eyebrow">LEGAL CASE MANAGEMENT</p>
+          <h1>Matters under control.</h1>
+          <p>Track cases, deadlines, and client work—organized for clarity from intake to resolution.</p>
+        </div>
+        <button class="secondary" type="button" data-action="export">Export docket ↗</button>
+      </div>
+
+      <div class="stats" id="overview">
+        <article class="stat">
+          <span class="small">Active matters</span>
+          <div class="metric">34</div>
+          <span class="trend">6 new this quarter</span>
+        </article>
+        <article class="stat">
+          <span class="small">Deadlines this week</span>
+          <div class="metric">7</div>
+          <span class="trend">2 hearings scheduled</span>
+        </article>
+        <article class="stat">
+          <span class="small">Open tasks</span>
+          <div class="metric">42</div>
+          <span class="trend">12 assigned to you</span>
+        </article>
+        <article class="stat">
+          <span class="small">Billable hours (MTD)</span>
+          <div class="metric">186</div>
+          <span class="trend">On pace with target</span>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <section class="panel" id="calendar">
+          <div class="panel-head">
+            <div>
+              <h3>Upcoming deadlines</h3>
+              <p>Next seven days</p>
+            </div>
+            <button class="text-button" type="button" data-action="modal" data-title="Full calendar" data-kind="View calendar">View all</button>
+          </div>
+          <ul class="deadline-list">
+            <li>
+              <time datetime="2026-10-27">Oct 27</time>
+              <div>
+                <strong>Discovery response due</strong>
+                <p class="small" style="margin:0">Poluru v. Harbor LLC · Matter #M-2026-014</p>
+              </div>
+              <button class="text-button" type="button" data-action="modal" data-title="Poluru v. Harbor LLC" data-kind="View matter">Open</button>
+            </li>
+            <li>
+              <time datetime="2026-10-28">Oct 28</time>
+              <div>
+                <strong>Client strategy call</strong>
+                <p class="small" style="margin:0">Subbu Estate Planning · 2:00 PM</p>
+              </div>
+              <button class="text-button" type="button" data-action="modal" data-title="Subbu Estate Planning" data-kind="View matter">Open</button>
+            </li>
+            <li>
+              <time datetime="2026-10-30">Oct 30</time>
+              <div>
+                <strong>Motion hearing</strong>
+                <p class="small" style="margin:0">Subra Contract Dispute · Travis County</p>
+              </div>
+              <button class="text-button" type="button" data-action="modal" data-title="Subra Contract Dispute" data-kind="View matter">Open</button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Workload by stage</h3>
+              <p>Matter pipeline</p>
+            </div>
+          </div>
+          <div class="stock-card legal-dash" style="background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px">
+            <div class="fulfillment-row" style="display:flex;justify-content:space-between;margin-bottom:10px;font-size:13px;color:var(--muted)">
+              <span>Intake &amp; assessment</span>
+              <strong style="color:var(--ink);font-family:Roboto,sans-serif">8</strong>
+            </div>
+            <div class="progress" style="--progress:24%"><span></span></div>
+            <div class="fulfillment-row" style="display:flex;justify-content:space-between;margin:16px 0 10px;font-size:13px;color:var(--muted)">
+              <span>Discovery</span>
+              <strong style="color:var(--ink);font-family:Roboto,sans-serif">14</strong>
+            </div>
+            <div class="progress" style="--progress:41%"><span></span></div>
+            <div class="fulfillment-row" style="display:flex;justify-content:space-between;margin:16px 0 10px;font-size:13px;color:var(--muted)">
+              <span>Pre-trial / hearing</span>
+              <strong style="color:var(--ink);font-family:Roboto,sans-serif">7</strong>
+            </div>
+            <div class="progress" style="--progress:21%"><span></span></div>
+            <div class="fulfillment-row" style="display:flex;justify-content:space-between;margin:16px 0 10px;font-size:13px;color:var(--muted)">
+              <span>Closed (YTD)</span>
+              <strong style="color:var(--ink);font-family:Roboto,sans-serif">22</strong>
+            </div>
+            <div class="progress" style="--progress:65%"><span></span></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel" id="matters">
+        <div class="panel-head">
+          <div>
+            <h3>Matter docket</h3>
+            <p>Search and filter active cases</p>
+          </div>
+          <button class="primary" type="button" data-action="modal" data-title="Open new matter" data-kind="New matter">New matter</button>
+        </div>
+        <div class="filters">
+          <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="Litigation" aria-pressed="false">Litigation</button>
+          <button class="filter" type="button" data-filter="Corporate" aria-pressed="false">Corporate</button>
+          <button class="filter" type="button" data-filter="Estate" aria-pressed="false">Estate</button>
+          <input class="search" type="search" placeholder="Search matters…" aria-label="Search matters">
+        </div>
+        <div class="table-wrap collection">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Matter</th>
+                <th scope="col">Client</th>
+                <th scope="col">Lead</th>
+                <th scope="col">Stage</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-search="Poluru v Harbor LLC litigation discovery M-2026-014 Litigation" data-category="Litigation">
+                <td><strong>Poluru v. Harbor LLC</strong><br><span class="small">M-2026-014</span></td>
+                <td>Poluru Holdings</td>
+                <td>Subra Poluru</td>
+                <td><span class="matter-pill matter-discovery">Discovery</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Poluru v. Harbor LLC" data-kind="View matter">Open</button></td>
+              </tr>
+              <tr data-search="Subra contract dispute hearing M-2026-021 Litigation" data-category="Litigation">
+                <td><strong>Subra Contract Dispute</strong><br><span class="small">M-2026-021</span></td>
+                <td>Subra Digital</td>
+                <td>Poluru</td>
+                <td><span class="matter-pill matter-hearing">Hearing</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Subra Contract Dispute" data-kind="View matter">Open</button></td>
+              </tr>
+              <tr data-search="Subbu estate planning trust Corporate Estate" data-category="Estate">
+                <td><strong>Subbu Estate Planning</strong><br><span class="small">M-2026-008</span></td>
+                <td>Subbu Family Trust</td>
+                <td>Subbu</td>
+                <td><span class="matter-pill matter-active">Active</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Subbu Estate Planning" data-kind="View matter">Open</button></td>
+              </tr>
+              <tr data-search="Poluru Labs incorporation Corporate M-2026-003" data-category="Corporate">
+                <td><strong>Poluru Labs Incorporation</strong><br><span class="small">M-2026-003</span></td>
+                <td>Poluru Labs</td>
+                <td>Subra Poluru</td>
+                <td><span class="matter-pill matter-active">Active</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Poluru Labs Incorporation" data-kind="View matter">Open</button></td>
+              </tr>
+              <tr data-search="Harbor lease renewal closed M-2025-112 Corporate" data-category="Corporate">
+                <td><strong>Harbor Lease Renewal</strong><br><span class="small">M-2025-112</span></td>
+                <td>Harbor Retail</td>
+                <td>Poluru</td>
+                <td><span class="matter-pill matter-closed">Closed</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Harbor Lease Renewal" data-kind="View matter">Open</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty" hidden>No matters match your search.</p>
+        </div>
+        <p class="legal-disclaimer">Demo template only. Not legal advice. Fictional clients and matters for layout purposes.</p>
+      </section>
+
+      <section class="panel" id="overview-board">
+        <div class="panel-head">
+          <div>
+            <h3>Matter board</h3>
+            <p>Drag-free demo columns—use move to advance a card</p>
+          </div>
+        </div>
+        <div class="kanban" id="matters-kanban">
+          <section class="kanban-column" data-stage="Intake">
+            <h3>Intake <span class="badge">2</span></h3>
+            <article class="job-card">
+              <div class="person"><span class="profile">N</span><strong>Nexus IP inquiry</strong></div>
+              <h3>Trademark review</h3>
+              <p class="small">Received Oct 24 · Conflict check pending</p>
+              <span class="badge">Intake</span><br>
+              <button class="text-button" type="button" data-action="move">Advance →</button>
+            </article>
+            <article class="job-card">
+              <div class="person"><span class="profile">A</span><strong>Atlas vendor claim</strong></div>
+              <h3>Commercial assessment</h3>
+              <p class="small">Received Oct 25 · Awaiting retainer</p>
+              <span class="badge">Intake</span><br>
+              <button class="text-button" type="button" data-action="move">Advance →</button>
+            </article>
+          </section>
+          <section class="kanban-column" data-stage="Discovery">
+            <h3>Discovery <span class="badge">1</span></h3>
+            <article class="job-card">
+              <div class="person"><span class="profile">P</span><strong>Poluru Holdings</strong></div>
+              <h3>Poluru v. Harbor LLC</h3>
+              <p class="small">Document production · Due Oct 27</p>
+              <span class="badge">Discovery</span><br>
+              <button class="text-button" type="button" data-action="move">Advance →</button>
+            </article>
+          </section>
+          <section class="kanban-column" data-stage="Resolution">
+            <h3>Resolution <span class="badge">1</span></h3>
+            <article class="job-card">
+              <div class="person"><span class="profile">S</span><strong>Subra Digital</strong></div>
+              <h3>Settlement conference</h3>
+              <p class="small">Mediation scheduled · Nov 2</p>
+              <span class="badge">Resolution</span><br>
+              <button class="text-button" type="button" data-action="modal" data-title="Settlement conference" data-kind="View matter">Details</button>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel" id="clients">
+        <div class="panel-head">
+          <div>
+            <h3>Key clients</h3>
+            <p>Relationships on active matters</p>
+          </div>
+        </div>
+        <div class="client-grid">
+          <article class="client-card">
+            <span class="profile" aria-hidden="true">P</span>
+            <h3>Poluru Holdings</h3>
+            <p class="small">3 active matters · Corporate &amp; litigation</p>
+            <button class="text-button" type="button" data-action="modal" data-title="Poluru Holdings" data-kind="View client">Client profile</button>
+          </article>
+          <article class="client-card">
+            <span class="profile" aria-hidden="true">S</span>
+            <h3>Subra Digital</h3>
+            <p class="small">2 active matters · Commercial disputes</p>
+            <button class="text-button" type="button" data-action="modal" data-title="Subra Digital" data-kind="View client">Client profile</button>
+          </article>
+          <article class="client-card">
+            <span class="profile" aria-hidden="true">S</span>
+            <h3>Subbu Family Trust</h3>
+            <p class="small">1 active matter · Estate planning</p>
+            <button class="text-button" type="button" data-action="modal" data-title="Subbu Family Trust" data-kind="View client">Client profile</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer legal-footer">
+      <div class="legal-footer-grid">
+        <div>
+          <span class="brand">Poluru Legal<span style="color:var(--brand)">.</span></span>
+          <p class="small" style="margin-top:12px">Legal case management template. Clients, matters, and deadlines are fictional demo content.</p>
+        </div>
+        <div class="legal-footer-links">
+          <p class="footer-label">Workspace</p>
+          <a href="#overview">Overview</a>
+          <a href="#matters">Matters</a>
+          <a href="#clients">Clients</a>
+          <a href="#calendar">Calendar</a>
+        </div>
+        <div>
+          <p class="footer-label">Author</p>
+          <p><strong>Subrahmanyam Poluru</strong></p>
+          <p class="small">Designer &amp; developer · Poluru Labs</p>
+          <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+        </div>
+      </div>
+      <div class="legal-footer-bottom">
+        <span>© 2026 Poluru Legal</span>
+        <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </footer>
+  </div>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
