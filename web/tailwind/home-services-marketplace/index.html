@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Home — Home services marketplace</title>
+  <meta name="description" content="Book trusted local pros for cleaning, repairs, lawn care, and more.">
+  <meta name="theme-color" content="#00B7CD">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="home-services" data-template="home-services-marketplace" style="--brand:#00B7CD;--soft:#e8fafa;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hs-header">
+    <div class="container hs-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">⌂</span>
+        Poluru Home
+      </a>
+      <nav class="hs-nav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#pros">Pros</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="hs-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Become a Poluru Home pro" data-kind="Join as pro">List your business</button>
+        <button class="primary" type="button" data-action="modal" data-title="Book a service" data-kind="Book service">Book a pro</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#services">Services</a>
+      <a href="#pros">Pros</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <button class="primary" type="button" data-action="modal" data-title="Book a service" data-kind="Book service">Book a pro</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hs-hero">
+      <div class="container hs-hero-grid">
+        <div class="hs-hero-copy">
+          <p class="eyebrow">HOME SERVICES MARKETPLACE</p>
+          <h1>Trusted pros.<br>Done right at home.</h1>
+          <p>Compare verified local professionals, read real reviews, and book cleaning, repairs, and outdoor work on your schedule.</p>
+          <form class="hs-search" role="search" aria-label="Search services">
+            <label class="sr-only" for="service-search">Search services</label>
+            <input class="search hs-search-input" id="service-search" type="search" placeholder="What do you need help with?" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <div class="hs-stats">
+            <div><strong>4.9</strong> Avg rating</div>
+            <div><strong>2,400+</strong> Local pros</div>
+            <div><strong>Same-week</strong> Booking</div>
+          </div>
+        </div>
+        <aside class="hs-hero-card">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Professional cleaning a bright living room" loading="eager" width="1200" height="800">
+          <div>
+            <p class="eyebrow" style="margin-bottom:8px">POPULAR THIS WEEK</p>
+            <strong style="font-family:Roboto,sans-serif;font-size:18px">Deep home cleaning</strong>
+            <p class="small" style="margin:0">From $129 · 3 hrs · Insured pros</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid hs-features">
+      <div>
+        <b>01 /</b>
+        <h3>Vetted professionals</h3>
+        <p>Background checks, verified licenses, and ongoing quality reviews.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Upfront quotes</h3>
+        <p>See estimated pricing before you confirm—no surprise add-ons.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Happiness guarantee</h3>
+        <p>If something misses the mark, we’ll make it right or rebook at no extra cost.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">SERVICES</p>
+          <h2 id="categories">Book by category.</h2>
+        </div>
+        <p>Filter services or search by task, neighborhood, or pro name.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Cleaning" aria-pressed="false">Cleaning</button>
+        <button class="filter" type="button" data-filter="Plumbing" aria-pressed="false">Plumbing</button>
+        <button class="filter" type="button" data-filter="Electrical" aria-pressed="false">Electrical</button>
+        <button class="filter" type="button" data-filter="Outdoor" aria-pressed="false">Outdoor</button>
+        <input class="search" type="search" placeholder="Filter services…" aria-label="Filter services">
+      </div>
+      <div class="grid collection">
+        <article class="product-card" data-search="Sparkle Clean Co deep cleaning apartment Cleaning" data-category="Cleaning">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Home deep cleaning" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Cleaning</span>
+            <button class="favorite" type="button" aria-label="Save Sparkle Clean Co" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small"><span class="rating">★ 4.9</span> · Sparkle Clean Co</p>
+            <h3>Deep home cleaning</h3>
+            <div class="card-bottom">
+              <strong>From $129</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Deep home cleaning" data-kind="View service">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Poluru Plumbing leak repair emergency Plumbing" data-category="Plumbing">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Plumber at work" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Plumbing</span>
+            <button class="favorite" type="button" aria-label="Save Poluru Plumbing" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small"><span class="rating">★ 5.0</span> · Poluru Plumbing</p>
+            <h3>Leak &amp; pipe repair</h3>
+            <div class="card-bottom">
+              <strong>From $95</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Leak &amp; pipe repair" data-kind="View service">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Subra Electric outlet panel install Electrical" data-category="Electrical">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Electrician installing fixture" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Electrical</span>
+            <button class="favorite" type="button" aria-label="Save Subra Electric" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small"><span class="rating">★ 4.8</span> · Subra Electric</p>
+            <h3>Outlet &amp; fixture install</h3>
+            <div class="card-bottom">
+              <strong>From $110</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Outlet &amp; fixture install" data-kind="View service">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="GreenEdge Lawn mowing yard care Outdoor" data-category="Outdoor">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Well maintained garden" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Outdoor</span>
+            <button class="favorite" type="button" aria-label="Save GreenEdge Lawn" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small"><span class="rating">★ 4.7</span> · GreenEdge Lawn</p>
+            <h3>Lawn mowing &amp; edging</h3>
+            <div class="card-bottom">
+              <strong>From $55</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Lawn mowing &amp; edging" data-kind="View service">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Subbu Painting interior rooms Painting Cleaning" data-category="Cleaning">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Interior painting" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Painting</span>
+            <button class="favorite" type="button" aria-label="Save Subbu Painting" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small"><span class="rating">★ 4.9</span> · Subbu Painting</p>
+            <h3>Room refresh paint</h3>
+            <div class="card-bottom">
+              <strong>From $280</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Room refresh paint" data-kind="View service">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="HVAC tune-up Subra Comfort cooling Outdoor" data-category="Outdoor">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="HVAC maintenance" loading="lazy" width="1200" height="800">
+            <span class="image-tag">HVAC</span>
+            <button class="favorite" type="button" aria-label="Save Subra Comfort" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small"><span class="rating">★ 4.8</span> · Subra Comfort</p>
+            <h3>Seasonal HVAC tune-up</h3>
+            <div class="card-bottom">
+              <strong>From $149</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Seasonal HVAC tune-up" data-kind="View service">Book</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No services match your search. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <section id="pros" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">TOP PROS</p>
+          <h2>Highly rated near you.</h2>
+        </div>
+        <p>Pros with consistent five-star work and fast response times.</p>
+      </div>
+      <div class="pro-grid">
+        <article class="pro-card">
+          <span class="profile" aria-hidden="true">P</span>
+          <h3>Poluru Plumbing</h3>
+          <p class="rating">★ 5.0 · 312 jobs</p>
+          <p class="small">Licensed master plumber · Same-day emergency slots.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru Plumbing" data-kind="View pro">View profile</button>
+        </article>
+        <article class="pro-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Sparkle Clean Co</h3>
+          <p class="rating">★ 4.9 · 540 jobs</p>
+          <p class="small">Eco-friendly products · Teams of 2–3 cleaners.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Sparkle Clean Co" data-kind="View pro">View profile</button>
+        </article>
+        <article class="pro-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Subra Electric</h3>
+          <p class="rating">★ 4.8 · 198 jobs</p>
+          <p class="small">Residential wiring · Panel upgrades · EV charger install.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subra Electric" data-kind="View pro">View profile</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2>Book in three steps.</h2>
+        </div>
+        <p>Simple scheduling designed for busy households.</p>
+      </div>
+      <div class="steps-row">
+        <article class="step-card">
+          <div class="step-num">1</div>
+          <h3>Tell us what you need</h3>
+          <p class="small">Search a service, add photos optional, and pick a time window.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-num">2</div>
+          <h3>Match with a pro</h3>
+          <p class="small">Compare quotes, reviews, and availability from verified locals.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-num">3</div>
+          <h3>Relax—we handle the rest</h3>
+          <p class="small">Track arrival, pay securely in the demo flow, and rate your experience.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FOR HOMEOWNERS</p>
+          <h2>Transparent marketplace fees.</h2>
+        </div>
+        <p>No subscription required to book—pros set service rates; platform fee shown at checkout.</p>
+      </div>
+      <div class="pro-grid">
+        <article class="pro-card">
+          <h3>Standard booking</h3>
+          <p class="small"><strong style="font-size:28px;font-family:Roboto,sans-serif;color:var(--ink)">Free</strong> to browse</p>
+          <p class="small">Pay per job · 10% service fee at checkout (demo).</p>
+        </article>
+        <article class="pro-card" style="border-color:var(--brand);background:var(--soft)">
+          <h3>Poluru Home+</h3>
+          <p class="small"><strong style="font-size:28px;font-family:Roboto,sans-serif;color:var(--ink)">$9</strong> / month</p>
+          <p class="small">Reduced fees, priority scheduling, and seasonal reminders.</p>
+        </article>
+        <article class="pro-card">
+          <h3>For pros</h3>
+          <p class="small"><strong style="font-size:28px;font-family:Roboto,sans-serif;color:var(--ink)">15%</strong> lead fee</p>
+          <p class="small">Only when you win a booked job—no listing cost.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner hs-banner" id="contact">
+      <div>
+        <h2>Grow your home services business.</h2>
+        <p>Join Poluru Home, get discovered by local customers, and manage bookings from one dashboard—demo signup only.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Apply to join Poluru Home" data-kind="Join as pro">Become a pro</button>
+    </section>
+  </main>
+
+  <footer class="site-footer hs-footer">
+    <div class="container hs-footer-grid">
+      <div class="hs-footer-brand">
+        <span class="brand">Poluru Home<span style="color:var(--brand)">.</span></span>
+        <p class="small">Home services marketplace template. Pros, prices, and reviews are fictional demo content.</p>
+      </div>
+      <div class="hs-footer-links">
+        <p class="footer-label">Marketplace</p>
+        <a href="#services">Services</a>
+        <a href="#pros">Pros</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#contact">For pros</a>
+      </div>
+      <div class="hs-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container hs-footer-bottom">
+      <span>© 2026 Poluru Home</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
