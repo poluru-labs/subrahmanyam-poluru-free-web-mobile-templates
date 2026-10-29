@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Serve — Volunteer coordination platform</title>
+  <meta name="description" content="Find shifts, coordinate teams, and track hours in one calm volunteer workspace for nonprofits and community orgs.">
+  <meta name="theme-color" content="#EE5007">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="volunteer-coord" data-template="volunteer-coordination-platform" style="--brand:#EE5007;--soft:#fdeee6;--on:#ffffff;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="vol-header">
+    <div class="container vol-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◉</span>
+        Poluru Serve
+      </a>
+      <nav class="vol-nav" aria-label="Main navigation">
+        <a href="#opportunities">Opportunities</a>
+        <a href="#shifts">Shifts</a>
+        <a href="#teams">Teams</a>
+        <a href="#hours">Hours</a>
+      </nav>
+      <div class="vol-header-actions">
+        <button class="secondary" type="button" data-action="export">Export roster</button>
+        <button class="primary" type="button" data-action="modal" data-title="Your shifts" data-kind="View signups">Shifts · 0</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#shifts">Shifts</a>
+      <a href="#teams">Teams</a>
+      <a href="#hours">Hours</a>
+      <button class="primary" type="button" data-action="modal" data-title="Your shifts" data-kind="View signups">Shifts · 0</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="vol-hero">
+      <div class="container vol-hero-grid">
+        <div class="vol-hero-copy">
+          <p class="eyebrow">VOLUNTEER COORDINATION PLATFORM</p>
+          <h1>People power.<br>Organized.</h1>
+          <p>Post opportunities, fill shifts, message teams, and log hours—without spreadsheets chasing volunteers.</p>
+          <form class="vol-search" role="search" aria-label="Search opportunities">
+            <label class="sr-only" for="vol-search">Search opportunities</label>
+            <input class="search vol-search-input" id="vol-search" type="search" placeholder="Role, city, or organization…" autocomplete="off">
+            <button class="primary" type="submit">Find roles</button>
+          </form>
+          <div class="vol-kpi">
+            <div>
+              <strong>1,248</strong>
+              <span>Active volunteers</span>
+            </div>
+            <div>
+              <strong>6,420</strong>
+              <span>Hours this month</span>
+            </div>
+            <div>
+              <strong>38</strong>
+              <span>Partner orgs</span>
+            </div>
+          </div>
+        </div>
+        <aside class="vol-featured" aria-label="Featured shift">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Volunteers working together outdoors" loading="eager" width="1200" height="800">
+          <div class="vol-featured-body">
+            <span class="vol-pill vol-community">Community</span>
+            <strong>Saturday food pantry · Morning crew</strong>
+            <p class="small">Sat, Nov 8 · 8:00 AM – 12:00 PM · 6 of 10 spots filled</p>
+            <div class="shift-meter" aria-hidden="true"><span style="width:60%"></span></div>
+            <button class="primary" type="button" data-action="modal" data-title="Saturday food pantry · Morning crew" data-kind="Join shift">Join shift</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid vol-features">
+      <div>
+        <b>01 /</b>
+        <h3>Shift scheduling</h3>
+        <p>Capacity, waitlists, and reminders—demo cards show open spots at a glance.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Team messaging</h3>
+        <p>Coordinators reach the right group without noisy group chats.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Hour tracking</h3>
+        <p>Volunteers check in; admins export totals for grants and reports.</p>
+      </div>
+    </section>
+
+    <section id="opportunities" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">OPPORTUNITIES</p>
+          <h2>Roles that need you.</h2>
+        </div>
+        <p>Demo listings—filter by cause or search by keyword.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Community" aria-pressed="false">Community</button>
+        <button class="filter" type="button" data-filter="Environment" aria-pressed="false">Environment</button>
+        <button class="filter" type="button" data-filter="Education" aria-pressed="false">Education</button>
+        <button class="filter" type="button" data-filter="Events" aria-pressed="false">Events</button>
+        <input class="search" type="search" placeholder="Filter opportunities…" aria-label="Filter opportunities">
+      </div>
+      <div class="grid collection">
+        <article class="vol-card" data-search="Food pantry Community Austin packing meals" data-category="Community">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649369?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Volunteers sorting food donations" loading="lazy" width="1200" height="800">
+            <span class="vol-pill vol-community">Community</span>
+            <button class="favorite" aria-label="Save Food pantry shift" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Food pantry · Packing &amp; delivery</h3>
+            <p class="small">Neighbor Aid Co-op · Austin · Ongoing</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Food pantry · Packing &amp; delivery" data-kind="View opportunity">Details</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Food pantry · Packing &amp; delivery" data-kind="Join shift">Sign up</button>
+            </div>
+          </div>
+        </article>
+        <article class="vol-card" data-search="Trail cleanup Environment park stewardship" data-category="Environment">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Forest trail in morning light" loading="lazy" width="1200" height="800">
+            <span class="vol-pill vol-environment">Environment</span>
+            <button class="favorite" aria-label="Save Trail cleanup shift" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Trail cleanup · Greenway stewards</h3>
+            <p class="small">City Parks Alliance · Monthly · 4 hr shifts</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Trail cleanup · Greenway stewards" data-kind="View opportunity">Details</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Trail cleanup · Greenway stewards" data-kind="Join shift">Sign up</button>
+            </div>
+          </div>
+        </article>
+        <article class="vol-card" data-search="Tutor reading Education after school" data-category="Education">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da280a02?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Student reading with a mentor" loading="lazy" width="1200" height="800">
+            <span class="vol-pill vol-education">Education</span>
+            <button class="favorite" aria-label="Save Reading tutor role" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Reading tutor · After-school</h3>
+            <p class="small">Bright Futures · Tue &amp; Thu · 1 hr/week</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Reading tutor · After-school" data-kind="View opportunity">Details</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Reading tutor · After-school" data-kind="Join shift">Sign up</button>
+            </div>
+          </div>
+        </article>
+        <article class="vol-card" data-search="Festival welcome desk Events registration" data-category="Events">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Outdoor community festival" loading="lazy" width="1200" height="800">
+            <span class="vol-pill vol-events">Events</span>
+            <button class="favorite" aria-label="Save Festival welcome desk" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Festival welcome desk</h3>
+            <p class="small">Riverfront Arts · Oct 31 · 3 hr shift</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Festival welcome desk" data-kind="View opportunity">Details</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Festival welcome desk" data-kind="Join shift">Sign up</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No opportunities match your search.</p>
+      </div>
+      <p class="vol-disclaimer">Demo platform only. Organizations, shifts, and metrics are fictional. No background checks or live scheduling.</p>
+    </section>
+
+    <section id="shifts" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">UPCOMING SHIFTS</p>
+          <h2>This week on the calendar.</h2>
+        </div>
+        <p>Coordinator view—export roster for your records.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Shift</th>
+              <th scope="col">Team lead</th>
+              <th scope="col">Filled</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tue, Oct 28</td>
+              <td>Meal prep · Kitchen A</td>
+              <td>Poluru</td>
+              <td><span class="vol-fill"><span style="width:80%"></span></span> 8 / 10</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Meal prep · Kitchen A" data-kind="View shift">Manage</button></td>
+            </tr>
+            <tr>
+              <td>Wed, Oct 29</td>
+              <td>Phone bank · Outreach</td>
+              <td>Subra</td>
+              <td><span class="vol-fill"><span style="width:50%"></span></span> 5 / 10</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Phone bank · Outreach" data-kind="View shift">Manage</button></td>
+            </tr>
+            <tr>
+              <td>Sat, Nov 1</td>
+              <td>Park cleanup · Zone 3</td>
+              <td>Subbu</td>
+              <td><span class="vol-fill"><span style="width:100%"></span></span> 12 / 12</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Park cleanup · Zone 3" data-kind="View shift">Manage</button></td>
+            </tr>
+            <tr>
+              <td>Sun, Nov 2</td>
+              <td>Welcome table · Fundraiser</td>
+              <td>Poluru</td>
+              <td><span class="vol-fill"><span style="width:67%"></span></span> 4 / 6</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Welcome table · Fundraiser" data-kind="View shift">Manage</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="teams" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">TEAMS</p>
+          <h2>Who’s coordinating.</h2>
+        </div>
+        <p>Demo roster—search applies to names and roles below.</p>
+      </div>
+      <div class="team-grid collection">
+        <article class="team-card" data-search="Poluru coordinator logistics">
+          <span class="team-avatar" aria-hidden="true">P</span>
+          <div>
+            <strong>Poluru</strong>
+            <p class="small">Lead coordinator · Logistics</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Message Poluru" data-kind="Contact coordinator">Message</button>
+        </article>
+        <article class="team-card" data-search="Subra outreach training">
+          <span class="team-avatar" aria-hidden="true">S</span>
+          <div>
+            <strong>Subra</strong>
+            <p class="small">Outreach captain · Training</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Message Subra" data-kind="Contact coordinator">Message</button>
+        </article>
+        <article class="team-card" data-search="Subbu events safety">
+          <span class="team-avatar" aria-hidden="true">S</span>
+          <div>
+            <strong>Subbu</strong>
+            <p class="small">Events lead · Safety briefings</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Message Subbu" data-kind="Contact coordinator">Message</button>
+        </article>
+        <p class="empty" hidden>No team members match your search.</p>
+      </div>
+    </section>
+
+    <section id="hours" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">ONBOARDING CHECKLIST</p>
+          <h2>Ready to serve.</h2>
+        </div>
+        <p>Complete these demo steps—progress saves in this browser (<span id="onboard-progress">0 / 4</span>).</p>
+      </div>
+      <div class="pack-list">
+        <div class="habit-grid habit-grid-head">
+          <strong>Step</strong>
+          <span>Done</span>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Profile &amp; emergency contact</strong><small>Account</small></div>
+          <button type="button" data-action="habit" data-key="profile" aria-pressed="false">·</button>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Waiver &amp; code of conduct</strong><small>Compliance</small></div>
+          <button type="button" data-action="habit" data-key="waiver" aria-pressed="false">·</button>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Orientation video</strong><small>Training</small></div>
+          <button type="button" data-action="habit" data-key="orientation" aria-pressed="false">·</button>
+        </div>
+        <div class="habit-grid">
+          <div><strong>First shift scheduled</strong><small>Schedule</small></div>
+          <button type="button" data-action="habit" data-key="first-shift" aria-pressed="false">·</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner vol-banner">
+      <div>
+        <h2>Recruit volunteers for your org.</h2>
+        <p>Post shifts, approve signups, and download hour reports—demo request only.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Partner with Poluru Serve" data-kind="Org signup">Become a partner</button>
+    </section>
+  </main>
+
+  <footer class="site-footer vol-footer">
+    <div class="container vol-footer-grid">
+      <div class="vol-footer-brand">
+        <span class="brand">Poluru Serve<span style="color:var(--brand)">.</span></span>
+        <p class="small">Volunteer coordination template. Shifts, teams, and metrics are fictional demo content.</p>
+      </div>
+      <div class="vol-footer-links">
+        <p class="footer-label">Platform</p>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#shifts">Shifts</a>
+        <a href="#teams">Teams</a>
+        <a href="#hours">Onboarding</a>
+      </div>
+      <div class="vol-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container vol-footer-bottom">
+      <span>© 2026 Poluru Serve</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
