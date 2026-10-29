@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Forms — Survey form builder</title>
+  <meta name="description" content="Design surveys, collect responses, and review results in one clean form builder.">
+  <meta name="theme-color" content="#EB455F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="survey-builder" data-template="survey-form-builder" style="--brand:#EB455F;--soft:#fceef1;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="forms-header">
+    <div class="container forms-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">▢</span>
+        Poluru Forms
+      </a>
+      <nav class="forms-nav" aria-label="Main navigation">
+        <a href="#surveys">Surveys</a>
+        <a href="#builder">Builder</a>
+        <a href="#responses">Responses</a>
+        <a href="#templates">Templates</a>
+      </nav>
+      <div class="forms-header-actions">
+        <button class="secondary" type="button" data-action="export">Export CSV</button>
+        <button class="primary" type="button" data-action="modal" data-title="Untitled survey" data-kind="Create survey">New survey</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#surveys">Surveys</a>
+      <a href="#builder">Builder</a>
+      <a href="#responses">Responses</a>
+      <a href="#templates">Templates</a>
+      <button class="primary" type="button" data-action="modal" data-title="Untitled survey" data-kind="Create survey">New survey</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="forms-hero">
+      <div class="container forms-hero-grid">
+        <div class="forms-hero-copy">
+          <p class="eyebrow">SURVEY FORM BUILDER</p>
+          <h1>Ask better.<br>Learn faster.</h1>
+          <p>Drag-friendly question blocks, logic paths, and share links—built for teams who need clear data without spreadsheet chaos.</p>
+          <form class="forms-search" role="search" aria-label="Search surveys">
+            <label class="sr-only" for="survey-search">Search surveys</label>
+            <input class="search forms-search-input" id="survey-search" type="search" placeholder="Survey name or tag…" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <div class="forms-kpi">
+            <div>
+              <strong>12</strong>
+              <span>Active surveys</span>
+            </div>
+            <div>
+              <strong>1,842</strong>
+              <span>Responses (30d)</span>
+            </div>
+            <div>
+              <strong>68%</strong>
+              <span>Avg completion</span>
+            </div>
+          </div>
+        </div>
+        <aside class="forms-preview" aria-label="Form preview">
+          <p class="footer-label">Live preview</p>
+          <h3>Product feedback · Q3</h3>
+          <p class="small">3 questions · Est. 2 min</p>
+          <div class="preview-block">
+            <label>How satisfied are you overall?</label>
+            <div class="preview-scale">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            </div>
+          </div>
+          <div class="preview-block">
+            <label>What should we improve?</label>
+            <input type="text" disabled placeholder="Short answer…" aria-hidden="true">
+          </div>
+          <button class="primary" type="button" data-action="modal" data-title="Product feedback · Q3" data-kind="Preview survey">Preview full form</button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid forms-features">
+      <div>
+        <b>01 /</b>
+        <h3>Question library</h3>
+        <p>Multiple choice, scales, matrices, and file upload—reuse blocks across surveys.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Smart logic</h3>
+        <p>Branch on answers, hide sections, and keep forms short for higher completion.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Results you can share</h3>
+        <p>Summary tables and exports—demo only in this template.</p>
+      </div>
+    </section>
+
+    <section id="surveys" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MY SURVEYS</p>
+          <h2>Your forms.</h2>
+        </div>
+        <p>Demo surveys—filter by type or search by title.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Feedback" aria-pressed="false">Feedback</button>
+        <button class="filter" type="button" data-filter="NPS" aria-pressed="false">NPS</button>
+        <button class="filter" type="button" data-filter="Research" aria-pressed="false">Research</button>
+        <button class="filter" type="button" data-filter="HR" aria-pressed="false">HR</button>
+        <input class="search" type="search" placeholder="Filter surveys…" aria-label="Filter surveys">
+      </div>
+      <div class="grid collection">
+        <article class="survey-card" data-search="Product feedback Q3 Feedback Poluru" data-category="Feedback">
+          <div class="survey-card-head">
+            <span class="type-pill type-feedback">Feedback</span>
+            <button class="favorite" aria-label="Pin Product feedback Q3" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <h3>Product feedback · Q3</h3>
+          <p class="small">142 responses · 71% completion · Updated Oct 24</p>
+          <div class="card-bottom">
+            <button class="text-button" type="button" data-action="modal" data-title="Product feedback · Q3" data-kind="View survey">Edit</button>
+            <button class="secondary card-share" type="button" data-action="modal" data-title="Product feedback · Q3" data-kind="Share survey">Share</button>
+          </div>
+        </article>
+        <article class="survey-card" data-search="Customer NPS October NPS Subra" data-category="NPS">
+          <div class="survey-card-head">
+            <span class="type-pill type-nps">NPS</span>
+            <button class="favorite" aria-label="Pin Customer NPS" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <h3>Customer NPS · October</h3>
+          <p class="small">89 responses · NPS +42 · Live</p>
+          <div class="card-bottom">
+            <button class="text-button" type="button" data-action="modal" data-title="Customer NPS · October" data-kind="View survey">Edit</button>
+            <button class="secondary card-share" type="button" data-action="modal" data-title="Customer NPS · October" data-kind="Share survey">Share</button>
+          </div>
+        </article>
+        <article class="survey-card" data-search="UX research signup Research Subbu" data-category="Research">
+          <div class="survey-card-head">
+            <span class="type-pill type-research">Research</span>
+            <button class="favorite" aria-label="Pin UX research signup" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <h3>UX research signup</h3>
+          <p class="small">34 responses · Screening logic on</p>
+          <div class="card-bottom">
+            <button class="text-button" type="button" data-action="modal" data-title="UX research signup" data-kind="View survey">Edit</button>
+            <button class="secondary card-share" type="button" data-action="modal" data-title="UX research signup" data-kind="Share survey">Share</button>
+          </div>
+        </article>
+        <article class="survey-card" data-search="Employee pulse HR Poluru" data-category="HR">
+          <div class="survey-card-head">
+            <span class="type-pill type-hr">HR</span>
+            <button class="favorite" aria-label="Pin Employee pulse" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <h3>Employee pulse · Fall</h3>
+          <p class="small">56 responses · Anonymous · Closes Nov 1</p>
+          <div class="card-bottom">
+            <button class="text-button" type="button" data-action="modal" data-title="Employee pulse · Fall" data-kind="View survey">Edit</button>
+            <button class="secondary card-share" type="button" data-action="modal" data-title="Employee pulse · Fall" data-kind="Share survey">Share</button>
+          </div>
+        </article>
+        <article class="survey-card" data-search="Event satisfaction Feedback Subra" data-category="Feedback">
+          <div class="survey-card-head">
+            <span class="type-pill type-feedback">Feedback</span>
+            <button class="favorite" aria-label="Pin Event satisfaction" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <h3>Event satisfaction</h3>
+          <p class="small">210 responses · Post-event auto-send</p>
+          <div class="card-bottom">
+            <button class="text-button" type="button" data-action="modal" data-title="Event satisfaction" data-kind="View survey">Edit</button>
+            <button class="secondary card-share" type="button" data-action="modal" data-title="Event satisfaction" data-kind="Share survey">Share</button>
+          </div>
+        </article>
+        <article class="survey-card" data-search="Beta feature poll Research Poluru" data-category="Research">
+          <div class="survey-card-head">
+            <span class="type-pill type-research">Research</span>
+            <button class="favorite" aria-label="Pin Beta feature poll" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <h3>Beta feature poll</h3>
+          <p class="small">18 responses · Draft questions 2–5</p>
+          <div class="card-bottom">
+            <button class="text-button" type="button" data-action="modal" data-title="Beta feature poll" data-kind="View survey">Edit</button>
+            <button class="secondary card-share" type="button" data-action="modal" data-title="Beta feature poll" data-kind="Share survey">Share</button>
+          </div>
+        </article>
+        <p class="empty" hidden>No surveys match your search.</p>
+      </div>
+      <p class="forms-disclaimer">Demo builder only. Surveys, responses, and analytics are fictional. No live data collection is connected.</p>
+    </section>
+
+    <section class="section" id="builder">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">BUILDER</p>
+          <h2>Question stack.</h2>
+        </div>
+        <p>Add blocks—demo actions save locally only.</p>
+      </div>
+      <div class="builder-layout">
+        <div class="builder-palette">
+          <p class="footer-label">Add question</p>
+          <button class="secondary palette-btn" type="button" data-action="modal" data-title="Add multiple choice" data-kind="Add question">Multiple choice</button>
+          <button class="secondary palette-btn" type="button" data-action="modal" data-title="Add rating scale" data-kind="Add question">Rating scale</button>
+          <button class="secondary palette-btn" type="button" data-action="modal" data-title="Add short text" data-kind="Add question">Short text</button>
+          <button class="secondary palette-btn" type="button" data-action="modal" data-title="Add section break" data-kind="Add question">Section break</button>
+        </div>
+        <div class="builder-canvas">
+          <article class="question-block">
+            <span class="q-handle" aria-hidden="true">⋮⋮</span>
+            <h4>Q1 · Overall satisfaction</h4>
+            <p class="small">Linear scale · Required</p>
+          </article>
+          <article class="question-block">
+            <span class="q-handle" aria-hidden="true">⋮⋮</span>
+            <h4>Q2 · What should we improve?</h4>
+            <p class="small">Paragraph · Optional</p>
+          </article>
+          <article class="question-block">
+            <span class="q-handle" aria-hidden="true">⋮⋮</span>
+            <h4>Q3 · Would you recommend us?</h4>
+            <p class="small">NPS 0–10 · Required</p>
+          </article>
+          <p class="small" id="question-count">3 questions in canvas (demo)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="responses" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">RESPONSES</p>
+          <h2>Latest submissions.</h2>
+        </div>
+        <p>Sample rows for the responses table layout.</p>
+      </div>
+      <div class="table-wrap collection">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Survey</th>
+              <th scope="col">Respondent</th>
+              <th scope="col">Score</th>
+              <th scope="col">Submitted</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-search="Product feedback Q3 Poluru 5 Oct 26">
+              <td><strong>Product feedback · Q3</strong></td>
+              <td>Poluru P.</td>
+              <td>5 / 5</td>
+              <td>Oct 26, 2026</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Response · Poluru P." data-kind="View response">View</button></td>
+            </tr>
+            <tr data-search="Customer NPS Subra 9 Oct 25">
+              <td><strong>Customer NPS · October</strong></td>
+              <td>Subra S.</td>
+              <td>NPS 9</td>
+              <td>Oct 25, 2026</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Response · Subra S." data-kind="View response">View</button></td>
+            </tr>
+            <tr data-search="Employee pulse Anonymous HR Oct 24">
+              <td><strong>Employee pulse · Fall</strong></td>
+              <td>Anonymous</td>
+              <td>4 / 5</td>
+              <td>Oct 24, 2026</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Response · Anonymous" data-kind="View response">View</button></td>
+            </tr>
+            <tr data-search="Event satisfaction Subbu 4 Oct 23">
+              <td><strong>Event satisfaction</strong></td>
+              <td>Subbu K.</td>
+              <td>4 / 5</td>
+              <td>Oct 23, 2026</td>
+              <td><button class="text-button" type="button" data-action="modal" data-title="Response · Subbu K." data-kind="View response">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="empty" hidden>No responses match your search.</p>
+      </div>
+    </section>
+
+    <section id="templates" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">TEMPLATES</p>
+          <h2>Start from a blueprint.</h2>
+        </div>
+        <p>Starter layouts—search applies; type filters do not hide templates.</p>
+      </div>
+      <div class="grid collection">
+        <article class="guide-card" data-search="Net Promoter Score template NPS">
+          <span class="doc-icon" aria-hidden="true">📊</span>
+          <p class="small">NPS · 2 questions</p>
+          <h3>Net Promoter Score</h3>
+          <p class="small">Standard 0–10 score with follow-up verbatim.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Net Promoter Score" data-kind="Use template">Use template</button>
+        </article>
+        <article class="guide-card" data-search="Customer satisfaction CSAT Feedback">
+          <span class="doc-icon" aria-hidden="true">★</span>
+          <p class="small">Feedback · 5 questions</p>
+          <h3>CSAT after support</h3>
+          <p class="small">Post-ticket satisfaction with optional comment.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="CSAT after support" data-kind="Use template">Use template</button>
+        </article>
+        <article class="guide-card" data-search="Job application HR template">
+          <span class="doc-icon" aria-hidden="true">📋</span>
+          <p class="small">HR · 8 questions</p>
+          <h3>Job application</h3>
+          <p class="small">Contact info, experience, and file upload block.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Job application" data-kind="Use template">Use template</button>
+        </article>
+        <p class="empty" hidden>No templates match your search.</p>
+      </div>
+    </section>
+
+    <section class="banner forms-banner">
+      <div>
+        <h2>Ready to publish?</h2>
+        <p>Generate a share link or embed code—demo only; nothing is hosted live.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Product feedback · Q3" data-kind="Share survey">Publish survey</button>
+    </section>
+  </main>
+
+  <footer class="site-footer forms-footer">
+    <div class="container forms-footer-grid">
+      <div class="forms-footer-brand">
+        <span class="brand">Poluru Forms<span style="color:var(--brand)">.</span></span>
+        <p class="small">Survey form builder template. Forms, responses, and metrics are fictional demo content.</p>
+      </div>
+      <div class="forms-footer-links">
+        <p class="footer-label">Product</p>
+        <a href="#surveys">Surveys</a>
+        <a href="#builder">Builder</a>
+        <a href="#responses">Responses</a>
+        <a href="#templates">Templates</a>
+      </div>
+      <div class="forms-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container forms-footer-bottom">
+      <span>© 2026 Poluru Forms</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
