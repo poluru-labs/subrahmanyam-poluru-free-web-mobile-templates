@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Depot — Warehouse operations dashboard</title>
+  <meta name="description" content="Monitor inventory, picking queues, dock activity, and alerts in one calm warehouse operations dashboard.">
+  <meta name="theme-color" content="#6B011F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="dashboard warehouse-dash" data-template="warehouse-operations-dashboard" style="--brand:#6B011F;--soft:#f5e8ec;--on:#ffffff;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">▣</span>
+      Poluru Depot
+    </a>
+    <p class="nav-label">OPERATIONS</p>
+    <nav aria-label="Dashboard navigation">
+      <a href="#overview" aria-current="page"><span aria-hidden="true">◫</span> Overview</a>
+      <a href="#inventory"><span aria-hidden="true">▤</span> Inventory</a>
+      <a href="#orders"><span aria-hidden="true">⇄</span> Orders</a>
+      <a href="#picking"><span aria-hidden="true">◎</span> Picking</a>
+      <a href="#alerts"><span aria-hidden="true">!</span> Alerts</a>
+    </nav>
+    <div class="side-bottom">
+      <span class="profile" aria-hidden="true">SP</span>
+      <div>
+        <strong>Subra Poluru</strong><br>
+        <span class="small">Ops lead · Building 3</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <span>Depot hub <span style="color:var(--muted)">/ Overview</span></span>
+      <div>
+        <span class="small">Monday, October 26, 2026 · Shift A</span>
+        <span class="profile" title="Subra Poluru">SP</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="dash-heading">
+        <div>
+          <p class="eyebrow">WAREHOUSE OPERATIONS DASHBOARD</p>
+          <h1>Floor status, at a glance.</h1>
+          <p>Inbound receipts, pick waves, staging lanes, and exceptions—organized for shift leads and supervisors.</p>
+        </div>
+        <button class="secondary" type="button" data-action="export">Export ops report ↗</button>
+      </div>
+
+      <div class="stats" id="overview">
+        <article class="stat">
+          <span class="small">Orders to ship today</span>
+          <div class="metric">142</div>
+          <span class="trend">18 priority · 6 overdue</span>
+        </article>
+        <article class="stat">
+          <span class="small">Inventory accuracy</span>
+          <div class="metric">99.2%</div>
+          <span class="trend">Cycle count on Zone B</span>
+        </article>
+        <article class="stat">
+          <span class="small">Active dock doors</span>
+          <div class="metric">7 / 10</div>
+          <span class="trend">2 inbound · 5 outbound</span>
+        </article>
+        <article class="stat">
+          <span class="small">Safety checklist</span>
+          <div class="metric" id="safety-metric">0 / 4</div>
+          <span class="trend">Shift start · <span id="safety-inline">0 / 4</span></span>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Throughput · today</h3>
+              <p>Units picked per hour (demo)</p>
+            </div>
+            <select aria-label="Reporting period" data-chart-period>
+              <option>Today</option>
+              <option>Last 7 days</option>
+            </select>
+          </div>
+          <div class="chart" aria-label="Hourly picks: 42, 58, 51, 64, 72, 68, 55, 48">
+            <div class="bar" style="--height:42%"><span>6a</span></div>
+            <div class="bar" style="--height:58%"><span>8a</span></div>
+            <div class="bar" style="--height:51%"><span>10a</span></div>
+            <div class="bar" style="--height:64%"><span>12p</span></div>
+            <div class="bar" style="--height:72%"><span>2p</span></div>
+            <div class="bar" style="--height:68%"><span>4p</span></div>
+            <div class="bar" style="--height:55%"><span>6p</span></div>
+            <div class="bar" style="--height:48%"><span>8p</span></div>
+          </div>
+        </section>
+
+        <section class="panel" id="alerts">
+          <div class="panel-head">
+            <div>
+              <h3>Active alerts</h3>
+              <p>Requires action</p>
+            </div>
+            <button class="text-button" type="button" data-action="modal" data-title="Alert center" data-kind="View alerts">View all</button>
+          </div>
+          <ul class="deadline-list">
+            <li>
+              <time datetime="2026-10-26T09:15">09:15</time>
+              <div>
+                <strong>Low stock · SKU PLR-4420</strong>
+                <p class="small" style="margin:0">Zone A · 12 units · reorder point 50</p>
+              </div>
+              <button class="text-button" type="button" data-action="modal" data-title="Low stock · SKU PLR-4420" data-kind="View alert">Open</button>
+            </li>
+            <li>
+              <time datetime="2026-10-26T10:02">10:02</time>
+              <div>
+                <strong>Dock 4 · delayed inbound</strong>
+                <p class="small" style="margin:0">Carrier ETA +45 min · PO-8831</p>
+              </div>
+              <button class="text-button" type="button" data-action="modal" data-title="Dock 4 · delayed inbound" data-kind="View alert">Open</button>
+            </li>
+            <li>
+              <time datetime="2026-10-26T11:40">11:40</time>
+              <div>
+                <strong>Pick exception · Order WH-2291</strong>
+                <p class="small" style="margin:0">Short pick · aisle 12-B</p>
+              </div>
+              <button class="text-button" type="button" data-action="modal" data-title="Pick exception · Order WH-2291" data-kind="View alert">Open</button>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="panel" id="inventory">
+        <div class="panel-head">
+          <div>
+            <h3>Inventory snapshot</h3>
+            <p>Top movers · demo SKUs</p>
+          </div>
+          <input class="search" type="search" placeholder="Search SKU or location…" aria-label="Search inventory">
+        </div>
+        <div class="table-wrap collection">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">SKU</th>
+                <th scope="col">Description</th>
+                <th scope="col">Location</th>
+                <th scope="col">On hand</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-search="PLR-4420 gasket kit Zone A">
+                <td><strong>PLR-4420</strong></td>
+                <td>Industrial gasket kit</td>
+                <td>A-12-04</td>
+                <td>12</td>
+                <td><span class="wh-pill wh-low">Low stock</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="PLR-4420" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="PLR-8810 pallet wrap Zone C">
+                <td><strong>PLR-8810</strong></td>
+                <td>Pallet wrap · 80 gauge</td>
+                <td>C-02-11</td>
+                <td>840</td>
+                <td><span class="wh-pill wh-ok">Healthy</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="PLR-8810" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="PLR-3301 label rolls Zone B">
+                <td><strong>PLR-3301</strong></td>
+                <td>Thermal label rolls</td>
+                <td>B-08-02</td>
+                <td>156</td>
+                <td><span class="wh-pill wh-ok">Healthy</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="PLR-3301" data-kind="View SKU">Details</button></td>
+              </tr>
+              <tr data-search="PLR-1199 cold pack Zone D">
+                <td><strong>PLR-1199</strong></td>
+                <td>Cold pack inserts</td>
+                <td>D-01-07</td>
+                <td>0</td>
+                <td><span class="wh-pill wh-out">Out of stock</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="PLR-1199" data-kind="View SKU">Details</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty" hidden>No SKUs match your search.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="orders">
+        <div class="panel-head">
+          <div>
+            <h3>Open orders</h3>
+            <p>Outbound queue</p>
+          </div>
+        </div>
+        <div class="filters">
+          <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="Picking" aria-pressed="false">Picking</button>
+          <button class="filter" type="button" data-filter="Staging" aria-pressed="false">Staging</button>
+          <button class="filter" type="button" data-filter="Shipped" aria-pressed="false">Shipped</button>
+          <input class="search" type="search" placeholder="Filter orders…" aria-label="Filter orders">
+        </div>
+        <div class="table-wrap collection">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Lines</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-search="WH-2291 Poluru Labs Picking High" data-category="Picking">
+                <td><strong>WH-2291</strong></td>
+                <td>Poluru Labs</td>
+                <td>14</td>
+                <td>High</td>
+                <td><span class="wh-pill wh-picking">Picking</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="WH-2291" data-kind="View order">Open</button></td>
+              </tr>
+              <tr data-search="WH-2288 Subra Supply Staging Standard" data-category="Staging">
+                <td><strong>WH-2288</strong></td>
+                <td>Subra Supply Co.</td>
+                <td>6</td>
+                <td>Standard</td>
+                <td><span class="wh-pill wh-staging">Staging</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="WH-2288" data-kind="View order">Open</button></td>
+              </tr>
+              <tr data-search="WH-2285 Subbu Retail Shipped Standard" data-category="Shipped">
+                <td><strong>WH-2285</strong></td>
+                <td>Subbu Retail</td>
+                <td>22</td>
+                <td>Standard</td>
+                <td><span class="wh-pill wh-shipped">Shipped</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="WH-2285" data-kind="View order">Open</button></td>
+              </tr>
+              <tr data-search="WH-2294 Northwind Picking High" data-category="Picking">
+                <td><strong>WH-2294</strong></td>
+                <td>Northwind Parts</td>
+                <td>9</td>
+                <td>High</td>
+                <td><span class="wh-pill wh-picking">Picking</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="WH-2294" data-kind="View order">Open</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty" hidden>No orders match your filter.</p>
+        </div>
+        <p class="wh-disclaimer">Demo dashboard only. SKUs, orders, and metrics are fictional. Not connected to WMS or ERP systems.</p>
+      </section>
+
+      <section class="panel" id="picking">
+        <div class="panel-head">
+          <div>
+            <h3>Pick waves</h3>
+            <p>Move cards across stages (demo)</p>
+          </div>
+          <button class="primary" type="button" data-action="modal" data-title="New pick wave" data-kind="Create wave">Create wave</button>
+        </div>
+        <div class="kanban">
+          <div class="kanban-column" data-stage="Queued">
+            <div class="kanban-head"><strong>Queued</strong><span class="badge">2</span></div>
+            <article class="job-card">
+              <strong>Wave W-104</strong>
+              <p class="small">32 orders · Zone A/B</p>
+              <button class="text-button" type="button" data-action="move">Start pick →</button>
+            </article>
+            <article class="job-card">
+              <strong>Wave W-105</strong>
+              <p class="small">18 orders · Cold chain</p>
+              <button class="text-button" type="button" data-action="move">Start pick →</button>
+            </article>
+          </div>
+          <div class="kanban-column" data-stage="In progress">
+            <div class="kanban-head"><strong>In progress</strong><span class="badge">1</span></div>
+            <article class="job-card">
+              <strong>Wave W-103</strong>
+              <p class="small">Assignee: Poluru · 64% picked</p>
+              <div class="wh-bar" aria-hidden="true"><span style="width:64%"></span></div>
+              <button class="text-button" type="button" data-action="move">Send to staging →</button>
+            </article>
+          </div>
+          <div class="kanban-column" data-stage="Staging">
+            <div class="kanban-head"><strong>Staging</strong><span class="badge">1</span></div>
+            <article class="job-card">
+              <strong>Wave W-102</strong>
+              <p class="small">Lane 3 · 12 pallets</p>
+              <button class="text-button" type="button" data-action="move">Mark shipped →</button>
+            </article>
+          </div>
+          <div class="kanban-column" data-stage="Complete">
+            <div class="kanban-head"><strong>Complete</strong><span class="badge">0</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="safety">
+        <div class="panel-head">
+          <div>
+            <h3>Shift safety checklist</h3>
+            <p>Complete before floor access (<span id="safety-progress">0 / 4</span>)</p>
+          </div>
+          <div class="wh-bar wh-bar-wide" id="safety-bar" style="--progress:0%" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="pack-list">
+          <div class="habit-grid habit-grid-head">
+            <strong>Item</strong>
+            <span>Done</span>
+          </div>
+          <div class="habit-grid">
+            <div><strong>PPE verified</strong><small>Floor</small></div>
+            <button type="button" data-action="habit" data-key="ppe" aria-pressed="false">·</button>
+          </div>
+          <div class="habit-grid">
+            <div><strong>Equipment inspection</strong><small>Forklifts</small></div>
+            <button type="button" data-action="habit" data-key="equipment" aria-pressed="false">·</button>
+          </div>
+          <div class="habit-grid">
+            <div><strong>Aisle hazards cleared</strong><small>5S</small></div>
+            <button type="button" data-action="habit" data-key="aisles" aria-pressed="false">·</button>
+          </div>
+          <div class="habit-grid">
+            <div><strong>Shift briefing signed</strong><small>Team</small></div>
+            <button type="button" data-action="habit" data-key="briefing" aria-pressed="false">·</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer wh-footer">
+      <div class="wh-footer-grid">
+        <div>
+          <span class="brand">Poluru Depot<span style="color:var(--brand)">.</span></span>
+          <p class="small" style="margin-top:12px">Warehouse operations dashboard template. Inventory, orders, and alerts are fictional demo content.</p>
+        </div>
+        <div class="wh-footer-links">
+          <p class="footer-label">Dashboard</p>
+          <a href="#overview">Overview</a>
+          <a href="#inventory">Inventory</a>
+          <a href="#orders">Orders</a>
+          <a href="#picking">Picking</a>
+          <a href="#alerts">Alerts</a>
+        </div>
+        <div>
+          <p class="footer-label">Author</p>
+          <p><strong>Subrahmanyam Poluru</strong></p>
+          <p class="small">Designer &amp; developer · Poluru Labs</p>
+          <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+        </div>
+      </div>
+      <div class="wh-footer-bottom">
+        <span>© 2026 Poluru Depot</span>
+        <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </footer>
+  </div>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
