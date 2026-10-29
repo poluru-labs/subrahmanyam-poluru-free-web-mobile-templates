@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Onboard — Employee onboarding portal</title>
+  <meta name="description" content="Your first days at Poluru—checklists, resources, and team connections in one place.">
+  <meta name="theme-color" content="#FF8C00">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="onboarding" data-template="employee-onboarding-portal" style="--brand:#FF8C00;--soft:#fff4e8;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="onboard-header">
+    <div class="container onboard-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        Poluru Onboard
+      </a>
+      <nav class="onboard-nav" aria-label="Main navigation">
+        <a href="#journey">Your journey</a>
+        <a href="#checklist">Checklist</a>
+        <a href="#resources">Resources</a>
+        <a href="#team">Team</a>
+      </nav>
+      <div class="onboard-header-actions">
+        <a class="secondary" href="#resources">Handbook</a>
+        <button class="primary" type="button" data-action="modal" data-title="Message People Ops" data-kind="Contact HR">Contact HR</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#journey">Your journey</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#resources">Resources</a>
+      <a href="#team">Team</a>
+      <button class="primary" type="button" data-action="modal" data-title="Message People Ops" data-kind="Contact HR">Contact HR</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="onboard-hero" id="journey">
+      <div class="container onboard-hero-grid">
+        <div class="onboard-hero-copy">
+          <p class="eyebrow">EMPLOYEE ONBOARDING</p>
+          <h1>Welcome, Subra.<br>Your first 30 days start here.</h1>
+          <p>Everything you need to feel at home—paperwork, tools, culture, and the people who will help you thrive at Poluru.</p>
+          <div class="onboard-progress onboard-progress-widget">
+            <div class="onboard-progress-head">
+              <span>Onboarding progress</span>
+              <strong class="onboard-count">0 / 6</strong>
+            </div>
+            <div class="progress" style="--progress:0%"><span></span></div>
+          </div>
+          <a class="primary" href="#checklist">Start your checklist →</a>
+        </div>
+        <aside class="onboard-hero-card">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Bright modern office workspace" loading="eager" width="1200" height="800">
+          <p class="eyebrow" style="margin-bottom:8px">DAY ONE</p>
+          <strong>Product Design · Remote-friendly</strong>
+          <p>Start date Oct 27, 2026 · Manager: Poluru · Buddy: Subbu</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid onboard-features">
+      <div>
+        <b>01 /</b>
+        <h3>Clear next steps</h3>
+        <p>A simple checklist so you always know what to complete and when.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Trusted resources</h3>
+        <p>Handbooks, policies, and tool guides in one searchable library.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>People who help</h3>
+        <p>Meet your manager, buddy, and HR partners before day one.</p>
+      </div>
+    </section>
+
+    <section id="checklist" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CHECKLIST</p>
+          <h2>Your first-week essentials.</h2>
+        </div>
+        <p>Tap each item when complete. Progress saves in this browser only.</p>
+      </div>
+      <div class="checklist">
+        <button class="checklist-item" type="button" data-action="onboard" data-key="0" aria-pressed="false">
+          <span class="checklist-mark" aria-hidden="true">·</span>
+          <span class="checklist-body">
+            <strong>Review and sign offer documents</strong>
+            <span>People Ops · Due before start date</span>
+          </span>
+        </button>
+        <button class="checklist-item" type="button" data-action="onboard" data-key="1" aria-pressed="false">
+          <span class="checklist-mark" aria-hidden="true">·</span>
+          <span class="checklist-body">
+            <strong>Set up your Poluru email and SSO</strong>
+            <span>IT · Day 1 · ~15 minutes</span>
+          </span>
+        </button>
+        <button class="checklist-item" type="button" data-action="onboard" data-key="2" aria-pressed="false">
+          <span class="checklist-mark" aria-hidden="true">·</span>
+          <span class="checklist-body">
+            <strong>Complete security &amp; compliance training</strong>
+            <span>Learning hub · Day 1–3</span>
+          </span>
+        </button>
+        <button class="checklist-item" type="button" data-action="onboard" data-key="3" aria-pressed="false">
+          <span class="checklist-mark" aria-hidden="true">·</span>
+          <span class="checklist-body">
+            <strong>Meet your onboarding buddy</strong>
+            <span>Subbu · Schedule 30-min intro</span>
+          </span>
+        </button>
+        <button class="checklist-item" type="button" data-action="onboard" data-key="4" aria-pressed="false">
+          <span class="checklist-mark" aria-hidden="true">·</span>
+          <span class="checklist-body">
+            <strong>Join team standup &amp; tools walkthrough</strong>
+            <span>Poluru · Day 2</span>
+          </span>
+        </button>
+        <button class="checklist-item" type="button" data-action="onboard" data-key="5" aria-pressed="false">
+          <span class="checklist-mark" aria-hidden="true">·</span>
+          <span class="checklist-body">
+            <strong>Submit direct deposit &amp; benefits elections</strong>
+            <span>People Ops · Within first week</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">RESOURCES</p>
+          <h2>Guides and policies.</h2>
+        </div>
+        <p>Search the library for handbooks, benefits, and IT setup docs.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Handbook" aria-pressed="false">Handbook</button>
+        <button class="filter" type="button" data-filter="IT" aria-pressed="false">IT</button>
+        <button class="filter" type="button" data-filter="Benefits" aria-pressed="false">Benefits</button>
+        <input class="search" type="search" placeholder="Search resources…" aria-label="Search resources">
+      </div>
+      <div class="grid collection">
+        <article class="resource-card" data-search="Employee handbook culture policies Handbook" data-category="Handbook">
+          <span class="doc-icon" aria-hidden="true">📘</span>
+          <p class="small">Handbook · PDF</p>
+          <h3>Employee handbook</h3>
+          <p class="small">Mission, values, workplace policies, and how we work together.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Employee handbook" data-kind="View resource">Open guide</button>
+        </article>
+        <article class="resource-card" data-search="IT setup laptop SSO VPN IT" data-category="IT">
+          <span class="doc-icon" aria-hidden="true">💻</span>
+          <p class="small">IT · 10 min read</p>
+          <h3>IT setup guide</h3>
+          <p class="small">Device enrollment, Wi‑Fi, VPN, and approved software list.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="IT setup guide" data-kind="View resource">Open guide</button>
+        </article>
+        <article class="resource-card" data-search="Benefits health dental 401k Benefits" data-category="Benefits">
+          <span class="doc-icon" aria-hidden="true">🩺</span>
+          <p class="small">Benefits · Overview</p>
+          <h3>Benefits at a glance</h3>
+          <p class="small">Health, dental, vision, and retirement with enrollment deadlines.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Benefits at a glance" data-kind="View resource">Open guide</button>
+        </article>
+        <article class="resource-card" data-search="Remote work expectations hybrid Handbook" data-category="Handbook">
+          <span class="doc-icon" aria-hidden="true">🏠</span>
+          <p class="small">Handbook · Policy</p>
+          <h3>Remote &amp; hybrid guide</h3>
+          <p class="small">Core hours, communication norms, and home office stipend.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Remote &amp; hybrid guide" data-kind="View resource">Open guide</button>
+        </article>
+        <article class="resource-card" data-search="Security training phishing IT" data-category="IT">
+          <span class="doc-icon" aria-hidden="true">🔒</span>
+          <p class="small">IT · Required</p>
+          <h3>Security essentials</h3>
+          <p class="small">Passwords, MFA, and how to report suspicious activity.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Security essentials" data-kind="View resource">Open guide</button>
+        </article>
+        <article class="resource-card" data-search="PTO time off holidays Benefits" data-category="Benefits">
+          <span class="doc-icon" aria-hidden="true">📅</span>
+          <p class="small">Benefits · FAQ</p>
+          <h3>Time off &amp; holidays</h3>
+          <p class="small">PTO accrual, company holidays, and leave request process.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Time off &amp; holidays" data-kind="View resource">Open guide</button>
+        </article>
+        <p class="empty" hidden>No resources match your search. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <section id="team" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">YOUR TEAM</p>
+          <h2>People in your corner.</h2>
+        </div>
+        <p>Reach out anytime—these are your go-to contacts for week one.</p>
+      </div>
+      <div class="team-grid">
+        <article class="team-card">
+          <span class="profile" aria-hidden="true">P</span>
+          <h3>Poluru</h3>
+          <p class="small">Engineering Manager</p>
+          <p class="small">Your manager for goals, feedback, and team rhythm.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru — Engineering Manager" data-kind="Meet contact">Say hello</button>
+        </article>
+        <article class="team-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Subbu</h3>
+          <p class="small">Onboarding buddy</p>
+          <p class="small">Questions about tools, culture, and where to grab coffee (virtually).</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subbu — Onboarding buddy" data-kind="Meet contact">Say hello</button>
+        </article>
+        <article class="team-card">
+          <span class="profile" aria-hidden="true">S</span>
+          <h3>Subra</h3>
+          <p class="small">People Ops</p>
+          <p class="small">Payroll, benefits, and anything administrative.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subra — People Ops" data-kind="Meet contact">Say hello</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">FIRST 30 DAYS</p>
+          <h2>Your onboarding timeline.</h2>
+        </div>
+        <p>A simple map of milestones—not a rigid schedule.</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <time datetime="P1W">Week 1</time>
+          <div>
+            <strong>Settle in</strong>
+            <p>Accounts, security training, meet the team, and complete core checklist items.</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="P2W">Week 2</time>
+          <div>
+            <strong>Learn the product</strong>
+            <p>Shadow customer calls, review design system docs, ship a small internal improvement.</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="P3W">Week 3</time>
+          <div>
+            <strong>Own a slice</strong>
+            <p>Pick up your first ticket with buddy support; present a short learnings recap.</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="P4W">Week 4</time>
+          <div>
+            <strong>30-day check-in</strong>
+            <p>Reflect with Poluru on goals, feedback, and what support you need next.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="banner onboard-banner" id="contact">
+      <div>
+        <h2>Questions before day one?</h2>
+        <p>People Ops is here to help with paperwork, start dates, and anything else on your mind.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Message People Ops" data-kind="Contact HR">Contact HR</button>
+    </section>
+  </main>
+
+  <footer class="site-footer onboard-footer">
+    <div class="container onboard-footer-grid">
+      <div class="onboard-footer-brand">
+        <span class="brand">Poluru Onboard<span style="color:var(--brand)">.</span></span>
+        <p class="small">Employee onboarding portal template. Names and dates are fictional demo content.</p>
+      </div>
+      <div class="onboard-footer-links">
+        <p class="footer-label">Portal</p>
+        <a href="#checklist">Checklist</a>
+        <a href="#resources">Resources</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact HR</a>
+      </div>
+      <div class="onboard-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container onboard-footer-bottom">
+      <span>© 2026 Poluru Onboard</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
