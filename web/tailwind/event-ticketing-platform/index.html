@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Tickets — Event ticketing platform</title>
+  <meta name="description" content="Discover live events, pick seats, and get mobile tickets in seconds.">
+  <meta name="theme-color" content="#BD114A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="ticketing" data-template="event-ticketing-platform" style="--brand:#BD114A;--soft:#fceef3;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="ticket-header">
+    <div class="container ticket-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">♪</span>
+        Poluru Tickets
+      </a>
+      <nav class="ticket-nav" aria-label="Main navigation">
+        <a href="#events">Events</a>
+        <a href="#categories">Categories</a>
+        <a href="#venues">Venues</a>
+        <a href="#how-it-works">How it works</a>
+      </nav>
+      <div class="ticket-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Your tickets" data-kind="View tickets">My tickets</button>
+        <button class="primary" type="button" data-action="modal" data-title="Your cart" data-kind="View cart">Cart · 0</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#events">Events</a>
+      <a href="#categories">Categories</a>
+      <a href="#venues">Venues</a>
+      <a href="#how-it-works">How it works</a>
+      <button class="primary" type="button" data-action="modal" data-title="Your cart" data-kind="View cart">Cart · 0</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="ticket-hero">
+      <div class="container ticket-hero-grid">
+        <div class="ticket-hero-copy">
+          <p class="eyebrow">EVENT TICKETING PLATFORM</p>
+          <h1>Live moments.<br>One simple checkout.</h1>
+          <p>Browse concerts, sports, comedy, and festivals near you—transparent fees, instant mobile tickets, and easy transfers.</p>
+          <form class="ticket-search" role="search" aria-label="Search events">
+            <label class="sr-only" for="event-search">Search events</label>
+            <input class="search ticket-search-input" id="event-search" type="search" placeholder="Artist, team, city, or venue…" autocomplete="off">
+            <button class="primary" type="submit">Find events</button>
+          </form>
+          <ul class="ticket-chips">
+            <li>This weekend</li>
+            <li>Under $50</li>
+            <li>Family friendly</li>
+          </ul>
+        </div>
+        <aside class="ticket-hero-featured">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Crowd at a live concert" loading="eager" width="1200" height="800">
+          <div>
+            <span class="event-date">NOV 8 · AUSTIN, TX</span>
+            <strong>Poluru Live Sessions</strong>
+            <p class="small" style="margin:0">Featured headliner · From $45 · Mobile entry</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid ticket-features">
+      <div>
+        <b>01 /</b>
+        <h3>Honest pricing</h3>
+        <p>See the full total upfront—no surprise fees at checkout.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Mobile-first tickets</h3>
+        <p>QR codes in your wallet, plus easy transfer to friends.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Trusted venues</h3>
+        <p>Partner venues and organizers verified by Poluru Tickets.</p>
+      </div>
+    </section>
+
+    <section id="events" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">UPCOMING</p>
+          <h2 id="categories">Events near you.</h2>
+        </div>
+        <p>Filter by category or search the catalog. Save favorites for later.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Music" aria-pressed="false">Music</button>
+        <button class="filter" type="button" data-filter="Sports" aria-pressed="false">Sports</button>
+        <button class="filter" type="button" data-filter="Comedy" aria-pressed="false">Comedy</button>
+        <button class="filter" type="button" data-filter="Arts" aria-pressed="false">Arts</button>
+        <input class="search" type="search" placeholder="Filter events…" aria-label="Filter events">
+      </div>
+      <div class="grid collection">
+        <article class="product-card" data-search="Poluru Live Sessions Austin music concert Nov 8 Music" data-category="Music">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Poluru Live Sessions" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Music</span>
+            <button class="favorite" type="button" aria-label="Save Poluru Live Sessions" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <span class="event-date">NOV 8 · 7:30 PM</span>
+            <p class="small">Moody Theater · Austin, TX</p>
+            <h3>Poluru Live Sessions</h3>
+            <div class="card-bottom">
+              <strong>From $45</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Poluru Live Sessions" data-kind="View event" data-price="45">Get tickets</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Subra FC Home Match stadium Sports Nov 12" data-category="Sports">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1574629810360-7abe362d9791?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Subra FC Home Match" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Sports</span>
+            <button class="favorite" type="button" aria-label="Save Subra FC Home Match" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <span class="event-date">NOV 12 · 1:00 PM</span>
+            <p class="small">Poluru Stadium · Dallas, TX</p>
+            <h3>Subra FC Home Match</h3>
+            <div class="card-bottom">
+              <strong>From $32</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Subra FC Home Match" data-kind="View event" data-price="32">Get tickets</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Subbu Stand-Up Night comedy club Comedy Nov 15" data-category="Comedy">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1527224857830-43d7b7f13012?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Subbu Stand-Up Night" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Comedy</span>
+            <button class="favorite" type="button" aria-label="Save Subbu Stand-Up Night" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <span class="event-date">NOV 15 · 8:00 PM</span>
+            <p class="small">Cap City Comedy · Austin, TX</p>
+            <h3>Subbu Stand-Up Night</h3>
+            <div class="card-bottom">
+              <strong>From $28</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Subbu Stand-Up Night" data-kind="View event" data-price="28">Get tickets</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Modern Gallery Opening Subra Arts Nov 18" data-category="Arts">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1460661419341-fcc174c7952d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Modern Gallery Opening" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Arts</span>
+            <button class="favorite" type="button" aria-label="Save Modern Gallery Opening" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <span class="event-date">NOV 18 · 6:00 PM</span>
+            <p class="small">Poluru Gallery · Houston, TX</p>
+            <h3>Modern Gallery Opening</h3>
+            <div class="card-bottom">
+              <strong>Free · RSVP</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Modern Gallery Opening" data-kind="View event" data-price="0">Reserve spot</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="Indie Night Vol 3 local bands Music Nov 22" data-category="Music">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Indie Night Vol. 3" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Music</span>
+            <button class="favorite" type="button" aria-label="Save Indie Night Vol. 3" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <span class="event-date">NOV 22 · 9:00 PM</span>
+            <p class="small">The Parish · Austin, TX</p>
+            <h3>Indie Night Vol. 3</h3>
+            <div class="card-bottom">
+              <strong>From $22</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="Indie Night Vol. 3" data-kind="View event" data-price="22">Get tickets</button>
+            </div>
+          </div>
+        </article>
+        <article class="product-card" data-search="College Hoops Showcase arena Sports Nov 25" data-category="Sports">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="College Hoops Showcase" loading="lazy" width="1200" height="800">
+            <span class="image-tag">Sports</span>
+            <button class="favorite" type="button" aria-label="Save College Hoops Showcase" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <span class="event-date">NOV 25 · 4:00 PM</span>
+            <p class="small">Erwin Center · Austin, TX</p>
+            <h3>College Hoops Showcase</h3>
+            <div class="card-bottom">
+              <strong>From $18</strong>
+              <button class="text-button" type="button" data-action="modal" data-title="College Hoops Showcase" data-kind="View event" data-price="18">Get tickets</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No events match your search. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <section id="venues" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">VENUES</p>
+          <h2>Popular places.</h2>
+        </div>
+        <p>Partner venues with reserved seating maps and accessible entry.</p>
+      </div>
+      <div class="venue-grid">
+        <article class="venue-card">
+          <h3>Moody Theater</h3>
+          <p class="small">Austin, TX · 2,750 capacity</p>
+          <p class="small">Concerts, awards shows, and touring acts downtown.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Moody Theater" data-kind="View venue">View events</button>
+        </article>
+        <article class="venue-card">
+          <h3>Poluru Stadium</h3>
+          <p class="small">Dallas, TX · 18,000 capacity</p>
+          <p class="small">Soccer, festivals, and large-scale sporting events.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru Stadium" data-kind="View venue">View events</button>
+        </article>
+        <article class="venue-card">
+          <h3>Cap City Comedy</h3>
+          <p class="small">Austin, TX · 300 capacity</p>
+          <p class="small">Intimate stand-up rooms with table service.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Cap City Comedy" data-kind="View venue">View events</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2>Three steps to your seat.</h2>
+        </div>
+        <p>A calm checkout flow designed for mobile and desktop.</p>
+      </div>
+      <div class="steps-row">
+        <article class="step-card">
+          <div class="step-num">1</div>
+          <h3>Pick your event</h3>
+          <p class="small">Search, filter, and compare sections with clear seat maps.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-num">2</div>
+          <h3>Checkout securely</h3>
+          <p class="small">Review fees upfront and pay with card or wallet—demo only here.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-num">3</div>
+          <h3>Show your pass</h3>
+          <p class="small">Mobile QR entry, transfers, and order history in one place.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner ticket-banner" id="contact">
+      <div>
+        <h2>Hosting an event?</h2>
+        <p>List on Poluru Tickets—ticketing tools, payouts, and attendee support for independent organizers.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="List your event on Poluru Tickets" data-kind="List event">List your event</button>
+    </section>
+  </main>
+
+  <footer class="site-footer ticket-footer">
+    <div class="container ticket-footer-grid">
+      <div class="ticket-footer-brand">
+        <span class="brand">Poluru Tickets<span style="color:var(--brand)">.</span></span>
+        <p class="small">Event ticketing platform template. Events, venues, and prices are fictional demo content.</p>
+      </div>
+      <div class="ticket-footer-links">
+        <p class="footer-label">Explore</p>
+        <a href="#events">Events</a>
+        <a href="#venues">Venues</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#contact">For organizers</a>
+      </div>
+      <div class="ticket-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container ticket-footer-bottom">
+      <span>© 2026 Poluru Tickets</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
