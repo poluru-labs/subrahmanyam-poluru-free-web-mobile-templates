@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Trips — Travel itinerary planner</title>
+  <meta name="description" content="Plan day-by-day trips, track bookings, and pack smarter in one calm travel workspace.">
+  <meta name="theme-color" content="#FFDE00">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="travel-planner" data-template="travel-itinerary-planner" style="--brand:#FFDE00;--soft:#fff9d6;--on:#152118;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="trip-header">
+    <div class="container trip-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">✈</span>
+        Poluru Trips
+      </a>
+      <nav class="trip-nav" aria-label="Main navigation">
+        <a href="#trips">Trips</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#pack">Pack list</a>
+      </nav>
+      <div class="trip-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Saved trips" data-kind="View saved">Saved</button>
+        <button class="primary" type="button" data-action="modal" data-title="New trip" data-kind="Plan trip">Plan a trip</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#trips">Trips</a>
+      <a href="#itinerary">Itinerary</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#pack">Pack list</a>
+      <button class="primary" type="button" data-action="modal" data-title="New trip" data-kind="Plan trip">Plan a trip</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="trip-hero">
+      <div class="container trip-hero-grid">
+        <div class="trip-hero-copy">
+          <p class="eyebrow">TRAVEL ITINERARY PLANNER</p>
+          <h1>Your route.<br>Day by day.</h1>
+          <p>Build itineraries, stash confirmations, and see what’s next—flights, stays, and experiences in one light, focused planner.</p>
+          <form class="trip-search" role="search" aria-label="Search trips">
+            <label class="sr-only" for="trip-search">Search trips</label>
+            <input class="search trip-search-input" id="trip-search" type="search" placeholder="City, trip name, or traveler…" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <div class="trip-kpi">
+            <div>
+              <strong>4</strong>
+              <span>Upcoming trips</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>Days on the road</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Time zones</span>
+            </div>
+          </div>
+        </div>
+        <aside class="trip-featured" aria-label="Featured trip">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Traveler looking at a map in a sunny plaza" loading="eager" width="1200" height="800">
+          <div class="trip-featured-body">
+            <span class="trip-pill trip-leisure">Leisure</span>
+            <strong>Tokyo &amp; Kyoto · Autumn</strong>
+            <p class="small">Oct 28 – Nov 8 · Poluru &amp; Subra · 12 days</p>
+            <button class="primary" type="button" data-action="modal" data-title="Tokyo &amp; Kyoto · Autumn" data-kind="View trip">Open itinerary</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid trip-features">
+      <div>
+        <b>01 /</b>
+        <h3>Timeline view</h3>
+        <p>Morning, afternoon, and evening blocks—drag-free demo with clear times and notes.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Docs in one place</h3>
+        <p>Flight, hotel, and activity confirmations linked from each day (demo placeholders).</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Shared packing</h3>
+        <p>Check off essentials—progress saves in this browser for the demo.</p>
+      </div>
+    </section>
+
+    <section id="trips" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MY TRIPS</p>
+          <h2>Where you’re headed.</h2>
+        </div>
+        <p>Demo trips—filter by type or search by destination.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Leisure" aria-pressed="false">Leisure</button>
+        <button class="filter" type="button" data-filter="Business" aria-pressed="false">Business</button>
+        <button class="filter" type="button" data-filter="Family" aria-pressed="false">Family</button>
+        <input class="search" type="search" placeholder="Filter trips…" aria-label="Filter trips">
+      </div>
+      <div class="grid collection">
+        <article class="trip-card" data-search="Tokyo Kyoto Japan Leisure Poluru Subra" data-category="Leisure">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Tokyo cityscape at dusk" loading="lazy" width="1200" height="800">
+            <span class="trip-pill trip-leisure">Leisure</span>
+            <button class="favorite" aria-label="Save Tokyo and Kyoto trip" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Tokyo &amp; Kyoto · Autumn</h3>
+            <p class="small">Oct 28 – Nov 8 · 12 days · 2 travelers</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Tokyo &amp; Kyoto · Autumn" data-kind="View trip">Itinerary</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Tokyo &amp; Kyoto · Autumn" data-kind="Plan trip">Edit</button>
+            </div>
+          </div>
+        </article>
+        <article class="trip-card" data-search="Austin conference Business Subbu" data-category="Business">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Convention center exterior" loading="lazy" width="1200" height="800">
+            <span class="trip-pill trip-business">Business</span>
+            <button class="favorite" aria-label="Save Austin conference trip" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Austin · Product summit</h3>
+            <p class="small">Nov 12 – Nov 15 · 4 days · 1 traveler</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Austin · Product summit" data-kind="View trip">Itinerary</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Austin · Product summit" data-kind="Plan trip">Edit</button>
+            </div>
+          </div>
+        </article>
+        <article class="trip-card" data-search="Orlando family theme park Family Poluru" data-category="Family">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Beach and palm trees" loading="lazy" width="1200" height="800">
+            <span class="trip-pill trip-family">Family</span>
+            <button class="favorite" aria-label="Save Orlando family trip" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Orlando · Family week</h3>
+            <p class="small">Dec 18 – Dec 25 · 8 days · 4 travelers</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Orlando · Family week" data-kind="View trip">Itinerary</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Orlando · Family week" data-kind="Plan trip">Edit</button>
+            </div>
+          </div>
+        </article>
+        <article class="trip-card" data-search="Barcelona Spain Leisure Subra" data-category="Leisure">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Barcelona architecture" loading="lazy" width="1200" height="800">
+            <span class="trip-pill trip-leisure">Leisure</span>
+            <button class="favorite" aria-label="Save Barcelona trip" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <h3>Barcelona · City &amp; coast</h3>
+            <p class="small">Mar 4 – Mar 11 · 8 days · 2 travelers</p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Barcelona · City &amp; coast" data-kind="View trip">Itinerary</button>
+              <button class="secondary card-action" type="button" data-action="modal" data-title="Barcelona · City &amp; coast" data-kind="Plan trip">Edit</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No trips match your search.</p>
+      </div>
+      <p class="trip-disclaimer">Demo planner only. Flights, hotels, and itineraries are fictional. Not connected to booking systems.</p>
+    </section>
+
+    <section id="itinerary" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">ITINERARY</p>
+          <h2>Tokyo &amp; Kyoto · Day 1</h2>
+        </div>
+        <p>Sample timeline for the featured trip—times are demo placeholders.</p>
+      </div>
+      <div class="itinerary-timeline">
+        <article class="itinerary-block">
+          <time datetime="2026-10-28T08:00">8:00 AM</time>
+          <div>
+            <strong>Land at HND · Immigration &amp; bag claim</strong>
+            <p class="small">Flight JL 62 · Confirmation demo #PLR-8842</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Arrival at HND" data-kind="View activity">Details</button>
+        </article>
+        <article class="itinerary-block">
+          <time datetime="2026-10-28T11:30">11:30 AM</time>
+          <div>
+            <strong>Check-in · Shinjuku hotel</strong>
+            <p class="small">Early drop bags · Rooftop views</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Shinjuku hotel" data-kind="View activity">Details</button>
+        </article>
+        <article class="itinerary-block">
+          <time datetime="2026-10-28T14:00">2:00 PM</time>
+          <div>
+            <strong>Meiji Shrine &amp; Harajuku walk</strong>
+            <p class="small">2.5 hr · Walking shoes recommended</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Meiji Shrine walk" data-kind="View activity">Details</button>
+        </article>
+        <article class="itinerary-block">
+          <time datetime="2026-10-28T19:00">7:00 PM</time>
+          <div>
+            <strong>Ramen dinner · Shibuya</strong>
+            <p class="small">Reservation under Poluru · Party of 2</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Ramen dinner Shibuya" data-kind="View activity">Details</button>
+        </article>
+      </div>
+      <button class="text-button" type="button" data-action="modal" data-title="Add activity · Day 1" data-kind="Add activity" style="margin-top:20px">+ Add activity</button>
+    </section>
+
+    <section id="destinations" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">DESTINATIONS</p>
+          <h2>Guides &amp; tips.</h2>
+        </div>
+        <p>Search applies; trip-type filters do not hide guides.</p>
+      </div>
+      <div class="grid collection">
+        <article class="guide-card" data-search="Japan rail pass transport Tokyo">
+          <span class="doc-icon" aria-hidden="true">🚆</span>
+          <p class="small">Japan · Transport</p>
+          <h3>JR Pass basics</h3>
+          <p class="small">When to buy, activation, and Shinkansen seat reservations.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="JR Pass basics" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Packing carry-on checklist">
+          <span class="doc-icon" aria-hidden="true">🎒</span>
+          <p class="small">Any trip · Packing</p>
+          <h3>Carry-on essentials</h3>
+          <p class="small">Liquids, chargers, and documents—TSA-friendly list.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Carry-on essentials" data-kind="View guide">Read guide</button>
+        </article>
+        <article class="guide-card" data-search="Time zones jet lag wellness">
+          <span class="doc-icon" aria-hidden="true">🌙</span>
+          <p class="small">Wellness · Jet lag</p>
+          <h3>Adjusting time zones</h3>
+          <p class="small">Sleep, light exposure, and first-day scheduling tips.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Adjusting time zones" data-kind="View guide">Read guide</button>
+        </article>
+        <p class="empty" hidden>No guides match your search.</p>
+      </div>
+    </section>
+
+    <section class="section" id="pack">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PACK LIST</p>
+          <h2>Tokyo trip essentials.</h2>
+        </div>
+        <p>Tap to mark packed—saved in this browser (<span id="pack-progress">0 / 5</span>).</p>
+      </div>
+      <div class="pack-list">
+        <div class="habit-grid habit-grid-head">
+          <strong>Item</strong>
+          <span>Packed</span>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Passport &amp; copies</strong><small>Documents</small></div>
+          <button type="button" data-action="habit" data-key="passport" aria-pressed="false">·</button>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Universal adapter</strong><small>Electronics</small></div>
+          <button type="button" data-action="habit" data-key="adapter" aria-pressed="false">·</button>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Comfortable walking shoes</strong><small>Clothing</small></div>
+          <button type="button" data-action="habit" data-key="shoes" aria-pressed="false">·</button>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Light rain jacket</strong><small>Weather</small></div>
+          <button type="button" data-action="habit" data-key="jacket" aria-pressed="false">·</button>
+        </div>
+        <div class="habit-grid">
+          <div><strong>Pocket Wi‑Fi confirmation</strong><small>Connectivity</small></div>
+          <button type="button" data-action="habit" data-key="wifi" aria-pressed="false">·</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner trip-banner">
+      <div>
+        <h2>Share your itinerary.</h2>
+        <p>Send a read-only link to travel companions—demo only; nothing is sent.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Tokyo &amp; Kyoto · Autumn" data-kind="Share trip">Share trip</button>
+    </section>
+  </main>
+
+  <footer class="site-footer trip-footer">
+    <div class="container trip-footer-grid">
+      <div class="trip-footer-brand">
+        <span class="brand">Poluru Trips<span style="color:var(--brand)">.</span></span>
+        <p class="small">Travel itinerary planner template. Trips, bookings, and guides are fictional demo content.</p>
+      </div>
+      <div class="trip-footer-links">
+        <p class="footer-label">Planner</p>
+        <a href="#trips">Trips</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#pack">Pack list</a>
+      </div>
+      <div class="trip-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container trip-footer-bottom">
+      <span>© 2026 Poluru Trips</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
