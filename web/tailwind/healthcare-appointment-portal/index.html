@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Care — Healthcare appointment portal</title>
+  <meta name="description" content="Book visits, find providers, and manage appointments in one calm patient portal.">
+  <meta name="theme-color" content="#30497D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="health-portal" data-template="healthcare-appointment-portal" style="--brand:#30497D;--soft:#eef2f7;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="care-header">
+    <div class="container care-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        Poluru Care
+      </a>
+      <nav class="care-nav" aria-label="Main navigation">
+        <a href="#providers">Find care</a>
+        <a href="#specialties">Specialties</a>
+        <a href="#locations">Locations</a>
+        <a href="#visits">My visits</a>
+      </nav>
+      <div class="care-header-actions">
+        <button class="secondary" type="button" data-action="modal" data-title="Your upcoming visits" data-kind="My visits">My visits</button>
+        <button class="primary" type="button" data-action="modal" data-title="Book an appointment" data-kind="Book appointment">Book appointment</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#providers">Find care</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#locations">Locations</a>
+      <a href="#visits">My visits</a>
+      <button class="primary" type="button" data-action="modal" data-title="Book an appointment" data-kind="Book appointment">Book appointment</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="care-hero">
+      <div class="container care-hero-grid">
+        <div class="care-hero-copy">
+          <p class="eyebrow">HEALTHCARE APPOINTMENT PORTAL</p>
+          <h1>Care that fits<br>your schedule.</h1>
+          <p>Search providers, compare open times, and book in-person or video visits—with clear directions and visit prep in one place.</p>
+          <form class="care-search" role="search" aria-label="Search providers">
+            <label class="sr-only" for="care-search">Search providers or specialties</label>
+            <input class="search care-search-input" id="care-search" type="search" placeholder="Doctor, specialty, or location…" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <div class="care-trust">
+            <div>
+              <strong>240+</strong>
+              <span>Providers</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>Clinic locations</span>
+            </div>
+            <div>
+              <strong>Same-week</strong>
+              <span>Availability</span>
+            </div>
+          </div>
+        </div>
+        <aside class="care-hero-panel" aria-label="Upcoming visit summary">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Calm modern medical clinic reception" loading="eager" width="1200" height="800">
+          <p class="eyebrow" style="margin-bottom:8px">NEXT VISIT</p>
+          <strong style="font-family:Roboto,sans-serif;font-size:18px">Annual wellness · Dr. Poluru</strong>
+          <ul>
+            <li><span>Date</span><span>Oct 30, 2026 · 10:30 AM</span></li>
+            <li><span>Location</span><span>Poluru Medical · Austin</span></li>
+            <li><span>Type</span><span>In-person</span></li>
+          </ul>
+          <button class="text-button" type="button" data-action="modal" data-title="Annual wellness visit" data-kind="View visit">Visit details</button>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid care-features">
+      <div>
+        <b>01 /</b>
+        <h3>Clear scheduling</h3>
+        <p>See real-time openings and choose the visit type that works for you.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Connected records</h3>
+        <p>Visit summaries, labs, and messages organized in your patient hub.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Compassionate support</h3>
+        <p>Care coordinators help with referrals, insurance questions, and follow-ups.</p>
+      </div>
+    </section>
+
+    <section id="providers" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PROVIDERS</p>
+          <h2 id="specialties">Find the right clinician.</h2>
+        </div>
+        <p>Filter by specialty or search by name, language, or location.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Primary care" aria-pressed="false">Primary care</button>
+        <button class="filter" type="button" data-filter="Pediatrics" aria-pressed="false">Pediatrics</button>
+        <button class="filter" type="button" data-filter="Mental health" aria-pressed="false">Mental health</button>
+        <button class="filter" type="button" data-filter="Imaging" aria-pressed="false">Imaging</button>
+        <input class="search" type="search" placeholder="Filter providers…" aria-label="Filter providers">
+      </div>
+      <div class="grid collection">
+        <article class="provider-card" data-search="Dr Poluru primary care internal medicine Austin Primary care" data-category="Primary care">
+          <div class="provider-head">
+            <span class="profile" aria-hidden="true">P</span>
+            <div>
+              <h3>Dr. Poluru</h3>
+              <p class="small" style="margin:0">Internal medicine · Poluru Medical</p>
+            </div>
+          </div>
+          <span class="badge">Primary care</span>
+          <p class="slot-tag">Next opening · Thu 9:00 AM</p>
+          <p class="small">Wellness visits, chronic care, and preventive screenings for adults.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Dr. Poluru" data-kind="Book appointment">Book visit</button>
+        </article>
+        <article class="provider-card" data-search="Dr Subra pediatrics children Austin Pediatrics" data-category="Pediatrics">
+          <div class="provider-head">
+            <span class="profile" aria-hidden="true">S</span>
+            <div>
+              <h3>Dr. Subra</h3>
+              <p class="small" style="margin:0">Pediatrics · Poluru Kids Clinic</p>
+            </div>
+          </div>
+          <span class="badge">Pediatrics</span>
+          <p class="slot-tag">Next opening · Fri 2:30 PM</p>
+          <p class="small">Newborn through adolescent care, immunizations, and sick visits.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Dr. Subra" data-kind="Book appointment">Book visit</button>
+        </article>
+        <article class="provider-card" data-search="Subbu LMFT therapy counseling Mental health" data-category="Mental health">
+          <div class="provider-head">
+            <span class="profile" aria-hidden="true">S</span>
+            <div>
+              <h3>Subbu, LMFT</h3>
+              <p class="small" style="margin:0">Behavioral health · Video &amp; in-person</p>
+            </div>
+          </div>
+          <span class="badge">Mental health</span>
+          <p class="slot-tag">Next opening · Wed 4:00 PM</p>
+          <p class="small">Individual therapy, stress management, and care navigation support.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Subbu, LMFT" data-kind="Book appointment">Book visit</button>
+        </article>
+        <article class="provider-card" data-search="Poluru Imaging Center MRI x-ray Imaging" data-category="Imaging">
+          <div class="provider-head">
+            <span class="profile" aria-hidden="true">PI</span>
+            <div>
+              <h3>Poluru Imaging</h3>
+              <p class="small" style="margin:0">Diagnostic imaging · Central Austin</p>
+            </div>
+          </div>
+          <span class="badge">Imaging</span>
+          <p class="slot-tag">Next opening · Tue 8:00 AM</p>
+          <p class="small">MRI, ultrasound, and X-ray with same-day results to your portal.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru Imaging" data-kind="Book appointment">Schedule scan</button>
+        </article>
+        <article class="provider-card" data-search="Dr Subra family medicine primary Primary care" data-category="Primary care">
+          <div class="provider-head">
+            <span class="profile" aria-hidden="true">S</span>
+            <div>
+              <h3>Dr. Subrahmanyam</h3>
+              <p class="small" style="margin:0">Family medicine · Round Rock</p>
+            </div>
+          </div>
+          <span class="badge">Primary care</span>
+          <p class="slot-tag">Next opening · Mon 11:15 AM</p>
+          <p class="small">Whole-family care with same-day sick appointments when available.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Dr. Subrahmanyam" data-kind="Book appointment">Book visit</button>
+        </article>
+        <article class="provider-card" data-search="Mindful Health group therapy Mental health" data-category="Mental health">
+          <div class="provider-head">
+            <span class="profile" aria-hidden="true">M</span>
+            <div>
+              <h3>Mindful Health Group</h3>
+              <p class="small" style="margin:0">Group sessions · South Austin</p>
+            </div>
+          </div>
+          <span class="badge">Mental health</span>
+          <p class="slot-tag">Next opening · Sat 10:00 AM</p>
+          <p class="small">Facilitated groups for anxiety, caregiver support, and mindfulness.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Mindful Health Group" data-kind="Book appointment">Book visit</button>
+        </article>
+        <p class="empty" hidden>No providers match your search. Try another keyword or specialty.</p>
+      </div>
+      <p class="health-disclaimer">Demo portal only. This template does not provide medical advice, emergency services, or live scheduling. For emergencies, call your local emergency number.</p>
+    </section>
+
+    <section id="visits" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">MY VISITS</p>
+          <h2>Upcoming appointments.</h2>
+        </div>
+        <p>Demo list—bookings you save appear in My visits.</p>
+      </div>
+      <div class="visit-panel">
+        <div class="visit-row">
+          <div>
+            <strong>Annual wellness</strong>
+            <p class="small">Dr. Poluru · Oct 30 · 10:30 AM · In-person</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Annual wellness" data-kind="View visit">Details</button>
+        </div>
+        <div class="visit-row">
+          <div>
+            <strong>Video follow-up</strong>
+            <p class="small">Subbu, LMFT · Nov 4 · 4:00 PM · Video</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Video follow-up" data-kind="View visit">Details</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="locations" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">LOCATIONS</p>
+          <h2>Clinics near you.</h2>
+        </div>
+        <p>Parking, transit, and accessibility details for each site.</p>
+      </div>
+      <div class="locations-grid">
+        <article class="location-card">
+          <h3>Poluru Medical · Austin</h3>
+          <p class="small">1200 Wellness Blvd · Primary &amp; specialty care</p>
+          <p class="small">Mon–Fri 8am–6pm · Free parking · Wheelchair accessible</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru Medical · Austin" data-kind="View location">Directions</button>
+        </article>
+        <article class="location-card">
+          <h3>Poluru Kids Clinic</h3>
+          <p class="small">480 Lakeview Dr · Pediatrics only</p>
+          <p class="small">Mon–Sat 8am–5pm · Parent lounge · On-site lab</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Poluru Kids Clinic" data-kind="View location">Directions</button>
+        </article>
+        <article class="location-card">
+          <h3>Round Rock Family Center</h3>
+          <p class="small">900 North Creek · Family medicine</p>
+          <p class="small">Mon–Fri 7:30am–7pm · Extended hours Thu</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Round Rock Family Center" data-kind="View location">Directions</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner care-banner" id="contact">
+      <div>
+        <h2>Need help scheduling?</h2>
+        <p>Our care coordinators can match you with a provider and confirm insurance—demo requests save locally only.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Talk to a care coordinator" data-kind="Contact care">Contact care team</button>
+    </section>
+  </main>
+
+  <footer class="site-footer care-footer">
+    <div class="container care-footer-grid">
+      <div class="care-footer-brand">
+        <span class="brand">Poluru Care<span style="color:var(--brand)">.</span></span>
+        <p class="small">Healthcare appointment portal template. Providers and locations are fictional demo content.</p>
+      </div>
+      <div class="care-footer-links">
+        <p class="footer-label">Portal</p>
+        <a href="#providers">Find care</a>
+        <a href="#visits">My visits</a>
+        <a href="#locations">Locations</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="care-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container care-footer-bottom">
+      <span>© 2026 Poluru Care</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
