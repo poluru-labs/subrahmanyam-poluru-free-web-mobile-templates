@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Plan — Social media content calendar</title>
+  <meta name="description" content="Plan, schedule, and track social posts across channels in one clean content calendar.">
+  <meta name="theme-color" content="#FE0000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="dashboard social-cal" data-template="social-media-content-calendar" style="--brand:#FE0000;--soft:#ffe8e8;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">▣</span>
+      Poluru Plan
+    </a>
+    <p class="nav-label">CONTENT</p>
+    <nav aria-label="Dashboard navigation">
+      <a href="#overview" aria-current="page"><span aria-hidden="true">◫</span> Overview</a>
+      <a href="#calendar"><span aria-hidden="true">▦</span> Calendar</a>
+      <a href="#posts"><span aria-hidden="true">▤</span> Posts</a>
+      <a href="#board"><span aria-hidden="true">▥</span> Board</a>
+      <a href="#channels"><span aria-hidden="true">◎</span> Channels</a>
+    </nav>
+    <div class="side-bottom">
+      <span class="profile" aria-hidden="true">SP</span>
+      <div>
+        <strong>Subra Poluru</strong><br>
+        <span class="small">Content lead · Poluru Labs</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <span>Content hub <span style="color:var(--muted)">/ Overview</span></span>
+      <div>
+        <select aria-label="Reporting period" data-chart-period>
+          <option>This week</option>
+          <option>Last week</option>
+        </select>
+        <span class="profile" title="Subra Poluru">SP</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="dash-heading">
+        <div>
+          <p class="eyebrow">SOCIAL MEDIA CONTENT CALENDAR</p>
+          <h1>Plan posts with clarity.</h1>
+          <p>Schedule across channels, track drafts, and see the week at a glance—no noisy feeds, just your calendar.</p>
+        </div>
+        <button class="primary" type="button" data-action="modal" data-title="New post" data-kind="New post">New post</button>
+      </div>
+
+      <div class="stats" id="overview">
+        <article class="stat">
+          <span class="small">Scheduled this week</span>
+          <div class="metric">18</div>
+          <span class="trend">6 publishing today</span>
+        </article>
+        <article class="stat">
+          <span class="small">Drafts in progress</span>
+          <div class="metric">7</div>
+          <span class="trend">3 need assets</span>
+        </article>
+        <article class="stat">
+          <span class="small">Published (7d)</span>
+          <div class="metric">24</div>
+          <span class="trend">On brand guidelines</span>
+        </article>
+        <article class="stat">
+          <span class="small">Engagement index</span>
+          <div class="metric">4.2k</div>
+          <span class="trend">Demo aggregate</span>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Posts by day</h3>
+              <p>Scheduled volume</p>
+            </div>
+          </div>
+          <div class="chart" aria-label="Weekly scheduled posts: 3, 5, 4, 6, 5, 2, 1">
+            <div class="bar" style="--height:35%"><span>Mon</span></div>
+            <div class="bar" style="--height:58%"><span>Tue</span></div>
+            <div class="bar" style="--height:48%"><span>Wed</span></div>
+            <div class="bar" style="--height:72%"><span>Thu</span></div>
+            <div class="bar" style="--height:60%"><span>Fri</span></div>
+            <div class="bar" style="--height:28%"><span>Sat</span></div>
+            <div class="bar" style="--height:18%"><span>Sun</span></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Channel mix</h3>
+              <p>This week’s schedule</p>
+            </div>
+            <button class="secondary" type="button" data-action="export">Export ↗</button>
+          </div>
+          <div class="progress-card">
+            <div class="fulfillment-row">
+              <span>LinkedIn</span>
+              <strong>8</strong>
+            </div>
+            <div class="progress" style="--progress:44%"><span></span></div>
+            <div class="fulfillment-row">
+              <span>Instagram</span>
+              <strong>6</strong>
+            </div>
+            <div class="progress" style="--progress:33%"><span></span></div>
+            <div class="fulfillment-row">
+              <span>X</span>
+              <strong>4</strong>
+            </div>
+            <div class="progress" style="--progress:22%"><span></span></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel" id="calendar">
+        <div class="panel-head">
+          <div>
+            <h3>Week of Oct 26</h3>
+            <p>Scheduled slots</p>
+          </div>
+          <button class="text-button" type="button" data-action="modal" data-title="Full calendar" data-kind="View calendar">Month view</button>
+        </div>
+        <div class="week-cal">
+          <article class="week-day">
+            <h4>Mon 26</h4>
+            <ul>
+              <li><span class="channel-pill channel-linkedin">LI</span> Product tip · 9:00 AM</li>
+              <li><span class="channel-pill channel-x">X</span> Thread draft · 2:00 PM</li>
+            </ul>
+          </article>
+          <article class="week-day">
+            <h4>Tue 27</h4>
+            <ul>
+              <li><span class="channel-pill channel-instagram">IG</span> Reel · 11:00 AM</li>
+              <li><span class="channel-pill channel-linkedin">LI</span> Case study · 4:00 PM</li>
+            </ul>
+          </article>
+          <article class="week-day">
+            <h4>Wed 28</h4>
+            <ul>
+              <li><span class="channel-pill channel-tiktok">TT</span> BTS clip · 6:00 PM</li>
+            </ul>
+          </article>
+          <article class="week-day">
+            <h4>Thu 29</h4>
+            <ul>
+              <li><span class="channel-pill channel-instagram">IG</span> Carousel · 10:00 AM</li>
+              <li><span class="channel-pill channel-x">X</span> Launch day · 1:00 PM</li>
+            </ul>
+          </article>
+          <article class="week-day">
+            <h4>Fri 30</h4>
+            <ul>
+              <li><span class="channel-pill channel-linkedin">LI</span> Team spotlight · 9:30 AM</li>
+            </ul>
+          </article>
+          <article class="week-day">
+            <h4>Sat 31</h4>
+            <ul>
+              <li class="small" style="list-style:none;margin:0;color:var(--muted)">No posts scheduled</li>
+            </ul>
+          </article>
+          <article class="week-day">
+            <h4>Sun 1</h4>
+            <ul>
+              <li><span class="channel-pill channel-instagram">IG</span> Story set · 5:00 PM</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="posts">
+        <div class="panel-head">
+          <div>
+            <h3>Post queue</h3>
+            <p>Search and filter by channel</p>
+          </div>
+        </div>
+        <div class="filters">
+          <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="LinkedIn" aria-pressed="false">LinkedIn</button>
+          <button class="filter" type="button" data-filter="Instagram" aria-pressed="false">Instagram</button>
+          <button class="filter" type="button" data-filter="X" aria-pressed="false">X</button>
+          <button class="filter" type="button" data-filter="TikTok" aria-pressed="false">TikTok</button>
+          <input class="search" type="search" placeholder="Search posts…" aria-label="Search posts">
+        </div>
+        <div class="table-wrap collection">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Post</th>
+                <th scope="col">Channel</th>
+                <th scope="col">Scheduled</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-search="Product tip LinkedIn Subra scheduled" data-category="LinkedIn">
+                <td><strong>Product tip #42</strong></td>
+                <td>LinkedIn</td>
+                <td>Oct 26 · 9:00 AM</td>
+                <td>Subra</td>
+                <td><span class="status-pill status-scheduled">Scheduled</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Product tip #42" data-kind="View post">Open</button></td>
+              </tr>
+              <tr data-search="Reel launch Instagram Poluru draft" data-category="Instagram">
+                <td><strong>Reel · Launch day</strong></td>
+                <td>Instagram</td>
+                <td>Oct 27 · 11:00 AM</td>
+                <td>Poluru</td>
+                <td><span class="status-pill status-draft">Draft</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Reel · Launch day" data-kind="View post">Open</button></td>
+              </tr>
+              <tr data-search="Thread API update X Subbu scheduled" data-category="X">
+                <td><strong>Thread · API update</strong></td>
+                <td>X</td>
+                <td>Oct 26 · 2:00 PM</td>
+                <td>Subbu</td>
+                <td><span class="status-pill status-scheduled">Scheduled</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Thread · API update" data-kind="View post">Open</button></td>
+              </tr>
+              <tr data-search="BTS TikTok Subra review" data-category="TikTok">
+                <td><strong>BTS · Office tour</strong></td>
+                <td>TikTok</td>
+                <td>Oct 28 · 6:00 PM</td>
+                <td>Subra</td>
+                <td><span class="status-pill status-review">In review</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="BTS · Office tour" data-kind="View post">Open</button></td>
+              </tr>
+              <tr data-search="Carousel metrics Instagram Poluru scheduled" data-category="Instagram">
+                <td><strong>Carousel · Metrics recap</strong></td>
+                <td>Instagram</td>
+                <td>Oct 29 · 10:00 AM</td>
+                <td>Poluru</td>
+                <td><span class="status-pill status-scheduled">Scheduled</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Carousel · Metrics recap" data-kind="View post">Open</button></td>
+              </tr>
+              <tr data-search="Case study LinkedIn Subbu published" data-category="LinkedIn">
+                <td><strong>Case study · Poluru Labs</strong></td>
+                <td>LinkedIn</td>
+                <td>Oct 24 · Published</td>
+                <td>Subbu</td>
+                <td><span class="status-pill status-published">Published</span></td>
+                <td><button class="text-button" type="button" data-action="modal" data-title="Case study · Poluru Labs" data-kind="View post">Open</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty" hidden>No posts match your search.</p>
+        </div>
+        <p class="social-disclaimer">Demo calendar only. Posts, metrics, and channels are fictional. No live social APIs connected.</p>
+      </section>
+
+      <section class="panel" id="board">
+        <div class="panel-head">
+          <div>
+            <h3>Content board</h3>
+            <p>Advance cards to the next stage (demo)</p>
+          </div>
+        </div>
+        <div class="kanban">
+          <section class="kanban-column" data-stage="Ideas">
+            <h3>Ideas <span class="badge">2</span></h3>
+            <article class="job-card">
+              <h3>Customer quote series</h3>
+              <p class="small">Poluru · Needs copy</p>
+              <span class="badge">Idea</span><br>
+              <button class="text-button" type="button" data-action="move">Advance →</button>
+            </article>
+            <article class="job-card">
+              <h3>Holiday giveaway</h3>
+              <p class="small">Subbu · Legal review</p>
+              <span class="badge">Idea</span><br>
+              <button class="text-button" type="button" data-action="move">Advance →</button>
+            </article>
+          </section>
+          <section class="kanban-column" data-stage="Draft">
+            <h3>Draft <span class="badge">1</span></h3>
+            <article class="job-card">
+              <h3>Feature highlight video</h3>
+              <p class="small">Subra · Asset due Oct 27</p>
+              <span class="badge">Draft</span><br>
+              <button class="text-button" type="button" data-action="move">Advance →</button>
+            </article>
+          </section>
+          <section class="kanban-column" data-stage="Scheduled">
+            <h3>Scheduled <span class="badge">1</span></h3>
+            <article class="job-card">
+              <h3>Launch countdown</h3>
+              <p class="small">All channels · Oct 29</p>
+              <span class="badge">Scheduled</span><br>
+              <button class="text-button" type="button" data-action="modal" data-title="Launch countdown" data-kind="View post">Details</button>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel" id="channels">
+        <div class="panel-head">
+          <div>
+            <h3>Connected channels</h3>
+            <p>Demo accounts for layout</p>
+          </div>
+        </div>
+        <div class="channel-grid">
+          <article class="channel-card">
+            <span class="channel-pill channel-linkedin">LinkedIn</span>
+            <h3>Poluru Labs</h3>
+            <p class="small">8 posts this week · Last sync 10 min ago</p>
+            <button class="text-button" type="button" data-action="modal" data-title="LinkedIn · Poluru Labs" data-kind="View channel">Manage</button>
+          </article>
+          <article class="channel-card">
+            <span class="channel-pill channel-instagram">Instagram</span>
+            <h3>@poluru.studio</h3>
+            <p class="small">6 posts this week · Last sync 1 hr ago</p>
+            <button class="text-button" type="button" data-action="modal" data-title="@poluru.studio" data-kind="View channel">Manage</button>
+          </article>
+          <article class="channel-card">
+            <span class="channel-pill channel-x">X</span>
+            <h3>@poluru_labs</h3>
+            <p class="small">4 posts this week · Last sync 20 min ago</p>
+            <button class="text-button" type="button" data-action="modal" data-title="@poluru_labs" data-kind="View channel">Manage</button>
+          </article>
+          <article class="channel-card">
+            <span class="channel-pill channel-tiktok">TikTok</span>
+            <h3>@subra.builds</h3>
+            <p class="small">2 posts this week · Last sync 3 hr ago</p>
+            <button class="text-button" type="button" data-action="modal" data-title="@subra.builds" data-kind="View channel">Manage</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer social-footer">
+      <div class="social-footer-grid">
+        <div>
+          <span class="brand">Poluru Plan<span style="color:var(--brand)">.</span></span>
+          <p class="small" style="margin-top:12px">Social media content calendar template. Posts, metrics, and channels are fictional demo content.</p>
+        </div>
+        <div class="social-footer-links">
+          <p class="footer-label">Workspace</p>
+          <a href="#overview">Overview</a>
+          <a href="#calendar">Calendar</a>
+          <a href="#posts">Posts</a>
+          <a href="#board">Board</a>
+          <a href="#channels">Channels</a>
+        </div>
+        <div>
+          <p class="footer-label">Author</p>
+          <p><strong>Subrahmanyam Poluru</strong></p>
+          <p class="small">Designer &amp; developer · Poluru Labs</p>
+          <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+        </div>
+      </div>
+      <div class="social-footer-bottom">
+        <span>© 2026 Poluru Plan</span>
+        <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+      </div>
+    </footer>
+  </div>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
