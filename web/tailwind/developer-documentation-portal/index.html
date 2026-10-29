@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru DevDocs — Developer documentation portal</title>
+  <meta name="description" content="Clear API reference, guides, and SDK docs to ship integrations faster.">
+  <meta name="theme-color" content="#1B4EF5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="docs" data-template="developer-documentation-portal" style="--brand:#1B4EF5;--soft:#eef2fe;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="docs-header">
+    <div class="container docs-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        Poluru DevDocs
+      </a>
+      <nav class="docs-nav" aria-label="Main navigation">
+        <a href="#guides">Guides</a>
+        <a href="#reference">API reference</a>
+        <a href="#sdks">SDKs</a>
+        <a href="#changelog">Changelog</a>
+      </nav>
+      <div class="docs-header-actions">
+        <a class="secondary" href="#reference">View API</a>
+        <button class="primary" type="button" data-action="modal" data-title="Request a demo API key" data-kind="Get API key">Get API key</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#guides">Guides</a>
+      <a href="#reference">API reference</a>
+      <a href="#sdks">SDKs</a>
+      <a href="#changelog">Changelog</a>
+      <button class="primary" type="button" data-action="modal" data-title="Request a demo API key" data-kind="Get API key">Get API key</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="docs-hero">
+      <div class="container docs-hero-grid">
+        <div class="docs-hero-copy">
+          <p class="eyebrow">DEVELOPER DOCUMENTATION</p>
+          <h1>Build with clarity.<br>Ship with confidence.</h1>
+          <p>Everything you need to integrate Poluru APIs—authentication, endpoints, webhooks, and copy-paste examples in one clean portal.</p>
+          <form class="docs-search" role="search" aria-label="Search documentation">
+            <label class="sr-only" for="doc-search">Search documentation</label>
+            <input class="search docs-search-input" id="doc-search" type="search" placeholder="Search guides, endpoints, and SDKs…" autocomplete="off">
+            <button class="primary" type="submit">Search</button>
+          </form>
+          <ul class="docs-meta">
+            <li><strong>v2.4</strong> Latest stable</li>
+            <li><strong>REST + Webhooks</strong> Full coverage</li>
+            <li><strong>&lt; 5 min</strong> First request</li>
+          </ul>
+        </div>
+        <aside class="code-panel" aria-label="Quick start example">
+          <div class="code-panel-head">
+            <span class="code-panel-title">Quick start</span>
+            <span class="badge">Node.js</span>
+            <button class="text-button code-copy" type="button" data-action="copy-code" data-copy-target="quickstart-code">Copy</button>
+          </div>
+          <pre id="quickstart-code" class="code-block"><code>import { PoluruClient } from '@poluru/sdk';
+
+const client = new PoluruClient({
+  apiKey: process.env.POLURU_API_KEY,
+});
+
+const profile = await client.users.me();
+console.log(profile.id, profile.email);</code></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid docs-features">
+      <div>
+        <b>01 /</b>
+        <h3>Structured guides</h3>
+        <p>Step-by-step paths from first request to production, written for busy engineering teams.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Accurate reference</h3>
+        <p>Every endpoint, parameter, and response shape in one searchable catalog.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Real-world examples</h3>
+        <p>SDK snippets, curl samples, and webhook payloads you can paste and adapt.</p>
+      </div>
+    </section>
+
+    <section id="guides" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">GUIDES</p>
+          <h2>Start where you are.</h2>
+        </div>
+        <p>Pick a path—onboarding, security, or scaling—and follow clear, opinionated documentation.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Getting started" aria-pressed="false">Getting started</button>
+        <button class="filter" type="button" data-filter="Security" aria-pressed="false">Security</button>
+        <button class="filter" type="button" data-filter="Integrations" aria-pressed="false">Integrations</button>
+      </div>
+      <div class="grid collection">
+        <article class="doc-card" data-search="Authentication and API keys Getting started Secure access for every environment" data-category="Getting started">
+          <span class="doc-icon" aria-hidden="true">🔑</span>
+          <p class="small">Getting started · 8 min read</p>
+          <h3>Authentication &amp; API keys</h3>
+          <p class="doc-card-desc">Create keys, rotate credentials, and scope access for staging and production.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Authentication &amp; API keys" data-kind="Open guide">Read guide</button>
+        </article>
+        <article class="doc-card" data-search="Webhooks and events Integrations Real-time updates for your stack" data-category="Integrations">
+          <span class="doc-icon" aria-hidden="true">⚡</span>
+          <p class="small">Integrations · 12 min read</p>
+          <h3>Webhooks &amp; events</h3>
+          <p class="doc-card-desc">Verify signatures, handle retries, and keep idempotent handlers in sync.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Webhooks &amp; events" data-kind="Open guide">Read guide</button>
+        </article>
+        <article class="doc-card" data-search="Rate limits and quotas Security Protect your integration at scale" data-category="Security">
+          <span class="doc-icon" aria-hidden="true">🛡</span>
+          <p class="small">Security · 6 min read</p>
+          <h3>Rate limits &amp; quotas</h3>
+          <p class="doc-card-desc">Understand burst limits, backoff strategies, and monitoring best practices.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Rate limits &amp; quotas" data-kind="Open guide">Read guide</button>
+        </article>
+        <article class="doc-card" data-search="Pagination and filtering Getting started List resources efficiently" data-category="Getting started">
+          <span class="doc-icon" aria-hidden="true">📄</span>
+          <p class="small">Getting started · 5 min read</p>
+          <h3>Pagination &amp; filtering</h3>
+          <p class="doc-card-desc">Cursor-based lists, stable sorts, and filters that behave predictably.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Pagination &amp; filtering" data-kind="Open guide">Read guide</button>
+        </article>
+        <article class="doc-card" data-search="OAuth for partners Integrations Connect third-party applications" data-category="Integrations">
+          <span class="doc-icon" aria-hidden="true">🔗</span>
+          <p class="small">Integrations · 15 min read</p>
+          <h3>OAuth for partners</h3>
+          <p class="doc-card-desc">Authorization flows, refresh tokens, and secure redirect handling.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="OAuth for partners" data-kind="Open guide">Read guide</button>
+        </article>
+        <article class="doc-card" data-search="Error handling Security Consistent codes and recovery patterns" data-category="Security">
+          <span class="doc-icon" aria-hidden="true">✓</span>
+          <p class="small">Security · 7 min read</p>
+          <h3>Error handling</h3>
+          <p class="doc-card-desc">HTTP status codes, error objects, and retry rules you can rely on.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Error handling" data-kind="Open guide">Read guide</button>
+        </article>
+        <p class="empty" hidden>No guides match your search. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <section id="reference" class="section docs-reference">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">API REFERENCE</p>
+          <h2>Endpoints at a glance.</h2>
+        </div>
+        <p>REST resources with consistent naming, versioning, and JSON responses.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Method</th>
+              <th scope="col">Endpoint</th>
+              <th scope="col">Description</th>
+              <th scope="col">Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="http-badge http-get">GET</span></td>
+              <td><code>/v2/users/me</code></td>
+              <td>Return the authenticated user profile</td>
+              <td><span class="badge">read</span></td>
+            </tr>
+            <tr>
+              <td><span class="http-badge http-post">POST</span></td>
+              <td><code>/v2/projects</code></td>
+              <td>Create a new project workspace</td>
+              <td><span class="badge">write</span></td>
+            </tr>
+            <tr>
+              <td><span class="http-badge http-get">GET</span></td>
+              <td><code>/v2/projects/:id</code></td>
+              <td>Fetch project details and settings</td>
+              <td><span class="badge">read</span></td>
+            </tr>
+            <tr>
+              <td><span class="http-badge http-patch">PATCH</span></td>
+              <td><code>/v2/projects/:id</code></td>
+              <td>Update project metadata</td>
+              <td><span class="badge">write</span></td>
+            </tr>
+            <tr>
+              <td><span class="http-badge http-post">POST</span></td>
+              <td><code>/v2/webhooks</code></td>
+              <td>Register an HTTPS webhook endpoint</td>
+              <td><span class="badge">admin</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="code-panel code-panel-inline">
+        <div class="code-panel-head">
+          <span class="code-panel-title">Example request</span>
+          <span class="badge">curl</span>
+          <button class="text-button code-copy" type="button" data-action="copy-code" data-copy-target="curl-example">Copy</button>
+        </div>
+        <pre id="curl-example" class="code-block"><code>curl -X GET "https://api.poluru.dev/v2/users/me" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Accept: application/json"</code></pre>
+      </div>
+    </section>
+
+    <section id="sdks" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">SDKs</p>
+          <h2>Official client libraries.</h2>
+        </div>
+        <p>Maintained packages with typed models, retries, and pagination helpers.</p>
+      </div>
+      <div class="sdk-grid">
+        <article class="sdk-card">
+          <h3>Node.js</h3>
+          <p class="small">TypeScript · ESM &amp; CJS</p>
+          <code>npm install @poluru/sdk</code>
+          <button class="text-button" type="button" data-action="modal" data-title="Node.js SDK" data-kind="View SDK">View docs</button>
+        </article>
+        <article class="sdk-card">
+          <h3>Python</h3>
+          <p class="small">3.10+ · asyncio support</p>
+          <code>pip install poluru</code>
+          <button class="text-button" type="button" data-action="modal" data-title="Python SDK" data-kind="View SDK">View docs</button>
+        </article>
+        <article class="sdk-card">
+          <h3>Go</h3>
+          <p class="small">Modules · context-aware</p>
+          <code>go get github.com/poluru/poluru-go</code>
+          <button class="text-button" type="button" data-action="modal" data-title="Go SDK" data-kind="View SDK">View docs</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="changelog" class="section docs-changelog">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CHANGELOG</p>
+          <h2>What shipped recently.</h2>
+        </div>
+        <p>Transparent release notes for API and documentation updates.</p>
+      </div>
+      <ol class="changelog-list">
+        <li>
+          <time datetime="2026-09-28">Sep 28, 2026</time>
+          <div>
+            <strong>v2.4.0</strong>
+            <p>Added cursor pagination on <code>/v2/projects</code> and expanded webhook event catalog.</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-09-12">Sep 12, 2026</time>
+          <div>
+            <strong>v2.3.2</strong>
+            <p>Documentation refresh: new OAuth guide and improved error reference tables.</p>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-08-30">Aug 30, 2026</time>
+          <div>
+            <strong>v2.3.0</strong>
+            <p>Python SDK 1.2 with asyncio helpers; Go client now supports automatic retries.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="banner docs-banner" id="contact">
+      <div>
+        <h2>Ready to integrate?</h2>
+        <p>Request a sandbox API key and explore the full reference with sample data—no credit card required.</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Sandbox API access" data-kind="Get API key">Get sandbox access</button>
+    </section>
+  </main>
+
+  <footer class="site-footer docs-footer">
+    <div class="container docs-footer-grid">
+      <div class="docs-footer-brand">
+        <span class="brand">Poluru DevDocs<span style="color:var(--brand)">.</span></span>
+        <p class="small">Developer documentation portal template. Fictional API names and endpoints for demo purposes.</p>
+      </div>
+      <div class="docs-footer-links">
+        <p class="footer-label">Documentation</p>
+        <a href="#guides">Guides</a>
+        <a href="#reference">API reference</a>
+        <a href="#sdks">SDKs</a>
+        <a href="#changelog">Changelog</a>
+      </div>
+      <div class="docs-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container docs-footer-bottom">
+      <span>© 2026 Poluru DevDocs</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
