@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poluru Give — Nonprofit donation platform</title>
+  <meta name="description" content="Discover campaigns, give with confidence, and see transparent impact—all in one calm giving portal.">
+  <meta name="theme-color" content="#309898">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body class="nonprofit-give" data-template="nonprofit-donation-platform" style="--brand:#309898;--soft:#e6f5f5;">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="give-header">
+    <div class="container give-header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">♥</span>
+        Poluru Give
+      </a>
+      <nav class="give-nav" aria-label="Main navigation">
+        <a href="#campaigns">Campaigns</a>
+        <a href="#impact">Impact</a>
+        <a href="#transparency">Transparency</a>
+        <a href="#give">Give</a>
+      </nav>
+      <div class="give-header-actions">
+        <button class="secondary" type="button" data-action="export">Export report</button>
+        <button class="primary" type="button" data-action="modal" data-title="Your giving" data-kind="View pledges">Giving · 0</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-action="menu">
+        <span class="sr-only">Open menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#campaigns">Campaigns</a>
+      <a href="#impact">Impact</a>
+      <a href="#transparency">Transparency</a>
+      <a href="#give">Give</a>
+      <button class="primary" type="button" data-action="modal" data-title="Your giving" data-kind="View pledges">Giving · 0</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="give-hero">
+      <div class="container give-hero-grid">
+        <div class="give-hero-copy">
+          <p class="eyebrow">NONPROFIT DONATION PLATFORM</p>
+          <h1>Give with clarity.<br>See the change.</h1>
+          <p>Support vetted campaigns, set one-time or monthly gifts, and follow outcomes with open reporting—no clutter, no pressure.</p>
+          <form class="give-search" role="search" aria-label="Search campaigns">
+            <label class="sr-only" for="campaign-search">Search campaigns</label>
+            <input class="search give-search-input" id="campaign-search" type="search" placeholder="Cause, region, or campaign name…" autocomplete="off">
+            <button class="primary" type="submit">Find campaigns</button>
+          </form>
+          <div class="give-kpi">
+            <div>
+              <strong>$2.4M</strong>
+              <span>Raised this year</span>
+            </div>
+            <div>
+              <strong>18,420</strong>
+              <span>Active donors</span>
+            </div>
+            <div>
+              <strong>92%</strong>
+              <span>To programs</span>
+            </div>
+          </div>
+        </div>
+        <aside class="give-featured" aria-label="Featured campaign">
+          <img src="https://images.unsplash.com/photo-1488526537941-fbf49868a5c2?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Volunteers packing meals for community delivery" loading="eager" width="1200" height="800">
+          <div class="give-featured-body">
+            <span class="cause-pill cause-community">Community</span>
+            <strong>Meals for Neighbors</strong>
+            <p class="small">Austin · Poluru Community Fund · Goal $120,000</p>
+            <div class="progress" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" aria-label="Campaign funded 76 percent"><span style="--progress:76%"></span></div>
+            <p class="small fund-line"><span>$91,200 raised</span><span>24 days left</span></p>
+            <button class="primary" type="button" data-action="modal" data-title="Meals for Neighbors" data-kind="Donate now">Donate now</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="feature-grid give-features">
+      <div>
+        <b>01 /</b>
+        <h3>Vetted partners</h3>
+        <p>Every campaign is reviewed for governance, financials, and measurable outcomes.</p>
+      </div>
+      <div>
+        <b>02 /</b>
+        <h3>Flexible giving</h3>
+        <p>One-time gifts, monthly pledges, and employer matching—all in one checkout flow.</p>
+      </div>
+      <div>
+        <b>03 /</b>
+        <h3>Open books</h3>
+        <p>Download impact summaries and see how dollars move from gift to program.</p>
+      </div>
+    </section>
+
+    <section id="campaigns" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CAMPAIGNS</p>
+          <h2>Causes that need you.</h2>
+        </div>
+        <p>Demo campaigns—filter by focus area or search by name and region.</p>
+      </div>
+      <div class="filters">
+        <button class="filter active" type="button" data-filter="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="Education" aria-pressed="false">Education</button>
+        <button class="filter" type="button" data-filter="Health" aria-pressed="false">Health</button>
+        <button class="filter" type="button" data-filter="Environment" aria-pressed="false">Environment</button>
+        <button class="filter" type="button" data-filter="Community" aria-pressed="false">Community</button>
+        <input class="search" type="search" placeholder="Filter campaigns…" aria-label="Filter campaigns">
+      </div>
+      <div class="grid collection">
+        <article class="campaign-card" data-search="Bright Futures scholarship Education Austin Subra" data-category="Education">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Students in a classroom" loading="lazy" width="1200" height="800">
+            <span class="cause-pill cause-education">Education</span>
+            <button class="favorite" aria-label="Save Bright Futures scholarship" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Austin · Subra Education Trust</p>
+            <h3>Bright Futures scholarship</h3>
+            <div class="progress" aria-hidden="true"><span style="--progress:62%"></span></div>
+            <p class="small fund-line"><span>62% funded</span><span>$48,800 / $78,000</span></p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Bright Futures scholarship" data-kind="View campaign">View campaign</button>
+              <button class="primary card-donate" type="button" data-action="modal" data-title="Bright Futures scholarship" data-kind="Donate now">Give</button>
+            </div>
+          </div>
+        </article>
+        <article class="campaign-card" data-search="Mobile clinic Health rural Poluru" data-category="Health">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Healthcare worker with patient" loading="lazy" width="1200" height="800">
+            <span class="cause-pill cause-health">Health</span>
+            <button class="favorite" aria-label="Save Mobile clinic fund" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Rural Texas · Poluru Care Alliance</p>
+            <h3>Mobile clinic fund</h3>
+            <div class="progress" aria-hidden="true"><span style="--progress:84%"></span></div>
+            <p class="small fund-line"><span>84% funded</span><span>$168,000 / $200,000</span></p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Mobile clinic fund" data-kind="View campaign">View campaign</button>
+              <button class="primary card-donate" type="button" data-action="modal" data-title="Mobile clinic fund" data-kind="Donate now">Give</button>
+            </div>
+          </div>
+        </article>
+        <article class="campaign-card" data-search="Urban tree canopy Environment Chicago Subbu" data-category="Environment">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Sunlight through forest trees" loading="lazy" width="1200" height="800">
+            <span class="cause-pill cause-environment">Environment</span>
+            <button class="favorite" aria-label="Save Urban tree canopy" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Chicago · Subbu Green Works</p>
+            <h3>Urban tree canopy</h3>
+            <div class="progress" aria-hidden="true"><span style="--progress:41%"></span></div>
+            <p class="small fund-line"><span>41% funded</span><span>$32,800 / $80,000</span></p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Urban tree canopy" data-kind="View campaign">View campaign</button>
+              <button class="primary card-donate" type="button" data-action="modal" data-title="Urban tree canopy" data-kind="Donate now">Give</button>
+            </div>
+          </div>
+        </article>
+        <article class="campaign-card" data-search="Youth coding lab Education Denver Poluru" data-category="Education">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Person coding on a laptop" loading="lazy" width="1200" height="800">
+            <span class="cause-pill cause-education">Education</span>
+            <button class="favorite" aria-label="Save Youth coding lab" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Denver · Poluru Tech for Good</p>
+            <h3>Youth coding lab</h3>
+            <div class="progress" aria-hidden="true"><span style="--progress:55%"></span></div>
+            <p class="small fund-line"><span>55% funded</span><span>$27,500 / $50,000</span></p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Youth coding lab" data-kind="View campaign">View campaign</button>
+              <button class="primary card-donate" type="button" data-action="modal" data-title="Youth coding lab" data-kind="Donate now">Give</button>
+            </div>
+          </div>
+        </article>
+        <article class="campaign-card" data-search="Clean water wells Environment Kenya Community" data-category="Environment">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1548839140-5a059f413910?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Community gathering at a water well" loading="lazy" width="1200" height="800">
+            <span class="cause-pill cause-environment">Environment</span>
+            <button class="favorite" aria-label="Save Clean water wells" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">East Africa · Global Water Partners</p>
+            <h3>Clean water wells</h3>
+            <div class="progress" aria-hidden="true"><span style="--progress:73%"></span></div>
+            <p class="small fund-line"><span>73% funded</span><span>$146,000 / $200,000</span></p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Clean water wells" data-kind="View campaign">View campaign</button>
+              <button class="primary card-donate" type="button" data-action="modal" data-title="Clean water wells" data-kind="Donate now">Give</button>
+            </div>
+          </div>
+        </article>
+        <article class="campaign-card" data-search="Emergency shelter Community Seattle Subra" data-category="Community">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Volunteers organizing supplies" loading="lazy" width="1200" height="800">
+            <span class="cause-pill cause-community">Community</span>
+            <button class="favorite" aria-label="Save Emergency shelter network" aria-pressed="false" data-action="favorite">♡</button>
+          </div>
+          <div class="card-body">
+            <p class="small">Seattle · Subra Neighbors Fund</p>
+            <h3>Emergency shelter network</h3>
+            <div class="progress" aria-hidden="true"><span style="--progress:58%"></span></div>
+            <p class="small fund-line"><span>58% funded</span><span>$87,000 / $150,000</span></p>
+            <div class="card-bottom">
+              <button class="text-button" type="button" data-action="modal" data-title="Emergency shelter network" data-kind="View campaign">View campaign</button>
+              <button class="primary card-donate" type="button" data-action="modal" data-title="Emergency shelter network" data-kind="Donate now">Give</button>
+            </div>
+          </div>
+        </article>
+        <p class="empty" hidden>No campaigns match your search.</p>
+      </div>
+      <p class="give-disclaimer">Demo platform only. Campaigns, totals, and tax receipts are fictional. No payment processing is connected.</p>
+    </section>
+
+    <section id="impact" class="section give-impact">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">IMPACT</p>
+          <h2>Outcomes at a glance.</h2>
+        </div>
+        <p>Program results from partner organizations—sample metrics for layout.</p>
+      </div>
+      <div class="impact-grid">
+        <article class="impact-stat">
+          <p class="footer-label">Education</p>
+          <strong class="impact-metric">1,240</strong>
+          <p class="small">Scholarships funded since 2024</p>
+        </article>
+        <article class="impact-stat">
+          <p class="footer-label">Health</p>
+          <strong class="impact-metric">18,600</strong>
+          <p class="small">Clinic visits supported</p>
+        </article>
+        <article class="impact-stat">
+          <p class="footer-label">Environment</p>
+          <strong class="impact-metric">42k</strong>
+          <p class="small">Trees planted in partner cities</p>
+        </article>
+        <article class="impact-stat">
+          <p class="footer-label">Community</p>
+          <strong class="impact-metric">890k</strong>
+          <p class="small">Meals delivered to families</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="transparency" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">TRANSPARENCY</p>
+          <h2>Recent gifts.</h2>
+        </div>
+        <p>Public activity feed (demo)—names shown with donor consent.</p>
+      </div>
+      <div class="table-wrap collection">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Donor</th>
+              <th scope="col">Campaign</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Date</th>
+              <th scope="col">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-search="Poluru Mobile clinic 250 Oct 26 Monthly">
+              <td><strong>Poluru P.</strong></td>
+              <td>Mobile clinic fund</td>
+              <td>$250</td>
+              <td>Oct 26, 2026</td>
+              <td><span class="cause-pill cause-health">Monthly</span></td>
+            </tr>
+            <tr data-search="Subra Bright Futures 100 Oct 25 One-time">
+              <td><strong>Subra S.</strong></td>
+              <td>Bright Futures scholarship</td>
+              <td>$100</td>
+              <td>Oct 25, 2026</td>
+              <td><span class="cause-pill cause-education">One-time</span></td>
+            </tr>
+            <tr data-search="Subbu Urban tree 75 Oct 24 One-time">
+              <td><strong>Subbu K.</strong></td>
+              <td>Urban tree canopy</td>
+              <td>$75</td>
+              <td>Oct 24, 2026</td>
+              <td><span class="cause-pill cause-environment">One-time</span></td>
+            </tr>
+            <tr data-search="Anonymous Meals for Neighbors 500 Oct 23 Corporate match">
+              <td><strong>Anonymous</strong></td>
+              <td>Meals for Neighbors</td>
+              <td>$500</td>
+              <td>Oct 23, 2026</td>
+              <td><span class="cause-pill cause-community">Match</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="empty" hidden>No gifts match your search.</p>
+      </div>
+      <div class="grid give-resources collection" style="margin-top:40px">
+        <article class="guide-card" data-search="Annual impact report PDF Transparency">
+          <span class="doc-icon" aria-hidden="true">📄</span>
+          <p class="small">Reporting · 2025</p>
+          <h3>Annual impact report</h3>
+          <p class="small">Program outcomes, audited financials, and board governance summary.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Annual impact report" data-kind="View report">View report</button>
+        </article>
+        <article class="guide-card" data-search="Donor bill of rights policy Transparency">
+          <span class="doc-icon" aria-hidden="true">📋</span>
+          <p class="small">Policy · Donor care</p>
+          <h3>Donor bill of rights</h3>
+          <p class="small">Privacy, opt-out, and how we use your contact information.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Donor bill of rights" data-kind="View report">Read policy</button>
+        </article>
+        <article class="guide-card" data-search="Tax receipt FAQ giving Transparency">
+          <span class="doc-icon" aria-hidden="true">🧾</span>
+          <p class="small">FAQ · Receipts</p>
+          <h3>Tax receipts &amp; records</h3>
+          <p class="small">When receipts arrive, how to update billing, and monthly statements.</p>
+          <button class="text-button" type="button" data-action="modal" data-title="Tax receipts &amp; records" data-kind="View report">Read FAQ</button>
+        </article>
+        <p class="empty" hidden>No resources match your search.</p>
+      </div>
+    </section>
+
+    <section class="section" id="give">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">WAYS TO GIVE</p>
+          <h2>Choose your path.</h2>
+        </div>
+        <p>Demo checkout—forms save locally only; no cards or bank data are collected.</p>
+      </div>
+      <div class="grid give-tiers">
+        <article class="guide-card">
+          <h3>One-time gift</h3>
+          <p class="small">Give any amount to a campaign you care about today.</p>
+          <button class="primary" type="button" data-action="modal" data-title="One-time gift" data-kind="Donate now">Give once</button>
+        </article>
+        <article class="guide-card">
+          <h3>Monthly pledge</h3>
+          <p class="small">Sustain programs with a recurring gift you can change anytime.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Monthly pledge" data-kind="Monthly giving">Start monthly</button>
+        </article>
+        <article class="guide-card">
+          <h3>Employer match</h3>
+          <p class="small">Double your impact when your company matches eligible donations.</p>
+          <button class="primary" type="button" data-action="modal" data-title="Employer matching" data-kind="Corporate match">Check matching</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner give-banner">
+      <div>
+        <h2>Leave a legacy of good.</h2>
+        <p>Planned giving and donor-advised funds—talk with our team (demo contact only).</p>
+      </div>
+      <button class="primary" type="button" data-action="modal" data-title="Planned giving consultation" data-kind="Contact team">Talk with us</button>
+    </section>
+  </main>
+
+  <footer class="site-footer give-footer">
+    <div class="container give-footer-grid">
+      <div class="give-footer-brand">
+        <span class="brand">Poluru Give<span style="color:var(--brand)">.</span></span>
+        <p class="small">Nonprofit donation platform template. Campaigns, donors, and impact figures are fictional demo content.</p>
+      </div>
+      <div class="give-footer-links">
+        <p class="footer-label">Platform</p>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#impact">Impact</a>
+        <a href="#transparency">Transparency</a>
+        <a href="#give">Give</a>
+      </div>
+      <div class="give-footer-author">
+        <p class="footer-label">Author</p>
+        <p><strong>Subrahmanyam Poluru</strong></p>
+        <p class="small">Designer &amp; developer · Poluru Labs</p>
+        <a class="footer-portfolio" href="https://polurus.com" target="_blank" rel="noopener noreferrer">View portfolio →</a>
+      </div>
+    </div>
+    <div class="container give-footer-bottom">
+      <span>© 2026 Poluru Give</span>
+      <span>Created and generated by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></span>
+    </div>
+  </footer>
+
+  <dialog aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <h2 id="dialog-title"></h2>
+      <button class="close" type="button" aria-label="Close dialog">×</button>
+    </div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>
