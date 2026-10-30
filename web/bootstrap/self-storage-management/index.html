@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--
+  StowHub — Self storage management
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="StowHub makes self storage simple—find units, manage leases, pay rent, and access your facility from one clean dashboard for renters and operators." />
+  <title>StowHub — Self Storage Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="ssm-header fixed-top">
+    <nav class="navbar navbar-expand-lg ssm-navbar" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand ssm-brand" href="#top">
+          <span class="ssm-brand-mark" aria-hidden="true"><i class="bi bi-box-seam"></i></span>
+          StowHub
+        </a>
+        <button class="navbar-toggler ssm-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#ssmNav" aria-controls="ssmNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ssmNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link ssm-nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link ssm-nav-link" href="#units">Unit sizes</a></li>
+            <li class="nav-item"><a class="nav-link ssm-nav-link" href="#how-it-works">How it works</a></li>
+            <li class="nav-item"><a class="nav-link ssm-nav-link" href="#reviews">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link ssm-nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn ssm-btn ssm-btn-primary" href="#reserve">Reserve a unit</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="ssm-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="ssm-eyebrow">Self storage, under control</p>
+            <h1 class="ssm-hero-title">Rent, pay, and access your unit—without the paperwork pile.</h1>
+            <p class="ssm-hero-lead">StowHub connects renters and facility teams with live availability, digital leases, autopay, and gate codes that update when you need them.</p>
+            <div class="d-flex flex-wrap gap-3 ssm-hero-actions">
+              <a class="btn ssm-btn ssm-btn-primary btn-lg" href="#reserve">Find a unit near me</a>
+              <a class="btn ssm-btn ssm-btn-outline btn-lg" href="#features">For operators</a>
+            </div>
+            <ul class="ssm-hero-stats list-unstyled d-flex flex-wrap gap-4 mt-4 mb-0">
+              <li><strong>120+</strong><span>Facilities</span></li>
+              <li><strong>24/7</strong><span>Gate access</span></li>
+              <li><strong>5 min</strong><span>Online move-in</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="ssm-hero-panel">
+              <div class="ssm-hero-panel-head">
+                <span class="ssm-pill"><i class="bi bi-geo-alt"></i> Westside Storage · Unit B-214</span>
+                <span class="ssm-status ssm-status--active">Active lease</span>
+              </div>
+              <div class="ssm-panel-grid">
+                <div class="ssm-panel-stat">
+                  <p class="ssm-muted mb-0 small">Size</p>
+                  <p class="mb-0 ssm-panel-value">10 × 10 ft</p>
+                </div>
+                <div class="ssm-panel-stat">
+                  <p class="ssm-muted mb-0 small">Monthly</p>
+                  <p class="mb-0 ssm-panel-value">$129</p>
+                </div>
+                <div class="ssm-panel-stat">
+                  <p class="ssm-muted mb-0 small">Next payment</p>
+                  <p class="mb-0 ssm-panel-value">Nov 1</p>
+                </div>
+                <div class="ssm-panel-stat">
+                  <p class="ssm-muted mb-0 small">Autopay</p>
+                  <p class="mb-0 ssm-panel-value ssm-panel-value--ok"><i class="bi bi-check-lg"></i> On</p>
+                </div>
+              </div>
+              <ul class="ssm-activity list-unstyled mb-0">
+                <li>
+                  <i class="bi bi-key"></i>
+                  <span>Gate code refreshed · valid until Dec 31</span>
+                </li>
+                <li>
+                  <i class="bi bi-truck"></i>
+                  <span>Move-in checklist · 2 of 4 complete</span>
+                </li>
+                <li class="ssm-activity--last">
+                  <i class="bi bi-receipt"></i>
+                  <span>October invoice paid · receipt in app</span>
+                </li>
+              </ul>
+              <div class="ssm-hero-panel-foot">
+                <a class="ssm-link small" href="#reserve">Upgrade unit size</a>
+                <a class="btn ssm-btn ssm-btn-primary btn-sm" href="#reserve">Open gate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ssm-trust">
+      <div class="container">
+        <p class="ssm-trust-label text-center mb-0">Powering independent operators and regional storage groups</p>
+        <ul class="ssm-trust-logos list-unstyled d-flex flex-wrap justify-content-center gap-4 gap-md-5 mb-0">
+          <li>Westside Storage</li>
+          <li>Harbor Units</li>
+          <li>Maple Lockers</li>
+          <li>River Park Stow</li>
+          <li>Northgate Mini</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features" class="ssm-section">
+      <div class="container">
+        <div class="ssm-section-head text-center mx-auto">
+          <p class="ssm-eyebrow">Features</p>
+          <h2 class="ssm-section-title">One platform for renters and facility teams</h2>
+          <p class="ssm-section-lead">Whether you’re storing seasonal gear or running fifty locations, StowHub keeps availability, billing, and access in sync.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="ssm-card ssm-feature-card h-100">
+              <div class="ssm-icon-wrap"><i class="bi bi-search"></i></div>
+              <h3 class="ssm-card-title">Live availability</h3>
+              <p class="ssm-card-text">Real-time unit map with climate, drive-up, and elevator access filters—reserve online without a phone call.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="ssm-card ssm-feature-card h-100">
+              <div class="ssm-icon-wrap"><i class="bi bi-file-earmark-text"></i></div>
+              <h3 class="ssm-card-title">Digital leases</h3>
+              <p class="ssm-card-text">Sign, store, and renew from any device. Insurance and add-ons attached to the same agreement.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="ssm-card ssm-feature-card h-100">
+              <div class="ssm-icon-wrap"><i class="bi bi-credit-card"></i></div>
+              <h3 class="ssm-card-title">Billing &amp; autopay</h3>
+              <p class="ssm-card-text">Transparent monthly rent, proration on move-in, and receipts for business expense reporting.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="ssm-card ssm-feature-card h-100">
+              <div class="ssm-icon-wrap"><i class="bi bi-phone"></i></div>
+              <h3 class="ssm-card-title">Mobile gate access</h3>
+              <p class="ssm-card-text">Temporary codes for movers, revoke access instantly, and audit logs for every entry.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="ssm-card ssm-feature-card h-100">
+              <div class="ssm-icon-wrap"><i class="bi bi-graph-up"></i></div>
+              <h3 class="ssm-card-title">Operator dashboard</h3>
+              <p class="ssm-card-text">Occupancy, delinquency, and rate management across sites—export when your accountant asks.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="ssm-card ssm-feature-card h-100">
+              <div class="ssm-icon-wrap"><i class="bi bi-bell"></i></div>
+              <h3 class="ssm-card-title">Smart notifications</h3>
+              <p class="ssm-card-text">Payment reminders, lease renewal prompts, and maintenance alerts—email or SMS, your choice.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="units" class="ssm-section ssm-section--alt">
+      <div class="container">
+        <div class="row align-items-end g-4 mb-5">
+          <div class="col-lg-7">
+            <p class="ssm-eyebrow">Unit sizes</p>
+            <h2 class="ssm-section-title mb-2">Pick the space that matches your stuff</h2>
+            <p class="ssm-section-lead mb-0">Typical dimensions at partner facilities. Exact sizes and rates vary by location—search by ZIP to see current pricing.</p>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <a class="btn ssm-btn ssm-btn-outline" href="#reserve">Check local rates</a>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-3">
+            <article class="ssm-unit-card h-100">
+              <p class="ssm-unit-size">5 × 5</p>
+              <p class="ssm-muted small mb-2">~25 sq ft</p>
+              <p class="ssm-card-text">Closet overflow, seasonal boxes, small apartment extras.</p>
+              <p class="ssm-unit-from">From <strong>$49</strong>/mo</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ssm-unit-card ssm-unit-card--highlight h-100">
+              <span class="ssm-unit-badge">Popular</span>
+              <p class="ssm-unit-size">10 × 10</p>
+              <p class="ssm-muted small mb-2">~100 sq ft</p>
+              <p class="ssm-card-text">One-bedroom equivalent—furniture plus bins with aisle space.</p>
+              <p class="ssm-unit-from">From <strong>$119</strong>/mo</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ssm-unit-card h-100">
+              <p class="ssm-unit-size">10 × 20</p>
+              <p class="ssm-muted small mb-2">~200 sq ft</p>
+              <p class="ssm-card-text">Multi-room moves, business inventory, or vehicle-adjacent storage.</p>
+              <p class="ssm-unit-from">From <strong>$189</strong>/mo</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="ssm-unit-card h-100">
+              <p class="ssm-unit-size">Climate</p>
+              <p class="ssm-muted small mb-2">Add-on</p>
+              <p class="ssm-card-text">Electronics, documents, and furniture that need stable humidity.</p>
+              <p class="ssm-unit-from">From <strong>+$35</strong>/mo</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="ssm-section">
+      <div class="container">
+        <div class="ssm-section-head text-center mx-auto">
+          <p class="ssm-eyebrow">How it works</p>
+          <h2 class="ssm-section-title">Move in online, access the same day</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="ssm-card ssm-step-card h-100">
+              <span class="ssm-step-num">01</span>
+              <div class="ssm-icon-wrap"><i class="bi bi-pin-map"></i></div>
+              <h3 class="ssm-card-title">Choose a facility</h3>
+              <p class="ssm-card-text">Enter your ZIP, compare units on a map, and filter for 24-hour access or climate control.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="ssm-card ssm-step-card h-100">
+              <span class="ssm-step-num">02</span>
+              <div class="ssm-icon-wrap"><i class="bi bi-pencil-square"></i></div>
+              <h3 class="ssm-card-title">Sign &amp; pay</h3>
+              <p class="ssm-card-text">Complete your lease, add insurance if you want it, and set autopay before your first visit.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="ssm-card ssm-step-card h-100">
+              <span class="ssm-step-num">03</span>
+              <div class="ssm-icon-wrap"><i class="bi bi-unlock"></i></div>
+              <h3 class="ssm-card-title">Unlock &amp; load</h3>
+              <p class="ssm-card-text">Receive your gate code in the app, finish the move-in checklist, and share access with helpers.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ssm-section ssm-section--alt">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="ssm-eyebrow">For operators</p>
+            <h2 class="ssm-section-title">Run sites without spreadsheet chaos</h2>
+            <ul class="ssm-checklist ssm-checklist--block list-unstyled mb-4">
+              <li><i class="bi bi-check2"></i> Unified ledger across locations</li>
+              <li><i class="bi bi-check2"></i> Dynamic pricing rules by occupancy</li>
+              <li><i class="bi bi-check2"></i> Tenant self-service reduces front-desk calls</li>
+              <li><i class="bi bi-check2"></i> Integrations with gate hardware vendors</li>
+            </ul>
+            <a class="btn ssm-btn ssm-btn-primary" href="#contact">Request operator demo</a>
+          </div>
+          <div class="col-lg-6">
+            <div class="ssm-quote-block">
+              <p class="ssm-quote-text">“We moved three properties onto StowHub in a month. Online move-ins jumped 40% and past-due balances dropped because autopay is the default.”</p>
+              <footer class="ssm-quote-author">
+                <strong>Terry Walsh</strong>
+                <span class="ssm-muted">Regional manager, Harbor Units</span>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="ssm-section">
+      <div class="container">
+        <div class="ssm-section-head text-center mx-auto">
+          <p class="ssm-eyebrow">Reviews</p>
+          <h2 class="ssm-section-title">Renters and managers on the same page</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <blockquote class="ssm-card ssm-review-card h-100">
+              <div class="ssm-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Reserved at lunch, moved in that evening. Gate code worked first try—no clipboards at the office.”</p>
+              <footer><strong>Chris Nguyen</strong><span class="ssm-muted d-block small">Renter, 10×10 unit</span></footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="ssm-card ssm-review-card h-100">
+              <div class="ssm-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“I can see who’s late and who’s up for renewal without opening five tabs. Support actually knows storage ops.”</p>
+              <footer><strong>Elena Vasquez</strong><span class="ssm-muted d-block small">Site manager</span></footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="ssm-card ssm-review-card h-100">
+              <div class="ssm-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Shared a one-day access code with movers and revoked it when they left. Way better than texting the master gate number.”</p>
+              <footer><strong>Jordan Lee</strong><span class="ssm-muted d-block small">Small business storage</span></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="ssm-section ssm-section--alt">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <p class="ssm-eyebrow">FAQ</p>
+            <h2 class="ssm-section-title">Before you reserve</h2>
+            <p class="ssm-section-lead mb-0">Questions about a specific site? Contact the facility from your StowHub confirmation email.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion ssm-accordion" id="ssmFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    Is there a long-term contract?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#ssmFaq">
+                  <div class="accordion-body">Most locations offer month-to-month leases after any promotional period. Terms are shown before you sign—no hidden annual lock-in unless you choose a discounted prepay plan.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    What fees appear on my first bill?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#ssmFaq">
+                  <div class="accordion-body">You’ll see prorated rent, any admin or lock fee listed by the site, and optional insurance. StowHub itemizes everything before payment—no surprises at move-in.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    Can I upgrade or transfer units?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#ssmFaq">
+                  <div class="accordion-body">Yes. Start a transfer in the app when a larger unit opens up. Billing adjusts automatically on the next cycle unless your site prorates mid-month.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    Do you sell storage operators only software?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#ssmFaq">
+                  <div class="accordion-body">StowHub serves both renters and operators. Facilities can enable online leasing while keeping existing gate systems through supported integrations.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserve" class="ssm-section ssm-cta">
+      <div class="container">
+        <div class="ssm-cta-inner">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="ssm-cta-title">Reserve your unit</h2>
+              <p class="ssm-cta-lead mb-0">Enter your ZIP to see real-time availability, move-in specials, and climate options at nearby partner facilities.</p>
+            </div>
+            <div class="col-lg-6">
+              <form class="ssm-form" action="#" method="get" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="ssmZip">ZIP code</label>
+                    <input class="form-control ssm-input" type="text" id="ssmZip" name="zip" placeholder="12345" inputmode="numeric" autocomplete="postal-code" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="ssmSize">Preferred size</label>
+                    <select class="form-select ssm-input" id="ssmSize" name="size">
+                      <option value="any">Any size</option>
+                      <option value="5x5">5 × 5</option>
+                      <option value="10x10">10 × 10</option>
+                      <option value="10x20">10 × 20</option>
+                      <option value="climate">Climate controlled</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="ssmEmail">Email</label>
+                    <input class="form-control ssm-input" type="email" id="ssmEmail" name="email" placeholder="you@example.com" autocomplete="email" />
+                  </div>
+                  <div class="col-12">
+                    <button class="btn ssm-btn ssm-btn-primary w-100" type="submit">Search available units</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="ssm-section ssm-section--compact">
+      <div class="container text-center">
+        <p class="ssm-muted mb-1">Operator sales &amp; support</p>
+        <a class="ssm-link" href="mailto:hello@stowhub.example">hello@stowhub.example</a>
+        <span class="ssm-muted mx-2">·</span>
+        <a class="ssm-link" href="tel:+15558675309">(555) 867-5309</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ssm-footer">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-5 col-lg-4">
+          <a class="ssm-footer-brand" href="#top">
+            <span class="ssm-brand-mark" aria-hidden="true"><i class="bi bi-box-seam"></i></span>
+            StowHub
+          </a>
+          <p class="ssm-footer-tagline">Self storage management for renters who want clarity and operators who want occupancy.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="ssm-footer-heading">Product</p>
+          <ul class="list-unstyled ssm-footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#units">Unit sizes</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <p class="ssm-footer-heading">Company</p>
+          <ul class="list-unstyled ssm-footer-links">
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#reserve">Reserve</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ssm-footer-bottom">
+        <p class="mb-0 ssm-muted small">&copy; <span id="ssmYear"></span> StowHub. All rights reserved.</p>
+        <p class="mb-0 ssm-author small">
+          Template by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a>
+          <span class="ssm-muted"> · </span>
+          <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
