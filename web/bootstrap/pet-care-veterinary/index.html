@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!--
+  Harbor Paws — Pet care & veterinary
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Harbor Paws connects pet parents with trusted veterinary care—book visits, track vaccines, manage records, and get reminders in one calm, clear app." />
+  <title>Harbor Paws — Pet Care &amp; Veterinary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="pcv-header fixed-top">
+    <nav class="navbar navbar-expand-lg pcv-navbar" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand pcv-brand" href="#top">
+          <span class="pcv-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse"></i></span>
+          Harbor Paws
+        </a>
+        <button class="navbar-toggler pcv-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#pcvNav" aria-controls="pcvNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="pcvNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link pcv-nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link pcv-nav-link" href="#care">Pet records</a></li>
+            <li class="nav-item"><a class="nav-link pcv-nav-link" href="#how-it-works">How it works</a></li>
+            <li class="nav-item"><a class="nav-link pcv-nav-link" href="#reviews">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link pcv-nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn pcv-btn pcv-btn-primary" href="#book">Book visit</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="pcv-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="pcv-eyebrow">Veterinary care, organized</p>
+            <h1 class="pcv-hero-title">Everything your pet needs—from checkups to calm follow-ups.</h1>
+            <p class="pcv-hero-lead">Book in-clinic or telehealth visits, store medical records, and get vaccine reminders before they slip through the cracks. One profile per pet, shared with your care team.</p>
+            <div class="d-flex flex-wrap gap-3 pcv-hero-actions">
+              <a class="btn pcv-btn pcv-btn-primary btn-lg" href="#book">Schedule appointment</a>
+              <a class="btn pcv-btn pcv-btn-outline btn-lg" href="#services">Explore services</a>
+            </div>
+            <ul class="pcv-hero-stats list-unstyled d-flex flex-wrap gap-4 mt-4 mb-0">
+              <li><strong>40+</strong><span>Partner clinics</span></li>
+              <li><strong>4.9</strong><span>Parent rating</span></li>
+              <li><strong>Same-day</strong><span>Urgent slots</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="pcv-hero-panel">
+              <div class="pcv-hero-panel-head">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="pcv-pet-badge" aria-hidden="true">🐕</span>
+                  <div>
+                    <p class="mb-0 fw-semibold">Milo · Golden Retriever</p>
+                    <p class="pcv-muted mb-0 small">Age 4 · 62 lbs</p>
+                  </div>
+                </div>
+                <span class="pcv-pill pcv-pill--ok"><i class="bi bi-check-circle"></i> Up to date</span>
+              </div>
+              <ul class="pcv-care-list list-unstyled mb-0">
+                <li>
+                  <span class="pcv-care-icon"><i class="bi bi-calendar3"></i></span>
+                  <div>
+                    <p class="mb-0 fw-semibold">Annual wellness</p>
+                    <p class="pcv-muted mb-0 small">Thu, Nov 6 · 10:30 AM · In-clinic</p>
+                  </div>
+                  <a class="pcv-link small" href="#book">Reschedule</a>
+                </li>
+                <li>
+                  <span class="pcv-care-icon"><i class="bi bi-shield-plus"></i></span>
+                  <div>
+                    <p class="mb-0 fw-semibold">Rabies booster</p>
+                    <p class="pcv-muted mb-0 small">Due in 18 days · reminder set</p>
+                  </div>
+                </li>
+                <li class="pcv-care-list--last">
+                  <span class="pcv-care-icon"><i class="bi bi-file-medical"></i></span>
+                  <div>
+                    <p class="mb-0 fw-semibold">Last visit notes</p>
+                    <p class="pcv-muted mb-0 small">Healthy weight; continue joint supplement</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="pcv-hero-panel-foot">
+                <span class="pcv-muted small">Dr. Ana Reeves · Harbor Animal Hospital</span>
+                <a class="pcv-link small" href="#book">Message clinic</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pcv-trust">
+      <div class="container">
+        <p class="pcv-trust-label text-center mb-0">Trusted by families and independent clinics across the region</p>
+        <ul class="pcv-trust-logos list-unstyled d-flex flex-wrap justify-content-center gap-4 gap-md-5 mb-0">
+          <li>Harbor Animal</li>
+          <li>Northside Vet</li>
+          <li>Maple Pet Urgent</li>
+          <li>Riverbend Clinic</li>
+          <li>Coastal Cat &amp; Dog</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="pcv-section">
+      <div class="container">
+        <div class="pcv-section-head text-center mx-auto">
+          <p class="pcv-eyebrow">Services</p>
+          <h2 class="pcv-section-title">Care that fits your pet’s day—and yours</h2>
+          <p class="pcv-section-lead">From routine wellness to urgent concerns, choose how you want to be seen. Transparent visit types and prep instructions before you arrive.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-service-card h-100">
+              <i class="bi bi-clipboard2-pulse pcv-service-icon"></i>
+              <h3 class="pcv-card-title">Wellness exams</h3>
+              <p class="pcv-card-text">Annual and puppy/kitten schedules, dental checks, and nutrition consults with clear next steps.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-service-card h-100">
+              <i class="bi bi-bandaid pcv-service-icon"></i>
+              <h3 class="pcv-card-title">Urgent care</h3>
+              <p class="pcv-card-text">Same-day slots for limping, vomiting, or minor injuries—triage online so the team is ready.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-service-card h-100">
+              <i class="bi bi-camera-video pcv-service-icon"></i>
+              <h3 class="pcv-card-title">Telehealth</h3>
+              <p class="pcv-card-text">Video consults for behavior questions, post-op checks, and deciding if an in-person visit is needed.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-service-card h-100">
+              <i class="bi bi-droplet pcv-service-icon"></i>
+              <h3 class="pcv-card-title">Vaccinations</h3>
+              <p class="pcv-card-text">Core and lifestyle vaccines tracked in your pet profile with digital certificates when you travel.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-service-card h-100">
+              <i class="bi bi-scissors pcv-service-icon"></i>
+              <h3 class="pcv-card-title">Grooming &amp; hygiene</h3>
+              <p class="pcv-card-text">Partner groomers and nail trims booked alongside vet visits at participating locations.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-service-card h-100">
+              <i class="bi bi-moon-stars pcv-service-icon"></i>
+              <h3 class="pcv-card-title">Senior care</h3>
+              <p class="pcv-card-text">Pain management plans, lab monitoring, and gentle handling notes shared with every provider.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="care" class="pcv-section pcv-section--alt">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="pcv-eyebrow">Pet records</p>
+            <h2 class="pcv-section-title">One health timeline for every paw, claw, and whisker</h2>
+            <p class="pcv-section-lead">Harbor Paws keeps vaccines, prescriptions, and visit summaries in one secure place—easy to share when you switch clinics or travel.</p>
+            <ul class="pcv-feature-list list-unstyled mb-0">
+              <li>
+                <span class="pcv-feature-icon"><i class="bi bi-bell"></i></span>
+                <div>
+                  <h3 class="h6 mb-1">Smart reminders</h3>
+                  <p class="pcv-muted mb-0">Medication, flea/tick, and vaccine alerts by email or push—snooze when life gets busy.</p>
+                </div>
+              </li>
+              <li>
+                <span class="pcv-feature-icon"><i class="bi bi-people"></i></span>
+                <div>
+                  <h3 class="h6 mb-1">Family access</h3>
+                  <p class="pcv-muted mb-0">Invite partners or dog walkers to view schedules without full account control.</p>
+                </div>
+              </li>
+              <li>
+                <span class="pcv-feature-icon"><i class="bi bi-lock"></i></span>
+                <div>
+                  <h3 class="h6 mb-1">Private by default</h3>
+                  <p class="pcv-muted mb-0">Records are encrypted and only shared with clinics you explicitly authorize.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="pcv-stat-card">
+                  <p class="pcv-stat-value">98%</p>
+                  <p class="pcv-muted mb-0 small">Reminder open rate</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="pcv-stat-card">
+                  <p class="pcv-stat-value">2 min</p>
+                  <p class="pcv-muted mb-0 small">Avg. booking time</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="pcv-quote-block">
+                  <p class="pcv-quote-text">“Having Milo’s history on my phone meant the urgent clinic didn’t repeat labs. Less stress for him, less cost for us.”</p>
+                  <footer class="pcv-quote-author">
+                    <strong>Jordan Lee</strong>
+                    <span class="pcv-muted">Pet parent, Riverside</span>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="pcv-section">
+      <div class="container">
+        <div class="pcv-section-head text-center mx-auto">
+          <p class="pcv-eyebrow">How it works</p>
+          <h2 class="pcv-section-title">Book care in three straightforward steps</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="pcv-card pcv-step-card h-100">
+              <span class="pcv-step-num">01</span>
+              <div class="pcv-icon-wrap"><i class="bi bi-plus-circle"></i></div>
+              <h3 class="pcv-card-title">Add your pets</h3>
+              <p class="pcv-card-text">Create a profile with species, age, allergies, and your preferred clinic or search nearby partners.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="pcv-card pcv-step-card h-100">
+              <span class="pcv-step-num">02</span>
+              <div class="pcv-icon-wrap"><i class="bi bi-calendar2-week"></i></div>
+              <h3 class="pcv-card-title">Choose a visit</h3>
+              <p class="pcv-card-text">Pick in-clinic, telehealth, or urgent. Answer a short intake so your vet knows why you’re coming.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="pcv-card pcv-step-card h-100">
+              <span class="pcv-step-num">03</span>
+              <div class="pcv-icon-wrap"><i class="bi bi-journal-check"></i></div>
+              <h3 class="pcv-card-title">Follow the plan</h3>
+              <p class="pcv-card-text">After the visit, notes and prescriptions sync to the timeline. Reminders keep the care plan on track.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pcv-section pcv-section--alt">
+      <div class="container">
+        <div class="pcv-section-head text-center mx-auto">
+          <p class="pcv-eyebrow">For clinics</p>
+          <h2 class="pcv-section-title">Less phone tag, more time with patients</h2>
+          <p class="pcv-section-lead">Harbor Paws gives veterinary teams online scheduling, digital intake, and record handoffs—without replacing your PIMS.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-plan-card h-100">
+              <h3 class="pcv-plan-name">Pet parent</h3>
+              <p class="pcv-plan-price"><span>$0</span></p>
+              <p class="pcv-muted small mb-4">Free app for records, booking, and reminders.</p>
+              <ul class="pcv-checklist list-unstyled">
+                <li><i class="bi bi-check2"></i> Unlimited pet profiles</li>
+                <li><i class="bi bi-check2"></i> Vaccine wallet</li>
+                <li><i class="bi bi-check2"></i> Visit history export</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="pcv-card pcv-plan-card pcv-plan-card--featured h-100">
+              <span class="pcv-plan-badge">Clinic favorite</span>
+              <h3 class="pcv-plan-name">Clinic partner</h3>
+              <p class="pcv-plan-price"><span>Custom</span></p>
+              <p class="pcv-muted small mb-4">Scheduling, intake forms, and two-way messaging.</p>
+              <ul class="pcv-checklist list-unstyled">
+                <li><i class="bi bi-check2"></i> Online booking rules</li>
+                <li><i class="bi bi-check2"></i> Staff dashboard</li>
+                <li><i class="bi bi-check2"></i> HIPAA-aligned storage</li>
+              </ul>
+              <a class="btn pcv-btn pcv-btn-primary w-100 mt-4" href="#contact">Partner with us</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="pcv-section">
+      <div class="container">
+        <div class="pcv-section-head text-center mx-auto">
+          <p class="pcv-eyebrow">Reviews</p>
+          <h2 class="pcv-section-title">Calm experiences pets (and people) can trust</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <blockquote class="pcv-card pcv-review-card h-100">
+              <div class="pcv-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Telehealth saved a midnight trip. The vet saw the rash on video and told us exactly when to come in.”</p>
+              <footer><strong>Sam Okonkwo</strong><span class="pcv-muted d-block small">Cat parent</span></footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="pcv-card pcv-review-card h-100">
+              <div class="pcv-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Our front desk books half as many callbacks. Parents arrive with intake already done.”</p>
+              <footer><strong>Dr. Priya Nair</strong><span class="pcv-muted d-block small">Medical director</span></footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="pcv-card pcv-review-card h-100">
+              <div class="pcv-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Two dogs, one app. Reminders for heartworm and grooming—I finally stopped using sticky notes.”</p>
+              <footer><strong>Maria Santos</strong><span class="pcv-muted d-block small">Multi-pet home</span></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="pcv-section pcv-section--alt">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <p class="pcv-eyebrow">FAQ</p>
+            <h2 class="pcv-section-title">Good to know before you book</h2>
+            <p class="pcv-section-lead mb-0">Emergency life-threatening symptoms? Call your nearest emergency clinic or poison control immediately—don’t wait for the app.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion pcv-accordion" id="pcvFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    Which animals do you support?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#pcvFaq">
+                  <div class="accordion-body">Dogs and cats are fully supported today. Select exotics and avian partners are available in certain markets—search by ZIP when booking.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Can I use any veterinary clinic?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#pcvFaq">
+                  <div class="accordion-body">Book online with Harbor Paws partner clinics. You can still store records and reminders for non-partner visits by uploading summaries manually.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    How do telehealth visits work?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#pcvFaq">
+                  <div class="accordion-body">You’ll receive a secure link at appointment time. Some states require an existing relationship with the clinic— we’ll tell you before you pay.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    Is my data sold to advertisers?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#pcvFaq">
+                  <div class="accordion-body">No. Harbor Paws is funded by clinic partnerships and optional premium reminders—not by selling pet or owner data.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="pcv-section pcv-cta">
+      <div class="container">
+        <div class="pcv-cta-inner">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="pcv-cta-title">Book your next visit</h2>
+              <p class="pcv-cta-lead mb-0">Tell us about your pet and preferred time—we’ll match you with open slots at nearby partner clinics.</p>
+            </div>
+            <div class="col-lg-6">
+              <form class="pcv-form" action="#" method="get" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="pcvPet">Pet name</label>
+                    <input class="form-control pcv-input" type="text" id="pcvPet" name="pet" placeholder="Milo" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="pcvZip">ZIP code</label>
+                    <input class="form-control pcv-input" type="text" id="pcvZip" name="zip" placeholder="12345" inputmode="numeric" autocomplete="postal-code" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="pcvEmail">Your email</label>
+                    <input class="form-control pcv-input" type="email" id="pcvEmail" name="email" placeholder="you@example.com" autocomplete="email" />
+                  </div>
+                  <div class="col-12">
+                    <button class="btn pcv-btn pcv-btn-primary w-100" type="submit">See available times</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="pcv-section pcv-section--compact">
+      <div class="container text-center">
+        <p class="pcv-muted mb-1">Clinic partnerships &amp; support</p>
+        <a class="pcv-link" href="mailto:hello@harborpaws.example">hello@harborpaws.example</a>
+        <span class="pcv-muted mx-2">·</span>
+        <a class="pcv-link" href="tel:+15557654321">(555) 765-4321</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pcv-footer">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-5 col-lg-4">
+          <a class="pcv-footer-brand" href="#top">
+            <span class="pcv-brand-mark" aria-hidden="true"><i class="bi bi-heart-pulse"></i></span>
+            Harbor Paws
+          </a>
+          <p class="pcv-footer-tagline">Pet care and veterinary booking with records that stay with your family.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="pcv-footer-heading">Care</p>
+          <ul class="list-unstyled pcv-footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#care">Pet records</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <p class="pcv-footer-heading">Company</p>
+          <ul class="list-unstyled pcv-footer-links">
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#book">Book visit</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pcv-footer-bottom">
+        <p class="mb-0 pcv-muted small">&copy; <span id="pcvYear"></span> Harbor Paws. All rights reserved.</p>
+        <p class="mb-0 pcv-author small">
+          Template by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a>
+          <span class="pcv-muted"> · </span>
+          <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
