@@ -1,0 +1,728 @@
+/* ==========================================================================
+   FoldFleet — Laundry pickup & delivery
+   Prefix: lds-*
+   Primary: #285A48
+   Fonts: Roboto (headings), Open Sans (body), Lato (UI / accents)
+   ========================================================================== */
+
+:root {
+  --lds-brand: #285a48;
+  --lds-brand-dark: #1f4638;
+  --lds-brand-soft: #e8f0ec;
+  --lds-ink: #1a2420;
+  --lds-ink-muted: #5c6b64;
+  --lds-border: #dfe6e2;
+  --lds-surface: #ffffff;
+  --lds-bg: #f7f9f8;
+  --lds-radius: 12px;
+  --lds-radius-lg: 16px;
+  --lds-shadow: 0 1px 2px rgba(26, 36, 32, 0.06);
+  --lds-font-heading: "Roboto", system-ui, sans-serif;
+  --lds-font-body: "Open Sans", system-ui, sans-serif;
+  --lds-font-ui: "Lato", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--lds-font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--lds-ink);
+  background-color: var(--lds-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.lds-section-title,
+.lds-hero-title,
+.lds-cta-title {
+  font-family: var(--lds-font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--lds-ink);
+}
+
+.lds-muted {
+  color: var(--lds-ink-muted);
+}
+
+a {
+  color: var(--lds-brand);
+}
+
+a:hover {
+  color: var(--lds-brand-dark);
+}
+
+/* Header */
+.lds-header {
+  z-index: 1030;
+}
+
+.lds-navbar {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background: rgba(247, 249, 248, 0.92);
+  border-bottom: 1px solid var(--lds-border);
+  backdrop-filter: blur(8px);
+}
+
+.lds-navbar.lds-navbar--scrolled {
+  box-shadow: var(--lds-shadow);
+}
+
+.lds-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--lds-font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--lds-ink);
+  text-decoration: none;
+}
+
+.lds-brand:hover {
+  color: var(--lds-brand);
+}
+
+.lds-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  background: var(--lds-brand);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.lds-nav-link {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--lds-ink-muted);
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 8px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.lds-nav-link:hover,
+.lds-nav-link:focus {
+  color: var(--lds-brand);
+  background: var(--lds-brand-soft);
+}
+
+.lds-nav-toggle {
+  border-color: var(--lds-border);
+  padding: 0.35rem 0.55rem;
+}
+
+.lds-nav-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 90, 72, 0.2);
+}
+
+/* Buttons */
+.lds-btn {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 10px;
+  border-width: 1.5px;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.lds-btn-primary {
+  background: var(--lds-brand);
+  border-color: var(--lds-brand);
+  color: #fff;
+}
+
+.lds-btn-primary:hover,
+.lds-btn-primary:focus {
+  background: var(--lds-brand-dark);
+  border-color: var(--lds-brand-dark);
+  color: #fff;
+}
+
+.lds-btn-outline {
+  background: var(--lds-surface);
+  border-color: var(--lds-border);
+  color: var(--lds-ink);
+}
+
+.lds-btn-outline:hover,
+.lds-btn-outline:focus {
+  background: var(--lds-brand-soft);
+  border-color: var(--lds-brand);
+  color: var(--lds-brand-dark);
+}
+
+/* Hero */
+.lds-hero {
+  padding: 7.5rem 0 4rem;
+}
+
+.lds-eyebrow {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lds-brand);
+  margin-bottom: 0.75rem;
+}
+
+.lds-hero-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.lds-hero-lead {
+  font-size: 1.0625rem;
+  color: var(--lds-ink-muted);
+  max-width: 32rem;
+  margin-bottom: 0;
+}
+
+.lds-hero-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.lds-hero-stats strong {
+  font-family: var(--lds-font-heading);
+  font-size: 1.375rem;
+  color: var(--lds-brand);
+}
+
+.lds-hero-stats span {
+  font-family: var(--lds-font-ui);
+  font-size: 0.8125rem;
+  color: var(--lds-ink-muted);
+}
+
+.lds-hero-panel {
+  background: var(--lds-surface);
+  border: 1px solid var(--lds-border);
+  border-radius: var(--lds-radius-lg);
+  box-shadow: var(--lds-shadow);
+  overflow: hidden;
+}
+
+.lds-hero-panel-head,
+.lds-hero-panel-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--lds-bg);
+  border-bottom: 1px solid var(--lds-border);
+}
+
+.lds-hero-panel-foot {
+  border-bottom: 0;
+  border-top: 1px solid var(--lds-border);
+}
+
+.lds-hero-panel-metric {
+  font-family: var(--lds-font-heading);
+  font-weight: 700;
+  color: var(--lds-ink);
+}
+
+.lds-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--lds-font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--lds-brand-soft);
+  color: var(--lds-brand-dark);
+}
+
+.lds-pill-live i {
+  font-size: 0.45rem;
+  color: var(--lds-brand);
+}
+
+.lds-track {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lds-track-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  opacity: 0.55;
+}
+
+.lds-track-step--done,
+.lds-track-step--active {
+  opacity: 1;
+}
+
+.lds-track-icon {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--lds-bg);
+  border: 1px solid var(--lds-border);
+  color: var(--lds-ink-muted);
+}
+
+.lds-track-step--active .lds-track-icon {
+  background: var(--lds-brand);
+  border-color: var(--lds-brand);
+  color: #fff;
+}
+
+.lds-track-step--done .lds-track-icon {
+  background: var(--lds-brand-soft);
+  border-color: transparent;
+  color: var(--lds-brand);
+}
+
+/* Trust strip */
+.lds-trust {
+  padding: 2rem 0;
+  border-top: 1px solid var(--lds-border);
+  border-bottom: 1px solid var(--lds-border);
+  background: var(--lds-surface);
+}
+
+.lds-trust-label {
+  font-family: var(--lds-font-ui);
+  font-size: 0.8125rem;
+  color: var(--lds-ink-muted);
+  margin-bottom: 1rem !important;
+}
+
+.lds-trust-logos li {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #8a9690;
+}
+
+/* Sections */
+.lds-section {
+  padding: 5rem 0;
+}
+
+.lds-section--alt {
+  background: var(--lds-surface);
+  border-top: 1px solid var(--lds-border);
+  border-bottom: 1px solid var(--lds-border);
+}
+
+.lds-section--compact {
+  padding: 2.5rem 0;
+}
+
+.lds-section-head {
+  max-width: 40rem;
+  margin-bottom: 3rem;
+}
+
+.lds-section-title {
+  font-size: clamp(1.65rem, 3vw, 2.125rem);
+  margin-bottom: 0.75rem;
+}
+
+.lds-section-lead {
+  color: var(--lds-ink-muted);
+  margin-bottom: 0;
+}
+
+/* Cards */
+.lds-card {
+  background: var(--lds-surface);
+  border: 1px solid var(--lds-border);
+  border-radius: var(--lds-radius);
+  padding: 1.5rem;
+  box-shadow: var(--lds-shadow);
+}
+
+.lds-section--alt .lds-card {
+  background: var(--lds-bg);
+}
+
+.lds-card-title {
+  font-family: var(--lds-font-heading);
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.lds-card-text {
+  color: var(--lds-ink-muted);
+  font-size: 0.9375rem;
+  margin-bottom: 0;
+}
+
+.lds-step-card {
+  position: relative;
+}
+
+.lds-step-num {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-family: var(--lds-font-heading);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--lds-border);
+}
+
+.lds-icon-wrap {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--lds-brand-soft);
+  color: var(--lds-brand);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.lds-service-icon {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--lds-brand);
+  margin-bottom: 0.75rem;
+}
+
+.lds-price-tag {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--lds-brand-dark);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* Plans */
+.lds-plan-card {
+  position: relative;
+}
+
+.lds-plan-card--featured {
+  border-color: var(--lds-brand);
+  background: var(--lds-surface);
+}
+
+.lds-section--alt .lds-plan-card--featured {
+  background: var(--lds-surface);
+}
+
+.lds-plan-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--lds-font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background: var(--lds-brand);
+  color: #fff;
+}
+
+.lds-plan-name {
+  font-family: var(--lds-font-heading);
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.lds-plan-price {
+  font-family: var(--lds-font-ui);
+  color: var(--lds-ink-muted);
+  margin-bottom: 0;
+}
+
+.lds-plan-price span {
+  font-family: var(--lds-font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--lds-ink);
+}
+
+.lds-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--lds-ink-muted);
+  margin-bottom: 0.5rem;
+}
+
+.lds-checklist i {
+  color: var(--lds-brand);
+  margin-top: 0.15rem;
+}
+
+/* Features & quote */
+.lds-feature-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--lds-border);
+}
+
+.lds-feature-list li:last-child {
+  border-bottom: 0;
+}
+
+.lds-feature-icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--lds-brand-soft);
+  color: var(--lds-brand);
+  font-size: 1.125rem;
+}
+
+.lds-quote-block {
+  background: var(--lds-brand);
+  color: #fff;
+  border-radius: var(--lds-radius-lg);
+  padding: 2rem;
+}
+
+.lds-quote-text {
+  font-family: var(--lds-font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.lds-quote-author {
+  font-family: var(--lds-font-ui);
+  font-size: 0.9375rem;
+}
+
+.lds-quote-author .lds-muted {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Reviews */
+.lds-review-card p {
+  color: var(--lds-ink-muted);
+  margin: 1rem 0;
+}
+
+.lds-stars {
+  color: #c4a035;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+/* FAQ */
+.lds-accordion .accordion-item {
+  border: 1px solid var(--lds-border);
+  border-radius: var(--lds-radius) !important;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background: var(--lds-surface);
+}
+
+.lds-accordion .accordion-button {
+  font-family: var(--lds-font-heading);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--lds-ink);
+  background: var(--lds-surface);
+  box-shadow: none;
+}
+
+.lds-accordion .accordion-button:not(.collapsed) {
+  color: var(--lds-brand-dark);
+  background: var(--lds-brand-soft);
+}
+
+.lds-accordion .accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 90, 72, 0.15);
+}
+
+.lds-accordion .accordion-body {
+  font-size: 0.9375rem;
+  color: var(--lds-ink-muted);
+}
+
+/* CTA */
+.lds-cta-inner {
+  background: var(--lds-surface);
+  border: 1px solid var(--lds-border);
+  border-radius: var(--lds-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--lds-shadow);
+}
+
+.lds-cta-title {
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  margin-bottom: 0.75rem;
+}
+
+.lds-cta-lead {
+  color: var(--lds-ink-muted);
+}
+
+.lds-form .form-label {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--lds-ink);
+}
+
+.lds-input {
+  border: 1px solid var(--lds-border);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  font-family: var(--lds-font-body);
+}
+
+.lds-input:focus {
+  border-color: var(--lds-brand);
+  box-shadow: 0 0 0 0.2rem rgba(40, 90, 72, 0.12);
+}
+
+.lds-link {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.lds-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.lds-footer {
+  background: var(--lds-surface);
+  border-top: 1px solid var(--lds-border);
+  padding: 3rem 0 2rem;
+}
+
+.lds-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--lds-font-heading);
+  font-weight: 700;
+  color: var(--lds-ink);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.lds-footer-brand:hover {
+  color: var(--lds-brand);
+}
+
+.lds-footer-tagline {
+  font-size: 0.9375rem;
+  color: var(--lds-ink-muted);
+  max-width: 16rem;
+  margin-bottom: 0;
+}
+
+.lds-footer-heading {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lds-ink);
+  margin-bottom: 0.75rem;
+}
+
+.lds-footer-links a {
+  display: inline-block;
+  font-family: var(--lds-font-ui);
+  font-size: 0.9375rem;
+  color: var(--lds-ink-muted);
+  text-decoration: none;
+  padding: 0.2rem 0;
+}
+
+.lds-footer-links a:hover {
+  color: var(--lds-brand);
+}
+
+.lds-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lds-border);
+}
+
+.lds-author a {
+  font-family: var(--lds-font-ui);
+  font-weight: 700;
+  color: var(--lds-brand);
+  text-decoration: none;
+}
+
+.lds-author a:hover {
+  color: var(--lds-brand-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .lds-hero {
+    padding-top: 6.5rem;
+  }
+
+  .lds-navbar .navbar-collapse {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: var(--lds-surface);
+    border: 1px solid var(--lds-border);
+    border-radius: var(--lds-radius);
+  }
+
+  .lds-nav-link {
+    padding-left: 0.5rem !important;
+  }
+}
