@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--
+  Stillday — Wedding planning
+  Author: Subrahmanyam Poluru
+  Website: https://polurus.com
+  License: Free for Personal and Commercial Use
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Subrahmanyam Poluru" />
+  <meta name="description" content="Stillday is wedding planning made calm—timelines, vendors, budgets, and guest details in one place, with planners who keep your day flowing beautifully." />
+  <title>Stillday — Wedding Planning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="wpw-header fixed-top">
+    <nav class="navbar navbar-expand-lg wpw-navbar" aria-label="Primary">
+      <div class="container">
+        <a class="navbar-brand wpw-brand" href="#top">
+          <span class="wpw-brand-mark" aria-hidden="true"><i class="bi bi-flower1"></i></span>
+          Stillday
+        </a>
+        <button class="navbar-toggler wpw-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#wpwNav" aria-controls="wpwNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="wpwNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link wpw-nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link wpw-nav-link" href="#process">Process</a></li>
+            <li class="nav-item"><a class="nav-link wpw-nav-link" href="#packages">Packages</a></li>
+            <li class="nav-item"><a class="nav-link wpw-nav-link" href="#stories">Stories</a></li>
+            <li class="nav-item"><a class="nav-link wpw-nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn wpw-btn wpw-btn-primary" href="#consult">Book consult</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="wpw-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="wpw-eyebrow">Thoughtful wedding planning</p>
+            <h1 class="wpw-hero-title">Your wedding, planned with care—not chaos.</h1>
+            <p class="wpw-hero-lead">Stillday pairs you with experienced planners and a shared workspace for budget, vendors, and run-of-show—so you can enjoy the engagement, not drown in spreadsheets.</p>
+            <div class="d-flex flex-wrap gap-3 wpw-hero-actions">
+              <a class="btn wpw-btn wpw-btn-primary btn-lg" href="#consult">Schedule a consult</a>
+              <a class="btn wpw-btn wpw-btn-outline btn-lg" href="#packages">View packages</a>
+            </div>
+            <ul class="wpw-hero-stats list-unstyled d-flex flex-wrap gap-4 mt-4 mb-0">
+              <li><strong>180+</strong><span>Celebrations planned</span></li>
+              <li><strong>4.9</strong><span>Couple rating</span></li>
+              <li><strong>1</strong><span>Shared planning hub</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="wpw-hero-panel">
+              <div class="wpw-hero-panel-head">
+                <div>
+                  <p class="mb-0 fw-semibold">Reyes · Chen Wedding</p>
+                  <p class="wpw-muted mb-0 small">June 14 · Garden estate</p>
+                </div>
+                <span class="wpw-pill">68 days out</span>
+              </div>
+              <div class="wpw-timeline-preview">
+                <p class="wpw-muted small text-uppercase fw-bold mb-3">Run of show · preview</p>
+                <ul class="wpw-timeline list-unstyled mb-0">
+                  <li>
+                    <span class="wpw-time">3:30 PM</span>
+                    <span>Guest arrival &amp; seating</span>
+                  </li>
+                  <li>
+                    <span class="wpw-time">4:00 PM</span>
+                    <span>Processional · string quartet</span>
+                  </li>
+                  <li class="wpw-timeline--active">
+                    <span class="wpw-time">4:45 PM</span>
+                    <span>Ceremony · officiant cue sheet attached</span>
+                  </li>
+                  <li>
+                    <span class="wpw-time">6:00 PM</span>
+                    <span>Cocktail hour · vendor handoff notes</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="wpw-panel-metrics">
+                <div>
+                  <p class="wpw-muted mb-0 small">Budget tracked</p>
+                  <p class="mb-0 wpw-metric">$42,800 / $48,000</p>
+                </div>
+                <div>
+                  <p class="wpw-muted mb-0 small">Tasks this week</p>
+                  <p class="mb-0 wpw-metric">5 of 7 done</p>
+                </div>
+              </div>
+              <div class="wpw-hero-panel-foot">
+                <span class="wpw-muted small">Planner: Maya Ortiz</span>
+                <a class="wpw-link small" href="#consult">Open planning hub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wpw-trust">
+      <div class="container">
+        <p class="wpw-trust-label text-center mb-0">Preferred partner at venues and creative teams across the region</p>
+        <ul class="wpw-trust-logos list-unstyled d-flex flex-wrap justify-content-center gap-4 gap-md-5 mb-0">
+          <li>Willow Estate</li>
+          <li>Harbor &amp; Co. Photo</li>
+          <li>Ember Catering</li>
+          <li>Lumen Florals</li>
+          <li>The Glass Pavilion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="services" class="wpw-section">
+      <div class="container">
+        <div class="wpw-section-head text-center mx-auto">
+          <p class="wpw-eyebrow">Services</p>
+          <h2 class="wpw-section-title">Support at every level of involvement</h2>
+          <p class="wpw-section-lead">From first venue tour to last dance, choose how hands-on you want your planner to be—we adapt to your style and schedule.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-service-card h-100">
+              <div class="wpw-icon-wrap"><i class="bi bi-stars"></i></div>
+              <h3 class="wpw-card-title">Full planning</h3>
+              <p class="wpw-card-text">Concept, budget, vendor search, contracts, and design meetings—we quarterback the entire journey with you.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-service-card h-100">
+              <div class="wpw-icon-wrap"><i class="bi bi-calendar-check"></i></div>
+              <h3 class="wpw-card-title">Partial planning</h3>
+              <p class="wpw-card-text">You book key vendors; we refine timelines, review agreements, and fill gaps before the final month.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-service-card h-100">
+              <div class="wpw-icon-wrap"><i class="bi bi-sunrise"></i></div>
+              <h3 class="wpw-card-title">Day-of coordination</h3>
+              <p class="wpw-card-text">We take your plan and run the wedding day—vendor cues, setup checks, and calm problem-solving behind the scenes.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-service-card h-100">
+              <div class="wpw-icon-wrap"><i class="bi bi-people"></i></div>
+              <h3 class="wpw-card-title">Guest experience</h3>
+              <p class="wpw-card-text">RSVP tracking, seating tools, shuttle timing, and accessibility notes so every guest feels considered.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-service-card h-100">
+              <div class="wpw-icon-wrap"><i class="bi bi-cash-stack"></i></div>
+              <h3 class="wpw-card-title">Budget stewardship</h3>
+              <p class="wpw-card-text">Category caps, payment reminders, and transparent reporting—no surprise overages in the final week.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-service-card h-100">
+              <div class="wpw-icon-wrap"><i class="bi bi-globe-americas"></i></div>
+              <h3 class="wpw-card-title">Destination &amp; multi-day</h3>
+              <p class="wpw-card-text">Welcome events, rehearsal logistics, and local vendor liaisons for celebrations away from home.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="wpw-section wpw-section--alt">
+      <div class="container">
+        <div class="wpw-section-head text-center mx-auto">
+          <p class="wpw-eyebrow">Process</p>
+          <h2 class="wpw-section-title">A clear path from “yes” to “I do”</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="wpw-card wpw-step-card h-100">
+              <span class="wpw-step-num">01</span>
+              <div class="wpw-icon-wrap"><i class="bi bi-cup-hot"></i></div>
+              <h3 class="wpw-card-title">Discovery</h3>
+              <p class="wpw-card-text">Complimentary consult to learn your vision, priorities, and rough guest count.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="wpw-card wpw-step-card h-100">
+              <span class="wpw-step-num">02</span>
+              <div class="wpw-icon-wrap"><i class="bi bi-layout-text-window"></i></div>
+              <h3 class="wpw-card-title">Blueprint</h3>
+              <p class="wpw-card-text">Shared hub with budget, mood direction, and milestone checklist tailored to your date.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="wpw-card wpw-step-card h-100">
+              <span class="wpw-step-num">03</span>
+              <div class="wpw-icon-wrap"><i class="bi bi-handshake"></i></div>
+              <h3 class="wpw-card-title">Vendor rhythm</h3>
+              <p class="wpw-card-text">Introductions, proposals, and contract reviews—we keep decisions moving without rushing you.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="wpw-card wpw-step-card h-100">
+              <span class="wpw-step-num">04</span>
+              <div class="wpw-icon-wrap"><i class="bi bi-heart"></i></div>
+              <h3 class="wpw-card-title">Celebration</h3>
+              <p class="wpw-card-text">Final walkthrough, rehearsal direction, and flawless day-of execution with your lead planner.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="wpw-section">
+      <div class="container">
+        <div class="wpw-section-head text-center mx-auto">
+          <p class="wpw-eyebrow">Packages</p>
+          <h2 class="wpw-section-title">Transparent planning tiers</h2>
+          <p class="wpw-section-lead">Custom quotes for destination weddings and guest counts over 200. All packages include access to the Stillday planning hub.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-plan-card h-100">
+              <h3 class="wpw-plan-name">Essential day-of</h3>
+              <p class="wpw-plan-price"><span>$2,400</span></p>
+              <p class="wpw-muted small mb-4">Starts 6 weeks before · up to 150 guests</p>
+              <ul class="wpw-checklist list-unstyled">
+                <li><i class="bi bi-check2"></i> Timeline build &amp; vendor confirmations</li>
+                <li><i class="bi bi-check2"></i> Rehearsal run-through</li>
+                <li><i class="bi bi-check2"></i> Lead + assistant on wedding day</li>
+              </ul>
+              <a class="btn wpw-btn wpw-btn-outline w-100 mt-4" href="#consult">Get started</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-plan-card wpw-plan-card--featured h-100">
+              <span class="wpw-plan-badge">Most booked</span>
+              <h3 class="wpw-plan-name">Signature partial</h3>
+              <p class="wpw-plan-price"><span>$5,800</span></p>
+              <p class="wpw-muted small mb-4">6–9 months of support · vendor guidance</p>
+              <ul class="wpw-checklist list-unstyled">
+                <li><i class="bi bi-check2"></i> Everything in Essential day-of</li>
+                <li><i class="bi bi-check2"></i> Budget &amp; RSVP tools</li>
+                <li><i class="bi bi-check2"></i> Monthly planning sessions</li>
+                <li><i class="bi bi-check2"></i> Design &amp; layout review</li>
+              </ul>
+              <a class="btn wpw-btn wpw-btn-primary w-100 mt-4" href="#consult">Choose Signature</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="wpw-card wpw-plan-card h-100">
+              <h3 class="wpw-plan-name">Full journey</h3>
+              <p class="wpw-plan-price"><span>$9,500</span></p>
+              <p class="wpw-muted small mb-4">Engagement to honeymoon send-off</p>
+              <ul class="wpw-checklist list-unstyled">
+                <li><i class="bi bi-check2"></i> End-to-end vendor management</li>
+                <li><i class="bi bi-check2"></i> Unlimited hub collaborators</li>
+                <li><i class="bi bi-check2"></i> Multi-event weekend support</li>
+              </ul>
+              <a class="btn wpw-btn wpw-btn-outline w-100 mt-4" href="#consult">Talk to a planner</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wpw-section wpw-section--alt">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="wpw-eyebrow">Planning hub</p>
+            <h2 class="wpw-section-title">One place for decisions—not scattered threads</h2>
+            <ul class="wpw-feature-list list-unstyled mb-0">
+              <li>
+                <span class="wpw-feature-icon"><i class="bi bi-kanban"></i></span>
+                <div>
+                  <h3 class="h6 mb-1">Shared checklists</h3>
+                  <p class="wpw-muted mb-0">Assign tasks to partner, wedding party, or planner with due dates that actually notify.</p>
+                </div>
+              </li>
+              <li>
+                <span class="wpw-feature-icon"><i class="bi bi-file-earmark-richtext"></i></span>
+                <div>
+                  <h3 class="h6 mb-1">Vendor vault</h3>
+                  <p class="wpw-muted mb-0">Contracts, floor plans, and contact sheets stored securely—no digging through email.</p>
+                </div>
+              </li>
+              <li>
+                <span class="wpw-feature-icon"><i class="bi bi-chat-heart"></i></span>
+                <div>
+                  <h3 class="h6 mb-1">Calm communication</h3>
+                  <p class="wpw-muted mb-0">Comment on timeline items instead of long group texts that bury important details.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="wpw-quote-block">
+              <p class="wpw-quote-text">“Stillday kept us grounded. We always knew what was next, and on the wedding day we didn’t touch a single vendor phone call.”</p>
+              <footer class="wpw-quote-author">
+                <strong>Alina &amp; Jordan Reyes</strong>
+                <span class="wpw-muted">Garden estate celebration</span>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="wpw-section">
+      <div class="container">
+        <div class="wpw-section-head text-center mx-auto">
+          <p class="wpw-eyebrow">Stories</p>
+          <h2 class="wpw-section-title">Couples who wanted presence, not pressure</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <blockquote class="wpw-card wpw-review-card h-100">
+              <div class="wpw-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“We planned from out of state. The hub made venue walkthroughs and tastings feel like we were in the room.”</p>
+              <footer><strong>Sam &amp; Priya Okonkwo</strong><span class="wpw-muted d-block small">Destination weekend</span></footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="wpw-card wpw-review-card h-100">
+              <div class="wpw-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Budget tracking saved us. Maya flagged duplicate rental fees before we signed—worth the package alone.”</p>
+              <footer><strong>Chris Nguyen</strong><span class="wpw-muted d-block small">Partial planning</span></footer>
+            </blockquote>
+          </div>
+          <div class="col-md-4">
+            <blockquote class="wpw-card wpw-review-card h-100">
+              <div class="wpw-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>“Day-of team handled a weather pivot in twenty minutes. Our guests never knew we moved cocktails indoors.”</p>
+              <footer><strong>Maria &amp; Elena Santos</strong><span class="wpw-muted d-block small">Day-of coordination</span></footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="wpw-section wpw-section--alt">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <p class="wpw-eyebrow">FAQ</p>
+            <h2 class="wpw-section-title">Before you book</h2>
+            <p class="wpw-section-lead mb-0">Dates fill 12–18 months out for peak season. Reach us at <a class="wpw-link" href="mailto:hello@stillday.example">hello@stillday.example</a>.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion wpw-accordion" id="wpwFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    When should we hire a planner?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#wpwFaq">
+                  <div class="accordion-body">Full planning works best 10–14 months before. Partial and day-of packages can start later—we’ll confirm fit on your consult call.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    Do you plan non-traditional celebrations?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#wpwFaq">
+                  <div class="accordion-body">Absolutely—elopements, micro-weddings, cultural fusion weekends, and vow renewals. We scale the team and timeline to your format.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    Can we keep our own vendors?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#wpwFaq">
+                  <div class="accordion-body">Yes. We collaborate with your chosen team, review contracts, and integrate them into the run-of-show—no required preferred lists.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    Is the planning hub included?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#wpwFaq">
+                  <div class="accordion-body">Every Stillday package includes hub access for you and your partner. Additional collaborators can be invited based on your tier.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="consult" class="wpw-section wpw-cta">
+      <div class="container">
+        <div class="wpw-cta-inner">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h2 class="wpw-cta-title">Book a complimentary consult</h2>
+              <p class="wpw-cta-lead mb-0">Tell us your date and vision—we’ll match you with a lead planner and send a tailored package outline within two business days.</p>
+            </div>
+            <div class="col-lg-6">
+              <form class="wpw-form" action="#" method="get" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="wpwNames">Your names</label>
+                    <input class="form-control wpw-input" type="text" id="wpwNames" name="names" placeholder="Alex &amp; Sam" autocomplete="name" />
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="wpwDate">Wedding date</label>
+                    <input class="form-control wpw-input" type="text" id="wpwDate" name="date" placeholder="Month / year" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="wpwEmail">Email</label>
+                    <input class="form-control wpw-input" type="email" id="wpwEmail" name="email" placeholder="you@example.com" autocomplete="email" />
+                  </div>
+                  <div class="col-12">
+                    <button class="btn wpw-btn wpw-btn-primary w-100" type="submit">Request consult</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wpw-section wpw-section--compact">
+      <div class="container text-center">
+        <p class="wpw-muted mb-1">Studio &amp; weekday hours</p>
+        <a class="wpw-link" href="mailto:hello@stillday.example">hello@stillday.example</a>
+        <span class="wpw-muted mx-2">·</span>
+        <a class="wpw-link" href="tel:+15552468000">(555) 246-8000</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wpw-footer">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-5 col-lg-4">
+          <a class="wpw-footer-brand" href="#top">
+            <span class="wpw-brand-mark" aria-hidden="true"><i class="bi bi-flower1"></i></span>
+            Stillday
+          </a>
+          <p class="wpw-footer-tagline">Wedding planning and coordination for couples who value calm, clarity, and beautiful details.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <p class="wpw-footer-heading">Services</p>
+          <ul class="list-unstyled wpw-footer-links">
+            <li><a href="#services">Planning</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <p class="wpw-footer-heading">Studio</p>
+          <ul class="list-unstyled wpw-footer-links">
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#consult">Consult</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wpw-footer-bottom">
+        <p class="mb-0 wpw-muted small">&copy; <span id="wpwYear"></span> Stillday. All rights reserved.</p>
+        <p class="mb-0 wpw-author small">
+          Template by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a>
+          <span class="wpw-muted"> · </span>
+          <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
