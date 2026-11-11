@@ -1,50 +1,93 @@
-import { useEffect, useState } from 'react'
-import { aiApi, type AiAgent } from '@/core'
+import { useNavigate } from 'react-router'
+import { ROUTES, type AgentStatus } from '@/core'
 import { AgentCard } from '@/features/agents/components/AgentCard'
+import { useAgents } from '@/features/agents/hooks/useAgents'
 import { EmptyState, Spinner } from '@/shared'
 import styles from './AgentsPage.module.scss'
 
+const STATUS_OPTIONS: Array<AgentStatus | 'all'> = [
+  'all',
+  'active',
+  'draft',
+  'paused',
+]
+
 export function AgentsPage() {
-  const [agents, setAgents] = useState<AiAgent[]>([])
-  const [loading, setLoading] = useState(true)
+  const navigate = useNavigate()
+  const {
+    loading,
+    query,
+    setQuery,
+    statusFilter,
+    setStatusFilter,
+    filteredAgents,
+    activeAgentId,
+    selectAgent,
+  } = useAgents()
 
-  useEffect(() => {
-    let active = true
-
-    void aiApi.listAgents().then((result) => {
-      if (!active) return
-      setAgents(result)
-      setLoading(false)
-    })
-
-    return () => {
-      active = false
-    }
-  }, [])
+  const handleStartDraft = (agentId: string) => {
+    selectAgent(agentId)
+    navigate(ROUTES.chat)
+  }
 
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <h1 className={styles.title}>Agents</h1>
+        <h1 className={styles.title}>Course agents</h1>
         <p className={styles.subtitle}>
-          Catalog of reusable AI agents. Replace the mock data with your agent
-          registry API.
+          Specialized agents for curriculum scaffolding, lesson drafts,
+          assessments, and rubrics. Select one to drive the authoring chat
+          (stored in this browser).
         </p>
       </header>
+
+      <div className={styles.toolbar} role="search">
+        <label className={styles.search}>
+          <span className={styles.srOnly}>Search agents</span>
+          <input
+            type="search"
+            value={query}
+            placeholder="Search by name, tool, or category"
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </label>
+        <div className={styles.filters} role="group" aria-label="Agent status">
+          {STATUS_OPTIONS.map((status) => {
+            const isActive = statusFilter === status
+            return (
+              <button
+                key={status}
+                type="button"
+                className={isActive ? styles.filterActive : styles.filter}
+                aria-pressed={isActive}
+                onClick={() => setStatusFilter(status)}
+              >
+                {status}
+              </button>
+            )
+          })}
+        </div>
+      </div>
 
       {loading ? (
         <div className={styles.loading}>
           <Spinner label="Loading agents" />
         </div>
-      ) : agents.length === 0 ? (
+      ) : filteredAgents.length === 0 ? (
         <EmptyState
-          title="No agents yet"
-          description="Create your first agent in the registry to populate this view."
+          title="No agents match"
+          description="Try another status filter or clear your search."
         />
       ) : (
         <div className={styles.grid}>
-          {agents.map((agent) => (
-            <AgentCard key={agent.id} agent={agent} />
+          {filteredAgents.map((agent) => (
+            <AgentCard
+              key={agent.id}
+              agent={agent}
+              isSelected={activeAgentId === agent.id}
+              onStartDraft={() => handleStartDraft(agent.id)}
+              onSelect={() => selectAgent(agent.id)}
+            />
           ))}
         </div>
       )}
