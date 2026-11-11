@@ -1,0 +1,35 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+  min-height: calc(100vh - #{$header-height} - #{$space-12});
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  color: $color-text-muted;
+}
+
+.panel {
+  @include card-surface;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  flex: 1;
+  min-height: 28rem;
+  padding: $space-5;
+}
+
+.error {
+  color: $color-danger;
+  font-size: 0.875rem;
+}
