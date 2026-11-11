@@ -1,0 +1,51 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+  max-width: 42rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  color: $color-text-muted;
+}
+
+.panel {
+  @include card-surface;
+  display: grid;
+  gap: $space-4;
+  padding: $space-5;
+}
+
+.row {
+  display: grid;
+  gap: $space-1;
+  padding-bottom: $space-4;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.label {
+  font-size: 0.8125rem;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.value {
+  font-family: $font-mono;
+  font-size: 0.9375rem;
+}
