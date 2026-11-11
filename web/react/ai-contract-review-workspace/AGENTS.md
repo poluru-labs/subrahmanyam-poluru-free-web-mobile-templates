@@ -23,6 +23,9 @@ Guidance for coding agents and contributors working on this template.
 - Feature-based React structure (`app` / `core` / `features` / `shared`)
 - SCSS modules with shared design tokens
 - Chat + agents routes with mock AI API fallback
+- **Legal agents catalog** (5 contract-review agents) with search/status filters
+- **Active agent** persisted in `localStorage` (`contract-review:active-agent`)
+- **Start review** routes from Agents → Chat; mock completions vary by agent category
 - Theme toggle persisted in `localStorage`
 - Accessible layout shell with mobile nav
 
@@ -49,6 +52,7 @@ Guidance for coding agents and contributors working on this template.
 - [ ] Footer author link present and correct
 - [ ] No gradient backgrounds introduced
 - [ ] Brand accent remains `#F2A900`
+- [ ] Agent selection flows Agents → Chat with category-aware mock replies
 - [ ] `npm run typecheck` and `npm run lint` pass
 
 ## Commands
