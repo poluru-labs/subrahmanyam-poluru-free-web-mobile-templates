@@ -1,0 +1,40 @@
+.form {
+  display: grid;
+  gap: $space-3;
+  padding-top: $space-4;
+  border-top: 1px solid $color-border;
+}
+
+.field {
+  width: 100%;
+  min-height: 6.5rem;
+  resize: vertical;
+  padding: $space-3 $space-4;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: $color-surface;
+}
+
+.field:focus {
+  outline: none;
+  border-color: $color-primary;
+  box-shadow: 0 0 0 3px rgb(15 110 86 / 15%);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+  flex-wrap: wrap;
+}
+
+.hint {
+  color: $color-text-muted;
+  font-size: 0.8125rem;
+}
+
+.actions {
+  display: flex;
+  gap: $space-2;
+}
