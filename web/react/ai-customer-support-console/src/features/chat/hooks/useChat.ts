@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { aiApi, env, type AiMessage } from '@/core'
+import { AGENT_STORAGE_KEYS, aiApi, env, type AiMessage } from '@/core'
+import { useLocalStorage } from '@/shared'
 
 const createId = () =>
   typeof crypto !== 'undefined' && 'randomUUID' in crypto
@@ -10,6 +11,14 @@ export function useChat() {
   const [messages, setMessages] = useState<AiMessage[]>([])
   const [error, setError] = useState<string | null>(null)
   const [isPending, setIsPending] = useState(false)
+  const [activeAgentId] = useLocalStorage<string | null>(
+    AGENT_STORAGE_KEYS.activeAgentId,
+    null,
+  )
+
+  const activeAgent = activeAgentId
+    ? aiApi.getAgentById(activeAgentId) ?? null
+    : null
 
   const sendMessage = async (content: string) => {
     const trimmed = content.trim()
@@ -35,6 +44,7 @@ export function useChat() {
         })),
         model: env.aiDefaultModel,
         stream: false,
+        agentId: activeAgentId ?? undefined,
       })
 
       setMessages((current) => [...current, response.message])
@@ -54,6 +64,7 @@ export function useChat() {
     messages,
     error,
     isPending,
+    activeAgent,
     sendMessage,
     clearMessages,
   }
