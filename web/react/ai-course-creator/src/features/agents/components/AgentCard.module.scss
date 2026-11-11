@@ -9,10 +9,15 @@
     transform 160ms ease;
 
   &:hover {
-    border-color: rgb(15 110 86 / 35%);
+    border-color: rgb(105 51 130 / 45%);
     box-shadow: $shadow-md;
     transform: translateY(-1px);
   }
+}
+
+.selected {
+  border-color: $color-primary;
+  box-shadow: $shadow-md;
 }
 
 .header {
@@ -22,8 +27,28 @@
   align-items: flex-start;
 }
 
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+}
+
 .name {
   font-size: 1.0625rem;
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
 }
 
 .status {
