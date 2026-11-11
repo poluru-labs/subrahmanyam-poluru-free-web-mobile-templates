@@ -18,6 +18,73 @@
   color: $color-text-muted;
 }
 
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+
+  @include respond-up($bp-md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.search {
+  flex: 1;
+
+  input {
+    width: 100%;
+    max-width: 28rem;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: $space-2 $space-3;
+    font: inherit;
+    background: $color-surface;
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+.filter,
+.filterActive {
+  border-radius: 999px;
+  border: 1px solid $color-border;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: $color-surface;
+  cursor: pointer;
+}
+
+.filterActive {
+  border-color: $color-primary;
+  background: $color-primary-soft;
+  color: $color-text;
+}
+
 .grid {
   display: grid;
   gap: $space-4;
