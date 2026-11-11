@@ -19,6 +19,16 @@
   color: $color-text-muted;
 }
 
+.agentBanner {
+  font-size: 0.9375rem;
+  color: $color-text-muted;
+
+  a {
+    color: $color-primary-hover;
+    font-weight: 600;
+  }
+}
+
 .panel {
   @include card-surface;
   display: flex;
