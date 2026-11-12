@@ -23,6 +23,9 @@ Guidance for coding agents and contributors working on this template.
 - Feature-based React structure (`app` / `core` / `features` / `shared`)
 - SCSS modules with shared design tokens
 - Chat + agents routes with mock AI API fallback
+- **Labeling agents catalog** (5 platform agents) with search/status filters and hero summary stats
+- **Active agent** persisted in `localStorage` (`dataset-labeling:active-agent`)
+- **Start labeling** routes from Agents → Chat; mock completions vary by agent category
 - Theme toggle persisted in `localStorage`
 - Accessible layout shell with mobile nav
 
@@ -49,6 +52,7 @@ Guidance for coding agents and contributors working on this template.
 - [ ] Footer author link present and correct
 - [ ] No gradient backgrounds introduced
 - [ ] Brand accent remains `#006699`
+- [ ] Agent selection flows Agents → Chat with category-aware mock replies
 - [ ] `npm run typecheck` and `npm run lint` pass
 
 ## Commands
