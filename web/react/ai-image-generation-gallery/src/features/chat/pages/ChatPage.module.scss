@@ -19,6 +19,20 @@
   color: $color-text-muted;
 }
 
+.agentBanner {
+  font-size: 0.9375rem;
+  color: $color-text-muted;
+  padding: $space-2 $space-3;
+  border-radius: $radius-md;
+  background: $color-primary-soft;
+  border-left: 3px solid $color-primary;
+
+  a {
+    color: $color-primary-hover;
+    font-weight: 600;
+  }
+}
+
 .panel {
   @include card-surface;
   display: flex;
@@ -27,6 +41,7 @@
   flex: 1;
   min-height: 28rem;
   padding: $space-5;
+  border-radius: $radius-lg;
 }
 
 .error {
