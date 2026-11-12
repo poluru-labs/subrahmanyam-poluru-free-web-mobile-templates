@@ -1,0 +1,18 @@
+.root {
+  @include flex-center;
+  flex-direction: column;
+  gap: $space-3;
+  padding: $space-10 $space-6;
+  text-align: center;
+  color: $color-text-muted;
+}
+
+.title {
+  color: $color-text;
+  font-size: 1.125rem;
+}
+
+.description {
+  max-width: 28rem;
+  font-size: 0.9375rem;
+}
