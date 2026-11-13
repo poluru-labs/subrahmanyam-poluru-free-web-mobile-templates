@@ -1,0 +1,36 @@
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --brand: #0099CC;
+  --brand-hover: #007AA3;
+  --brand-soft: #E0F3F9;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --surface-muted: #eef1f4;
+  --border: #d5d9e0;
+  --text: #1a2332;
+  --text-muted: #5b677a;
+  --sidebar-bg: #151b26;
+  --sidebar-text: #f5f7fa;
+  --sidebar-muted: rgb(245 247 250 / 62%);
+  --topbar-bg: #ffffff;
+  --footer-bg: #ffffff;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --brand: #0099CC;
+  --brand-hover: #00BFFF;
+  --brand-soft: #032C3A;
+  --bg: #0f141c;
+  --surface: #171d28;
+  --surface-muted: #1f2734;
+  --border: #2c3545;
+  --text: #edf1f7;
+  --text-muted: #9aa6b8;
+  --sidebar-bg: #0b0f16;
+  --sidebar-text: #f5f7fa;
+  --sidebar-muted: rgb(245 247 250 / 62%);
+  --topbar-bg: #171d28;
+  --footer-bg: #171d28;
+}
