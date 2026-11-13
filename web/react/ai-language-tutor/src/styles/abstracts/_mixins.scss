@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+@mixin focus-ring($color: $color-primary) {
+  outline: 2px solid var(--brand, #{$color});
+  outline-offset: 2px;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin respond-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-down($breakpoint) {
+  @media (max-width: ($breakpoint - 1px)) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+}
