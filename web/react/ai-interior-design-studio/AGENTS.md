@@ -23,6 +23,9 @@ Guidance for coding agents and contributors working on this template.
 - Feature-based React structure (`app` / `core` / `features` / `shared`)
 - SCSS modules with shared design tokens
 - Chat + agents routes with mock AI API fallback
+- **Interior agents catalog** (5 design agents) with search/status filters and gallery-style hero stats
+- **Active agent** persisted in `localStorage` (`interior-design:active-agent`)
+- **Start design** routes from Agents → Chat; mock completions vary by agent category
 - Theme toggle persisted in `localStorage`
 - Accessible layout shell with mobile nav
 
@@ -49,6 +52,7 @@ Guidance for coding agents and contributors working on this template.
 - [ ] Footer author link present and correct
 - [ ] No gradient backgrounds introduced
 - [ ] Brand accent remains `#0099CC`
+- [ ] Agent selection flows Agents → Chat with category-aware mock replies
 - [ ] `npm run typecheck` and `npm run lint` pass
 
 ## Commands
