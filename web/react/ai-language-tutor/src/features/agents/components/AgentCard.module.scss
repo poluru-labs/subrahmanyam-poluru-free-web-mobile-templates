@@ -1,18 +1,50 @@
 .card {
   @include card-surface;
+  position: relative;
   display: grid;
   gap: $space-4;
   padding: $space-5;
+  padding-top: calc(#{$space-5} + 2px);
+  overflow: hidden;
   transition:
-    border-color 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 
   &:hover {
-    border-color: rgb(15 110 86 / 35%);
-    box-shadow: $shadow-md;
-    transform: translateY(-1px);
+    border-color: rgb(217 44 84 / 55%);
+    box-shadow:
+      $shadow-md,
+      0 0 0 1px rgb(217 44 84 / 15%);
+    transform: translateY(-2px);
   }
+}
+
+.selected {
+  border-color: $color-primary;
+  box-shadow:
+    $shadow-md,
+    0 0 0 1px rgb(217 44 84 / 25%);
+
+  .accent {
+    opacity: 1;
+  }
+}
+
+.accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: $color-primary;
+  opacity: 0.35;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.card:hover .accent {
+  opacity: 1;
 }
 
 .header {
@@ -22,8 +54,34 @@
   align-items: flex-start;
 }
 
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
 .name {
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.category {
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-primary;
+  background: $color-primary-soft;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
 }
 
 .status {
@@ -52,6 +110,7 @@
 .description {
   color: $color-text-muted;
   font-size: 0.9375rem;
+  line-height: 1.55;
 }
 
 .meta {
@@ -69,7 +128,15 @@
   color: $color-text-muted;
 }
 
+.chipProminent {
+  color: $color-primary;
+  background: $color-primary-soft;
+  font-weight: 600;
+}
+
 .footer {
   color: $color-text-muted;
   font-size: 0.8125rem;
+  padding-top: $space-1;
+  border-top: 1px solid $color-border;
 }
