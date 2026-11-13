@@ -18,18 +18,30 @@ export type ChatSession = {
 
 export type AgentStatus = 'draft' | 'active' | 'paused'
 
+/** Invoice-processing specialization for routing prompts and UI grouping. */
+export type AgentCategory =
+  | 'extract'
+  | 'validate'
+  | 'vendor'
+  | 'approval'
+  | 'general'
+
 export type AiAgent = {
   id: string
   name: string
   description: string
   model: string
   status: AgentStatus
+  category: AgentCategory
+  /** Semantic version for prompt / policy packs shipped with the agent. */
+  promptVersion: string
   tools: string[]
   updatedAt: string
 }
 
 export type ChatCompletionRequest = {
   sessionId?: string
+  agentId?: string
   messages: Pick<AiMessage, 'role' | 'content'>[]
   model?: string
   stream?: boolean
