@@ -12,6 +12,69 @@ const createId = () =>
     ? crypto.randomUUID()
     : `msg_${Date.now()}`
 
+export const MOCK_AGENTS: AiAgent[] = [
+  {
+    id: 'agent_edit',
+    name: 'Natural Language Editor',
+    description:
+      'Turns a plain-language instruction into a layered, reversible edit.',
+    model: env.aiDefaultModel,
+    status: 'active',
+    category: 'edit',
+    promptVersion: '2026.03.2',
+    tools: ['prompt.parse', 'mask.region', 'layer.commit'],
+    updatedAt: new Date(Date.now() - 1000 * 60 * 40).toISOString(),
+  },
+  {
+    id: 'agent_batch',
+    name: 'Batch Retoucher',
+    description:
+      'Applies the same look across a set while leaving each original untouched.',
+    model: env.aiDefaultModel,
+    status: 'active',
+    category: 'batch',
+    promptVersion: '2026.02.6',
+    tools: ['queue.scan', 'preset.apply', 'export.set'],
+    updatedAt: new Date(Date.now() - 1000 * 60 * 95).toISOString(),
+  },
+  {
+    id: 'agent_compare',
+    name: 'Before/After Comparator',
+    description:
+      'Lines up the source and the edit so you can approve or reject the change.',
+    model: env.aiDefaultModel,
+    status: 'active',
+    category: 'compare',
+    promptVersion: '2026.01.9',
+    tools: ['frame.split', 'diff.highlight', 'review.approve'],
+    updatedAt: new Date(Date.now() - 1000 * 60 * 220).toISOString(),
+  },
+  {
+    id: 'agent_history',
+    name: 'History Keeper',
+    description:
+      'Snapshots every step so you can revert without overwriting the original.',
+    model: env.aiDefaultModel,
+    status: 'draft',
+    category: 'history',
+    promptVersion: '2026.03.0-rc2',
+    tools: ['snapshot.save', 'revert.step', 'original.lock'],
+    updatedAt: new Date(Date.now() - 1000 * 60 * 16).toISOString(),
+  },
+  {
+    id: 'agent_studio',
+    name: 'Studio Orchestrator',
+    description:
+      'Routes a job across edit, batch, compare, and history agents.',
+    model: env.aiDefaultModel,
+    status: 'paused',
+    category: 'general',
+    promptVersion: '2025.12.4',
+    tools: ['job.route', 'preset.library', 'qa.pass'],
+    updatedAt: new Date(Date.now() - 1000 * 60 * 60 * 20).toISOString(),
+  },
+]
+
 /**
  * AI API surface.
  * Swap mock implementations for real backend routes when ready.
@@ -23,6 +86,10 @@ export const aiApi = {
     } catch {
       return MOCK_AGENTS
     }
+  },
+
+  getAgentById(agentId: string): AiAgent | undefined {
+    return MOCK_AGENTS.find((agent) => agent.id === agentId)
   },
 
   async completeChat(
@@ -42,36 +109,6 @@ export const aiApi = {
     }
   },
 }
-
-const MOCK_AGENTS: AiAgent[] = [
-  {
-    id: 'agent_research',
-    name: 'Research Analyst',
-    description: 'Synthesizes documents, citations, and market briefs.',
-    model: env.aiDefaultModel,
-    status: 'active',
-    tools: ['web.search', 'docs.retrieve', 'citations.format'],
-    updatedAt: new Date().toISOString(),
-  },
-  {
-    id: 'agent_ops',
-    name: 'Ops Copilot',
-    description: 'Triages incidents and drafts runbook responses.',
-    model: env.aiDefaultModel,
-    status: 'active',
-    tools: ['tickets.read', 'logs.query', 'runbooks.search'],
-    updatedAt: new Date().toISOString(),
-  },
-  {
-    id: 'agent_policy',
-    name: 'Policy Reviewer',
-    description: 'Checks drafts against internal compliance policies.',
-    model: env.aiDefaultModel,
-    status: 'draft',
-    tools: ['policy.match', 'risk.score'],
-    updatedAt: new Date().toISOString(),
-  },
-]
 
 function mockCompletion(
   request: ChatCompletionRequest,

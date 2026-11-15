@@ -18,18 +18,30 @@ export type ChatSession = {
 
 export type AgentStatus = 'draft' | 'active' | 'paused'
 
+/** Photo-studio specialization for routing edit prompts and catalog grouping. */
+export type AgentCategory =
+  | 'edit'
+  | 'batch'
+  | 'compare'
+  | 'history'
+  | 'general'
+
 export type AiAgent = {
   id: string
   name: string
   description: string
   model: string
   status: AgentStatus
+  category: AgentCategory
+  /** Semantic version for prompt / policy packs shipped with the agent. */
+  promptVersion: string
   tools: string[]
   updatedAt: string
 }
 
 export type ChatCompletionRequest = {
   sessionId?: string
+  agentId?: string
   messages: Pick<AiMessage, 'role' | 'content'>[]
   model?: string
   stream?: boolean
