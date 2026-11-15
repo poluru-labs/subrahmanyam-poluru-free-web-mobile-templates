@@ -26,6 +26,14 @@ Guidance for coding agents and contributors working on this template.
 - Theme toggle persisted in `localStorage`
 - Accessible layout shell with mobile nav
 
+### Agents catalog
+
+- Five meeting-notes agents in `src/core/api/ai.ts` (`MOCK_AGENTS`): summary, actions, decisions, calendar, and recap
+- Each agent has `category`, `promptVersion`, `status`, and `tools` for catalog UI and versioned prompts
+- **Active agent** persists in `localStorage` under `meeting-notes:active-agent` (`AGENT_STORAGE_KEYS`)
+- **Agents page:** search, status filters, stat tiles, branded cards — select agent or **Start capture** → navigates to chat with that agent active
+- **Chat:** `useChat` passes `agentId` to `aiApi.completeChat`; mock replies are category-aware until a real `/chat/completions` gateway is wired
+
 ## Industry practices
 
 1. Keep provider secrets on the server — only `VITE_*` public config in the browser
@@ -49,6 +57,7 @@ Guidance for coding agents and contributors working on this template.
 - [ ] Footer author link present and correct
 - [ ] No gradient backgrounds introduced
 - [ ] Brand accent remains `#E67E22`
+- [x] Category-aware mock chat when an agent is selected
 - [ ] `npm run typecheck` and `npm run lint` pass
 
 ## Commands
