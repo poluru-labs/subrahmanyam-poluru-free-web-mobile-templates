@@ -36,7 +36,7 @@ export function MessageInput({ disabled, onSend, onClear }: MessageInputProps) {
         value={value}
         onChange={(event) => setValue(event.target.value)}
         onKeyDown={onKeyDown}
-        placeholder="Ask the workspace assistant…"
+        placeholder="Describe an edit, batch, or compare…"
         disabled={disabled}
       />
       <div className={styles.footer}>

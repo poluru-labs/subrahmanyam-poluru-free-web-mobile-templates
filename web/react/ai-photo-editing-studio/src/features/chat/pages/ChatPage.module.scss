@@ -12,11 +12,28 @@
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
 }
 
 .subtitle {
-  color: $color-text-muted;
+  color: var(--text-muted);
+}
+
+.agentBanner {
+  margin: 0;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  border-left: 3px solid #403b69;
+  background: var(--brand-soft);
+  font-size: 0.9375rem;
+  color: var(--text);
+
+  a {
+    color: var(--brand-ink);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }
 
 .panel {

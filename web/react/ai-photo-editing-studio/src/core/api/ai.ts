@@ -117,12 +117,44 @@ function mockCompletion(
     .reverse()
     .find((message) => message.role === 'user')
 
+  const agent = request.agentId
+    ? MOCK_AGENTS.find((item) => item.id === request.agentId)
+    : undefined
+
+  const snippet = lastUser?.content ?? ''
+  const agentLine = agent
+    ? `${agent.name} (prompt ${agent.promptVersion}) — `
+    : ''
+
+  let body =
+    'Ready when you are. Describe an edit to begin a mock studio pass. Originals stay untouched.'
+
+  if (lastUser) {
+    switch (agent?.category) {
+      case 'edit':
+        body = `Edit (demo): I would turn “${truncate(snippet)}” into a reversible layer and leave the original locked.`
+        break
+      case 'batch':
+        body = `Batch (demo): I would apply “${truncate(snippet)}” across the set without overwriting source files.`
+        break
+      case 'compare':
+        body = `Compare (demo): I would split before and after for “${truncate(snippet)}” so you can approve the change.`
+        break
+      case 'history':
+        body = `History (demo): I would snapshot “${truncate(snippet)}” and keep a step you can revert.`
+        break
+      case 'general':
+        body = `Studio (demo): I would route “${truncate(snippet)}” across edit, batch, compare, and history.`
+        break
+      default:
+        body = `Acknowledged: “${truncate(snippet)}”. Connect \`/chat/completions\` to your AI gateway to replace this mock response.`
+    }
+  }
+
   const message: AiMessage = {
     id: createId(),
     role: 'assistant',
-    content: lastUser
-      ? `Acknowledged: “${lastUser.content}”. Connect \`/chat/completions\` to your AI gateway to replace this mock response.`
-      : 'Ready when you are. Ask a question to begin.',
+    content: `${agentLine}${body}`,
     createdAt: new Date().toISOString(),
     model: request.model ?? env.aiDefaultModel,
   }
@@ -135,4 +167,10 @@ function mockCompletion(
       totalTokens: 72,
     },
   }
+}
+
+function truncate(value: string, max = 80) {
+  const trimmed = value.trim()
+  if (trimmed.length <= max) return trimmed
+  return `${trimmed.slice(0, max)}…`
 }
