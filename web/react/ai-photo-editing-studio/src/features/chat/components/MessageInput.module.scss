@@ -2,7 +2,7 @@
   display: grid;
   gap: $space-3;
   padding-top: $space-4;
-  border-top: 1px solid $color-border;
+  border-top: 1px solid var(--border);
 }
 
 .field {
@@ -10,15 +10,16 @@
   min-height: 6.5rem;
   resize: vertical;
   padding: $space-3 $space-4;
-  border: 1px solid $color-border;
+  border: 1px solid var(--border);
   border-radius: $radius-md;
-  background: $color-surface;
+  color: var(--text);
+  background: var(--bg);
 }
 
 .field:focus {
   outline: none;
-  border-color: $color-primary;
-  box-shadow: 0 0 0 3px rgb(15 110 86 / 15%);
+  border-color: #403b69;
+  box-shadow: 0 0 0 3px rgb(64 59 105 / 22%);
 }
 
 .footer {
@@ -30,7 +31,7 @@
 }
 
 .hint {
-  color: $color-text-muted;
+  color: var(--text-muted);
   font-size: 0.8125rem;
 }
 

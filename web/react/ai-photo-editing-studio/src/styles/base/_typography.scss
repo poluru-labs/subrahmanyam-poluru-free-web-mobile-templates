@@ -15,9 +15,10 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  font-weight: 600;
+  font-family: $font-display;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 500;
   color: var(--text);
 }
 
@@ -32,5 +33,5 @@ kbd {
 }
 
 a {
-  color: var(--brand);
+  color: var(--brand-ink);
 }

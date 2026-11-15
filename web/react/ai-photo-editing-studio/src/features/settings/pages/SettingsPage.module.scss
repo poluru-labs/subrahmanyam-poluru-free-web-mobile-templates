@@ -16,7 +16,7 @@
 }
 
 .subtitle {
-  color: $color-text-muted;
+  color: var(--text-muted);
 }
 
 .panel {
@@ -30,7 +30,7 @@
   display: grid;
   gap: $space-1;
   padding-bottom: $space-4;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid var(--border);
 
   &:last-child {
     padding-bottom: 0;
@@ -40,7 +40,7 @@
 
 .label {
   font-size: 0.8125rem;
-  color: $color-text-muted;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }

@@ -25,14 +25,39 @@
 }
 
 .brand {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-3;
+}
+
+.monogram {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.7rem;
+  background: #403b69;
+  color: #f6f1e8;
+  font-family: $font-display;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  box-shadow: inset 0 0 0 1px rgb(246 241 232 / 18%);
+}
+
+.brandCopy {
   display: grid;
   gap: $space-1;
+  min-width: 0;
 }
 
 .brandMark {
-  font-size: 1.125rem;
-  font-weight: 650;
-  letter-spacing: -0.02em;
+  font-family: $font-display;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
 .brandTag {
@@ -62,8 +87,9 @@
 }
 
 .active {
-  background: color-mix(in srgb, var(--brand) 28%, transparent);
+  background: #403b69;
   color: var(--sidebar-text);
+  box-shadow: inset 3px 0 0 #d9d4f2;
 }
 
 .linkLabel {
@@ -95,6 +121,7 @@
   padding: $space-3 $space-5;
   background: var(--topbar-bg);
   border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
 }
 
 .mobileNav {

@@ -28,7 +28,7 @@
   display: flex;
   gap: $space-2;
   align-items: center;
-  color: $color-text-muted;
+  color: var(--text-muted);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -42,15 +42,15 @@
 }
 
 .user .bubble {
-  background: $color-primary;
-  color: #fff;
+  background: #403b69;
+  color: #f6f1e8;
   border-bottom-right-radius: $radius-sm;
 }
 
 .assistant .bubble,
 .system .bubble,
 .tool .bubble {
-  background: $color-surface;
-  border: 1px solid $color-border;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-bottom-left-radius: $radius-sm;
 }

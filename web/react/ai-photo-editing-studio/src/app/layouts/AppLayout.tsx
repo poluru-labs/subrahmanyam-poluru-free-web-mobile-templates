@@ -10,8 +10,15 @@ export function AppLayout() {
     <div className={styles.shell}>
       <aside className={styles.sidebar} aria-label="Primary">
         <div className={styles.brand}>
-          <span className={styles.brandMark}>{env.appName}</span>
-          <span className={styles.brandTag}>Describe edits, batch retouch, and keep originals safe.</span>
+          <span className={styles.monogram} aria-hidden>
+            Ps
+          </span>
+          <div className={styles.brandCopy}>
+            <span className={styles.brandMark}>{env.appName}</span>
+            <span className={styles.brandTag}>
+              Describe edits, batch retouch, and keep originals safe.
+            </span>
+          </div>
         </div>
 
         <nav className={styles.nav}>

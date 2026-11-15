@@ -4,32 +4,51 @@
   gap: $space-8;
 }
 
-.hero {
+.stage {
   display: grid;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #403b69;
+  color: #f6f1e8;
+  box-shadow: $shadow-md;
+
+  @include respond-up($bp-lg) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+    min-height: 26rem;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: $space-4;
-  padding: $space-8;
-  border-radius: $radius-lg;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  box-shadow: $shadow-sm;
+  padding: $space-8 $space-6 $space-6;
+
+  @include respond-up($bp-lg) {
+    padding: $space-10 $space-8;
+  }
 }
 
 .eyebrow {
-  color: var(--brand);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  color: #d9d4f2;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .title {
-  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
-  color: var(--text);
+  max-width: 12ch;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: #f6f1e8;
 }
 
 .subtitle {
-  max-width: 40rem;
-  color: var(--text-muted);
+  max-width: 28rem;
+  color: rgb(246 241 232 / 78%);
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 
 .actions {
@@ -37,6 +56,127 @@
   flex-wrap: wrap;
   gap: $space-3;
   margin-top: $space-2;
+
+  button:first-child {
+    background: #f6f1e8;
+    color: #403b69;
+    box-shadow: none;
+
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  button:last-child {
+    background: transparent;
+    border-color: rgb(246 241 232 / 45%);
+    color: #f6f1e8;
+
+    &:hover {
+      background: rgb(255 255 255 / 8%);
+    }
+  }
+}
+
+.compare {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $space-3;
+  margin: 0;
+  padding: $space-5 $space-5 $space-6;
+
+  @include respond-up($bp-lg) {
+    padding: $space-8 $space-8 $space-8 0;
+  }
+}
+
+.frame {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 16rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgb(246 241 232 / 22%);
+}
+
+.before,
+.after {
+  position: relative;
+  padding: $space-3;
+}
+
+.before {
+  background: #cbbfae;
+}
+
+.after {
+  background: #d9d3ea;
+}
+
+.frameLabel {
+  position: relative;
+  z-index: 1;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1c1830;
+}
+
+.scene,
+.sceneEdited {
+  position: absolute;
+  inset: 22% 12% 12%;
+}
+
+.scene::before,
+.sceneEdited::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: #efe4d4;
+}
+
+.scene::before {
+  top: 6%;
+  left: 10%;
+  width: 38%;
+  aspect-ratio: 1;
+}
+
+.sceneEdited::before {
+  top: 0;
+  left: 28%;
+  width: 48%;
+  aspect-ratio: 1;
+  background: #f7f3ea;
+}
+
+.scene::after,
+.sceneEdited::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.15rem 0.15rem 0 0;
+}
+
+.scene::after {
+  height: 38%;
+  background: #8d7b68;
+}
+
+.sceneEdited::after {
+  height: 30%;
+  background: #403b69;
+}
+
+.caption {
+  color: rgb(246 241 232 / 72%);
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
 }
 
 .grid {
@@ -50,9 +190,16 @@
 
 .metric {
   @include card-surface;
-  padding: $space-5;
   display: grid;
   gap: $space-2;
+  padding: $space-5;
+}
+
+.frameIndex {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--brand-ink);
 }
 
 .metricLabel {
@@ -61,13 +208,54 @@
 }
 
 .metricValue {
-  font-size: 1.75rem;
-  font-weight: 650;
-  letter-spacing: -0.03em;
+  font-family: $font-display;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
   color: var(--text);
 }
 
 .metricHint {
   color: var(--text-muted);
   font-size: 0.8125rem;
+}
+
+.features {
+  display: grid;
+  gap: $space-4;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-up($bp-xl) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.feature {
+  @include card-surface;
+  display: grid;
+  align-content: start;
+  gap: $space-3;
+  min-height: 12rem;
+  padding: $space-5;
+}
+
+.kicker {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--brand-ink);
+}
+
+.featureTitle {
+  font-size: 1.35rem;
+}
+
+.featureCopy {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
 }
