@@ -1,0 +1,56 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: $space-1;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  max-width: min(48rem, 100%);
+}
+
+.user {
+  align-self: flex-end;
+}
+
+.assistant,
+.system,
+.tool {
+  align-self: flex-start;
+}
+
+.meta {
+  display: flex;
+  gap: $space-2;
+  align-items: center;
+  color: $color-text-muted;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bubble {
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  white-space: pre-wrap;
+  line-height: 1.55;
+}
+
+.user .bubble {
+  background: $color-primary;
+  color: #fff;
+  border-bottom-right-radius: $radius-sm;
+}
+
+.assistant .bubble,
+.system .bubble,
+.tool .bubble {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-bottom-left-radius: $radius-sm;
+}
