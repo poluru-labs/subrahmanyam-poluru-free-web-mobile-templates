@@ -1,0 +1,52 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+  min-height: calc(100vh - #{$header-height} - #{$space-12});
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  color: $color-text-muted;
+}
+
+.agentBanner {
+  margin: 0;
+  padding: $space-2 $space-3;
+  border-radius: $radius-md;
+  border-left: 3px solid $color-primary;
+  background: $color-primary-soft;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+
+  a {
+    color: $color-primary-hover;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
+.panel {
+  @include card-surface;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  flex: 1;
+  min-height: 28rem;
+  padding: $space-5;
+}
+
+.error {
+  color: $color-danger;
+  font-size: 0.875rem;
+}
