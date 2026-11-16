@@ -58,6 +58,7 @@ Guidance for coding agents and contributors working on this template.
 - [ ] Footer author link present and correct
 - [ ] No gradient backgrounds introduced
 - [ ] Brand accent remains `#2FA4D7`
+- [x] Category-aware mock chat when an agent is selected
 - [ ] `npm run typecheck` and `npm run lint` pass
 
 ## Commands
