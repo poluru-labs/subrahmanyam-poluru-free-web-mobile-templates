@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+body {
+  font-family: $font-sans;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--text);
+}
+
+code,
+pre,
+kbd {
+  font-family: $font-mono;
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+a {
+  color: var(--brand);
+}
