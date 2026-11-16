@@ -26,6 +26,15 @@ Guidance for coding agents and contributors working on this template.
 - Theme toggle persisted in `localStorage`
 - Accessible layout shell with mobile nav
 
+### Agents catalog
+
+- Five quiz agents in `src/core/api/ai.ts` (`MOCK_AGENTS`): formats, difficulty, answer keys, LMS export, and assembly
+- Each agent has `category`, `promptVersion`, `status`, and `tools` for catalog UI and versioned prompts
+- **Active agent** persists in `localStorage` under `quiz-generator:active-agent` (`AGENT_STORAGE_KEYS`)
+- **Agents page:** search, status filters, stat tiles, branded cards — select agent or **Start quiz** → navigates to chat with that agent active
+- **Chat:** `useChat` passes `agentId` to `aiApi.completeChat`; mock replies are category-aware until a real `/chat/completions` gateway is wired
+- **Flow:** Agents → set active or **Start quiz** → Chat uses that agent until changed
+
 ## Industry practices
 
 1. Keep provider secrets on the server — only `VITE_*` public config in the browser
@@ -49,6 +58,7 @@ Guidance for coding agents and contributors working on this template.
 - [ ] Footer author link present and correct
 - [ ] No gradient backgrounds introduced
 - [ ] Brand accent remains `#F7AD45`
+- [x] Category-aware mock chat when an agent is selected
 - [ ] `npm run typecheck` and `npm run lint` pass
 
 ## Commands

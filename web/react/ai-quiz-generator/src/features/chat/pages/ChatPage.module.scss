@@ -19,6 +19,23 @@
   color: $color-text-muted;
 }
 
+.agentBanner {
+  margin: 0;
+  padding: $space-2 $space-3;
+  border-radius: $radius-md;
+  border-left: 3px solid $color-primary;
+  background: $color-primary-soft;
+  font-size: 0.875rem;
+  color: $color-text-muted;
+
+  a {
+    color: $color-primary-hover;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
 .panel {
   @include card-surface;
   display: flex;
