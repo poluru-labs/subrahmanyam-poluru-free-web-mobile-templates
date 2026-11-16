@@ -1,0 +1,73 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+}
+
+.hero {
+  display: grid;
+  gap: $space-4;
+  padding: $space-8;
+  border-radius: $radius-lg;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: $shadow-sm;
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  color: var(--text);
+}
+
+.subtitle {
+  max-width: 40rem;
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  margin-top: $space-2;
+}
+
+.grid {
+  display: grid;
+  gap: $space-4;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.metric {
+  @include card-surface;
+  padding: $space-5;
+  display: grid;
+  gap: $space-2;
+}
+
+.metricLabel {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.metricValue {
+  font-size: 1.75rem;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.metricHint {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
