@@ -33,6 +33,7 @@ Guidance for coding agents and contributors working on this template.
 - **Active agent** persists in `localStorage` under `podcast-production:active-agent` (`AGENT_STORAGE_KEYS`)
 - **Agents page:** search, status filters, stat tiles, branded cards — select agent or **Start production** → navigates to chat with that agent active
 - **Chat:** `useChat` passes `agentId` to `aiApi.completeChat`; mock replies are category-aware until a real `/chat/completions` gateway is wired
+- **Flow:** Agents → set active or **Start production** → Chat uses that agent until changed
 
 ## Industry practices
 
