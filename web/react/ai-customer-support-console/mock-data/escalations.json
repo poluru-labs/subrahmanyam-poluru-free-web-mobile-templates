@@ -1,0 +1,52 @@
+{
+  "playbooks": [
+    {
+      "id": "esc_billing_sev2",
+      "name": "Billing — repeat issue",
+      "severity": 2,
+      "category": "billing",
+      "onCallQueue": "billing-specialists",
+      "steps": [
+        "Verify charges in billing admin",
+        "Issue credit or refund per policy",
+        "Tag account for CSM review if third issue in 90 days"
+      ]
+    },
+    {
+      "id": "esc_api_sev1",
+      "name": "API — production outage",
+      "severity": 1,
+      "category": "incident",
+      "onCallQueue": "platform-oncall",
+      "steps": [
+        "Link to active incident",
+        "Open enterprise bridge for affected accounts",
+        "Publish status page update within 15 minutes"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "esc_rec_001",
+      "ticketId": "tkt_48102",
+      "agentId": "agent_escalation",
+      "playbookId": "esc_api_sev1",
+      "severity": 1,
+      "slaBreachRisk": "high",
+      "minutesToFirstResponseBreach": 8,
+      "handoffSummary": "Enterprise account ACME Ops reports 503s on batch export API since 08:40 UTC. Customer requests ETA and public status. Priority: urgent. Tags: api, incident. Suggested path: platform-oncall SEV-1 playbook.",
+      "status": "recommended"
+    },
+    {
+      "id": "esc_rec_002",
+      "ticketId": "tkt_48291",
+      "agentId": "agent_escalation",
+      "playbookId": "esc_billing_sev2",
+      "severity": 2,
+      "slaBreachRisk": "medium",
+      "minutesToFirstResponseBreach": 95,
+      "handoffSummary": "Business customer reports duplicate charge post-downgrade; third billing issue this quarter. Sentiment frustrated. Suggest billing-specialists review with credit authority.",
+      "status": "optional"
+    }
+  ]
+}

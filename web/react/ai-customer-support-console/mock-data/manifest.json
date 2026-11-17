@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Customer Support Console — mirrors agents, dashboard metrics, mock chat behavior, and support domain entities (tickets, KB, macros, sentiment, escalation, triage).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "customers.json", "entity": "customer profiles and tiers" },
+    { "path": "tickets.json", "entity": "inbound support tickets" },
+    { "path": "kb-articles.json", "entity": "KB articles and grounded reply drafts" },
+    { "path": "macros.json", "entity": "macros and merge-field suggestions" },
+    { "path": "sentiment-analysis.json", "entity": "tone scores and coaching hints" },
+    { "path": "sla-policies.json", "entity": "tier SLA targets" },
+    { "path": "escalations.json", "entity": "playbooks and handoff recommendations" },
+    { "path": "triage-results.json", "entity": "queue classification (Queue Triage)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

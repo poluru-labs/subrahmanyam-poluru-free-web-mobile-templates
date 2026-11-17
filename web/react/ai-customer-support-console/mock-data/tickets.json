@@ -1,0 +1,46 @@
+{
+  "tickets": [
+    {
+      "id": "tkt_48291",
+      "subject": "Duplicate charge after plan downgrade",
+      "status": "open",
+      "priority": "high",
+      "channel": "email",
+      "customerId": "cust_maya_lin",
+      "productTags": ["billing", "subscriptions"],
+      "slaPolicyId": "sla_business",
+      "createdAt": "2026-03-17T13:02:00.000Z",
+      "updatedAt": "2026-03-17T13:45:00.000Z",
+      "assignedAgentId": "agent_kb",
+      "lastCustomerMessage": "I downgraded last night but I was charged twice this morning. This is the third billing issue this quarter — please fix today."
+    },
+    {
+      "id": "tkt_48275",
+      "subject": "SSO login loop on Safari",
+      "status": "pending",
+      "priority": "normal",
+      "channel": "chat",
+      "customerId": "cust_jordan_oke",
+      "productTags": ["auth", "sso"],
+      "slaPolicyId": "sla_starter",
+      "createdAt": "2026-03-17T11:20:00.000Z",
+      "updatedAt": "2026-03-17T12:10:00.000Z",
+      "assignedAgentId": "agent_macro",
+      "lastCustomerMessage": "Safari keeps redirecting after Okta login — works fine in Chrome."
+    },
+    {
+      "id": "tkt_48102",
+      "subject": "API outage impact — production jobs failing",
+      "status": "open",
+      "priority": "urgent",
+      "channel": "phone",
+      "customerId": "cust_acme_ops",
+      "productTags": ["api", "incident"],
+      "slaPolicyId": "sla_enterprise",
+      "createdAt": "2026-03-17T09:05:00.000Z",
+      "updatedAt": "2026-03-17T09:55:00.000Z",
+      "assignedAgentId": "agent_escalation",
+      "lastCustomerMessage": "Batch exports failing with 503 since 08:40 UTC. We need ETA and a status page update."
+    }
+  ]
+}

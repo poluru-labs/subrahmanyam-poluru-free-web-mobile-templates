@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_kb",
+      "name": "KB Grounding",
+      "description": "Pulls approved articles and snippets to draft replies with citation links.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "kb",
+      "promptVersion": "2026.03.1",
+      "tools": ["kb.search", "article.cite", "answer.ground"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_macro",
+      "name": "Macro Suggester",
+      "description": "Recommends macros and merge fields from ticket context and customer tier.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "macro",
+      "promptVersion": "2026.02.4",
+      "tools": ["macro.match", "field.merge", "tone.adjust"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_sentiment",
+      "name": "Sentiment Scout",
+      "description": "Surfaces tone, frustration signals, and coaching tips before you send.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "sentiment",
+      "promptVersion": "2026.01.8",
+      "tools": ["sentiment.score", "churn.flag", "coach.hint"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_escalation",
+      "name": "Escalation Playbook",
+      "description": "Maps severity to on-call paths, SLA breach risk, and handoff summaries.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "escalation",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["severity.map", "sla.check", "handoff.summary"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_triage",
+      "name": "Queue Triage",
+      "description": "Classifies inbound threads, suggests priority, and tags product areas.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["queue.classify", "tag.product", "priority.score"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

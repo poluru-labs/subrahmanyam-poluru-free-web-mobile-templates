@@ -1,0 +1,43 @@
+{
+  "articles": [
+    {
+      "id": "kb_1042",
+      "title": "Pro-rated charges when changing plans",
+      "slug": "billing/plan-change-proration",
+      "status": "published",
+      "lastReviewedAt": "2026-02-01T00:00:00.000Z",
+      "summary": "Explains how credits and charges apply when upgrading or downgrading mid-cycle.",
+      "snippet": "Downgrades take effect at the start of the next billing period unless you enable immediate downgrade; duplicate charges are usually pending authorizations that release within 3–5 business days.",
+      "citationUrl": "https://help.example.com/billing/plan-change-proration"
+    },
+    {
+      "id": "kb_0881",
+      "title": "Safari SSO troubleshooting",
+      "slug": "auth/safari-sso-loop",
+      "status": "published",
+      "lastReviewedAt": "2026-01-15T00:00:00.000Z",
+      "summary": "Steps for ITP and third-party cookie issues with SAML/OIDC on Safari.",
+      "snippet": "Clear site data, allow cross-site tracking for the IdP domain, and verify redirect URI matches the Safari-tested allowlist.",
+      "citationUrl": "https://help.example.com/auth/safari-sso-loop"
+    },
+    {
+      "id": "kb_1200",
+      "title": "API status and incident communications",
+      "slug": "platform/status-page",
+      "status": "published",
+      "lastReviewedAt": "2026-03-10T00:00:00.000Z",
+      "summary": "How to subscribe to incidents and when enterprise hotline applies.",
+      "snippet": "Enterprise customers receive bridge invites for SEV-1 incidents; reference status.example.com and your account TAM for concurrent issues.",
+      "citationUrl": "https://help.example.com/platform/status-page"
+    }
+  ],
+  "groundedReplies": [
+    {
+      "id": "reply_001",
+      "ticketId": "tkt_48291",
+      "agentId": "agent_kb",
+      "articleIds": ["kb_1042"],
+      "draft": "Thanks for reaching out, Maya. Plan downgrades usually apply at the next cycle; a second line on your statement is often a pending authorization that drops in 3–5 business days. I’m checking your account for a true duplicate now and will confirm the credit timeline.\n\nReference: Pro-rated charges when changing plans — https://help.example.com/billing/plan-change-proration"
+    }
+  ]
+}

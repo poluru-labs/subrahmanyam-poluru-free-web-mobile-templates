@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "id": "cust_maya_lin",
+      "displayName": "Maya Lin",
+      "email": "maya.lin@northwind.example",
+      "tier": "business",
+      "accountId": "acct_8842",
+      "locale": "en-US",
+      "healthScore": 62,
+      "lifetimeValueUsd": 18400
+    },
+    {
+      "id": "cust_jordan_oke",
+      "displayName": "Jordan Oke",
+      "email": "jordan@startupco.example",
+      "tier": "starter",
+      "accountId": "acct_1209",
+      "locale": "en-GB",
+      "healthScore": 88,
+      "lifetimeValueUsd": 1200
+    },
+    {
+      "id": "cust_acme_ops",
+      "displayName": "ACME Ops",
+      "email": "support-desk@acme.example",
+      "tier": "enterprise",
+      "accountId": "acct_0007",
+      "locale": "en-US",
+      "healthScore": 91,
+      "lifetimeValueUsd": 420000
+    }
+  ]
+}

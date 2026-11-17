@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "kb": {
+      "request": {
+        "agentId": "agent_kb",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Draft reply about duplicate charge after downgrade with KB citations."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_kb",
+          "role": "assistant",
+          "content": "KB Grounding (prompt 2026.03.1) — KB reply (demo): I would ground an answer in approved articles for “Draft reply about duplicate charge after downgrade with KB citations.” with citations. Connect your gateway for live retrieval.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "macro": {
+      "request": {
+        "agentId": "agent_macro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Which macro fits an enterprise API outage ticket?"
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_macro",
+          "role": "assistant",
+          "content": "Macro Suggester (prompt 2026.02.4) — Macro pass (demo): I would suggest macros and merge fields for “Which macro fits an enterprise API outage ticket?” aligned to your playbook.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "sentiment": {
+      "request": {
+        "agentId": "agent_sentiment",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Score tone: third billing issue this quarter, customer wants fix today."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_sentiment",
+          "role": "assistant",
+          "content": "Sentiment Scout (prompt 2026.01.8) — Sentiment check (demo): I would score tone and flag frustration in “Score tone: third billing issue this quarter, customer wants fix today.” with coaching hints.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "escalation": {
+      "request": {
+        "agentId": "agent_escalation",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Map severity and handoff for enterprise 503 API errors."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_escalation",
+          "role": "assistant",
+          "content": "Escalation Playbook (prompt 2026.03.0-rc1) — Escalation brief (demo): I would map severity and handoff steps for “Map severity and handoff for enterprise 503 API errors.” against your SLA matrix.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_triage",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Classify priority and tags for SSO Safari chat ticket."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_triage",
+          "role": "assistant",
+          "content": "Queue Triage (prompt 2025.12.2) — Triage (demo): I would classify priority and product tags for “Classify priority and tags for SSO Safari chat ticket.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

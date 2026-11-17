@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Tickets assisted",
+      "value": "2.4k",
+      "hint": "Today"
+    },
+    {
+      "label": "CSAT lift",
+      "value": "+0.4",
+      "hint": "Vs baseline"
+    },
+    {
+      "label": "Escalations",
+      "value": "6%",
+      "hint": "Handed to humans"
+    }
+  ]
+}

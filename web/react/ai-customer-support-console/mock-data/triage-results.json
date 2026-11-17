@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "id": "tri_001",
+      "ticketId": "tkt_48291",
+      "agentId": "agent_triage",
+      "suggestedPriority": "high",
+      "suggestedTags": ["billing", "subscriptions", "retention-risk"],
+      "productArea": "revenue",
+      "confidence": 0.89,
+      "rationale": "Billing language, repeat issue, business tier."
+    },
+    {
+      "id": "tri_002",
+      "ticketId": "tkt_48275",
+      "agentId": "agent_triage",
+      "suggestedPriority": "normal",
+      "suggestedTags": ["auth", "sso", "browser-safari"],
+      "productArea": "identity",
+      "confidence": 0.94,
+      "rationale": "SSO loop isolated to Safari."
+    },
+    {
+      "id": "tri_003",
+      "ticketId": "tkt_48102",
+      "agentId": "agent_triage",
+      "suggestedPriority": "urgent",
+      "suggestedTags": ["api", "incident", "enterprise"],
+      "productArea": "platform",
+      "confidence": 0.97,
+      "rationale": "Production failure language and enterprise account."
+    }
+  ]
+}

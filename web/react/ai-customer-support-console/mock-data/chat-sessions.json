@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_billing_kb",
+      "title": "Duplicate charge — grounded reply",
+      "updatedAt": "2026-03-17T14:02:00.000Z",
+      "agentId": "agent_kb",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Customer says they were charged twice after downgrade last night. Draft a KB-grounded reply.",
+          "createdAt": "2026-03-17T14:00:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "KB Grounding (prompt 2026.03.1) — KB reply (demo): I would ground an answer in approved articles for “Customer says they were charged twice after downgrade last night. Draft a KB-grounded reply.” with citations. Connect your gateway for live retrieval.",
+          "createdAt": "2026-03-17T14:02:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_sso_macro",
+      "title": "Safari SSO — macro pick",
+      "updatedAt": "2026-03-17T12:15:00.000Z",
+      "agentId": "agent_macro",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Suggest a macro for starter tier SSO loop on Safari.",
+          "createdAt": "2026-03-17T12:10:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Macro Suggester (prompt 2026.02.4) — Macro pass (demo): I would suggest macros and merge fields for “Suggest a macro for starter tier SSO loop on Safari.” aligned to your playbook.",
+          "createdAt": "2026-03-17T12:15:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

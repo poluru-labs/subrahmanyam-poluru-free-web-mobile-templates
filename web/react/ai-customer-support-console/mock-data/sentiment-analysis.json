@@ -1,0 +1,48 @@
+{
+  "analyses": [
+    {
+      "id": "sent_001",
+      "ticketId": "tkt_48291",
+      "agentId": "agent_sentiment",
+      "score": -0.62,
+      "label": "frustrated",
+      "churnRisk": "elevated",
+      "signals": [
+        "third billing issue this quarter",
+        "urgency language (fix today)",
+        "repeat customer with declining health score"
+      ],
+      "coachingHints": [
+        "Acknowledge pattern of billing issues before policy explanation.",
+        "Offer concrete timeline and named owner; avoid generic reassurance.",
+        "Do not blame payment processor without account review complete."
+      ]
+    },
+    {
+      "id": "sent_002",
+      "ticketId": "tkt_48275",
+      "agentId": "agent_sentiment",
+      "score": 0.15,
+      "label": "neutral",
+      "churnRisk": "low",
+      "signals": ["technical comparison (Safari vs Chrome)", "no escalation threat"],
+      "coachingHints": [
+        "Match technical tone; keep steps numbered and brief.",
+        "Confirm browser version in follow-up."
+      ]
+    },
+    {
+      "id": "sent_003",
+      "ticketId": "tkt_48102",
+      "agentId": "agent_sentiment",
+      "score": -0.35,
+      "label": "anxious",
+      "churnRisk": "medium",
+      "signals": ["production impact", "requests ETA and public status"],
+      "coachingHints": [
+        "Lead with incident acknowledgment and current severity.",
+        "Provide next update time even if root cause unknown."
+      ]
+    }
+  ]
+}

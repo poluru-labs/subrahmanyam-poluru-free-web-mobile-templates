@@ -1,0 +1,25 @@
+{
+  "policies": [
+    {
+      "id": "sla_starter",
+      "name": "Starter",
+      "firstResponseMinutes": 480,
+      "resolutionTargetHours": 72,
+      "businessHoursOnly": true
+    },
+    {
+      "id": "sla_business",
+      "name": "Business",
+      "firstResponseMinutes": 240,
+      "resolutionTargetHours": 48,
+      "businessHoursOnly": true
+    },
+    {
+      "id": "sla_enterprise",
+      "name": "Enterprise",
+      "firstResponseMinutes": 30,
+      "resolutionTargetHours": 8,
+      "businessHoursOnly": false
+    }
+  ]
+}

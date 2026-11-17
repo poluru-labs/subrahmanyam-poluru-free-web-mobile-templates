@@ -1,0 +1,53 @@
+{
+  "macros": [
+    {
+      "id": "macro_sso_safari_steps",
+      "name": "SSO — Safari quick fixes",
+      "category": "auth",
+      "tiers": ["starter", "business", "enterprise"],
+      "body": "Hi {{customer.first_name}},\n\nThanks for the detail on Safari. Please try:\n1) Clear cookies for {{product.domain}}\n2) Allow cross-site tracking for your IdP ({{customer.idp_domain}})\n3) Retry in a private window\n\nIf it still loops, reply with a HAR from the redirect step and we’ll escalate to engineering.\n\n— {{agent.name}}"
+    },
+    {
+      "id": "macro_billing_duplicate_charge",
+      "name": "Billing — duplicate charge reassurance",
+      "category": "billing",
+      "tiers": ["business", "enterprise"],
+      "body": "Hi {{customer.first_name}},\n\nI’m sorry for the confusion on billing. I’ve opened a review of invoice {{ticket.invoice_id}} and will post an update within {{sla.first_response_hours}} hours.\n\n— {{agent.name}}"
+    },
+    {
+      "id": "macro_incident_enterprise",
+      "name": "Incident — enterprise acknowledgment",
+      "category": "incident",
+      "tiers": ["enterprise"],
+      "body": "Hi {{customer.first_name}},\n\nWe’re tracking elevated API errors since {{incident.started_at}} UTC. Status: {{status.page_url}}\n\nI’ve engaged our incident bridge; your TAM {{account.tam_name}} has been notified.\n\n— {{agent.name}}"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "sugg_001",
+      "ticketId": "tkt_48275",
+      "agentId": "agent_macro",
+      "macroId": "macro_sso_safari_steps",
+      "mergeFields": {
+        "customer.first_name": "Jordan",
+        "product.domain": "app.example.com",
+        "customer.idp_domain": "okta.startupco.example",
+        "agent.name": "Alex"
+      },
+      "confidence": 0.92
+    },
+    {
+      "id": "sugg_002",
+      "ticketId": "tkt_48291",
+      "agentId": "agent_macro",
+      "macroId": "macro_billing_duplicate_charge",
+      "mergeFields": {
+        "customer.first_name": "Maya",
+        "ticket.invoice_id": "INV-2026-0317-4421",
+        "sla.first_response_hours": "4",
+        "agent.name": "Alex"
+      },
+      "confidence": 0.86
+    }
+  ]
+}

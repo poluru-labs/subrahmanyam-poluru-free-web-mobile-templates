@@ -1,0 +1,11 @@
+{
+  "slug": "ai-customer-support-console",
+  "name": "AI Customer Support Console",
+  "tagline": "Assist agents with grounded replies, macros, and escalation.",
+  "brandColor": "#A82323",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "customer-support:active-agent"
+  }
+}
