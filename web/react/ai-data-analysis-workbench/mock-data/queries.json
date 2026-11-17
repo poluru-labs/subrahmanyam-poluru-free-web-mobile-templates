@@ -1,0 +1,28 @@
+{
+  "queries": [
+    {
+      "id": "qry_monthly_revenue",
+      "datasetId": "ds_shop_analytics",
+      "agentId": "agent_query",
+      "naturalLanguage": "Monthly net revenue by product category for the last 12 months.",
+      "dialect": "snowflake",
+      "status": "lint_passed",
+      "sql": "SELECT\n  DATE_TRUNC('month', o.ordered_at) AS month,\n  p.category,\n  SUM(o.net_revenue_usd) AS net_revenue_usd\nFROM analytics.fct_orders o\nJOIN analytics.dim_products p ON o.product_id = p.product_id\nWHERE o.ordered_at >= DATEADD(month, -12, CURRENT_DATE())\nGROUP BY 1, 2\nORDER BY 1, 2;",
+      "lintWarnings": [
+        "Large scan on fct_orders; consider clustering on ordered_at."
+      ],
+      "estimatedRows": 144
+    },
+    {
+      "id": "qry_repeat_purchase",
+      "datasetId": "ds_shop_analytics",
+      "agentId": "agent_query",
+      "naturalLanguage": "What percent of customers who bought in January came back in February?",
+      "dialect": "snowflake",
+      "status": "draft",
+      "sql": "WITH jan_buyers AS (\n  SELECT DISTINCT customer_id\n  FROM analytics.fct_orders\n  WHERE ordered_at >= '2026-01-01' AND ordered_at < '2026-02-01'\n),\nfeb_buyers AS (\n  SELECT DISTINCT customer_id\n  FROM analytics.fct_orders\n  WHERE ordered_at >= '2026-02-01' AND ordered_at < '2026-03-01'\n)\nSELECT\n  COUNT(*) AS jan_customers,\n  COUNT(f.customer_id) AS returned_in_feb,\n  returned_in_feb / NULLIF(jan_customers, 0) AS repeat_rate\nFROM jan_buyers j\nLEFT JOIN feb_buyers f ON j.customer_id = f.customer_id;",
+      "lintWarnings": [],
+      "estimatedRows": 1
+    }
+  ]
+}

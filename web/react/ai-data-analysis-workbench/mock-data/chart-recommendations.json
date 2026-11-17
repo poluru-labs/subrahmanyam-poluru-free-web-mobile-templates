@@ -1,0 +1,47 @@
+{
+  "recommendations": [
+    {
+      "id": "chart_001",
+      "queryId": "qry_monthly_revenue",
+      "agentId": "agent_chart",
+      "recommendedType": "line",
+      "rationale": "Time series with two categorical series (category); line chart shows seasonality per category.",
+      "encoding": {
+        "x": { "field": "month", "type": "temporal" },
+        "y": { "field": "net_revenue_usd", "type": "quantitative", "aggregate": "sum" },
+        "color": { "field": "category", "type": "nominal" }
+      },
+      "alternatives": [
+        {
+          "type": "stacked_area",
+          "when": "Emphasize category mix over time"
+        },
+        {
+          "type": "heatmap",
+          "when": "Compare many categories × months in compact grid"
+        }
+      ],
+      "faceting": null,
+      "vegaLiteSpecRef": "specs/monthly_revenue_by_category.vl.json"
+    },
+    {
+      "id": "chart_002",
+      "queryId": "qry_repeat_purchase",
+      "agentId": "agent_chart",
+      "recommendedType": "bar",
+      "rationale": "Single metric (repeat_rate) with supporting counts; use paired bars or bullet chart.",
+      "encoding": {
+        "x": { "field": "metric", "type": "nominal" },
+        "y": { "field": "value", "type": "quantitative" }
+      },
+      "alternatives": [
+        {
+          "type": "kpi_card",
+          "when": "Dashboard tile with repeat_rate as headline"
+        }
+      ],
+      "faceting": null,
+      "vegaLiteSpecRef": null
+    }
+  ]
+}

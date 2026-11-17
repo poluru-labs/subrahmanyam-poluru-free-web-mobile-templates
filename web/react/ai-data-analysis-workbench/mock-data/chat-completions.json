@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "query": {
+      "request": {
+        "agentId": "agent_query",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Turn this question into SQL: repeat purchase rate Jan to Feb."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_query",
+          "role": "assistant",
+          "content": "Query Translator (prompt 2026.03.1) — Query assist (demo): I would draft SQL or dataframe steps for “Turn this question into SQL: repeat purchase rate Jan to Feb.” with schema-aware linting. Connect your gateway for execution.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "chart": {
+      "request": {
+        "agentId": "agent_chart",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Suggest encodings for time series revenue by category."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_chart",
+          "role": "assistant",
+          "content": "Viz Recommender (prompt 2026.02.4) — Viz pass (demo): I would recommend encodings and chart types for “Suggest encodings for time series revenue by category.” given typical cardinality patterns.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "insight": {
+      "request": {
+        "agentId": "agent_insight",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Summarize results and call out caveats for monthly revenue query."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_insight",
+          "role": "assistant",
+          "content": "Insight Narrator (prompt 2026.01.8) — Insight draft (demo): I would summarize trends and caveats from results related to “Summarize results and call out caveats for monthly revenue query.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "notebook": {
+      "request": {
+        "agentId": "agent_notebook",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Capture reproducible cells for the monthly revenue SQL and a bar chart."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_notebook",
+          "role": "assistant",
+          "content": "Notebook Scribe (prompt 2026.03.0-rc1) — Notebook cell (demo): I would capture reproducible steps for “Capture reproducible cells for the monthly revenue SQL and a bar chart.” with pinned kernel metadata.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_schema",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Which tables join for order revenue by customer segment?"
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_schema",
+          "role": "assistant",
+          "content": "Schema Explorer (prompt 2025.12.2) — Schema tour (demo): I would explain relevant tables and joins for “Which tables join for order revenue by customer segment?”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

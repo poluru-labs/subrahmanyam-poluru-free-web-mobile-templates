@@ -1,0 +1,45 @@
+{
+  "notebooks": [
+    {
+      "id": "nb_q1_category_review",
+      "title": "Q1 category revenue review",
+      "datasetId": "ds_shop_analytics",
+      "agentId": "agent_notebook",
+      "kernel": {
+        "name": "python3",
+        "version": "3.11.8",
+        "pinned": true
+      },
+      "parameters": {
+        "lookback_months": 12,
+        "schema": "ANALYTICS"
+      },
+      "cells": [
+        {
+          "id": "cell_01",
+          "type": "markdown",
+          "source": "# Monthly revenue by category\nReproduces workbench query `qry_monthly_revenue`."
+        },
+        {
+          "id": "cell_02",
+          "type": "code",
+          "source": "import pandas as pd\nfrom workbench import run_sql\n\nsql = open('queries/monthly_revenue.sql').read()\ndf = run_sql(sql, params={'lookback_months': lookback_months})\ndf.head()",
+          "dependencies": ["pandas>=2.2", "workbench-sdk>=0.4"]
+        },
+        {
+          "id": "cell_03",
+          "type": "code",
+          "source": "df.groupby('category')['net_revenue_usd'].sum().sort_values(ascending=False).plot(kind='bar')",
+          "dependencies": ["matplotlib>=3.8"]
+        }
+      ],
+      "runManifest": {
+        "lastRunAt": "2026-03-17T12:30:00.000Z",
+        "durationSeconds": 14.2,
+        "rowCount": 144,
+        "gitSha": "a1b2c3d"
+      },
+      "status": "draft"
+    }
+  ]
+}

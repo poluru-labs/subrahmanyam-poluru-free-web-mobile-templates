@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Datasets",
+      "value": "27",
+      "hint": "Connected"
+    },
+    {
+      "label": "Queries",
+      "value": "1.5k",
+      "hint": "This week"
+    },
+    {
+      "label": "Insights saved",
+      "value": "210",
+      "hint": "Pinned"
+    }
+  ]
+}

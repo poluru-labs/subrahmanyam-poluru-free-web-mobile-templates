@@ -1,0 +1,34 @@
+{
+  "datasets": [
+    {
+      "id": "ds_shop_analytics",
+      "name": "Shop Analytics Warehouse",
+      "connectionType": "snowflake",
+      "schema": "ANALYTICS",
+      "status": "connected",
+      "rowCountApprox": 18400000,
+      "lastSyncedAt": "2026-03-17T08:00:00.000Z",
+      "primaryTables": ["fct_orders", "dim_customers", "dim_products", "fct_sessions"]
+    },
+    {
+      "id": "ds_marketing_exports",
+      "name": "Marketing Campaign CSV Bundle",
+      "connectionType": "upload",
+      "schema": null,
+      "status": "connected",
+      "rowCountApprox": 420000,
+      "lastSyncedAt": "2026-03-16T22:15:00.000Z",
+      "primaryTables": ["campaign_spend", "attributed_conversions"]
+    },
+    {
+      "id": "ds_support_tickets",
+      "name": "Support Tickets Mirror",
+      "connectionType": "postgres",
+      "schema": "public",
+      "status": "degraded",
+      "rowCountApprox": 2100000,
+      "lastSyncedAt": "2026-03-15T14:00:00.000Z",
+      "primaryTables": ["tickets", "ticket_events", "csat_responses"]
+    }
+  ]
+}

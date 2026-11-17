@@ -1,0 +1,77 @@
+{
+  "datasetId": "ds_shop_analytics",
+  "agentId": "agent_schema",
+  "tables": [
+    {
+      "name": "fct_orders",
+      "description": "One row per order line; grain is order_id + line_item_id.",
+      "rowCountApprox": 9200000,
+      "freshnessHours": 2,
+      "primaryKey": ["order_id", "line_item_id"],
+      "columns": [
+        { "name": "order_id", "type": "VARCHAR", "nullable": false },
+        { "name": "ordered_at", "type": "TIMESTAMP_TZ", "nullable": false },
+        { "name": "customer_id", "type": "VARCHAR", "nullable": false },
+        { "name": "product_id", "type": "VARCHAR", "nullable": false },
+        { "name": "quantity", "type": "INTEGER", "nullable": false },
+        { "name": "net_revenue_usd", "type": "NUMBER(12,2)", "nullable": false },
+        { "name": "channel", "type": "VARCHAR", "nullable": true }
+      ]
+    },
+    {
+      "name": "dim_customers",
+      "description": "Customer attributes; SCD type 1.",
+      "rowCountApprox": 480000,
+      "freshnessHours": 6,
+      "primaryKey": ["customer_id"],
+      "columns": [
+        { "name": "customer_id", "type": "VARCHAR", "nullable": false },
+        { "name": "signup_at", "type": "DATE", "nullable": false },
+        { "name": "country_code", "type": "CHAR(2)", "nullable": true },
+        { "name": "segment", "type": "VARCHAR", "nullable": true }
+      ]
+    },
+    {
+      "name": "dim_products",
+      "description": "Product catalog dimensions.",
+      "rowCountApprox": 12000,
+      "freshnessHours": 24,
+      "primaryKey": ["product_id"],
+      "columns": [
+        { "name": "product_id", "type": "VARCHAR", "nullable": false },
+        { "name": "category", "type": "VARCHAR", "nullable": false },
+        { "name": "brand", "type": "VARCHAR", "nullable": true }
+      ]
+    }
+  ],
+  "joinHints": [
+    {
+      "from": "fct_orders.customer_id",
+      "to": "dim_customers.customer_id",
+      "cardinality": "many_to_one",
+      "notes": "Inner join drops ~0.3% orphan orders in staging."
+    },
+    {
+      "from": "fct_orders.product_id",
+      "to": "dim_products.product_id",
+      "cardinality": "many_to_one",
+      "notes": "Left join recommended for discontinued SKUs."
+    }
+  ],
+  "qualitySignals": [
+    {
+      "table": "fct_orders",
+      "signal": "null_rate",
+      "column": "channel",
+      "value": 0.08,
+      "severity": "low"
+    },
+    {
+      "table": "fct_orders",
+      "signal": "future_dates",
+      "column": "ordered_at",
+      "value": 12,
+      "severity": "medium"
+    }
+  ]
+}

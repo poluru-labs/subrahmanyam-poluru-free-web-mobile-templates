@@ -1,0 +1,28 @@
+{
+  "runs": [
+    {
+      "id": "run_8821",
+      "datasetId": "ds_shop_analytics",
+      "queryId": "qry_monthly_revenue",
+      "chartId": "chart_001",
+      "insightId": "ins_001",
+      "status": "completed",
+      "startedAt": "2026-03-17T13:15:00.000Z",
+      "finishedAt": "2026-03-17T13:16:08.000Z",
+      "bytesScanned": 1240000000,
+      "cacheHit": false
+    },
+    {
+      "id": "run_8822",
+      "datasetId": "ds_shop_analytics",
+      "queryId": "qry_repeat_purchase",
+      "chartId": "chart_002",
+      "insightId": "ins_002",
+      "status": "completed",
+      "startedAt": "2026-03-17T14:00:00.000Z",
+      "finishedAt": "2026-03-17T14:00:22.000Z",
+      "bytesScanned": 89000000,
+      "cacheHit": true
+    }
+  ]
+}

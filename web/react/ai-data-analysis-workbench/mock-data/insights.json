@@ -1,0 +1,36 @@
+{
+  "insights": [
+    {
+      "id": "ins_001",
+      "queryId": "qry_monthly_revenue",
+      "agentId": "agent_insight",
+      "title": "Apparel drove Q1 uplift; Home flat",
+      "summary": "Net revenue grew 11% YoY in the last 12-month window, concentrated in Apparel (+18%) while Home held flat (+1%).",
+      "anomalies": [
+        {
+          "label": "February spike — Apparel",
+          "detail": "Apparel revenue +32% vs prior February; aligns with promo calendar week 7."
+        }
+      ],
+      "caveats": [
+        "Revenue is net of returns; return lag may understate late-March figures.",
+        "8% of orders missing channel tag — regional splits may be biased."
+      ],
+      "pinned": true,
+      "createdAt": "2026-03-17T13:20:00.000Z"
+    },
+    {
+      "id": "ins_002",
+      "queryId": "qry_repeat_purchase",
+      "agentId": "agent_insight",
+      "title": "January cohort repeat rate",
+      "summary": "42% of January buyers placed another order in February (n=18,400 January buyers).",
+      "anomalies": [],
+      "caveats": [
+        "Cohort uses order presence, not revenue; multi-buyer households may inflate rate slightly."
+      ],
+      "pinned": false,
+      "createdAt": "2026-03-17T14:05:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_revenue_query",
+      "title": "Monthly revenue by category",
+      "updatedAt": "2026-03-17T14:02:00.000Z",
+      "agentId": "agent_query",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Write SQL for monthly net revenue by product category, last 12 months.",
+          "createdAt": "2026-03-17T14:00:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Query Translator (prompt 2026.03.1) — Query assist (demo): I would draft SQL or dataframe steps for “Write SQL for monthly net revenue by product category, last 12 months.” with schema-aware linting. Connect your gateway for execution.",
+          "createdAt": "2026-03-17T14:02:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_viz_line",
+      "title": "Chart type for revenue series",
+      "updatedAt": "2026-03-17T13:25:00.000Z",
+      "agentId": "agent_chart",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Recommend a chart for month × category × revenue with about 12 months of data.",
+          "createdAt": "2026-03-17T13:20:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Viz Recommender (prompt 2026.02.4) — Viz pass (demo): I would recommend encodings and chart types for “Recommend a chart for month × category × revenue with about 12 months of data.” given typical cardinality patterns.",
+          "createdAt": "2026-03-17T13:25:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

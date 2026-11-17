@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Data Analysis Workbench — mirrors agents, dashboard metrics, mock chat behavior, and analysis entities (datasets, schema, queries, charts, insights, notebooks).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "datasets.json", "entity": "connected data sources" },
+    { "path": "schema-catalog.json", "entity": "tables, joins, quality (Schema Explorer)" },
+    { "path": "queries.json", "entity": "NL → SQL drafts (Query Translator)" },
+    { "path": "chart-recommendations.json", "entity": "viz encoding suggestions" },
+    { "path": "insights.json", "entity": "narratives and caveats (Insight Narrator)" },
+    { "path": "notebooks.json", "entity": "reproducible cells (Notebook Scribe)" },
+    { "path": "analysis-runs.json", "entity": "linked query → chart → insight runs" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_query",
+      "name": "Query Translator",
+      "description": "Turns natural-language questions into SQL or dataframe steps with guardrails.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "query",
+      "promptVersion": "2026.03.1",
+      "tools": ["nl2sql.draft", "schema.introspect", "query.lint"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_chart",
+      "name": "Viz Recommender",
+      "description": "Suggests chart types, encodings, and faceting for the shape of your data.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "chart",
+      "promptVersion": "2026.02.4",
+      "tools": ["chart.suggest", "encoding.map", "vega.preview"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_insight",
+      "name": "Insight Narrator",
+      "description": "Writes executive summaries, anomalies, and caveats from result sets.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "insight",
+      "promptVersion": "2026.01.8",
+      "tools": ["stats.summarize", "anomaly.flag", "narrative.export"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_notebook",
+      "name": "Notebook Scribe",
+      "description": "Captures reproducible notebook cells with parameters, deps, and run metadata.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "notebook",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["cell.generate", "kernel.pin", "run.manifest"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_schema",
+      "name": "Schema Explorer",
+      "description": "Explains tables, joins, and data quality signals before you query.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["catalog.browse", "join.hint", "quality.score"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

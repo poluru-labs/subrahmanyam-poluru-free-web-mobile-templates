@@ -1,0 +1,11 @@
+{
+  "slug": "ai-data-analysis-workbench",
+  "name": "AI Data Analysis Workbench",
+  "tagline": "Ask questions of datasets and get charts with explanations.",
+  "brandColor": "#9E4F20",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "data-analysis:active-agent"
+  }
+}
