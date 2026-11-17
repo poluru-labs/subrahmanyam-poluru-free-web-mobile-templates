@@ -1,0 +1,37 @@
+{
+  "courseId": "crs_agile_pm_fundamentals",
+  "agentId": "agent_syllabus",
+  "weeks": [
+    {
+      "week": 1,
+      "topic": "Product discovery and problem framing",
+      "readings": [
+        "Snyder — Lean Discovery chapters 1–2",
+        "Internal: product brief template"
+      ],
+      "activities": ["Draft problem statement", "Stakeholder interview script"],
+      "instructorNotes": "Emphasize outcome hypotheses over feature lists."
+    },
+    {
+      "week": 2,
+      "topic": "Backlogs and prioritization",
+      "readings": ["Cohn — User Stories Applied (selection)", "RICE one-pager"],
+      "activities": ["Story mapping workshop", "Prioritization lab"],
+      "instructorNotes": "Use a fixed dataset of user feedback for consistency."
+    },
+    {
+      "week": 3,
+      "topic": "Sprint planning and delivery rhythm",
+      "readings": ["Scrum Guide (2020)", "Team working agreement examples"],
+      "activities": ["Plan a mock sprint", "Definition of Done checklist"],
+      "instructorNotes": "Connect ceremonies to measurable flow metrics."
+    },
+    {
+      "week": 4,
+      "topic": "Metrics, learning, and release",
+      "readings": ["Fitzpatrick — Lean Analytics ch. 4", "Guardrail metrics cheat sheet"],
+      "activities": ["OKR draft", "Release notes exercise"],
+      "instructorNotes": "Preview capstone rubric criteria in week 4."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "ai-course-creator",
+  "name": "AI Course Creator",
+  "tagline": "Design modules, lessons, and assessments end to end.",
+  "brandColor": "#693382",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "course-creator:active-agent"
+  }
+}

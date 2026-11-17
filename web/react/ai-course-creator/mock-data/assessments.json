@@ -1,0 +1,55 @@
+{
+  "blueprints": [
+    {
+      "id": "asmt_dl_mod4_quiz",
+      "courseId": "crs_data_literacy_101",
+      "moduleId": "mod_04_inference",
+      "agentId": "agent_assessment",
+      "title": "Module 4 — Inference checkpoint",
+      "type": "quiz",
+      "alignedOutcomeIds": ["lo_02", "lo_03"],
+      "status": "draft",
+      "items": [
+        {
+          "id": "item_001",
+          "stem": "A blog claims ice cream sales 'cause' drowning deaths because both rise in summer. What is the best critique?",
+          "bloomLevel": "analyze",
+          "type": "multiple_choice",
+          "options": [
+            "The sample size is always too small",
+            "A confounding variable (season/weather) explains both trends",
+            "Correlation always implies causation in seasonal data",
+            "The chart must use a pie graph instead"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "item_002",
+          "stem": "Before sharing a survey result internally, which quality check comes first?",
+          "bloomLevel": "apply",
+          "type": "multiple_choice",
+          "options": [
+            "Pick the most dramatic chart type",
+            "Confirm who was sampled and whether they represent the decision audience",
+            "Remove all outliers regardless of context",
+            "Add more decimal places for precision"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "projectPrompt": null
+    },
+    {
+      "id": "asmt_dl_capstone",
+      "courseId": "crs_data_literacy_101",
+      "moduleId": "mod_06_capstone",
+      "agentId": "agent_assessment",
+      "title": "Capstone data story",
+      "type": "project",
+      "alignedOutcomeIds": ["lo_04"],
+      "status": "draft",
+      "items": [],
+      "projectPrompt": "Using the provided retail returns dataset, produce a one-page brief for operations leadership: one headline insight, two supporting visuals, and a recommended action with caveats about data limitations."
+    }
+  ]
+}

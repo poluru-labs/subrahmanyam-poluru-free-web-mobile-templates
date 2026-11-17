@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Courses",
+      "value": "14",
+      "hint": "In production"
+    },
+    {
+      "label": "Modules",
+      "value": "96",
+      "hint": "Authored"
+    },
+    {
+      "label": "Completion",
+      "value": "68%",
+      "hint": "Learner avg."
+    }
+  ]
+}

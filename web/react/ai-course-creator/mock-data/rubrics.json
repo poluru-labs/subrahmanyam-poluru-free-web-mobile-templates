@@ -1,0 +1,55 @@
+{
+  "rubrics": [
+    {
+      "id": "rubric_capstone_data_story",
+      "courseId": "crs_data_literacy_101",
+      "assessmentId": "asmt_dl_capstone",
+      "agentId": "agent_rubric",
+      "title": "Capstone data story — holistic rubric",
+      "status": "paused",
+      "criteria": [
+        {
+          "id": "crit_insight",
+          "name": "Insight clarity",
+          "weight": 0.3,
+          "levels": [
+            { "label": "Emerging", "points": 1, "descriptor": "Insight is vague or not tied to the dataset." },
+            { "label": "Proficient", "points": 2, "descriptor": "One clear insight with plausible support from the data." },
+            { "label": "Exemplary", "points": 3, "descriptor": "Insight is specific, decision-ready, and acknowledges uncertainty." }
+          ]
+        },
+        {
+          "id": "crit_visuals",
+          "name": "Visual honesty",
+          "weight": 0.25,
+          "levels": [
+            { "label": "Emerging", "points": 1, "descriptor": "Charts mislead or lack labels/units." },
+            { "label": "Proficient", "points": 2, "descriptor": "Charts are readable and mostly honest." },
+            { "label": "Exemplary", "points": 3, "descriptor": "Charts follow accessibility and scale best practices." }
+          ]
+        },
+        {
+          "id": "crit_ethics",
+          "name": "Ethical framing",
+          "weight": 0.25,
+          "levels": [
+            { "label": "Emerging", "points": 1, "descriptor": "No mention of limitations or privacy." },
+            { "label": "Proficient", "points": 2, "descriptor": "States at least one limitation or bias risk." },
+            { "label": "Exemplary", "points": 3, "descriptor": "Explicit limitations, audience fit, and safe-use notes." }
+          ]
+        },
+        {
+          "id": "crit_action",
+          "name": "Recommended action",
+          "weight": 0.2,
+          "levels": [
+            { "label": "Emerging", "points": 1, "descriptor": "Action is missing or unrelated to insight." },
+            { "label": "Proficient", "points": 2, "descriptor": "Action aligns with insight and scope." },
+            { "label": "Exemplary", "points": 3, "descriptor": "Action includes owner, metric, and review trigger." }
+          ]
+        }
+      ],
+      "exemplarNotes": "Link instructor-facing exemplar: strong capstone uses BLUF headline and a single guardrail metric."
+    }
+  ]
+}

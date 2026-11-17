@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Course Creator — mirrors agents, dashboard metrics, mock chat behavior, and domain entities (courses, outcomes, modules, syllabi, lessons, assessments, rubrics).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "courses.json", "entity": "courses in draft or production" },
+    { "path": "learning-outcomes.json", "entity": "outcome map (Curriculum Architect)" },
+    { "path": "curriculum-modules.json", "entity": "module sequence and pacing" },
+    { "path": "syllabi.json", "entity": "week-by-week syllabus (Syllabus Scaffolder)" },
+    { "path": "lessons.json", "entity": "lesson flows (Lesson Drafter)" },
+    { "path": "assessments.json", "entity": "quizzes and projects (Assessment Blueprint)" },
+    { "path": "rubrics.json", "entity": "criterion rubrics (Rubric Composer)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

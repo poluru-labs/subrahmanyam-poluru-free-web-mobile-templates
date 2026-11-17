@@ -1,0 +1,138 @@
+{
+  "samplesByCategory": {
+    "curriculum": {
+      "request": {
+        "agentId": "agent_curriculum",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Map outcomes to six modules for an intro data literacy course."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_curriculum",
+          "role": "assistant",
+          "content": "Curriculum Architect (prompt 2026.03.1) — Curriculum pass (demo): I would structure modules and outcomes from “Map outcomes to six modules for an intro data literacy course.”. Connect your gateway for production-ready scaffolding.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "lesson": {
+      "request": {
+        "agentId": "agent_lesson",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Outline a lesson with hook, activity, and exit ticket."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_lesson",
+          "role": "assistant",
+          "content": "Lesson Drafter (prompt 2026.01.8) — Lesson draft (demo): I would outline activities and checks for “Outline a lesson with hook, activity, and exit ticket.” with slide-ready notes.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "assessment": {
+      "request": {
+        "agentId": "agent_assessment",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Create a five-item quiz aligned to analyzing charts."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_assessment",
+          "role": "assistant",
+          "content": "Assessment Blueprint (prompt 2026.03.0-rc1) — Assessment blueprint (demo): I would draft aligned items and project prompts for “Create a five-item quiz aligned to analyzing charts.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "rubric": {
+      "request": {
+        "agentId": "agent_rubric",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Build a four-criterion rubric for the capstone data story project."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_rubric",
+          "role": "assistant",
+          "content": "Rubric Composer (prompt 2025.12.2) — Rubric draft (demo): I would generate criteria and performance levels for “Build a four-criterion rubric for the capstone data story project.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "Sanity-check pacing for a 6-week async course at 90 minutes per week."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Acknowledged: “Sanity-check pacing for a 6-week async course at 90 minutes per week.”. Connect `/chat/completions` to your AI gateway to replace this mock response.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

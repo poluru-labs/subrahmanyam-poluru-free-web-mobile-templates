@@ -1,0 +1,64 @@
+{
+  "courseId": "crs_data_literacy_101",
+  "agentId": "agent_curriculum",
+  "pacingGuide": {
+    "minutesPerWeek": 90,
+    "suggestedSeatTimeHours": 9
+  },
+  "modules": [
+    {
+      "id": "mod_01_foundations",
+      "sequence": 1,
+      "title": "What counts as data?",
+      "durationMinutes": 75,
+      "outcomeIds": ["lo_01"],
+      "prerequisites": [],
+      "summary": "Definitions, data lifecycle, roles on a data-informed team."
+    },
+    {
+      "id": "mod_02_sources",
+      "sequence": 2,
+      "title": "Sources and spreadsheets",
+      "durationMinutes": 90,
+      "outcomeIds": ["lo_01"],
+      "prerequisites": ["mod_01_foundations"],
+      "summary": "CRM exports, surveys, APIs, and spreadsheet hygiene."
+    },
+    {
+      "id": "mod_03_visual_literacy",
+      "sequence": 3,
+      "title": "Reading charts honestly",
+      "durationMinutes": 85,
+      "outcomeIds": ["lo_02"],
+      "prerequisites": ["mod_02_sources"],
+      "summary": "Axes, baselines, chart types, and common misreads."
+    },
+    {
+      "id": "mod_04_inference",
+      "sequence": 4,
+      "title": "From description to cautious inference",
+      "durationMinutes": 95,
+      "outcomeIds": ["lo_02", "lo_03"],
+      "prerequisites": ["mod_03_visual_literacy"],
+      "summary": "Correlation vs causation, samples, and confidence language."
+    },
+    {
+      "id": "mod_05_ethics",
+      "sequence": 5,
+      "title": "Privacy, consent, and fairness",
+      "durationMinutes": 70,
+      "outcomeIds": ["lo_03"],
+      "prerequisites": ["mod_04_inference"],
+      "summary": "PII basics, consent, and bias checkpoints."
+    },
+    {
+      "id": "mod_06_capstone",
+      "sequence": 6,
+      "title": "Capstone: stakeholder data story",
+      "durationMinutes": 120,
+      "outcomeIds": ["lo_04"],
+      "prerequisites": ["mod_05_ethics"],
+      "summary": "One-page narrative + visual for a supplied scenario dataset."
+    }
+  ]
+}

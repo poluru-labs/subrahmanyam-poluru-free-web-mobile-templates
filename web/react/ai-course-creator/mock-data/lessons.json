@@ -1,0 +1,58 @@
+{
+  "lessons": [
+    {
+      "id": "lsn_dl_chart_axes",
+      "courseId": "crs_data_literacy_101",
+      "moduleId": "mod_03_visual_literacy",
+      "agentId": "agent_lesson",
+      "title": "Axes, baselines, and honest scales",
+      "durationMinutes": 25,
+      "hook": "A headline says 'Sales doubled' — but the chart tells a different story.",
+      "sections": [
+        {
+          "type": "explain",
+          "title": "Truncated axes",
+          "slideNotes": "Show paired charts with full vs truncated Y-axis; ask learners to spot the delta."
+        },
+        {
+          "type": "activity",
+          "title": "Chart autopsy",
+          "slideNotes": "Small groups label what is measured, by whom, and what is missing."
+        },
+        {
+          "type": "formative_check",
+          "title": "Quick poll",
+          "slideNotes": "Which revision is more honest? A/B screenshot comparison."
+        }
+      ],
+      "status": "ready_for_review"
+    },
+    {
+      "id": "lsn_ww_peer_feedback",
+      "courseId": "crs_workplace_writing",
+      "moduleId": null,
+      "agentId": "agent_lesson",
+      "title": "Peer feedback on executive summaries",
+      "durationMinutes": 40,
+      "hook": "Executives read the first paragraph — everything else is optional.",
+      "sections": [
+        {
+          "type": "explain",
+          "title": "BLUF structure",
+          "slideNotes": "Bottom line up front; one claim, three proofs, explicit ask."
+        },
+        {
+          "type": "activity",
+          "title": "Two-pass review",
+          "slideNotes": "Pass 1: clarity; Pass 2: evidence and tone."
+        },
+        {
+          "type": "formative_check",
+          "title": "Exit ticket",
+          "slideNotes": "Rewrite one sentence to BLUF; share in thread."
+        }
+      ],
+      "status": "published"
+    }
+  ]
+}

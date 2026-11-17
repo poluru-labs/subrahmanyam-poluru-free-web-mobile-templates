@@ -1,0 +1,33 @@
+{
+  "courseId": "crs_data_literacy_101",
+  "outcomes": [
+    {
+      "id": "lo_01",
+      "code": "DL-1",
+      "statement": "Explain how data is collected, stored, and shared in everyday workplace tools.",
+      "bloomLevel": "understand",
+      "moduleIds": ["mod_01_foundations", "mod_02_sources"]
+    },
+    {
+      "id": "lo_02",
+      "code": "DL-2",
+      "statement": "Interpret charts and tables to answer practical business questions without overstating certainty.",
+      "bloomLevel": "analyze",
+      "moduleIds": ["mod_03_visual_literacy", "mod_04_inference"]
+    },
+    {
+      "id": "lo_03",
+      "code": "DL-3",
+      "statement": "Apply a simple checklist to evaluate data quality and bias before making decisions.",
+      "bloomLevel": "apply",
+      "moduleIds": ["mod_04_inference", "mod_05_ethics"]
+    },
+    {
+      "id": "lo_04",
+      "code": "DL-4",
+      "statement": "Design a one-page data story for stakeholders using ethical framing and clear visuals.",
+      "bloomLevel": "create",
+      "moduleIds": ["mod_06_capstone"]
+    }
+  ]
+}

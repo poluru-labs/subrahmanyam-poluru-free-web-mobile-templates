@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_dl_curriculum",
+      "title": "Data Literacy — module sequence",
+      "updatedAt": "2026-03-17T14:02:00.000Z",
+      "agentId": "agent_curriculum",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Turn these four learning goals into a six-week module sequence with prerequisites.",
+          "createdAt": "2026-03-17T14:00:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Curriculum Architect (prompt 2026.03.1) — Curriculum pass (demo): I would structure modules and outcomes from “Turn these four learning goals into a six-week module sequence with prerequisites.”. Connect your gateway for production-ready scaffolding.",
+          "createdAt": "2026-03-17T14:02:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_dl_lesson",
+      "title": "Chart literacy lesson draft",
+      "updatedAt": "2026-03-17T10:45:00.000Z",
+      "agentId": "agent_lesson",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Draft a 25-minute lesson on truncated axes with a hook and formative check.",
+          "createdAt": "2026-03-17T10:40:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Lesson Drafter (prompt 2026.01.8) — Lesson draft (demo): I would outline activities and checks for “Draft a 25-minute lesson on truncated axes with a hook and formative check.” with slide-ready notes.",
+          "createdAt": "2026-03-17T10:45:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "courses": [
+    {
+      "id": "crs_data_literacy_101",
+      "title": "Data Literacy for Teams",
+      "status": "in_production",
+      "level": "introductory",
+      "durationWeeks": 6,
+      "modality": "blended",
+      "assignedAgentId": "agent_curriculum",
+      "learnerCount": 240,
+      "completionRate": 0.72,
+      "createdAt": "2026-01-10T09:00:00.000Z",
+      "updatedAt": "2026-03-17T12:00:00.000Z"
+    },
+    {
+      "id": "crs_agile_pm_fundamentals",
+      "title": "Agile Product Management Fundamentals",
+      "status": "draft",
+      "level": "intermediate",
+      "durationWeeks": 8,
+      "modality": "async",
+      "assignedAgentId": "agent_syllabus",
+      "learnerCount": 0,
+      "completionRate": null,
+      "createdAt": "2026-03-05T14:30:00.000Z",
+      "updatedAt": "2026-03-16T18:20:00.000Z"
+    },
+    {
+      "id": "crs_workplace_writing",
+      "title": "Workplace Writing Studio",
+      "status": "published",
+      "level": "introductory",
+      "durationWeeks": 4,
+      "modality": "live",
+      "assignedAgentId": "agent_lesson",
+      "learnerCount": 118,
+      "completionRate": 0.64,
+      "createdAt": "2025-11-20T11:00:00.000Z",
+      "updatedAt": "2026-02-28T10:00:00.000Z"
+    }
+  ]
+}
