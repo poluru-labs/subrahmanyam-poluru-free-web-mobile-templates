@@ -1,0 +1,57 @@
+{
+  "playbookId": "corp_saas_fallback_2026",
+  "positions": [
+    {
+      "id": "IND-02",
+      "category": "indemnity",
+      "title": "Mutual IP indemnity",
+      "preferredLanguage": "Each party shall indemnify the other against third-party claims alleging infringement of intellectual property rights by the indemnifying party's deliverables, subject to standard exclusions.",
+      "fallbackLanguage": "Vendor shall indemnify Customer for third-party IP claims arising from the Service as provided; Customer shall indemnify Vendor for claims arising from Customer Content.",
+      "tolerance": "fallback_acceptable_with_review"
+    },
+    {
+      "id": "LOL-01",
+      "category": "limitation_of_liability",
+      "title": "General liability cap",
+      "preferredLanguage": "Aggregate liability capped at twelve (12) months of fees immediately preceding the claim.",
+      "fallbackLanguage": "Aggregate liability capped at twelve (12) months of fees; breaches of confidentiality capped at two times (2×) annual fees.",
+      "tolerance": "preferred_only"
+    },
+    {
+      "id": "LOL-07",
+      "category": "limitation_of_liability",
+      "title": "Uncapped carve-outs",
+      "preferredLanguage": "Carve-outs from limitation of liability: indemnification, confidentiality, data breach, gross negligence, willful misconduct, and payment obligations.",
+      "fallbackLanguage": "Same carve-outs except data breach limited to 2× annual fees super-cap.",
+      "tolerance": "fallback_acceptable"
+    },
+    {
+      "id": "MSA-OF-03",
+      "category": "order_form",
+      "title": "Order Form vs MSA hierarchy",
+      "preferredLanguage": "Order Form terms supplement the MSA; on conflict, MSA governs except where Order Form expressly states a higher standard of care or liability.",
+      "fallbackLanguage": "On conflict, greater protection for Customer applies; liability is the greater of MSA and Order Form caps.",
+      "tolerance": "preferred_only"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "cmp_001",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "clauseId": "cl_8_2_indemnity",
+      "playbookPositionId": "IND-02",
+      "agentId": "agent_playbook",
+      "alignment": "partial",
+      "deviationSummary": "Vendor-only indemnity; missing Customer IP indemnity for Customer Content."
+    },
+    {
+      "id": "cmp_002",
+      "contractId": "ctr_order_form_2026_031",
+      "clauseId": "cl_of_liability_override",
+      "playbookPositionId": "MSA-OF-03",
+      "agentId": "agent_playbook",
+      "alignment": "fail",
+      "deviationSummary": "Order Form reduces liability below MSA without greater-of construct."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "clauses": [
+    {
+      "id": "cl_8_2_indemnity",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "section": "8.2",
+      "title": "Indemnification",
+      "text": "Vendor shall indemnify, defend, and hold harmless Customer against any third-party claims arising from Vendor's negligence, willful misconduct, or breach of Section 7 (Data Security), including reasonable attorneys' fees, except to the extent arising from Customer's unauthorized modifications or misuse of the Service.",
+      "category": "indemnity",
+      "page": 14
+    },
+    {
+      "id": "cl_9_1_liability_cap",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "section": "9.1",
+      "title": "Limitation of Liability",
+      "text": "Except for breaches of Section 7, confidentiality obligations, or indemnification obligations under Section 8, neither party's aggregate liability shall exceed the fees paid or payable by Customer in the twelve (12) months preceding the claim. In no event shall either party be liable for indirect, incidental, special, or consequential damages.",
+      "category": "limitation_of_liability",
+      "page": 16
+    },
+    {
+      "id": "cl_11_3_termination",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "section": "11.3",
+      "title": "Termination for Convenience",
+      "text": "Either party may terminate this Agreement for convenience upon ninety (90) days' prior written notice. Customer shall pay all fees due through the effective date of termination and any non-cancellable commitments in active order forms.",
+      "category": "termination",
+      "page": 19
+    },
+    {
+      "id": "cl_dpa_subprocessors",
+      "contractId": "ctr_dpa_addon_2026_008",
+      "section": "4.2",
+      "title": "Subprocessors",
+      "text": "Processor may engage subprocessors listed at https://nimbus.example/legal/subprocessors. Processor shall provide thirty (30) days' notice before adding a new subprocessor; Controller may object on reasonable data-protection grounds.",
+      "category": "data_protection",
+      "page": 5
+    },
+    {
+      "id": "cl_of_liability_override",
+      "contractId": "ctr_order_form_2026_031",
+      "section": "General Terms",
+      "title": "Liability cap (Order Form)",
+      "text": "Notwithstanding the MSA, total liability under this Order Form shall not exceed fees paid under this Order Form in the prior six (6) months.",
+      "category": "limitation_of_liability",
+      "page": 3
+    }
+  ]
+}

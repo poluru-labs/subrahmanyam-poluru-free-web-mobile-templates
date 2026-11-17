@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_clause_risk",
+      "name": "Clause Risk Scorer",
+      "description": "Flags indemnity, limitation of liability, and termination language against your risk rubric.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "risk",
+      "promptVersion": "2026.03.1",
+      "tools": ["clause.segment", "risk.score", "citation.link"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_obligations",
+      "name": "Obligation Extractor",
+      "description": "Pulls notice periods, payment terms, SLAs, and renewal windows into a task table.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "obligations",
+      "promptVersion": "2026.02.4",
+      "tools": ["obligation.extract", "calendar.ics", "owner.assign"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_playbook",
+      "name": "Playbook Comparator",
+      "description": "Diffs vendor paper against your fallback positions and preferred language.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "playbook",
+      "promptVersion": "2026.01.8",
+      "tools": ["playbook.match", "diff.side_by_side", "comment.export"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_redline",
+      "name": "Redline Composer",
+      "description": "Drafts markup suggestions with rationale tied to playbook clause IDs.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "redline",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["redline.suggest", "track.changes", "rationale.attach"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_msa",
+      "name": "MSA Sentinel",
+      "description": "Watches master agreements for conflicting order-form terms and change-of-control triggers.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["msa.graph", "order_form.link", "alert.queue"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

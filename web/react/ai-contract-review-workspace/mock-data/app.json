@@ -1,0 +1,11 @@
+{
+  "slug": "ai-contract-review-workspace",
+  "name": "AI Contract Review Workspace",
+  "tagline": "Flag risks, obligations, and unusual clauses in contracts.",
+  "brandColor": "#F2A900",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "contract-review:active-agent"
+  }
+}

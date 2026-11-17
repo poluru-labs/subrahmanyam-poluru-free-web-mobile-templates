@@ -1,0 +1,40 @@
+{
+  "findings": [
+    {
+      "id": "risk_001",
+      "clauseId": "cl_8_2_indemnity",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "agentId": "agent_clause_risk",
+      "severity": "medium",
+      "score": 62,
+      "rubricId": "indemnity_mutuality_v3",
+      "summary": "Indemnity is one-sided; Customer does not receive reciprocal indemnity for Customer data or configuration errors.",
+      "recommendation": "Add mutual indemnity for IP infringement and data breach caused by the indemnifying party's breach of security obligations.",
+      "citations": ["Playbook IND-02", "Playbook IND-04"]
+    },
+    {
+      "id": "risk_002",
+      "clauseId": "cl_9_1_liability_cap",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "agentId": "agent_clause_risk",
+      "severity": "high",
+      "score": 78,
+      "rubricId": "liability_cap_carveouts_v2",
+      "summary": "Cap carve-outs omit gross negligence and uncapped data breach liability; super-cap for confidentiality not stated.",
+      "recommendation": "Carve out gross negligence, fraud, and data breach from the cap; add 2× annual fees super-cap for confidentiality breaches.",
+      "citations": ["Playbook LOL-01", "Playbook LOL-07"]
+    },
+    {
+      "id": "risk_003",
+      "clauseId": "cl_of_liability_override",
+      "contractId": "ctr_order_form_2026_031",
+      "agentId": "agent_clause_risk",
+      "severity": "high",
+      "score": 85,
+      "rubricId": "order_form_msa_conflict_v1",
+      "summary": "Order Form narrows liability cap below MSA twelve-month lookback without 'greater of' language.",
+      "recommendation": "Remove override or state liability is the greater of MSA Section 9.1 and Order Form cap.",
+      "citations": ["Playbook MSA-OF-03"]
+    }
+  ]
+}

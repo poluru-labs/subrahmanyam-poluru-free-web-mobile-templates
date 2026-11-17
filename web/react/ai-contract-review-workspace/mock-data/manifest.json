@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Contract Review Workspace — mirrors agents, dashboard metrics, mock chat behavior, and domain entities (contracts, clauses, risks, obligations, playbook, redlines, MSA alerts).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "contracts.json", "entity": "documents under review" },
+    { "path": "clauses.json", "entity": "extracted clause text" },
+    { "path": "risk-findings.json", "entity": "clause risk scores (Clause Risk Scorer)" },
+    { "path": "obligations.json", "entity": "extracted obligations board" },
+    { "path": "playbook-positions.json", "entity": "fallback positions and diffs" },
+    { "path": "redlines.json", "entity": "redline suggestions (Redline Composer)" },
+    { "path": "msa-alerts.json", "entity": "MSA Sentinel alerts" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

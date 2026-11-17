@@ -1,0 +1,69 @@
+{
+  "obligations": [
+    {
+      "id": "obl_notice_termination",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "clauseId": "cl_11_3_termination",
+      "agentId": "agent_obligations",
+      "type": "notice",
+      "title": "Termination for convenience notice",
+      "detail": "Either party must provide 90 days prior written notice.",
+      "dueRule": "90 days before intended termination effective date",
+      "ownerRole": "legal_ops",
+      "status": "tracked",
+      "calendarHint": "Set reminder 95 days before earliest contemplated exit window."
+    },
+    {
+      "id": "obl_payment_net30",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "clauseId": null,
+      "agentId": "agent_obligations",
+      "type": "payment",
+      "title": "Invoice payment terms",
+      "detail": "Net 30 from invoice date; late fees 1.5% per month on overdue amounts.",
+      "dueRule": "Within 30 days of invoice",
+      "ownerRole": "accounts_payable",
+      "status": "tracked",
+      "calendarHint": null
+    },
+    {
+      "id": "obl_sla_uptime",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "clauseId": null,
+      "agentId": "agent_obligations",
+      "type": "sla",
+      "title": "Monthly uptime commitment",
+      "detail": "99.5% monthly uptime excluding scheduled maintenance with 5 business days' notice.",
+      "dueRule": "Ongoing; credits claimed within 30 days of month-end",
+      "ownerRole": "vendor_management",
+      "status": "tracked",
+      "calendarHint": "Review SLA credit eligibility on the 5th business day of each month."
+    },
+    {
+      "id": "obl_dpa_subprocessor_notice",
+      "contractId": "ctr_dpa_addon_2026_008",
+      "clauseId": "cl_dpa_subprocessors",
+      "agentId": "agent_obligations",
+      "type": "notice",
+      "title": "New subprocessor objection window",
+      "detail": "30 days' notice before adding subprocessors; Controller may object on reasonable grounds.",
+      "dueRule": "Within 30 days of Processor notice",
+      "ownerRole": "privacy",
+      "status": "open",
+      "calendarHint": "Subscribe to vendor subprocessor change feed."
+    },
+    {
+      "id": "obl_renewal_auto",
+      "contractId": "ctr_order_form_2026_031",
+      "clauseId": null,
+      "agentId": "agent_obligations",
+      "type": "renewal",
+      "title": "Auto-renewal opt-out",
+      "detail": "Order Form renews for successive one-year terms unless either party provides 60 days' notice before term end.",
+      "dueRule": "Notice no later than 60 days before current term end (2027-03-31)",
+      "ownerRole": "procurement",
+      "status": "upcoming",
+      "calendarHint": "2027-01-30 latest notice date for non-renewal."
+    }
+  ]
+}

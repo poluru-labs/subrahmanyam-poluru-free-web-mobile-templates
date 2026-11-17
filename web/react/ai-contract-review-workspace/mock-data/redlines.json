@@ -1,0 +1,40 @@
+{
+  "suggestions": [
+    {
+      "id": "redline_001",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "clauseId": "cl_8_2_indemnity",
+      "agentId": "agent_redline",
+      "playbookPositionId": "IND-02",
+      "status": "proposed",
+      "originalExcerpt": "Vendor shall indemnify, defend, and hold harmless Customer against any third-party claims...",
+      "proposedText": "Each party shall indemnify, defend, and hold harmless the other against third-party claims to the extent arising from the indemnifying party's breach of this Agreement, negligence, willful misconduct, or infringement of third-party intellectual property rights by the Service (Vendor) or Customer Content (Customer), including reasonable attorneys' fees.",
+      "rationale": "Aligns with playbook mutual indemnity fallback; preserves carve-outs for misuse and unauthorized modifications.",
+      "trackChangesMode": "replace_section"
+    },
+    {
+      "id": "redline_002",
+      "contractId": "ctr_vendor_saas_2026_014",
+      "clauseId": "cl_9_1_liability_cap",
+      "agentId": "agent_redline",
+      "playbookPositionId": "LOL-07",
+      "status": "proposed",
+      "originalExcerpt": "Except for breaches of Section 7, confidentiality obligations, or indemnification obligations under Section 8...",
+      "proposedText": "Except for breaches of Section 7, confidentiality obligations (subject to a super-cap of two times (2×) annual fees), indemnification obligations under Section 8, payment obligations, gross negligence, willful misconduct, or data breach, neither party's aggregate liability shall exceed...",
+      "rationale": "Adds gross negligence and data breach carve-outs per LOL-07 fallback; caps confidentiality exposure with super-cap.",
+      "trackChangesMode": "inline_markup"
+    },
+    {
+      "id": "redline_003",
+      "contractId": "ctr_order_form_2026_031",
+      "clauseId": "cl_of_liability_override",
+      "agentId": "agent_redline",
+      "playbookPositionId": "MSA-OF-03",
+      "status": "draft",
+      "originalExcerpt": "total liability under this Order Form shall not exceed fees paid under this Order Form in the prior six (6) months.",
+      "proposedText": "Total liability under this Order Form shall not exceed the greater of (a) fees paid under this Order Form in the prior six (6) months and (b) the limitation set forth in Section 9.1 of the MSA.",
+      "rationale": "Prevents Order Form from silently narrowing MSA liability cap.",
+      "trackChangesMode": "replace_section"
+    }
+  ]
+}

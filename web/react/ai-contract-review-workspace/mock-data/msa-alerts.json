@@ -1,0 +1,43 @@
+{
+  "alerts": [
+    {
+      "id": "msa_alert_001",
+      "agentId": "agent_msa",
+      "severity": "high",
+      "type": "order_form_conflict",
+      "title": "Liability cap conflict: MSA vs Order Form",
+      "summary": "Order Form Q2 applies a six-month fee cap that is lower than MSA Section 9.1 twelve-month lookback.",
+      "masterContractId": "ctr_vendor_saas_2026_014",
+      "relatedDocumentId": "ctr_order_form_2026_031",
+      "clauseIds": ["cl_9_1_liability_cap", "cl_of_liability_override"],
+      "status": "open",
+      "detectedAt": "2026-03-17T12:50:00.000Z"
+    },
+    {
+      "id": "msa_alert_002",
+      "agentId": "agent_msa",
+      "severity": "medium",
+      "type": "change_of_control",
+      "title": "Assignment clause requires consent",
+      "summary": "MSA Section 12.4 prohibits assignment without consent except to an affiliate or acquirer; verify change-of-control carve-out matches corporate policy.",
+      "masterContractId": "ctr_vendor_saas_2026_014",
+      "relatedDocumentId": null,
+      "clauseIds": ["cl_11_3_termination"],
+      "status": "triaged",
+      "detectedAt": "2026-03-16T16:20:00.000Z"
+    },
+    {
+      "id": "msa_alert_003",
+      "agentId": "agent_msa",
+      "severity": "low",
+      "type": "dpa_linkage",
+      "title": "DPA incorporation by reference",
+      "summary": "DPA Addendum 2026-008 is executed but not yet linked in contract graph; obligations may be incomplete in portfolio view.",
+      "masterContractId": "ctr_vendor_saas_2026_014",
+      "relatedDocumentId": "ctr_dpa_addon_2026_008",
+      "clauseIds": [],
+      "status": "open",
+      "detectedAt": "2026-03-17T09:00:00.000Z"
+    }
+  ]
+}

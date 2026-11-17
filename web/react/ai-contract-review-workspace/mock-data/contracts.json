@@ -1,0 +1,47 @@
+{
+  "contracts": [
+    {
+      "id": "ctr_vendor_saas_2026_014",
+      "title": "Master Subscription Agreement — Nimbus Analytics",
+      "counterparty": "Nimbus Analytics, Inc.",
+      "type": "MSA",
+      "status": "in_review",
+      "jurisdiction": "Delaware",
+      "effectiveDate": "2026-04-01",
+      "valueUsd": 420000,
+      "documentPages": 38,
+      "assignedAgentId": "agent_clause_risk",
+      "uploadedAt": "2026-03-15T09:22:00.000Z",
+      "updatedAt": "2026-03-17T13:10:00.000Z"
+    },
+    {
+      "id": "ctr_dpa_addon_2026_008",
+      "title": "Data Processing Addendum — Nimbus Analytics",
+      "counterparty": "Nimbus Analytics, Inc.",
+      "type": "DPA",
+      "status": "pending_obligations",
+      "jurisdiction": "EU / GDPR",
+      "effectiveDate": "2026-04-01",
+      "valueUsd": null,
+      "documentPages": 12,
+      "assignedAgentId": "agent_obligations",
+      "uploadedAt": "2026-03-16T11:05:00.000Z",
+      "updatedAt": "2026-03-17T10:40:00.000Z"
+    },
+    {
+      "id": "ctr_order_form_2026_031",
+      "title": "Order Form Q2 — Nimbus Analytics (Platform + Support)",
+      "counterparty": "Nimbus Analytics, Inc.",
+      "type": "order_form",
+      "status": "playbook_diff",
+      "jurisdiction": "Delaware",
+      "effectiveDate": "2026-04-01",
+      "valueUsd": 185000,
+      "documentPages": 4,
+      "assignedAgentId": "agent_playbook",
+      "parentContractId": "ctr_vendor_saas_2026_014",
+      "uploadedAt": "2026-03-17T08:00:00.000Z",
+      "updatedAt": "2026-03-17T12:55:00.000Z"
+    }
+  ]
+}
