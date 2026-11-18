@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Image Generation Gallery — mirrors agents, dashboard metrics, mock chat behavior, and studio entities (generations, prompts, collections, styles, approval, seeds).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "generations.json", "entity": "renders with prompt, seed, settings" },
+    { "path": "prompt-history.json", "entity": "versioned prompts (Prompt Archivist)" },
+    { "path": "collections.json", "entity": "boards and exports (Board Curator)" },
+    { "path": "style-presets.json", "entity": "style packs (Style Preset Maker)" },
+    { "path": "approval-queue.json", "entity": "review lanes (Approval Gate)" },
+    { "path": "seed-sweeps.json", "entity": "grids and rankings (Seed Explorer)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

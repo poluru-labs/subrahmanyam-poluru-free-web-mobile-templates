@@ -1,0 +1,63 @@
+{
+  "queue": [
+    {
+      "id": "appr_001",
+      "generationId": "gen_4822",
+      "agentId": "agent_approval",
+      "lane": "marketing",
+      "status": "pending",
+      "policyChecks": [
+        {
+          "rule": "no_gradient_backgrounds",
+          "result": "pass",
+          "detail": "Heuristic: background variance within solid-wall threshold."
+        },
+        {
+          "rule": "no_third_party_logos",
+          "result": "pass",
+          "detail": "Logo detector: none above confidence 0.2."
+        },
+        {
+          "rule": "brand_color_usage",
+          "result": "review",
+          "detail": "Teal accent present; confirm prop placement matches brand guide."
+        }
+      ],
+      "reviewerNotes": [],
+      "submittedAt": "2026-03-17T10:25:00.000Z"
+    },
+    {
+      "id": "appr_002",
+      "generationId": "gen_4821",
+      "agentId": "agent_approval",
+      "lane": "marketing",
+      "status": "approved",
+      "policyChecks": [
+        {
+          "rule": "no_gradient_backgrounds",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "rule": "no_third_party_logos",
+          "result": "pass",
+          "detail": null
+        },
+        {
+          "rule": "brand_color_usage",
+          "result": "pass",
+          "detail": "Approved by brand ops."
+        }
+      ],
+      "reviewerNotes": [
+        {
+          "author": "brand.ops",
+          "body": "Ship for homepage hero.",
+          "at": "2026-03-17T10:40:00.000Z"
+        }
+      ],
+      "submittedAt": "2026-03-17T10:22:00.000Z",
+      "resolvedAt": "2026-03-17T10:40:00.000Z"
+    }
+  ]
+}

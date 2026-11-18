@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Images",
+      "value": "8.4k",
+      "hint": "In library"
+    },
+    {
+      "label": "Collections",
+      "value": "56",
+      "hint": "Curated"
+    },
+    {
+      "label": "Approved",
+      "value": "61%",
+      "hint": "Ready to ship"
+    }
+  ]
+}

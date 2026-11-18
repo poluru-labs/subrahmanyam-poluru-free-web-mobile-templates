@@ -1,0 +1,32 @@
+{
+  "sweeps": [
+    {
+      "id": "sweep_ranger_44021",
+      "agentId": "agent_seed",
+      "promptVersionId": "pv_character_sheet_v1",
+      "baseSeed": 44021,
+      "seedRange": [44021, 44036],
+      "aspectRatios": ["3:2", "1:1"],
+      "status": "paused",
+      "rankedVariations": [
+        {
+          "generationId": "gen_4700",
+          "seed": 44021,
+          "score": 0.88,
+          "note": "Best silhouette readability."
+        },
+        {
+          "generationId": "gen_4701",
+          "seed": 44024,
+          "score": 0.82,
+          "note": "Slightly busy belt gear."
+        }
+      ],
+      "proposedGrid": {
+        "rows": 4,
+        "cols": 4,
+        "totalRenders": 16
+      }
+    }
+  ]
+}

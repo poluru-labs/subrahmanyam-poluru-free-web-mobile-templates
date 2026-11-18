@@ -1,0 +1,61 @@
+{
+  "generations": [
+    {
+      "id": "gen_4821",
+      "promptVersionId": "pv_coastal_v3",
+      "seed": 918273645,
+      "prompt": "Minimal coastal workspace, morning light, teal accent mug on desk, soft shadows, no gradient backgrounds, photoreal product still",
+      "negativePrompt": "gradient backdrop, watermark, extra fingers, logo",
+      "aspectRatio": "16:9",
+      "width": 1920,
+      "height": 1080,
+      "model": "image-gen-pro",
+      "status": "approved",
+      "previewUrl": "/mock-data/previews/gen_4821.webp",
+      "createdAt": "2026-03-17T10:22:00.000Z",
+      "settings": {
+        "steps": 32,
+        "cfgScale": 7.5,
+        "sampler": "euler_a"
+      }
+    },
+    {
+      "id": "gen_4822",
+      "promptVersionId": "pv_coastal_v3",
+      "seed": 918273646,
+      "prompt": "Minimal coastal workspace, morning light, teal accent mug on desk, soft shadows, no gradient backgrounds, photoreal product still",
+      "negativePrompt": "gradient backdrop, watermark, extra fingers, logo",
+      "aspectRatio": "16:9",
+      "width": 1920,
+      "height": 1080,
+      "model": "image-gen-pro",
+      "status": "in_review",
+      "previewUrl": "/mock-data/previews/gen_4822.webp",
+      "createdAt": "2026-03-17T10:23:00.000Z",
+      "settings": {
+        "steps": 32,
+        "cfgScale": 7.5,
+        "sampler": "euler_a"
+      }
+    },
+    {
+      "id": "gen_4700",
+      "promptVersionId": "pv_character_sheet_v1",
+      "seed": 44021,
+      "prompt": "Character turnaround sheet, indie game ranger, flat studio lighting, neutral gray backdrop",
+      "negativePrompt": "busy background, gradient, text overlay",
+      "aspectRatio": "3:2",
+      "width": 1536,
+      "height": 1024,
+      "model": "image-gen-pro",
+      "status": "draft",
+      "previewUrl": "/mock-data/previews/gen_4700.webp",
+      "createdAt": "2026-03-16T15:00:00.000Z",
+      "settings": {
+        "steps": 28,
+        "cfgScale": 6.5,
+        "sampler": "dpm++_2m"
+      }
+    }
+  ]
+}

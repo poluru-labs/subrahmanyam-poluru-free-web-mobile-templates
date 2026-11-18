@@ -1,0 +1,26 @@
+{
+  "presets": [
+    {
+      "id": "style_brand_still_v2",
+      "name": "Brand product still",
+      "agentId": "agent_style",
+      "version": "2.1.0",
+      "referenceAssetIds": ["gen_4821"],
+      "positiveSuffix": "soft natural light, shallow depth of field, clean composition",
+      "negativePrompt": "gradient background, neon, clutter, watermark, oversaturated",
+      "colorAnchors": ["#167D8D"],
+      "notes": "Matches gallery brand accent as prop color only — backgrounds stay solid or environmental."
+    },
+    {
+      "id": "style_flat_character_v1",
+      "name": "Flat character studio",
+      "agentId": "agent_style",
+      "version": "1.0.0",
+      "referenceAssetIds": ["gen_4700"],
+      "positiveSuffix": "even studio lighting, neutral backdrop, readable silhouette",
+      "negativePrompt": "gradient backdrop, busy scenery, text",
+      "colorAnchors": [],
+      "notes": "For turnaround sheets before paint-over."
+    }
+  ]
+}

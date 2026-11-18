@@ -1,0 +1,36 @@
+{
+  "versions": [
+    {
+      "id": "pv_coastal_v3",
+      "agentId": "agent_prompt",
+      "name": "Coastal workspace hero",
+      "version": "3.0.0",
+      "parentId": "pv_coastal_v2",
+      "changeNote": "Tightened negative prompt against gradient backdrops.",
+      "linkedGenerationIds": ["gen_4821", "gen_4822"],
+      "createdAt": "2026-03-17T09:00:00.000Z"
+    },
+    {
+      "id": "pv_character_sheet_v1",
+      "agentId": "agent_prompt",
+      "name": "Ranger character sheet",
+      "version": "1.0.0",
+      "parentId": null,
+      "changeNote": "Initial locked prompt for seed sweep batch.",
+      "linkedGenerationIds": ["gen_4700"],
+      "createdAt": "2026-03-16T14:30:00.000Z"
+    }
+  ],
+  "snapshots": [
+    {
+      "generationId": "gen_4821",
+      "hash": "sha256:ab12cd34ef56",
+      "settingsSnapshot": {
+        "steps": 32,
+        "cfgScale": 7.5,
+        "sampler": "euler_a",
+        "seed": 918273645
+      }
+    }
+  ]
+}

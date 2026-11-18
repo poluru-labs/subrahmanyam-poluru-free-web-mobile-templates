@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "prompt": {
+      "request": {
+        "agentId": "agent_prompt",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Snapshot settings for reproducible render gen_4821."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_prompt",
+          "role": "assistant",
+          "content": "Prompt Archivist (prompt 2026.03.1) — Prompt log (demo): I would version prompts and seeds for “Snapshot settings for reproducible render gen_4821.”. Connect your gateway for live generation.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "collection": {
+      "request": {
+        "agentId": "agent_board",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Create mood board export for coastal Q2 set."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_collection",
+          "role": "assistant",
+          "content": "Board Curator (prompt 2026.02.4) — Board pass (demo): I would group assets and tags for “Create mood board export for coastal Q2 set.” into a collection.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "style": {
+      "request": {
+        "agentId": "agent_style",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Build style preset from approved hero still references."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_style",
+          "role": "assistant",
+          "content": "Style Preset Maker (prompt 2026.01.8) — Style pack (demo): I would distill presets from “Build style preset from approved hero still references.” with suggested negatives.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "approval": {
+      "request": {
+        "agentId": "agent_approval",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Run policy scan on gen_4822 before marketing sign-off."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_approval",
+          "role": "assistant",
+          "content": "Approval Gate (prompt 2026.03.0-rc1) — Review lane (demo): I would queue “Run policy scan on gen_4822 before marketing sign-off.” with policy notes for sign-off.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_seed",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Propose 4x4 seed grid for ranger sheet at 3:2."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_seed",
+          "role": "assistant",
+          "content": "Seed Explorer (prompt 2025.12.2) — Seed sweep (demo): I would propose grids and aspects for “Propose 4x4 seed grid for ranger sheet at 3:2.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

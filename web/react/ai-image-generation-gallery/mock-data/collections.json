@@ -1,0 +1,35 @@
+{
+  "collections": [
+    {
+      "id": "col_coastal_q2",
+      "name": "Q2 — Coastal workspace",
+      "agentId": "agent_board",
+      "status": "production_ready",
+      "tags": ["hero", "web", "brand-167D8D"],
+      "assetIds": ["gen_4821", "gen_4822"],
+      "layout": "masonry",
+      "coverAssetId": "gen_4821",
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "col_game_ranger",
+      "name": "Ranger — exploration kit",
+      "agentId": "agent_board",
+      "status": "draft",
+      "tags": ["game", "character", "concept"],
+      "assetIds": ["gen_4700"],
+      "layout": "grid",
+      "coverAssetId": "gen_4700",
+      "updatedAt": "2026-03-16T16:00:00.000Z"
+    }
+  ],
+  "exports": [
+    {
+      "collectionId": "col_coastal_q2",
+      "format": "zip_web_2x",
+      "assetCount": 2,
+      "exportedAt": "2026-03-17T11:15:00.000Z",
+      "uri": "/mock-data/exports/col_coastal_q2.zip"
+    }
+  ]
+}

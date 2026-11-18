@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_prompt",
+      "name": "Prompt Archivist",
+      "description": "Tracks prompt versions, seeds, and settings so every render stays reproducible.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "prompt",
+      "promptVersion": "2026.03.1",
+      "tools": ["prompt.version", "seed.log", "settings.snapshot"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_board",
+      "name": "Board Curator",
+      "description": "Organizes generations into mood boards and production-ready collections.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "collection",
+      "promptVersion": "2026.02.4",
+      "tools": ["board.layout", "asset.tag", "collection.export"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_style",
+      "name": "Style Preset Maker",
+      "description": "Builds LUT-like style packs from reference sets and negative prompts.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "style",
+      "promptVersion": "2026.01.8",
+      "tools": ["style.extract", "preset.save", "negative.suggest"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_approval",
+      "name": "Approval Gate",
+      "description": "Routes assets through review lanes with policy checks and audit notes.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "approval",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["review.queue", "policy.scan", "signoff.log"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_seed",
+      "name": "Seed Explorer",
+      "description": "Suggests seed sweeps and aspect ratios for consistent character sheets.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["seed.grid", "aspect.batch", "variation.rank"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

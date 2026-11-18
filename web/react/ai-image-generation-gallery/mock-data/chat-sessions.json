@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_prompt_log",
+      "title": "Log coastal v3 prompt",
+      "updatedAt": "2026-03-17T09:30:00.000Z",
+      "agentId": "agent_prompt",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Version this hero prompt with seed 918273645 and euler_a settings.",
+          "createdAt": "2026-03-17T09:25:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Prompt Archivist (prompt 2026.03.1) — Prompt log (demo): I would version prompts and seeds for “Version this hero prompt with seed 918273645 and euler_a settings.”. Connect your gateway for live generation.",
+          "createdAt": "2026-03-17T09:30:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_board_q2",
+      "title": "Curate Q2 coastal board",
+      "updatedAt": "2026-03-17T11:05:00.000Z",
+      "agentId": "agent_board",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Group gen_4821 and gen_4822 into a production collection with hero tag.",
+          "createdAt": "2026-03-17T11:00:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Board Curator (prompt 2026.02.4) — Board pass (demo): I would group assets and tags for “Group gen_4821 and gen_4822 into a production collection with hero tag.” into a collection.",
+          "createdAt": "2026-03-17T11:05:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}
