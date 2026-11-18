@@ -1,0 +1,58 @@
+{
+  "lists": [
+    {
+      "id": "shop_coastal_main",
+      "projectId": "proj_coastal_living",
+      "agentId": "agent_shopping",
+      "status": "draft",
+      "budgetUsd": 4200,
+      "spentEstimateUsd": 3850,
+      "lineItems": [
+        {
+          "id": "line_chair_pair",
+          "category": "seating",
+          "name": "Slipcovered accent chair",
+          "quantity": 2,
+          "unitPriceUsd": 420,
+          "vendor": "Northwind Home",
+          "sku": "NW-CH-SLIP-GRY",
+          "url": "https://shop.example/nw-slip-chair",
+          "alternateSku": "NW-CH-SLIP-IVY"
+        },
+        {
+          "id": "line_coffee",
+          "category": "tables",
+          "name": "Round oak coffee table",
+          "quantity": 1,
+          "unitPriceUsd": 380,
+          "vendor": "Oak & Co",
+          "sku": "OAK-RND-36",
+          "url": "https://shop.example/oak-round-36",
+          "alternateSku": null
+        },
+        {
+          "id": "line_throw",
+          "category": "textiles",
+          "name": "Cyan linen throw",
+          "quantity": 2,
+          "unitPriceUsd": 68,
+          "vendor": "Threadline",
+          "sku": "TL-THROW-099CC",
+          "url": "https://shop.example/throw-cyan",
+          "alternateSku": "TL-THROW-TEAL-MED"
+        },
+        {
+          "id": "line_shelf",
+          "category": "storage",
+          "name": "Floating media shelf kit",
+          "quantity": 1,
+          "unitPriceUsd": 240,
+          "vendor": "RentSafe Mounts",
+          "sku": "RSM-FLOAT-72",
+          "url": "https://shop.example/float-shelf-72",
+          "alternateSku": null
+        }
+      ]
+    }
+  ]
+}

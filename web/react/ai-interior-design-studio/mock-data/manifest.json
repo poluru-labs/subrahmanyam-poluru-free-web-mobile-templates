@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Interior Design Studio — mirrors agents, dashboard metrics, mock chat behavior, and design flow (brief → moodboard → layout → shopping → styling).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "projects.json", "entity": "client design projects" },
+    { "path": "design-briefs.json", "entity": "structured briefs (Brief Intake)" },
+    { "path": "moodboards.json", "entity": "palettes and refs (Moodboard Composer)" },
+    { "path": "layouts.json", "entity": "furniture flow and floorplan hints" },
+    { "path": "shopping-lists.json", "entity": "SKUs and budgets (Shopping List Builder)" },
+    { "path": "styling-notes.json", "entity": "lighting and accents (Room Stylist)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

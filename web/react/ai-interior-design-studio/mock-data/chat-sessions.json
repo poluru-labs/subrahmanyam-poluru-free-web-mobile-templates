@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_brief_coastal",
+      "title": "Parse Chen living room notes",
+      "updatedAt": "2026-03-17T08:35:00.000Z",
+      "agentId": "agent_brief",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Turn client notes into goals and constraints for a pet-friendly coastal living room.",
+          "createdAt": "2026-03-17T08:30:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Brief Intake (prompt 2026.03.1) — Brief intake (demo): I would structure goals and constraints from “Turn client notes into goals and constraints for a pet-friendly coastal living room.”. Connect your gateway for client-ready briefs.",
+          "createdAt": "2026-03-17T08:35:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_layout_flow",
+      "title": "Traffic flow options",
+      "updatedAt": "2026-03-17T11:20:00.000Z",
+      "agentId": "agent_layout",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Propose layout keeping existing sofa; entry to kitchen path 36 inches.",
+          "createdAt": "2026-03-17T11:15:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Layout Planner (prompt 2026.01.8) — Layout (demo): I would suggest furniture flow and focal points for “Propose layout keeping existing sofa; entry to kitchen path 36 inches.”.",
+          "createdAt": "2026-03-17T11:20:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "briefs": [
+    {
+      "id": "brief_coastal_living",
+      "projectId": "proj_coastal_living",
+      "agentId": "agent_brief",
+      "rawNotes": "Bright but cozy, dog-friendly fabrics, keep TV wall minimal, love ocean blues not beach kitsch.",
+      "goals": [
+        "Comfortable seating for 4",
+        "Hidden cable management",
+        "Durable upholstery for pets"
+      ],
+      "constraints": [
+        "Existing sofa must stay (neutral gray)",
+        "No wall demolition",
+        "Rental-friendly mounting only"
+      ],
+      "styleKeywords": ["coastal", "calm", "natural light", "matte textures"],
+      "dimensions": {
+        "lengthFt": 18,
+        "widthFt": 14,
+        "ceilingHeightFt": 9
+      },
+      "parsedAt": "2026-03-17T08:30:00.000Z"
+    },
+    {
+      "id": "brief_studio_nook",
+      "projectId": "proj_studio_nook",
+      "agentId": "agent_brief",
+      "rawNotes": "Corner desk by window, video call backdrop, storage for camera gear.",
+      "goals": [
+        "Ergonomic desk setup",
+        "Clean backdrop for calls",
+        "Closed storage for gear"
+      ],
+      "constraints": [
+        "Alcove max 6ft wide",
+        "Budget under $2k"
+      ],
+      "styleKeywords": ["minimal", "warm wood", "soft task lighting"],
+      "dimensions": {
+        "lengthFt": 6,
+        "widthFt": 5,
+        "ceilingHeightFt": 8
+      },
+      "parsedAt": "2026-03-16T09:15:00.000Z"
+    }
+  ]
+}

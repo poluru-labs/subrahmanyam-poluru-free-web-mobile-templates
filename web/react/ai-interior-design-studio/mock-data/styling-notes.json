@@ -1,0 +1,27 @@
+{
+  "passes": [
+    {
+      "id": "style_coastal_01",
+      "projectId": "proj_coastal_living",
+      "agentId": "agent_stylist",
+      "status": "paused",
+      "scaleChecks": [
+        {
+          "item": "coffee_table",
+          "rule": "two-thirds sofa length",
+          "result": "pass",
+          "note": "36in diameter fits 84in sofa."
+        }
+      ],
+      "lightingLayers": [
+        { "layer": "ambient", "suggestion": "Replace ceiling fan bulbs 3000K" },
+        { "layer": "task", "suggestion": "Arc floor lamp behind accent chair" },
+        { "layer": "accent", "suggestion": "Ceramic table lamp on console — avoid gradient glass shades" }
+      ],
+      "accessoryPlacement": [
+        "Stack two books + single stem vase on coffee table",
+        "Cyan throw on sofa arm toward window — echo brand accent #0099CC"
+      ]
+    }
+  ]
+}

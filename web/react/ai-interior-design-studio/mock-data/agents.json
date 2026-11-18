@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_brief",
+      "name": "Brief Intake",
+      "description": "Turns client notes into structured room goals, constraints, and style keywords.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "brief",
+      "promptVersion": "2026.03.1",
+      "tools": ["brief.parse", "constraint.list", "style.extract"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_mood",
+      "name": "Moodboard Composer",
+      "description": "Assembles palettes, textures, and reference boards aligned to the brief.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "moodboard",
+      "promptVersion": "2026.02.4",
+      "tools": ["palette.suggest", "texture.board", "ref.gather"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_layout",
+      "name": "Layout Planner",
+      "description": "Proposes furniture arrangements, traffic flow, and focal-point options.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "layout",
+      "promptVersion": "2026.01.8",
+      "tools": ["floorplan.hint", "traffic.flow", "focal.rank"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_shopping",
+      "name": "Shopping List Builder",
+      "description": "Maps selections to SKUs, budgets, and vendor links with alternates.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "shopping",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["sku.match", "budget.cap", "vendor.link"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_stylist",
+      "name": "Room Stylist",
+      "description": "Balances scale, lighting, and accessory layers for photo-ready rooms.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["scale.check", "light.layer", "accent.place"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

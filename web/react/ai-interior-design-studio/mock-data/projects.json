@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "id": "proj_coastal_living",
+      "name": "Chen — Coastal calm living room",
+      "status": "active",
+      "clientName": "Priya Chen",
+      "roomType": "living_room",
+      "budgetUsd": 4200,
+      "timelineWeeks": 6,
+      "briefId": "brief_coastal_living",
+      "moodboardId": "board_coastal_v2",
+      "layoutId": "layout_coastal_a",
+      "shoppingListId": "shop_coastal_main",
+      "updatedAt": "2026-03-17T12:00:00.000Z"
+    },
+    {
+      "id": "proj_studio_nook",
+      "name": "Oke — Studio work nook",
+      "status": "draft",
+      "clientName": "Jordan Oke",
+      "roomType": "home_office",
+      "budgetUsd": 1800,
+      "timelineWeeks": 4,
+      "briefId": "brief_studio_nook",
+      "moodboardId": null,
+      "layoutId": null,
+      "shoppingListId": null,
+      "updatedAt": "2026-03-16T09:00:00.000Z"
+    }
+  ]
+}

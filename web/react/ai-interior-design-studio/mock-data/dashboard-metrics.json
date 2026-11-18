@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Projects",
+      "value": "41",
+      "hint": "Active"
+    },
+    {
+      "label": "Boards",
+      "value": "180",
+      "hint": "Moodboards"
+    },
+    {
+      "label": "Lists",
+      "value": "41",
+      "hint": "Shop-ready"
+    }
+  ]
+}

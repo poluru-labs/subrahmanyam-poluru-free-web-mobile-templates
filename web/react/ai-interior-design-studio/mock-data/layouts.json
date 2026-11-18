@@ -1,0 +1,41 @@
+{
+  "layouts": [
+    {
+      "id": "layout_coastal_a",
+      "projectId": "proj_coastal_living",
+      "agentId": "agent_layout",
+      "name": "Conversation + media wall",
+      "status": "proposed",
+      "focalPoint": "window_with_view",
+      "zones": [
+        {
+          "name": "conversation",
+          "furniture": ["existing_sofa", "pair_accent_chairs", "round_coffee_table"],
+          "trafficNote": "36in path from entry to kitchen opening"
+        },
+        {
+          "name": "media",
+          "furniture": ["floating_shelf", "media_console_optional"],
+          "trafficNote": "Keep sight line from sofa to TV under 15° offset"
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "layout_coastal_b",
+          "summary": "Sofa floats facing media; chairs angled toward window focal."
+        }
+      ],
+      "floorplanHintRef": "/mock-data/floorplans/coastal_living_plan.svg"
+    }
+  ],
+  "floorplans": [
+    {
+      "projectId": "proj_coastal_living",
+      "openings": [
+        { "type": "entry", "wall": "south" },
+        { "type": "kitchen", "wall": "east" },
+        { "type": "window", "wall": "north", "widthFt": 10 }
+      ]
+    }
+  ]
+}

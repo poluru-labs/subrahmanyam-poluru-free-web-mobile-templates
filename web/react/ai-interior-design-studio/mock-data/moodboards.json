@@ -1,0 +1,32 @@
+{
+  "boards": [
+    {
+      "id": "board_coastal_v2",
+      "projectId": "proj_coastal_living",
+      "agentId": "agent_mood",
+      "name": "Coastal calm v2",
+      "status": "approved",
+      "palette": {
+        "primary": "#0099CC",
+        "secondary": "#E8E4DC",
+        "accent": "#C4A882",
+        "neutral": "#F5F5F0",
+        "notes": "Brand cyan as accent textiles only; walls stay solid off-white."
+      },
+      "textures": ["washed linen", "light oak", "matte ceramic", "jute"],
+      "references": [
+        {
+          "id": "ref_01",
+          "label": "Slipcovered sofa layering",
+          "tags": ["seating", "pet-friendly"]
+        },
+        {
+          "id": "ref_02",
+          "label": "Floating media shelf — cable hidden",
+          "tags": ["media", "rental-safe"]
+        }
+      ],
+      "updatedAt": "2026-03-17T10:00:00.000Z"
+    }
+  ]
+}

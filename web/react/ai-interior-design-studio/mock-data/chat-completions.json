@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "brief": {
+      "request": {
+        "agentId": "agent_brief",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Structure brief from messy client email about coastal living room."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_brief",
+          "role": "assistant",
+          "content": "Brief Intake (prompt 2026.03.1) — Brief intake (demo): I would structure goals and constraints from “Structure brief from messy client email about coastal living room.”. Connect your gateway for client-ready briefs.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "moodboard": {
+      "request": {
+        "agentId": "agent_mood",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Palette and textures for calm coastal — no kitsch."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_mood",
+          "role": "assistant",
+          "content": "Moodboard Composer (prompt 2026.02.4) — Moodboard (demo): I would propose palettes and textures for “Palette and textures for calm coastal — no kitsch.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "layout": {
+      "request": {
+        "agentId": "agent_layout",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Furniture arrangement for 18x14 living room with north window focal."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_layout",
+          "role": "assistant",
+          "content": "Layout Planner (prompt 2026.01.8) — Layout (demo): I would suggest furniture flow and focal points for “Furniture arrangement for 18x14 living room with north window focal.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "shopping": {
+      "request": {
+        "agentId": "agent_shopping",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Build shopping list under $4200 with vendor links for layout A."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_shopping",
+          "role": "assistant",
+          "content": "Shopping List Builder (prompt 2026.03.0-rc1) — Shopping list (demo): I would map items and budgets for “Build shopping list under $4200 with vendor links for layout A.” with vendor links.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_stylist",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Lighting layers and accessory plan for photo-ready room."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_stylist",
+          "role": "assistant",
+          "content": "Room Stylist (prompt 2025.12.2) — Styling pass (demo): I would tune scale and lighting around “Lighting layers and accessory plan for photo-ready room.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}
