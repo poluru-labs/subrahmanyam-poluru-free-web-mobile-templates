@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Suites",
+      "value": "22",
+      "hint": "Active"
+    },
+    {
+      "label": "Runs",
+      "value": "890",
+      "hint": "This month"
+    },
+    {
+      "label": "Regressions",
+      "value": "14",
+      "hint": "Open"
+    }
+  ]
+}

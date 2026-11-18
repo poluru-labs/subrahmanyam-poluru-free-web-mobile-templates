@@ -1,0 +1,39 @@
+{
+  "batches": [
+    {
+      "id": "hf_batch_0317",
+      "suiteId": "suite_support_kb",
+      "agentId": "agent_feedback",
+      "status": "in_review",
+      "itemCount": 48,
+      "raterAgreement": 0.86,
+      "disagreements": [
+        {
+          "caseId": "case_0142",
+          "ratings": [
+            { "raterId": "rater_a", "score": "pass" },
+            { "raterId": "rater_b", "score": "fail", "note": "Missing citation link." },
+            { "raterId": "rater_c", "score": "pass" }
+          ],
+          "resolvedLabel": "pass",
+          "resolution": "majority"
+        }
+      ],
+      "proposedSuiteUpdates": [
+        {
+          "type": "add_golden",
+          "detail": "Add variant case for partial refund wording."
+        }
+      ]
+    }
+  ],
+  "driftWatch": [
+    {
+      "suiteId": "suite_support_kb",
+      "signal": "rater_fail_rate_up",
+      "windowDays": 7,
+      "value": 0.11,
+      "baseline": 0.07
+    }
+  ]
+}

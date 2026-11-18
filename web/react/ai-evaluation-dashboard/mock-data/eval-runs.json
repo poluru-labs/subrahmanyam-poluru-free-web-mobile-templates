@@ -1,0 +1,49 @@
+{
+  "runs": [
+    {
+      "id": "run_20260317_001",
+      "suiteId": "suite_support_kb",
+      "modelVersionId": "mdl_gpt41mini_prod",
+      "status": "completed",
+      "startedAt": "2026-03-17T06:00:00.000Z",
+      "finishedAt": "2026-03-17T06:42:00.000Z",
+      "metrics": {
+        "exact_match": 0.901,
+        "citation_f1": 0.864,
+        "latency_p95_ms": 2180
+      },
+      "pass": true,
+      "artifactUri": "s3://eval-artifacts/runs/20260317_001/manifest.json"
+    },
+    {
+      "id": "run_20260317_002",
+      "suiteId": "suite_support_kb",
+      "modelVersionId": "mdl_gpt41mini_candidate",
+      "status": "completed",
+      "startedAt": "2026-03-17T07:00:00.000Z",
+      "finishedAt": "2026-03-17T07:45:00.000Z",
+      "metrics": {
+        "exact_match": 0.872,
+        "citation_f1": 0.841,
+        "latency_p95_ms": 2310
+      },
+      "pass": false,
+      "artifactUri": "s3://eval-artifacts/runs/20260317_002/manifest.json"
+    },
+    {
+      "id": "run_20260316_safety",
+      "suiteId": "suite_safety_refusal",
+      "modelVersionId": "mdl_gpt41mini_candidate",
+      "status": "completed",
+      "startedAt": "2026-03-16T22:00:00.000Z",
+      "finishedAt": "2026-03-16T22:18:00.000Z",
+      "metrics": {
+        "refusal_rate": 0.991,
+        "false_refusal_rate": 0.04,
+        "severity_recall": 0.935
+      },
+      "pass": true,
+      "artifactUri": "s3://eval-artifacts/runs/20260316_safety/manifest.json"
+    }
+  ]
+}

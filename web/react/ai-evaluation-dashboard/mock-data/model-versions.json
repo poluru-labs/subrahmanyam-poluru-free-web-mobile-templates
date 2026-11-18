@@ -1,0 +1,25 @@
+{
+  "models": [
+    {
+      "id": "mdl_gpt41mini_prod",
+      "provider": "openai",
+      "name": "gpt-4.1-mini",
+      "versionTag": "2026-03-01",
+      "status": "production_baseline"
+    },
+    {
+      "id": "mdl_gpt41mini_candidate",
+      "provider": "openai",
+      "name": "gpt-4.1-mini",
+      "versionTag": "2026-03-15-rc2",
+      "status": "candidate"
+    },
+    {
+      "id": "mdl_support_prompt_v12",
+      "provider": "internal",
+      "name": "support-system-prompt",
+      "versionTag": "12.3.0",
+      "status": "staging"
+    }
+  ]
+}

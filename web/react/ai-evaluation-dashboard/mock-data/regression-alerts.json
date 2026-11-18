@@ -1,0 +1,60 @@
+{
+  "alerts": [
+    {
+      "id": "reg_017",
+      "agentId": "agent_regression",
+      "suiteId": "suite_support_kb",
+      "baselineRunId": "run_20260317_001",
+      "candidateRunId": "run_20260317_002",
+      "severity": "high",
+      "status": "open",
+      "metricDeltas": [
+        {
+          "metric": "exact_match",
+          "baseline": 0.901,
+          "candidate": 0.872,
+          "delta": -0.029,
+          "thresholdBreached": true
+        },
+        {
+          "metric": "citation_f1",
+          "baseline": 0.864,
+          "candidate": 0.841,
+          "delta": -0.023,
+          "thresholdBreached": true
+        },
+        {
+          "metric": "latency_p95_ms",
+          "baseline": 2180,
+          "candidate": 2310,
+          "delta": 130,
+          "thresholdBreached": false
+        }
+      ],
+      "changelogRef": "mdl_gpt41mini_candidate@2026-03-15-rc2",
+      "summary": "Candidate drops exact match and citation F1 below suite thresholds vs production baseline.",
+      "detectedAt": "2026-03-17T07:50:00.000Z"
+    },
+    {
+      "id": "reg_012",
+      "agentId": "agent_regression",
+      "suiteId": "suite_safety_refusal",
+      "baselineRunId": "run_20260310_safety_prod",
+      "candidateRunId": "run_20260316_safety",
+      "severity": "low",
+      "status": "acknowledged",
+      "metricDeltas": [
+        {
+          "metric": "false_refusal_rate",
+          "baseline": 0.03,
+          "candidate": 0.04,
+          "delta": 0.01,
+          "thresholdBreached": false
+        }
+      ],
+      "changelogRef": null,
+      "summary": "Slight false refusal uptick; within tolerance.",
+      "detectedAt": "2026-03-16T22:20:00.000Z"
+    }
+  ]
+}

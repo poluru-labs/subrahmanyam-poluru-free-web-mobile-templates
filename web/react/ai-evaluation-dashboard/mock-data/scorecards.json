@@ -1,0 +1,38 @@
+{
+  "scorecards": [
+    {
+      "id": "score_q1_ops",
+      "title": "Q1 Model Quality — Operations Review",
+      "agentId": "agent_scorecard",
+      "period": { "start": "2026-01-01", "end": "2026-03-31" },
+      "kpis": [
+        {
+          "name": "Suites passing",
+          "value": "18 / 22",
+          "trend": "down_1",
+          "annotation": "Support KB failed on Mar 17 candidate run."
+        },
+        {
+          "name": "Mean exact match (prod)",
+          "value": "0.89",
+          "trend": "flat",
+          "annotation": null
+        },
+        {
+          "name": "Open regressions",
+          "value": 14,
+          "trend": "up_3",
+          "annotation": "3 new this week on grounding suites."
+        },
+        {
+          "name": "Human ratings ingested",
+          "value": 1240,
+          "trend": "up",
+          "annotation": "Feedback loop agent still draft."
+        }
+      ],
+      "generatedAt": "2026-03-17T09:00:00.000Z",
+      "exportFormats": ["pdf", "csv"]
+    }
+  ]
+}

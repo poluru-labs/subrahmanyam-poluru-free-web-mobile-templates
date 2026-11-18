@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Evaluation Dashboard — mirrors agents, dashboard metrics, mock chat behavior, and eval entities (suites, runs, regressions, scorecards, feedback, jobs).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "model-versions.json", "entity": "baseline and candidate models" },
+    { "path": "eval-suites.json", "entity": "suites and thresholds (Suite Composer)" },
+    { "path": "golden-sets.json", "entity": "golden eval cases" },
+    { "path": "eval-runs.json", "entity": "completed run metrics" },
+    { "path": "regression-alerts.json", "entity": "metric deltas (Regression Sentinel)" },
+    { "path": "scorecards.json", "entity": "executive KPI rollups" },
+    { "path": "human-feedback.json", "entity": "rater merge and drift (Human Feedback Loop)" },
+    { "path": "job-schedules.json", "entity": "scheduled eval jobs (Run Orchestrator)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

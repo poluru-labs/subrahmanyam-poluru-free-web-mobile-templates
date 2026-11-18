@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_regression_support",
+      "title": "Compare support KB runs",
+      "updatedAt": "2026-03-17T08:00:00.000Z",
+      "agentId": "agent_regression",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Diff metrics between run_20260317_001 and run_20260317_002 for support KB suite.",
+          "createdAt": "2026-03-17T07:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Regression Sentinel (prompt 2026.02.4) — Regression check (demo): I would diff metrics for “Diff metrics between run_20260317_001 and run_20260317_002 for support KB suite.” against your last baseline.",
+          "createdAt": "2026-03-17T08:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_suite_compose",
+      "title": "New grounding suite",
+      "updatedAt": "2026-03-16T17:00:00.000Z",
+      "agentId": "agent_suite",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Assemble suite with golden_support_240 and citation_f1 threshold 0.82.",
+          "createdAt": "2026-03-16T16:55:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Suite Composer (prompt 2026.03.1) — Suite draft (demo): I would assemble cases and thresholds for “Assemble suite with golden_support_240 and citation_f1 threshold 0.82.”. Connect your gateway for live runs.",
+          "createdAt": "2026-03-16T17:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

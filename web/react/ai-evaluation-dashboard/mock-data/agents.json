@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_suite",
+      "name": "Suite Composer",
+      "description": "Bundles prompts, golden sets, and thresholds into runnable eval suites.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "suite",
+      "promptVersion": "2026.03.1",
+      "tools": ["suite.assemble", "golden.load", "threshold.bind"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_regression",
+      "name": "Regression Sentinel",
+      "description": "Compares runs across model versions and surfaces metric deltas with alerts.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "regression",
+      "promptVersion": "2026.02.4",
+      "tools": ["run.diff", "alert.threshold", "changelog.link"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_scorecard",
+      "name": "Scorecard Builder",
+      "description": "Turns eval metrics into executive scorecards with trend annotations.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "scorecard",
+      "promptVersion": "2026.01.8",
+      "tools": ["metric.roll_up", "trend.annotate", "export.pdf"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_feedback",
+      "name": "Human Feedback Loop",
+      "description": "Ingests raters, resolves disagreements, and feeds labels back to suites.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "feedback",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["rater.merge", "label.export", "drift.watch"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_runs",
+      "name": "Run Orchestrator",
+      "description": "Schedules eval jobs, shards datasets, and tracks artifact lineage.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["job.schedule", "shard.split", "lineage.trace"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}
