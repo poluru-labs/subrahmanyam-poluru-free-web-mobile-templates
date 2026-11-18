@@ -1,0 +1,40 @@
+{
+  "exports": [
+    {
+      "id": "exp_intent_v3_jsonl",
+      "projectId": "proj_ticket_intent_v3",
+      "agentId": "agent_export",
+      "format": "jsonl",
+      "schemaVersion": "3.2.0",
+      "status": "validation_passed",
+      "recordCount": 9820,
+      "manifestHash": "sha256:8f3c9a1e2b4d567890abcdef1234567890abcdef1234567890abcdef12",
+      "sampleRecord": {
+        "id": "item_88422",
+        "text": "Safari keeps redirecting after Okta login — works in Chrome.",
+        "labels": ["auth"],
+        "consensus": true,
+        "annotators": 1,
+        "exported_at": "2026-03-17T12:00:00.000Z"
+      },
+      "validationErrors": []
+    },
+    {
+      "id": "exp_defect_coco_draft",
+      "projectId": "proj_defect_bbox_v1",
+      "agentId": "agent_export",
+      "format": "coco",
+      "schemaVersion": "1.0.0",
+      "status": "draft",
+      "recordCount": 4500,
+      "manifestHash": null,
+      "sampleRecord": null,
+      "validationErrors": [
+        {
+          "code": "COCO_CATEGORY_GAP",
+          "message": "Category id 4 referenced in 12 images but missing from categories list."
+        }
+      ]
+    }
+  ]
+}

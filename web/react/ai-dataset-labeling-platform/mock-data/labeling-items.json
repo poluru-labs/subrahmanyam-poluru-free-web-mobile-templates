@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "item_88421",
+      "projectId": "proj_ticket_intent_v3",
+      "text": "I was charged twice after downgrade last night. Please fix today.",
+      "status": "in_consensus",
+      "metadata": { "locale": "en-US", "channel": "email" }
+    },
+    {
+      "id": "item_88422",
+      "projectId": "proj_ticket_intent_v3",
+      "text": "Safari keeps redirecting after Okta login — works in Chrome.",
+      "status": "labeled",
+      "metadata": { "locale": "en-US", "channel": "chat" }
+    },
+    {
+      "id": "item_12007",
+      "projectId": "proj_pii_spans_v2",
+      "text": "Reach me at maya.lin@northwind.example before 5pm CT.",
+      "status": "pending",
+      "metadata": { "source": "synthetic_mix" }
+    }
+  ]
+}

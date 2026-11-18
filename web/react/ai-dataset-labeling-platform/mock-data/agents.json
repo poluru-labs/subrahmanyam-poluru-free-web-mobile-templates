@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_suggest",
+      "name": "Label Suggester",
+      "description": "Proposes class labels, spans, and confidence scores from few-shot examples.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "suggest",
+      "promptVersion": "2026.03.1",
+      "tools": ["label.propose", "span.highlight", "confidence.score"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_consensus",
+      "name": "Consensus Arbiter",
+      "description": "Merges annotator disagreements with guidelines and majority rules.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "consensus",
+      "promptVersion": "2026.02.4",
+      "tools": ["vote.merge", "guideline.cite", "tiebreak.explain"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_qa",
+      "name": "QA Sampler",
+      "description": "Picks audit batches, flags drift, and drafts reviewer feedback.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "qa",
+      "promptVersion": "2026.01.8",
+      "tools": ["sample.queue", "drift.detect", "review.note"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_export",
+      "name": "Schema Exporter",
+      "description": "Maps labels to JSONL, COCO, or custom export schemas with validation.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "export",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["schema.map", "export.validate", "manifest.hash"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_batch",
+      "name": "Batch Orchestrator",
+      "description": "Sequences labeling waves, assignee routing, and SLA reminders.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["batch.schedule", "assignee.route", "sla.nudge"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

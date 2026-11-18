@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Dataset Labeling Platform — mirrors agents, dashboard metrics, mock chat behavior, and labeling entities (projects, schema, annotations, consensus, QA, export, batches).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "labeling-projects.json", "entity": "labeling projects and progress" },
+    { "path": "label-schema.json", "entity": "taxonomy and export formats" },
+    { "path": "guidelines.json", "entity": "annotator guideline docs" },
+    { "path": "labeling-items.json", "entity": "sample items in queue" },
+    { "path": "annotations.json", "entity": "raw annotator submissions" },
+    { "path": "suggestions.json", "entity": "assistive proposals (Label Suggester)" },
+    { "path": "consensus.json", "entity": "vote merge decisions" },
+    { "path": "qa-batches.json", "entity": "audit samples and drift (QA Sampler)" },
+    { "path": "export-manifests.json", "entity": "JSONL/COCO exports" },
+    { "path": "batches.json", "entity": "labeling waves (Batch Orchestrator)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "annotations": [
+    {
+      "id": "ann_001a",
+      "itemId": "item_88421",
+      "annotatorId": "user_alice",
+      "labelIds": ["intent_billing"],
+      "spans": [],
+      "submittedAt": "2026-03-17T11:10:00.000Z"
+    },
+    {
+      "id": "ann_001b",
+      "itemId": "item_88421",
+      "annotatorId": "user_bob",
+      "labelIds": ["intent_billing"],
+      "spans": [],
+      "submittedAt": "2026-03-17T11:12:00.000Z"
+    },
+    {
+      "id": "ann_001c",
+      "itemId": "item_88421",
+      "annotatorId": "user_cara",
+      "labelIds": ["intent_bug"],
+      "spans": [],
+      "submittedAt": "2026-03-17T11:15:00.000Z"
+    },
+    {
+      "id": "ann_002",
+      "itemId": "item_88422",
+      "annotatorId": "user_alice",
+      "labelIds": ["intent_auth"],
+      "spans": [],
+      "submittedAt": "2026-03-17T10:00:00.000Z"
+    }
+  ]
+}

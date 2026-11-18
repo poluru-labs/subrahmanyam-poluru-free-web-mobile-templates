@@ -1,0 +1,33 @@
+{
+  "documents": [
+    {
+      "id": "guide_intent_v3",
+      "title": "Ticket Intent Labeling v3",
+      "version": "3.2.0",
+      "sections": [
+        {
+          "id": "sec_primary_rule",
+          "title": "Pick the primary customer ask",
+          "body": "If multiple intents appear, label the ask that would determine routing queue."
+        },
+        {
+          "id": "sec_billing_vs_bug",
+          "title": "Billing vs product_bug",
+          "body": "Unexpected charge → billing. Feature throws 500 → product_bug even if customer mentions payment."
+        }
+      ]
+    },
+    {
+      "id": "guide_pii_v2",
+      "title": "PII Span Guidelines",
+      "version": "2.1.0",
+      "sections": [
+        {
+          "id": "sec_email",
+          "title": "Email addresses",
+          "body": "Tag full address including subdomain; exclude example.com training placeholders per allowlist."
+        }
+      ]
+    }
+  ]
+}

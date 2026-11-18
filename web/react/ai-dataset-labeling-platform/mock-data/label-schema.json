@@ -1,0 +1,33 @@
+{
+  "projectId": "proj_ticket_intent_v3",
+  "schemaVersion": "3.2.0",
+  "exportFormats": ["jsonl", "parquet_labels"],
+  "labels": [
+    {
+      "id": "intent_billing",
+      "name": "billing",
+      "description": "Charges, refunds, invoices, subscriptions."
+    },
+    {
+      "id": "intent_auth",
+      "name": "auth",
+      "description": "Login, SSO, password, MFA."
+    },
+    {
+      "id": "intent_bug",
+      "name": "product_bug",
+      "description": "Broken feature or error not caused by user misconfiguration."
+    },
+    {
+      "id": "intent_howto",
+      "name": "how_to",
+      "description": "Usage questions; no failure implied."
+    },
+    {
+      "id": "intent_other",
+      "name": "other",
+      "description": "Does not fit above; requires reviewer note if >5% of batch."
+    }
+  ],
+  "spanLabels": null
+}

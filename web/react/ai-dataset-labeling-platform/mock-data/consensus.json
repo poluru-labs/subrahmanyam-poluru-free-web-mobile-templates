@@ -1,0 +1,22 @@
+{
+  "cases": [
+    {
+      "id": "con_001",
+      "itemId": "item_88421",
+      "projectId": "proj_ticket_intent_v3",
+      "agentId": "agent_consensus",
+      "votes": [
+        { "annotatorId": "user_alice", "labelIds": ["intent_billing"] },
+        { "annotatorId": "user_bob", "labelIds": ["intent_billing"] },
+        { "annotatorId": "user_cara", "labelIds": ["intent_bug"] }
+      ],
+      "majorityLabelIds": ["intent_billing"],
+      "decision": "intent_billing",
+      "tiebreakApplied": false,
+      "guidelineCitations": ["guide_intent_v3#sec_billing_vs_bug"],
+      "explanation": "Two-of-three majority; minority label treated payment symptom as product failure — guideline routes unexpected charges to billing.",
+      "status": "resolved",
+      "resolvedAt": "2026-03-17T11:30:00.000Z"
+    }
+  ]
+}

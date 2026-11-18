@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Items labeled",
+      "value": "54k",
+      "hint": "This month"
+    },
+    {
+      "label": "Agreement",
+      "value": "91%",
+      "hint": "Inter-annotator"
+    },
+    {
+      "label": "QA sampled",
+      "value": "8%",
+      "hint": "Reviewed"
+    }
+  ]
+}

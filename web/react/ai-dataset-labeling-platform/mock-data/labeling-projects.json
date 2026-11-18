@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "id": "proj_ticket_intent_v3",
+      "name": "Support Ticket Intent v3",
+      "modality": "text_classification",
+      "status": "active",
+      "itemCount": 12400,
+      "labeledCount": 9820,
+      "consensusMode": "majority_plus_arbiter",
+      "qaSampleRate": 0.08,
+      "guidelineDocId": "guide_intent_v3",
+      "createdAt": "2026-02-01T10:00:00.000Z",
+      "updatedAt": "2026-03-17T12:00:00.000Z"
+    },
+    {
+      "id": "proj_pii_spans_v2",
+      "name": "PII Span Tagging v2",
+      "modality": "token_span",
+      "status": "active",
+      "itemCount": 5600,
+      "labeledCount": 2100,
+      "consensusMode": "adjudication_required",
+      "qaSampleRate": 0.12,
+      "guidelineDocId": "guide_pii_v2",
+      "createdAt": "2026-03-10T09:00:00.000Z",
+      "updatedAt": "2026-03-17T08:30:00.000Z"
+    },
+    {
+      "id": "proj_defect_bbox_v1",
+      "name": "Manufacturing Defect Boxes",
+      "modality": "image_bbox",
+      "status": "paused",
+      "itemCount": 18000,
+      "labeledCount": 4500,
+      "consensusMode": "single_annotator_qa",
+      "qaSampleRate": 0.1,
+      "guidelineDocId": "guide_defect_v1",
+      "createdAt": "2025-12-15T14:00:00.000Z",
+      "updatedAt": "2026-03-05T16:00:00.000Z"
+    }
+  ]
+}

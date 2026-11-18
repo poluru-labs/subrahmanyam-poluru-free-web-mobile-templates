@@ -1,0 +1,11 @@
+{
+  "slug": "ai-dataset-labeling-platform",
+  "name": "AI Dataset Labeling Platform",
+  "tagline": "Label datasets faster with assistive suggestions and QA.",
+  "brandColor": "#006699",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "dataset-labeling:active-agent"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "suggestions": [
+    {
+      "id": "sugg_001",
+      "itemId": "item_88421",
+      "agentId": "agent_suggest",
+      "proposedLabelIds": ["intent_billing"],
+      "confidence": 0.94,
+      "spans": [],
+      "rationale": "Duplicate charge and downgrade are billing-domain cues per guide_intent_v3 sec_billing_vs_bug.",
+      "fewShotRefs": ["ex_042", "ex_108"]
+    },
+    {
+      "id": "sugg_002",
+      "itemId": "item_88422",
+      "agentId": "agent_suggest",
+      "proposedLabelIds": ["intent_auth"],
+      "confidence": 0.91,
+      "spans": [],
+      "rationale": "SSO/Okta login loop is authentication routing.",
+      "fewShotRefs": ["ex_017"]
+    },
+    {
+      "id": "sugg_003",
+      "itemId": "item_12007",
+      "agentId": "agent_suggest",
+      "proposedLabelIds": [],
+      "confidence": 0.88,
+      "spans": [
+        {
+          "label": "email",
+          "start": 14,
+          "end": 42,
+          "text": "maya.lin@northwind.example"
+        }
+      ],
+      "rationale": "Single email span; not on example.com allowlist.",
+      "fewShotRefs": ["ex_pii_003"]
+    }
+  ]
+}

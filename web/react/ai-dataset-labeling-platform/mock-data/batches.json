@@ -1,0 +1,37 @@
+{
+  "waves": [
+    {
+      "id": "wave_17_wk12",
+      "projectId": "proj_ticket_intent_v3",
+      "agentId": "agent_batch",
+      "name": "Week 12 backlog — intent v3",
+      "status": "active",
+      "itemCount": 800,
+      "slaDueAt": "2026-03-21T17:00:00.000Z",
+      "assignments": [
+        {
+          "assigneeId": "user_alice",
+          "quota": 280,
+          "completed": 210
+        },
+        {
+          "assigneeId": "user_bob",
+          "quota": 280,
+          "completed": 245
+        },
+        {
+          "assigneeId": "user_cara",
+          "quota": 240,
+          "completed": 180
+        }
+      ],
+      "nudgesSent": [
+        {
+          "assigneeId": "user_cara",
+          "sentAt": "2026-03-17T08:00:00.000Z",
+          "reason": "60 items remaining; SLA in 4 days"
+        }
+      ]
+    }
+  ]
+}

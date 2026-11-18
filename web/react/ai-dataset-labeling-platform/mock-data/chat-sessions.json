@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_intent_suggest",
+      "title": "Billing intent suggestion",
+      "updatedAt": "2026-03-17T14:02:00.000Z",
+      "agentId": "agent_suggest",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Suggest intent label for: charged twice after downgrade last night.",
+          "createdAt": "2026-03-17T14:00:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Label Suggester (prompt 2026.03.1) — Label suggest (demo): I would propose classes and spans for “Suggest intent label for: charged twice after downgrade last night.” with confidence scores. Connect your gateway for live model assist.",
+          "createdAt": "2026-03-17T14:02:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_consensus_arb",
+      "title": "Resolve 2 vs 1 disagreement",
+      "updatedAt": "2026-03-17T11:35:00.000Z",
+      "agentId": "agent_consensus",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Two annotators said billing, one said product_bug — apply intent v3 guidelines.",
+          "createdAt": "2026-03-17T11:32:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Consensus Arbiter (prompt 2026.02.4) — Consensus pass (demo): I would reconcile annotator labels on “Two annotators said billing, one said product_bug — apply intent v3 guidelines.” against your guideline doc.",
+          "createdAt": "2026-03-17T11:35:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

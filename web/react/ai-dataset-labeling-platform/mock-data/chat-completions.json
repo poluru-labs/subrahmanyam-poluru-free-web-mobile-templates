@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "suggest": {
+      "request": {
+        "agentId": "agent_suggest",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Propose label and confidence for this ticket text."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_suggest",
+          "role": "assistant",
+          "content": "Label Suggester (prompt 2026.03.1) — Label suggest (demo): I would propose classes and spans for “Propose label and confidence for this ticket text.” with confidence scores. Connect your gateway for live model assist.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "consensus": {
+      "request": {
+        "agentId": "agent_consensus",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Merge three annotator votes with guideline citations."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_consensus",
+          "role": "assistant",
+          "content": "Consensus Arbiter (prompt 2026.02.4) — Consensus pass (demo): I would reconcile annotator labels on “Merge three annotator votes with guideline citations.” against your guideline doc.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "qa": {
+      "request": {
+        "agentId": "agent_qa",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Build an 8% QA sample stratified by annotator for this week."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_qa",
+          "role": "assistant",
+          "content": "QA Sampler (prompt 2026.01.8) — QA sample (demo): I would queue “Build an 8% QA sample stratified by annotator for this week.” for review and note likely drift patterns.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "export": {
+      "request": {
+        "agentId": "agent_export",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Validate JSONL export for intent v3 before release."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_export",
+          "role": "assistant",
+          "content": "Schema Exporter (prompt 2026.03.0-rc1) — Export map (demo): I would map labels for “Validate JSONL export for intent v3 before release.” to your target schema with validation checks.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_batch",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Schedule wave assignees and SLA nudges for 800 items."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_batch",
+          "role": "assistant",
+          "content": "Batch Orchestrator (prompt 2025.12.2) — Batch plan (demo): I would route and schedule work related to “Schedule wave assignees and SLA nudges for 800 items.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

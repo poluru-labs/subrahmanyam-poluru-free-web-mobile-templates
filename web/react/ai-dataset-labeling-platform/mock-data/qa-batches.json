@@ -1,0 +1,42 @@
+{
+  "batches": [
+    {
+      "id": "qa_batch_0317_a",
+      "projectId": "proj_ticket_intent_v3",
+      "agentId": "agent_qa",
+      "sampleSize": 48,
+      "sampleRate": 0.08,
+      "selectionStrategy": "stratified_by_annotator",
+      "itemIds": ["item_88421", "item_88422"],
+      "driftFlags": [
+        {
+          "pattern": "billing_vs_bug confusion",
+          "annotatorId": "user_cara",
+          "severity": "medium",
+          "detail": "3 of last 20 disagreements on billing cues."
+        }
+      ],
+      "reviewerNotes": [
+        {
+          "itemId": "item_88421",
+          "note": "Reinforce sec_billing_vs_bug in refresher; Cara acknowledged."
+        }
+      ],
+      "status": "in_review",
+      "createdAt": "2026-03-17T09:00:00.000Z"
+    },
+    {
+      "id": "qa_batch_0310_pii",
+      "projectId": "proj_pii_spans_v2",
+      "agentId": "agent_qa",
+      "sampleSize": 25,
+      "sampleRate": 0.12,
+      "selectionStrategy": "random_uncertainty",
+      "itemIds": ["item_12007"],
+      "driftFlags": [],
+      "reviewerNotes": [],
+      "status": "queued",
+      "createdAt": "2026-03-17T08:00:00.000Z"
+    }
+  ]
+}
