@@ -1,0 +1,24 @@
+{
+  "banks": [
+    {
+      "id": "bank_pm_behavioral_40",
+      "track": "product_manager",
+      "category": "behavioral",
+      "count": 40,
+      "sampleQuestions": [
+        "Tell me about a time you influenced engineering without formal authority.",
+        "Describe a product decision you reversed. What signal changed?"
+      ]
+    },
+    {
+      "id": "bank_eng_design_20",
+      "track": "software_engineer",
+      "category": "technical",
+      "count": 20,
+      "sampleQuestions": [
+        "Design a rate-limited URL shortener.",
+        "How would you debug elevated p95 latency on read path?"
+      ]
+    }
+  ]
+}

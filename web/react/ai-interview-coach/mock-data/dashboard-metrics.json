@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Sessions",
+      "value": "96",
+      "hint": "Completed"
+    },
+    {
+      "label": "Questions bank",
+      "value": "480",
+      "hint": "Role tracks"
+    },
+    {
+      "label": "Confidence",
+      "value": "+31%",
+      "hint": "Self-rated"
+    }
+  ]
+}

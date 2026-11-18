@@ -1,0 +1,11 @@
+{
+  "slug": "ai-interview-coach",
+  "name": "AI Interview Coach",
+  "tagline": "Practice interviews with feedback on clarity and structure.",
+  "brandColor": "#696FC7",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "interview-coach:active-agent"
+  }
+}

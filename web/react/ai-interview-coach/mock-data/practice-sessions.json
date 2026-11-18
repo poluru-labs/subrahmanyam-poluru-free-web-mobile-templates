@@ -1,0 +1,15 @@
+{
+  "sessions": [
+    {
+      "id": "sess_20260317_pm",
+      "learnerId": "learner_maya_001",
+      "title": "PM behavioral + STAR review",
+      "startedAt": "2026-03-17T09:00:00.000Z",
+      "endedAt": "2026-03-17T09:45:00.000Z",
+      "drillIds": ["drill_behavioral_884", "drill_star_884"],
+      "recordingId": "rec_20260317_pm",
+      "recapId": "recap_20260317_pm",
+      "selfRatedConfidenceAfter": 0.74
+    }
+  ]
+}

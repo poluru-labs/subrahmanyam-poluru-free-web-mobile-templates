@@ -1,0 +1,19 @@
+{
+  "drills": [
+    {
+      "id": "drill_technical_501",
+      "sessionId": null,
+      "agentId": "agent_technical",
+      "prompt": "Design a URL shortener that supports 10k writes/sec and custom aliases.",
+      "difficulty": "medium",
+      "hintLadder": [
+        "Start with API + id generation; discuss collision strategy.",
+        "Introduce cache for hot links; DB for persistence.",
+        "Address rate limits and abuse on custom aliases."
+      ],
+      "rubricTopics": ["capacity_estimate", "data_model", "failure_modes"],
+      "candidateOutline": "Mentioned base62 IDs and Redis cache; did not size storage.",
+      "status": "in_progress"
+    }
+  ]
+}

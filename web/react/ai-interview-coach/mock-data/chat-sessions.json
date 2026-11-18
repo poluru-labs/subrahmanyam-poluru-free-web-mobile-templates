@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_chat_star",
+      "title": "STAR rewrite — conflict question",
+      "updatedAt": "2026-03-17T09:42:00.000Z",
+      "agentId": "agent_star",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Score my answer about design vs engineering conflict and tighten the result line.",
+          "createdAt": "2026-03-17T09:38:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "STAR Coach (prompt 2026.01.8) — STAR feedback (demo): I would score structure in “Score my answer about design vs engineering conflict and tighten the result line.” and suggest a tighter result line.",
+          "createdAt": "2026-03-17T09:42:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_chat_behavioral",
+      "title": "Behavioral follow-ups",
+      "updatedAt": "2026-03-17T09:15:00.000Z",
+      "agentId": "agent_behavioral",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Ask two follow-ups on ownership and metrics for my launch conflict story.",
+          "createdAt": "2026-03-17T09:10:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Behavioral Drill (prompt 2026.03.1) — Behavioral drill (demo): I would run follow-ups on “Ask two follow-ups on ownership and metrics for my launch conflict story.” for impact and ownership. Connect your gateway for live scoring.",
+          "createdAt": "2026-03-17T09:15:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "reviews": [
+    {
+      "id": "drill_star_884",
+      "sessionId": "sess_20260317_pm",
+      "agentId": "agent_star",
+      "answerRef": "drill_behavioral_884",
+      "scores": {
+        "situation": 0.85,
+        "task": 0.7,
+        "action": 0.75,
+        "result": 0.9
+      },
+      "overall": 0.8,
+      "clarityFlags": [
+        "Task section blends team actions — say 'I' for your facilitation steps."
+      ],
+      "suggestedRewrite": "Situation: Launch in two weeks with conflicting design and engineering scope. Task: As PM I owned trade-off decision without slipping date. Action: I ran a scoped workshop, cut carousel to one screen, aligned both leads in writing. Result: Shipped on time; 6% activation lift week-one (new signup cohort).",
+      "createdAt": "2026-03-17T09:40:00.000Z"
+    }
+  ]
+}

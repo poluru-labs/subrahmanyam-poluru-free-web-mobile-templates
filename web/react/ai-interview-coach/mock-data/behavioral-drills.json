@@ -1,0 +1,22 @@
+{
+  "drills": [
+    {
+      "id": "drill_behavioral_884",
+      "sessionId": "sess_20260317_pm",
+      "agentId": "agent_behavioral",
+      "prompt": "Tell me about a time you resolved a conflict between design and engineering on a tight deadline.",
+      "candidateAnswer": "We had two weeks before launch. Design wanted a new onboarding carousel; engineering flagged risk. I facilitated a one-hour workshop, we cut scope to one screen, shipped on time, and activation went up 6%.",
+      "followUps": [
+        {
+          "question": "What was your specific role versus the EM's?",
+          "purpose": "ownership"
+        },
+        {
+          "question": "How did you measure activation — cohort and window?",
+          "purpose": "metric_probe"
+        }
+      ],
+      "coachNotes": "Good outcome metric; clarify personal actions in workshop facilitation."
+    }
+  ]
+}

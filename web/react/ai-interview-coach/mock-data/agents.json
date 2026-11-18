@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_behavioral",
+      "name": "Behavioral Drill",
+      "description": "Runs leadership and teamwork scenarios with follow-ups on impact and metrics.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "behavioral",
+      "promptVersion": "2026.03.1",
+      "tools": ["scenario.pick", "followup.chain", "metric.probe"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_technical",
+      "name": "Technical Drill",
+      "description": "Facilitates coding, system design, and whiteboard prompts with hint ladders.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "technical",
+      "promptVersion": "2026.02.4",
+      "tools": ["prompt.bank", "hint.ladder", "complexity.check"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_star",
+      "name": "STAR Coach",
+      "description": "Scores answers on situation, task, action, and result with rewrite suggestions.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "star",
+      "promptVersion": "2026.01.8",
+      "tools": ["star.score", "clarity.flag", "rewrite.suggest"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_recap",
+      "name": "Session Summarizer",
+      "description": "Turns practice transcripts into strengths, gaps, and tomorrow's drill plan.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "recap",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["transcript.parse", "gap.list", "drill.plan"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_company",
+      "name": "Company Pack",
+      "description": "Loads role-specific rubrics, values, and question banks for target employers.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "company",
+      "promptVersion": "2025.12.2",
+      "tools": ["pack.load", "values.map", "rubric.align"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "learnerId": "learner_maya_001",
+  "displayName": "Maya",
+  "targetRole": "Senior Product Manager",
+  "targetCompanyPackId": "pack_nimbus_fintech",
+  "experienceYears": 7,
+  "focusAreas": ["behavioral_leadership", "metrics_storytelling", "system_design_lite"],
+  "selfRatedConfidenceBaseline": 0.54,
+  "selfRatedConfidenceCurrent": 0.71,
+  "sessionsCompleted": 12
+}

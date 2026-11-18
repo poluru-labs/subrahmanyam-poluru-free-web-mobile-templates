@@ -1,0 +1,31 @@
+{
+  "recaps": [
+    {
+      "id": "recap_20260317_pm",
+      "sessionId": "sess_20260317_pm",
+      "agentId": "agent_recap",
+      "status": "draft",
+      "strengths": [
+        "Clear quantified result on activation",
+        "Calm conflict narrative with trade-off framing"
+      ],
+      "gaps": [
+        "Separate 'I' vs 'we' in action section",
+        "Define measurement window when citing metrics"
+      ],
+      "tomorrowDrillPlan": [
+        {
+          "agentCategory": "behavioral",
+          "focus": "influence without authority",
+          "durationMinutes": 20
+        },
+        {
+          "agentCategory": "star",
+          "focus": "rewrite practice on task clarity",
+          "durationMinutes": 15
+        }
+      ],
+      "generatedAt": "2026-03-17T10:00:00.000Z"
+    }
+  ]
+}

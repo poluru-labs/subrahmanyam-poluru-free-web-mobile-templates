@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "behavioral": {
+      "request": {
+        "agentId": "agent_behavioral",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Run leadership scenario with metric follow-ups."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_behavioral",
+          "role": "assistant",
+          "content": "Behavioral Drill (prompt 2026.03.1) — Behavioral drill (demo): I would run follow-ups on “Run leadership scenario with metric follow-ups.” for impact and ownership. Connect your gateway for live scoring.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "technical": {
+      "request": {
+        "agentId": "agent_technical",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Start URL shortener design with hint ladder."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_technical",
+          "role": "assistant",
+          "content": "Technical Drill (prompt 2026.02.4) — Technical drill (demo): I would probe depth and hints for “Start URL shortener design with hint ladder.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "star": {
+      "request": {
+        "agentId": "agent_star",
+        "messages": [
+          {
+            "role": "user",
+            "content": "STAR score my behavioral answer and suggest rewrite."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_star",
+          "role": "assistant",
+          "content": "STAR Coach (prompt 2026.01.8) — STAR feedback (demo): I would score structure in “STAR score my behavioral answer and suggest rewrite.” and suggest a tighter result line.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "recap": {
+      "request": {
+        "agentId": "agent_recap",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Summarize today's practice and plan tomorrow's drills."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_recap",
+          "role": "assistant",
+          "content": "Session Summarizer (prompt 2026.03.0-rc1) — Session recap (demo): I would summarize strengths and gaps from “Summarize today's practice and plan tomorrow's drills.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "company": {
+      "request": {
+        "agentId": "agent_company",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Load Nimbus fintech PM pack and align rubric."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_company",
+          "role": "assistant",
+          "content": "Company Pack (prompt 2025.12.2) — Company pack (demo): I would align rubric and values for “Load Nimbus fintech PM pack and align rubric.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

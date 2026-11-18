@@ -1,0 +1,18 @@
+{
+  "recordings": [
+    {
+      "id": "rec_20260317_pm",
+      "sessionId": "sess_20260317_pm",
+      "durationSeconds": 2520,
+      "format": "audio/webm",
+      "transcriptAvailable": true,
+      "transcriptExcerpt": "…cut scope to one screen, shipped on time, activation went up 6 percent…",
+      "summaryBullets": [
+        "One behavioral conflict question with strong result metric",
+        "STAR review highlighted task/ownership clarity",
+        "Follow-up on cohort definition deferred — note for next session"
+      ],
+      "createdAt": "2026-03-17T09:45:00.000Z"
+    }
+  ]
+}

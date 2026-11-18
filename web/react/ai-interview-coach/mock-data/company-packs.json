@@ -1,0 +1,28 @@
+{
+  "packs": [
+    {
+      "id": "pack_nimbus_fintech",
+      "companyName": "Nimbus Analytics",
+      "agentId": "agent_company",
+      "status": "paused",
+      "roleTracks": ["product_manager", "data_analyst"],
+      "values": ["customer trust", "data rigor", "bias to clarity"],
+      "rubricHighlights": [
+        "Quantify product impact",
+        "Explain trade-offs under compliance constraints",
+        "Demonstrate cross-functional leadership"
+      ],
+      "questionBankIds": ["bank_pm_behavioral_40", "bank_pm_product_sense_25"]
+    },
+    {
+      "id": "pack_startup_eng",
+      "companyName": "Generic growth-stage startup",
+      "agentId": "agent_company",
+      "status": "active",
+      "roleTracks": ["software_engineer"],
+      "values": ["ownership", "velocity with quality"],
+      "rubricHighlights": ["System design depth", "Debugging narrative"],
+      "questionBankIds": ["bank_eng_dsa_60", "bank_eng_design_20"]
+    }
+  ]
+}
