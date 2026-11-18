@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_tone",
+      "name": "Tone Drafter",
+      "description": "Writes replies that match your voice profile, signatures, and formality rules.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "tone",
+      "promptVersion": "2026.03.1",
+      "tools": ["voice.profile", "draft.reply", "signature.insert"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_summary",
+      "name": "Thread Summarizer",
+      "description": "Condenses long threads into decisions, open questions, and next owners.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "summary",
+      "promptVersion": "2026.02.4",
+      "tools": ["thread.parse", "decision.extract", "bullets.out"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_triage",
+      "name": "Inbox Triage",
+      "description": "Scores urgency, suggests labels, and routes messages to the right queue.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "triage",
+      "promptVersion": "2026.01.8",
+      "tools": ["priority.score", "label.suggest", "queue.route"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_followup",
+      "name": "Follow-up Coach",
+      "description": "Proposes nudges, deadlines, and polite bump language for waiting threads.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "followup",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["nudge.draft", "deadline.suggest", "calendar.hold"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_templates",
+      "name": "Template Librarian",
+      "description": "Finds the best macro or snippet for a scenario and personalizes merge fields.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["snippet.match", "field.merge", "macro.version"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

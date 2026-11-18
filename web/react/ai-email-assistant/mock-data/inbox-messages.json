@@ -1,0 +1,32 @@
+{
+  "messages": [
+    {
+      "id": "in_9001",
+      "threadId": "th_customer_billing",
+      "from": "maya.lin@northwind.example",
+      "to": ["support@example.com"],
+      "receivedAt": "2026-03-17T11:05:00.000Z",
+      "preview": "I see two charges for March after downgrading last week…",
+      "unread": true
+    },
+    {
+      "id": "in_9002",
+      "threadId": "th_vendor_renewal",
+      "from": "contracts@vendor.example",
+      "to": ["alex@example.com"],
+      "cc": ["legal@example.com"],
+      "receivedAt": "2026-03-17T13:40:00.000Z",
+      "preview": "Attaching revised order form with 8% uplift…",
+      "unread": true
+    },
+    {
+      "id": "in_9003",
+      "threadId": null,
+      "from": "newsletter@tools.example",
+      "to": ["alex@example.com"],
+      "receivedAt": "2026-03-17T08:00:00.000Z",
+      "preview": "Weekly roundup: 12 product updates…",
+      "unread": false
+    }
+  ]
+}

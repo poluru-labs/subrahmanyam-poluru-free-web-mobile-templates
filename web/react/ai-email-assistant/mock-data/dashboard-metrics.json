@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Drafts",
+      "value": "540",
+      "hint": "This week"
+    },
+    {
+      "label": "Avg. reply time",
+      "value": "4m",
+      "hint": "Assisted"
+    },
+    {
+      "label": "Templates",
+      "value": "22",
+      "hint": "Team shared"
+    }
+  ]
+}

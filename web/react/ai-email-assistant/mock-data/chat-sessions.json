@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_tone_billing",
+      "title": "Draft billing reply",
+      "updatedAt": "2026-03-17T11:25:00.000Z",
+      "agentId": "agent_tone",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Draft a warm but ops-direct reply about duplicate March charges for Maya.",
+          "createdAt": "2026-03-17T11:20:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Tone Drafter (prompt 2026.03.1) — Draft (demo): I would write a tone-matched reply for “Draft a warm but ops-direct reply about duplicate March charges for Maya.” using your voice profile. Connect your gateway for send-ready output.",
+          "createdAt": "2026-03-17T11:25:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_summary_vendor",
+      "title": "Summarize vendor renewal thread",
+      "updatedAt": "2026-03-17T13:55:00.000Z",
+      "agentId": "agent_summary",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Summarize legal vs vendor messages and who owns next steps.",
+          "createdAt": "2026-03-17T13:50:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Thread Summarizer (prompt 2026.02.4) — Summary (demo): I would extract decisions and open items from “Summarize legal vs vendor messages and who owns next steps.”.",
+          "createdAt": "2026-03-17T13:55:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

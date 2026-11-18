@@ -1,0 +1,20 @@
+{
+  "profiles": [
+    {
+      "id": "voice_lead_sales",
+      "name": "Alex — Sales lead",
+      "formality": "professional_warm",
+      "traits": ["concise", "gratitude_first", "clear_next_step"],
+      "avoid": ["over_promising", "exclamation_stacks"],
+      "signature": "Alex Morgan\nAccount Executive | Example Co.\nalex@example.com"
+    },
+    {
+      "id": "voice_ops",
+      "name": "Sam — Operations",
+      "formality": "direct",
+      "traits": ["bullet_actions", "dates_explicit", "neutral_tone"],
+      "avoid": ["marketing_language"],
+      "signature": "Sam Rivera\nOperations\nsam.rivera@example.com"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "id": "tri_001",
+      "messageId": "in_9001",
+      "agentId": "agent_triage",
+      "priorityScore": 82,
+      "priority": "high",
+      "suggestedLabels": ["billing", "customer", "needs_review"],
+      "suggestedQueue": "billing-specialists",
+      "rationale": "Duplicate charge language; customer account; revenue risk."
+    },
+    {
+      "id": "tri_002",
+      "messageId": "in_9002",
+      "agentId": "agent_triage",
+      "priorityScore": 75,
+      "priority": "high",
+      "suggestedLabels": ["vendor", "contract", "deadline"],
+      "suggestedQueue": "procurement",
+      "rationale": "Signature deadline March 21; cross-thread legal blocker."
+    },
+    {
+      "id": "tri_003",
+      "messageId": "in_9003",
+      "agentId": "agent_triage",
+      "priorityScore": 12,
+      "priority": "low",
+      "suggestedLabels": ["newsletter"],
+      "suggestedQueue": "archive",
+      "rationale": "Bulk sender; no action requested."
+    }
+  ]
+}

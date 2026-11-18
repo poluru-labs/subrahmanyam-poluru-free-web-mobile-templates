@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Email Assistant — mirrors agents, dashboard metrics, mock chat behavior, and inbox entities (threads, triage, drafts, follow-ups, templates).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "voice-profiles.json", "entity": "tone and signature rules" },
+    { "path": "threads.json", "entity": "email threads and messages" },
+    { "path": "thread-summaries.json", "entity": "decisions and owners (Thread Summarizer)" },
+    { "path": "inbox-messages.json", "entity": "inbound queue items" },
+    { "path": "triage-results.json", "entity": "priority and labels (Inbox Triage)" },
+    { "path": "drafts.json", "entity": "tone-matched drafts (Tone Drafter)" },
+    { "path": "follow-ups.json", "entity": "nudges and reminders (Follow-up Coach)" },
+    { "path": "templates.json", "entity": "snippets and matches (Template Librarian)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

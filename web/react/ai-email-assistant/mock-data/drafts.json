@@ -1,0 +1,24 @@
+{
+  "drafts": [
+    {
+      "id": "draft_billing_reply",
+      "threadId": "th_customer_billing",
+      "agentId": "agent_tone",
+      "voiceProfileId": "voice_ops",
+      "status": "proposed",
+      "subject": "Re: Duplicate invoice — account 8842",
+      "body": "Hi Maya,\n\nThank you for flagging this. I’m reviewing both March line items on account 8842 and will confirm which charge reflects your downgrade within one business day. If we find a duplicate capture, we’ll process a refund to your payment method on file.\n\nI’ll follow up by EOD tomorrow with specifics.\n\nSam Rivera\nOperations\nsam.rivera@example.com",
+      "createdAt": "2026-03-17T11:20:00.000Z"
+    },
+    {
+      "id": "draft_vendor_hold",
+      "threadId": "th_vendor_renewal",
+      "agentId": "agent_tone",
+      "voiceProfileId": "voice_lead_sales",
+      "status": "proposed",
+      "subject": "Re: Q3 platform renewal — pricing",
+      "body": "Hi team,\n\nThanks for the revised order form. Legal is finalizing our MSA addendum on indemnity — we can’t sign until that’s countersigned. Can you hold our current seat count through March 21 while we close redlines?\n\nHappy to discuss uplift once legal clears.\n\nAlex Morgan\nAccount Executive | Example Co.\nalex@example.com",
+      "createdAt": "2026-03-17T14:00:00.000Z"
+    }
+  ]
+}

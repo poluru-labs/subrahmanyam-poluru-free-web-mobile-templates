@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "tone": {
+      "request": {
+        "agentId": "agent_tone",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write a reply matching voice_lead_sales for vendor renewal delay."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_tone",
+          "role": "assistant",
+          "content": "Tone Drafter (prompt 2026.03.1) — Draft (demo): I would write a tone-matched reply for “Write a reply matching voice_lead_sales for vendor renewal delay.” using your voice profile. Connect your gateway for send-ready output.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "summary": {
+      "request": {
+        "agentId": "agent_summary",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Bullet decisions and open questions from a 7-message thread."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_summary",
+          "role": "assistant",
+          "content": "Thread Summarizer (prompt 2026.02.4) — Summary (demo): I would extract decisions and open items from “Bullet decisions and open questions from a 7-message thread.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "triage": {
+      "request": {
+        "agentId": "agent_triage",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Score priority and labels for duplicate invoice email."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_triage",
+          "role": "assistant",
+          "content": "Inbox Triage (prompt 2026.01.8) — Triage (demo): I would score priority and suggest labels for “Score priority and labels for duplicate invoice email.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "followup": {
+      "request": {
+        "agentId": "agent_followup",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Suggest a polite bump for HR reference waiting 3 days."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_followup",
+          "role": "assistant",
+          "content": "Follow-up Coach (prompt 2026.03.0-rc1) — Follow-up (demo): I would draft a nudge for “Suggest a polite bump for HR reference waiting 3 days.” with a suggested send date.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_templates",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Match best team template for billing duplicate ack."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_templates",
+          "role": "assistant",
+          "content": "Template Librarian (prompt 2025.12.2) — Template (demo): I would match snippets and merge fields for “Match best team template for billing duplicate ack.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

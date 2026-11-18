@@ -1,0 +1,22 @@
+{
+  "summaries": [
+    {
+      "id": "sum_vendor_renewal",
+      "threadId": "th_vendor_renewal",
+      "agentId": "agent_summary",
+      "decisions": [
+        "Legal blocks signature until MSA addendum on indemnity is countersigned.",
+        "Vendor proposed 8% uplift on revised order form."
+      ],
+      "openQuestions": [
+        "Can vendor hold seat count without signed order form by March 21?",
+        "Is uplift negotiable if we accept annual prepay?"
+      ],
+      "nextOwners": [
+        { "owner": "legal@example.com", "action": "Finalize indemnity redlines" },
+        { "owner": "alex@example.com", "action": "Reply to vendor with legal status + ask on seat hold" }
+      ],
+      "generatedAt": "2026-03-17T13:55:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "threads": [
+    {
+      "id": "th_vendor_renewal",
+      "subject": "Re: Q3 platform renewal — pricing",
+      "participants": ["alex@example.com", "contracts@vendor.example", "legal@example.com"],
+      "messageCount": 7,
+      "lastMessageAt": "2026-03-17T13:40:00.000Z",
+      "status": "awaiting_reply",
+      "messages": [
+        {
+          "id": "msg_th_01",
+          "from": "contracts@vendor.example",
+          "sentAt": "2026-03-17T13:40:00.000Z",
+          "body": "Attaching revised order form with 8% uplift. We need signature by March 21 to hold seat count."
+        },
+        {
+          "id": "msg_th_02",
+          "from": "legal@example.com",
+          "sentAt": "2026-03-17T12:50:00.000Z",
+          "body": "Redlines on indemnity still open. Do not sign until MSA addendum is countersigned."
+        }
+      ]
+    },
+    {
+      "id": "th_customer_billing",
+      "subject": "Duplicate invoice — account 8842",
+      "participants": ["support@example.com", "maya.lin@northwind.example"],
+      "messageCount": 3,
+      "lastMessageAt": "2026-03-17T11:05:00.000Z",
+      "status": "needs_draft",
+      "messages": [
+        {
+          "id": "msg_th_03",
+          "from": "maya.lin@northwind.example",
+          "sentAt": "2026-03-17T11:05:00.000Z",
+          "body": "I see two charges for March after downgrading last week. Can you confirm which is final and refund the duplicate?"
+        }
+      ]
+    },
+    {
+      "id": "th_internship_reference",
+      "subject": "Reference check for Jordan Oke",
+      "participants": ["hr@example.com", "jordan@startupco.example"],
+      "messageCount": 2,
+      "lastMessageAt": "2026-03-14T09:00:00.000Z",
+      "status": "waiting_on_us",
+      "messages": [
+        {
+          "id": "msg_th_04",
+          "from": "hr@example.com",
+          "sentAt": "2026-03-14T09:00:00.000Z",
+          "body": "Gentle ping — Jordan’s offer expires Friday. Form takes ~10 minutes."
+        }
+      ]
+    }
+  ]
+}

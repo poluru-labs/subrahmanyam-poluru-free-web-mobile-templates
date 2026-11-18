@@ -1,0 +1,35 @@
+{
+  "nudges": [
+    {
+      "id": "fup_internship",
+      "threadId": "th_internship_reference",
+      "agentId": "agent_followup",
+      "status": "suggested",
+      "waitingDays": 3,
+      "suggestedSendAt": "2026-03-18T09:00:00.000Z",
+      "subject": "Re: Reference check for Jordan Oke",
+      "draftBody": "Hi — quick follow-up on Jordan’s reference form before Friday’s offer deadline. The link is still open; happy to answer any questions.\n\nThanks,\nSam",
+      "deadlineNote": "Offer expires 2026-03-21 (Friday)."
+    },
+    {
+      "id": "fup_vendor",
+      "threadId": "th_vendor_renewal",
+      "agentId": "agent_followup",
+      "status": "draft",
+      "waitingDays": 0,
+      "suggestedSendAt": "2026-03-17T16:00:00.000Z",
+      "subject": "Re: Q3 platform renewal — pricing",
+      "draftBody": "Following up on seat-hold request — legal expects countersign by EOD Thursday.",
+      "deadlineNote": "Vendor deadline: 2026-03-21."
+    }
+  ],
+  "reminders": [
+    {
+      "id": "rem_001",
+      "threadId": "th_internship_reference",
+      "remindAt": "2026-03-18T08:30:00.000Z",
+      "title": "Bump HR on Jordan reference",
+      "calendarHoldSuggested": true
+    }
+  ]
+}

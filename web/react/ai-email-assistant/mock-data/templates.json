@@ -1,0 +1,40 @@
+{
+  "templates": [
+    {
+      "id": "tpl_billing_ack",
+      "name": "Billing — duplicate charge ack",
+      "category": "billing",
+      "version": "2.1.0",
+      "body": "Hi {{recipient.first_name}},\n\nThank you for reaching out. I’m reviewing {{account.id}} and will confirm charge details within {{sla.hours}} hours.\n\n{{sender.signature}}"
+    },
+    {
+      "id": "tpl_vendor_deadline",
+      "name": "Vendor — legal review delay",
+      "category": "procurement",
+      "version": "1.4.0",
+      "body": "Hi {{recipient.first_name}},\n\nOur legal team is reviewing {{document.name}}. We can’t sign until {{condition}}. Can you {{ask}} until {{date}}?\n\n{{sender.signature}}"
+    },
+    {
+      "id": "tpl_reference_nudge",
+      "name": "HR — reference form nudge",
+      "category": "hr",
+      "version": "1.0.0",
+      "body": "Hi {{recipient.first_name}},\n\nFriendly reminder: {{candidate.name}}’s {{item}} is due {{deadline}}. Link: {{form.url}}\n\n{{sender.signature}}"
+    }
+  ],
+  "matches": [
+    {
+      "id": "match_001",
+      "messageId": "in_9001",
+      "agentId": "agent_templates",
+      "templateId": "tpl_billing_ack",
+      "mergeFields": {
+        "recipient.first_name": "Maya",
+        "account.id": "8842",
+        "sla.hours": "24",
+        "sender.signature": "Sam Rivera\nOperations"
+      },
+      "confidence": 0.93
+    }
+  ]
+}
