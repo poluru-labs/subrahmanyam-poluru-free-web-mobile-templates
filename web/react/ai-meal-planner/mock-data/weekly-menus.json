@@ -1,0 +1,14 @@
+{
+  "weeks": [
+    {
+      "id": "week_2026_w12",
+      "agentId": "agent_week",
+      "startDate": "2026-03-17",
+      "prepNotes": "Sunday: cook rice, marinate salmon.",
+      "busyNightShortcut": "Wednesday: frozen dumplings + salad",
+      "days": [
+        { "date": "2026-03-17", "dinner": "Miso cod", "prepAheadMinutes": 10 }
+      ]
+    }
+  ]
+}

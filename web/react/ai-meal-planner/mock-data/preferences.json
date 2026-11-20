@@ -1,0 +1,14 @@
+{
+  "profiles": [
+    {
+      "id": "prof_chen_household",
+      "agentId": "agent_prefs",
+      "householdSize": 2,
+      "diets": ["pescatarian"],
+      "allergens": ["peanuts"],
+      "cuisines": ["mediterranean", "japanese"],
+      "budgetPerWeekUsd": 120,
+      "cookingTimeWeeknightMinutes": 35
+    }
+  ]
+}

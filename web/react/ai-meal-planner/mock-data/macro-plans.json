@@ -1,0 +1,13 @@
+{
+  "plans": [
+    {
+      "id": "macro_week12",
+      "profileId": "prof_chen_household",
+      "agentId": "agent_macros",
+      "dailyTargets": { "proteinG": 95, "carbsG": 180, "fatG": 55, "calories": 1680 },
+      "meals": [
+        { "day": "monday", "breakfast": "Greek yogurt bowl", "lunch": "Salmon rice bowl", "dinner": "Miso cod + greens" }
+      ]
+    }
+  ]
+}
