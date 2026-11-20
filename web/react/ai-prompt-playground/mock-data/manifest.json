@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Prompt Playground.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "experiments.json",
+      "entity": "saved runs"
+    },
+    {
+      "path": "parameter-grids.json",
+      "entity": "sweeps"
+    },
+    {
+      "path": "prompt-versions.json",
+      "entity": "revisions"
+    },
+    {
+      "path": "share-links.json",
+      "entity": "packaged links"
+    },
+    {
+      "path": "session-winners.json",
+      "entity": "lab notes"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

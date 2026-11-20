@@ -1,0 +1,11 @@
+{
+  "slug": "ai-prompt-playground",
+  "name": "AI Prompt Playground",
+  "tagline": "Experiment with prompts, models, and parameters side by side.",
+  "brandColor": "#133458",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "prompt-playground:active-agent"
+  }
+}

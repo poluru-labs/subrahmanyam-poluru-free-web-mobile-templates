@@ -1,0 +1,13 @@
+{
+  "grids": [
+    {
+      "id": "grid_temp_08",
+      "temperatureRange": [
+        0.2,
+        1
+      ],
+      "samples": 12,
+      "agentId": "agent_sweep"
+    }
+  ]
+}

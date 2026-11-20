@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_compare",
+      "name": "Multi-Model Compare",
+      "description": "Runs the same prompt in parallel panes across models for quick visual diff.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "compare",
+      "promptVersion": "2026.03.1",
+      "tools": ["pane.split", "diff.highlight", "model.pick"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_sweep",
+      "name": "Parameter Sweeper",
+      "description": "Grids temperature, top-p, and max tokens to map response behavior.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "sweep",
+      "promptVersion": "2026.02.4",
+      "tools": ["param.grid", "sample.run", "chart.heat"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_version",
+      "name": "Prompt Versioner",
+      "description": "Tracks prompt revisions, labels changes, and rolls back safely.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "version",
+      "promptVersion": "2026.01.8",
+      "tools": ["prompt.diff", "tag.release", "rollback.snap"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_share",
+      "name": "Share Link Builder",
+      "description": "Packages experiments into shareable links with redacted secrets.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "share",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["link.pack", "secret.redact", "expiry.set"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_lab",
+      "name": "Experiment Lab",
+      "description": "Bundles notes, winners, and next hypotheses from playground sessions.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["session.log", "winner.tag", "hypothesis.queue"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

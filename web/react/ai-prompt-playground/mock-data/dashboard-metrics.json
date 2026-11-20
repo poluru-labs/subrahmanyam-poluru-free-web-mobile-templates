@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Experiments",
+      "value": "156",
+      "hint": "Saved runs"
+    },
+    {
+      "label": "Templates",
+      "value": "64",
+      "hint": "Shared library"
+    },
+    {
+      "label": "Win rate",
+      "value": "71%",
+      "hint": "A/B preferred"
+    }
+  ]
+}

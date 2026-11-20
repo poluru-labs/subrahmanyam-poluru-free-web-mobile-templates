@@ -1,0 +1,10 @@
+{
+  "experiments": [
+    {
+      "id": "exp_summarize_v3",
+      "name": "Summarize v3",
+      "status": "completed",
+      "winningModel": "gpt-4.1-mini"
+    }
+  ]
+}

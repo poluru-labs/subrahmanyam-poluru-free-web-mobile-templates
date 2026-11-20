@@ -1,0 +1,10 @@
+{
+  "versions": [
+    {
+      "id": "ver_support_tone",
+      "tag": "v2.1",
+      "label": "Support tone polish",
+      "agentId": "agent_version"
+    }
+  ]
+}
