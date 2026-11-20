@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "narrative": {
+      "request": {
+        "agentId": "agent_narrative",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Outline acts for a product roadmap deck."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_narrative",
+          "role": "assistant",
+          "content": "Narrative Architect (prompt 2026.03.1) — Narrative (demo): I would outline story beats for “Outline acts for a product roadmap deck.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "notes": {
+      "request": {
+        "agentId": "agent_notes",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Add cues for the metrics slide."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_notes",
+          "role": "assistant",
+          "content": "Speaker Notes (prompt 2026.02.4) — Speaker notes (demo): I would draft presenter notes for slides about “Add cues for the metrics slide.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "pacing": {
+      "request": {
+        "agentId": "agent_pacing",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Trim deep-dive section to five slides."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_pacing",
+          "role": "assistant",
+          "content": "Section Pacing (prompt 2026.01.8) — Pacing (demo): I would balance section depth around “Trim deep-dive section to five slides.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "brand": {
+      "request": {
+        "agentId": "agent_brand",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Apply grid layout tokens."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_brand",
+          "role": "assistant",
+          "content": "Brand Slide Kit (prompt 2026.03.0-rc1) — Brand kit (demo): I would align slide patterns with “Apply grid layout tokens.” and your kit.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_deck",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Order sections and add exec overview."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Deck Assembler (prompt 2025.12.2) — Deck assembly (demo): I would order sections for “Order sections and add exec overview.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "budgets": [
+    {
+      "id": "pace_roadmap",
+      "deckId": "deck_q1_roadmap",
+      "maxSlides": 28,
+      "overrunSlides": 4,
+      "agentId": "agent_pacing"
+    }
+  ]
+}

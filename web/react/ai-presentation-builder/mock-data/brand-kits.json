@@ -1,0 +1,11 @@
+{
+  "kits": [
+    {
+      "id": "kit_poluru_2026",
+      "name": "Poluru 2026",
+      "primaryColor": "#E50046",
+      "status": "draft",
+      "agentId": "agent_brand"
+    }
+  ]
+}

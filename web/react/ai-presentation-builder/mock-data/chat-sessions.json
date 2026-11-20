@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_narrative",
+      "title": "Roadmap story arc",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_narrative",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Audience is exec team; 20 minutes.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Narrative Architect (prompt 2026.03.1) — Narrative (demo): I would outline story beats for “Audience is exec team; 20 minutes.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}
