@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Invoices",
+      "value": "2.9k",
+      "hint": "Processed"
+    },
+    {
+      "label": "STP rate",
+      "value": "81%",
+      "hint": "No touch"
+    },
+    {
+      "label": "Exceptions",
+      "value": "19%",
+      "hint": "Needs review"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Language Tutor — mirrors agents, dashboard metrics, mock chat behavior, and learning flow (dialogue, corrections, decks, pronunciation, review).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "learner-profile.json", "entity": "CEFR level and streak" },
+    { "path": "lessons.json", "entity": "curriculum lessons" },
+    { "path": "dialogues.json", "entity": "roleplay scenes (Dialogue Partner)" },
+    { "path": "corrections.json", "entity": "inline fixes (Correction Coach)" },
+    { "path": "vocabulary-decks.json", "entity": "SRS cards (Vocab Builder)" },
+    { "path": "pronunciation-drills.json", "entity": "IPA drills (Pronunciation Guide)" },
+    { "path": "review-schedule.json", "entity": "daily micro-lessons (Review Scheduler)" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

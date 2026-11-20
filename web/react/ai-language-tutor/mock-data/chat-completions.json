@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "dialogue": {
+      "request": {
+        "agentId": "agent_dialogue",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Start B1 café roleplay with hints if I stall."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_dialogue",
+          "role": "assistant",
+          "content": "Dialogue Partner (prompt 2026.03.1) — Dialogue (demo): I would continue a level-matched roleplay from “Start B1 café roleplay with hints if I stall.”. Connect your gateway for live tutoring.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "correction": {
+      "request": {
+        "agentId": "agent_correction",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Inline grammar fix for my Spanish sentence."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_correction",
+          "role": "assistant",
+          "content": "Correction Coach (prompt 2026.02.4) — Correction (demo): I would annotate grammar in “Inline grammar fix for my Spanish sentence.” with a cleaner rewrite.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "vocabulary": {
+      "request": {
+        "agentId": "agent_vocab",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Add new words from today's café chat to SRS deck."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_vocab",
+          "role": "assistant",
+          "content": "Vocab Builder (prompt 2026.01.8) — Vocab (demo): I would add cards and examples from “Add new words from today's café chat to SRS deck.” to your deck.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "pronunciation": {
+      "request": {
+        "agentId": "agent_pronunciation",
+        "messages": [
+          {
+            "role": "user",
+            "content": "IPA and stress for 'café con leche'."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_pronunciation",
+          "role": "assistant",
+          "content": "Pronunciation Guide (prompt 2026.03.0-rc1) — Pronunciation (demo): I would break down sounds in “IPA and stress for 'café con leche'.” with stress marks.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_review",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Plan 15-minute review for 22-day streak."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_review",
+          "role": "assistant",
+          "content": "Review Scheduler (prompt 2025.12.2) — Review plan (demo): I would schedule practice around “Plan 15-minute review for 22-day streak.” based on your streak.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

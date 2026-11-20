@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Invoice Processing — mirrors agents, dashboard metrics, mock chat behavior, and AP entities (extract, validate, vendor, approval, exceptions).",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[] (MOCK_AGENTS)" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard hero metrics" },
+    { "path": "vendors.json", "entity": "vendor master records" },
+    { "path": "invoices.json", "entity": "inbound invoices" },
+    { "path": "extractions.json", "entity": "OCR field maps (Field Extractor)" },
+    { "path": "validations.json", "entity": "math and PO checks (Total Validator)" },
+    { "path": "vendor-matches.json", "entity": "fuzzy match and duplicates" },
+    { "path": "approval-routing.json", "entity": "policies and approver chains" },
+    { "path": "exceptions.json", "entity": "rejects and vendor drafts" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "ChatCompletionRequest/Response per agent category" }
+  ]
+}

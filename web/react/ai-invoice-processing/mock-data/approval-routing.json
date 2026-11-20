@@ -1,0 +1,45 @@
+{
+  "policies": [
+    {
+      "id": "pol_spend_tier2",
+      "name": "Tier 2 — $10k–$25k",
+      "minUsd": 10000,
+      "maxUsd": 25000,
+      "approverChain": ["manager.procurement", "finance.ap"]
+    },
+    {
+      "id": "pol_spend_tier1",
+      "name": "Tier 1 — under $10k",
+      "minUsd": 0,
+      "maxUsd": 9999.99,
+      "approverChain": ["manager.procurement"]
+    }
+  ],
+  "routes": [
+    {
+      "id": "route_inv_4421",
+      "invoiceId": "inv_2026_0317_4421",
+      "agentId": "agent_approval",
+      "status": "draft",
+      "matchedPolicyId": "pol_spend_tier2",
+      "approvers": [
+        { "role": "manager.procurement", "userId": "u_sam", "status": "pending" },
+        { "role": "finance.ap", "userId": "u_priya", "status": "waiting" }
+      ],
+      "slaDueAt": "2026-03-19T17:00:00.000Z",
+      "blockedReason": "Validation fail: PO overage — approval held"
+    },
+    {
+      "id": "route_inv_2290",
+      "invoiceId": "inv_2026_0310_2290",
+      "agentId": "agent_approval",
+      "status": "complete",
+      "matchedPolicyId": "pol_spend_tier1",
+      "approvers": [
+        { "role": "manager.procurement", "userId": "u_sam", "status": "approved", "at": "2026-03-11T10:00:00.000Z" }
+      ],
+      "slaDueAt": null,
+      "blockedReason": null
+    }
+  ]
+}

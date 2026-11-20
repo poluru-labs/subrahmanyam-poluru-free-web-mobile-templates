@@ -1,0 +1,29 @@
+{
+  "matches": [
+    {
+      "id": "match_inv_4421",
+      "invoiceId": "inv_2026_0317_4421",
+      "agentId": "agent_vendor",
+      "matchedVendorId": "vnd_nimbus",
+      "matchScore": 0.96,
+      "duplicateCheck": {
+        "isDuplicate": false,
+        "relatedInvoiceIds": []
+      },
+      "bankAccountMatch": true
+    },
+    {
+      "id": "match_inv_dup",
+      "invoiceId": "inv_2026_0317_dup",
+      "agentId": "agent_vendor",
+      "matchedVendorId": "vnd_nimbus",
+      "matchScore": 0.98,
+      "duplicateCheck": {
+        "isDuplicate": true,
+        "relatedInvoiceIds": ["inv_2026_0317_4421"],
+        "reason": "Same invoice number, vendor, and total within 24h"
+      },
+      "bankAccountMatch": true
+    }
+  ]
+}

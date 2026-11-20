@@ -1,0 +1,28 @@
+{
+  "drills": [
+    {
+      "id": "pron_rr_calle",
+      "agentId": "agent_pronunciation",
+      "status": "draft",
+      "phrase": "Una calle cerca del mercado",
+      "language": "es",
+      "ipa": "ˈuna ˈkaʎe ˈserka ðel merˈkado",
+      "stressNotes": "Stress on primera sílaba de calle and mercado.",
+      "minimalPairs": [
+        { "a": "pero", "b": "perro", "focus": "single vs rolled r" }
+      ],
+      "liaisonNotes": null
+    },
+    {
+      "id": "pron_cafe_liaison",
+      "agentId": "agent_pronunciation",
+      "status": "draft",
+      "phrase": "café con leche",
+      "language": "es",
+      "ipa": "kaˈfe kon ˈletʃe",
+      "stressNotes": "Link con + leche smoothly; clear final vowel in café.",
+      "minimalPairs": [],
+      "liaisonNotes": "Practice 'con leche' without inserting intrusive sounds between words."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_dialogue_cafe",
+      "title": "Café roleplay — B1",
+      "updatedAt": "2026-03-17T09:05:00.000Z",
+      "agentId": "agent_dialogue",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Let's practice ordering coffee in Spanish at B1 level.",
+          "createdAt": "2026-03-17T09:00:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Dialogue Partner (prompt 2026.03.1) — Dialogue (demo): I would continue a level-matched roleplay from “Let's practice ordering coffee in Spanish at B1 level.”. Connect your gateway for live tutoring.",
+          "createdAt": "2026-03-17T09:05:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_correction_order",
+      "title": "Polite ordering correction",
+      "updatedAt": "2026-03-17T09:12:00.000Z",
+      "agentId": "agent_correction",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Correct: Yo estoy queriendo un café con leche.",
+          "createdAt": "2026-03-17T09:10:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Correction Coach (prompt 2026.02.4) — Correction (demo): I would annotate grammar in “Correct: Yo estoy queriendo un café con leche.” with a cleaner rewrite.",
+          "createdAt": "2026-03-17T09:12:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

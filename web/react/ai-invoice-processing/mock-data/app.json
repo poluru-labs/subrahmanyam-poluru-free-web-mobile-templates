@@ -1,0 +1,11 @@
+{
+  "slug": "ai-invoice-processing",
+  "name": "AI Invoice Processing",
+  "tagline": "Extract invoice fields, validate totals, and route approvals.",
+  "brandColor": "#4589D6",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "invoice-processing:active-agent"
+  }
+}

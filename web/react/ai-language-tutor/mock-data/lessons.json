@@ -1,0 +1,22 @@
+{
+  "lessons": [
+    {
+      "id": "lesson_cafe_b1",
+      "title": "En la cafetería",
+      "cefrLevel": "B1",
+      "durationMinutes": 12,
+      "sceneId": "scene_cafe_order",
+      "linkedDeckId": "deck_cafe_vocab",
+      "status": "in_progress"
+    },
+    {
+      "id": "lesson_past_review",
+      "title": "Past tense check-in",
+      "cefrLevel": "B1",
+      "durationMinutes": 10,
+      "sceneId": null,
+      "linkedDeckId": "deck_past_verbs",
+      "status": "scheduled"
+    }
+  ]
+}

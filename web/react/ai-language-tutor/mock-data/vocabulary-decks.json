@@ -1,0 +1,46 @@
+{
+  "decks": [
+    {
+      "id": "deck_cafe_vocab",
+      "name": "Café — pedidos",
+      "agentId": "agent_vocab",
+      "language": "es",
+      "cardCount": 8,
+      "cards": [
+        {
+          "id": "card_01",
+          "term": "la leche",
+          "translation": "milk",
+          "example": "Un café con leche, por favor.",
+          "sourceTurnId": "scene_cafe_order",
+          "srsNextReviewAt": "2026-03-18T08:00:00.000Z"
+        },
+        {
+          "id": "card_02",
+          "term": "quisiera",
+          "translation": "I would like (polite)",
+          "example": "Quisiera el menú del día.",
+          "sourceTurnId": null,
+          "srsNextReviewAt": "2026-03-17T20:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "deck_past_verbs",
+      "name": "Pretérito — comprar, ir",
+      "agentId": "agent_vocab",
+      "language": "es",
+      "cardCount": 12,
+      "cards": [
+        {
+          "id": "card_03",
+          "term": "compré",
+          "translation": "I bought",
+          "example": "Compré pan en la panadería.",
+          "sourceTurnId": null,
+          "srsNextReviewAt": "2026-03-19T08:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

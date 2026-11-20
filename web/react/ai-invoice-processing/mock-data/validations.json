@@ -1,0 +1,59 @@
+{
+  "validations": [
+    {
+      "id": "val_inv_4421",
+      "invoiceId": "inv_2026_0317_4421",
+      "agentId": "agent_validate",
+      "status": "fail",
+      "checks": [
+        {
+          "name": "line_sum",
+          "expected": 15240.0,
+          "actual": 15240.0,
+          "pass": true
+        },
+        {
+          "name": "tax_rate",
+          "expectedTax": 1219.2,
+          "actualTax": 1219.2,
+          "assumedRate": 0.08,
+          "pass": true
+        },
+        {
+          "name": "total_reconcile",
+          "expectedTotal": 16459.2,
+          "actualTotal": 16459.2,
+          "pass": true
+        },
+        {
+          "name": "po_open_balance",
+          "expectedMax": 15000.0,
+          "invoiceTotal": 16459.2,
+          "toleranceUsd": 50.0,
+          "pass": false,
+          "message": "Invoice exceeds PO open balance by $1,509.20"
+        }
+      ],
+      "validatedAt": "2026-03-17T08:20:00.000Z"
+    },
+    {
+      "id": "val_inv_2290",
+      "invoiceId": "inv_2026_0310_2290",
+      "agentId": "agent_validate",
+      "status": "pass",
+      "checks": [
+        {
+          "name": "total_reconcile",
+          "expectedTotal": 961.2,
+          "actualTotal": 961.2,
+          "pass": true
+        }
+      ],
+      "validatedAt": "2026-03-10T14:05:00.000Z"
+    }
+  ],
+  "toleranceRules": {
+    "currencyUsd": { "lineRounding": 0.02, "taxPercentDelta": 0.001 },
+    "poOverageUsd": 50.0
+  }
+}

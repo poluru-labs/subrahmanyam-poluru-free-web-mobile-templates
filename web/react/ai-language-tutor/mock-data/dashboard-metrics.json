@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Streak",
+      "value": "21d",
+      "hint": "Active learners"
+    },
+    {
+      "label": "Lessons",
+      "value": "64",
+      "hint": "Curriculum"
+    },
+    {
+      "label": "Accuracy",
+      "value": "88%",
+      "hint": "Grammar checks"
+    }
+  ]
+}

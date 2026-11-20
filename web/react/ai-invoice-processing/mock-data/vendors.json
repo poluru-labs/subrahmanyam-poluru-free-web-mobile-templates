@@ -1,0 +1,24 @@
+{
+  "vendors": [
+    {
+      "id": "vnd_nimbus",
+      "legalName": "Nimbus Analytics, Inc.",
+      "aliases": ["Nimbus Analytics", "Nimbus AP"],
+      "vendorNumber": "V-10294",
+      "taxIdLast4": "4821",
+      "defaultCurrency": "USD",
+      "paymentTermsDays": 30,
+      "bankVerified": true
+    },
+    {
+      "id": "vnd_printco",
+      "legalName": "PrintCo Supplies LLC",
+      "aliases": ["PrintCo", "Print Co Supplies"],
+      "vendorNumber": "V-08802",
+      "taxIdLast4": "7733",
+      "defaultCurrency": "USD",
+      "paymentTermsDays": 45,
+      "bankVerified": true
+    }
+  ]
+}

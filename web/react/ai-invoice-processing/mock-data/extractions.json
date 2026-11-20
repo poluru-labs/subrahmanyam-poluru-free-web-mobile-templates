@@ -1,0 +1,27 @@
+{
+  "extractions": [
+    {
+      "id": "ext_inv_4421",
+      "invoiceId": "inv_2026_0317_4421",
+      "agentId": "agent_extract",
+      "status": "complete",
+      "confidenceOverall": 0.93,
+      "fields": {
+        "invoiceNumber": { "value": "INV-2026-0317-4421", "confidence": 0.99 },
+        "poNumber": { "value": "PO-8842-PLATFORM", "confidence": 0.91 },
+        "dueDate": { "value": "2026-04-14", "confidence": 0.88 },
+        "remitTo": { "value": "accounts@nimbus.example", "confidence": 0.85 }
+      },
+      "lineItems": [
+        {
+          "line": 1,
+          "description": "Platform subscription — Q2",
+          "quantity": 1,
+          "unitPrice": 15240.0,
+          "amount": 15240.0,
+          "confidence": 0.94
+        }
+      ]
+    }
+  ]
+}

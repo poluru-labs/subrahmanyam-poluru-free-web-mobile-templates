@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_extract",
+      "name": "Field Extractor",
+      "description": "Pulls line items, tax, PO numbers, and due dates from PDF and email invoices.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "extract",
+      "promptVersion": "2026.03.1",
+      "tools": ["ocr.parse", "field.map", "confidence.score"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_validate",
+      "name": "Total Validator",
+      "description": "Reconciles subtotals, tax math, and currency against tolerance rules.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "validate",
+      "promptVersion": "2026.02.4",
+      "tools": ["math.check", "fx.convert", "tolerance.apply"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_vendor",
+      "name": "Vendor Matcher",
+      "description": "Links invoices to vendor master records and flags duplicate submissions.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "vendor",
+      "promptVersion": "2026.01.8",
+      "tools": ["vendor.fuzzy", "dup.detect", "bank.verify"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_approval",
+      "name": "Approval Router",
+      "description": "Applies spend policies and routes invoices to the right approver chain.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "approval",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["policy.match", "approver.chain", "sla.warn"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_exception",
+      "name": "Exception Handler",
+      "description": "Explains rejects, gathers missing fields, and drafts vendor clarification emails.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["exception.classify", "field.request", "email.draft"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

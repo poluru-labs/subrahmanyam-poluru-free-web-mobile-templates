@@ -1,0 +1,29 @@
+{
+  "exceptions": [
+    {
+      "id": "exc_po_overage",
+      "invoiceId": "inv_2026_0317_4421",
+      "agentId": "agent_exception",
+      "type": "po_overage",
+      "severity": "high",
+      "status": "open",
+      "summary": "Total $16,459.20 exceeds PO PO-8842-PLATFORM open balance.",
+      "missingFields": [],
+      "suggestedVendorEmail": {
+        "subject": "PO balance clarification — INV-2026-0317-4421",
+        "body": "Hello Nimbus AP,\n\nWe received invoice INV-2026-0317-4421 for $16,459.20 against PO-8842-PLATFORM. Our open PO balance is $15,000. Please confirm if this includes a change order or send a revised PO reference.\n\nThank you,\nAccounts Payable"
+      }
+    },
+    {
+      "id": "exc_duplicate",
+      "invoiceId": "inv_2026_0317_dup",
+      "agentId": "agent_exception",
+      "type": "duplicate_submission",
+      "severity": "medium",
+      "status": "auto_rejected",
+      "summary": "Duplicate of inv_2026_0317_4421; blocked from posting.",
+      "missingFields": [],
+      "suggestedVendorEmail": null
+    }
+  ]
+}

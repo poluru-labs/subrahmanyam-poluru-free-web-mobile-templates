@@ -1,0 +1,46 @@
+{
+  "sessions": [
+    {
+      "id": "sess_extract_nimbus",
+      "title": "Extract Nimbus Q2 invoice",
+      "updatedAt": "2026-03-17T08:25:00.000Z",
+      "agentId": "agent_extract",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Map fields and line items from attached Nimbus invoice PDF text.",
+          "createdAt": "2026-03-17T08:20:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Field Extractor (prompt 2026.03.1) — Extraction (demo): I would map fields from “Map fields and line items from attached Nimbus invoice PDF text.” with confidence scores. Connect your gateway for OCR-backed output.",
+          "createdAt": "2026-03-17T08:25:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    },
+    {
+      "id": "sess_validate_po",
+      "title": "PO balance fail",
+      "updatedAt": "2026-03-17T08:30:00.000Z",
+      "agentId": "agent_validate",
+      "messages": [
+        {
+          "id": "msg_003",
+          "role": "user",
+          "content": "Validate totals and PO match for inv_2026_0317_4421.",
+          "createdAt": "2026-03-17T08:28:00.000Z"
+        },
+        {
+          "id": "msg_004",
+          "role": "assistant",
+          "content": "Total Validator (prompt 2026.02.4) — Validation (demo): I would check totals and tax math for “Validate totals and PO match for inv_2026_0317_4421.” against tolerances.",
+          "createdAt": "2026-03-17T08:30:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

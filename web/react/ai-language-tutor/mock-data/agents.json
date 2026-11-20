@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_dialogue",
+      "name": "Dialogue Partner",
+      "description": "Leads level-aware roleplays with scaffolding for A1–C1 learners.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "dialogue",
+      "promptVersion": "2026.03.1",
+      "tools": ["level.gate", "roleplay.scene", "hint.ladder"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_correction",
+      "name": "Correction Coach",
+      "description": "Flags grammar and word-choice issues with inline rewrites and explanations.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "correction",
+      "promptVersion": "2026.02.4",
+      "tools": ["grammar.flag", "rewrite.inline", "rule.cite"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_vocab",
+      "name": "Vocab Builder",
+      "description": "Turns chat excerpts into spaced-review decks with example sentences.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "vocabulary",
+      "promptVersion": "2026.01.8",
+      "tools": ["deck.add", "example.pair", "srs.schedule"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_pronunciation",
+      "name": "Pronunciation Guide",
+      "description": "Breaks down stress, liaison, and phoneme drills from learner phrases.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "pronunciation",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["ipa.breakdown", "stress.mark", "minimal.pair"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_review",
+      "name": "Review Scheduler",
+      "description": "Plans daily micro-lessons from weak spots and streak goals.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["weak.spot", "streak.plan", "reminder.nudge"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

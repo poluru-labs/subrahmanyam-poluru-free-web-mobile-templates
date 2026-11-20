@@ -1,0 +1,30 @@
+{
+  "scenes": [
+    {
+      "id": "scene_cafe_order",
+      "agentId": "agent_dialogue",
+      "title": "Pedir un café",
+      "cefrLevel": "B1",
+      "setting": "Café in Madrid, morning rush",
+      "turns": [
+        {
+          "role": "tutor",
+          "text": "Buenos días. ¿Qué le pongo?",
+          "hintLevel": 0
+        },
+        {
+          "role": "learner",
+          "text": "Buenos días. Yo quiero un café con leche, por favor.",
+          "hintLevel": 0
+        },
+        {
+          "role": "tutor",
+          "text": "¿Grande o pequeño?",
+          "hintLevel": 1,
+          "scaffold": "Puedes decir: 'Pequeño, por favor' o 'El grande'."
+        }
+      ],
+      "sessionId": "sess_dialogue_cafe"
+    }
+  ]
+}

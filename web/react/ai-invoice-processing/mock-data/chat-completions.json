@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "extract": {
+      "request": {
+        "agentId": "agent_extract",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Extract invoice number, PO, line items, and due date."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_extract",
+          "role": "assistant",
+          "content": "Field Extractor (prompt 2026.03.1) — Extraction (demo): I would map fields from “Extract invoice number, PO, line items, and due date.” with confidence scores. Connect your gateway for OCR-backed output.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "validate": {
+      "request": {
+        "agentId": "agent_validate",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Reconcile subtotal, 8% tax, and total against PO tolerance."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_validate",
+          "role": "assistant",
+          "content": "Total Validator (prompt 2026.02.4) — Validation (demo): I would check totals and tax math for “Reconcile subtotal, 8% tax, and total against PO tolerance.” against tolerances.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "vendor": {
+      "request": {
+        "agentId": "agent_vendor",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Match vendor and check for duplicate invoice number."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_vendor",
+          "role": "assistant",
+          "content": "Vendor Matcher (prompt 2026.01.8) — Vendor match (demo): I would link “Match vendor and check for duplicate invoice number.” to master data and scan for duplicates.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "approval": {
+      "request": {
+        "agentId": "agent_approval",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Route $16k SaaS invoice to approver chain under tier 2 policy."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_approval",
+          "role": "assistant",
+          "content": "Approval Router (prompt 2026.03.0-rc1) — Routing (demo): I would apply policy and approvers for “Route $16k SaaS invoice to approver chain under tier 2 policy.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_exception",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Draft vendor email for PO overage exception."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_exception",
+          "role": "assistant",
+          "content": "Exception Handler (prompt 2025.12.2) — Exception (demo): I would classify the issue in “Draft vendor email for PO overage exception.” and draft a vendor note.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

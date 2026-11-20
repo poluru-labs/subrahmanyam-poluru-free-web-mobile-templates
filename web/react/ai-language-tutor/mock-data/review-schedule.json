@@ -1,0 +1,31 @@
+{
+  "plans": [
+    {
+      "id": "plan_daily_0318",
+      "agentId": "agent_review",
+      "learnerId": "learner_jordan_01",
+      "status": "paused",
+      "date": "2026-03-18",
+      "streakTargetDays": 22,
+      "weakSpots": ["preterite_vs_imperfect", "polite_ordering_phrases"],
+      "microLessons": [
+        {
+          "type": "vocabulary",
+          "deckId": "deck_cafe_vocab",
+          "minutes": 5
+        },
+        {
+          "type": "correction_drill",
+          "correctionIds": ["corr_002"],
+          "minutes": 5
+        },
+        {
+          "type": "dialogue",
+          "sceneId": "scene_cafe_order",
+          "minutes": 5
+        }
+      ],
+      "reminderAt": "2026-03-18T07:30:00.000Z"
+    }
+  ]
+}

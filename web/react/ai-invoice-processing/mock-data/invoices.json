@@ -1,0 +1,52 @@
+{
+  "invoices": [
+    {
+      "id": "inv_2026_0317_4421",
+      "status": "exception",
+      "source": "email",
+      "vendorExtractedName": "Nimbus Analytics",
+      "vendorId": "vnd_nimbus",
+      "invoiceNumber": "INV-2026-0317-4421",
+      "poNumber": "PO-8842-PLATFORM",
+      "invoiceDate": "2026-03-15",
+      "dueDate": "2026-04-14",
+      "currency": "USD",
+      "subtotal": 15240.0,
+      "tax": 1219.2,
+      "total": 16459.2,
+      "receivedAt": "2026-03-17T08:12:00.000Z"
+    },
+    {
+      "id": "inv_2026_0310_2290",
+      "status": "approved",
+      "source": "pdf_upload",
+      "vendorExtractedName": "PrintCo Supplies LLC",
+      "vendorId": "vnd_printco",
+      "invoiceNumber": "PC-2290",
+      "poNumber": "PO-7710-OFFICE",
+      "invoiceDate": "2026-03-08",
+      "dueDate": "2026-04-22",
+      "currency": "USD",
+      "subtotal": 890.0,
+      "tax": 71.2,
+      "total": 961.2,
+      "receivedAt": "2026-03-10T14:00:00.000Z"
+    },
+    {
+      "id": "inv_2026_0317_dup",
+      "status": "blocked_duplicate",
+      "source": "portal",
+      "vendorExtractedName": "Nimbus Analytics, Inc.",
+      "vendorId": "vnd_nimbus",
+      "invoiceNumber": "INV-2026-0317-4421",
+      "poNumber": "PO-8842-PLATFORM",
+      "invoiceDate": "2026-03-15",
+      "dueDate": "2026-04-14",
+      "currency": "USD",
+      "subtotal": 15240.0,
+      "tax": 1219.2,
+      "total": 16459.2,
+      "receivedAt": "2026-03-17T09:45:00.000Z"
+    }
+  ]
+}

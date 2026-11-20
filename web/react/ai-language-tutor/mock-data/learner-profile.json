@@ -1,0 +1,11 @@
+{
+  "learnerId": "learner_jordan_01",
+  "displayName": "Jordan",
+  "targetLanguage": "es",
+  "nativeLanguage": "en",
+  "cefrLevel": "B1",
+  "streakDays": 21,
+  "grammarAccuracyRolling": 0.88,
+  "focusAreas": ["preterite_vs_imperfect", "ser_estar", "cafe_small_talk"],
+  "dailyGoalMinutes": 15
+}

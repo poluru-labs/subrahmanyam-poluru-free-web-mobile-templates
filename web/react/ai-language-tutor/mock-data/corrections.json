@@ -1,0 +1,38 @@
+{
+  "corrections": [
+    {
+      "id": "corr_001",
+      "agentId": "agent_correction",
+      "lessonId": "lesson_cafe_b1",
+      "original": "Yo estoy queriendo un café con leche.",
+      "corrected": "Quisiera un café con leche.",
+      "issues": [
+        {
+          "type": "word_choice",
+          "rule": "Polite requests often use quisiera / me gustaría, not estar + querer progressive."
+        }
+      ],
+      "explanation": "For ordering, 'Quisiera…' sounds natural and polite at B1.",
+      "createdAt": "2026-03-17T09:10:00.000Z"
+    },
+    {
+      "id": "corr_002",
+      "agentId": "agent_correction",
+      "lessonId": "lesson_past_review",
+      "original": "Ayer yo fui al mercado y compro fruta.",
+      "corrected": "Ayer fui al mercado y compré fruta.",
+      "issues": [
+        {
+          "type": "tense",
+          "rule": "Narrative past: preterite for completed actions (compré)."
+        },
+        {
+          "type": "pronoun",
+          "rule": "Subject pronoun yo often omitted when clear."
+        }
+      ],
+      "explanation": "Match preterite fui with preterite compré in the same time frame.",
+      "createdAt": "2026-03-16T18:00:00.000Z"
+    }
+  ]
+}
