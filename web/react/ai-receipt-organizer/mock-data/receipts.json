@@ -1,0 +1,11 @@
+{
+  "receipts": [
+    {
+      "id": "rcp_cafe_8842",
+      "merchant": "Corner Cafe",
+      "total": 18.42,
+      "currency": "USD",
+      "capturedAt": "2026-03-16T09:12:00.000Z"
+    }
+  ]
+}

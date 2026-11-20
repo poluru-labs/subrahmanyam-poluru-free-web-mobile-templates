@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Receipts",
+      "value": "1.1k",
+      "hint": "This month"
+    },
+    {
+      "label": "Categories",
+      "value": "24",
+      "hint": "Mapped"
+    },
+    {
+      "label": "Export ready",
+      "value": "93%",
+      "hint": "Complete"
+    }
+  ]
+}

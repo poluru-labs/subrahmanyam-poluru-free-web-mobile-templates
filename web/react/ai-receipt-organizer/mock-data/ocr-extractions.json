@@ -1,0 +1,10 @@
+{
+  "extractions": [
+    {
+      "receiptId": "rcp_cafe_8842",
+      "tax": 1.48,
+      "subtotal": 16.94,
+      "agentId": "agent_ocr"
+    }
+  ]
+}

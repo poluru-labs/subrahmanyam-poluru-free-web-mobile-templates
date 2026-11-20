@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_ocr",
+      "name": "Receipt OCR",
+      "description": "Pulls merchant, totals, tax, and dates from photos or PDF scans.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "ocr",
+      "promptVersion": "2026.03.1",
+      "tools": ["ocr.parse", "total.extract", "line.item"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_category",
+      "name": "Category Suggester",
+      "description": "Proposes GL codes and spend categories from merchant and line items.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "category",
+      "promptVersion": "2026.02.4",
+      "tools": ["gl.map", "rule.learn", "policy.tag"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_duplicate",
+      "name": "Duplicate Spotter",
+      "description": "Flags likely duplicate receipts by amount, date, and merchant fuzzy match.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "duplicate",
+      "promptVersion": "2026.01.8",
+      "tools": ["dup.hash", "fuzzy.match", "merge.suggest"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_export",
+      "name": "Export Packager",
+      "description": "Builds CSV and PDF expense bundles ready for accountants.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "export",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["csv.pack", "pdf.bundle", "period.filter"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_summary",
+      "name": "Spend Summarizer",
+      "description": "Rolls up monthly totals and highlights outliers by category.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["rollup.month", "outlier.flag", "trend.spark"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

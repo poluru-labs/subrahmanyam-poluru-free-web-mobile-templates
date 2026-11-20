@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Receipt Organizer.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "receipts.json",
+      "entity": "captured receipts"
+    },
+    {
+      "path": "ocr-extractions.json",
+      "entity": "parsed fields"
+    },
+    {
+      "path": "category-rules.json",
+      "entity": "GL mappings"
+    },
+    {
+      "path": "duplicate-flags.json",
+      "entity": "dup candidates"
+    },
+    {
+      "path": "export-bundles.json",
+      "entity": "accountant packs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

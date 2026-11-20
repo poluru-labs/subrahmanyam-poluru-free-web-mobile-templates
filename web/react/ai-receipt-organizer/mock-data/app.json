@@ -1,0 +1,11 @@
+{
+  "slug": "ai-receipt-organizer",
+  "name": "AI Receipt Organizer",
+  "tagline": "Capture receipts, categorize spend, and prepare exports.",
+  "brandColor": "#59253A",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "receipt-organizer:active-agent"
+  }
+}

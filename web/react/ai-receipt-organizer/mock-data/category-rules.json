@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "id": "rule_meals_client",
+      "glCode": "6200",
+      "category": "Client meals",
+      "agentId": "agent_category"
+    }
+  ]
+}
