@@ -1,0 +1,12 @@
+{
+  "jobs": [
+    {
+      "id": "batch_team_headshots",
+      "agentId": "agent_batch",
+      "preset": "corporate_neutral_v3",
+      "assetIds": ["asset_headshot_01"],
+      "status": "queued",
+      "exportsPreserveOriginals": true
+    }
+  ]
+}

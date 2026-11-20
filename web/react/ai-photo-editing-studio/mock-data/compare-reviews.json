@@ -1,0 +1,11 @@
+{
+  "reviews": [
+    {
+      "id": "review_warmth",
+      "editId": "edit_warmth_01",
+      "agentId": "agent_compare",
+      "decision": "pending",
+      "diffHighlights": ["skin tone shift +3%", "background blur radius 12px"]
+    }
+  ]
+}

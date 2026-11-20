@@ -1,0 +1,13 @@
+{
+  "snapshots": [
+    {
+      "id": "snap_01",
+      "assetId": "asset_headshot_01",
+      "agentId": "agent_history",
+      "step": 2,
+      "label": "After warmth layer",
+      "revertible": true,
+      "originalHash": "sha256:headshot_raw_lock"
+    }
+  ]
+}

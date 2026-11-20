@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Photo Editing Studio.",
+  "files": [
+    { "path": "app.json", "entity": "metadata" },
+    { "path": "agents.json", "entity": "agents" },
+    { "path": "dashboard-metrics.json", "entity": "metrics" },
+    { "path": "assets.json", "entity": "source assets" },
+    { "path": "edit-layers.json", "entity": "NL edits" },
+    { "path": "batch-jobs.json", "entity": "batch retouch" },
+    { "path": "compare-reviews.json", "entity": "before/after" },
+    { "path": "history-snapshots.json", "entity": "non-destructive history" },
+    { "path": "chat-sessions.json", "entity": "chat" },
+    { "path": "chat-completions.json", "entity": "completions" }
+  ]
+}

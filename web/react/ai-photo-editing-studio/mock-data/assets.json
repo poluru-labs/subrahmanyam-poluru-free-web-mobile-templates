@@ -1,0 +1,11 @@
+{
+  "assets": [
+    {
+      "id": "asset_headshot_01",
+      "filename": "headshot-amelia-raw.cr3",
+      "originalLocked": true,
+      "previewUrl": "/mock-data/previews/asset_headshot_01.webp",
+      "dimensions": { "width": 4000, "height": 6000 }
+    }
+  ]
+}

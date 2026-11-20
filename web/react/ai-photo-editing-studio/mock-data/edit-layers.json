@@ -1,0 +1,16 @@
+{
+  "edits": [
+    {
+      "id": "edit_warmth_01",
+      "assetId": "asset_headshot_01",
+      "agentId": "agent_edit",
+      "instruction": "Slightly warm skin tones; soften background",
+      "layerStack": [
+        { "name": "exposure", "opacity": 1.0 },
+        { "name": "warmth", "opacity": 0.65 }
+      ],
+      "status": "pending_review",
+      "originalUntouched": true
+    }
+  ]
+}

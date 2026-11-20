@@ -1,0 +1,9 @@
+{
+  "agents": [
+    { "id": "agent_edit", "name": "Natural Language Editor", "description": "Turns a plain-language instruction into a layered, reversible edit.", "model": "gpt-4.1-mini", "status": "active", "category": "edit", "promptVersion": "2026.03.2", "tools": ["prompt.parse", "mask.region", "layer.commit"], "updatedAt": "2026-03-17T14:15:00.000Z" },
+    { "id": "agent_batch", "name": "Batch Retoucher", "description": "Applies the same look across a set while leaving each original untouched.", "model": "gpt-4.1-mini", "status": "active", "category": "batch", "promptVersion": "2026.02.6", "tools": ["queue.scan", "preset.apply", "export.set"], "updatedAt": "2026-03-17T11:00:00.000Z" },
+    { "id": "agent_compare", "name": "Before/After Comparator", "description": "Lines up the source and the edit so you can approve or reject the change.", "model": "gpt-4.1-mini", "status": "active", "category": "compare", "promptVersion": "2026.01.9", "tools": ["frame.split", "diff.highlight", "review.approve"], "updatedAt": "2026-03-17T06:00:00.000Z" },
+    { "id": "agent_history", "name": "History Keeper", "description": "Snapshots every step so you can revert without overwriting the original.", "model": "gpt-4.1-mini", "status": "draft", "category": "history", "promptVersion": "2026.03.0-rc2", "tools": ["snapshot.save", "revert.step", "original.lock"], "updatedAt": "2026-03-17T15:45:00.000Z" },
+    { "id": "agent_studio", "name": "Studio Orchestrator", "description": "Routes a job across edit, batch, compare, and history agents.", "model": "gpt-4.1-mini", "status": "paused", "category": "general", "promptVersion": "2025.12.4", "tools": ["job.route", "preset.library", "qa.pass"], "updatedAt": "2026-03-16T15:49:00.000Z" }
+  ]
+}
