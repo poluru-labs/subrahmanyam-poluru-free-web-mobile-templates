@@ -1,0 +1,14 @@
+{
+  "sessions": [
+    {
+      "id": "sess_compare",
+      "title": "Side-by-side billing prompt",
+      "updatedAt": "2026-03-17T10:05:00.000Z",
+      "agentId": "agent_compare",
+      "messages": [
+        { "id": "msg_001", "role": "user", "content": "Fan out support billing prompt to three models.", "createdAt": "2026-03-17T10:00:00.000Z" },
+        { "id": "msg_002", "role": "assistant", "content": "Side-by-Side Comparator (prompt 2026.03.1) — Compare (demo): I would fan out “Fan out support billing prompt to three models.” across models side by side.", "createdAt": "2026-03-17T10:05:00.000Z", "model": "gpt-4.1-mini" }
+      ]
+    }
+  ]
+}
