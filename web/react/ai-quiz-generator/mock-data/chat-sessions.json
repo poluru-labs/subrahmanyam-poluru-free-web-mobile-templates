@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_formats",
+      "title": "Mix MCQ and short answer",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_formats",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "From chapter 4 notes on mitosis.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Question Format Mixer (prompt 2026.03.1) — Formats (demo): I would mix question types from “From chapter 4 notes on mitosis.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

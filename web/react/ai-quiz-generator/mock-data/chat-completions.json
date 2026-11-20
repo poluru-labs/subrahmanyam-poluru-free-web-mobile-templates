@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "formats": {
+      "request": {
+        "agentId": "agent_formats",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Blend MCQ and short answer."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_formats",
+          "role": "assistant",
+          "content": "Question Format Mixer (prompt 2026.03.1) — Formats (demo): I would mix question types from “Blend MCQ and short answer.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "difficulty": {
+      "request": {
+        "agentId": "agent_difficulty",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Target 30% apply-level items."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_difficulty",
+          "role": "assistant",
+          "content": "Difficulty Calibrator (prompt 2026.02.4) — Difficulty (demo): I would calibrate levels for content about “Target 30% apply-level items.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "answers": {
+      "request": {
+        "agentId": "agent_answers",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Draft rationales for item 7."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_answers",
+          "role": "assistant",
+          "content": "Answer Key & Rationale (prompt 2026.01.8) — Answer key (demo): I would draft keys and rationales for “Draft rationales for item 7.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "lms": {
+      "request": {
+        "agentId": "agent_lms",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Export to Canvas CSV."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_lms",
+          "role": "assistant",
+          "content": "LMS Exporter (prompt 2026.03.0-rc1) — LMS export (demo): I would map a quiz from “Export to Canvas CSV.” to export fields.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_quiz",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Set sections and point values."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Quiz Assembler (prompt 2025.12.2) — Assembly (demo): I would structure a full quiz around “Set sections and point values.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

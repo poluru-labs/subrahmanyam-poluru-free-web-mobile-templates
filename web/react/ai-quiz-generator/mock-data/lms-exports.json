@@ -1,0 +1,10 @@
+{
+  "exports": [
+    {
+      "id": "exp_canvas_csv",
+      "format": "canvas",
+      "quizId": "quiz_photosynthesis",
+      "agentId": "agent_lms"
+    }
+  ]
+}
