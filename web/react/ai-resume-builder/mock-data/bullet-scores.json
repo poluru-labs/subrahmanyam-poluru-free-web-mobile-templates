@@ -1,0 +1,10 @@
+{
+  "scores": [
+    {
+      "bulletId": "b_01",
+      "score": 8.4,
+      "hasMetric": true,
+      "agentId": "agent_bullets"
+    }
+  ]
+}

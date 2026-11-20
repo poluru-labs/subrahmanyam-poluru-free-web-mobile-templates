@@ -1,0 +1,11 @@
+{
+  "slug": "ai-resume-builder",
+  "name": "AI Resume Builder",
+  "tagline": "Tailor resumes and cover letters to each role.",
+  "brandColor": "#CF0F0F",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "resume-builder:active-agent"
+  }
+}

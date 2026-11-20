@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Profiles",
+      "value": "18",
+      "hint": "Saved"
+    },
+    {
+      "label": "Role matches",
+      "value": "73",
+      "hint": "Optimized"
+    },
+    {
+      "label": "ATS score",
+      "value": "92",
+      "hint": "Avg. pass rate"
+    }
+  ]
+}

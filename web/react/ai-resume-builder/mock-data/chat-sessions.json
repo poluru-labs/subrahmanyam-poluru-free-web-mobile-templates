@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_rewrite",
+      "title": "Tailor to Northline JD",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_rewrite",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Match keywords for fintech PM role.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "JD Tailor (prompt 2026.03.1) — JD tailor (demo): I would align content to “Match keywords for fintech PM role.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

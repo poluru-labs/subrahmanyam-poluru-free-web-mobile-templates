@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_rewrite",
+      "name": "JD Tailor",
+      "description": "Aligns experience bullets and summary language to a target job description.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "rewrite",
+      "promptVersion": "2026.03.1",
+      "tools": ["jd.parse", "keyword.map", "tone.match"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_bullets",
+      "name": "Impact Bullet Scorer",
+      "description": "Rates bullets for metrics, action verbs, and relevance; suggests upgrades.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "bullets",
+      "promptVersion": "2026.02.4",
+      "tools": ["bullet.score", "metric.suggest", "verb.strong"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_cover",
+      "name": "Cover Letter Studio",
+      "description": "Drafts role-specific cover letters with variant tones and lengths.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "cover",
+      "promptVersion": "2026.01.8",
+      "tools": ["letter.draft", "tone.variant", "hook.open"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_layout",
+      "name": "Layout Exporter",
+      "description": "Prepares ATS-friendly sections and export-ready single-page layouts.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "layout",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["ats.check", "page.fit", "section.order"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_resume",
+      "name": "Resume Composer",
+      "description": "Assembles headline, experience blocks, and skills for a cohesive draft.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["draft.merge", "skill.cluster", "gap.fill"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

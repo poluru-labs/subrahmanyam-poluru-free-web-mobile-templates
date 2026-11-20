@@ -1,0 +1,10 @@
+{
+  "exports": [
+    {
+      "id": "exp_ats_single",
+      "pageCount": 1,
+      "atsFriendly": true,
+      "agentId": "agent_layout"
+    }
+  ]
+}
