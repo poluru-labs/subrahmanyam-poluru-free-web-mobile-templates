@@ -1,0 +1,12 @@
+{
+  "threads": [
+    {
+      "id": "thread_hybrid_search",
+      "title": "Hybrid search tradeoffs",
+      "pinnedSourceIds": [
+        "src_acl_2024"
+      ],
+      "agentId": "agent_threads"
+    }
+  ]
+}

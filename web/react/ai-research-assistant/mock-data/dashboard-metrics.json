@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Sources indexed",
+      "value": "1.2k",
+      "hint": "Across workspace libraries"
+    },
+    {
+      "label": "Briefs drafted",
+      "value": "86",
+      "hint": "This week"
+    },
+    {
+      "label": "Citation accuracy",
+      "value": "98%",
+      "hint": "Verified links"
+    }
+  ]
+}

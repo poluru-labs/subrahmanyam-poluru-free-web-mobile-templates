@@ -1,0 +1,13 @@
+{
+  "outlines": [
+    {
+      "id": "lit_rag_eval",
+      "themes": [
+        "chunking",
+        "grounding",
+        "latency"
+      ],
+      "agentId": "agent_literature"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Research Assistant.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "sources.json",
+      "entity": "indexed corpus"
+    },
+    {
+      "path": "literature-outlines.json",
+      "entity": "theme maps"
+    },
+    {
+      "path": "research-threads.json",
+      "entity": "saved threads"
+    },
+    {
+      "path": "briefs.json",
+      "entity": "export briefs"
+    },
+    {
+      "path": "synthesis-summaries.json",
+      "entity": "exec summaries"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

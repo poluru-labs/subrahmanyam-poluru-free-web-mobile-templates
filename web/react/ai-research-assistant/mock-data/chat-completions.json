@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "citations": {
+      "request": {
+        "agentId": "agent_citations",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer with citations on chunking."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_citations",
+          "role": "assistant",
+          "content": "Cited Q&A (prompt 2026.03.1) — Cited Q&A (demo): I would answer “Answer with citations on chunking.” with source citations.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "literature": {
+      "request": {
+        "agentId": "agent_literature",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Outline themes across papers."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_literature",
+          "role": "assistant",
+          "content": "Literature Reviewer (prompt 2026.02.4) — Literature (demo): I would outline themes around “Outline themes across papers.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "threads": {
+      "request": {
+        "agentId": "agent_threads",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Resume last week’s thread."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_threads",
+          "role": "assistant",
+          "content": "Thread Archivist (prompt 2026.01.8) — Threads (demo): I would archive context for “Resume last week’s thread.” in a saved thread.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "brief": {
+      "request": {
+        "agentId": "agent_brief",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Export findings to markdown."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_brief",
+          "role": "assistant",
+          "content": "Brief Exporter (prompt 2026.03.0-rc1) — Brief (demo): I would export findings on “Export findings to markdown.” to MD/PDF.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_synth",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Executive summary for stakeholders."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Synthesis Lead (prompt 2025.12.2) — Synthesis (demo): I would summarize stakeholder views on “Executive summary for stakeholders.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

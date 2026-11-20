@@ -1,0 +1,11 @@
+{
+  "slug": "ai-research-assistant",
+  "name": "AI Research Assistant",
+  "tagline": "Synthesize papers, briefs, and sources with cited answers.",
+  "brandColor": "#FF5A22",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "research-assistant:active-agent"
+  }
+}

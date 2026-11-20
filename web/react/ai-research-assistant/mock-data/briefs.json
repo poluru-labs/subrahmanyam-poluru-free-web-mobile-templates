@@ -1,0 +1,10 @@
+{
+  "briefs": [
+    {
+      "id": "brief_q2_rag",
+      "format": "markdown",
+      "pageCount": 6,
+      "agentId": "agent_brief"
+    }
+  ]
+}

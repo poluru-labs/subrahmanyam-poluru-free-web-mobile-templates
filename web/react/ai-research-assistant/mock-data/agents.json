@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_citations",
+      "name": "Cited Q&A",
+      "description": "Answers from your source corpus with inline citations and confidence notes.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "citations",
+      "promptVersion": "2026.03.1",
+      "tools": ["source.retrieve", "cite.inline", "claim.check"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_literature",
+      "name": "Literature Reviewer",
+      "description": "Builds thematic outlines and gap maps across papers and reports.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "literature",
+      "promptVersion": "2026.02.4",
+      "tools": ["theme.cluster", "gap.map", "outline.draft"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_threads",
+      "name": "Thread Archivist",
+      "description": "Saves research threads, links prior answers, and resumes context.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "threads",
+      "promptVersion": "2026.01.8",
+      "tools": ["thread.save", "context.resume", "pin.source"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_brief",
+      "name": "Brief Exporter",
+      "description": "Packages findings into markdown or PDF briefs with bibliography blocks.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "brief",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["md.export", "pdf.pack", "bib.format"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_synth",
+      "name": "Synthesis Lead",
+      "description": "Merges multi-source takes into executive summaries for stakeholders.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["synth.merge", "exec.trim", "stance.balance"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

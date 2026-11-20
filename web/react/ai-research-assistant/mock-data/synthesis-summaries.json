@@ -1,0 +1,9 @@
+{
+  "summaries": [
+    {
+      "id": "synth_stakeholder_rag",
+      "audience": "executive",
+      "agentId": "agent_synth"
+    }
+  ]
+}
