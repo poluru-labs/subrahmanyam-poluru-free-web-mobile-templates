@@ -1,0 +1,15 @@
+{
+  "suites": [
+    {
+      "id": "bench_support_40",
+      "agentId": "agent_bench",
+      "name": "Support prompts — 40 cases",
+      "caseCount": 40,
+      "lastRunAt": "2026-03-16T22:00:00.000Z",
+      "leaderboard": [
+        { "modelId": "mdl_claude_sonnet", "wins": 22 },
+        { "modelId": "mdl_gpt41mini", "wins": 15 }
+      ]
+    }
+  ]
+}

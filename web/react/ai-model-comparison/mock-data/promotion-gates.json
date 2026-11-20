@@ -1,0 +1,14 @@
+{
+  "gates": [
+    {
+      "id": "gate_gemini_q2",
+      "agentId": "agent_promotion",
+      "challengerModelId": "mdl_gemini_flash",
+      "baselineModelId": "mdl_gpt41mini",
+      "status": "draft",
+      "thresholds": { "qualityMin": 0.9, "latencyP95MaxMs": 2500, "costMaxDeltaPercent": -15 },
+      "pass": false,
+      "reason": "Quality on policyFit below 0.9 in 2/5 rubric cases."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "samples": [
+    {
+      "id": "lat_001",
+      "runId": "cmp_support_prompt",
+      "agentId": "agent_latency",
+      "rows": [
+        { "modelId": "mdl_gpt41mini", "ttftMs": 420, "totalMs": 2100, "costPer1kTokensUsd": 0.0035 },
+        { "modelId": "mdl_gemini_flash", "ttftMs": 280, "totalMs": 1650, "costPer1kTokensUsd": 0.0012 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scores": [
+    {
+      "id": "qual_001",
+      "runId": "cmp_support_prompt",
+      "agentId": "agent_quality",
+      "rubricId": "support_tone_v2",
+      "results": [
+        { "modelId": "mdl_gpt41mini", "accuracy": 0.92, "tone": 0.88, "policyFit": 0.95 },
+        { "modelId": "mdl_claude_sonnet", "accuracy": 0.94, "tone": 0.91, "policyFit": 0.93 }
+      ]
+    }
+  ]
+}
