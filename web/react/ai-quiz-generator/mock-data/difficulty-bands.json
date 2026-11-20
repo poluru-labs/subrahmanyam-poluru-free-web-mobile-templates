@@ -1,0 +1,10 @@
+{
+  "bands": [
+    {
+      "id": "band_apply",
+      "bloomLevel": "apply",
+      "targetPercent": 35,
+      "agentId": "agent_difficulty"
+    }
+  ]
+}

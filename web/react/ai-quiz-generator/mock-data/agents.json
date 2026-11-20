@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_formats",
+      "name": "Question Format Mixer",
+      "description": "Blends MCQ, short answer, true/false, and matching from the same source.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "formats",
+      "promptVersion": "2026.03.1",
+      "tools": ["format.mix", "distractor.gen", "stem.clarify"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_difficulty",
+      "name": "Difficulty Calibrator",
+      "description": "Tunes Bloom levels and cognitive load with explicit difficulty targets.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "difficulty",
+      "promptVersion": "2026.02.4",
+      "tools": ["bloom.map", "load.score", "target.band"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_answers",
+      "name": "Answer Key & Rationale",
+      "description": "Produces keyed answers with teaching notes and misconception callouts.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "answers",
+      "promptVersion": "2026.01.8",
+      "tools": ["key.build", "rationale.write", "miscon.tag"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_lms",
+      "name": "LMS Exporter",
+      "description": "Maps quizzes to QTI, Canvas, and Moodle field shapes (mock export).",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "lms",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["qti.pack", "canvas.csv", "moodle.xml"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_quiz",
+      "name": "Quiz Assembler",
+      "description": "Orders sections, sets point values, and adds instructor overview.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["section.order", "points.set", "overview.draft"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

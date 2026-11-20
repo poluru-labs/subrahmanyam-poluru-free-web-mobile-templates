@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Quiz Generator.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "quizzes.json",
+      "entity": "quiz drafts"
+    },
+    {
+      "path": "question-banks.json",
+      "entity": "question pools"
+    },
+    {
+      "path": "difficulty-bands.json",
+      "entity": "Bloom targets"
+    },
+    {
+      "path": "answer-keys.json",
+      "entity": "keys and rationales"
+    },
+    {
+      "path": "lms-exports.json",
+      "entity": "export mappings"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

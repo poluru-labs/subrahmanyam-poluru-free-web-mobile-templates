@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Quizzes",
+      "value": "112",
+      "hint": "Published"
+    },
+    {
+      "label": "Questions",
+      "value": "3.4k",
+      "hint": "Bank size"
+    },
+    {
+      "label": "Avg. score",
+      "value": "76%",
+      "hint": "Learners"
+    }
+  ]
+}

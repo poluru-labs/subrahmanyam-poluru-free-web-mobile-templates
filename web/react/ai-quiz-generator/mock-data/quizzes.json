@@ -1,0 +1,10 @@
+{
+  "quizzes": [
+    {
+      "id": "quiz_photosynthesis",
+      "title": "Photosynthesis basics",
+      "questionCount": 18,
+      "status": "published"
+    }
+  ]
+}

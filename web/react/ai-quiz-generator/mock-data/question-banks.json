@@ -1,0 +1,13 @@
+{
+  "banks": [
+    {
+      "id": "bank_bio_unit2",
+      "formats": [
+        "mcq",
+        "short_answer"
+      ],
+      "itemCount": 42,
+      "agentId": "agent_formats"
+    }
+  ]
+}
