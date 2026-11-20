@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_narrative",
+      "name": "Narrative Architect",
+      "description": "Shapes story arcs, act breaks, and slide-level headlines for your topic.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "narrative",
+      "promptVersion": "2026.03.1",
+      "tools": ["arc.map", "headline.draft", "proof.list"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_notes",
+      "name": "Speaker Notes",
+      "description": "Drafts presenter notes with cues, emphasis, and timeboxed delivery tips.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "notes",
+      "promptVersion": "2026.02.4",
+      "tools": ["note.expand", "cue.insert", "time.box"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_pacing",
+      "name": "Section Pacing",
+      "description": "Balances depth across sections and flags overrun for long decks.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "pacing",
+      "promptVersion": "2026.01.8",
+      "tools": ["slide.budget", "depth.warn", "transition.suggest"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_brand",
+      "name": "Brand Slide Kit",
+      "description": "Applies brand voice, layout tokens, and reusable slide patterns.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "brand",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["kit.apply", "token.check", "layout.grid"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_deck",
+      "name": "Deck Assembler",
+      "description": "Orders sections, exports slide summaries, and prepends executive overview.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["deck.order", "exec.prep", "export.outline"],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

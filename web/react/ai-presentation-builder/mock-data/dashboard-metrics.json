@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Decks",
+      "value": "58",
+      "hint": "Created"
+    },
+    {
+      "label": "Slides",
+      "value": "1.9k",
+      "hint": "Generated"
+    },
+    {
+      "label": "Reuse rate",
+      "value": "41%",
+      "hint": "Template hits"
+    }
+  ]
+}

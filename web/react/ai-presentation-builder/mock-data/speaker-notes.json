@@ -1,0 +1,11 @@
+{
+  "notes": [
+    {
+      "id": "notes_slide_04",
+      "slideIndex": 4,
+      "cue": "Pause on metrics chart",
+      "durationMinutes": 2,
+      "agentId": "agent_notes"
+    }
+  ]
+}

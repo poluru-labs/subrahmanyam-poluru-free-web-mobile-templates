@@ -1,0 +1,15 @@
+{
+  "outlines": [
+    {
+      "id": "out_roadmap_arc",
+      "deckId": "deck_q1_roadmap",
+      "acts": [
+        "Problem",
+        "Strategy",
+        "Ship plan",
+        "Ask"
+      ],
+      "agentId": "agent_narrative"
+    }
+  ]
+}

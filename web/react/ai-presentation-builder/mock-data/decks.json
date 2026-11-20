@@ -1,0 +1,12 @@
+{
+  "decks": [
+    {
+      "id": "deck_q1_roadmap",
+      "title": "Q1 Product Roadmap",
+      "status": "in_review",
+      "slideCount": 24,
+      "assignedAgentId": "agent_deck",
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    }
+  ]
+}

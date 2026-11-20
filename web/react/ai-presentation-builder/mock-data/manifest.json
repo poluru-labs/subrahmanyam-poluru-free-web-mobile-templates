@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Presentation Builder.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "decks.json",
+      "entity": "deck drafts"
+    },
+    {
+      "path": "slide-outlines.json",
+      "entity": "story beats"
+    },
+    {
+      "path": "speaker-notes.json",
+      "entity": "presenter notes"
+    },
+    {
+      "path": "brand-kits.json",
+      "entity": "layout tokens"
+    },
+    {
+      "path": "section-pacing.json",
+      "entity": "slide budgets"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

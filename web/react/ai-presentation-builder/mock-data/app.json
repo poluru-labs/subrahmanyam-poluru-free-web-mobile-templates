@@ -1,0 +1,11 @@
+{
+  "slug": "ai-presentation-builder",
+  "name": "AI Presentation Builder",
+  "tagline": "Build slide narratives, speaker notes, and visual structure.",
+  "brandColor": "#E50046",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "presentation-builder:active-agent"
+  }
+}
