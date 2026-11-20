@@ -1,0 +1,9 @@
+{
+  "agents": [
+    { "id": "agent_summary", "name": "Live Summary Streamer", "description": "Rolls up talking points in near real time for long working sessions.", "model": "gpt-4.1-mini", "status": "active", "category": "summary", "promptVersion": "2026.03.1", "tools": ["transcript.chunk", "summary.stream", "topic.tag"], "updatedAt": "2026-03-17T14:15:00.000Z" },
+    { "id": "agent_actions", "name": "Action Item Extractor", "description": "Pulls owners, due dates, and deliverables from messy meeting dialogue.", "model": "gpt-4.1-mini", "status": "active", "category": "actions", "promptVersion": "2026.02.4", "tools": ["action.parse", "owner.assign", "due.normalize"], "updatedAt": "2026-03-17T11:00:00.000Z" },
+    { "id": "agent_decisions", "name": "Decision Logger", "description": "Captures what was decided, alternatives considered, and rationale.", "model": "gpt-4.1-mini", "status": "active", "category": "decisions", "promptVersion": "2026.01.8", "tools": ["decision.record", "alt.compare", "vote.note"], "updatedAt": "2026-03-17T06:00:00.000Z" },
+    { "id": "agent_calendar", "name": "Calendar Sync Assistant", "description": "Drafts follow-up invites and links notes to calendar events (mock hooks).", "model": "gpt-4.1-mini", "status": "draft", "category": "calendar", "promptVersion": "2026.03.0-rc1", "tools": ["event.link", "invite.draft", "timezone.align"], "updatedAt": "2026-03-17T15:45:00.000Z" },
+    { "id": "agent_recap", "name": "Meeting Recap", "description": "Produces end-of-meeting briefs with highlights and open threads.", "model": "gpt-4.1-mini", "status": "paused", "category": "general", "promptVersion": "2025.12.2", "tools": ["recap.compose", "thread.flag", "attendee.roll"], "updatedAt": "2026-03-16T15:49:00.000Z" }
+  ]
+}

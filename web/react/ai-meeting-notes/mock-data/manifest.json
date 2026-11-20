@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Meeting Notes.",
+  "files": [
+    { "path": "app.json", "entity": "metadata" },
+    { "path": "agents.json", "entity": "agents" },
+    { "path": "dashboard-metrics.json", "entity": "metrics" },
+    { "path": "meetings.json", "entity": "meetings" },
+    { "path": "live-summaries.json", "entity": "live summary" },
+    { "path": "action-items.json", "entity": "actions" },
+    { "path": "decisions.json", "entity": "decisions" },
+    { "path": "calendar-sync.json", "entity": "calendar" },
+    { "path": "recaps.json", "entity": "recaps" },
+    { "path": "chat-sessions.json", "entity": "chat sessions" },
+    { "path": "chat-completions.json", "entity": "completions" }
+  ]
+}

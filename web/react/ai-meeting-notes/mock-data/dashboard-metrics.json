@@ -1,0 +1,7 @@
+{
+  "metrics": [
+    { "label": "Meetings", "value": "128", "hint": "This week" },
+    { "label": "Action items", "value": "410", "hint": "Assigned" },
+    { "label": "Avg. prep time", "value": "3m", "hint": "Saved per meeting" }
+  ]
+}

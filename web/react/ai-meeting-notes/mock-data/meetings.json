@@ -1,0 +1,12 @@
+{
+  "meetings": [
+    {
+      "id": "mtg_q2_roadmap",
+      "title": "Q2 roadmap review",
+      "startedAt": "2026-03-17T09:00:00.000Z",
+      "durationMinutes": 55,
+      "attendees": ["alex@example.com", "priya@example.com", "sam@example.com"],
+      "transcriptExcerpt": "…defer mobile refresh to Q3; ship analytics export in April…"
+    }
+  ]
+}
