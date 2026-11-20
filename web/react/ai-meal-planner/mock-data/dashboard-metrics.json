@@ -1,0 +1,7 @@
+{
+  "metrics": [
+    { "label": "Meal plans", "value": "92", "hint": "This month" },
+    { "label": "Recipes", "value": "540", "hint": "Library" },
+    { "label": "Grocery lists", "value": "92", "hint": "Generated" }
+  ]
+}

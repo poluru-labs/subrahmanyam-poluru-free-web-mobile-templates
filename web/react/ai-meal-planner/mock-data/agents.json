@@ -1,0 +1,59 @@
+{
+  "agents": [
+    {
+      "id": "agent_prefs",
+      "name": "Preference Profiler",
+      "description": "Captures diets, allergens, cuisines, and household size for personalized plans.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "preferences",
+      "promptVersion": "2026.03.1",
+      "tools": ["diet.map", "allergen.flag", "household.size"],
+      "updatedAt": "2026-03-17T14:15:00.000Z"
+    },
+    {
+      "id": "agent_macros",
+      "name": "Macro Menu Builder",
+      "description": "Balances protein, carbs, and fats across breakfast, lunch, and dinner.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "macros",
+      "promptVersion": "2026.02.4",
+      "tools": ["macro.target", "meal.split", "portion.scale"],
+      "updatedAt": "2026-03-17T11:00:00.000Z"
+    },
+    {
+      "id": "agent_grocery",
+      "name": "Grocery Aggregator",
+      "description": "Merges weekly recipes into one list with aisle grouping and quantity rollup.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "grocery",
+      "promptVersion": "2026.01.8",
+      "tools": ["list.merge", "aisle.sort", "unit.convert"],
+      "updatedAt": "2026-03-17T06:00:00.000Z"
+    },
+    {
+      "id": "agent_leftovers",
+      "name": "Leftover Coach",
+      "description": "Suggests remix meals and storage windows so nothing goes to waste.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "leftovers",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": ["remix.suggest", "shelf.life", "prep.reuse"],
+      "updatedAt": "2026-03-17T15:45:00.000Z"
+    },
+    {
+      "id": "agent_week",
+      "name": "Week Planner",
+      "description": "Lays out seven-day menus with prep-ahead notes and busy-night shortcuts.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.2",
+      "tools": ["week.grid", "prep.batch", "shortcut.meal"],
+      "updatedAt": "2026-03-16T15:49:00.000Z"
+    }
+  ]
+}

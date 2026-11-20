@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Meal Planner.",
+  "files": [
+    { "path": "app.json", "entity": "application metadata" },
+    { "path": "agents.json", "entity": "AiAgent[]" },
+    { "path": "dashboard-metrics.json", "entity": "dashboard metrics" },
+    { "path": "preferences.json", "entity": "diet profiles" },
+    { "path": "macro-plans.json", "entity": "macro splits" },
+    { "path": "weekly-menus.json", "entity": "week grids" },
+    { "path": "grocery-lists.json", "entity": "aisle lists" },
+    { "path": "leftovers.json", "entity": "remix suggestions" },
+    { "path": "chat-sessions.json", "entity": "ChatSession samples" },
+    { "path": "chat-completions.json", "entity": "mock completions by category" }
+  ]
+}

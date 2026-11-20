@@ -1,0 +1,11 @@
+{
+  "slug": "ai-meal-planner",
+  "name": "AI Meal Planner",
+  "tagline": "Build weekly menus around preferences, macros, and leftovers.",
+  "brandColor": "#FF6600",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "meal-planner:active-agent"
+  }
+}
