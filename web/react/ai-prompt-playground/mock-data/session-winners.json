@@ -1,0 +1,10 @@
+{
+  "winners": [
+    {
+      "id": "win_exp_summarize",
+      "experimentId": "exp_summarize_v3",
+      "hypothesis": "Shorter system prompt",
+      "agentId": "agent_lab"
+    }
+  ]
+}

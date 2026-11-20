@@ -1,0 +1,10 @@
+{
+  "links": [
+    {
+      "id": "link_demo_ab",
+      "expiryDays": 7,
+      "redacted": true,
+      "agentId": "agent_share"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_compare",
+      "title": "Model compare run",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_compare",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Run the same summarize prompt on two models.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Multi-Model Compare (prompt 2026.03.1) — Compare (demo): I would run panes for “Run the same summarize prompt on two models.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

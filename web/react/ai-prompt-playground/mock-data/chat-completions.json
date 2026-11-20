@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "compare": {
+      "request": {
+        "agentId": "agent_compare",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Compare outputs for summarization."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_compare",
+          "role": "assistant",
+          "content": "Multi-Model Compare (prompt 2026.03.1) — Compare (demo): I would run panes for “Compare outputs for summarization.” across models.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "sweep": {
+      "request": {
+        "agentId": "agent_sweep",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Grid temperature 0.2–1.0."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_sweep",
+          "role": "assistant",
+          "content": "Parameter Sweeper (prompt 2026.02.4) — Parameter sweep (demo): I would grid settings for “Grid temperature 0.2–1.0.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "version": {
+      "request": {
+        "agentId": "agent_version",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Tag this prompt as v2.1."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_version",
+          "role": "assistant",
+          "content": "Prompt Versioner (prompt 2026.01.8) — Versioning (demo): I would snapshot prompt changes around “Tag this prompt as v2.1.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "share": {
+      "request": {
+        "agentId": "agent_share",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Share A/B link without API keys."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_share",
+          "role": "assistant",
+          "content": "Share Link Builder (prompt 2026.03.0-rc1) — Share link (demo): I would package “Share A/B link without API keys.” into a redacted link.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_lab",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Log winner and next hypothesis."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Experiment Lab (prompt 2025.12.2) — Lab notes (demo): I would log experiment context for “Log winner and next hypothesis.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}
