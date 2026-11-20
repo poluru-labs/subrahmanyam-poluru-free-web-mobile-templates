@@ -1,0 +1,14 @@
+{
+  "runs": [
+    {
+      "id": "cmp_support_prompt",
+      "agentId": "agent_compare",
+      "prompt": "Summarize duplicate billing issue in two sentences.",
+      "responses": [
+        { "modelId": "mdl_gpt41mini", "excerpt": "Customer reports duplicate charge after downgrade…" },
+        { "modelId": "mdl_claude_sonnet", "excerpt": "User saw two March charges following plan change…" }
+      ],
+      "createdAt": "2026-03-17T10:00:00.000Z"
+    }
+  ]
+}

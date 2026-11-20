@@ -1,0 +1,7 @@
+{
+  "models": [
+    { "id": "mdl_gpt41mini", "provider": "openai", "name": "gpt-4.1-mini", "role": "baseline" },
+    { "id": "mdl_claude_sonnet", "provider": "anthropic", "name": "claude-sonnet-4", "role": "challenger" },
+    { "id": "mdl_gemini_flash", "provider": "google", "name": "gemini-2-flash", "role": "challenger" }
+  ]
+}

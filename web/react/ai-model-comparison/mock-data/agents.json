@@ -1,0 +1,9 @@
+{
+  "agents": [
+    { "id": "agent_compare", "name": "Side-by-Side Comparator", "description": "Runs the same prompt across providers and lines up responses for review.", "model": "gpt-4.1-mini", "status": "active", "category": "compare", "promptVersion": "2026.03.1", "tools": ["prompt.fanout", "diff.align", "export.md"], "updatedAt": "2026-03-17T14:15:00.000Z" },
+    { "id": "agent_latency", "name": "Latency & Cost Analyst", "description": "Estimates time-to-first-token, total latency, and $/1K tokens per model.", "model": "gpt-4.1-mini", "status": "active", "category": "latency", "promptVersion": "2026.02.4", "tools": ["latency.sample", "cost.rollup", "chart.spark"], "updatedAt": "2026-03-17T11:00:00.000Z" },
+    { "id": "agent_quality", "name": "Quality Rubric Judge", "description": "Scores answers against rubrics for accuracy, tone, and policy fit.", "model": "gpt-4.1-mini", "status": "active", "category": "quality", "promptVersion": "2026.01.8", "tools": ["rubric.score", "judge.ensemble", "fail.explain"], "updatedAt": "2026-03-17T06:00:00.000Z" },
+    { "id": "agent_promotion", "name": "Promotion Gatekeeper", "description": "Checks if a challenger model clears thresholds before production promotion.", "model": "gpt-4.1-mini", "status": "draft", "category": "promotion", "promptVersion": "2026.03.0-rc1", "tools": ["gate.threshold", "baseline.diff", "signoff.log"], "updatedAt": "2026-03-17T15:45:00.000Z" },
+    { "id": "agent_bench", "name": "Benchmark Orchestrator", "description": "Bundles datasets, schedules runs, and summarizes winner/loser trends.", "model": "gpt-4.1-mini", "status": "paused", "category": "general", "promptVersion": "2025.12.2", "tools": ["suite.load", "run.schedule", "leaderboard.rank"], "updatedAt": "2026-03-16T15:49:00.000Z" }
+  ]
+}

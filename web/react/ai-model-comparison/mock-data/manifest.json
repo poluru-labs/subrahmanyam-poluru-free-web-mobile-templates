@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Model Comparison.",
+  "files": [
+    { "path": "app.json", "entity": "metadata" },
+    { "path": "agents.json", "entity": "agents" },
+    { "path": "dashboard-metrics.json", "entity": "metrics" },
+    { "path": "models.json", "entity": "tracked models" },
+    { "path": "comparison-runs.json", "entity": "side-by-side runs" },
+    { "path": "latency-metrics.json", "entity": "latency and cost" },
+    { "path": "quality-scores.json", "entity": "rubric scores" },
+    { "path": "promotion-gates.json", "entity": "promotion gates" },
+    { "path": "benchmark-suites.json", "entity": "suites" },
+    { "path": "chat-sessions.json", "entity": "chat" },
+    { "path": "chat-completions.json", "entity": "completions" }
+  ]
+}

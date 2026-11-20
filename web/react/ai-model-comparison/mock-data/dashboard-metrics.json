@@ -1,0 +1,7 @@
+{
+  "metrics": [
+    { "label": "Models tracked", "value": "18", "hint": "Active providers" },
+    { "label": "Eval suites", "value": "12", "hint": "Regression sets" },
+    { "label": "Cost delta", "value": "-22%", "hint": "Vs last quarter" }
+  ]
+}
