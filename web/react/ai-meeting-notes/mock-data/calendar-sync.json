@@ -1,0 +1,15 @@
+{
+  "syncs": [
+    {
+      "id": "cal_followup_export",
+      "meetingId": "mtg_q2_roadmap",
+      "agentId": "agent_calendar",
+      "status": "draft",
+      "proposedEvent": {
+        "title": "Export API review",
+        "start": "2026-03-24T15:00:00.000Z",
+        "attendees": ["priya@example.com", "sam@example.com"]
+      }
+    }
+  ]
+}

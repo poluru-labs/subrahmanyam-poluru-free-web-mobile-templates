@@ -1,0 +1,12 @@
+{
+  "recaps": [
+    {
+      "id": "recap_q2",
+      "meetingId": "mtg_q2_roadmap",
+      "agentId": "agent_recap",
+      "highlights": ["Q3 mobile deferral agreed", "April export target"],
+      "openThreads": ["Hiring plan for platform team"],
+      "generatedAt": "2026-03-17T09:55:00.000Z"
+    }
+  ]
+}

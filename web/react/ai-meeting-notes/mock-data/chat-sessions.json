@@ -1,0 +1,14 @@
+{
+  "sessions": [
+    {
+      "id": "sess_actions",
+      "title": "Extract Q2 actions",
+      "updatedAt": "2026-03-17T09:50:00.000Z",
+      "agentId": "agent_actions",
+      "messages": [
+        { "id": "msg_001", "role": "user", "content": "Pull owners and due dates from roadmap transcript.", "createdAt": "2026-03-17T09:48:00.000Z" },
+        { "id": "msg_002", "role": "assistant", "content": "Action Item Extractor (prompt 2026.02.4) — Action items (demo): I would extract tasks from “Pull owners and due dates from roadmap transcript.” with owners and dates.", "createdAt": "2026-03-17T09:50:00.000Z", "model": "gpt-4.1-mini" }
+      ]
+    }
+  ]
+}
