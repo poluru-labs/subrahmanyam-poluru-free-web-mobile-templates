@@ -1,0 +1,10 @@
+{
+  "flags": [
+    {
+      "id": "dup_1102",
+      "receiptId": "rcp_cafe_8842",
+      "confidence": 0.82,
+      "agentId": "agent_duplicate"
+    }
+  ]
+}

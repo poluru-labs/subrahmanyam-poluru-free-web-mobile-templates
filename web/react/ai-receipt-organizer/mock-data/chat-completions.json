@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "ocr": {
+      "request": {
+        "agentId": "agent_ocr",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Extract totals from this scan."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_ocr",
+          "role": "assistant",
+          "content": "Receipt OCR (prompt 2026.03.1) — OCR (demo): I would extract fields from “Extract totals from this scan.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "category": {
+      "request": {
+        "agentId": "agent_category",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Suggest GL for team lunch."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_category",
+          "role": "assistant",
+          "content": "Category Suggester (prompt 2026.02.4) — Category (demo): I would suggest GL categories for “Suggest GL for team lunch.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "duplicate": {
+      "request": {
+        "agentId": "agent_duplicate",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Check against March ledger."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_duplicate",
+          "role": "assistant",
+          "content": "Duplicate Spotter (prompt 2026.01.8) — Duplicates (demo): I would compare “Check against March ledger.” against your ledger.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "export": {
+      "request": {
+        "agentId": "agent_export",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Bundle Q1 receipts for CPA."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_export",
+          "role": "assistant",
+          "content": "Export Packager (prompt 2026.03.0-rc1) — Export (demo): I would package rows from “Bundle Q1 receipts for CPA.” to CSV/PDF.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_summary",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Monthly rollup with outliers."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Spend Summarizer (prompt 2025.12.2) — Summary (demo): I would roll up spend context around “Monthly rollup with outliers.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

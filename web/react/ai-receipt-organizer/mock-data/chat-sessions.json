@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_ocr",
+      "title": "Parse cafe receipt",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_ocr",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Photo upload: Corner Cafe $18.42.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Receipt OCR (prompt 2026.03.1) — OCR (demo): I would extract fields from “Photo upload: Corner Cafe $18.42.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}
