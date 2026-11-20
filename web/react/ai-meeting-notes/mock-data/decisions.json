@@ -1,0 +1,13 @@
+{
+  "decisions": [
+    {
+      "id": "dec_mobile_q3",
+      "meetingId": "mtg_q2_roadmap",
+      "agentId": "agent_decisions",
+      "decision": "Defer mobile refresh to Q3",
+      "alternativesConsidered": ["Split team; ship reduced mobile scope in Q2"],
+      "rationale": "Support backlog and export deadline take priority.",
+      "status": "final"
+    }
+  ]
+}

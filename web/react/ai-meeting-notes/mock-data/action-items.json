@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "act_export_spec",
+      "meetingId": "mtg_q2_roadmap",
+      "agentId": "agent_actions",
+      "title": "Draft analytics export API spec",
+      "owner": "priya@example.com",
+      "dueDate": "2026-03-21",
+      "status": "open"
+    },
+    {
+      "id": "act_mobile_comms",
+      "meetingId": "mtg_q2_roadmap",
+      "agentId": "agent_actions",
+      "title": "Customer comms for mobile deferral",
+      "owner": "alex@example.com",
+      "dueDate": "2026-03-19",
+      "status": "open"
+    }
+  ]
+}

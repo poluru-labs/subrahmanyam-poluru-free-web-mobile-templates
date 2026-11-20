@@ -1,0 +1,15 @@
+{
+  "streams": [
+    {
+      "id": "sum_q2_live",
+      "meetingId": "mtg_q2_roadmap",
+      "agentId": "agent_summary",
+      "topics": ["mobile deferral", "analytics export", "hiring plan"],
+      "bullets": [
+        "Mobile refresh moved to Q3 due to support load.",
+        "April milestone: CSV export for enterprise dashboards."
+      ],
+      "updatedAt": "2026-03-17T09:30:00.000Z"
+    }
+  ]
+}
