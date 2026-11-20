@@ -1,0 +1,19 @@
+{
+  "lists": [
+    {
+      "id": "groc_w12",
+      "weekId": "week_2026_w12",
+      "agentId": "agent_grocery",
+      "aisles": [
+        {
+          "name": "Produce",
+          "items": [{ "name": "baby spinach", "quantity": "1 bag", "recipeRefs": ["Salmon rice bowl"] }]
+        },
+        {
+          "name": "Seafood",
+          "items": [{ "name": "salmon fillet", "quantity": "1.2 lb", "recipeRefs": ["Miso cod", "Salmon rice bowl"] }]
+        }
+      ]
+    }
+  ]
+}

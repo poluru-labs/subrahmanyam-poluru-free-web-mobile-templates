@@ -1,0 +1,12 @@
+{
+  "suggestions": [
+    {
+      "id": "left_rice_01",
+      "agentId": "agent_leftovers",
+      "ingredient": "cooked rice",
+      "shelfLifeDays": 4,
+      "remix": "Fried rice with eggs and frozen peas",
+      "storageTip": "Cool within 1 hour; shallow container in fridge."
+    }
+  ]
+}

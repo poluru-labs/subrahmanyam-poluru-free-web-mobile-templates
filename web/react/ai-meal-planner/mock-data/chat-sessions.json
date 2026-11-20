@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_macros",
+      "title": "Balance salmon week",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_macros",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Target 95g protein for pescatarian household of 2.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Macro Menu Builder (prompt 2026.02.4) — Macro menu (demo): I would balance meals for “Target 95g protein for pescatarian household of 2.” against your targets.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

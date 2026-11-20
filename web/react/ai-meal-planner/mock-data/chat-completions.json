@@ -1,0 +1,39 @@
+{
+  "samplesByCategory": {
+    "preferences": {
+      "request": { "agentId": "agent_prefs", "messages": [{ "role": "user", "content": "No peanuts; pescatarian; household 2." }], "model": "gpt-4.1-mini", "stream": false },
+      "response": {
+        "message": { "id": "msg_mock_prefs", "role": "assistant", "content": "Preference Profiler (prompt 2026.03.1) — Preferences (demo): I would profile diets and allergens from “No peanuts; pescatarian; household 2.”. Connect your gateway for saved profiles.", "createdAt": "2026-03-17T15:00:00.000Z", "model": "gpt-4.1-mini" },
+        "usage": { "promptTokens": 24, "completionTokens": 48, "totalTokens": 72 }
+      }
+    },
+    "macros": {
+      "request": { "agentId": "agent_macros", "messages": [{ "role": "user", "content": "Split macros across three meals." }], "model": "gpt-4.1-mini", "stream": false },
+      "response": {
+        "message": { "id": "msg_mock_macros", "role": "assistant", "content": "Macro Menu Builder (prompt 2026.02.4) — Macro menu (demo): I would balance meals for “Split macros across three meals.” against your targets.", "createdAt": "2026-03-17T15:00:00.000Z", "model": "gpt-4.1-mini" },
+        "usage": { "promptTokens": 24, "completionTokens": 48, "totalTokens": 72 }
+      }
+    },
+    "grocery": {
+      "request": { "agentId": "agent_grocery", "messages": [{ "role": "user", "content": "Merge week recipes into one aisle-sorted list." }], "model": "gpt-4.1-mini", "stream": false },
+      "response": {
+        "message": { "id": "msg_mock_grocery", "role": "assistant", "content": "Grocery Aggregator (prompt 2026.01.8) — Grocery list (demo): I would aggregate ingredients for “Merge week recipes into one aisle-sorted list.” by aisle.", "createdAt": "2026-03-17T15:00:00.000Z", "model": "gpt-4.1-mini" },
+        "usage": { "promptTokens": 24, "completionTokens": 48, "totalTokens": 72 }
+      }
+    },
+    "leftovers": {
+      "request": { "agentId": "agent_leftovers", "messages": [{ "role": "user", "content": "Remix extra rice safely." }], "model": "gpt-4.1-mini", "stream": false },
+      "response": {
+        "message": { "id": "msg_mock_leftovers", "role": "assistant", "content": "Leftover Coach (prompt 2026.03.0-rc1) — Leftovers (demo): I would suggest remixes for “Remix extra rice safely.” with storage tips.", "createdAt": "2026-03-17T15:00:00.000Z", "model": "gpt-4.1-mini" },
+        "usage": { "promptTokens": 24, "completionTokens": 48, "totalTokens": 72 }
+      }
+    },
+    "general": {
+      "request": { "agentId": "agent_week", "messages": [{ "role": "user", "content": "Plan seven days with Wednesday shortcut." }], "model": "gpt-4.1-mini", "stream": false },
+      "response": {
+        "message": { "id": "msg_mock_week", "role": "assistant", "content": "Week Planner (prompt 2025.12.2) — Week plan (demo): I would lay out seven days around “Plan seven days with Wednesday shortcut.”.", "createdAt": "2026-03-17T15:00:00.000Z", "model": "gpt-4.1-mini" },
+        "usage": { "promptTokens": 24, "completionTokens": 48, "totalTokens": 72 }
+      }
+    }
+  }
+}
