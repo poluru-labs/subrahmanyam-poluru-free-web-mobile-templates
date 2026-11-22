@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "script": {
+      "request": {
+        "agentId": "agent_script",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Draft beats."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_script",
+          "role": "assistant",
+          "content": "Script & Beats (prompt 2026.03.6) — Script (demo): I would draft beats for “Draft beats.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "storyboard": {
+      "request": {
+        "agentId": "agent_storyboard",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Frame opening shot."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_storyboard",
+          "role": "assistant",
+          "content": "Storyboard Frames (prompt 2026.02.2) — Storyboard (demo): I would frame scenes for “Frame opening shot.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "shots": {
+      "request": {
+        "agentId": "agent_shots",
+        "messages": [
+          {
+            "role": "user",
+            "content": "B-roll ideas."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_shots",
+          "role": "assistant",
+          "content": "Shot List Builder (prompt 2026.01.3) — Shots (demo): I would list coverage for “B-roll ideas.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "export": {
+      "request": {
+        "agentId": "agent_export",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Caption track spec."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_export",
+          "role": "assistant",
+          "content": "Export Notes (prompt 2026.03.0-rc6) — Export (demo): I would note deliverables for “Caption track spec.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_studio",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Production brief."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Studio Composer (prompt 2025.12.9) — Composer (demo): I would assemble a brief from “Production brief.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

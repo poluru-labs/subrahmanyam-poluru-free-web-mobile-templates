@@ -1,0 +1,9 @@
+{
+  "scripts": [
+    {
+      "id": "scr_product_30s",
+      "beatCount": 6,
+      "agentId": "agent_script"
+    }
+  ]
+}

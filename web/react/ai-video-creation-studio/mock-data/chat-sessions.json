@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_script",
+      "title": "30s product hook",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_script",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Tech SaaS, upbeat VO.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Script & Beats (prompt 2026.03.6) — Script (demo): I would draft beats for “Tech SaaS, upbeat VO.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

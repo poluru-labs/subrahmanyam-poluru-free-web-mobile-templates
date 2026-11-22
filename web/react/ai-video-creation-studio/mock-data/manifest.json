@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Video Creation Studio.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "script-beats.json",
+      "entity": "beat sheets"
+    },
+    {
+      "path": "storyboard-frames.json",
+      "entity": "frame notes"
+    },
+    {
+      "path": "shot-lists.json",
+      "entity": "coverage"
+    },
+    {
+      "path": "export-notes.json",
+      "entity": "delivery specs"
+    },
+    {
+      "path": "production-briefs.json",
+      "entity": "studio briefs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

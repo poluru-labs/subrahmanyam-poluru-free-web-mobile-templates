@@ -1,0 +1,9 @@
+{
+  "shots": [
+    {
+      "id": "shot_broll_pack",
+      "angleCount": 8,
+      "agentId": "agent_shots"
+    }
+  ]
+}

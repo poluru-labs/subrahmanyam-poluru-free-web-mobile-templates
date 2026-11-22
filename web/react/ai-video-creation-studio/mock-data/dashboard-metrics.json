@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Projects",
+      "value": "33",
+      "hint": "Active"
+    },
+    {
+      "label": "Scripts",
+      "value": "120",
+      "hint": "Approved"
+    },
+    {
+      "label": "Exports",
+      "value": "76",
+      "hint": "This month"
+    }
+  ]
+}

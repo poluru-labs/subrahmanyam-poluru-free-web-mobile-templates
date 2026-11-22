@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_script",
+      "name": "Script & Beats",
+      "description": "Drafts hooks, beat sheets, and VO lines for short-form video runs.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "script",
+      "promptVersion": "2026.03.6",
+      "tools": [
+        "beat.sheet",
+        "hook.test",
+        "vo.timing"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_storyboard",
+      "name": "Storyboard Frames",
+      "description": "Suggests frame descriptions, transitions, and on-screen text placement.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "storyboard",
+      "promptVersion": "2026.02.2",
+      "tools": [
+        "frame.desc",
+        "transition.pick",
+        "text.overlay"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_shots",
+      "name": "Shot List Builder",
+      "description": "Builds shot lists with angles, B-roll ideas, and coverage notes.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "shots",
+      "promptVersion": "2026.01.3",
+      "tools": [
+        "shot.list",
+        "broll.suggest",
+        "coverage.map"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_export",
+      "name": "Export Notes",
+      "description": "Produces delivery specs, caption tracks, and editor handoff checklists.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "export",
+      "promptVersion": "2026.03.0-rc6",
+      "tools": [
+        "spec.emit",
+        "caption.track",
+        "handoff.md"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_studio",
+      "name": "Studio Composer",
+      "description": "Merges script, boards, shots, and export notes into a production brief.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.9",
+      "tools": [
+        "brief.merge",
+        "asset.link",
+        "timeline.stub"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

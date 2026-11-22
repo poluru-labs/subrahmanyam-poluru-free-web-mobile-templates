@@ -1,0 +1,9 @@
+{
+  "exports": [
+    {
+      "id": "exp_reels_9x16",
+      "format": "mp4",
+      "agentId": "agent_export"
+    }
+  ]
+}

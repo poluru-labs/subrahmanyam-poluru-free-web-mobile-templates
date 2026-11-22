@@ -1,0 +1,11 @@
+{
+  "slug": "ai-video-creation-studio",
+  "name": "AI Video Creation Studio",
+  "tagline": "Script, storyboard, and assemble short-form video drafts.",
+  "brandColor": "#813886",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "video-creation-studio:active-agent"
+  }
+}
