@@ -1,0 +1,11 @@
+{
+  "slug": "ai-social-content-planner",
+  "name": "AI Social Content Planner",
+  "tagline": "Plan calendars, captions, and variants across channels.",
+  "brandColor": "#3B6790",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "social-content-planner:active-agent"
+  }
+}

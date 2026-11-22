@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Posts scheduled",
+      "value": "210",
+      "hint": "Next 30 days"
+    },
+    {
+      "label": "Channels",
+      "value": "6",
+      "hint": "Connected"
+    },
+    {
+      "label": "Engagement",
+      "value": "+18%",
+      "hint": "WoW"
+    }
+  ]
+}

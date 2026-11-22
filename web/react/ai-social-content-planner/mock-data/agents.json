@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_calendar",
+      "name": "Calendar Board",
+      "description": "Builds posting calendars with themes, slots, and cross-channel cadence.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "calendar",
+      "promptVersion": "2026.03.1",
+      "tools": [
+        "slot.plan",
+        "theme.week",
+        "cadence.fit"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_captions",
+      "name": "Caption Studio",
+      "description": "Drafts caption variants with hooks, CTAs, and length tuned per network.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "captions",
+      "promptVersion": "2026.02.6",
+      "tools": [
+        "caption.variant",
+        "hook.test",
+        "cta.insert"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_hashtags",
+      "name": "Hashtag Curator",
+      "description": "Suggests hashtag sets by reach, niche, and brand safety constraints.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "hashtags",
+      "promptVersion": "2026.01.7",
+      "tools": [
+        "tag.cluster",
+        "reach.estimate",
+        "blocklist.check"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_tone",
+      "name": "Tone Adapter",
+      "description": "Rewrites copy for channel-specific voice—LinkedIn, X, Instagram, and more.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "tone",
+      "promptVersion": "2026.03.0-rc1",
+      "tools": [
+        "voice.map",
+        "emoji.trim",
+        "formality.shift"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_campaign",
+      "name": "Campaign Composer",
+      "description": "Assembles calendar, captions, and tags into a unified campaign brief.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.4",
+      "tools": [
+        "brief.merge",
+        "asset.link",
+        "review.pack"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

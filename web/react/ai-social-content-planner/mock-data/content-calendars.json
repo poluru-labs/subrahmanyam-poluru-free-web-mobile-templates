@@ -1,0 +1,10 @@
+{
+  "calendars": [
+    {
+      "id": "cal_aug_product",
+      "slotsPerWeek": 9,
+      "theme": "Feature launch",
+      "agentId": "agent_calendar"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Social Content Planner.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "content-calendars.json",
+      "entity": "posting calendars"
+    },
+    {
+      "path": "caption-variants.json",
+      "entity": "caption drafts"
+    },
+    {
+      "path": "hashtag-sets.json",
+      "entity": "tag bundles"
+    },
+    {
+      "path": "tone-adaptations.json",
+      "entity": "channel voice"
+    },
+    {
+      "path": "campaign-briefs.json",
+      "entity": "unified briefs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

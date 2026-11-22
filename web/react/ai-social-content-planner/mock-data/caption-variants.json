@@ -1,0 +1,10 @@
+{
+  "variants": [
+    {
+      "id": "cap_launch_hook",
+      "network": "linkedin",
+      "length": "medium",
+      "agentId": "agent_captions"
+    }
+  ]
+}
