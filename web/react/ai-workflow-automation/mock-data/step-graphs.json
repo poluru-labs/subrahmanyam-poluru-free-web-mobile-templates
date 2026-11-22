@@ -1,0 +1,9 @@
+{
+  "graphs": [
+    {
+      "id": "graph_invoice_flow",
+      "stepCount": 8,
+      "agentId": "agent_graph"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_graph",
+      "title": "Invoice approval flow",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_graph",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Branch on amount over 5k.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Graph Orchestrator (prompt 2026.03.8) — Graph (demo): I would wire steps for “Branch on amount over 5k.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

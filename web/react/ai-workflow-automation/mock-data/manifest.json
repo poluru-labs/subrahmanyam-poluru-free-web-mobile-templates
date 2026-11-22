@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Workflow Automation.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "step-graphs.json",
+      "entity": "workflow graphs"
+    },
+    {
+      "path": "approval-gates.json",
+      "entity": "human gates"
+    },
+    {
+      "path": "webhook-triggers.json",
+      "entity": "event triggers"
+    },
+    {
+      "path": "run-history.json",
+      "entity": "run summaries"
+    },
+    {
+      "path": "deploy-briefs.json",
+      "entity": "deploy packs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

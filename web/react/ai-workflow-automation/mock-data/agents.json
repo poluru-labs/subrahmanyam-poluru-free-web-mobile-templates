@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_graph",
+      "name": "Graph Orchestrator",
+      "description": "Designs step graphs with branches, retries, and backoff policies.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "graph",
+      "promptVersion": "2026.03.8",
+      "tools": [
+        "step.graph",
+        "retry.policy",
+        "branch.add"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_human",
+      "name": "Human Gatekeeper",
+      "description": "Places approval gates, escalations, and reviewer SLAs in flows.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "human",
+      "promptVersion": "2026.02.4",
+      "tools": [
+        "gate.approve",
+        "escalate.rule",
+        "sla.warn"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_webhook",
+      "name": "Webhook Trigger",
+      "description": "Maps inbound events to workflow starts with signing and idempotency hints.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "webhook",
+      "promptVersion": "2026.01.0",
+      "tools": [
+        "event.map",
+        "sign.verify",
+        "idempotent.key"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_history",
+      "name": "Run Historian",
+      "description": "Summarizes run history, diffs, and replay-safe checkpoints.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "history",
+      "promptVersion": "2026.03.0-rc8",
+      "tools": [
+        "run.diff",
+        "replay.point",
+        "trace.summarize"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_workflow",
+      "name": "Workflow Composer",
+      "description": "Assembles graphs, gates, triggers, and history into a deploy brief.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.11",
+      "tools": [
+        "brief.merge",
+        "env.promote",
+        "checklist.emit"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

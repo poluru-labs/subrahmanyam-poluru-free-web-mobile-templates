@@ -1,0 +1,9 @@
+{
+  "triggers": [
+    {
+      "id": "wh_stripe_paid",
+      "eventType": "invoice.paid",
+      "agentId": "agent_webhook"
+    }
+  ]
+}

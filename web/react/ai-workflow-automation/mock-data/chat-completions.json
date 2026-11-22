@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "graph": {
+      "request": {
+        "agentId": "agent_graph",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Wire retry branch."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_graph",
+          "role": "assistant",
+          "content": "Graph Orchestrator (prompt 2026.03.8) — Graph (demo): I would wire steps for “Wire retry branch.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "human": {
+      "request": {
+        "agentId": "agent_human",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Finance approval gate."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_human",
+          "role": "assistant",
+          "content": "Human Gatekeeper (prompt 2026.02.4) — Human gate (demo): I would add approvals for “Finance approval gate.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "webhook": {
+      "request": {
+        "agentId": "agent_webhook",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Stripe paid event."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_webhook",
+          "role": "assistant",
+          "content": "Webhook Trigger (prompt 2026.01.0) — Webhook (demo): I would map triggers for “Stripe paid event.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "history": {
+      "request": {
+        "agentId": "agent_history",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Summarize last runs."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_history",
+          "role": "assistant",
+          "content": "Run Historian (prompt 2026.03.0-rc8) — History (demo): I would summarize runs for “Summarize last runs.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_workflow",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Deploy brief."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Workflow Composer (prompt 2025.12.11) — Composer (demo): I would build a brief from “Deploy brief.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

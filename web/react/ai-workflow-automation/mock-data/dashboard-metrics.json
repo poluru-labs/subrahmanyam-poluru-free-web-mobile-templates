@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Workflows",
+      "value": "39",
+      "hint": "Live"
+    },
+    {
+      "label": "Runs",
+      "value": "4.2k",
+      "hint": "This month"
+    },
+    {
+      "label": "Approvals",
+      "value": "318",
+      "hint": "Pending review"
+    }
+  ]
+}

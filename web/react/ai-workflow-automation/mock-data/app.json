@@ -1,0 +1,11 @@
+{
+  "slug": "ai-workflow-automation",
+  "name": "AI Workflow Automation",
+  "tagline": "Orchestrate multi-step AI workflows with human checkpoints.",
+  "brandColor": "#2FA4D7",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "workflow-automation:active-agent"
+  }
+}

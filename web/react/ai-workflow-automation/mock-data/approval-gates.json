@@ -1,0 +1,9 @@
+{
+  "gates": [
+    {
+      "id": "gate_finance",
+      "slaHours": 24,
+      "agentId": "agent_human"
+    }
+  ]
+}
