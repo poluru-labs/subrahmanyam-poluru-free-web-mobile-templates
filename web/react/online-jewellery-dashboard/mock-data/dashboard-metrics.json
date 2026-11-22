@@ -1,0 +1,8 @@
+{
+  "metrics": [
+    { "label": "Net revenue", "value": "$24,680", "delta": "+18.4%", "icon": "graph-up-arrow" },
+    { "label": "Orders", "value": "184", "delta": "+12.8%", "icon": "bag" },
+    { "label": "Average order", "value": "$134.13", "delta": "+4.6%", "icon": "arrow-up-right" },
+    { "label": "Returning clients", "value": "42%", "delta": "+6.2%", "icon": "arrow-repeat" }
+  ]
+}

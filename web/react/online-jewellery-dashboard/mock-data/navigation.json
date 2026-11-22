@@ -1,0 +1,52 @@
+{
+  "navItems": [
+    {
+      "to": "/",
+      "label": "Overview",
+      "icon": "grid-1x2",
+      "end": true
+    },
+    {
+      "to": "/catalog",
+      "label": "Catalogue",
+      "icon": "gem"
+    },
+    {
+      "to": "/orders",
+      "label": "Orders",
+      "icon": "bag"
+    },
+    {
+      "to": "/customers",
+      "label": "Customers",
+      "icon": "people"
+    },
+    {
+      "to": "/settings",
+      "label": "Settings",
+      "icon": "gear"
+    }
+  ],
+  "breadcrumbs": {
+    "/": [
+      "Workspace",
+      "Overview"
+    ],
+    "/catalog": [
+      "Workspace",
+      "Catalogue"
+    ],
+    "/orders": [
+      "Workspace",
+      "Orders"
+    ],
+    "/customers": [
+      "Workspace",
+      "Customers"
+    ],
+    "/settings": [
+      "Workspace",
+      "Settings"
+    ]
+  }
+}

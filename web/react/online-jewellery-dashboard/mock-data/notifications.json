@@ -1,0 +1,28 @@
+{
+  "notifications": [
+    {
+      "id": "n1",
+      "title": "Low stock alert",
+      "body": "Arc Drop has only 4 pieces left.",
+      "time": "12 min ago",
+      "read": false,
+      "icon": "exclamation-circle"
+    },
+    {
+      "id": "n2",
+      "title": "New order received",
+      "body": "Order #AU-1048 is ready to process.",
+      "time": "34 min ago",
+      "read": false,
+      "icon": "bag-check"
+    },
+    {
+      "id": "n3",
+      "title": "Weekly report ready",
+      "body": "August sales report is ready to view.",
+      "time": "Yesterday",
+      "read": true,
+      "icon": "graph-up"
+    }
+  ]
+}

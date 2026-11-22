@@ -1,0 +1,7 @@
+{
+  "slug": "online-jewellery-dashboard",
+  "name": "Aurelia",
+  "tagline": "Fine pieces, thoughtfully made.",
+  "brandColor": "#d95d39",
+  "sourceModule": "src/data.js"
+}

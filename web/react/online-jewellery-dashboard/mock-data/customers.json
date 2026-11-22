@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "name": "Olivia Martin",
+      "email": "olivia.martin@email.com",
+      "initials": "OM",
+      "orders": 8,
+      "spent": "1,240",
+      "tier": "VIP",
+      "avatar": "from-[#ffb36b] to-[#d95d39]"
+    },
+    {
+      "name": "Noah Williams",
+      "email": "noah.williams@email.com",
+      "initials": "NW",
+      "orders": 4,
+      "spent": "680",
+      "tier": "Regular",
+      "avatar": "from-[#f3c969] to-[#b56b2a]"
+    },
+    {
+      "name": "Amelia Garcia",
+      "email": "amelia.garcia@email.com",
+      "initials": "AG",
+      "orders": 12,
+      "spent": "2,150",
+      "tier": "VIP",
+      "avatar": "from-[#e891a5] to-[#a83f67]"
+    },
+    {
+      "name": "Ethan Brown",
+      "email": "ethan.brown@email.com",
+      "initials": "EB",
+      "orders": 2,
+      "spent": "530",
+      "tier": "New",
+      "avatar": "from-[#8ec5b1] to-[#347c68]"
+    }
+  ]
+}

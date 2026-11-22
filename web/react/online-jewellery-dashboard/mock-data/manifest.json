@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for Aurelia jewellery admin dashboard.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "overview hero metrics"
+    },
+    {
+      "path": "brand.json",
+      "entity": "store brand"
+    },
+    {
+      "path": "products.json",
+      "entity": "catalog products"
+    },
+    {
+      "path": "orders.json",
+      "entity": "order queue"
+    },
+    {
+      "path": "customers.json",
+      "entity": "customer list"
+    },
+    {
+      "path": "notifications.json",
+      "entity": "in-app notifications"
+    },
+    {
+      "path": "navigation.json",
+      "entity": "nav and breadcrumbs"
+    },
+    {
+      "path": "manifest.json",
+      "entity": "file index"
+    }
+  ]
+}
