@@ -1,0 +1,25 @@
+{
+  "inventoryAlerts": [
+    {
+      "id": "ia1",
+      "severity": "critical",
+      "title": "Trail Daypack 22L is out of stock",
+      "sku": "ACC-BAG-022",
+      "time": "8 min ago"
+    },
+    {
+      "id": "ia2",
+      "severity": "warning",
+      "title": "Lumen Desk Lamp below reorder point",
+      "sku": "HOM-LMP-008",
+      "time": "34 min ago"
+    },
+    {
+      "id": "ia3",
+      "severity": "info",
+      "title": "Pulse Wireless Buds restock arrived",
+      "sku": "ELC-BUD-014",
+      "time": "2 hr ago"
+    }
+  ]
+}

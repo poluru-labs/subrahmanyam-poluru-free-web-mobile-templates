@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for enterprise ecommerce admin.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "overview metrics (7d default)"
+    },
+    {
+      "path": "dashboard-metrics-by-period.json",
+      "entity": "metrics by period"
+    },
+    {
+      "path": "products.json",
+      "entity": "Product[]"
+    },
+    {
+      "path": "orders.json",
+      "entity": "Order[]"
+    },
+    {
+      "path": "customers.json",
+      "entity": "Customer[]"
+    },
+    {
+      "path": "inventory-alerts.json",
+      "entity": "InventoryAlert[]"
+    },
+    {
+      "path": "channel-mix.json",
+      "entity": "channel performance"
+    },
+    {
+      "path": "category-sales.json",
+      "entity": "category breakdown"
+    },
+    {
+      "path": "daily-goals.json",
+      "entity": "goal progress"
+    },
+    {
+      "path": "search-catalog.json",
+      "entity": "SearchResult[]"
+    },
+    {
+      "path": "manifest.json",
+      "entity": "file index"
+    }
+  ]
+}

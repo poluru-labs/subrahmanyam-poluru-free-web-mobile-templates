@@ -1,0 +1,7 @@
+{
+  "slug": "enterprise-ecommerce",
+  "name": "Enterprise Ecommerce",
+  "tagline": "Commerce operations console.",
+  "brandColor": "#2563eb",
+  "sourceModule": "src/data/mock.ts"
+}

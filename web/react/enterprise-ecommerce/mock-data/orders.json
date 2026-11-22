@@ -1,0 +1,49 @@
+{
+  "orders": [
+    {
+      "id": "ORD-10482",
+      "customer": "Subrahmanyam Poluru",
+      "total": 214.5,
+      "items": 3,
+      "status": "pending",
+      "placedAt": "12 min ago",
+      "channel": "Web"
+    },
+    {
+      "id": "ORD-10481",
+      "customer": "Sravani Poluru",
+      "total": 129,
+      "items": 1,
+      "status": "paid",
+      "placedAt": "28 min ago",
+      "channel": "Mobile"
+    },
+    {
+      "id": "ORD-10480",
+      "customer": "Venkata Poluru",
+      "total": 86.4,
+      "items": 2,
+      "status": "fulfilled",
+      "placedAt": "1 hr ago",
+      "channel": "Web"
+    },
+    {
+      "id": "ORD-10479",
+      "customer": "Lakshmi Poluru",
+      "total": 312.2,
+      "items": 4,
+      "status": "shipped",
+      "placedAt": "3 hr ago",
+      "channel": "Marketplace"
+    },
+    {
+      "id": "ORD-10478",
+      "customer": "Ramesh Poluru",
+      "total": 48,
+      "items": 1,
+      "status": "cancelled",
+      "placedAt": "5 hr ago",
+      "channel": "Mobile"
+    }
+  ]
+}

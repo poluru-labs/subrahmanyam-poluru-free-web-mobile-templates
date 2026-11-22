@@ -1,0 +1,75 @@
+{
+  "channels": [
+    {
+      "channel": "Web",
+      "share": 42,
+      "revenue": 61800,
+      "orders": 712,
+      "aov": 86.8,
+      "conversion": 3.9,
+      "sessions": 18240,
+      "trend": "up",
+      "trendValue": "+6.2%",
+      "topRegion": "US-West",
+      "refundRate": 2.1
+    },
+    {
+      "channel": "Mobile",
+      "share": 28,
+      "revenue": 43600,
+      "orders": 518,
+      "aov": 84.2,
+      "conversion": 4.4,
+      "sessions": 11780,
+      "trend": "up",
+      "trendValue": "+9.1%",
+      "topRegion": "US-East",
+      "refundRate": 1.8
+    },
+    {
+      "channel": "Marketplace",
+      "share": 16,
+      "revenue": 23000,
+      "orders": 296,
+      "aov": 77.7,
+      "conversion": 2.6,
+      "sessions": 11400,
+      "trend": "flat",
+      "trendValue": "+0.4%",
+      "topRegion": "US-Central",
+      "refundRate": 3.4
+    },
+    {
+      "channel": "Social",
+      "share": 9,
+      "revenue": 12840,
+      "orders": 164,
+      "aov": 78.3,
+      "conversion": 2.1,
+      "sessions": 7810,
+      "trend": "up",
+      "trendValue": "+14%",
+      "topRegion": "US-South",
+      "refundRate": 2.8
+    },
+    {
+      "channel": "Retail POS",
+      "share": 5,
+      "revenue": 7120,
+      "orders": 88,
+      "aov": 80.9,
+      "conversion": 100,
+      "sessions": 88,
+      "trend": "down",
+      "trendValue": "-3.2%",
+      "topRegion": "US-West",
+      "refundRate": 1.2
+    }
+  ],
+  "summary": {
+    "totalRevenue": 148360,
+    "totalOrders": 1778,
+    "blendedAov": 83.4,
+    "topChannel": "Web"
+  }
+}

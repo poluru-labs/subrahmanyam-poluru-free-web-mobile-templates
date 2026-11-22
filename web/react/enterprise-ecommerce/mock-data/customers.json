@@ -1,0 +1,44 @@
+{
+  "customers": [
+    {
+      "id": "c1",
+      "name": "Subrahmanyam Poluru",
+      "email": "subrahmanyam.poluru@polurus.com",
+      "orders": 14,
+      "spend": 1840,
+      "segment": "VIP"
+    },
+    {
+      "id": "c2",
+      "name": "Sravani Poluru",
+      "email": "sravani.poluru@polurus.com",
+      "orders": 6,
+      "spend": 642,
+      "segment": "Returning"
+    },
+    {
+      "id": "c3",
+      "name": "Venkata Poluru",
+      "email": "venkata.poluru@polurus.com",
+      "orders": 2,
+      "spend": 176,
+      "segment": "New"
+    },
+    {
+      "id": "c4",
+      "name": "Lakshmi Poluru",
+      "email": "lakshmi.poluru@polurus.com",
+      "orders": 21,
+      "spend": 4120,
+      "segment": "VIP"
+    },
+    {
+      "id": "c5",
+      "name": "Ramesh Poluru",
+      "email": "ramesh.poluru@polurus.com",
+      "orders": 4,
+      "spend": 298,
+      "segment": "Returning"
+    }
+  ]
+}

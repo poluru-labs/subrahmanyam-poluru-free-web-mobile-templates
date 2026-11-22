@@ -1,0 +1,94 @@
+{
+  "periods": {
+    "today": [
+      {
+        "label": "Gross sales",
+        "value": "$18.6k",
+        "trend": "up",
+        "trendValue": "+12%",
+        "hint": "Since midnight"
+      },
+      {
+        "label": "Orders",
+        "value": "214",
+        "trend": "up",
+        "trendValue": "+9%",
+        "hint": "Since midnight"
+      },
+      {
+        "label": "Avg. order value",
+        "value": "$87.10",
+        "trend": "up",
+        "trendValue": "+1.2%",
+        "hint": "Today"
+      },
+      {
+        "label": "Conversion",
+        "value": "3.8%",
+        "trend": "up",
+        "trendValue": "+0.3%",
+        "hint": "Today"
+      }
+    ],
+    "7d": [
+      {
+        "label": "Gross sales",
+        "value": "$128.4k",
+        "trend": "up",
+        "trendValue": "+8.2%",
+        "hint": "Last 7 days"
+      },
+      {
+        "label": "Orders",
+        "value": "1,482",
+        "trend": "up",
+        "trendValue": "+5.1%",
+        "hint": "Last 7 days"
+      },
+      {
+        "label": "Avg. order value",
+        "value": "$86.60",
+        "trend": "flat",
+        "trendValue": "0.4%",
+        "hint": "Trailing 30 days"
+      },
+      {
+        "label": "Conversion",
+        "value": "3.4%",
+        "trend": "down",
+        "trendValue": "-0.2%",
+        "hint": "Storefront sessions"
+      }
+    ],
+    "30d": [
+      {
+        "label": "Gross sales",
+        "value": "$512.9k",
+        "trend": "up",
+        "trendValue": "+6.4%",
+        "hint": "Last 30 days"
+      },
+      {
+        "label": "Orders",
+        "value": "5,920",
+        "trend": "up",
+        "trendValue": "+4.1%",
+        "hint": "Last 30 days"
+      },
+      {
+        "label": "Avg. order value",
+        "value": "$86.60",
+        "trend": "flat",
+        "trendValue": "0.2%",
+        "hint": "Last 30 days"
+      },
+      {
+        "label": "Conversion",
+        "value": "3.2%",
+        "trend": "down",
+        "trendValue": "-0.1%",
+        "hint": "Last 30 days"
+      }
+    ]
+  }
+}

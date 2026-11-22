@@ -1,0 +1,24 @@
+{
+  "categorySales": [
+    {
+      "category": "Apparel",
+      "share": 36,
+      "units": 842
+    },
+    {
+      "category": "Electronics",
+      "share": 29,
+      "units": 318
+    },
+    {
+      "category": "Home",
+      "share": 21,
+      "units": 256
+    },
+    {
+      "category": "Accessories",
+      "share": 14,
+      "units": 190
+    }
+  ]
+}

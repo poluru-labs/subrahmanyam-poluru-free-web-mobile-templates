@@ -1,0 +1,100 @@
+{
+  "searchCatalog": [
+    {
+      "id": "p1",
+      "label": "Aero Soft Tee · APR-TEE-001",
+      "category": "Product",
+      "path": "/products"
+    },
+    {
+      "id": "p2",
+      "label": "Pulse Wireless Buds · ELC-BUD-014",
+      "category": "Product",
+      "path": "/products"
+    },
+    {
+      "id": "p3",
+      "label": "Lumen Desk Lamp · HOM-LMP-008",
+      "category": "Product",
+      "path": "/products"
+    },
+    {
+      "id": "p4",
+      "label": "Trail Daypack 22L · ACC-BAG-022",
+      "category": "Product",
+      "path": "/products"
+    },
+    {
+      "id": "p5",
+      "label": "Nova Running Shorts · APR-SHT-019",
+      "category": "Product",
+      "path": "/products"
+    },
+    {
+      "id": "p6",
+      "label": "Orbit Smart Watch · ELC-WCH-003",
+      "category": "Product",
+      "path": "/products"
+    },
+    {
+      "id": "ORD-10482",
+      "label": "ORD-10482 · Subrahmanyam Poluru",
+      "category": "Order",
+      "path": "/orders"
+    },
+    {
+      "id": "ORD-10481",
+      "label": "ORD-10481 · Sravani Poluru",
+      "category": "Order",
+      "path": "/orders"
+    },
+    {
+      "id": "ORD-10480",
+      "label": "ORD-10480 · Venkata Poluru",
+      "category": "Order",
+      "path": "/orders"
+    },
+    {
+      "id": "ORD-10479",
+      "label": "ORD-10479 · Lakshmi Poluru",
+      "category": "Order",
+      "path": "/orders"
+    },
+    {
+      "id": "ORD-10478",
+      "label": "ORD-10478 · Ramesh Poluru",
+      "category": "Order",
+      "path": "/orders"
+    },
+    {
+      "id": "c1",
+      "label": "Subrahmanyam Poluru · subrahmanyam.poluru@polurus.com",
+      "category": "Customer",
+      "path": "/customers"
+    },
+    {
+      "id": "c2",
+      "label": "Sravani Poluru · sravani.poluru@polurus.com",
+      "category": "Customer",
+      "path": "/customers"
+    },
+    {
+      "id": "c3",
+      "label": "Venkata Poluru · venkata.poluru@polurus.com",
+      "category": "Customer",
+      "path": "/customers"
+    },
+    {
+      "id": "c4",
+      "label": "Lakshmi Poluru · lakshmi.poluru@polurus.com",
+      "category": "Customer",
+      "path": "/customers"
+    },
+    {
+      "id": "c5",
+      "label": "Ramesh Poluru · ramesh.poluru@polurus.com",
+      "category": "Customer",
+      "path": "/customers"
+    }
+  ]
+}

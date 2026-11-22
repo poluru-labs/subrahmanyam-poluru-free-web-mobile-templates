@@ -1,0 +1,32 @@
+{
+  "metrics": [
+    {
+      "label": "Gross sales",
+      "value": "$128.4k",
+      "trend": "up",
+      "trendValue": "+8.2%",
+      "hint": "Last 7 days"
+    },
+    {
+      "label": "Orders",
+      "value": "1,482",
+      "trend": "up",
+      "trendValue": "+5.1%",
+      "hint": "Last 7 days"
+    },
+    {
+      "label": "Avg. order value",
+      "value": "$86.60",
+      "trend": "flat",
+      "trendValue": "0.4%",
+      "hint": "Trailing 30 days"
+    },
+    {
+      "label": "Conversion",
+      "value": "3.4%",
+      "trend": "down",
+      "trendValue": "-0.2%",
+      "hint": "Storefront sessions"
+    }
+  ]
+}
