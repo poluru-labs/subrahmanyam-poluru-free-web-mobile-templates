@@ -1,0 +1,24 @@
+{
+  "metrics": [
+    {
+      "label": "Live roles",
+      "value": "2,480",
+      "hint": "On Jobsdora"
+    },
+    {
+      "label": "Professionals",
+      "value": "18,640",
+      "hint": "In network"
+    },
+    {
+      "label": "Employers",
+      "value": "3,120",
+      "hint": "Active accounts"
+    },
+    {
+      "label": "Avg. time to hire",
+      "value": "18d",
+      "hint": "Enterprise median"
+    }
+  ]
+}

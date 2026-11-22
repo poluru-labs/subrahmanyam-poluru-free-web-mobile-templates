@@ -1,0 +1,7 @@
+{
+  "slug": "enterprise-jobboard",
+  "name": "Jobsdora",
+  "tagline": "Enterprise hiring portal for candidates and recruiting teams.",
+  "brandColor": "#4f46e5",
+  "sourceModule": "script.js"
+}

@@ -1,0 +1,94 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Staff Frontend Engineer",
+      "company": "Poluru Labs",
+      "initials": "PL",
+      "location": "Remote",
+      "department": "Engineering",
+      "type": "Full-time",
+      "salary": "$180k–$210k",
+      "tags": [
+        "React",
+        "Design Systems",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Senior Product Manager",
+      "company": "Northwind Systems",
+      "initials": "NW",
+      "location": "Austin, TX",
+      "department": "Product",
+      "type": "Hybrid",
+      "salary": "$165k–$190k",
+      "tags": [
+        "B2B SaaS",
+        "Roadmaps",
+        "Discovery"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Principal UX Designer",
+      "company": "Lumen Cloud",
+      "initials": "LC",
+      "location": "San Francisco, CA",
+      "department": "Design",
+      "type": "Hybrid",
+      "salary": "$170k–$200k",
+      "tags": [
+        "Enterprise UX",
+        "Research",
+        "Figma"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Data Scientist, Growth",
+      "company": "Orbit Retail",
+      "initials": "OR",
+      "location": "Chicago, IL",
+      "department": "Data",
+      "type": "On-site",
+      "salary": "$145k–$170k",
+      "tags": [
+        "Experimentation",
+        "SQL",
+        "Python"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Platform Engineer",
+      "company": "Beacon Finance",
+      "initials": "BF",
+      "location": "New York, NY",
+      "department": "Engineering",
+      "type": "Hybrid",
+      "salary": "$175k–$205k",
+      "tags": [
+        "Kubernetes",
+        "CI/CD",
+        "Security"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "People Ops Partner",
+      "company": "Atlas Health",
+      "initials": "AH",
+      "location": "Remote",
+      "department": "People Ops",
+      "type": "Remote",
+      "salary": "$120k–$140k",
+      "tags": [
+        "HRIS",
+        "Onboarding",
+        "ER"
+      ]
+    }
+  ]
+}

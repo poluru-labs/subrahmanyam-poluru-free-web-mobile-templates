@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for Jobsdora static job portal.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "insights counter metrics"
+    },
+    {
+      "path": "jobs.json",
+      "entity": "job listings"
+    },
+    {
+      "path": "manifest.json",
+      "entity": "file index"
+    }
+  ]
+}
