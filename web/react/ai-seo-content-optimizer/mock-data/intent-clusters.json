@@ -1,0 +1,10 @@
+{
+  "clusters": [
+    {
+      "id": "clust_b2b_pricing",
+      "primaryIntent": "commercial",
+      "queryCount": 12,
+      "agentId": "agent_intent"
+    }
+  ]
+}

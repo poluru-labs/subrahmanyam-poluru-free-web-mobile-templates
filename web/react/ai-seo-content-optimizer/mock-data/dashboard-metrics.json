@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Pages audited",
+      "value": "320",
+      "hint": "This month"
+    },
+    {
+      "label": "Keyword clusters",
+      "value": "84",
+      "hint": "Mapped"
+    },
+    {
+      "label": "CTR lift",
+      "value": "+12%",
+      "hint": "Rewrites"
+    }
+  ]
+}

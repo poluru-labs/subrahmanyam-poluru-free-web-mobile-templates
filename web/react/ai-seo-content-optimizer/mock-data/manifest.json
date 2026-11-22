@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI SEO Content Optimizer.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "intent-clusters.json",
+      "entity": "SERP intent maps"
+    },
+    {
+      "path": "onpage-audits.json",
+      "entity": "title and meta audits"
+    },
+    {
+      "path": "outline-restructures.json",
+      "entity": "section outlines"
+    },
+    {
+      "path": "link-suggestions.json",
+      "entity": "internal link graph"
+    },
+    {
+      "path": "optimization-briefs.json",
+      "entity": "merged briefs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "audits": [
+    {
+      "id": "audit_landing_pricing",
+      "titleScore": 7,
+      "metaLength": 148,
+      "agentId": "agent_onpage"
+    }
+  ]
+}

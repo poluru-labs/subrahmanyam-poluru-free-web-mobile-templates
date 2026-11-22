@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_intent",
+      "name": "Intent Mapper",
+      "description": "Maps search intent, SERP patterns, and audience questions to page angles.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "intent",
+      "promptVersion": "2026.03.2",
+      "tools": [
+        "serp.scan",
+        "intent.cluster",
+        "query.map"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_onpage",
+      "name": "On-Page Advisor",
+      "description": "Recommends titles, meta, headings, and snippet-ready copy improvements.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "onpage",
+      "promptVersion": "2026.02.5",
+      "tools": [
+        "meta.audit",
+        "heading.outline",
+        "snippet.fit"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_outline",
+      "name": "Outline Optimizer",
+      "description": "Restructures sections for scannability, depth, and topical coverage.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "outline",
+      "promptVersion": "2026.01.9",
+      "tools": [
+        "section.balance",
+        "faq.suggest",
+        "toc.build"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_links",
+      "name": "Link Strategist",
+      "description": "Suggests contextual internal links and anchor text for site architecture.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "links",
+      "promptVersion": "2026.03.0-rc2",
+      "tools": [
+        "graph.suggest",
+        "anchor.variant",
+        "orphan.find"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_seo",
+      "name": "Content Composer",
+      "description": "Assembles intent, on-page, and structure notes into an optimization brief.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.3",
+      "tools": [
+        "brief.merge",
+        "priority.rank",
+        "checklist.emit"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}
