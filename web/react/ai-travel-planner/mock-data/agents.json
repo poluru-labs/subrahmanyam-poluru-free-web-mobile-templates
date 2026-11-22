@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_itinerary",
+      "name": "Itinerary Builder",
+      "description": "Drafts constraint-aware routes between cities with transit and timing buffers.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "itinerary",
+      "promptVersion": "2026.03.5",
+      "tools": [
+        "route.plan",
+        "constraint.fit",
+        "buffer.add"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_budget",
+      "name": "Budget Analyst",
+      "description": "Breaks out lodging, food, transit, and activities with tiered spend options.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "budget",
+      "promptVersion": "2026.02.3",
+      "tools": [
+        "cost.split",
+        "tier.compare",
+        "fx.hint"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_agenda",
+      "name": "Day Map Planner",
+      "description": "Builds day-by-day agendas with maps, opening hours, and walking clusters.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "agenda",
+      "promptVersion": "2026.01.2",
+      "tools": [
+        "day.map",
+        "hours.check",
+        "cluster.walk"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_packing",
+      "name": "Packing Curator",
+      "description": "Suggests packing lists from weather, activities, and baggage constraints.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "packing",
+      "promptVersion": "2026.03.0-rc5",
+      "tools": [
+        "pack.list",
+        "weather.fit",
+        "bag.limit"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_trip",
+      "name": "Trip Composer",
+      "description": "Merges itinerary, budget, agenda, and packing into a shareable trip brief.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.8",
+      "tools": [
+        "brief.merge",
+        "share.link",
+        "checklist.emit"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

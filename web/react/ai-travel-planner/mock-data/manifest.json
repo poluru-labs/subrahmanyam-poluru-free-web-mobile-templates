@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Travel Planner.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "itineraries.json",
+      "entity": "route plans"
+    },
+    {
+      "path": "budget-breakdowns.json",
+      "entity": "spend tiers"
+    },
+    {
+      "path": "day-agendas.json",
+      "entity": "day maps"
+    },
+    {
+      "path": "packing-lists.json",
+      "entity": "gear lists"
+    },
+    {
+      "path": "trip-briefs.json",
+      "entity": "shareable briefs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

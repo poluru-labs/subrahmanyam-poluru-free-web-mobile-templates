@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Trips",
+      "value": "67",
+      "hint": "Active plans"
+    },
+    {
+      "label": "Day maps",
+      "value": "310",
+      "hint": "Generated"
+    },
+    {
+      "label": "Budget fit",
+      "value": "88%",
+      "hint": "Within target"
+    }
+  ]
+}

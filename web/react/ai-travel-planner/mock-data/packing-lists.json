@@ -1,0 +1,9 @@
+{
+  "lists": [
+    {
+      "id": "pack_spring",
+      "carryOnOnly": true,
+      "agentId": "agent_packing"
+    }
+  ]
+}

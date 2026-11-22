@@ -1,0 +1,10 @@
+{
+  "agendas": [
+    {
+      "id": "day_kyoto_02",
+      "stops": 5,
+      "walkClusters": 2,
+      "agentId": "agent_agenda"
+    }
+  ]
+}

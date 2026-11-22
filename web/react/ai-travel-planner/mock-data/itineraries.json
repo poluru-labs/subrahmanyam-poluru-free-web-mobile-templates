@@ -1,0 +1,10 @@
+{
+  "itineraries": [
+    {
+      "id": "itin_kyoto_osaka",
+      "cityCount": 2,
+      "transitMode": "rail",
+      "agentId": "agent_itinerary"
+    }
+  ]
+}

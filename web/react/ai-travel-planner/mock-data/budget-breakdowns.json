@@ -1,0 +1,10 @@
+{
+  "breakdowns": [
+    {
+      "id": "bud_trip_09",
+      "tier": "mid",
+      "currency": "USD",
+      "agentId": "agent_budget"
+    }
+  ]
+}
