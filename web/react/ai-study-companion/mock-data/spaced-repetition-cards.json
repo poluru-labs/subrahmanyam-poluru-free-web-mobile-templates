@@ -1,0 +1,9 @@
+{
+  "cards": [
+    {
+      "id": "card_econ_supply",
+      "intervalDays": 3,
+      "agentId": "agent_spaced"
+    }
+  ]
+}

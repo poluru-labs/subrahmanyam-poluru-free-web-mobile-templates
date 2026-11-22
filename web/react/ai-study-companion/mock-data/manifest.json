@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Study Companion.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "concept-guides.json",
+      "entity": "topic explanations"
+    },
+    {
+      "path": "spaced-repetition-cards.json",
+      "entity": "SR decks"
+    },
+    {
+      "path": "study-blocks.json",
+      "entity": "session plans"
+    },
+    {
+      "path": "weak-spot-reports.json",
+      "entity": "gap analysis"
+    },
+    {
+      "path": "mastery-roadmaps.json",
+      "entity": "weekly roadmaps"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

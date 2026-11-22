@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_explain",
+      "name": "Concept Guide",
+      "description": "Explains topics with analogies, worked examples, and check-for-understanding prompts.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "explain",
+      "promptVersion": "2026.03.2",
+      "tools": [
+        "concept.map",
+        "analogy.pick",
+        "quiz.micro"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_spaced",
+      "name": "Repetition Coach",
+      "description": "Schedules spaced-repetition intervals and card prompts from your notes.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "spaced",
+      "promptVersion": "2026.02.8",
+      "tools": [
+        "sr.interval",
+        "card.draft",
+        "deck.tag"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_planner",
+      "name": "Session Planner",
+      "description": "Builds focused study blocks with breaks, goals, and time-boxed milestones.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "planner",
+      "promptVersion": "2026.01.5",
+      "tools": [
+        "block.plan",
+        "pomodoro.fit",
+        "goal.split"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_weakarea",
+      "name": "Weak-Spot Finder",
+      "description": "Surfaces weak areas from quiz misses, rubric gaps, and topic coverage.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "weakarea",
+      "promptVersion": "2026.03.0-rc2",
+      "tools": [
+        "gap.detect",
+        "topic.rank",
+        "remedial.plan"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_study",
+      "name": "Study Composer",
+      "description": "Combines explanations, repetition, and plans into a weekly mastery roadmap.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.6",
+      "tools": [
+        "roadmap.merge",
+        "streak.track",
+        "review.pack"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

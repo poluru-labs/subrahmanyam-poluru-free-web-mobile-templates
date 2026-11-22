@@ -1,0 +1,10 @@
+{
+  "blocks": [
+    {
+      "id": "block_chem_exam",
+      "durationMinutes": 90,
+      "pomodoros": 3,
+      "agentId": "agent_planner"
+    }
+  ]
+}

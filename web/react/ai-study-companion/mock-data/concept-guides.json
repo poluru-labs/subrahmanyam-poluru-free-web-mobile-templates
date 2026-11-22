@@ -1,0 +1,10 @@
+{
+  "guides": [
+    {
+      "id": "guide_ohms_law",
+      "topic": "Ohm's law",
+      "analogy": "water pipe",
+      "agentId": "agent_explain"
+    }
+  ]
+}

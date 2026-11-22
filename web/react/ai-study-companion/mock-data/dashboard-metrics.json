@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Topics mastered",
+      "value": "37",
+      "hint": "This month"
+    },
+    {
+      "label": "Study minutes",
+      "value": "820",
+      "hint": "Logged"
+    },
+    {
+      "label": "Retention",
+      "value": "84%",
+      "hint": "Spaced recall"
+    }
+  ]
+}
