@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for enterprise data center operations dashboard.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "overview hero metrics"
+    },
+    {
+      "path": "power-metrics.json",
+      "entity": "power & cooling metrics"
+    },
+    {
+      "path": "facilities.json",
+      "entity": "Facility[]"
+    },
+    {
+      "path": "servers.json",
+      "entity": "ServerRow[]"
+    },
+    {
+      "path": "alerts.json",
+      "entity": "AlertItem[]"
+    },
+    {
+      "path": "cooling-loops.json",
+      "entity": "CoolingLoop[]"
+    },
+    {
+      "path": "power-circuits.json",
+      "entity": "PowerCircuit[]"
+    },
+    {
+      "path": "maintenance-windows.json",
+      "entity": "MaintenanceWindow[]"
+    },
+    {
+      "path": "search-catalog.json",
+      "entity": "SearchResult[]"
+    },
+    {
+      "path": "manifest.json",
+      "entity": "file index"
+    }
+  ]
+}

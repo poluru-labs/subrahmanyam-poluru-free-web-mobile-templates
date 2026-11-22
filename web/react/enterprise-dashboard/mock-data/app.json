@@ -1,0 +1,7 @@
+{
+  "slug": "enterprise-dashboard",
+  "name": "Poluru DC — Enterprise Dashboard",
+  "tagline": "Data center operations dashboard.",
+  "brandColor": "#1a1a2e",
+  "sourceModule": "src/data/mock.ts"
+}

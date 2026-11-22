@@ -1,0 +1,82 @@
+{
+  "searchCatalog": [
+    {
+      "id": "dc-ord1",
+      "label": "Chicago ORD-1 · US-Central",
+      "category": "Facility",
+      "path": "/facilities"
+    },
+    {
+      "id": "dc-iad2",
+      "label": "Ashburn IAD-2 · US-East",
+      "category": "Facility",
+      "path": "/facilities"
+    },
+    {
+      "id": "dc-dfw1",
+      "label": "Dallas DFW-1 · US-South",
+      "category": "Facility",
+      "path": "/facilities"
+    },
+    {
+      "id": "dc-sjc3",
+      "label": "San Jose SJC-3 · US-West",
+      "category": "Facility",
+      "path": "/facilities"
+    },
+    {
+      "id": "1",
+      "label": "ord1-compute-042 · Compute",
+      "category": "Host",
+      "path": "/infrastructure"
+    },
+    {
+      "id": "2",
+      "label": "iad2-storage-018 · Storage",
+      "category": "Host",
+      "path": "/infrastructure"
+    },
+    {
+      "id": "3",
+      "label": "dfw1-gpu-007 · GPU",
+      "category": "Host",
+      "path": "/infrastructure"
+    },
+    {
+      "id": "4",
+      "label": "sjc3-net-003 · Network",
+      "category": "Host",
+      "path": "/infrastructure"
+    },
+    {
+      "id": "5",
+      "label": "ord1-edge-011 · Edge",
+      "category": "Host",
+      "path": "/infrastructure"
+    },
+    {
+      "id": "a1",
+      "label": "Cooling loop B pressure below threshold",
+      "category": "Alert",
+      "path": "/alerts"
+    },
+    {
+      "id": "a2",
+      "label": "Rack A12 PDU load at 92%",
+      "category": "Alert",
+      "path": "/alerts"
+    },
+    {
+      "id": "a3",
+      "label": "Scheduled UPS battery test completed",
+      "category": "Alert",
+      "path": "/alerts"
+    },
+    {
+      "id": "a4",
+      "label": "Fiber path redundancy reduced to single link",
+      "category": "Alert",
+      "path": "/alerts"
+    }
+  ]
+}

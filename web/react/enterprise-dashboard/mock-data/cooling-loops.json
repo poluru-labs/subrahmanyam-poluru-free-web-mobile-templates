@@ -1,0 +1,40 @@
+{
+  "coolingLoops": [
+    {
+      "id": "cl-ord-a",
+      "facility": "Chicago ORD-1",
+      "loop": "Loop A",
+      "tempC": 18.4,
+      "pressurePsi": 42,
+      "capacity": 68,
+      "status": "nominal"
+    },
+    {
+      "id": "cl-iad-b",
+      "facility": "Ashburn IAD-2",
+      "loop": "Loop B",
+      "tempC": 19.1,
+      "pressurePsi": 40,
+      "capacity": 74,
+      "status": "nominal"
+    },
+    {
+      "id": "cl-dfw-b",
+      "facility": "Dallas DFW-1",
+      "loop": "Loop B",
+      "tempC": 24.8,
+      "pressurePsi": 28,
+      "capacity": 91,
+      "status": "fault"
+    },
+    {
+      "id": "cl-sjc-a",
+      "facility": "San Jose SJC-3",
+      "loop": "Loop A",
+      "tempC": 17.2,
+      "pressurePsi": 44,
+      "capacity": 55,
+      "status": "elevated"
+    }
+  ]
+}

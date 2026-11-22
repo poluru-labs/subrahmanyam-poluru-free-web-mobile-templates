@@ -1,0 +1,36 @@
+{
+  "powerCircuits": [
+    {
+      "id": "pc-ord",
+      "facility": "Chicago ORD-1",
+      "circuit": "PDU-A / Bus 1",
+      "loadKw": 1820,
+      "capacityKw": 2400,
+      "upsBackupMin": 14
+    },
+    {
+      "id": "pc-iad",
+      "facility": "Ashburn IAD-2",
+      "circuit": "PDU-C / Bus 2",
+      "loadKw": 2680,
+      "capacityKw": 3200,
+      "upsBackupMin": 11
+    },
+    {
+      "id": "pc-dfw",
+      "facility": "Dallas DFW-1",
+      "circuit": "PDU-B / Bus 1",
+      "loadKw": 2100,
+      "capacityKw": 2200,
+      "upsBackupMin": 9
+    },
+    {
+      "id": "pc-sjc",
+      "facility": "San Jose SJC-3",
+      "circuit": "PDU-A / Bus 1",
+      "loadKw": 980,
+      "capacityKw": 1600,
+      "upsBackupMin": 16
+    }
+  ]
+}

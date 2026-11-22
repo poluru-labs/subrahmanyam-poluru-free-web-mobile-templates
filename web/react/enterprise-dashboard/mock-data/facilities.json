@@ -1,0 +1,44 @@
+{
+  "facilities": [
+    {
+      "id": "dc-ord1",
+      "name": "Chicago ORD-1",
+      "region": "US-Central",
+      "status": "operational",
+      "racks": 420,
+      "utilization": 78,
+      "powerKw": 4820,
+      "pue": 1.28
+    },
+    {
+      "id": "dc-iad2",
+      "name": "Ashburn IAD-2",
+      "region": "US-East",
+      "status": "operational",
+      "racks": 610,
+      "utilization": 84,
+      "powerKw": 7120,
+      "pue": 1.22
+    },
+    {
+      "id": "dc-dfw1",
+      "name": "Dallas DFW-1",
+      "region": "US-South",
+      "status": "degraded",
+      "racks": 280,
+      "utilization": 91,
+      "powerKw": 3980,
+      "pue": 1.41
+    },
+    {
+      "id": "dc-sjc3",
+      "name": "San Jose SJC-3",
+      "region": "US-West",
+      "status": "maintenance",
+      "racks": 195,
+      "utilization": 62,
+      "powerKw": 2140,
+      "pue": 1.19
+    }
+  ]
+}

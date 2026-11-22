@@ -1,0 +1,49 @@
+{
+  "servers": [
+    {
+      "id": "1",
+      "hostname": "ord1-compute-042",
+      "facility": "Chicago ORD-1",
+      "role": "Compute",
+      "cpu": 64,
+      "memory": 71,
+      "status": "Healthy"
+    },
+    {
+      "id": "2",
+      "hostname": "iad2-storage-018",
+      "facility": "Ashburn IAD-2",
+      "role": "Storage",
+      "cpu": 38,
+      "memory": 82,
+      "status": "Healthy"
+    },
+    {
+      "id": "3",
+      "hostname": "dfw1-gpu-007",
+      "facility": "Dallas DFW-1",
+      "role": "GPU",
+      "cpu": 94,
+      "memory": 88,
+      "status": "Hot"
+    },
+    {
+      "id": "4",
+      "hostname": "sjc3-net-003",
+      "facility": "San Jose SJC-3",
+      "role": "Network",
+      "cpu": 22,
+      "memory": 41,
+      "status": "Maintenance"
+    },
+    {
+      "id": "5",
+      "hostname": "ord1-edge-011",
+      "facility": "Chicago ORD-1",
+      "role": "Edge",
+      "cpu": 55,
+      "memory": 60,
+      "status": "Healthy"
+    }
+  ]
+}

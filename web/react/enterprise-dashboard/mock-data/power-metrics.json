@@ -1,0 +1,32 @@
+{
+  "metrics": [
+    {
+      "label": "Fleet PUE",
+      "value": "1.27",
+      "trend": "down",
+      "trendValue": "-0.03",
+      "hint": "Trailing 7 days"
+    },
+    {
+      "label": "IT load",
+      "value": "14.2 MW",
+      "trend": "up",
+      "trendValue": "+1.1%",
+      "hint": "Vs yesterday"
+    },
+    {
+      "label": "Cooling headroom",
+      "value": "23%",
+      "trend": "down",
+      "trendValue": "-4%",
+      "hint": "DFW-1 constrained"
+    },
+    {
+      "label": "UPS autonomy",
+      "value": "12 min",
+      "trend": "flat",
+      "trendValue": "0%",
+      "hint": "Fleet minimum"
+    }
+  ]
+}

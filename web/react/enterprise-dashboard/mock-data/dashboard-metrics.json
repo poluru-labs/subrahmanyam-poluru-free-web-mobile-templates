@@ -1,0 +1,32 @@
+{
+  "metrics": [
+    {
+      "label": "Active facilities",
+      "value": "12",
+      "trend": "up",
+      "trendValue": "+1",
+      "hint": "Across 4 regions"
+    },
+    {
+      "label": "Rack utilization",
+      "value": "79%",
+      "trend": "up",
+      "trendValue": "+2.4%",
+      "hint": "Fleet average"
+    },
+    {
+      "label": "Power draw",
+      "value": "18.1 MW",
+      "trend": "flat",
+      "trendValue": "0%",
+      "hint": "Last 24 hours"
+    },
+    {
+      "label": "Open alerts",
+      "value": "7",
+      "trend": "down",
+      "trendValue": "-3",
+      "hint": "2 critical"
+    }
+  ]
+}
