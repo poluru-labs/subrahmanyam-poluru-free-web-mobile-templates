@@ -1,0 +1,305 @@
+{
+  "currentUser": {
+    "name": "Kavya Poluru",
+    "email": "kavya.poluru@polurulabs.example",
+    "role": "Talent lead"
+  },
+  "navItems": [
+    {
+      "id": "overview",
+      "label": "Overview",
+      "href": "#/overview",
+      "icon": "home"
+    },
+    {
+      "id": "jobs",
+      "label": "Jobs",
+      "href": "#/jobs",
+      "icon": "folder"
+    },
+    {
+      "id": "candidates",
+      "label": "Candidates",
+      "href": "#/candidates",
+      "icon": "user"
+    },
+    {
+      "id": "pipeline",
+      "label": "Pipeline",
+      "href": "#/pipeline",
+      "icon": "check-circle"
+    },
+    {
+      "id": "employers",
+      "label": "Employers",
+      "href": "#/employers",
+      "icon": "star"
+    },
+    {
+      "id": "settings",
+      "label": "Settings",
+      "href": "#/settings",
+      "icon": "settings"
+    }
+  ],
+  "team": [
+    {
+      "name": "Kavya Poluru",
+      "role": "Owner"
+    },
+    {
+      "name": "Venkata Poluru",
+      "role": "Editor"
+    },
+    {
+      "name": "Lakshmi Poluru",
+      "role": "Editor"
+    },
+    {
+      "name": "Sravani Poluru",
+      "role": "Viewer"
+    },
+    {
+      "name": "Ananya Poluru",
+      "role": "Editor"
+    },
+    {
+      "name": "Priya Poluru",
+      "role": "Viewer"
+    }
+  ],
+  "notifications": [
+    {
+      "label": "PM pending review",
+      "description": "Northwind · Venkata Poluru · 8m",
+      "icon": "alert-triangle"
+    },
+    {
+      "label": "Offer out",
+      "description": "Lakshmi Poluru · Principal UX",
+      "icon": "check-circle"
+    },
+    {
+      "label": "Verify Beacon",
+      "description": "Ananya Poluru uploaded docs",
+      "icon": "clock"
+    }
+  ],
+  "alerts": [
+    {
+      "heading": "Senior PM is pending review",
+      "children": "Northwind Systems posted overnight. Venkata Poluru should approve before it hits the marketplace."
+    },
+    {
+      "heading": "Beacon Finance is unverified",
+      "children": "31 open roles are hidden until Ananya Poluru clears legal."
+    },
+    {
+      "heading": "Design Systems Lead closed",
+      "children": "Sravani Poluru filled the Atlas Health seat. Archive the req."
+    }
+  ],
+  "timeline": [
+    {
+      "title": "Lakshmi Poluru moved to offer",
+      "description": "Principal UX · Lumen Cloud",
+      "timestamp": "12m ago",
+      "status": "complete"
+    },
+    {
+      "title": "Northwind PM is in review",
+      "description": "Venkata Poluru requested a hiring-manager pass.",
+      "timestamp": "41m ago",
+      "status": "current"
+    },
+    {
+      "title": "Beacon Finance still unverified",
+      "description": "Ananya Poluru uploaded docs this morning.",
+      "timestamp": "2h ago",
+      "status": "upcoming"
+    },
+    {
+      "title": "Staff Frontend featured",
+      "description": "Kavya Poluru pinned the Poluru Labs role.",
+      "timestamp": "1d ago",
+      "status": "upcoming"
+    }
+  ],
+  "recentApplications": [
+    {
+      "id": "app_12",
+      "name": "Hana Poluru",
+      "role": "Staff SRE",
+      "company": "Poluru Labs",
+      "stage": "Interview",
+      "when": "12m ago"
+    },
+    {
+      "id": "app_11",
+      "name": "Priya Poluru",
+      "role": "Counsel, Marketplace",
+      "company": "Harbor Logistics",
+      "stage": "Screening",
+      "when": "41m ago"
+    },
+    {
+      "id": "app_10",
+      "name": "Nikhil Poluru",
+      "role": "Staff Frontend Engineer",
+      "company": "Poluru Labs",
+      "stage": "Applied",
+      "when": "2h ago"
+    },
+    {
+      "id": "app_09",
+      "name": "Sravani Poluru",
+      "role": "Staff Frontend Engineer",
+      "company": "Poluru Labs",
+      "stage": "Interview",
+      "when": "3h ago"
+    },
+    {
+      "id": "app_08",
+      "name": "Lakshmi Poluru",
+      "role": "Principal UX Designer",
+      "company": "Lumen Cloud",
+      "stage": "Offer",
+      "when": "5h ago"
+    }
+  ],
+  "channels": [
+    {
+      "label": "Jobs Raja board",
+      "share": 46
+    },
+    {
+      "label": "Employee referral",
+      "share": 28
+    },
+    {
+      "label": "Agency",
+      "share": 16
+    },
+    {
+      "label": "Campus",
+      "share": 10
+    }
+  ],
+  "interviews": [
+    {
+      "name": "Sravani Poluru",
+      "role": "Staff Frontend",
+      "with": "Kavya Poluru",
+      "when": "Today · 10:00"
+    },
+    {
+      "name": "Hana Poluru",
+      "role": "Staff SRE",
+      "with": "Ananya Poluru",
+      "when": "Today · 14:30"
+    },
+    {
+      "name": "Venkata Poluru",
+      "role": "Senior PM",
+      "with": "Meera Poluru",
+      "when": "Tue · 09:15"
+    },
+    {
+      "name": "Priya Poluru",
+      "role": "Counsel",
+      "with": "Lakshmi Poluru",
+      "when": "Wed · 11:00"
+    }
+  ],
+  "recruiters": [
+    {
+      "name": "Kavya Poluru",
+      "specialty": "Engineering",
+      "load": 18,
+      "reqs": 7
+    },
+    {
+      "name": "Venkata Poluru",
+      "specialty": "Product",
+      "load": 14,
+      "reqs": 5
+    },
+    {
+      "name": "Lakshmi Poluru",
+      "specialty": "Design",
+      "load": 11,
+      "reqs": 4
+    },
+    {
+      "name": "Ananya Poluru",
+      "specialty": "Platform",
+      "load": 16,
+      "reqs": 6
+    }
+  ],
+  "departmentTree": [
+    {
+      "id": "eng",
+      "label": "Engineering · Kavya Poluru",
+      "children": [
+        {
+          "id": "eng_front",
+          "label": "Staff Frontend · 86 applicants"
+        },
+        {
+          "id": "eng_plat",
+          "label": "Platform · 71 applicants"
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "label": "Product · Venkata Poluru"
+    },
+    {
+      "id": "design",
+      "label": "Design · Lakshmi Poluru"
+    },
+    {
+      "id": "data",
+      "label": "Data · Ramesh Poluru"
+    }
+  ],
+  "commands": [
+    {
+      "id": "overview",
+      "label": "Go to overview",
+      "href": "#/overview"
+    },
+    {
+      "id": "jobs",
+      "label": "Browse jobs",
+      "href": "#/jobs"
+    },
+    {
+      "id": "front",
+      "label": "Staff Frontend Engineer",
+      "href": "#/job/j_front"
+    },
+    {
+      "id": "candidates",
+      "label": "Candidate pool",
+      "href": "#/candidates"
+    },
+    {
+      "id": "pipeline",
+      "label": "Hiring pipeline",
+      "href": "#/pipeline"
+    },
+    {
+      "id": "employers",
+      "label": "Employers",
+      "href": "#/employers"
+    },
+    {
+      "id": "settings",
+      "label": "Workspace settings",
+      "href": "#/settings"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "candidates": [
+    {
+      "id": "a1",
+      "name": "Sravani Poluru",
+      "role": "Staff Frontend Engineer",
+      "skills": "React · TypeScript",
+      "experience": "9 yrs",
+      "location": "Austin, TX",
+      "stage": "Interview",
+      "score": 94
+    },
+    {
+      "id": "a2",
+      "name": "Venkata Poluru",
+      "role": "Senior Product Manager",
+      "skills": "Product · Discovery",
+      "experience": "11 yrs",
+      "location": "Chicago, IL",
+      "stage": "Screening",
+      "score": 88
+    },
+    {
+      "id": "a3",
+      "name": "Lakshmi Poluru",
+      "role": "Principal UX Designer",
+      "skills": "UX · Research",
+      "experience": "8 yrs",
+      "location": "Remote",
+      "stage": "Offer",
+      "score": 96
+    },
+    {
+      "id": "a4",
+      "name": "Ramesh Poluru",
+      "role": "Data Scientist, Growth",
+      "skills": "Python · ML",
+      "experience": "7 yrs",
+      "location": "New York, NY",
+      "stage": "Applied",
+      "score": 81
+    },
+    {
+      "id": "a5",
+      "name": "Ananya Poluru",
+      "role": "Platform Engineer",
+      "skills": "Kubernetes · SRE",
+      "experience": "10 yrs",
+      "location": "San Francisco, CA",
+      "stage": "Interview",
+      "score": 91
+    },
+    {
+      "id": "a6",
+      "name": "Meera Poluru",
+      "role": "Senior Product Manager",
+      "skills": "Ops · Roadmaps",
+      "experience": "6 yrs",
+      "location": "Remote",
+      "stage": "Applied",
+      "score": 79
+    },
+    {
+      "id": "a7",
+      "name": "Arjun Poluru",
+      "role": "Platform Engineer",
+      "skills": "Go · Kafka",
+      "experience": "8 yrs",
+      "location": "Austin, TX",
+      "stage": "Screening",
+      "score": 86
+    },
+    {
+      "id": "a8",
+      "name": "Priya Poluru",
+      "role": "Counsel, Marketplace",
+      "skills": "Contracts · Privacy",
+      "experience": "12 yrs",
+      "location": "New York, NY",
+      "stage": "Screening",
+      "score": 90
+    },
+    {
+      "id": "a9",
+      "name": "Hana Poluru",
+      "role": "Staff SRE",
+      "skills": "On-call · Observability",
+      "experience": "9 yrs",
+      "location": "Remote",
+      "stage": "Interview",
+      "score": 93
+    },
+    {
+      "id": "a10",
+      "name": "Nikhil Poluru",
+      "role": "Staff Frontend Engineer",
+      "skills": "Design systems · a11y",
+      "experience": "7 yrs",
+      "location": "Chicago, IL",
+      "stage": "Applied",
+      "score": 84
+    }
+  ],
+  "candidateColumns": [
+    {
+      "key": "name",
+      "label": "Candidate"
+    },
+    {
+      "key": "role",
+      "label": "Role"
+    },
+    {
+      "key": "experience",
+      "label": "Experience"
+    },
+    {
+      "key": "location",
+      "label": "Location"
+    },
+    {
+      "key": "stage",
+      "label": "Stage"
+    },
+    {
+      "key": "score",
+      "label": "Score"
+    }
+  ]
+}

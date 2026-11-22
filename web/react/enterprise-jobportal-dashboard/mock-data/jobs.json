@@ -1,0 +1,126 @@
+{
+  "jobs": [
+    {
+      "id": "j_front",
+      "title": "Staff Frontend Engineer",
+      "company": "Poluru Labs",
+      "dept": "Engineering",
+      "location": "Remote",
+      "owner": "Kavya Poluru",
+      "status": "Published",
+      "applicants": 86,
+      "featured": true,
+      "salary": "$180–210k"
+    },
+    {
+      "id": "j_pm",
+      "title": "Senior Product Manager",
+      "company": "Northwind Systems",
+      "dept": "Product",
+      "location": "Austin, TX",
+      "owner": "Venkata Poluru",
+      "status": "Review",
+      "applicants": 42,
+      "featured": false,
+      "salary": "$165–190k"
+    },
+    {
+      "id": "j_ux",
+      "title": "Principal UX Designer",
+      "company": "Lumen Cloud",
+      "dept": "Design",
+      "location": "San Francisco, CA",
+      "owner": "Lakshmi Poluru",
+      "status": "Published",
+      "applicants": 57,
+      "featured": true,
+      "salary": "$170–200k"
+    },
+    {
+      "id": "j_data",
+      "title": "Data Scientist, Growth",
+      "company": "Orbit Retail",
+      "dept": "Data",
+      "location": "Chicago, IL",
+      "owner": "Ramesh Poluru",
+      "status": "Draft",
+      "applicants": 0,
+      "featured": false,
+      "salary": "$150–175k"
+    },
+    {
+      "id": "j_plat",
+      "title": "Platform Engineer",
+      "company": "Beacon Finance",
+      "dept": "Engineering",
+      "location": "New York, NY",
+      "owner": "Ananya Poluru",
+      "status": "Published",
+      "applicants": 71,
+      "featured": false,
+      "salary": "$160–185k"
+    },
+    {
+      "id": "j_ds",
+      "title": "Design Systems Lead",
+      "company": "Atlas Health",
+      "dept": "Design",
+      "location": "Remote",
+      "owner": "Sravani Poluru",
+      "status": "Closed",
+      "applicants": 120,
+      "featured": false,
+      "salary": "$155–180k"
+    },
+    {
+      "id": "j_sre",
+      "title": "Staff SRE",
+      "company": "Poluru Labs",
+      "dept": "Engineering",
+      "location": "Remote",
+      "owner": "Kavya Poluru",
+      "status": "Published",
+      "applicants": 39,
+      "featured": false,
+      "salary": "$175–200k"
+    },
+    {
+      "id": "j_legal",
+      "title": "Counsel, Marketplace",
+      "company": "Harbor Logistics",
+      "dept": "Legal",
+      "location": "New York, NY",
+      "owner": "Priya Poluru",
+      "status": "Review",
+      "applicants": 11,
+      "featured": false,
+      "salary": "$190–220k"
+    }
+  ],
+  "jobColumns": [
+    {
+      "key": "title",
+      "label": "Role"
+    },
+    {
+      "key": "company",
+      "label": "Employer"
+    },
+    {
+      "key": "owner",
+      "label": "Owner"
+    },
+    {
+      "key": "location",
+      "label": "Location"
+    },
+    {
+      "key": "applicants",
+      "label": "Applicants"
+    },
+    {
+      "key": "status",
+      "label": "Status"
+    }
+  ]
+}

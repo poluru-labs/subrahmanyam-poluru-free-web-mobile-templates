@@ -1,0 +1,32 @@
+{
+  "metrics": [
+    {
+      "label": "Open roles",
+      "value": "257",
+      "hint": "Across 7 employers",
+      "trend": "up",
+      "trendValue": "+14"
+    },
+    {
+      "label": "New applicants",
+      "value": "1,864",
+      "hint": "This week on Jobs Raja",
+      "trend": "up",
+      "trendValue": "+8.4%"
+    },
+    {
+      "label": "Time to hire",
+      "value": "18d",
+      "hint": "Median for engineering",
+      "trend": "down",
+      "trendValue": "-2d"
+    },
+    {
+      "label": "Offer accept",
+      "value": "41%",
+      "hint": "Lakshmi Poluru’s UX seat",
+      "trend": "up",
+      "trendValue": "+3 pts"
+    }
+  ]
+}

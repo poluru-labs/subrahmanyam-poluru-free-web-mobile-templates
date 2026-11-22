@@ -1,0 +1,7 @@
+{
+  "slug": "enterprise-jobportal-dashboard",
+  "name": "Jobs Raja",
+  "tagline": "Talent operations workspace.",
+  "brandColor": "#0f766e",
+  "sourceModule": "src/data.js"
+}

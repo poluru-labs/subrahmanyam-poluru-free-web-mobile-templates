@@ -1,0 +1,100 @@
+{
+  "pipeline": [
+    {
+      "stage": "Applied",
+      "items": [
+        {
+          "name": "Ramesh Poluru",
+          "role": "Data Scientist"
+        },
+        {
+          "name": "Meera Poluru",
+          "role": "Senior PM"
+        },
+        {
+          "name": "Nikhil Poluru",
+          "role": "Staff Frontend"
+        }
+      ]
+    },
+    {
+      "stage": "Screening",
+      "items": [
+        {
+          "name": "Venkata Poluru",
+          "role": "Senior PM"
+        },
+        {
+          "name": "Arjun Poluru",
+          "role": "Platform Eng"
+        },
+        {
+          "name": "Priya Poluru",
+          "role": "Counsel"
+        }
+      ]
+    },
+    {
+      "stage": "Interview",
+      "items": [
+        {
+          "name": "Sravani Poluru",
+          "role": "Staff Frontend"
+        },
+        {
+          "name": "Ananya Poluru",
+          "role": "Platform Eng"
+        },
+        {
+          "name": "Hana Poluru",
+          "role": "Staff SRE"
+        }
+      ]
+    },
+    {
+      "stage": "Offer",
+      "items": [
+        {
+          "name": "Lakshmi Poluru",
+          "role": "Principal UX"
+        }
+      ]
+    }
+  ],
+  "funnel": [
+    {
+      "label": "Applied",
+      "value": 1864
+    },
+    {
+      "label": "Screening",
+      "value": 412
+    },
+    {
+      "label": "Interview",
+      "value": 186
+    },
+    {
+      "label": "Offer",
+      "value": 48
+    },
+    {
+      "label": "Hired",
+      "value": 19
+    }
+  ],
+  "sla": [
+    {
+      "label": "Screen SLA",
+      "value": 94
+    },
+    {
+      "label": "Interview SLA",
+      "value": 81
+    },
+    {
+      "label": "Offer SLA",
+      "value": 72
+    }
+  ]
+}

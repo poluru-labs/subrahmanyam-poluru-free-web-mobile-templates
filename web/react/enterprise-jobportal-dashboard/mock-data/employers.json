@@ -1,0 +1,67 @@
+{
+  "employers": [
+    {
+      "id": "e1",
+      "name": "Poluru Labs",
+      "roles": 28,
+      "verified": true,
+      "plan": "Enterprise",
+      "owner": "Kavya Poluru",
+      "fill": 92
+    },
+    {
+      "id": "e2",
+      "name": "Northwind Systems",
+      "roles": 24,
+      "verified": true,
+      "plan": "Enterprise",
+      "owner": "Venkata Poluru",
+      "fill": 74
+    },
+    {
+      "id": "e3",
+      "name": "Atlas Health",
+      "roles": 18,
+      "verified": true,
+      "plan": "Growth",
+      "owner": "Sravani Poluru",
+      "fill": 81
+    },
+    {
+      "id": "e4",
+      "name": "Beacon Finance",
+      "roles": 31,
+      "verified": false,
+      "plan": "Enterprise",
+      "owner": "Ananya Poluru",
+      "fill": 58
+    },
+    {
+      "id": "e5",
+      "name": "Orbit Retail",
+      "roles": 12,
+      "verified": true,
+      "plan": "Starter",
+      "owner": "Ramesh Poluru",
+      "fill": 66
+    },
+    {
+      "id": "e6",
+      "name": "Lumen Cloud",
+      "roles": 21,
+      "verified": true,
+      "plan": "Growth",
+      "owner": "Lakshmi Poluru",
+      "fill": 88
+    },
+    {
+      "id": "e7",
+      "name": "Harbor Logistics",
+      "roles": 9,
+      "verified": false,
+      "plan": "Starter",
+      "owner": "Priya Poluru",
+      "fill": 44
+    }
+  ]
+}

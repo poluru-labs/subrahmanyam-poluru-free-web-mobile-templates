@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for Jobs Raja recruiting dashboard.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "KPI cards"
+    },
+    {
+      "path": "apply-series.json",
+      "entity": "application sparkline"
+    },
+    {
+      "path": "jobs.json",
+      "entity": "jobs and table columns"
+    },
+    {
+      "path": "candidates.json",
+      "entity": "candidates and columns"
+    },
+    {
+      "path": "employers.json",
+      "entity": "employer accounts"
+    },
+    {
+      "path": "pipeline.json",
+      "entity": "pipeline board and funnel"
+    },
+    {
+      "path": "workspace.json",
+      "entity": "nav, alerts, timeline, team"
+    },
+    {
+      "path": "manifest.json",
+      "entity": "file index"
+    }
+  ]
+}
