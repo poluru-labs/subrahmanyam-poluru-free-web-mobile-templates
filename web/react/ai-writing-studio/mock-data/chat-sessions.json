@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_outline",
+      "title": "Chapter arc pass",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_outline",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Mystery novel act two.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Outline Architect (prompt 2026.03.1) — Outline (demo): I would structure chapters for “Mystery novel act two.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

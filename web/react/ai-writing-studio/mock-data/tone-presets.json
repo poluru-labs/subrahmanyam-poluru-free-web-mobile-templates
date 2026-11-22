@@ -1,0 +1,9 @@
+{
+  "presets": [
+    {
+      "id": "tone_literary",
+      "register": "close-third",
+      "agentId": "agent_tone"
+    }
+  ]
+}

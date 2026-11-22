@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Drafts",
+      "value": "42",
+      "hint": "In progress"
+    },
+    {
+      "label": "Words generated",
+      "value": "128k",
+      "hint": "Last 30 days"
+    },
+    {
+      "label": "Tone profiles",
+      "value": "8",
+      "hint": "Brand voices"
+    }
+  ]
+}

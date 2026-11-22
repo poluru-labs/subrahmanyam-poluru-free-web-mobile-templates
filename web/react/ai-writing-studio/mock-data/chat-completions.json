@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "outline": {
+      "request": {
+        "agentId": "agent_outline",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Chapter beats."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_outline",
+          "role": "assistant",
+          "content": "Outline Architect (prompt 2026.03.1) — Outline (demo): I would structure chapters for “Chapter beats.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "draft": {
+      "request": {
+        "agentId": "agent_draft",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Expand scene two."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_draft",
+          "role": "assistant",
+          "content": "Draft Composer (prompt 2026.02.5) — Draft (demo): I would expand prose for “Expand scene two.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "tone": {
+      "request": {
+        "agentId": "agent_tone",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Apply literary preset."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_tone",
+          "role": "assistant",
+          "content": "Tone Stylist (prompt 2026.01.4) — Tone (demo): I would restyle voice for “Apply literary preset.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "rewrite": {
+      "request": {
+        "agentId": "agent_rewrite",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Tighten paragraph."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_rewrite",
+          "role": "assistant",
+          "content": "Inline Rewriter (prompt 2026.03.0-rc2) — Rewrite (demo): I would refine lines in “Tighten paragraph.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_studio",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Revision checklist."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Revision Historian (prompt 2025.12.3) — Revisions (demo): I would track versions of “Revision checklist.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

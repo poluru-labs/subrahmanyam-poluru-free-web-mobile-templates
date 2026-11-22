@@ -1,0 +1,11 @@
+{
+  "slug": "ai-writing-studio",
+  "name": "AI Writing Studio",
+  "tagline": "Draft, edit, and refine long-form writing with editorial control.",
+  "brandColor": "#930031",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "writing-studio:active-agent"
+  }
+}

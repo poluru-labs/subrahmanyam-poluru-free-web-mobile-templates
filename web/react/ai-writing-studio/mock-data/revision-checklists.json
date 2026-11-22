@@ -1,0 +1,9 @@
+{
+  "checklists": [
+    {
+      "id": "rev_ch3",
+      "items": 8,
+      "agentId": "agent_studio"
+    }
+  ]
+}

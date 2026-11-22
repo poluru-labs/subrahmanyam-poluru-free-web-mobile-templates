@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_outline",
+      "name": "Outline Architect",
+      "description": "Builds chapter outlines and beat sheets for long-form narratives.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "outline",
+      "promptVersion": "2026.03.1",
+      "tools": [
+        "outline.tree",
+        "beat.sheet",
+        "arc.map"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_draft",
+      "name": "Draft Composer",
+      "description": "Expands outlines into prose with scene goals and pacing notes.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "draft",
+      "promptVersion": "2026.02.5",
+      "tools": [
+        "draft.expand",
+        "scene.goal",
+        "pacing.hint"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_tone",
+      "name": "Tone Stylist",
+      "description": "Applies tone and style presets while preserving author voice.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "tone",
+      "promptVersion": "2026.01.4",
+      "tools": [
+        "preset.apply",
+        "voice.lock",
+        "register.shift"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_rewrite",
+      "name": "Inline Rewriter",
+      "description": "Suggests tighter sentences, clearer transitions, and line-level fixes.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "rewrite",
+      "promptVersion": "2026.03.0-rc2",
+      "tools": [
+        "line.suggest",
+        "clarity.lift",
+        "transition.fix"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_studio",
+      "name": "Revision Historian",
+      "description": "Tracks chapter versions and assembles revise-loop checklists.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.3",
+      "tools": [
+        "version.diff",
+        "chapter.tag",
+        "revise.loop"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}
