@@ -1,0 +1,52 @@
+{
+  "contributions": [
+    {
+      "id": "pr-104",
+      "kind": "Pull request",
+      "title": "Improve keyboard navigation in command palette",
+      "repo": "radix-ui/primitives",
+      "number": 104,
+      "state": "Merged",
+      "date": "Sep 02, 2026",
+      "impact": "High",
+      "additions": 86,
+      "deletions": 21
+    },
+    {
+      "id": "issue-88",
+      "kind": "Issue",
+      "title": "Document the new cache invalidation flow",
+      "repo": "vercel/next.js",
+      "number": 88,
+      "state": "Open",
+      "date": "Aug 30, 2026",
+      "impact": "Medium",
+      "additions": 0,
+      "deletions": 0
+    },
+    {
+      "id": "review-61",
+      "kind": "Review",
+      "title": "Review: streaming server actions API",
+      "repo": "facebook/react",
+      "number": 61,
+      "state": "Approved",
+      "date": "Aug 27, 2026",
+      "impact": "High",
+      "additions": 14,
+      "deletions": 6
+    },
+    {
+      "id": "commit-42",
+      "kind": "Commit",
+      "title": "Add empty state to repository picker",
+      "repo": "Poluru/design-system",
+      "number": 42,
+      "state": "Pushed",
+      "date": "Aug 24, 2026",
+      "impact": "Low",
+      "additions": 42,
+      "deletions": 8
+    }
+  ]
+}

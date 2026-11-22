@@ -1,0 +1,27 @@
+{
+  "evidence": [
+    {
+      "id": "ev-1",
+      "title": "Keyboard navigation contribution",
+      "source": "radix-ui/primitives#104",
+      "type": "Pull request",
+      "tags": [
+        "accessibility",
+        "react"
+      ],
+      "notes": "Merged after two rounds of review.",
+      "date": "Sep 02, 2026"
+    },
+    {
+      "id": "ev-2",
+      "title": "Cache invalidation investigation",
+      "source": "vercel/next.js#88",
+      "type": "Issue",
+      "tags": [
+        "performance"
+      ],
+      "notes": "Reproduction and suggested fix attached.",
+      "date": "Aug 30, 2026"
+    }
+  ]
+}

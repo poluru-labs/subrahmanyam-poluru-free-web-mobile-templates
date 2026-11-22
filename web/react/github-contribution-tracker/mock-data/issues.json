@@ -1,0 +1,39 @@
+{
+  "issues": [
+    {
+      "id": "i-1",
+      "title": "Add reduced motion guidance to animation docs",
+      "repo": "motiondivision/motion",
+      "labels": [
+        "documentation",
+        "good first issue"
+      ],
+      "effort": "Small",
+      "comments": 3,
+      "updated": "2h ago"
+    },
+    {
+      "id": "i-2",
+      "title": "Improve screen reader announcement for async updates",
+      "repo": "radix-ui/primitives",
+      "labels": [
+        "a11y",
+        "help wanted"
+      ],
+      "effort": "Medium",
+      "comments": 8,
+      "updated": "5h ago"
+    },
+    {
+      "id": "i-3",
+      "title": "Add examples for custom error boundaries",
+      "repo": "facebook/react",
+      "labels": [
+        "documentation"
+      ],
+      "effort": "Small",
+      "comments": 12,
+      "updated": "Yesterday"
+    }
+  ]
+}

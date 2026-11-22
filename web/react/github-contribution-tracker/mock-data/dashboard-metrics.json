@@ -1,0 +1,8 @@
+{
+  "metrics": [
+    { "label": "Contribution score", "value": "86", "hint": "+12 this month", "icon": "speedometer2" },
+    { "label": "Open source streak", "value": "18 days", "hint": "Personal best: 31", "icon": "fire" },
+    { "label": "Pull requests merged", "value": "24", "hint": "+4 this quarter", "icon": "git" },
+    { "label": "Evidence captured", "value": "2", "hint": "Across 8 repositories", "icon": "collection" }
+  ]
+}

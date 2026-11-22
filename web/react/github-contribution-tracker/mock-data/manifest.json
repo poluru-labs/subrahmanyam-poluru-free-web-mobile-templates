@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for GitHub contribution tracker.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "overview hero metrics"
+    },
+    {
+      "path": "profile.json",
+      "entity": "contributor profile"
+    },
+    {
+      "path": "contributions.json",
+      "entity": "contribution activity"
+    },
+    {
+      "path": "repositories.json",
+      "entity": "watched repositories"
+    },
+    {
+      "path": "issues.json",
+      "entity": "discover issues"
+    },
+    {
+      "path": "evidence.json",
+      "entity": "evidence vault items"
+    },
+    {
+      "path": "navigation.json",
+      "entity": "nav and breadcrumbs"
+    },
+    {
+      "path": "manifest.json",
+      "entity": "file index"
+    }
+  ]
+}

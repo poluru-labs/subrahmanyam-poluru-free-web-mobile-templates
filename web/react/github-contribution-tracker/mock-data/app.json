@@ -1,0 +1,7 @@
+{
+  "slug": "github-contribution-tracker",
+  "name": "GitHub Contribution Tracker",
+  "tagline": "Track OSS contributions, repos, and evidence.",
+  "brandColor": "#24292f",
+  "sourceModule": "src/data.js"
+}

@@ -1,0 +1,61 @@
+{
+  "navItems": [
+    {
+      "to": "/",
+      "label": "Overview",
+      "icon": "grid-1x2",
+      "end": true
+    },
+    {
+      "to": "/discover",
+      "label": "Discover issues",
+      "icon": "compass"
+    },
+    {
+      "to": "/repositories",
+      "label": "Repositories",
+      "icon": "journal-code"
+    },
+    {
+      "to": "/contributions",
+      "label": "Contributions",
+      "icon": "git"
+    },
+    {
+      "to": "/evidence",
+      "label": "Evidence vault",
+      "icon": "collection"
+    },
+    {
+      "to": "/settings",
+      "label": "Settings",
+      "icon": "gear"
+    }
+  ],
+  "breadcrumbs": {
+    "/": [
+      "Workspace",
+      "Overview"
+    ],
+    "/discover": [
+      "Workspace",
+      "Discover issues"
+    ],
+    "/repositories": [
+      "Workspace",
+      "Repositories"
+    ],
+    "/contributions": [
+      "Workspace",
+      "Contributions"
+    ],
+    "/evidence": [
+      "Workspace",
+      "Evidence vault"
+    ],
+    "/settings": [
+      "Workspace",
+      "Settings"
+    ]
+  }
+}

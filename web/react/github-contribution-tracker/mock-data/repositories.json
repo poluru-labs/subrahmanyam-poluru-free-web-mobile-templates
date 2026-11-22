@@ -1,0 +1,37 @@
+{
+  "repositories": [
+    {
+      "owner": "radix-ui",
+      "name": "primitives",
+      "description": "Unstyled, accessible UI components for React.",
+      "language": "TypeScript",
+      "health": 92,
+      "openIssues": 48,
+      "stars": "18.4k",
+      "watched": true,
+      "color": "#3178c6"
+    },
+    {
+      "owner": "vercel",
+      "name": "next.js",
+      "description": "The React framework for the web.",
+      "language": "JavaScript",
+      "health": 84,
+      "openIssues": 216,
+      "stars": "132k",
+      "watched": true,
+      "color": "#1f2937"
+    },
+    {
+      "owner": "facebook",
+      "name": "react",
+      "description": "The library for web and native user interfaces.",
+      "language": "JavaScript",
+      "health": 96,
+      "openIssues": 184,
+      "stars": "242k",
+      "watched": true,
+      "color": "#61dafb"
+    }
+  ]
+}
