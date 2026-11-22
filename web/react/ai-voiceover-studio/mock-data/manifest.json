@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Voiceover Studio.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "timing-marks.json",
+      "entity": "pace marks"
+    },
+    {
+      "path": "emphasis-highlights.json",
+      "entity": "stress words"
+    },
+    {
+      "path": "take-logs.json",
+      "entity": "session takes"
+    },
+    {
+      "path": "pronunciation-glossaries.json",
+      "entity": "IPA hints"
+    },
+    {
+      "path": "session-briefs.json",
+      "entity": "booth briefs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}

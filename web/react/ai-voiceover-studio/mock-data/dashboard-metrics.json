@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Scripts",
+      "value": "210",
+      "hint": "Ready"
+    },
+    {
+      "label": "Takes logged",
+      "value": "640",
+      "hint": "Reviewed"
+    },
+    {
+      "label": "Languages",
+      "value": "12",
+      "hint": "Supported"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_timing",
+      "name": "Timing Director",
+      "description": "Marks script pacing, pause lengths, and read-time estimates for booth sessions.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "timing",
+      "promptVersion": "2026.03.7",
+      "tools": [
+        "pace.mark",
+        "pause.sec",
+        "wpm.estimate"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_emphasis",
+      "name": "Emphasis Coach",
+      "description": "Highlights words to stress, soften, or lift for clarity and brand voice.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "emphasis",
+      "promptVersion": "2026.02.1",
+      "tools": [
+        "stress.word",
+        "tone.lift",
+        "brand.voice"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_takes",
+      "name": "Take Logger",
+      "description": "Structures take notes, pick directions, and flag lines needing pickups.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "takes",
+      "promptVersion": "2026.01.1",
+      "tools": [
+        "take.log",
+        "pick.best",
+        "pickup.flag"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_pronounce",
+      "name": "Pronunciation Guide",
+      "description": "Builds glossaries for names, acronyms, and locale-specific phonetics.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "pronunciation",
+      "promptVersion": "2026.03.0-rc7",
+      "tools": [
+        "ipa.hint",
+        "glossary.add",
+        "locale.pick"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_voice",
+      "name": "Studio Composer",
+      "description": "Combines timing, emphasis, takes, and glossaries into a session brief.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.10",
+      "tools": [
+        "brief.merge",
+        "session.pack",
+        "export.notes"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}
