@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "diarize": {
+      "request": {
+        "agentId": "agent_diarize",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Label speaker turns."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_diarize",
+          "role": "assistant",
+          "content": "Speaker Diarizer (prompt 2026.03.4) — Diarize (demo): I would label speakers in “Label speaker turns.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "cleanup": {
+      "request": {
+        "agentId": "agent_cleanup",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Remove fillers."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_cleanup",
+          "role": "assistant",
+          "content": "Transcript Cleaner (prompt 2026.02.9) — Cleanup (demo): I would polish text in “Remove fillers.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "timestamps": {
+      "request": {
+        "agentId": "agent_timestamps",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Add chapter markers."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_timestamps",
+          "role": "assistant",
+          "content": "Timestamp Navigator (prompt 2026.01.4) — Timestamps (demo): I would align cues for “Add chapter markers.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "export": {
+      "request": {
+        "agentId": "agent_export",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Export SRT captions."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_export",
+          "role": "assistant",
+          "content": "Export Formatter (prompt 2026.03.0-rc4) — Export (demo): I would format captions from “Export SRT captions.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_workspace",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Delivery checklist."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Workspace Composer (prompt 2025.12.7) — Composer (demo): I would build a pipeline from “Delivery checklist.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_diarize",
+      "title": "Tag podcast speakers",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_diarize",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Three hosts with occasional overlap.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Speaker Diarizer (prompt 2026.03.4) — Diarize (demo): I would label speakers in “Three hosts with occasional overlap.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}
