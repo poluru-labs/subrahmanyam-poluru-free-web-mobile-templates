@@ -1,0 +1,94 @@
+{
+  "transactions": [
+    {
+      "id": "t1",
+      "date": "2026-08-20",
+      "description": "Payroll · Poluru Labs",
+      "category": "Income",
+      "accountId": "acc-check",
+      "amount": 5200,
+      "type": "income"
+    },
+    {
+      "id": "t2",
+      "date": "2026-08-19",
+      "description": "VTI buy · 10 shares",
+      "category": "Investing",
+      "accountId": "acc-broker",
+      "amount": -2684,
+      "type": "investment"
+    },
+    {
+      "id": "t3",
+      "date": "2026-08-18",
+      "description": "Rent · August",
+      "category": "Housing",
+      "accountId": "acc-check",
+      "amount": -2100,
+      "type": "expense"
+    },
+    {
+      "id": "t4",
+      "date": "2026-08-17",
+      "description": "Transfer to Ally savings",
+      "category": "Transfer",
+      "accountId": "acc-check",
+      "amount": -800,
+      "type": "transfer"
+    },
+    {
+      "id": "t5",
+      "date": "2026-08-16",
+      "description": "Grocery · FreshMart",
+      "category": "Food",
+      "accountId": "acc-card",
+      "amount": -142.55,
+      "type": "expense"
+    },
+    {
+      "id": "t6",
+      "date": "2026-08-15",
+      "description": "Dividend · AAPL",
+      "category": "Dividends",
+      "accountId": "acc-broker",
+      "amount": 68.4,
+      "type": "income"
+    },
+    {
+      "id": "t7",
+      "date": "2026-08-14",
+      "description": "Utilities · Electric",
+      "category": "Utilities",
+      "accountId": "acc-check",
+      "amount": -126.2,
+      "type": "expense"
+    },
+    {
+      "id": "t8",
+      "date": "2026-08-12",
+      "description": "401(k) contribution",
+      "category": "Investing",
+      "accountId": "acc-401k",
+      "amount": 950,
+      "type": "investment"
+    },
+    {
+      "id": "t9",
+      "date": "2026-08-10",
+      "description": "Transit pass",
+      "category": "Transport",
+      "accountId": "acc-card",
+      "amount": -96,
+      "type": "expense"
+    },
+    {
+      "id": "t10",
+      "date": "2026-08-08",
+      "description": "Interest · Ally HYSA",
+      "category": "Interest",
+      "accountId": "acc-save",
+      "amount": 142.18,
+      "type": "income"
+    }
+  ]
+}

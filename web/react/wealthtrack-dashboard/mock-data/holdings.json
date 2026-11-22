@@ -1,0 +1,81 @@
+{
+  "holdings": [
+    {
+      "id": "h1",
+      "symbol": "VTI",
+      "name": "Vanguard Total Stock Market",
+      "assetClass": "ETF",
+      "shares": 220,
+      "price": 268.4,
+      "costBasis": 214.1,
+      "dayChangePct": 0.62,
+      "accountId": "acc-broker"
+    },
+    {
+      "id": "h2",
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "assetClass": "Equity",
+      "shares": 85,
+      "price": 224.15,
+      "costBasis": 168.4,
+      "dayChangePct": 1.12,
+      "accountId": "acc-broker"
+    },
+    {
+      "id": "h3",
+      "symbol": "MSFT",
+      "name": "Microsoft Corp.",
+      "assetClass": "Equity",
+      "shares": 40,
+      "price": 428.9,
+      "costBasis": 310.2,
+      "dayChangePct": 0.48,
+      "accountId": "acc-broker"
+    },
+    {
+      "id": "h4",
+      "symbol": "BND",
+      "name": "Vanguard Total Bond Market",
+      "assetClass": "Bond",
+      "shares": 310,
+      "price": 73.2,
+      "costBasis": 76.8,
+      "dayChangePct": -0.15,
+      "accountId": "acc-401k"
+    },
+    {
+      "id": "h5",
+      "symbol": "VXUS",
+      "name": "Vanguard Total Intl Stock",
+      "assetClass": "ETF",
+      "shares": 180,
+      "price": 64.5,
+      "costBasis": 58.1,
+      "dayChangePct": 0.33,
+      "accountId": "acc-401k"
+    },
+    {
+      "id": "h6",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "assetClass": "Crypto",
+      "shares": 0.42,
+      "price": 64200,
+      "costBasis": 48000,
+      "dayChangePct": 2.1,
+      "accountId": "acc-broker"
+    },
+    {
+      "id": "h7",
+      "symbol": "CASH",
+      "name": "USD Sweep",
+      "assetClass": "Cash",
+      "shares": 12400,
+      "price": 1,
+      "costBasis": 1,
+      "dayChangePct": 0,
+      "accountId": "acc-broker"
+    }
+  ]
+}

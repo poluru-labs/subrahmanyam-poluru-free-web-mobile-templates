@@ -1,0 +1,28 @@
+{
+  "watchlist": [
+    {
+      "id": "w1",
+      "symbol": "NVDA",
+      "name": "NVIDIA Corp.",
+      "price": 118.4,
+      "changePct": 1.8,
+      "notes": "AI exposure watch"
+    },
+    {
+      "id": "w2",
+      "symbol": "SCHD",
+      "name": "Schwab US Dividend Equity",
+      "price": 28.1,
+      "changePct": 0.2,
+      "notes": "Dividend candidate"
+    },
+    {
+      "id": "w3",
+      "symbol": "GLD",
+      "name": "SPDR Gold Shares",
+      "price": 224.6,
+      "changePct": -0.4,
+      "notes": "Hedge sleeve"
+    }
+  ]
+}

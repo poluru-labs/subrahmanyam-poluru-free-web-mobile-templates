@@ -1,0 +1,40 @@
+{
+  "budgets": [
+    {
+      "id": "b1",
+      "name": "Housing",
+      "planned": 2200,
+      "spent": 2100
+    },
+    {
+      "id": "b2",
+      "name": "Food",
+      "planned": 650,
+      "spent": 482
+    },
+    {
+      "id": "b3",
+      "name": "Transport",
+      "planned": 220,
+      "spent": 196
+    },
+    {
+      "id": "b4",
+      "name": "Utilities",
+      "planned": 180,
+      "spent": 126
+    },
+    {
+      "id": "b5",
+      "name": "Entertainment",
+      "planned": 200,
+      "spent": 240
+    },
+    {
+      "id": "b6",
+      "name": "Subscriptions",
+      "planned": 90,
+      "spent": 78
+    }
+  ]
+}

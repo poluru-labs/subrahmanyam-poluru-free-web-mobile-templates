@@ -1,0 +1,36 @@
+{
+  "goals": [
+    {
+      "id": "g1",
+      "title": "Emergency fund (6 mo)",
+      "target": 60000,
+      "saved": 45750,
+      "deadline": "2026-12-31",
+      "category": "Safety"
+    },
+    {
+      "id": "g2",
+      "title": "Home down payment",
+      "target": 120000,
+      "saved": 38400,
+      "deadline": "2028-06-01",
+      "category": "Housing"
+    },
+    {
+      "id": "g3",
+      "title": "India trip fund",
+      "target": 8000,
+      "saved": 5200,
+      "deadline": "2027-01-15",
+      "category": "Travel"
+    },
+    {
+      "id": "g4",
+      "title": "Roth conversion buffer",
+      "target": 25000,
+      "saved": 9100,
+      "deadline": "2027-04-15",
+      "category": "Tax"
+    }
+  ]
+}
