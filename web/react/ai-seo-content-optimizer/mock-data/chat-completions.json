@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "intent": {
+      "request": {
+        "agentId": "agent_intent",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Cluster intent for pricing page."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_intent",
+          "role": "assistant",
+          "content": "Intent Mapper (prompt 2026.03.2) — Intent map (demo): I would cluster intent for “Cluster intent for pricing page.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "onpage": {
+      "request": {
+        "agentId": "agent_onpage",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Audit title and meta."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_onpage",
+          "role": "assistant",
+          "content": "On-Page Advisor (prompt 2026.02.5) — On-page (demo): I would audit titles and meta around “Audit title and meta.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "outline": {
+      "request": {
+        "agentId": "agent_outline",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Reshape FAQ sections."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_outline",
+          "role": "assistant",
+          "content": "Outline Optimizer (prompt 2026.01.9) — Outline (demo): I would reshape sections for “Reshape FAQ sections.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "links": {
+      "request": {
+        "agentId": "agent_links",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Suggest internal targets."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_links",
+          "role": "assistant",
+          "content": "Link Strategist (prompt 2026.03.0-rc2) — Links (demo): I would suggest internal targets for “Suggest internal targets.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_seo",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Build optimization brief."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Content Composer (prompt 2025.12.3) — Composer (demo): I would build an optimization brief from “Build optimization brief.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

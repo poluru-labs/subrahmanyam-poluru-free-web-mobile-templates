@@ -1,0 +1,10 @@
+{
+  "briefs": [
+    {
+      "id": "brief_march_sprint",
+      "priority": "high",
+      "checklistItems": 6,
+      "agentId": "agent_seo"
+    }
+  ]
+}

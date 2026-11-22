@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_intent",
+      "title": "Map pricing page intent",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_intent",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Commercial queries for enterprise pricing.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Intent Mapper (prompt 2026.03.2) — Intent map (demo): I would cluster intent for “Commercial queries for enterprise pricing.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

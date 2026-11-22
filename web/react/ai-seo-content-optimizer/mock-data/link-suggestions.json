@@ -1,0 +1,13 @@
+{
+  "suggestions": [
+    {
+      "id": "lnk_orphan_docs",
+      "targetSlug": "/docs/api",
+      "anchorVariants": [
+        "API reference",
+        "REST docs"
+      ],
+      "agentId": "agent_links"
+    }
+  ]
+}
