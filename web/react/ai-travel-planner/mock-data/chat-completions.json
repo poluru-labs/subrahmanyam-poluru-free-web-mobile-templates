@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "itinerary": {
+      "request": {
+        "agentId": "agent_itinerary",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Plan rail route."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_itinerary",
+          "role": "assistant",
+          "content": "Itinerary Builder (prompt 2026.03.5) — Itinerary (demo): I would route a trip around “Plan rail route.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "budget": {
+      "request": {
+        "agentId": "agent_budget",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Mid-tier budget."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_budget",
+          "role": "assistant",
+          "content": "Budget Analyst (prompt 2026.02.3) — Budget (demo): I would break out costs for “Mid-tier budget.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "agenda": {
+      "request": {
+        "agentId": "agent_agenda",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Day map for temples."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_agenda",
+          "role": "assistant",
+          "content": "Day Map Planner (prompt 2026.01.2) — Agenda (demo): I would map days for “Day map for temples.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "packing": {
+      "request": {
+        "agentId": "agent_packing",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Carry-on spring list."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_packing",
+          "role": "assistant",
+          "content": "Packing Curator (prompt 2026.03.0-rc5) — Packing (demo): I would list gear for “Carry-on spring list.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_trip",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Shareable trip brief."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Trip Composer (prompt 2025.12.8) — Composer (demo): I would assemble a brief from “Shareable trip brief.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}
