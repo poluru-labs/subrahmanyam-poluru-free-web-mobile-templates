@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Sheets assisted",
+      "value": "410",
+      "hint": "This month"
+    },
+    {
+      "label": "Formulas fixed",
+      "value": "980",
+      "hint": "Validated"
+    },
+    {
+      "label": "Time saved",
+      "value": "120h",
+      "hint": "Estimated"
+    }
+  ]
+}

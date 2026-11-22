@@ -1,0 +1,11 @@
+{
+  "slug": "ai-spreadsheet-assistant",
+  "name": "AI Spreadsheet Assistant",
+  "tagline": "Generate formulas, clean tables, and explain spreadsheet logic.",
+  "brandColor": "#882255",
+  "defaultModel": "gpt-4.1-mini",
+  "apiBaseUrl": "http://localhost:8080/api/v1",
+  "storageKeys": {
+    "activeAgentId": "spreadsheet-assistant:active-agent"
+  }
+}

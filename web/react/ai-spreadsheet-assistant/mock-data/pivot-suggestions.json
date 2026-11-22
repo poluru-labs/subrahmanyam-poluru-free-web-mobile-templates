@@ -1,0 +1,14 @@
+{
+  "suggestions": [
+    {
+      "id": "pvt_region_revenue",
+      "rows": [
+        "region"
+      ],
+      "values": [
+        "sum(revenue)"
+      ],
+      "agentId": "agent_pivot"
+    }
+  ]
+}

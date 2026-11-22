@@ -1,0 +1,13 @@
+{
+  "plans": [
+    {
+      "id": "cln_vendor_list",
+      "steps": [
+        "trim",
+        "dedupe",
+        "type.cast"
+      ],
+      "agentId": "agent_cleanup"
+    }
+  ]
+}

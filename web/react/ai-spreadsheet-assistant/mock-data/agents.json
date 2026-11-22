@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_formulas",
+      "name": "Formula Builder",
+      "description": "Generates Excel/Sheets formulas from plain-language goals and sample cells.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "formulas",
+      "promptVersion": "2026.03.3",
+      "tools": [
+        "formula.gen",
+        "range.infer",
+        "locale.fn"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_cleanup",
+      "name": "Data Cleaner",
+      "description": "Suggests trims, dedupe steps, type fixes, and delimiter normalization.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "cleanup",
+      "promptVersion": "2026.02.7",
+      "tools": [
+        "trim.plan",
+        "dedupe.key",
+        "type.cast"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_pivot",
+      "name": "Pivot Advisor",
+      "description": "Proposes pivot dimensions, aggregations, and slicer-friendly layouts.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "pivot",
+      "promptVersion": "2026.01.6",
+      "tools": [
+        "pivot.suggest",
+        "agg.pick",
+        "slice.rank"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_explain",
+      "name": "Logic Explainer",
+      "description": "Translates nested formulas and linked ranges into plain-language steps.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "explain",
+      "promptVersion": "2026.03.0-rc3",
+      "tools": [
+        "formula.parse",
+        "dep.trace",
+        "glossary.map"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_sheet",
+      "name": "Sheet Composer",
+      "description": "Combines formulas, cleanup, and pivots into a workbook action plan.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.5",
+      "tools": [
+        "plan.merge",
+        "sheet.order",
+        "checklist.emit"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}
