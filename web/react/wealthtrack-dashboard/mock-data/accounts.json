@@ -1,0 +1,54 @@
+{
+  "accounts": [
+    {
+      "id": "acc-broker",
+      "name": "Growth Brokerage",
+      "institution": "Fidelity",
+      "type": "Brokerage",
+      "balance": 186420,
+      "currency": "USD",
+      "lastSynced": "2026-08-21T14:20:00",
+      "status": "healthy"
+    },
+    {
+      "id": "acc-401k",
+      "name": "Workplace 401(k)",
+      "institution": "Vanguard",
+      "type": "Retirement",
+      "balance": 126060,
+      "currency": "USD",
+      "lastSynced": "2026-08-21T09:05:00",
+      "status": "healthy"
+    },
+    {
+      "id": "acc-check",
+      "name": "Everyday Checking",
+      "institution": "Chase",
+      "type": "Checking",
+      "balance": 18450,
+      "currency": "USD",
+      "lastSynced": "2026-08-21T16:40:00",
+      "status": "healthy"
+    },
+    {
+      "id": "acc-save",
+      "name": "Emergency Savings",
+      "institution": "Ally",
+      "type": "Savings",
+      "balance": 45750,
+      "currency": "USD",
+      "lastSynced": "2026-08-20T22:10:00",
+      "status": "healthy"
+    },
+    {
+      "id": "acc-card",
+      "name": "Rewards Card",
+      "institution": "Amex",
+      "type": "Credit",
+      "balance": -18430,
+      "currency": "USD",
+      "lastSynced": "2026-08-21T12:00:00",
+      "status": "attention"
+    }
+  ]
+}

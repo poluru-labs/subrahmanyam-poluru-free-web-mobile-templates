@@ -1,0 +1,28 @@
+{
+  "netWorthSeries": [
+    {
+      "month": "Mar",
+      "value": 392000
+    },
+    {
+      "month": "Apr",
+      "value": 401200
+    },
+    {
+      "month": "May",
+      "value": 408750
+    },
+    {
+      "month": "Jun",
+      "value": 415100
+    },
+    {
+      "month": "Jul",
+      "value": 421900
+    },
+    {
+      "month": "Aug",
+      "value": 428650
+    }
+  ]
+}

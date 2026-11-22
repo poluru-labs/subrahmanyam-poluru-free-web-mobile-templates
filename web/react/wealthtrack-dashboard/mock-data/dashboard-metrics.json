@@ -1,0 +1,32 @@
+{
+  "metrics": [
+    {
+      "id": "nw",
+      "label": "Net worth",
+      "value": 428650,
+      "changePct": 2.4,
+      "hint": "Vs last month"
+    },
+    {
+      "id": "invested",
+      "label": "Invested",
+      "value": 312480,
+      "changePct": 1.8,
+      "hint": "Brokerage + retirement"
+    },
+    {
+      "id": "cash",
+      "label": "Cash",
+      "value": 64200,
+      "changePct": -0.4,
+      "hint": "Checking + savings"
+    },
+    {
+      "id": "debt",
+      "label": "Liabilities",
+      "value": 18430,
+      "changePct": -3.1,
+      "hint": "Credit balance"
+    }
+  ]
+}

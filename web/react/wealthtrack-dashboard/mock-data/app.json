@@ -1,0 +1,7 @@
+{
+  "slug": "wealthtrack-dashboard",
+  "name": "Wealthtrack Dashboard",
+  "tagline": "Personal wealth and budget tracking.",
+  "brandColor": "#1D4ED8",
+  "sourceModule": "src/data/mock.ts"
+}

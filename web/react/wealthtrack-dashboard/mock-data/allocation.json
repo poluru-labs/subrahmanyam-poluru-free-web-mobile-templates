@@ -1,0 +1,29 @@
+{
+  "allocation": [
+    {
+      "label": "Equities",
+      "value": 48,
+      "color": "#1D4ED8"
+    },
+    {
+      "label": "ETFs",
+      "value": 22,
+      "color": "#3B82F6"
+    },
+    {
+      "label": "Bonds",
+      "value": 12,
+      "color": "#0EA5E9"
+    },
+    {
+      "label": "Cash",
+      "value": 15,
+      "color": "#38BDF8"
+    },
+    {
+      "label": "Crypto",
+      "value": 3,
+      "color": "#1E3A8A"
+    }
+  ]
+}

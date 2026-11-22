@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for Wealthtrack personal finance dashboard.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "profile.json",
+      "entity": "user profile"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "overview stats"
+    },
+    {
+      "path": "net-worth-series.json",
+      "entity": "NetWorthPoint[]"
+    },
+    {
+      "path": "allocation.json",
+      "entity": "AllocationSlice[]"
+    },
+    {
+      "path": "accounts.json",
+      "entity": "Account[]"
+    },
+    {
+      "path": "holdings.json",
+      "entity": "Holding[]"
+    },
+    {
+      "path": "transactions.json",
+      "entity": "Transaction[]"
+    },
+    {
+      "path": "goals.json",
+      "entity": "Goal[]"
+    },
+    {
+      "path": "budgets.json",
+      "entity": "BudgetCategory[]"
+    },
+    {
+      "path": "watchlist.json",
+      "entity": "WatchItem[]"
+    },
+    {
+      "path": "recent-activity.json",
+      "entity": "activity feed"
+    },
+    {
+      "path": "manifest.json",
+      "entity": "file index"
+    }
+  ]
+}
