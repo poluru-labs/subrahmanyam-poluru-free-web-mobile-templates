@@ -1,0 +1,10 @@
+{
+  "reports": [
+    {
+      "id": "gap_calc_integrals",
+      "topic": "integration",
+      "severity": "medium",
+      "agentId": "agent_weakarea"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_explain",
+      "title": "Explain derivatives",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_explain",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Use an analogy for rate of change.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Concept Guide (prompt 2026.03.2) — Explain (demo): I would break down “Use an analogy for rate of change.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

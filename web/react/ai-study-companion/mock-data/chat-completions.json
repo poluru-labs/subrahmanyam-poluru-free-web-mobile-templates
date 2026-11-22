@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "explain": {
+      "request": {
+        "agentId": "agent_explain",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Explain derivatives simply."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_explain",
+          "role": "assistant",
+          "content": "Concept Guide (prompt 2026.03.2) — Explain (demo): I would break down “Explain derivatives simply.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "spaced": {
+      "request": {
+        "agentId": "agent_spaced",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Schedule flashcards."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_spaced",
+          "role": "assistant",
+          "content": "Repetition Coach (prompt 2026.02.8) — Spaced rep (demo): I would schedule cards for “Schedule flashcards.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "planner": {
+      "request": {
+        "agentId": "agent_planner",
+        "messages": [
+          {
+            "role": "user",
+            "content": "90-minute study block."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_planner",
+          "role": "assistant",
+          "content": "Session Planner (prompt 2026.01.5) — Planner (demo): I would time-box study for “90-minute study block.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "weakarea": {
+      "request": {
+        "agentId": "agent_weakarea",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Find integration gaps."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_weakarea",
+          "role": "assistant",
+          "content": "Weak-Spot Finder (prompt 2026.03.0-rc2) — Weak area (demo): I would flag gaps in “Find integration gaps.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_study",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Weekly mastery roadmap."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Study Composer (prompt 2025.12.6) — Composer (demo): I would draft a roadmap from “Weekly mastery roadmap.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}
