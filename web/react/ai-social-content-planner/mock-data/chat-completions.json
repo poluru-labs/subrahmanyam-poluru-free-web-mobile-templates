@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "calendar": {
+      "request": {
+        "agentId": "agent_calendar",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Plan weekly slots."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_calendar",
+          "role": "assistant",
+          "content": "Calendar Board (prompt 2026.03.1) — Calendar (demo): I would slot posts around “Plan weekly slots.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "captions": {
+      "request": {
+        "agentId": "agent_captions",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Draft hook variants."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_captions",
+          "role": "assistant",
+          "content": "Caption Studio (prompt 2026.02.6) — Captions (demo): I would draft variants for “Draft hook variants.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "hashtags": {
+      "request": {
+        "agentId": "agent_hashtags",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Curate launch tags."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_hashtags",
+          "role": "assistant",
+          "content": "Hashtag Curator (prompt 2026.01.7) — Hashtags (demo): I would curate tags for “Curate launch tags.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "tone": {
+      "request": {
+        "agentId": "agent_tone",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Adapt for Instagram."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_tone",
+          "role": "assistant",
+          "content": "Tone Adapter (prompt 2026.03.0-rc1) — Tone (demo): I would adapt voice for “Adapt for Instagram.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_campaign",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Merge into campaign brief."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Campaign Composer (prompt 2025.12.4) — Composer (demo): I would build a brief from “Merge into campaign brief.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}

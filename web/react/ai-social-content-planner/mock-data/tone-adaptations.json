@@ -1,0 +1,10 @@
+{
+  "adaptations": [
+    {
+      "id": "tone_li_to_x",
+      "sourceNetwork": "linkedin",
+      "targetNetwork": "x",
+      "agentId": "agent_tone"
+    }
+  ]
+}
