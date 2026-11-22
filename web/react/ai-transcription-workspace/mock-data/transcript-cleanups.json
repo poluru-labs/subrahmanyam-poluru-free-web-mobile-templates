@@ -1,0 +1,9 @@
+{
+  "cleanups": [
+    {
+      "id": "cln_rec_012",
+      "fillersRemoved": 42,
+      "agentId": "agent_cleanup"
+    }
+  ]
+}

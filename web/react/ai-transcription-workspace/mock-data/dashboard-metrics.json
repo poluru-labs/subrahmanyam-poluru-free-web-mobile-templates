@@ -1,0 +1,19 @@
+{
+  "metrics": [
+    {
+      "label": "Hours processed",
+      "value": "320",
+      "hint": "This month"
+    },
+    {
+      "label": "WER",
+      "value": "4.1%",
+      "hint": "Avg. error"
+    },
+    {
+      "label": "Speakers tagged",
+      "value": "1.8k",
+      "hint": "Diarized"
+    }
+  ]
+}

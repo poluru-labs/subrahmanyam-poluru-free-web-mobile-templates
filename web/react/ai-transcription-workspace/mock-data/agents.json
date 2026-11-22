@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "id": "agent_diarize",
+      "name": "Speaker Diarizer",
+      "description": "Labels speaker turns and suggests splits when overlap or crosstalk is detected.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "diarize",
+      "promptVersion": "2026.03.4",
+      "tools": [
+        "speaker.tag",
+        "overlap.flag",
+        "turn.merge"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_cleanup",
+      "name": "Transcript Cleaner",
+      "description": "Removes fillers, fixes punctuation, and normalizes domain terms.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "cleanup",
+      "promptVersion": "2026.02.9",
+      "tools": [
+        "filler.trim",
+        "punct.fix",
+        "term.normalize"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_timestamps",
+      "name": "Timestamp Navigator",
+      "description": "Aligns cues, chapter markers, and seek-friendly segment boundaries.",
+      "model": "gpt-4.1-mini",
+      "status": "active",
+      "category": "timestamps",
+      "promptVersion": "2026.01.4",
+      "tools": [
+        "cue.align",
+        "chapter.mark",
+        "seek.jump"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_export",
+      "name": "Export Formatter",
+      "description": "Prepares SRT, VTT, and markdown exports with caption-safe line breaks.",
+      "model": "gpt-4.1-mini",
+      "status": "draft",
+      "category": "export",
+      "promptVersion": "2026.03.0-rc4",
+      "tools": [
+        "srt.emit",
+        "vtt.emit",
+        "md.structure"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    },
+    {
+      "id": "agent_workspace",
+      "name": "Workspace Composer",
+      "description": "Assembles diarization, cleanup, and exports into a delivery checklist.",
+      "model": "gpt-4.1-mini",
+      "status": "paused",
+      "category": "general",
+      "promptVersion": "2025.12.7",
+      "tools": [
+        "pipeline.merge",
+        "qa.check",
+        "handoff.pack"
+      ],
+      "updatedAt": "2026-03-17T15:00:00.000Z"
+    }
+  ]
+}

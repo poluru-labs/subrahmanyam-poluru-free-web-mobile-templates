@@ -1,0 +1,10 @@
+{
+  "recordings": [
+    {
+      "id": "rec_podcast_012",
+      "durationMinutes": 48,
+      "format": "wav",
+      "uploadedAt": "2026-03-16T14:00:00.000Z"
+    }
+  ]
+}

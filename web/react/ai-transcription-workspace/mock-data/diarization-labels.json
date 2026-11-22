@@ -1,0 +1,10 @@
+{
+  "labels": [
+    {
+      "id": "dia_rec_012",
+      "speakerCount": 3,
+      "overlapSegments": 2,
+      "agentId": "agent_diarize"
+    }
+  ]
+}

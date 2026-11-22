@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "description": "Fixture JSON for AI Transcription Workspace.",
+  "files": [
+    {
+      "path": "app.json",
+      "entity": "application metadata"
+    },
+    {
+      "path": "agents.json",
+      "entity": "AiAgent[]"
+    },
+    {
+      "path": "dashboard-metrics.json",
+      "entity": "dashboard metrics"
+    },
+    {
+      "path": "recordings.json",
+      "entity": "audio sources"
+    },
+    {
+      "path": "diarization-labels.json",
+      "entity": "speaker turns"
+    },
+    {
+      "path": "transcript-cleanups.json",
+      "entity": "polished text"
+    },
+    {
+      "path": "timestamp-chapters.json",
+      "entity": "chapters and cues"
+    },
+    {
+      "path": "caption-exports.json",
+      "entity": "SRT/VTT packs"
+    },
+    {
+      "path": "chat-sessions.json",
+      "entity": "ChatSession samples"
+    },
+    {
+      "path": "chat-completions.json",
+      "entity": "mock completions by category"
+    }
+  ]
+}
