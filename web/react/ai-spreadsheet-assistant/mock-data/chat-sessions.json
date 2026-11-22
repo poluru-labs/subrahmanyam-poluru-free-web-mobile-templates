@@ -1,0 +1,25 @@
+{
+  "sessions": [
+    {
+      "id": "sess_formulas",
+      "title": "QoQ revenue formula",
+      "updatedAt": "2026-03-17T10:00:00.000Z",
+      "agentId": "agent_formulas",
+      "messages": [
+        {
+          "id": "msg_001",
+          "role": "user",
+          "content": "Compare Q1 vs Q2 in column D.",
+          "createdAt": "2026-03-17T09:55:00.000Z"
+        },
+        {
+          "id": "msg_002",
+          "role": "assistant",
+          "content": "Formula Builder (prompt 2026.03.3) — Formula (demo): I would build a formula for “Compare Q1 vs Q2 in column D.”.",
+          "createdAt": "2026-03-17T10:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        }
+      ]
+    }
+  ]
+}

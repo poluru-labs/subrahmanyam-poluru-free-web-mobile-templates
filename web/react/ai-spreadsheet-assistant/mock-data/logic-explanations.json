@@ -1,0 +1,9 @@
+{
+  "explanations": [
+    {
+      "id": "exp_nested_xlookup",
+      "formula": "XLOOKUP(...)",
+      "agentId": "agent_explain"
+    }
+  ]
+}

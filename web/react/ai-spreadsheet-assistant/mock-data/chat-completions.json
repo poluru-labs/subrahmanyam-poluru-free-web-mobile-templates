@@ -1,0 +1,139 @@
+{
+  "samplesByCategory": {
+    "formulas": {
+      "request": {
+        "agentId": "agent_formulas",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Build QoQ formula."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_formulas",
+          "role": "assistant",
+          "content": "Formula Builder (prompt 2026.03.3) — Formula (demo): I would build a formula for “Build QoQ formula.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "cleanup": {
+      "request": {
+        "agentId": "agent_cleanup",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Normalize vendor names."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_cleanup",
+          "role": "assistant",
+          "content": "Data Cleaner (prompt 2026.02.7) — Cleanup (demo): I would normalize data in “Normalize vendor names.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "pivot": {
+      "request": {
+        "agentId": "agent_pivot",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Pivot by region."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_pivot",
+          "role": "assistant",
+          "content": "Pivot Advisor (prompt 2026.01.6) — Pivot (demo): I would suggest a pivot layout for “Pivot by region.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "explain": {
+      "request": {
+        "agentId": "agent_explain",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Explain this XLOOKUP."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_explain",
+          "role": "assistant",
+          "content": "Logic Explainer (prompt 2026.03.0-rc3) — Explain (demo): I would unpack logic in “Explain this XLOOKUP.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    },
+    "general": {
+      "request": {
+        "agentId": "agent_sheet",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Draft workbook plan."
+          }
+        ],
+        "model": "gpt-4.1-mini",
+        "stream": false
+      },
+      "response": {
+        "message": {
+          "id": "msg_mock_general",
+          "role": "assistant",
+          "content": "Sheet Composer (prompt 2025.12.5) — Composer (demo): I would draft a sheet plan from “Draft workbook plan.”.",
+          "createdAt": "2026-03-17T15:00:00.000Z",
+          "model": "gpt-4.1-mini"
+        },
+        "usage": {
+          "promptTokens": 24,
+          "completionTokens": 48,
+          "totalTokens": 72
+        }
+      }
+    }
+  }
+}
