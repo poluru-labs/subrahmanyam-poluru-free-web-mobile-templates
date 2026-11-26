@@ -1,0 +1,29 @@
+<section class="intro">
+  <h2>Dataset bindings</h2>
+  <p>Sources linked to one or more chart definitions.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Dataset</th>
+        <th scope="col">Source</th>
+        <th scope="col">Charts</th>
+        <th scope="col">Steward</th>
+        <th scope="col">Refreshed</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (d of datasets; track d.id) {
+        <tr>
+          <td><code>{{ d.id }}</code></td>
+          <td>{{ d.source }}</td>
+          <td class="mono">{{ d.charts }}</td>
+          <td>{{ d.steward }}</td>
+          <td class="mono muted">{{ d.refreshed }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

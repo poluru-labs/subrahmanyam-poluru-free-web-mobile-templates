@@ -1,0 +1,16 @@
+<section class="intro">
+  <h2>Chart gallery</h2>
+  <p>Browse published and draft visuals by type.</p>
+</section>
+
+<div class="gallery">
+  @for (c of gallery; track c.name) {
+    <article class="card">
+      <div class="viz" aria-hidden="true"></div>
+      <h3>{{ c.name }}</h3>
+      <p class="mono">{{ c.type }}</p>
+      <p class="owner">{{ c.owner }}</p>
+      <span class="pill" [class.draft]="c.status === 'Draft'">{{ c.status }}</span>
+    </article>
+  }
+</div>

@@ -1,0 +1,45 @@
+:root {
+  --primary: #6d28d9;
+  --primary-dark: #5b21b6;
+  --primary-soft: #ede9fe;
+  --ink: #1e1b2e;
+  --muted: #6b7280;
+  --line: #e9e5f5;
+  --canvas: linear-gradient(165deg, #faf8ff 0%, #f3efff 48%, #ede9fe 100%);
+  --sidebar-bg: #ffffffcc;
+  --radius: 14px;
+  --font-display: 'Lato', system-ui, sans-serif;
+  --font-body: 'Roboto', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: #f5f3ff;
+  background: var(--canvas);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

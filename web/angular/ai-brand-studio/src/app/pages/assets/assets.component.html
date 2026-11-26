@@ -1,0 +1,16 @@
+<section class="intro">
+  <h2>Asset library</h2>
+  <p>Logos, templates, and downloadable brand files.</p>
+</section>
+
+<div class="grid">
+  @for (item of items; track item.name) {
+    <article class="card tile">
+      <div class="thumb" aria-hidden="true"></div>
+      <h3>{{ item.name }}</h3>
+      <p class="meta">{{ item.format }} · v{{ item.version }}</p>
+      <p class="owner">{{ item.owner }}</p>
+      <span class="pill" [class.muted]="item.status === 'Draft'">{{ item.status }}</span>
+    </article>
+  }
+</div>

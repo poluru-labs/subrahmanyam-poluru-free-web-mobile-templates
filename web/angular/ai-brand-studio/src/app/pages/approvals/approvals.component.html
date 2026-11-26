@@ -1,0 +1,29 @@
+<section class="intro">
+  <h2>Approval workflow</h2>
+  <p>Review queue for off-brand checks before publish.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Requester</th>
+        <th scope="col">Reviewer</th>
+        <th scope="col">Status</th>
+        <th scope="col">Due</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (q of queue; track q.item) {
+        <tr>
+          <td><strong>{{ q.item }}</strong></td>
+          <td>{{ q.requester }}</td>
+          <td>{{ q.reviewer }}</td>
+          <td><span class="pill" [class.ok]="q.status === 'Approved'" [class.warn]="q.status === 'Changes'">{{ q.status }}</span></td>
+          <td>{{ q.due }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

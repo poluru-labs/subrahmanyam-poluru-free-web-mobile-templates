@@ -1,0 +1,91 @@
+<section class="intro">
+  <h2>Visualization pulse</h2>
+  <p>Published charts, dataset bindings, and embed traffic.</p>
+</section>
+
+<div class="period" role="group" aria-label="Time period">
+  <button type="button" class="period-btn active">7d</button>
+  <button type="button" class="period-btn">30d</button>
+  <button type="button" class="period-btn">Quarter</button>
+</div>
+
+<div class="stats">
+  @for (s of stats; track s.label) {
+    <article class="card stat">
+      <p class="label">{{ s.label }}</p>
+      <p class="value">{{ s.value }}</p>
+      <p class="trend" [class.up]="s.up">{{ s.trend }}</p>
+    </article>
+  }
+</div>
+
+<div class="grid">
+  <article class="card chart-card">
+    <header><h3>Embed views</h3><p>Traffic to published embeds</p></header>
+    <svg class="chart" viewBox="0 0 400 120" role="img" aria-label="Embed views increasing over the week">
+      <defs>
+        <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0D9488" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#0D9488" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#chartFill)" d="M0 90 L0 70 100 65 200 50 300 38 400 32 L400 120 L0 120Z" />
+      <path fill="none" stroke="#0D9488" stroke-width="3" d="M0 70 100 65 200 50 300 38 400 32" />
+    </svg>
+  </article>
+
+  <article class="card">
+    <header><h3>Chart types</h3><p>Distribution in library</p></header>
+    <ul class="breakdown">
+      @for (t of types; track t.name) {
+        <li>
+          <span>{{ t.name }}</span>
+          <strong class="mono">{{ t.count }}</strong>
+          <div class="bar"><i [style.width.%]="t.pct"></i></div>
+        </li>
+      }
+    </ul>
+  </article>
+</div>
+
+<div class="grid two">
+  <article class="card">
+    <header><h3>Live previews</h3></header>
+    <ul class="previews">
+      @for (p of previews; track p.title) {
+        <li>
+          <span class="mini-chart" aria-hidden="true"></span>
+          <div>
+            <strong>{{ p.title }}</strong>
+            <span class="mono">{{ p.type }} · {{ p.dataset }}</span>
+          </div>
+        </li>
+      }
+    </ul>
+  </article>
+
+  <article class="card">
+    <header><h3>Top embeds</h3></header>
+    <ul class="embeds">
+      @for (e of embeds; track e.host) {
+        <li>
+          <strong>{{ e.chart }}</strong>
+          <span class="mono muted">{{ e.host }}</span>
+          <span>{{ e.views }} views · {{ e.owner }}</span>
+        </li>
+      }
+    </ul>
+  </article>
+</div>
+
+<article class="card">
+  <header><h3>Studio log</h3></header>
+  <ul class="activity">
+    @for (a of activity; track a.time) {
+      <li>
+        <time class="mono">{{ a.time }}</time>
+        <div><strong>{{ a.title }}</strong><p>{{ a.detail }}</p></div>
+      </li>
+    }
+  </ul>
+</article>

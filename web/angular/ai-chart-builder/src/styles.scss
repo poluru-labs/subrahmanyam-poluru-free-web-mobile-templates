@@ -1,0 +1,46 @@
+:root {
+  --primary: #0d9488;
+  --primary-dark: #0f766e;
+  --primary-soft: #ccfbf1;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #dbeafe;
+  --canvas: linear-gradient(180deg, #f0fdfa 0%, #ecfdf5 55%, #f8fafc 100%);
+  --sidebar-ink: #f0fdfa;
+  --radius: 10px;
+  --font-display: 'Lato', system-ui, sans-serif;
+  --font-body: 'Roboto', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: #f0fdfa;
+  background: var(--canvas);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

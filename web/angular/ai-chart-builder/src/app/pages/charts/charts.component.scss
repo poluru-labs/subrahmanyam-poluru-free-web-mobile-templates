@@ -1,0 +1,78 @@
+.intro h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.intro p {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ccfbf1;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.viz {
+  height: 72px;
+  border-radius: 6px;
+  margin-bottom: 0.65rem;
+  background: repeating-linear-gradient(
+    90deg,
+    #ccfbf1 0,
+    #ccfbf1 8px,
+    #0d9488 8px,
+    #0d9488 16px
+  );
+  opacity: 0.85;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.mono {
+  margin: 0.25rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--primary-dark);
+}
+
+.owner {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.pill {
+  display: inline-block;
+  margin-top: 0.55rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.pill.draft {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

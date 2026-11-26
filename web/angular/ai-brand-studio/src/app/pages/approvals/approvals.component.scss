@@ -1,0 +1,57 @@
+.intro h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.intro p {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.card {
+  background: #fffc;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+th {
+  text-align: left;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+td {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.pill.ok {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.pill.warn {
+  background: #ede9fe;
+  color: var(--primary-dark);
+}

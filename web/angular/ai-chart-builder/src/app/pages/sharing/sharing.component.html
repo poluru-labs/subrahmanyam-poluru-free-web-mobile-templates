@@ -1,0 +1,29 @@
+<section class="intro">
+  <h2>Embed share log</h2>
+  <p>Where published charts are embedded and how often they load.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Chart</th>
+        <th scope="col">Embed ID</th>
+        <th scope="col">Domain</th>
+        <th scope="col">Views</th>
+        <th scope="col">Last seen</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of log; track row.embedId) {
+        <tr>
+          <td><code>{{ row.chart }}</code></td>
+          <td class="mono muted">{{ row.embedId }}</td>
+          <td>{{ row.domain }}</td>
+          <td class="mono">{{ row.views }}</td>
+          <td>{{ row.lastSeen }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

@@ -1,0 +1,87 @@
+<section class="intro">
+  <h2>Identity at a glance</h2>
+  <p>Asset library coverage, guideline engagement, and approval queue health.</p>
+</section>
+
+<div class="period" role="group" aria-label="Time period">
+  <button type="button" class="period-btn active">30 days</button>
+  <button type="button" class="period-btn">Quarter</button>
+  <button type="button" class="period-btn">Year</button>
+</div>
+
+<div class="stats">
+  @for (s of stats; track s.label) {
+    <article class="card stat">
+      <p class="label">{{ s.label }}</p>
+      <p class="value">{{ s.value }}</p>
+      <p class="trend" [class.up]="s.up">{{ s.trend }}</p>
+    </article>
+  }
+</div>
+
+<div class="grid">
+  <article class="card chart-card">
+    <header><h3>Guideline engagement</h3><p>Views over time</p></header>
+    <svg class="chart" viewBox="0 0 400 120" role="img" aria-label="Guideline views trending upward">
+      <defs>
+        <linearGradient id="brandFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#6D28D9" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#6D28D9" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#brandFill)" d="M0 95 L0 72 80 68 160 55 240 42 320 35 400 28 L400 120 L0 120Z" />
+      <path fill="none" stroke="#6D28D9" stroke-width="3" d="M0 72 80 68 160 55 240 42 320 35 400 28" />
+    </svg>
+  </article>
+
+  <article class="card">
+    <header><h3>Color tokens</h3></header>
+    <ul class="swatches">
+      @for (t of tokens; track t.hex) {
+        <li>
+          <span class="swatch" [style.background]="t.hex"></span>
+          <div>
+            <strong>{{ t.name }}</strong>
+            <span>{{ t.hex }} · {{ t.usage }}</span>
+          </div>
+        </li>
+      }
+    </ul>
+  </article>
+</div>
+
+<div class="grid two">
+  <article class="card">
+    <header><h3>Typography scale</h3></header>
+    <ul class="type-list">
+      @for (t of typescale; track t.role) {
+        <li><span>{{ t.role }}</span><strong>{{ t.spec }}</strong></li>
+      }
+    </ul>
+  </article>
+
+  <article class="card">
+    <header><h3>Recent assets</h3></header>
+    <ul class="asset-list">
+      @for (a of assets; track a.name) {
+        <li>
+          <strong>{{ a.name }}</strong>
+          <span class="pill">{{ a.type }}</span>
+          <span class="owner">{{ a.owner }}</span>
+        </li>
+      }
+    </ul>
+  </article>
+</div>
+
+<article class="card">
+  <header><h3>Studio activity</h3></header>
+  <ul class="activity">
+    @for (a of activity; track a.time) {
+      <li>
+        <time>{{ a.time }}</time>
+        <div><strong>{{ a.title }}</strong><p>{{ a.detail }}</p></div>
+      </li>
+    }
+  </ul>
+</article>
