@@ -1,0 +1,10 @@
+# Keep text files on LF so the template behaves the same on every OS.
+* text=auto eol=lf
+
+# Binary assets must not be rewritten.
+*.ico binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.woff binary
+*.woff2 binary
