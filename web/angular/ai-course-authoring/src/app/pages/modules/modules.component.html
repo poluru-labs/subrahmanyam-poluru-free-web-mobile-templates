@@ -1,0 +1,9 @@
+<section class="intro"><h2>Modules</h2><p>Sample queue for demonstration only.</p></section>
+<article class="card"><table>
+  <thead><tr><th scope="col">Module</th><th scope="col">Course</th><th scope="col">Completion</th><th scope="col">Reviewer</th></tr></thead>
+  <tbody>
+    @for (row of rows; track $index) {
+      <tr><td>{{ row.module }}</td><td>{{ row.course }}</td><td>{{ row.completion }}</td><td>{{ row.reviewer }}</td></tr>
+    }
+  </tbody>
+</table></article>

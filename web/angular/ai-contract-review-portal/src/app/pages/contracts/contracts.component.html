@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2>Contracts</h2>
+  <p>Sample queue and ownership for demonstration.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr><th scope="col">Agreement</th><th scope="col">Counterparty</th><th scope="col">Stage</th><th scope="col">Owner</th></tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr>
+          <td>{{ row.agreement }}</td><td>{{ row.counterparty }}</td><td>{{ row.stage }}</td><td>{{ row.owner }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

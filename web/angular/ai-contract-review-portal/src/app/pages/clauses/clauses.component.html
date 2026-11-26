@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2>Clauses</h2>
+  <p>Sample queue and ownership for demonstration.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr><th scope="col">Clause</th><th scope="col">Playbook</th><th scope="col">Deviation</th><th scope="col">Reviewer</th></tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr>
+          <td>{{ row.clause }}</td><td>{{ row.playbook }}</td><td>{{ row.deviation }}</td><td>{{ row.reviewer }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2>Playbook</h2>
+  <p>Sample queue and ownership for demonstration.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr><th scope="col">Section</th><th scope="col">Coverage</th><th scope="col">Last updated</th></tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr>
+          <td>{{ row.section }}</td><td>{{ row.coverage }}</td><td>{{ row.lastUpdated }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

@@ -1,0 +1,44 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --accent: #d97706;
+  --ink: #1c1917;
+  --muted: #78716c;
+  --line: #e7e5e4;
+  --canvas: linear-gradient(165deg, #fffbeb 0%, #fef3c7 35%, #eff6ff 100%);
+  --radius: 12px;
+  --font-display: 'Lato', system-ui, sans-serif;
+  --font-body: 'Roboto', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--canvas);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
