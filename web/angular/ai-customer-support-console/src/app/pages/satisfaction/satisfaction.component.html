@@ -1,0 +1,9 @@
+<section class="intro"><h2>Satisfaction</h2><p>Sample queue for demonstration only.</p></section>
+<article class="card"><table>
+  <thead><tr><th scope="col">Survey</th><th scope="col">Score</th><th scope="col">Responses</th><th scope="col">Period</th></tr></thead>
+  <tbody>
+    @for (row of rows; track $index) {
+      <tr><td>{{ row.survey }}</td><td>{{ row.score }}</td><td>{{ row.responses }}</td><td>{{ row.period }}</td></tr>
+    }
+  </tbody>
+</table></article>

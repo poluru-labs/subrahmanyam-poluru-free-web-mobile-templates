@@ -1,0 +1,9 @@
+<section class="intro"><h2>Teams</h2><p>Sample queue for demonstration only.</p></section>
+<article class="card"><table>
+  <thead><tr><th scope="col">Team</th><th scope="col">Agents</th><th scope="col">Open load</th><th scope="col">Lead</th></tr></thead>
+  <tbody>
+    @for (row of rows; track $index) {
+      <tr><td>{{ row.team }}</td><td>{{ row.agents }}</td><td>{{ row.openLoad }}</td><td>{{ row.lead }}</td></tr>
+    }
+  </tbody>
+</table></article>

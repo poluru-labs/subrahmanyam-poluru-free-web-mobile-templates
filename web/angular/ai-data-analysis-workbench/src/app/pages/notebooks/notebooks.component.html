@@ -1,0 +1,9 @@
+<section class="intro"><h2>Notebooks</h2><p>Sample queue for demonstration only.</p></section>
+<article class="card"><table>
+  <thead><tr><th scope="col">Notebook</th><th scope="col">Runtime</th><th scope="col">Updated</th><th scope="col">Author</th></tr></thead>
+  <tbody>
+    @for (row of rows; track $index) {
+      <tr><td>{{ row.notebook }}</td><td>{{ row.runtime }}</td><td>{{ row.updated }}</td><td>{{ row.author }}</td></tr>
+    }
+  </tbody>
+</table></article>

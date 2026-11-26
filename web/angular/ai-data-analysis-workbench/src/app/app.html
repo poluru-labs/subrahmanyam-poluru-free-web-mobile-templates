@@ -1,0 +1,25 @@
+<div class="shell">
+  <aside class="sidebar" aria-label="Sidebar">
+    <div class="brand">
+      <svg class="brand-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M10 19V9M16 19V13M22 19V7" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+      <div><strong>{{ brand }}</strong><small>{{ tagline }}</small></div>
+    </div>
+    <nav class="sidebar-nav">
+      @for (item of nav; track item.path) {
+        <a class="nav-link" [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.exact }">{{ item.label }}</a>
+      }
+    </nav>
+    <div class="profile">
+      <span class="avatar" aria-hidden="true">{{ initials(leadName) }}</span>
+      <div><strong>{{ leadName }}</strong><span>{{ leadRole }}</span></div>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div><p class="eyebrow">{{ eyebrow }}</p><h1>{{ heading() }}</h1></div>
+      <button type="button" class="btn">Run report</button>
+    </header>
+    <div class="content"><router-outlet /><p class="demo-note">Sample data for demonstration only.</p></div>
+    <footer class="site-footer">Created by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></footer>
+  </div>
+</div>

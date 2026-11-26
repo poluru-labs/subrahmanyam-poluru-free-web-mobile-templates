@@ -1,0 +1,31 @@
+.shell { min-height: 100dvh; display: flex; flex-direction: column; }
+.sidebar {
+  display: flex; align-items: center; gap: 1.5rem; padding: 0.85rem 1.5rem;
+  background: #fff; border-bottom: 2px solid var(--primary-soft);
+  flex-wrap: wrap;
+}
+.brand strong { font-family: var(--font-display); font-size: 1.05rem; color: var(--primary-dark); }
+.brand small { margin-left: 0.5rem; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.sidebar-nav { display: flex; gap: 0.35rem; flex: 1; flex-wrap: wrap; }
+.nav-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 0.85rem; border-radius: 999px; text-decoration: none;
+  color: var(--muted); font-size: 0.86rem; font-weight: 500;
+}
+.nav-link.active { background: var(--primary); color: #fff; font-weight: 700; }
+.badge { padding: 0.1rem 0.4rem; border-radius: 999px; background: var(--alert); color: #fff; font-size: 0.62rem; font-weight: 700; }
+.nav-link.active .badge { background: #fff; color: var(--alert); }
+.profile { display: flex; gap: 0.5rem; align-items: center; margin-left: auto; }
+.avatar { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: 50%; background: var(--primary-soft); color: var(--primary-dark); font-size: 0.65rem; font-weight: 800; }
+.profile strong { display: block; font-size: 0.76rem; }
+.profile span { font-size: 0.65rem; color: var(--muted); }
+.workspace { flex: 1; display: flex; flex-direction: column; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; }
+.eyebrow { margin: 0; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); }
+h1 { margin: 0.2rem 0 0; font-size: 1.45rem; }
+.btn { border: 1px solid var(--primary); background: #fff; color: var(--primary-dark); padding: 0.45rem 0.95rem; border-radius: var(--radius); font-weight: 600; }
+.content { flex: 1; padding: 0 2rem 0.5rem; max-width: 1140px; }
+.demo-note { margin: 1rem 0 0; text-align: center; font-size: 0.72rem; color: var(--muted); }
+.site-footer { padding: 1rem 2rem 1.25rem; font-size: 0.8rem; color: var(--muted); background: #fff; border-top: 1px solid var(--primary-soft); }
+.site-footer a { color: var(--primary-dark); font-weight: 600; text-decoration: none; }
+@media (max-width: 760px) { .profile { width: 100%; margin-left: 0; } }
