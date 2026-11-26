@@ -1,0 +1,50 @@
+{
+  "name": "ai-meal-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Angular SSR starter with routing, strict TypeScript, Prettier, ESLint, and the Poluru Labs design system.",
+  "license": "MIT",
+  "author": "Subrahmanyam Poluru",
+  "packageManager": "npm@11.6.2",
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || ^24.0.0 || ^25.0.0"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "ng lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "serve:ssr:ai-meal-planner": "node dist/ai-meal-planner/server/server.mjs"
+  },
+  "dependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/compiler": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
+    "@angular/platform-browser": "^21.2.0",
+    "@angular/platform-server": "^21.2.0",
+    "@angular/router": "^21.2.0",
+    "@angular/ssr": "^21.2.23",
+    "express": "^5.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.2.23",
+    "@angular/cli": "^21.2.23",
+    "@angular/compiler-cli": "^21.2.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.17.19",
+    "angular-eslint": "^21.3.0",
+    "eslint": "^9.39.1",
+    "jsdom": "^28.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.46.4",
+    "vitest": "^4.0.8"
+  }
+}

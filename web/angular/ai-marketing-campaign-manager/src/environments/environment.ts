@@ -1,0 +1,1 @@
+export const environment = { production: true, brand: 'Campaignhq', tagline: 'Marketing', eyebrow: 'Campaign operations', leadName: 'Ananya Poluru', leadRole: 'Marketing lead', themeColor: '#F97316' };
