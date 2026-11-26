@@ -1,0 +1,3 @@
+<section class="intro"><h2>Expenses</h2><p>Sample data for demonstration only.</p></section>
+<article class="card"><table><thead><tr><th scope="col">Merchant</th><th scope="col">Amount</th><th scope="col">Category</th><th scope="col">Owner</th></tr></thead>
+<tbody>@for (row of rows; track $index) {<tr><td>{{ row.merchant }}</td><td>{{ row.amount }}</td><td>{{ row.category }}</td><td>{{ row.owner }}</td></tr>}</tbody></table></article>
