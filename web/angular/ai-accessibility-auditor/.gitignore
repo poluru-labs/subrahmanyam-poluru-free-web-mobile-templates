@@ -1,0 +1,52 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+*.tsbuildinfo
+
+# Dependencies
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment files. Commit `.env.example` only.
+.env
+.env.*
+!.env.example
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.history/*
+
+# Visual Studio Code — share the recommended workspace files, ignore the rest.
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+
+# Angular and test caches
+/.angular
+.sass-cache/
+/coverage
+/connect.lock
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/
+
+# System files
+.DS_Store
+Thumbs.db

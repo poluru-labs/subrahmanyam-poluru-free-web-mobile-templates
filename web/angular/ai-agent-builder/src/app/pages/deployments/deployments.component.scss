@@ -1,0 +1,79 @@
+.intro h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+}
+
+.intro p {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+td {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  background: #ecfdf5;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.env {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.env.prod {
+  background: #064e3b;
+  color: #a7f3d0;
+}
+
+.health {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.health.bad {
+  color: #b45309;
+}

@@ -1,0 +1,89 @@
+<section class="intro">
+  <h2>Remediation progress</h2>
+  <p>Track WCAG findings, owner assignments, and verification status across your product.</p>
+</section>
+
+<div class="period" role="group" aria-label="Time period">
+  <button type="button" class="period-btn active">30 days</button>
+  <button type="button" class="period-btn">7 days</button>
+  <button type="button" class="period-btn">90 days</button>
+</div>
+
+<div class="stats">
+  @for (s of stats; track s.label) {
+    <article class="card stat">
+      <p class="label">{{ s.label }}</p>
+      <p class="value">{{ s.value }}</p>
+      <p class="trend" [class.up]="s.up">{{ s.trend }}</p>
+    </article>
+  }
+</div>
+
+<div class="grid">
+  <article class="card chart-card">
+    <header>
+      <h3>Page coverage</h3>
+      <p>Routes audited this period</p>
+    </header>
+  <svg class="chart" viewBox="0 0 400 120" role="img" aria-label="Coverage trend rising over four weeks">
+      <defs>
+        <linearGradient id="a11yFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFA1C5" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#FFA1C5" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#a11yFill)" d="M0 95 L0 75 80 70 160 58 240 48 320 35 400 28 L400 120 L0 120Z" />
+      <path fill="none" stroke="#FFA1C5" stroke-width="3" d="M0 75 80 70 160 58 240 48 320 35 400 28" />
+    </svg>
+  </article>
+
+  <article class="card">
+    <header>
+      <h3>Severity breakdown</h3>
+      <p>By open issue count</p>
+    </header>
+    <ul class="breakdown">
+      @for (c of categories; track c.name) {
+        <li>
+          <span>{{ c.name }}</span>
+          <strong>{{ c.count }}</strong>
+          <div class="bar"><i [style.width.%]="c.pct"></i></div>
+        </li>
+      }
+    </ul>
+  </article>
+</div>
+
+<article class="card table-card">
+  <header>
+    <h3>Priority pages</h3>
+    <p>Remediation owners</p>
+  </header>
+  <table>
+    <thead>
+      <tr><th scope="col">Route</th><th scope="col">Issues</th><th scope="col">Owner</th><th scope="col">Status</th></tr>
+    </thead>
+    <tbody>
+      @for (row of priorityPages; track row.route) {
+        <tr>
+          <td><code>{{ row.route }}</code></td>
+          <td>{{ row.issues }}</td>
+          <td>{{ row.owner }}</td>
+          <td><span class="pill">{{ row.status }}</span></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>
+
+<article class="card">
+  <header><h3>Recent activity</h3></header>
+  <ul class="activity">
+    @for (a of activity; track a.time) {
+      <li>
+        <time>{{ a.time }}</time>
+        <div><strong>{{ a.title }}</strong><p>{{ a.detail }}</p></div>
+      </li>
+    }
+  </ul>
+</article>

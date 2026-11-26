@@ -1,0 +1,94 @@
+<section class="intro">
+  <h2>Build surface</h2>
+  <p>Configure automations, bind tools, and monitor promotion from draft to production.</p>
+</section>
+
+<div class="period" role="group" aria-label="Time period">
+  <button type="button" class="period-btn active">24h</button>
+  <button type="button" class="period-btn">7d</button>
+  <button type="button" class="period-btn">30d</button>
+</div>
+
+<div class="stats">
+  @for (s of stats; track s.label) {
+    <article class="card stat">
+      <p class="label">{{ s.label }}</p>
+      <p class="value">{{ s.value }}</p>
+      <p class="trend" [class.up]="s.up">{{ s.trend }}</p>
+    </article>
+  }
+</div>
+
+<div class="grid">
+  <article class="card chart-card">
+    <header>
+      <h3>Run volume</h3>
+      <p>Successful executions</p>
+    </header>
+    <svg class="chart" viewBox="0 0 400 120" role="img" aria-label="Run volume trend over four intervals">
+      <defs>
+        <linearGradient id="runFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#059669" stop-opacity="0.3" />
+          <stop offset="100%" stop-color="#059669" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#runFill)" d="M0 100 L0 82 100 78 200 62 300 48 400 40 L400 120 L0 120Z" />
+      <path fill="none" stroke="#059669" stroke-width="3" d="M0 82 100 78 200 62 300 48 400 40" />
+    </svg>
+  </article>
+
+  <article class="card">
+    <header>
+      <h3>Lifecycle mix</h3>
+      <p>By agent count</p>
+    </header>
+    <ul class="breakdown">
+      @for (p of pipeline; track p.stage) {
+        <li>
+          <span>{{ p.stage }}</span>
+          <strong>{{ p.count }}</strong>
+          <div class="bar"><i [style.width.%]="p.pct"></i></div>
+        </li>
+      }
+    </ul>
+  </article>
+</div>
+
+<article class="card table-card">
+  <header>
+    <h3>Latest runs</h3>
+    <p>Most recent executions</p>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Agent</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Owner</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of runs; track row.agent) {
+        <tr>
+          <td><code>{{ row.agent }}</code></td>
+          <td class="mono">{{ row.duration }}</td>
+          <td>{{ row.owner }}</td>
+          <td><span class="pill" [class.warn]="row.status !== 'Succeeded'">{{ row.status }}</span></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>
+
+<article class="card">
+  <header><h3>Builder log</h3></header>
+  <ul class="activity">
+    @for (e of events; track e.time) {
+      <li>
+        <time class="mono">{{ e.time }}</time>
+        <div><strong>{{ e.title }}</strong><p>{{ e.detail }}</p></div>
+      </li>
+    }
+  </ul>
+</article>

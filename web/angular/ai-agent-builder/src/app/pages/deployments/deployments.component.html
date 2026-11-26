@@ -1,0 +1,33 @@
+<section class="intro">
+  <h2>Deployments</h2>
+  <p>Promotion history, build IDs, and environment health.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Environment</th>
+        <th scope="col">Agent</th>
+        <th scope="col">Build</th>
+        <th scope="col">Deployed by</th>
+        <th scope="col">When</th>
+        <th scope="col">Health</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (d of deploys; track d.build) {
+        <tr>
+          <td><span class="env" [class.prod]="d.env === 'production'">{{ d.env }}</span></td>
+          <td><code>{{ d.agent }}</code></td>
+          <td class="mono">{{ d.build }}</td>
+          <td>{{ d.deployedBy }}</td>
+          <td class="mono muted">{{ d.when }}</td>
+          <td>
+            <span class="health" [class.bad]="d.health !== 'Healthy'">{{ d.health }}</span>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

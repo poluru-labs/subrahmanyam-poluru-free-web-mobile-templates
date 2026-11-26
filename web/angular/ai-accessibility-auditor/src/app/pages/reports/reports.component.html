@@ -1,0 +1,12 @@
+<p class="lede">Saved audit reports for stakeholders and release gates.</p>
+<ul class="reports">
+  @for (r of reports; track r.name) {
+    <li class="card">
+      <div>
+        <strong>{{ r.name }}</strong>
+        <p>{{ r.author }} · {{ r.date }}</p>
+      </div>
+      <span class="status">{{ r.status }}</span>
+    </li>
+  }
+</ul>

@@ -1,0 +1,31 @@
+<section class="intro">
+  <h2>Agent registry</h2>
+  <p>Names, versions, lifecycle stage, and tool attachments for each automation.</p>
+</section>
+
+<article class="card table-card">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Version</th>
+        <th scope="col">Owner</th>
+        <th scope="col">Stage</th>
+        <th scope="col">Tools</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (a of agents; track a.id) {
+        <tr>
+          <td class="mono muted">{{ a.id }}</td>
+          <td><code>{{ a.name }}</code></td>
+          <td class="mono">{{ a.version }}</td>
+          <td>{{ a.owner }}</td>
+          <td><span class="pill" [class.draft]="a.stage === 'Draft'">{{ a.stage }}</span></td>
+          <td class="mono">{{ a.tools }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

@@ -1,0 +1,25 @@
+<p class="lede">WCAG finding queue with severity and remediation owners.</p>
+<article class="card">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Criterion</th>
+        <th scope="col">Page</th>
+        <th scope="col">Owner</th>
+        <th scope="col">Severity</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (r of rows; track r.id) {
+        <tr>
+          <td>{{ r.id }}</td>
+          <td>{{ r.rule }}</td>
+          <td><code>{{ r.page }}</code></td>
+          <td>{{ r.owner }}</td>
+          <td><span class="sev" [attr.data-level]="r.severity">{{ r.severity }}</span></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

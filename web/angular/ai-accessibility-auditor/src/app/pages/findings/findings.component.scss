@@ -1,0 +1,53 @@
+.lede {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 8px 24px #ffa1c512;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+th {
+  text-align: left;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+td {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #faf3f6;
+}
+
+code {
+  font-size: 0.78rem;
+  background: var(--primary-soft);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+}
+
+.sev[data-level='Critical'] {
+  color: #be123c;
+  font-weight: 700;
+}
+
+.sev[data-level='Serious'] {
+  color: #c2410c;
+  font-weight: 600;
+}
+
+.sev[data-level='Moderate'] {
+  color: var(--muted);
+}

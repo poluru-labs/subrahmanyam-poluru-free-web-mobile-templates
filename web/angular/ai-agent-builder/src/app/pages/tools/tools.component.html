@@ -1,0 +1,20 @@
+<section class="intro">
+  <h2>Tool catalog</h2>
+  <p>Reusable integrations bound to one or more agents.</p>
+</section>
+
+<div class="grid">
+  @for (t of tools; track t.name) {
+    <article class="card tool">
+      <header>
+        <code>{{ t.name }}</code>
+        <span class="type">{{ t.type }}</span>
+      </header>
+      <dl>
+        <div><dt>Scope</dt><dd>{{ t.scope }}</dd></div>
+        <div><dt>Maintainer</dt><dd>{{ t.maintainer }}</dd></div>
+        <div><dt>Bound agents</dt><dd class="mono">{{ t.agents }}</dd></div>
+      </dl>
+    </article>
+  }
+</div>

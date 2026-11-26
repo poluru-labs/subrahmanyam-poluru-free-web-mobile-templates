@@ -1,0 +1,14 @@
+<p class="lede">Page inventory with coverage and open findings.</p>
+<div class="cards">
+  @for (p of pages; track p.path) {
+    <article class="card">
+      <code>{{ p.path }}</code>
+      <p class="meta">Owner: {{ p.owner }}</p>
+      <div class="coverage">
+        <span>Coverage {{ p.coverage }}%</span>
+        <div class="bar"><i [style.width.%]="p.coverage"></i></div>
+      </div>
+      <p class="findings">{{ p.findings }} open findings</p>
+    </article>
+  }
+</div>
