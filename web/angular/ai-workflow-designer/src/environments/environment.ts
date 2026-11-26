@@ -1,0 +1,1 @@
+export const environment = { production: true, brand: 'Stepflow', tagline: 'Designer', eyebrow: 'Process orchestration', leadName: 'Rohan Poluru', leadRole: 'Operations lead', themeColor: '#EA580C' };
