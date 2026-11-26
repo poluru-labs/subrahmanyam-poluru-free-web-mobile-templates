@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2>Settings</h2>
+  <p>Sample queue and ownership for demonstration.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr><th scope="col">Setting</th><th scope="col">Value</th><th scope="col">Owner</th></tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr>
+          <td>{{ row.setting }}</td><td>{{ row.value }}</td><td>{{ row.owner }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

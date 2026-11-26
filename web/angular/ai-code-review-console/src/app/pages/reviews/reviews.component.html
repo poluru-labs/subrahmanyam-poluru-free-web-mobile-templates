@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2>Reviews</h2>
+  <p>Sample queue and ownership for demonstration.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr><th scope="col">PR</th><th scope="col">Repo</th><th scope="col">Author</th><th scope="col">Status</th></tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr>
+          <td>{{ row.pr }}</td><td>{{ row.repo }}</td><td>{{ row.author }}</td><td>{{ row.status }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

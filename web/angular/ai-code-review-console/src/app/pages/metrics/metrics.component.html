@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2>Metrics</h2>
+  <p>Sample queue and ownership for demonstration.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr><th scope="col">Metric</th><th scope="col">This week</th><th scope="col">Trend</th></tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr>
+          <td>{{ row.metric }}</td><td>{{ row.thisWeek }}</td><td>{{ row.trend }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

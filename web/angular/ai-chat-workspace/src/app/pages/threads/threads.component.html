@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2>Threads</h2>
+  <p>Sample queue and ownership for demonstration.</p>
+</section>
+
+<article class="card">
+  <table>
+    <thead>
+      <tr><th scope="col">Channel</th><th scope="col">Subject</th><th scope="col">Unread</th><th scope="col">Owner</th></tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr>
+          <td>{{ row.channel }}</td><td>{{ row.subject }}</td><td>{{ row.unread }}</td><td>{{ row.owner }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

@@ -1,0 +1,158 @@
+.shell {
+  min-height: 100dvh;
+  display: flex;
+}
+
+.sidebar {
+  width: 228px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 0.75rem;
+  background: var(--sidebar);
+  color: #e2e8f0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.brand {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  padding: 0 0.35rem 1.25rem;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  color: #38bdf8;
+}
+
+.brand strong {
+  display: block;
+  font-family: var(--font-display);
+  color: #f8fafc;
+}
+
+.brand small {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.55rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: #94a3b8;
+}
+
+.nav-link.active {
+  background: #1e293b;
+  color: #7dd3fc;
+  border-left: 2px solid var(--primary);
+}
+
+.profile {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  padding-top: 0.85rem;
+  border-top: 1px solid #334155;
+}
+
+.avatar {
+  width: 1.85rem;
+  height: 1.85rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  background: #0369a1;
+  font-size: 0.62rem;
+}
+
+.workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0.2rem 0 0;
+  font-size: 1.35rem;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  background: #f8fafc;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.content {
+  flex: 1;
+  padding: 1.25rem 2rem 0.5rem;
+}
+
+.demo-note {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 1rem 2rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer a {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
