@@ -1,0 +1,6 @@
+<div class="shell shell-mint"><aside class="sidebar" aria-label="Sidebar"><div class="brand"><strong>{{ brand }}</strong><small>{{ tagline }}</small></div>
+<nav class="sidebar-nav">@for (item of nav; track item.path) {<a class="nav-link" [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.exact }">{{ item.label }}</a>}</nav>
+<div class="profile"><span class="avatar" aria-hidden="true">{{ initials(leadName) }}</span><div><strong>{{ leadName }}</strong><span>{{ leadRole }}</span></div></div></aside>
+<div class="workspace"><header class="topbar"><div><p class="eyebrow">{{ eyebrow }}</p><h1>{{ heading() }}</h1></div><button type="button" class="btn">Assign batch</button></header>
+<div class="content"><router-outlet /><p class="demo-note">Sample data for demonstration only.</p></div>
+<footer class="site-footer">Created by <a href="https://polurus.com" target="_blank" rel="noopener noreferrer">Subrahmanyam Poluru</a></footer></div></div>

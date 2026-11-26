@@ -1,0 +1,3 @@
+<section class="intro"><h2>Forecasts</h2><p>Sample data for demonstration only.</p></section>
+<article class="card"><table><thead><tr><th scope="col">Region</th><th scope="col">Horizon</th><th scope="col">Accuracy</th><th scope="col">Owner</th></tr></thead>
+<tbody>@for (row of rows; track $index) {<tr><td>{{ row.region }}</td><td>{{ row.horizon }}</td><td>{{ row.accuracy }}</td><td>{{ row.owner }}</td></tr>}</tbody></table></article>
