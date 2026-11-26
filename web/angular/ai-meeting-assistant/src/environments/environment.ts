@@ -1,0 +1,1 @@
+export const environment = { production: true, brand: 'Agendapoint', tagline: 'Meetings', eyebrow: 'Meeting follow-through', leadName: 'Priya Poluru', leadRole: 'Program lead', themeColor: '#362FD9' };
