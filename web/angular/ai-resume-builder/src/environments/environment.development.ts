@@ -1,0 +1,1 @@
+export const environment = { production: false, brand: 'Profilecraft', tagline: 'Careers', eyebrow: 'Career documents', leadName: 'Vikram Poluru', leadRole: 'Career services lead', themeColor: '#9B4444' };
