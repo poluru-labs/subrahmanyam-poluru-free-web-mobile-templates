@@ -1,0 +1,1 @@
+export const environment = { production: false, brand: 'Tripboard', tagline: 'Travel', eyebrow: 'Trip coordination', leadName: 'Ananya Poluru', leadRole: 'Travel coordinator', themeColor: '#0284C7' };
