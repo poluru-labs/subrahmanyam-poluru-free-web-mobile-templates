@@ -1,0 +1,3 @@
+<section class="intro"><h2>Documents</h2><p>Sample data for demonstration only.</p></section>
+<article class="card"><table><thead><tr><th scope="col">Document</th><th scope="col">Version</th><th scope="col">Owner</th><th scope="col">Status</th></tr></thead>
+<tbody>@for (row of rows; track $index) {<tr><td>{{ row.document }}</td><td>{{ row.version }}</td><td>{{ row.owner }}</td><td>{{ row.status }}</td></tr>}</tbody></table></article>
