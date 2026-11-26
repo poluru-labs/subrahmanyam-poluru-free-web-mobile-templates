@@ -1,0 +1,1 @@
+export const environment = { production: true, brand: 'Studygrid', tagline: 'Planner', eyebrow: 'Academic planning', leadName: 'Tara Poluru', leadRole: 'Student success lead', themeColor: '#DC2626' };
