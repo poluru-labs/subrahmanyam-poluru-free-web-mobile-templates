@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "users",
+    "title": "Eligibility fit",
+    "detail": "Age, household, and neighborhood filters stay visible."
+  },
+  {
+    "icon": "globe",
+    "title": "Reachable options",
+    "detail": "Distance and transit notes sit with each program."
+  },
+  {
+    "icon": "check",
+    "title": "Open now",
+    "detail": "Hours are checked against the current day."
+  }
+]

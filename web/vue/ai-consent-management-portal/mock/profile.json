@@ -1,0 +1,16 @@
+{
+  "product": "Consent Management Portal",
+  "kicker": "Permissions",
+  "headline": "Show people exactly what they allowed",
+  "lede": "Record purpose, scope, and withdrawal in language a person can reread later.",
+  "summary": "A portal for privacy teams who treat consent as a record, not a banner.",
+  "workspace": "Consents",
+  "about": [
+    "Consent Management Portal stores the purpose, the date, and the wording someone actually saw. Withdrawal is a first-class action.",
+    "Sample records cover research contact, product analytics, and a school photo release."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

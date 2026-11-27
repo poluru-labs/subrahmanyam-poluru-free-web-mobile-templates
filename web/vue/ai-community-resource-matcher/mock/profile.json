@@ -1,0 +1,16 @@
+{
+  "product": "Community Resource Matcher",
+  "kicker": "Local help",
+  "headline": "Match people with help that is open",
+  "lede": "Search food, housing, clinics, and rides by eligibility, hours, and the neighborhood someone can reach.",
+  "summary": "A matcher for navigators who need current local resources, not a stale directory.",
+  "workspace": "Matches",
+  "about": [
+    "Community Resource Matcher filters programs by who they serve and whether they are open today. Navigators can save a short list for a follow-up call.",
+    "Sample programs include a pantry, a legal clinic, and a transit voucher."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

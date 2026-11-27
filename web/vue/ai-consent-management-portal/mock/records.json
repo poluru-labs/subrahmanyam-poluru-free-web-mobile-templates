@@ -1,0 +1,47 @@
+[
+  {
+    "id": "CN-5102",
+    "title": "Research follow-up email",
+    "status": "Active",
+    "tone": "success",
+    "owner": "Imani Brooks",
+    "score": "Email",
+    "updated": "Nov 20"
+  },
+  {
+    "id": "CN-5088",
+    "title": "Product analytics",
+    "status": "Withdrawn",
+    "tone": "warning",
+    "owner": "Imani Brooks",
+    "score": "Stopped",
+    "updated": "Nov 18"
+  },
+  {
+    "id": "CN-5041",
+    "title": "School photo release",
+    "status": "Active",
+    "tone": "success",
+    "owner": "Paul Berger",
+    "score": "Campus",
+    "updated": "Nov 12"
+  },
+  {
+    "id": "CN-4990",
+    "title": "Legacy marketing copy",
+    "status": "Renew",
+    "tone": "error",
+    "owner": "Paul Berger",
+    "score": "Outdated",
+    "updated": "Nov 02"
+  },
+  {
+    "id": "CN-4884",
+    "title": "Support recording",
+    "status": "Active",
+    "tone": "info",
+    "owner": "Imani Brooks",
+    "score": "Calls",
+    "updated": "Oct 28"
+  }
+]

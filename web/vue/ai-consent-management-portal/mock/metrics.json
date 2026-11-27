@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Active consents",
+    "value": "4,420",
+    "note": "3 purposes"
+  },
+  {
+    "label": "Withdrawals",
+    "value": "86",
+    "note": "Last 30 days"
+  },
+  {
+    "label": "Wording updates",
+    "value": "2",
+    "note": "Need reconfirmation"
+  }
+]

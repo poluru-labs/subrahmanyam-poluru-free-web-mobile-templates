@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+/*
+  Community Resource Matcher
+  Popular web color: Red #DC2626
+  Layout: Record mosaic
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F3F7F6;
+  --color-base-300: #E3EEEC;
+  --color-base-content: #14211F;
+  --color-primary: #DC2626;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #4682B4;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #FF69B4;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #14211F;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-community-resource-matcher */
+.mosaic-a { grid-row: span 2; } .mosaic-b { background: linear-gradient(135deg, rgb(220 38 38 / 0.08), rgb(255 105 180 / 0.12)); }

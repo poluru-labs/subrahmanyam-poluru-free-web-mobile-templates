@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "lock",
+    "title": "Purpose limits",
+    "detail": "Each consent names what the data may be used for."
+  },
+  {
+    "icon": "file",
+    "title": "Wording archive",
+    "detail": "The text shown at the time of consent stays attached."
+  },
+  {
+    "icon": "check",
+    "title": "Withdrawal trail",
+    "detail": "A withdrawal records who acted and when sharing stopped."
+  }
+]
