@@ -1,0 +1,16 @@
+{
+  "product": "RAG Evaluation Dashboard",
+  "kicker": "Retrieval plus answer",
+  "headline": "Score the documents and the answer together",
+  "lede": "See whether the right passages were retrieved and whether the answer used them.",
+  "summary": "A dashboard for teams evaluating retrieval-augmented answers.",
+  "workspace": "Retrieval",
+  "about": [
+    "RAG Evaluation Dashboard separates a missed document from an answer that ignored a good one.",
+    "Sample questions come from a product help index."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

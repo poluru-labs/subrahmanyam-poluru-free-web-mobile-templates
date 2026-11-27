@@ -1,0 +1,47 @@
+[
+  {
+    "id": "RD-22",
+    "title": "Shoreline change methods",
+    "status": "Active",
+    "tone": "info",
+    "owner": "Dr. Okonkwo",
+    "score": "42 papers",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "RD-19",
+    "title": "Peer feedback in writing",
+    "status": "Active",
+    "tone": "success",
+    "owner": "Dr. Alvarez",
+    "score": "28 papers",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "RD-15",
+    "title": "Open weight evaluations",
+    "status": "New",
+    "tone": "info",
+    "owner": "Dr. Okonkwo",
+    "score": "15 papers",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "RD-12",
+    "title": "Hospital food waste",
+    "status": "Quiet",
+    "tone": "ghost",
+    "owner": "Dr. Alvarez",
+    "score": "9 papers",
+    "updated": "Nov 18"
+  },
+  {
+    "id": "RD-08",
+    "title": "Sensor calibration sets",
+    "status": "Active",
+    "tone": "success",
+    "owner": "Lab share",
+    "score": "6 sets",
+    "updated": "Nov 16"
+  }
+]

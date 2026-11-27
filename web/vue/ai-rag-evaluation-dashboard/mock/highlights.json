@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "search",
+    "title": "Hit quality",
+    "detail": "Retrieved passages are graded for the question asked."
+  },
+  {
+    "icon": "message",
+    "title": "Answer use",
+    "detail": "An answer that skips the best passage is marked."
+  },
+  {
+    "icon": "chart",
+    "title": "Set trends",
+    "detail": "Recall and faithfulness move on the same board."
+  }
+]

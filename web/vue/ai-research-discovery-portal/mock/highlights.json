@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "search",
+    "title": "Question clusters",
+    "detail": "Results are grouped by the question, not only the keyword."
+  },
+  {
+    "icon": "book",
+    "title": "Methods",
+    "detail": "A methods tag helps you skip studies that do not fit."
+  },
+  {
+    "icon": "globe",
+    "title": "Groups and labs",
+    "detail": "Papers stay linked to the group that published them."
+  }
+]

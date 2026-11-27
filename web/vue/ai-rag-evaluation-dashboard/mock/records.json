@@ -1,0 +1,47 @@
+[
+  {
+    "id": "RG-50",
+    "title": "Refund timeline question",
+    "status": "Missed doc",
+    "tone": "error",
+    "owner": "Eva Lind",
+    "score": "0 hits",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "RG-47",
+    "title": "Plan upgrade steps",
+    "status": "Faithful",
+    "tone": "success",
+    "owner": "Eva Lind",
+    "score": "Used 2",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "RG-41",
+    "title": "SSO setup",
+    "status": "Ignored",
+    "tone": "warning",
+    "owner": "Noah Kim",
+    "score": "Doc rank 1",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "RG-38",
+    "title": "Invoice download",
+    "status": "Faithful",
+    "tone": "success",
+    "owner": "Noah Kim",
+    "score": "Used 1",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "RG-33",
+    "title": "Regional pricing",
+    "status": "Missed doc",
+    "tone": "warning",
+    "owner": "Eva Lind",
+    "score": "Partial",
+    "updated": "Nov 22"
+  }
+]

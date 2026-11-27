@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Questions",
+    "value": "200",
+    "note": "Help set"
+  },
+  {
+    "label": "Recall@5",
+    "value": "0.81",
+    "note": "Up 0.03"
+  },
+  {
+    "label": "Ignored context",
+    "value": "14",
+    "note": "This run"
+  }
+]

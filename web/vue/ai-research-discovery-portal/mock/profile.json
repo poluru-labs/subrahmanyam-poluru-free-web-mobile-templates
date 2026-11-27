@@ -1,0 +1,16 @@
+{
+  "product": "Research Discovery Portal",
+  "kicker": "Find the work",
+  "headline": "Start from the question, not a keyword pile",
+  "lede": "Group papers, datasets, and labs around a research question you can refine.",
+  "summary": "A portal for researchers discovering work beyond a single database search.",
+  "workspace": "Labs",
+  "about": [
+    "Research Discovery Portal clusters results by method and by the question they answer. Saved questions stay with the person who asked.",
+    "Sample collections cover coastal erosion, classroom feedback, and open models."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}
