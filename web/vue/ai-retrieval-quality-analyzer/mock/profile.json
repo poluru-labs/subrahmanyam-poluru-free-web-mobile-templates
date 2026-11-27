@@ -1,0 +1,16 @@
+{
+  "product": "Retrieval Quality Analyzer",
+  "kicker": "Search quality",
+  "headline": "Measure whether search found the right thing",
+  "lede": "Grade rankings, missed items, and queries that keep failing.",
+  "summary": "An analyzer for search teams who judge results against labeled queries.",
+  "workspace": "Queries",
+  "about": [
+    "Retrieval Quality Analyzer scores labeled queries and highlights the ones that fail the same way.",
+    "Sample queries come from a documentation search and a catalog search."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

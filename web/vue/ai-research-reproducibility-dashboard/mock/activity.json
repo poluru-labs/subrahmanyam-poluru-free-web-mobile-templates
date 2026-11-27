@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Nov 21",
+    "text": "Survey result matched by a second runner."
+  },
+  {
+    "when": "Nov 20",
+    "text": "Simulation environment drifted from the paper."
+  },
+  {
+    "when": "Nov 19",
+    "text": "Figure 3 failed on a missing font."
+  },
+  {
+    "when": "Nov 12",
+    "text": "Benchmark rerun matched the published table."
+  }
+]

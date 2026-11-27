@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Labeled queries",
+    "value": "150",
+    "note": "2 corpora"
+  },
+  {
+    "label": "nDCG@10",
+    "value": "0.72",
+    "note": "Docs search"
+  },
+  {
+    "label": "Regressions",
+    "value": "5",
+    "note": "Since Friday"
+  }
+]

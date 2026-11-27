@@ -1,0 +1,16 @@
+{
+  "product": "Research Reproducibility Dashboard",
+  "kicker": "Run the study",
+  "headline": "See which result someone else can rerun",
+  "lede": "Track code, data, environment, and the last person who reproduced a result.",
+  "summary": "A dashboard for labs that want reproducibility as a status, not a promise.",
+  "workspace": "Runs",
+  "about": [
+    "Research Reproducibility Dashboard records whether code, data, and environment are present and whether a second person reproduced the number.",
+    "Sample studies include a survey analysis, a simulation, and a figure that still fails."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

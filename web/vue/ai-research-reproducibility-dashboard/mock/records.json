@@ -1,0 +1,47 @@
+[
+  {
+    "id": "RP-14",
+    "title": "Survey analysis v2",
+    "status": "Reproduced",
+    "tone": "success",
+    "owner": "Dr. Ng",
+    "score": "Matched",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "RP-12",
+    "title": "Coastal simulation",
+    "status": "Partial",
+    "tone": "warning",
+    "owner": "Dr. Berg",
+    "score": "Env drift",
+    "updated": "Nov 20"
+  },
+  {
+    "id": "RP-10",
+    "title": "Figure 3 rebuild",
+    "status": "Failed",
+    "tone": "error",
+    "owner": "Dr. Berg",
+    "score": "Missing font",
+    "updated": "Nov 19"
+  },
+  {
+    "id": "RP-08",
+    "title": "Notebook-only result",
+    "status": "Gap",
+    "tone": "warning",
+    "owner": "Dr. Ng",
+    "score": "No data",
+    "updated": "Nov 17"
+  },
+  {
+    "id": "RP-05",
+    "title": "Public benchmark rerun",
+    "status": "Reproduced",
+    "tone": "success",
+    "owner": "Lab share",
+    "score": "Matched",
+    "updated": "Nov 12"
+  }
+]

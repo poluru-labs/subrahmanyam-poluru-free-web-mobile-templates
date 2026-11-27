@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "beaker",
+    "title": "Artifact check",
+    "detail": "Code, data, and environment are separate statuses."
+  },
+  {
+    "icon": "check",
+    "title": "Second run",
+    "detail": "A result counts as reproduced only after another person runs it."
+  },
+  {
+    "icon": "alert",
+    "title": "Broken figures",
+    "detail": "A figure that fails to rebuild stays on the board."
+  }
+]

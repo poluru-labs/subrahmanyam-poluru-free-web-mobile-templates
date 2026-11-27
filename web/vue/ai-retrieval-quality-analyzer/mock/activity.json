@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Authenticator query dropped after the index rebuild."
+  },
+  {
+    "when": "Today",
+    "text": "Invoice export climbed into the top three."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Team-plan query still misses the cancellation article."
+  },
+  {
+    "when": "Mon",
+    "text": "Boot sizing query improved on the catalog set."
+  }
+]

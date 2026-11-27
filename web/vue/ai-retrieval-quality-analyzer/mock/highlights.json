@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "search",
+    "title": "Labeled queries",
+    "detail": "Each query has a set of documents that should rank."
+  },
+  {
+    "icon": "chart",
+    "title": "Failure clusters",
+    "detail": "Queries that miss for the same reason are grouped."
+  },
+  {
+    "icon": "check",
+    "title": "Before and after",
+    "detail": "A ranking change is compared with the last index."
+  }
+]

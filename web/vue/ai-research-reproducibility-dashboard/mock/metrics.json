@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Studies",
+    "value": "18",
+    "note": "4 reproduced"
+  },
+  {
+    "label": "Missing data",
+    "value": "5",
+    "note": "Need a deposit"
+  },
+  {
+    "label": "Failed rebuilds",
+    "value": "2",
+    "note": "Figures"
+  }
+]
