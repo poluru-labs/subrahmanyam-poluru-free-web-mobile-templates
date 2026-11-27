@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "pen",
+    "title": "Student task",
+    "detail": "The plan names what students do, not only what you say."
+  },
+  {
+    "icon": "check",
+    "title": "Understanding check",
+    "detail": "Each lesson has a way to see who is lost."
+  },
+  {
+    "icon": "book",
+    "title": "Materials",
+    "detail": "Handouts and links sit with the day they are used."
+  }
+]

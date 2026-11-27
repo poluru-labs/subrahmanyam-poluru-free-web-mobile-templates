@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Teacher Lesson Planner
+  Popular web color: Sapphire #0F52BA
+  Layout: Steps and timeline
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: dark;
+  --color-base-100: #0F172A;
+  --color-base-200: #111827;
+  --color-base-300: #1F2937;
+  --color-base-content: #E5E7EB;
+  --color-primary: #0F52BA;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #C9A227;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #191970;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #0B1220;
+  --color-neutral-content: #F8FAFC;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-teacher-lesson-planner */
+.tlp-shell { background: radial-gradient(ellipse 70% 50% at 0% 0%, rgb(15 82 186 / 0.28), transparent 55%), var(--color-base-200); }
+.tlp-week-band { background: linear-gradient(95deg, #061a3a 0%, #0f52ba 55%, #c9a227 100%); }
+.tlp-step-track { background: linear-gradient(180deg, var(--color-secondary), rgb(15 82 186 / 0.35)); }
+.tlp-step-dot { box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-secondary) 35%, transparent); }

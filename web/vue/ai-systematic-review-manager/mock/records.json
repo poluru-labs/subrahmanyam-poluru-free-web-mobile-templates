@@ -1,0 +1,47 @@
+[
+  {
+    "id": "SR-400",
+    "title": "Dual screen conflict",
+    "status": "Conflict",
+    "tone": "warning",
+    "owner": "Dr. Mehta",
+    "score": "Outcome",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "SR-388",
+    "title": "Wrong population",
+    "status": "Excluded",
+    "tone": "ghost",
+    "owner": "Dr. Ng",
+    "score": "Adults only",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "SR-360",
+    "title": "Filtration trial",
+    "status": "Included",
+    "tone": "success",
+    "owner": "Dr. Mehta",
+    "score": "School",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "SR-344",
+    "title": "Abstract only",
+    "status": "Excluded",
+    "tone": "ghost",
+    "owner": "Dr. Ng",
+    "score": "No full text",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "SR-330",
+    "title": "Attendance measure",
+    "status": "Included",
+    "tone": "success",
+    "owner": "Dr. Mehta",
+    "score": "Fit",
+    "updated": "Nov 19"
+  }
+]

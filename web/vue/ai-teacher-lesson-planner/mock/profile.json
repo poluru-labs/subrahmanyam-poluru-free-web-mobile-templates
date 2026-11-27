@@ -1,0 +1,16 @@
+{
+  "product": "Teacher Lesson Planner",
+  "kicker": "Class plan",
+  "headline": "Plan the hour around what students will do",
+  "lede": "Build a lesson with an aim, the student task, and the check for understanding.",
+  "summary": "A planner for teachers who want a class period written as student work.",
+  "workspace": "Lessons",
+  "about": [
+    "Teacher Lesson Planner keeps the aim, materials, and the moment you will know students understood.",
+    "Sample lessons cover a lab, a seminar, and a problem set."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

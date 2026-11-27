@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Records found",
+    "value": "1,842",
+    "note": "4 databases"
+  },
+  {
+    "label": "Full text",
+    "value": "96",
+    "note": "12 conflicts"
+  },
+  {
+    "label": "Included",
+    "value": "21",
+    "note": "Ready to extract"
+  }
+]

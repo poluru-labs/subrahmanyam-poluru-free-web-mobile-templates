@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "book",
+    "title": "Protocol lock",
+    "detail": "Questions and criteria stay visible while screening."
+  },
+  {
+    "icon": "search",
+    "title": "Dual screen",
+    "detail": "Two votes are required before a study moves on."
+  },
+  {
+    "icon": "file",
+    "title": "Exclusion reasons",
+    "detail": "Every exclusion uses a reason from the protocol."
+  }
+]

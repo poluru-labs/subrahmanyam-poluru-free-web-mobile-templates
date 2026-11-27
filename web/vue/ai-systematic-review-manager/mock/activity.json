@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Outcome definition caused a screening conflict."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Adult-only study excluded under population rules."
+  },
+  {
+    "when": "Sat",
+    "text": "School filtration trial included."
+  },
+  {
+    "when": "Fri",
+    "text": "Abstract-only record excluded."
+  }
+]

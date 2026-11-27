@@ -1,0 +1,16 @@
+{
+  "product": "Systematic Review Manager",
+  "kicker": "Protocol to synthesis",
+  "headline": "Run the review the protocol promised",
+  "lede": "Track screening, extraction, and reasons for exclusion against the registered protocol.",
+  "summary": "A manager for teams conducting a systematic review in the open.",
+  "workspace": "Studies",
+  "about": [
+    "Systematic Review Manager keeps the protocol questions next to screening counts and exclusion reasons.",
+    "The sample review is on classroom air filtration and attendance."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}
