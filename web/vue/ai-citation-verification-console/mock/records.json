@@ -1,0 +1,47 @@
+[
+  {
+    "id": "CV-330",
+    "title": "Quote not in Patel 2022",
+    "status": "Mismatch",
+    "tone": "error",
+    "owner": "Helen Cho",
+    "score": "Fail",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "CV-328",
+    "title": "DOI resolves correctly",
+    "status": "Confirmed",
+    "tone": "success",
+    "owner": "Helen Cho",
+    "score": "Pass",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "CV-319",
+    "title": "Year off by one",
+    "status": "Mismatch",
+    "tone": "warning",
+    "owner": "Samir Haddad",
+    "score": "Check",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "CV-311",
+    "title": "Page range missing",
+    "status": "Review",
+    "tone": "info",
+    "owner": "Samir Haddad",
+    "score": "Partial",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "CV-304",
+    "title": "Statute cite current",
+    "status": "Confirmed",
+    "tone": "success",
+    "owner": "Helen Cho",
+    "score": "Pass",
+    "updated": "Nov 21"
+  }
+]

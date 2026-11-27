@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "file",
+    "title": "Spec diffs",
+    "detail": "Added, removed, and narrowed fields are listed apart."
+  },
+  {
+    "icon": "code",
+    "title": "Example checks",
+    "detail": "Examples that no longer match the schema fail the review."
+  },
+  {
+    "icon": "alert",
+    "title": "Consumer impact",
+    "detail": "Known client versions are attached to each break."
+  }
+]

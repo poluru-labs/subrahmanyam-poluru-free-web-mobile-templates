@@ -1,0 +1,47 @@
+[
+  {
+    "id": "CT-441",
+    "title": "Invoice.total changed type",
+    "status": "Breaking",
+    "tone": "error",
+    "owner": "Greta Holm",
+    "score": "v3",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "CT-438",
+    "title": "Profile.pronouns added",
+    "status": "Compatible",
+    "tone": "success",
+    "owner": "Idris Cole",
+    "score": "v2",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "CT-429",
+    "title": "Status.region removed",
+    "status": "Breaking",
+    "tone": "error",
+    "owner": "Greta Holm",
+    "score": "v1",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "CT-417",
+    "title": "Pagination example stale",
+    "status": "Review",
+    "tone": "warning",
+    "owner": "Idris Cole",
+    "score": "v2",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "CT-402",
+    "title": "Webhook signature stable",
+    "status": "Compatible",
+    "tone": "success",
+    "owner": "Nora Feldman",
+    "score": "v4",
+    "updated": "Nov 20"
+  }
+]

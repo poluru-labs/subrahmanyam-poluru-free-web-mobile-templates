@@ -1,0 +1,16 @@
+{
+  "product": "API Contract Analyzer",
+  "kicker": "Interface diffs",
+  "headline": "Catch breaking changes before clients do",
+  "lede": "Compare published contracts with what the service really returns, including quiet field changes.",
+  "summary": "A review desk for teams who version APIs and cannot afford surprise breakage.",
+  "workspace": "Contracts",
+  "about": [
+    "API Contract Analyzer lines up the spec, the examples, and a recent response. Removed fields and tighter types are called out as breaks.",
+    "Sample contracts include a billing API, a profile API, and a public status endpoint."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

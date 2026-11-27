@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Contracts watched",
+    "value": "54",
+    "note": "8 services"
+  },
+  {
+    "label": "Breaking diffs",
+    "value": "3",
+    "note": "Need a version"
+  },
+  {
+    "label": "Compatible adds",
+    "value": "17",
+    "note": "This sprint"
+  }
+]

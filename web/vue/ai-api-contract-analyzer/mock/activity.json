@@ -1,0 +1,18 @@
+[
+  {
+    "when": "3h ago",
+    "text": "Invoice total type change marked breaking for two clients."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Profile pronouns field passed as a compatible add."
+  },
+  {
+    "when": "Tue",
+    "text": "Stale pagination example assigned to Idris."
+  },
+  {
+    "when": "Last week",
+    "text": "Status region removal scheduled for a major version."
+  }
+]

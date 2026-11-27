@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Citations queued",
+    "value": "126",
+    "note": "2 manuscripts"
+  },
+  {
+    "label": "Confirmed",
+    "value": "91",
+    "note": "Exact or close"
+  },
+  {
+    "label": "Mismatches",
+    "value": "14",
+    "note": "Need an editor"
+  }
+]

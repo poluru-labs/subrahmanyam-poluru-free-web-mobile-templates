@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "book",
+    "title": "Passage match",
+    "detail": "The quoted lines are checked against the source text."
+  },
+  {
+    "icon": "search",
+    "title": "Identifier lookup",
+    "detail": "DOI and URL metadata are compared with the bibliography."
+  },
+  {
+    "icon": "scale",
+    "title": "Claim fit",
+    "detail": "A citation can exist and still not support the sentence."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "product": "Citation Verification Console",
+  "kicker": "Source checks",
+  "headline": "Confirm the citation says what the draft claims",
+  "lede": "Match quotes, identifiers, and publication details before a paper or brief goes out.",
+  "summary": "A verification desk for editors who need every citation to hold up.",
+  "workspace": "Citations",
+  "about": [
+    "Citation Verification Console compares a claim with the cited passage. Mismatched years, missing pages, and quotes that are not in the source stay visible.",
+    "Sample items come from a policy brief and a literature section."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}
