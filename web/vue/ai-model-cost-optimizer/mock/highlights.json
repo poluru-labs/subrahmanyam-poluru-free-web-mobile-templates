@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "chart",
+    "title": "Route spend",
+    "detail": "Daily cost is split by the feature that called the model."
+  },
+  {
+    "icon": "file",
+    "title": "Prompt length",
+    "detail": "Context that is never cited is called out."
+  },
+  {
+    "icon": "bolt",
+    "title": "Retry cost",
+    "detail": "Failed attempts are priced, not hidden in the total."
+  }
+]

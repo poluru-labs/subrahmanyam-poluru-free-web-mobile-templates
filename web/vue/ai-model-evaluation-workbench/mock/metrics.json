@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Cases",
+    "value": "500",
+    "note": "Support set"
+  },
+  {
+    "label": "Candidate lead",
+    "value": "+4.1",
+    "note": "Quality score"
+  },
+  {
+    "label": "Flips to read",
+    "value": "27",
+    "note": "Need a person"
+  }
+]

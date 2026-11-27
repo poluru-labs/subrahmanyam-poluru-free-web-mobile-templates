@@ -1,0 +1,47 @@
+[
+  {
+    "id": "EV-90",
+    "title": "Candidate B quality",
+    "status": "Leading",
+    "tone": "success",
+    "owner": "Dr. Cho",
+    "score": "81.4",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "EV-88",
+    "title": "Candidate A refusals",
+    "status": "Worse",
+    "tone": "warning",
+    "owner": "Dr. Cho",
+    "score": "12 extra",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "EV-84",
+    "title": "Format compliance",
+    "status": "Tie",
+    "tone": "info",
+    "owner": "Imani Brooks",
+    "score": "98%",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "EV-79",
+    "title": "Safety subset",
+    "status": "Review",
+    "tone": "warning",
+    "owner": "Imani Brooks",
+    "score": "3 fails",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "EV-71",
+    "title": "Current production",
+    "status": "Baseline",
+    "tone": "ghost",
+    "owner": "Dr. Cho",
+    "score": "77.3",
+    "updated": "Nov 20"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "when": "1h ago",
+    "text": "Support route retries accounted for $86."
+  },
+  {
+    "when": "Today",
+    "text": "Summary prompt shipped with shorter context."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Research draft flagged for a smaller model."
+  },
+  {
+    "when": "Mon",
+    "text": "Classifier spend stayed flat."
+  }
+]

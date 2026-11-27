@@ -1,0 +1,47 @@
+[
+  {
+    "id": "MC-27",
+    "title": "Support answer v6",
+    "status": "High",
+    "tone": "warning",
+    "owner": "Nina Rossi",
+    "score": "$640",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "MC-25",
+    "title": "Thread summary",
+    "status": "Improved",
+    "tone": "success",
+    "owner": "Nina Rossi",
+    "score": "$210",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "MC-21",
+    "title": "Intent classifier",
+    "status": "Steady",
+    "tone": "success",
+    "owner": "Owen Blake",
+    "score": "$90",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "MC-18",
+    "title": "Research draft",
+    "status": "High",
+    "tone": "error",
+    "owner": "Owen Blake",
+    "score": "$300",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "MC-12",
+    "title": "Title rewriter",
+    "status": "Steady",
+    "tone": "info",
+    "owner": "Nina Rossi",
+    "score": "$18",
+    "updated": "Nov 22"
+  }
+]

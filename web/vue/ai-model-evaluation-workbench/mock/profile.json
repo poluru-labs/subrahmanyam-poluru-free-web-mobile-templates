@@ -1,0 +1,16 @@
+{
+  "product": "Model Evaluation Workbench",
+  "kicker": "Eval runs",
+  "headline": "Compare models on the set you trust",
+  "lede": "Run the same cases against each candidate and keep the disagreements in view.",
+  "summary": "A workbench for evaluation leads comparing models before a launch.",
+  "workspace": "Evals",
+  "about": [
+    "Model Evaluation Workbench stores cases, scores, and the items where two models disagree.",
+    "Sample runs compare a current support model with two candidates."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

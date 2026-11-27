@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Spend today",
+    "value": "$1,240",
+    "note": "3 routes"
+  },
+  {
+    "label": "Retry waste",
+    "value": "$86",
+    "note": "Support route"
+  },
+  {
+    "label": "Context trimmed",
+    "value": "22%",
+    "note": "Summary prompt"
+  }
+]

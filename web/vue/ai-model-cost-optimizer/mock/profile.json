@@ -1,0 +1,16 @@
+{
+  "product": "Model Cost Optimizer",
+  "kicker": "Token spend",
+  "headline": "See which prompt is burning the budget",
+  "lede": "Break model spend into routes, prompt length, and retries you can actually change.",
+  "summary": "An optimizer for teams who need cheaper inference without a blind cut.",
+  "workspace": "Spend",
+  "about": [
+    "Model Cost Optimizer attributes spend to a route and a prompt version. Retries and oversized context are separated from useful tokens.",
+    "Sample routes include support answers, summarization, and a classification job."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

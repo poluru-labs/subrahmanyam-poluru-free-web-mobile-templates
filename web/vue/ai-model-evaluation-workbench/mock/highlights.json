@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "beaker",
+    "title": "Shared cases",
+    "detail": "Every candidate sees the same items."
+  },
+  {
+    "icon": "scale",
+    "title": "Score table",
+    "detail": "Quality, refusal, and format scores stay separate."
+  },
+  {
+    "icon": "search",
+    "title": "Disagreements",
+    "detail": "Items where the winner flips are listed for reading."
+  }
+]
