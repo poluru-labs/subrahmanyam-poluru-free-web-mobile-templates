@@ -1,0 +1,16 @@
+{
+  "product": "Learning Accessibility Portal",
+  "kicker": "Course access",
+  "headline": "Make the course usable for every student",
+  "lede": "Track captions, alternatives, timing, and accommodations across a whole course.",
+  "summary": "A portal for faculty and accessibility offices sharing one course record.",
+  "workspace": "Courses",
+  "about": [
+    "Learning Accessibility Portal lists what a course still owes students: captions, readable files, and extended-time settings.",
+    "Sample courses include biology, first-year writing, and a lab practicum."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

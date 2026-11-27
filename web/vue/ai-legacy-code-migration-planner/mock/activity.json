@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Invoice calculator cleared its contract tests."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Statement job blocked on a shared money type."
+  },
+  {
+    "when": "Thu",
+    "text": "Auth helper dual-running in staging."
+  },
+  {
+    "when": "Mon",
+    "text": "PDF renderer left for a later slice."
+  }
+]

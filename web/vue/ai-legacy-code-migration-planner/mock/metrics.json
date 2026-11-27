@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Modules left",
+    "value": "46",
+    "note": "Billing core"
+  },
+  {
+    "label": "Steps shipped",
+    "value": "12",
+    "note": "This quarter"
+  },
+  {
+    "label": "Blocked moves",
+    "value": "3",
+    "note": "Shared types"
+  }
+]

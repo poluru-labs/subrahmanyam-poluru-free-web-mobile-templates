@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "layers",
+    "title": "Module map",
+    "detail": "Callers are listed before a module is scheduled to move."
+  },
+  {
+    "icon": "route",
+    "title": "Strangler steps",
+    "detail": "Each step has a fallback to the legacy path."
+  },
+  {
+    "icon": "check",
+    "title": "Cutover gates",
+    "detail": "A move waits until tests and traffic checks pass."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "MG-33",
+    "title": "Invoice calculator",
+    "status": "Ready",
+    "tone": "success",
+    "owner": "Hana Suzuki",
+    "score": "Step 4",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "MG-31",
+    "title": "Nightly statement job",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Hana Suzuki",
+    "score": "Shared types",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "MG-27",
+    "title": "Auth token helper",
+    "status": "In progress",
+    "tone": "info",
+    "owner": "Pete Alvarez",
+    "score": "Step 2",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "MG-22",
+    "title": "Tax table lookup",
+    "status": "Ready",
+    "tone": "success",
+    "owner": "Pete Alvarez",
+    "score": "Step 5",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "MG-18",
+    "title": "PDF renderer",
+    "status": "Later",
+    "tone": "ghost",
+    "owner": "Hana Suzuki",
+    "score": "Unscheduled",
+    "updated": "Nov 18"
+  }
+]

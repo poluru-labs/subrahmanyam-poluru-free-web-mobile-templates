@@ -1,0 +1,16 @@
+{
+  "product": "Legacy Code Migration Planner",
+  "kicker": "Move plan",
+  "headline": "Plan the move without a big-bang rewrite",
+  "lede": "Slice a legacy system into moves that can ship while the old path still runs.",
+  "summary": "A planner for teams leaving a legacy codebase in deliberate steps.",
+  "workspace": "Plans",
+  "about": [
+    "Legacy Code Migration Planner maps modules, callers, and the strangler steps that replace them.",
+    "Sample plans cover a billing monolith, a batch reporter, and a shared auth library."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

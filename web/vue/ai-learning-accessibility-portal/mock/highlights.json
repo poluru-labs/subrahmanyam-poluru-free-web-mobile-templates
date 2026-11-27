@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "book",
+    "title": "Material list",
+    "detail": "Each video, file, and quiz has an access status."
+  },
+  {
+    "icon": "users",
+    "title": "Accommodations",
+    "detail": "Approved adjustments stay with the course, not in email."
+  },
+  {
+    "icon": "check",
+    "title": "Ready mark",
+    "detail": "A module is ready only when the open items are done."
+  }
+]

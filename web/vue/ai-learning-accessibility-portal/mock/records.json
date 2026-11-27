@@ -1,0 +1,47 @@
+[
+  {
+    "id": "LA-90",
+    "title": "Biology lecture 12 captions",
+    "status": "Open",
+    "tone": "warning",
+    "owner": "Prof. Adeyemi",
+    "score": "Video",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "LA-86",
+    "title": "Writing packet PDF",
+    "status": "Ready",
+    "tone": "success",
+    "owner": "Prof. Alvarez",
+    "score": "File",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "LA-81",
+    "title": "Lab timer extension",
+    "status": "Set",
+    "tone": "success",
+    "owner": "Access office",
+    "score": "Quiz",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "LA-77",
+    "title": "Slide images missing alt",
+    "status": "Open",
+    "tone": "error",
+    "owner": "Prof. Adeyemi",
+    "score": "Slides",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "LA-70",
+    "title": "Discussion audio",
+    "status": "Open",
+    "tone": "warning",
+    "owner": "Prof. Alvarez",
+    "score": "Audio",
+    "updated": "Nov 20"
+  }
+]
