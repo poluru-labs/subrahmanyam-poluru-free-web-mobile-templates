@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Trial set blocked because the label was copied into a feature."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Sensor extract cleared for the weekly train."
+  },
+  {
+    "when": "Thu",
+    "text": "Caption gaps assigned to Colin."
+  },
+  {
+    "when": "Wed",
+    "text": "Support duplicates queued for a dedupe pass."
+  }
+]

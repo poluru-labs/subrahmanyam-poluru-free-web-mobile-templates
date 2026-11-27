@@ -1,0 +1,18 @@
+[
+  {
+    "when": "2h ago",
+    "text": "log-sink advisory confirmed on the public API."
+  },
+  {
+    "when": "Yesterday",
+    "text": "JSON codec patch deployed."
+  },
+  {
+    "when": "Tue",
+    "text": "Parser license sent to counsel."
+  },
+  {
+    "when": "Mon",
+    "text": "Test-only prototype kept out of the production rank."
+  }
+]

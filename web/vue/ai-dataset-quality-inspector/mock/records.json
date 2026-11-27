@@ -1,0 +1,47 @@
+[
+  {
+    "id": "DQ-12",
+    "title": "Support corpus v4",
+    "status": "Duplicates",
+    "tone": "warning",
+    "owner": "Yara Haddad",
+    "score": "4.8%",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "DQ-11",
+    "title": "Sensor week 47",
+    "status": "Ready",
+    "tone": "success",
+    "owner": "Yara Haddad",
+    "score": "0.2%",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "DQ-09",
+    "title": "Trial labels leaked",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Colin Peeters",
+    "score": "High",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "DQ-08",
+    "title": "Image captions",
+    "status": "Missing",
+    "tone": "warning",
+    "owner": "Colin Peeters",
+    "score": "11%",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "DQ-06",
+    "title": "Public benchmark",
+    "status": "Ready",
+    "tone": "success",
+    "owner": "Yara Haddad",
+    "score": "Clean",
+    "updated": "Nov 20"
+  }
+]

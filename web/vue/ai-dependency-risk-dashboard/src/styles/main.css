@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Dependency Risk Dashboard
+  Popular web color: Lime #65A30D
+  Layout: Masthead columns
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFCF8;
+  --color-base-200: #F6F1EA;
+  --color-base-300: #E7DFD4;
+  --color-base-content: #292218;
+  --color-primary: #65A30D;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #2E8B57;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #008B8B;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #292218;
+  --color-neutral-content: #FFFCF8;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-dependency-risk-dashboard */
+.risk-shell { background: radial-gradient(ellipse 70% 40% at 100% 0%, rgb(101 163 13 / 0.1), transparent 55%); }
+.risk-masthead { background: linear-gradient(120deg, #3f6212 0%, #65a30d 42%, #2e8b57 75%, #008b8b 100%); }
+.risk-supply-pill { background: rgb(255 252 248 / 0.12); border: 1px solid rgb(255 255 255 / 0.2); }
+.risk-col-divider { box-shadow: inset -1px 0 0 rgb(101 163 13 / 0.15); }

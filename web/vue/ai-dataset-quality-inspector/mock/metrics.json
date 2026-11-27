@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Sets inspected",
+    "value": "19",
+    "note": "This month"
+  },
+  {
+    "label": "Duplicate rows",
+    "value": "4.8%",
+    "note": "Support corpus"
+  },
+  {
+    "label": "Blocked runs",
+    "value": "3",
+    "note": "Leakage risk"
+  }
+]

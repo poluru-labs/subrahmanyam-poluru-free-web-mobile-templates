@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "search",
+    "title": "Duplicate scan",
+    "detail": "Near-duplicate rows are grouped instead of counted twice."
+  },
+  {
+    "icon": "alert",
+    "title": "Leakage checks",
+    "detail": "Label-like columns are flagged before a split is frozen."
+  },
+  {
+    "icon": "chart",
+    "title": "Skew notes",
+    "detail": "Rare classes and empty regions are summarized."
+  }
+]

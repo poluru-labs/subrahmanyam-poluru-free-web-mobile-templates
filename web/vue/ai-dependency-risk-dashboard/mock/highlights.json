@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "alert",
+    "title": "Reachable risk",
+    "detail": "A vulnerability counts more when production imports it."
+  },
+  {
+    "icon": "box",
+    "title": "Transitive path",
+    "detail": "The chain from your manifest to the package is shown."
+  },
+  {
+    "icon": "scale",
+    "title": "License watch",
+    "detail": "Copyleft surprises are listed next to security issues."
+  }
+]

@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Dataset Quality Inspector
+  Popular web color: Gold #C9A227
+  Layout: Band and rows
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F4F6F8;
+  --color-base-300: #E6EAEF;
+  --color-base-content: #1C2430;
+  --color-primary: #C9A227;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #0E9F8E;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #4F8F90;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #1C2430;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-dataset-quality-inspector */
+.dqi-shell { background: repeating-linear-gradient(0deg, rgb(201 162 39 / 0.04) 0 40px, transparent 40px 80px); }
+.dqi-gold-band { background: linear-gradient(90deg, #8a6d0f 0%, #c9a227 38%, #0e9f8e 100%); }
+.dqi-row-strip { border-left: 4px solid var(--color-primary); background: linear-gradient(90deg, rgb(201 162 39 / 0.08) 0%, transparent 60%); }
+.dqi-stripe-head { background-image: linear-gradient(90deg, rgb(201 162 39 / 0.15) 12px, transparent 12px); background-size: 24px 100%; }

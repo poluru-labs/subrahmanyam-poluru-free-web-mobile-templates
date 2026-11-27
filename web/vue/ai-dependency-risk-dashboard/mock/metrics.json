@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Advisories",
+    "value": "15",
+    "note": "6 reachable"
+  },
+  {
+    "label": "Services exposed",
+    "value": "9",
+    "note": "Production"
+  },
+  {
+    "label": "Patches waiting",
+    "value": "4",
+    "note": "Owned this week"
+  }
+]

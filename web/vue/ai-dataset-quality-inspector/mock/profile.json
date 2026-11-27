@@ -1,0 +1,16 @@
+{
+  "product": "Dataset Quality Inspector",
+  "kicker": "Before training",
+  "headline": "Inspect the set before you train on it",
+  "lede": "Surface duplicates, missing fields, skew, and leakage before a training run starts.",
+  "summary": "An inspector for data owners who want problems found in the set, not in the model.",
+  "workspace": "Datasets",
+  "about": [
+    "Dataset Quality Inspector scores a snapshot for completeness, duplicates, and columns that should not be features.",
+    "Sample sets include a support corpus, a sensor extract, and a synthetic trial."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

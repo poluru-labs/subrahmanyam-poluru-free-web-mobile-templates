@@ -1,0 +1,16 @@
+{
+  "product": "Dependency Risk Dashboard",
+  "kicker": "Supply chain",
+  "headline": "Know which package is the real risk",
+  "lede": "Rank vulnerabilities, abandoned libraries, and license conflicts by the services that ship them.",
+  "summary": "A dashboard for security and platform teams watching third-party code.",
+  "workspace": "Risks",
+  "about": [
+    "Dependency Risk Dashboard ties an advisory to the services that actually install the package. Abandoned maintainers and license clashes sit in the same list.",
+    "Sample risks cover a logging library, a parser, and a transitive test tool."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

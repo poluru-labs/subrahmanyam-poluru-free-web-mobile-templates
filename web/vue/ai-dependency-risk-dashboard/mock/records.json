@@ -1,0 +1,47 @@
+[
+  {
+    "id": "DR-70",
+    "title": "log-sink critical advisory",
+    "status": "Reachable",
+    "tone": "error",
+    "owner": "Nadia Petrov",
+    "score": "CVSS 9.1",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "DR-66",
+    "title": "Parser license clash",
+    "status": "Review",
+    "tone": "warning",
+    "owner": "Nadia Petrov",
+    "score": "GPL",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "DR-61",
+    "title": "Test-only prototype",
+    "status": "Low",
+    "tone": "success",
+    "owner": "Eli Santos",
+    "score": "Dev",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "DR-58",
+    "title": "Abandoned http helper",
+    "status": "Watch",
+    "tone": "warning",
+    "owner": "Eli Santos",
+    "score": "4 years",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "DR-51",
+    "title": "Patched json codec",
+    "status": "Cleared",
+    "tone": "success",
+    "owner": "Nadia Petrov",
+    "score": "Done",
+    "updated": "Nov 18"
+  }
+]
