@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Incident writing split between a 2 and a 3."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Plain-language edit agreed at level 3."
+  },
+  {
+    "when": "Thu",
+    "text": "Handoff note still needs a second rater."
+  },
+  {
+    "when": "Tue",
+    "text": "Source summary flagged for a calibration talk."
+  }
+]

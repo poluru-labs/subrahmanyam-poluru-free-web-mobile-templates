@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "file",
+    "title": "Anchored comments",
+    "detail": "A remark points at a section, not a loose email."
+  },
+  {
+    "icon": "users",
+    "title": "Referee status",
+    "detail": "Invited, received, and overdue reviews stay visible."
+  },
+  {
+    "icon": "check",
+    "title": "Response check",
+    "detail": "Author replies are matched to the comment they answer."
+  }
+]

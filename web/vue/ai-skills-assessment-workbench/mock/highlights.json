@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "pen",
+    "title": "Rubric rows",
+    "detail": "Each level describes observable work."
+  },
+  {
+    "icon": "users",
+    "title": "Two raters",
+    "detail": "Disagreement is shown before a score is final."
+  },
+  {
+    "icon": "check",
+    "title": "Evidence",
+    "detail": "The score points at the task that earned it."
+  }
+]

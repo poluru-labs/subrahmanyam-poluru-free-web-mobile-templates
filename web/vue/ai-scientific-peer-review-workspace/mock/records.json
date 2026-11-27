@@ -1,0 +1,47 @@
+[
+  {
+    "id": "SP-30",
+    "title": "Methods sample size",
+    "status": "Overdue",
+    "tone": "error",
+    "owner": "Editor Khan",
+    "score": "Referee B",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "SP-28",
+    "title": "Figure legend clarity",
+    "status": "Received",
+    "tone": "success",
+    "owner": "Editor Khan",
+    "score": "Referee A",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "SP-24",
+    "title": "Data availability",
+    "status": "Answered",
+    "tone": "success",
+    "owner": "Author team",
+    "score": "Section 6",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "SP-21",
+    "title": "Statistics question",
+    "status": "Open",
+    "tone": "warning",
+    "owner": "Author team",
+    "score": "Section 3",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "SP-18",
+    "title": "Scope fit",
+    "status": "Received",
+    "tone": "info",
+    "owner": "Editor Diaz",
+    "score": "Referee C",
+    "updated": "Nov 18"
+  }
+]

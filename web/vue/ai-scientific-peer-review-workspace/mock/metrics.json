@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Manuscripts",
+    "value": "12",
+    "note": "4 with a decision due"
+  },
+  {
+    "label": "Reviews in",
+    "value": "21",
+    "note": "6 overdue"
+  },
+  {
+    "label": "Responses open",
+    "value": "9",
+    "note": "Author side"
+  }
+]

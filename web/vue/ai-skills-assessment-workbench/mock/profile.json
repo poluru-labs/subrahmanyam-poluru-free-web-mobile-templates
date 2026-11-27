@@ -1,0 +1,16 @@
+{
+  "product": "Skills Assessment Workbench",
+  "kicker": "Evidence of skill",
+  "headline": "Score the skill from the work, not the title",
+  "lede": "Collect tasks, rubrics, and rater notes for a skill you can describe.",
+  "summary": "A workbench for assessment designers who want evidence behind a skill claim.",
+  "workspace": "Skills",
+  "about": [
+    "Skills Assessment Workbench pairs a task with a rubric and the notes from two raters.",
+    "Sample skills include incident writing, plain-language editing, and data checking."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

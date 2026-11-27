@@ -1,0 +1,47 @@
+[
+  {
+    "id": "SK-18",
+    "title": "Incident timeline writing",
+    "status": "Split",
+    "tone": "warning",
+    "owner": "Rater One",
+    "score": "2 vs 3",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "SK-16",
+    "title": "Plain-language edit",
+    "status": "Agreed",
+    "tone": "success",
+    "owner": "Rater Two",
+    "score": "3",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "SK-14",
+    "title": "Spreadsheet check",
+    "status": "Agreed",
+    "tone": "success",
+    "owner": "Rater One",
+    "score": "2",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "SK-11",
+    "title": "Client handoff note",
+    "status": "Waiting",
+    "tone": "info",
+    "owner": "Rater Two",
+    "score": "One score",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "SK-09",
+    "title": "Source summary",
+    "status": "Split",
+    "tone": "warning",
+    "owner": "Rater One",
+    "score": "1 vs 3",
+    "updated": "Nov 20"
+  }
+]

@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+/*
+  Skills Assessment Workbench
+  Popular web color: Cadet #4F8F90
+  Layout: Centered overlap
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F3F7F6;
+  --color-base-300: #E3EEEC;
+  --color-base-content: #14211F;
+  --color-primary: #4F8F90;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #DC2626;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #007FFF;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #14211F;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 1.25rem;
+  --radius-field: 1.25rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-skills-assessment-workbench */
+.skill-shell {
+  background: radial-gradient(ellipse 55% 70% at 50% 0%, rgb(79 143 144 / 0.2), transparent 65%);
+}
+
+.skill-hero-float {
+  box-shadow: 0 24px 50px rgb(79 143 144 / 0.18);
+}
+
+.skill-score-ring {
+  background: conic-gradient(from 210deg, var(--color-primary), var(--color-accent), var(--color-primary));
+}

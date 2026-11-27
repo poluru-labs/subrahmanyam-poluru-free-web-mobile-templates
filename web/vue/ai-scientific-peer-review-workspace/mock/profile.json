@@ -1,0 +1,16 @@
+{
+  "product": "Scientific Peer Review Workspace",
+  "kicker": "Review packet",
+  "headline": "Keep referee comments tied to the manuscript",
+  "lede": "Collect reviews, decisions, and author responses without losing which line they refer to.",
+  "summary": "A workspace for editors handling peer review with a clear packet.",
+  "workspace": "Reviews",
+  "about": [
+    "Scientific Peer Review Workspace attaches comments to a section and tracks whether the author answered them.",
+    "Sample manuscripts are in methods review and awaiting a decision."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}
