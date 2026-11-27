@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "scale",
+    "title": "Likely fit",
+    "detail": "Rules that clearly disqualify are shown, not skipped."
+  },
+  {
+    "icon": "file",
+    "title": "Document list",
+    "detail": "Each program names the papers still needed."
+  },
+  {
+    "icon": "route",
+    "title": "Next step",
+    "detail": "The office, hours, and form are attached to the result."
+  }
+]

@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+/*
+  Public Data Explorer
+  Popular web color: Tomato #E94B35
+  Layout: Steps and timeline
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F3F7F6;
+  --color-base-300: #E3EEEC;
+  --color-base-content: #14211F;
+  --color-primary: #E94B35;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #7C3AED;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #16A34A;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #14211F;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 1.25rem;
+  --radius-field: 1.25rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-public-data-explorer */
+.pdata-shell {
+  background: radial-gradient(ellipse 65% 55% at 0% 0%, rgb(124 58 237 / 0.1), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 100% 20%, rgb(233 75 53 / 0.14), transparent 55%);
+}
+
+.pdata-header-rail {
+  background: linear-gradient(90deg, rgb(233 75 53 / 0.08), rgb(124 58 237 / 0.08));
+}
+
+.pdata-step-dot {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-primary) 22%, transparent);
+}
+
+.pdata-step-rail {
+  min-height: 2.5rem;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-secondary) 70%, transparent);
+}
+
+.pdata-step-card {
+  border-left: 4px solid var(--color-secondary);
+  background: linear-gradient(90deg, rgb(124 58 237 / 0.06), transparent 55%);
+}

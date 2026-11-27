@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PD-90",
+    "title": "Building permits",
+    "status": "Fresh",
+    "tone": "success",
+    "owner": "Open data team",
+    "score": "Daily",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "PD-84",
+    "title": "Operating budget",
+    "status": "Fresh",
+    "tone": "success",
+    "owner": "Budget office",
+    "score": "Nov 1",
+    "updated": "Nov 20"
+  },
+  {
+    "id": "PD-79",
+    "title": "311 requests",
+    "status": "Late",
+    "tone": "warning",
+    "owner": "Open data team",
+    "score": "3 days",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "PD-70",
+    "title": "Park trees",
+    "status": "Fresh",
+    "tone": "info",
+    "owner": "Parks",
+    "score": "Quarterly",
+    "updated": "Nov 15"
+  },
+  {
+    "id": "PD-66",
+    "title": "Legacy contracts",
+    "status": "Retired",
+    "tone": "ghost",
+    "owner": "Procurement",
+    "score": "Archived",
+    "updated": "Oct 30"
+  }
+]

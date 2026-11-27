@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "globe",
+    "title": "Catalog cards",
+    "detail": "Each set has an owner, a license, and a last update."
+  },
+  {
+    "icon": "chart",
+    "title": "Preview rows",
+    "detail": "A few rows show the shape before a full download."
+  },
+  {
+    "icon": "alert",
+    "title": "Freshness",
+    "detail": "A missed update is visible on the card."
+  }
+]

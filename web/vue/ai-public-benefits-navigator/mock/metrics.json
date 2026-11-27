@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Cases this week",
+    "value": "96",
+    "note": "4 offices"
+  },
+  {
+    "label": "Likely eligible",
+    "value": "61",
+    "note": "At least one program"
+  },
+  {
+    "label": "Missing documents",
+    "value": "40",
+    "note": "Mostly ID"
+  }
+]

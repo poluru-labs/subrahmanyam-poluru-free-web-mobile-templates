@@ -1,0 +1,16 @@
+{
+  "product": "Public Benefits Navigator",
+  "kicker": "Eligibility",
+  "headline": "Show which benefits are worth an application",
+  "lede": "Walk eligibility, documents, and office steps without hiding a disqualifying rule.",
+  "summary": "A navigator for staff helping someone see likely benefits and the next form.",
+  "workspace": "Benefits",
+  "about": [
+    "Public Benefits Navigator lists likely programs, the document still missing, and the office that takes the application.",
+    "Sample cases cover food assistance, child care, and a utility grant."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

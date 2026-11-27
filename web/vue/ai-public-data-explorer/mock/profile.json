@@ -1,0 +1,16 @@
+{
+  "product": "Public Data Explorer",
+  "kicker": "Open data",
+  "headline": "Browse the civic tables people ask for",
+  "lede": "Preview a dataset, its freshness, and the columns before someone downloads the wrong file.",
+  "summary": "An explorer for staff publishing open data and for residents using it.",
+  "workspace": "Catalog",
+  "about": [
+    "Public Data Explorer shows update time, license, and a small preview. Stale sets are labeled before download.",
+    "Sample sets include permits, budgets, and 311 requests."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}
