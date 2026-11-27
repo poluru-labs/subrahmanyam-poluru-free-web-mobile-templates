@@ -1,0 +1,18 @@
+[
+  {
+    "when": "20m ago",
+    "text": "Spanish billing thread answered with glossary terms."
+  },
+  {
+    "when": "Today",
+    "text": "French account thread handed to Luc."
+  },
+  {
+    "when": "Yesterday",
+    "text": "An unsupported language was queued instead of guessed."
+  },
+  {
+    "when": "Tue",
+    "text": "Portuguese address change completed."
+  }
+]

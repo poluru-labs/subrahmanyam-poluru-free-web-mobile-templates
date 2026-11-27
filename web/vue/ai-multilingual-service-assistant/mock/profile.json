@@ -1,0 +1,16 @@
+{
+  "product": "Multilingual Service Assistant",
+  "kicker": "Language desk",
+  "headline": "Answer in the language the person used",
+  "lede": "Route conversations, glossary terms, and handoffs across the languages you support.",
+  "summary": "An assistant desk for service teams working in more than one language.",
+  "workspace": "Languages",
+  "about": [
+    "Multilingual Service Assistant keeps glossary terms, unsupported languages, and human handoffs in one queue.",
+    "Sample threads cover Spanish billing help, French account access, and a language the team does not serve yet."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

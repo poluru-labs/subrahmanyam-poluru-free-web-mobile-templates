@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "message",
+    "title": "Language route",
+    "detail": "A thread stays in the language it started in."
+  },
+  {
+    "icon": "book",
+    "title": "Glossary",
+    "detail": "Approved terms are preferred over a fresh translation."
+  },
+  {
+    "icon": "users",
+    "title": "Human handoff",
+    "detail": "A specialist is requested when the draft is not enough."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "product": "Nonprofit Impact Analyzer",
+  "kicker": "Program evidence",
+  "headline": "Show what the program changed",
+  "lede": "Connect activities, participants, and outcomes for a board that wants evidence.",
+  "summary": "An analyzer for nonprofit teams reporting impact without inflating it.",
+  "workspace": "Outcomes",
+  "about": [
+    "Nonprofit Impact Analyzer ties a program's activities to the outcomes it actually measured. Missing data stays visible.",
+    "Sample programs include a tutoring cohort, a meal service, and a job-readiness class."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

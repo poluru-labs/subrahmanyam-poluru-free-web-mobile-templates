@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "heart",
+    "title": "Outcome links",
+    "detail": "An outcome cites the activity and the measure."
+  },
+  {
+    "icon": "users",
+    "title": "Who was served",
+    "detail": "Counts stay broken out instead of one big number."
+  },
+  {
+    "icon": "chart",
+    "title": "Honest gaps",
+    "detail": "Unmeasured goals are listed as gaps, not as success."
+  }
+]
