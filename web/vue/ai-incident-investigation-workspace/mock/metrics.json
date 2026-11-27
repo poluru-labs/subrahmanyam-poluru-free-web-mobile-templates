@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Open cases",
+    "value": "3",
+    "note": "1 severe"
+  },
+  {
+    "label": "Mean detect",
+    "value": "6m",
+    "note": "Last 10 incidents"
+  },
+  {
+    "label": "Actions logged",
+    "value": "28",
+    "note": "Today"
+  }
+]

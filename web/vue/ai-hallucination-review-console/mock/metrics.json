@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Answers in review",
+    "value": "42",
+    "note": "8 blocked"
+  },
+  {
+    "label": "Unsupported claims",
+    "value": "19",
+    "note": "This week"
+  },
+  {
+    "label": "Cleared answers",
+    "value": "120",
+    "note": "Ready to ship"
+  }
+]

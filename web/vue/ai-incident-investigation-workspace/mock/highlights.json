@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "alert",
+    "title": "Live timeline",
+    "detail": "Detections and decisions share one clock."
+  },
+  {
+    "icon": "users",
+    "title": "Owners",
+    "detail": "Each action names who took it."
+  },
+  {
+    "icon": "file",
+    "title": "Case notes",
+    "detail": "Hypotheses stay marked open or ruled out."
+  }
+]

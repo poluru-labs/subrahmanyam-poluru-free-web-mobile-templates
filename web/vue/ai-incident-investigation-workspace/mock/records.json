@@ -1,0 +1,47 @@
+[
+  {
+    "id": "IN-77",
+    "title": "Checkout 500s",
+    "status": "Severe",
+    "tone": "error",
+    "owner": "Rita Olson",
+    "score": "Sev-1",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "IN-74",
+    "title": "Search timeout",
+    "status": "Mitigating",
+    "tone": "warning",
+    "owner": "Rita Olson",
+    "score": "Sev-2",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "IN-70",
+    "title": "Bad config deploy",
+    "status": "Resolved",
+    "tone": "success",
+    "owner": "Malik Jordan",
+    "score": "Sev-2",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "IN-66",
+    "title": "Queue backlog",
+    "status": "Watching",
+    "tone": "info",
+    "owner": "Malik Jordan",
+    "score": "Sev-3",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "IN-61",
+    "title": "Certificate renewal",
+    "status": "Resolved",
+    "tone": "success",
+    "owner": "Rita Olson",
+    "score": "Sev-3",
+    "updated": "Nov 20"
+  }
+]

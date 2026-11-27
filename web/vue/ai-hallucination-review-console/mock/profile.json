@@ -1,0 +1,16 @@
+{
+  "product": "Hallucination Review Console",
+  "kicker": "Answer checks",
+  "headline": "Separate supported answers from invented ones",
+  "lede": "Review model answers against the sources they were allowed to use.",
+  "summary": "A console for reviewers who need unsupported claims marked before release.",
+  "workspace": "Claims",
+  "about": [
+    "Hallucination Review Console lines up each claim with a source span or marks it unsupported. Reviewers record the decision.",
+    "Sample answers come from a help center bot and a research summary."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

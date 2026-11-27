@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Incident Investigation Workspace
+  Popular web color: Sky #0284C7
+  Layout: Alternating story
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFCF8;
+  --color-base-200: #F6F1EA;
+  --color-base-300: #E7DFD4;
+  --color-base-content: #292218;
+  --color-primary: #0284C7;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #B22222;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #007BA7;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #292218;
+  --color-neutral-content: #FFFCF8;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+/* layout: ai-incident-investigation-workspace */
+.inc-shell { background: linear-gradient(180deg, rgb(2 132 199 / 0.07) 0%, rgb(178 34 34 / 0.03) 120px, transparent 320px); }
+.inc-header-band { background: linear-gradient(95deg, #015a8a 0%, #0284c7 42%, #b22222 92%); }
+.inc-zig-primary { background: linear-gradient(120deg, rgb(2 132 199 / 0.14) 0%, transparent 58%); border-left: 4px solid var(--color-primary); }
+.inc-zig-secondary { background: linear-gradient(300deg, rgb(178 34 34 / 0.12) 0%, transparent 55%); border-right: 4px solid var(--color-secondary); }
+.inc-story-tick { background-image: repeating-linear-gradient(90deg, rgb(0 123 167 / 0.12) 0 1px, transparent 1px 14px); }

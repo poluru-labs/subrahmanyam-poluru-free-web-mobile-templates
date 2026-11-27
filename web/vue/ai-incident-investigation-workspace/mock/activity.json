@@ -1,0 +1,18 @@
+[
+  {
+    "when": "8m ago",
+    "text": "Checkout errors tied to the payment provider timeout."
+  },
+  {
+    "when": "1h ago",
+    "text": "Search traffic shifted to the backup index."
+  },
+  {
+    "when": "Nov 24",
+    "text": "Config deploy rolled back and marked resolved."
+  },
+  {
+    "when": "Nov 20",
+    "text": "Certificate case closed after renewal."
+  }
+]

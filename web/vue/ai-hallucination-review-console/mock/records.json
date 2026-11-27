@@ -1,0 +1,47 @@
+[
+  {
+    "id": "HL-300",
+    "title": "Refund window invented",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Tara Singh",
+    "score": "No source",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "HL-296",
+    "title": "Shipping regions match",
+    "status": "Cleared",
+    "tone": "success",
+    "owner": "Tara Singh",
+    "score": "Cited",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "HL-288",
+    "title": "Study year wrong",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Victor Lang",
+    "score": "Off by 2",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "HL-281",
+    "title": "Tone-only edit",
+    "status": "Cleared",
+    "tone": "info",
+    "owner": "Victor Lang",
+    "score": "Supported",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "HL-274",
+    "title": "Price example extra",
+    "status": "Review",
+    "tone": "warning",
+    "owner": "Tara Singh",
+    "score": "Uncited",
+    "updated": "Nov 23"
+  }
+]

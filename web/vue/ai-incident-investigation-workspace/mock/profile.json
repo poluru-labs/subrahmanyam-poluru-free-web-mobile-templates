@@ -1,0 +1,16 @@
+{
+  "product": "Incident Investigation Workspace",
+  "kicker": "After the page",
+  "headline": "Build the timeline while the incident is fresh",
+  "lede": "Collect signals, decisions, and owners into one investigation instead of a scattered chat.",
+  "summary": "A workspace for responders writing the record of what happened.",
+  "workspace": "Cases",
+  "about": [
+    "Incident Investigation Workspace keeps a timeline, the hypotheses still open, and the actions already taken.",
+    "Sample cases include a checkout outage, a bad deploy, and a third-party timeout."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

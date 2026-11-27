@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "search",
+    "title": "Source spans",
+    "detail": "A supported claim points at the passage it came from."
+  },
+  {
+    "icon": "alert",
+    "title": "Unsupported lines",
+    "detail": "Invented details are listed apart from tone issues."
+  },
+  {
+    "icon": "check",
+    "title": "Release gate",
+    "detail": "An answer stays in review until unsupported claims are cleared."
+  }
+]
