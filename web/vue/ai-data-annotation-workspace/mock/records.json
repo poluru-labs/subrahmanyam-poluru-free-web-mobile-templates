@@ -1,0 +1,47 @@
+[
+  {
+    "id": "AN-190",
+    "title": "Intent: refund versus return",
+    "status": "Split",
+    "tone": "warning",
+    "owner": "Keiko Mori",
+    "score": "0.52",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "AN-184",
+    "title": "Address block bounds",
+    "status": "Agreed",
+    "tone": "success",
+    "owner": "Omar Farouk",
+    "score": "0.94",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "AN-177",
+    "title": "PII span too wide",
+    "status": "Review",
+    "tone": "info",
+    "owner": "Keiko Mori",
+    "score": "0.71",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "AN-166",
+    "title": "Empty label on scan",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Omar Farouk",
+    "score": "0.00",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "AN-159",
+    "title": "Greeting intent stable",
+    "status": "Agreed",
+    "tone": "success",
+    "owner": "Keiko Mori",
+    "score": "0.97",
+    "updated": "Nov 23"
+  }
+]

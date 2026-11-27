@@ -1,0 +1,18 @@
+[
+  {
+    "when": "25m ago",
+    "text": "Refund versus return sent to adjudication."
+  },
+  {
+    "when": "Today",
+    "text": "Address bounds accepted from both annotators."
+  },
+  {
+    "when": "Tue",
+    "text": "Empty scan returned to the source team."
+  },
+  {
+    "when": "Mon",
+    "text": "Greeting intent frozen for the training cut."
+  }
+]

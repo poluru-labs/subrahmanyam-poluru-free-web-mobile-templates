@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+/*
+  Data Lineage Explorer
+  Popular web color: Amber #D97706
+  Layout: Centered overlap
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F3F7F6;
+  --color-base-300: #E3EEEC;
+  --color-base-content: #14211F;
+  --color-primary: #D97706;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #3F3F46;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #6A5ACD;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #14211F;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 1.25rem;
+  --radius-field: 1.25rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-data-lineage-explorer */
+.lineage-shell {
+  background-color: var(--color-base-200);
+  background-image:
+    radial-gradient(ellipse 65% 45% at 50% -5%, rgb(217 119 6 / 0.14), transparent 55%),
+    radial-gradient(ellipse 45% 35% at 95% 15%, rgb(106 90 205 / 0.1), transparent 50%);
+}
+
+.lineage-hero-float {
+  box-shadow:
+    0 4px 8px rgb(63 63 70 / 0.06),
+    0 28px 72px rgb(217 119 6 / 0.16);
+}
+
+.lineage-graph-node {
+  background: linear-gradient(145deg, rgb(217 119 6 / 0.1), rgb(106 90 205 / 0.06));
+  border: 1px solid rgb(217 119 6 / 0.28);
+}
+
+.lineage-connector {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  opacity: 0.45;
+}
+
+.lineage-header-bar {
+  background: linear-gradient(90deg, rgb(217 119 6 / 0.08) 0%, transparent 40%);
+}

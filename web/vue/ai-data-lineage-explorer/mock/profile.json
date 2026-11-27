@@ -1,0 +1,16 @@
+{
+  "product": "Data Lineage Explorer",
+  "kicker": "Upstream map",
+  "headline": "Trace a number back to its sources",
+  "lede": "Follow a dashboard field through models, tables, and the jobs that last wrote them.",
+  "summary": "An explorer for analysts who need to know where a figure came from.",
+  "workspace": "Lineage",
+  "about": [
+    "Data Lineage Explorer walks from a published metric to the tables and jobs behind it. Broken jobs and stale partitions are marked on the path.",
+    "Sample paths cover revenue, active accounts, and a support satisfaction score."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

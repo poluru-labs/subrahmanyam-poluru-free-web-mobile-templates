@@ -1,0 +1,18 @@
+[
+  {
+    "when": "1h ago",
+    "text": "Satisfaction job failed on the notes table."
+  },
+  {
+    "when": "Today",
+    "text": "Active accounts path refreshed on schedule."
+  },
+  {
+    "when": "Wed",
+    "text": "Revenue delay traced to a late invoice load."
+  },
+  {
+    "when": "Tue",
+    "text": "Region rollup owner notified."
+  }
+]

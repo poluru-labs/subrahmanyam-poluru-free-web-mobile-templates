@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Metrics mapped",
+    "value": "73",
+    "note": "4 domains"
+  },
+  {
+    "label": "Broken hops",
+    "value": "5",
+    "note": "Need a rerun"
+  },
+  {
+    "label": "Fresh paths",
+    "value": "91%",
+    "note": "Updated today"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "product": "Data Annotation Workspace",
+  "kicker": "Label quality",
+  "headline": "Keep labels consistent across the team",
+  "lede": "Assign tasks, compare annotators, and settle disagreements without losing the guideline.",
+  "summary": "A workspace for labeling leads who care about agreement, not just throughput.",
+  "workspace": "Tasks",
+  "about": [
+    "Data Annotation Workspace shows agreement, guideline citations, and the queue of items that still need a decision.",
+    "Sample tasks are drawn from a support-intent set and a document-region set."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

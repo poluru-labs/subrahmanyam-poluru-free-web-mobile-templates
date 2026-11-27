@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "pen",
+    "title": "Guideline cites",
+    "detail": "A label can point back to the rule that justifies it."
+  },
+  {
+    "icon": "users",
+    "title": "Agreement",
+    "detail": "Pairs who diverge are listed before the set is frozen."
+  },
+  {
+    "icon": "check",
+    "title": "Adjudication",
+    "detail": "A lead decision is stored separately from the first pass."
+  }
+]

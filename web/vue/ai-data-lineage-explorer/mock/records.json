@@ -1,0 +1,47 @@
+[
+  {
+    "id": "LN-30",
+    "title": "Net revenue daily",
+    "status": "Stale",
+    "tone": "warning",
+    "owner": "Carmen Silva",
+    "score": "2 hops late",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "LN-28",
+    "title": "Active accounts",
+    "status": "Fresh",
+    "tone": "success",
+    "owner": "Carmen Silva",
+    "score": "On time",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "LN-22",
+    "title": "Satisfaction score",
+    "status": "Broken",
+    "tone": "error",
+    "owner": "Hugh Martin",
+    "score": "Job failed",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "LN-19",
+    "title": "Refund rate",
+    "status": "Fresh",
+    "tone": "success",
+    "owner": "Hugh Martin",
+    "score": "On time",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "LN-15",
+    "title": "Region rollup",
+    "status": "Stale",
+    "tone": "warning",
+    "owner": "Carmen Silva",
+    "score": "1 hop late",
+    "updated": "Nov 23"
+  }
+]

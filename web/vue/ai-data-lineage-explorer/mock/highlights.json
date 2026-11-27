@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "route",
+    "title": "Path walk",
+    "detail": "Each hop names the dataset and the job that produced it."
+  },
+  {
+    "icon": "alert",
+    "title": "Stale hops",
+    "detail": "A late partition is visible before someone trusts the chart."
+  },
+  {
+    "icon": "layers",
+    "title": "Shared sources",
+    "detail": "Tables used by several metrics are called out."
+  }
+]
