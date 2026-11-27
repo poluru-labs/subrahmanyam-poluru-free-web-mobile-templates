@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="brand">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Compare sensors, forecasts, and health guidance for the places people actually spend the day." />
+    <meta name="author" content="Subrahmanyam Poluru" />
+    <meta name="theme-color" content="#9333EA" />
+    <link rel="author" href="https://polurus.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Air Quality Explorer</title>
+    <script>
+      try {
+        var theme = localStorage.getItem('ai-air-quality-explorer-theme')
+        if (theme) document.documentElement.setAttribute('data-theme', theme)
+      } catch (error) {
+        // Storage can be blocked. The default theme on <html> still applies.
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

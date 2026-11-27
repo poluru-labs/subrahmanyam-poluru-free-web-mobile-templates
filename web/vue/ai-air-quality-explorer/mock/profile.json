@@ -1,0 +1,16 @@
+{
+  "product": "Air Quality Explorer",
+  "kicker": "Neighborhood air",
+  "headline": "Read the air on your block",
+  "lede": "Compare sensors, forecasts, and health guidance for the places people actually spend the day.",
+  "summary": "An explorer for residents and city staff tracking outdoor air.",
+  "workspace": "Sensors",
+  "about": [
+    "Air Quality Explorer pairs station readings with short forecasts and plain-language guidance. A school day and a commute can tell different stories.",
+    "Sample sensors cover a river ward, a highway edge, and a downtown roof."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

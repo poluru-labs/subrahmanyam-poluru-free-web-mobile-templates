@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Stations live",
+    "value": "36",
+    "note": "2 delayed"
+  },
+  {
+    "label": "Good hours",
+    "value": "71%",
+    "note": "Last 7 days"
+  },
+  {
+    "label": "Alerts sent",
+    "value": "9",
+    "note": "Schools and parks"
+  }
+]

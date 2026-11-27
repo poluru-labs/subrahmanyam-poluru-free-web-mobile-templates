@@ -1,0 +1,16 @@
+{
+  "product": "Agent Observability Console",
+  "kicker": "Runtime traces",
+  "headline": "See what your agents actually did",
+  "lede": "Follow tool calls, handoffs, and failures across a run without scraping raw logs.",
+  "summary": "A console for operators who need a clear trace of every agent step.",
+  "workspace": "Traces",
+  "about": [
+    "Agent Observability Console turns a run into a timeline of prompts, tools, and outcomes. Slow steps and repeated retries stand out.",
+    "The sample traces come from a support agent, a research agent, and a nightly batch job."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

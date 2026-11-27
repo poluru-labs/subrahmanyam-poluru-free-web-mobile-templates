@@ -1,0 +1,18 @@
+[
+  {
+    "when": "12m ago",
+    "text": "Billing handoff failed after the refund tool timed out."
+  },
+  {
+    "when": "1h ago",
+    "text": "Search retries crossed the watch threshold."
+  },
+  {
+    "when": "Today",
+    "text": "Nightly digest finished inside its step budget."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Nina muted an expected empty-context warning."
+  }
+]

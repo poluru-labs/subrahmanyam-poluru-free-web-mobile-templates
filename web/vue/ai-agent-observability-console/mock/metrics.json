@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Runs today",
+    "value": "1,906",
+    "note": "3.1% failed"
+  },
+  {
+    "label": "Median steps",
+    "value": "7",
+    "note": "Down from 9"
+  },
+  {
+    "label": "Tool errors",
+    "value": "22",
+    "note": "Mostly search"
+  }
+]

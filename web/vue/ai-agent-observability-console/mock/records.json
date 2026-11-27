@@ -1,0 +1,47 @@
+[
+  {
+    "id": "TR-8841",
+    "title": "Billing handoff stalled",
+    "status": "Failed",
+    "tone": "error",
+    "owner": "Sasha Iqbal",
+    "score": "11 steps",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "TR-8790",
+    "title": "Nightly digest completed",
+    "status": "Healthy",
+    "tone": "success",
+    "owner": "Owen Blake",
+    "score": "6 steps",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "TR-8733",
+    "title": "Search tool retried",
+    "status": "Watch",
+    "tone": "warning",
+    "owner": "Sasha Iqbal",
+    "score": "14 steps",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "TR-8702",
+    "title": "Policy lookup succeeded",
+    "status": "Healthy",
+    "tone": "success",
+    "owner": "Nina Rossi",
+    "score": "4 steps",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "TR-8660",
+    "title": "Empty context warning",
+    "status": "Watch",
+    "tone": "warning",
+    "owner": "Owen Blake",
+    "score": "8 steps",
+    "updated": "Nov 24"
+  }
+]

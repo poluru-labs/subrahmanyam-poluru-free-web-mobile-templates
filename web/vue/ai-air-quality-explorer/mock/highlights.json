@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "globe",
+    "title": "Place comparisons",
+    "detail": "Stations stay tied to the neighborhoods they represent."
+  },
+  {
+    "icon": "sun",
+    "title": "Forecast bands",
+    "detail": "The next 24 hours show when conditions usually ease."
+  },
+  {
+    "icon": "heart",
+    "title": "Health notes",
+    "detail": "Guidance is written for outdoor plans, not just index numbers."
+  }
+]

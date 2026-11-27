@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "layers",
+    "title": "Step timelines",
+    "detail": "Each tool call sits on a single run timeline."
+  },
+  {
+    "icon": "bolt",
+    "title": "Retry spikes",
+    "detail": "Repeated attempts surface before they burn the budget."
+  },
+  {
+    "icon": "alert",
+    "title": "Failed handoffs",
+    "detail": "A dropped handoff is marked at the step where it broke."
+  }
+]

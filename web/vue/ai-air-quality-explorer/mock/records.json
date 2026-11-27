@@ -1,0 +1,47 @@
+[
+  {
+    "id": "AQ-R12",
+    "title": "River ward schoolyard",
+    "status": "Good",
+    "tone": "success",
+    "owner": "City air desk",
+    "score": "28 AQI",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "AQ-H04",
+    "title": "Harbor highway edge",
+    "status": "Moderate",
+    "tone": "warning",
+    "owner": "City air desk",
+    "score": "78 AQI",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "AQ-D02",
+    "title": "Downtown roof",
+    "status": "Good",
+    "tone": "success",
+    "owner": "Lena Ortiz",
+    "score": "41 AQI",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "AQ-P09",
+    "title": "East park loop",
+    "status": "Sensitive",
+    "tone": "warning",
+    "owner": "Lena Ortiz",
+    "score": "102 AQI",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "AQ-W18",
+    "title": "West clinic intake",
+    "status": "Good",
+    "tone": "success",
+    "owner": "City air desk",
+    "score": "33 AQI",
+    "updated": "Nov 25"
+  }
+]
