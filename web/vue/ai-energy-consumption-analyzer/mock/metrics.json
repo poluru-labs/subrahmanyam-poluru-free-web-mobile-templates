@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Sites metered",
+    "value": "12",
+    "note": "All reporting"
+  },
+  {
+    "label": "Peak over plan",
+    "value": "9%",
+    "note": "Lab building"
+  },
+  {
+    "label": "Off-hour load",
+    "value": "14%",
+    "note": "Office wing"
+  }
+]

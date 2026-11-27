@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Food Waste Reduction Dashboard
+  Popular web color: Teal #0D9488
+  Layout: Side rail
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: dark;
+  --color-base-100: #0F172A;
+  --color-base-200: #111827;
+  --color-base-300: #1F2937;
+  --color-base-content: #E5E7EB;
+  --color-primary: #0D9488;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #A0522D;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #046307;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #0B1220;
+  --color-neutral-content: #F8FAFC;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 1.25rem;
+  --radius-field: 1.25rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-food-waste-reduction-dashboard */
+.kitchen-shell { background: radial-gradient(ellipse 50% 60% at 0% 50%, rgb(13 148 136 / 0.2), transparent 70%); }
+.kitchen-rail { background: linear-gradient(180deg, #042f2e 0%, #0d4f4a 45%, #0d9488 100%); }
+.kitchen-rail-glow { box-shadow: inset 0 0 40px rgb(13 148 136 / 0.25); }
+.kitchen-prep-line { border-left: 3px solid var(--color-secondary); }

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "EN-40",
+    "title": "Lab night baseload",
+    "status": "High",
+    "tone": "warning",
+    "owner": "Marta Klein",
+    "score": "+9%",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "EN-37",
+    "title": "Library afternoon",
+    "status": "Expected",
+    "tone": "success",
+    "owner": "Marta Klein",
+    "score": "On plan",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "EN-33",
+    "title": "Office weekend HVAC",
+    "status": "High",
+    "tone": "error",
+    "owner": "Derek Shaw",
+    "score": "+22%",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "EN-29",
+    "title": "Kitchen gas morning",
+    "status": "Expected",
+    "tone": "success",
+    "owner": "Derek Shaw",
+    "score": "On plan",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "EN-24",
+    "title": "Garage lighting",
+    "status": "Watch",
+    "tone": "info",
+    "owner": "Marta Klein",
+    "score": "Flat",
+    "updated": "Nov 21"
+  }
+]

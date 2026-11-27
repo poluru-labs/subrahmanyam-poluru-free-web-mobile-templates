@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "leaf",
+    "title": "Station totals",
+    "detail": "Prep, plate, and spoilage stay in separate counts."
+  },
+  {
+    "icon": "chart",
+    "title": "Menu effect",
+    "detail": "See which dishes come back unfinished."
+  },
+  {
+    "icon": "check",
+    "title": "Order adjustments",
+    "detail": "Tomorrow's prep can follow yesterday's leftover."
+  }
+]

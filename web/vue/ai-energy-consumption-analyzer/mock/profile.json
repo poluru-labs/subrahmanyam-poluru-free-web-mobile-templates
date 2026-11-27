@@ -1,0 +1,16 @@
+{
+  "product": "Energy Consumption Analyzer",
+  "kicker": "Building load",
+  "headline": "See which hours cost the most",
+  "lede": "Compare buildings, schedules, and weather so energy spikes have an owner.",
+  "summary": "An analyzer for facilities teams tracking electricity and gas use.",
+  "workspace": "Meters",
+  "about": [
+    "Energy Consumption Analyzer lines up meter data with occupancy and weather. A spike without a schedule change is easy to spot.",
+    "Sample meters cover a lab, a library, and a weekend-quiet office."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

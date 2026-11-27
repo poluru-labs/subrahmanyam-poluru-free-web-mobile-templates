@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Energy Consumption Analyzer
+  Popular web color: Forest #228B22
+  Layout: Operations dashboard
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFCF8;
+  --color-base-200: #F6F1EA;
+  --color-base-300: #E7DFD4;
+  --color-base-content: #292218;
+  --color-primary: #228B22;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #7B3F00;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #0F52BA;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #292218;
+  --color-neutral-content: #FFFCF8;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-energy-consumption-analyzer */
+.energy-shell { background: repeating-linear-gradient(90deg, rgb(34 139 34 / 0.03) 0 1px, transparent 1px 40px); }
+.energy-meter-fill { background: linear-gradient(90deg, var(--color-secondary), var(--color-primary), var(--color-accent)); }
+.energy-ops-panel { border: 1px solid rgb(34 139 34 / 0.2); }
+.energy-grid-header { background: linear-gradient(90deg, #1a4d1a, #228b22); }

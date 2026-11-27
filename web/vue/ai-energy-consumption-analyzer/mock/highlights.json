@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "bolt",
+    "title": "Peak hours",
+    "detail": "The costly hours are marked against the tariff window."
+  },
+  {
+    "icon": "chart",
+    "title": "Building compare",
+    "detail": "Similar buildings are shown on the same scale."
+  },
+  {
+    "icon": "sun",
+    "title": "Weather context",
+    "detail": "A hot afternoon is noted beside the load, not hidden in it."
+  }
+]

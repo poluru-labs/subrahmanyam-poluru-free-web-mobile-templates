@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Morning",
+    "text": "Lab baseload stayed high after the cleaners left."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Office HVAC ran through a closed Sunday."
+  },
+  {
+    "when": "Fri",
+    "text": "Library peak matched the exam schedule."
+  },
+  {
+    "when": "Thu",
+    "text": "Garage lighting flagged as flat all night."
+  }
+]

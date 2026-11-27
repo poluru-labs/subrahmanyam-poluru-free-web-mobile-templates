@@ -1,0 +1,16 @@
+{
+  "product": "Food Waste Reduction Dashboard",
+  "kicker": "Kitchen signal",
+  "headline": "Waste less of what you already cooked",
+  "lede": "Track prep, service, and spoilage so menus and orders follow what people finish.",
+  "summary": "A dashboard for kitchens reducing waste without guessing from the trash bin.",
+  "workspace": "Kitchens",
+  "about": [
+    "Food Waste Reduction Dashboard separates prep loss, plate waste, and spoilage. Each number is tied to a service and a station.",
+    "Sample kitchens include a campus dining hall, a hospital cafe, and a catering line."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

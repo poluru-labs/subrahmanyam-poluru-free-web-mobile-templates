@@ -1,0 +1,18 @@
+[
+  {
+    "when": "After lunch",
+    "text": "Pasta portions marked high on plate returns."
+  },
+  {
+    "when": "Today",
+    "text": "Fruit cups pulled for spoilage before service."
+  },
+  {
+    "when": "Tue",
+    "text": "Soup station stayed inside the target."
+  },
+  {
+    "when": "Mon",
+    "text": "Donation run logged for untouched breakfast bread."
+  }
+]
