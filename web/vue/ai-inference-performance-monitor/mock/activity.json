@@ -1,0 +1,18 @@
+[
+  {
+    "when": "15m ago",
+    "text": "Chat p95 crossed 800 ms after the noon traffic."
+  },
+  {
+    "when": "Today",
+    "text": "Embeddings stayed inside its budget."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Batch scorer timeouts tied to a cold worker."
+  },
+  {
+    "when": "Mon",
+    "text": "Moderation endpoint marked healthy."
+  }
+]

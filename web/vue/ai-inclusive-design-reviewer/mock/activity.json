@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Onboarding critique expanded to keyboard use."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Empty state closed after a clearer next step."
+  },
+  {
+    "when": "Wed",
+    "text": "Error copy flagged for blame-free wording."
+  },
+  {
+    "when": "Mon",
+    "text": "Modal focus order retested and closed."
+  }
+]

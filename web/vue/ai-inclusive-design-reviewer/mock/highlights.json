@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "users",
+    "title": "Audience notes",
+    "detail": "Feedback names the people affected, not a generic user."
+  },
+  {
+    "icon": "pen",
+    "title": "Decision trail",
+    "detail": "Each critique points at the frame and the change requested."
+  },
+  {
+    "icon": "check",
+    "title": "Retest",
+    "detail": "A note closes when the revised frame is reviewed again."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "IF-15",
+    "title": "Chat p95 climb",
+    "status": "Hot",
+    "tone": "warning",
+    "owner": "Leah Ortiz",
+    "score": "840 ms",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "IF-14",
+    "title": "Embeddings steady",
+    "status": "Healthy",
+    "tone": "success",
+    "owner": "Leah Ortiz",
+    "score": "210 ms",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "IF-12",
+    "title": "Batch scorer timeouts",
+    "status": "Hot",
+    "tone": "error",
+    "owner": "Chris Adeyemi",
+    "score": "2.4%",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "IF-09",
+    "title": "Rerank cold start",
+    "status": "Watch",
+    "tone": "info",
+    "owner": "Chris Adeyemi",
+    "score": "1.1 s",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "IF-07",
+    "title": "Moderation model",
+    "status": "Healthy",
+    "tone": "success",
+    "owner": "Leah Ortiz",
+    "score": "90 ms",
+    "updated": "Nov 23"
+  }
+]

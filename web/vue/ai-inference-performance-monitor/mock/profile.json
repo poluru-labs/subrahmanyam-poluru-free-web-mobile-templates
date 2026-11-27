@@ -1,0 +1,16 @@
+{
+  "product": "Inference Performance Monitor",
+  "kicker": "Serving health",
+  "headline": "Watch latency before users feel it",
+  "lede": "Track latency, queue time, and error rate for every model you serve.",
+  "summary": "A monitor for teams running models in production.",
+  "workspace": "Latency",
+  "about": [
+    "Inference Performance Monitor separates queue wait from model time. A slow endpoint is tied to a version, not a vague cluster.",
+    "Sample endpoints include chat, embeddings, and a nightly batch scorer."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

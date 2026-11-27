@@ -1,0 +1,17 @@
+[
+  {
+    "label": "p95 latency",
+    "value": "840 ms",
+    "note": "Chat endpoint"
+  },
+  {
+    "label": "Error rate",
+    "value": "0.6%",
+    "note": "Last hour"
+  },
+  {
+    "label": "Queue wait",
+    "value": "120 ms",
+    "note": "Embeddings"
+  }
+]

@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+/*
+  Inference Performance Monitor
+  Popular web color: Dodger Blue #1E90FF
+  Layout: Centered overlap
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F4F6F8;
+  --color-base-300: #E6EAEF;
+  --color-base-content: #1C2430;
+  --color-primary: #1E90FF;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #B565D8;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #4169E1;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #1C2430;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+/* layout: ai-inference-performance-monitor */
+.inf-shell { background-color: var(--color-base-200); background-image: radial-gradient(ellipse 70% 40% at 50% -8%, rgb(30 144 255 / 0.18), transparent 58%); }
+.inf-hero-float { box-shadow: 0 8px 32px rgb(30 144 255 / 0.22), 0 2px 8px rgb(0 0 0 / 0.06); }
+.inf-gauge-ring { background: conic-gradient(var(--color-primary) 0 72%, rgb(181 101 216 / 0.35) 72% 100%); }
+.inf-latency-bar { background: linear-gradient(90deg, var(--color-accent), var(--color-primary)); }

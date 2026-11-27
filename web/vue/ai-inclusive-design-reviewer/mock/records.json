@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ID-40",
+    "title": "Onboarding assumes mouse",
+    "status": "Open",
+    "tone": "warning",
+    "owner": "June Park",
+    "score": "Flow 2",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "ID-36",
+    "title": "Dashboard text density",
+    "status": "Open",
+    "tone": "warning",
+    "owner": "June Park",
+    "score": "Home",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "ID-33",
+    "title": "Empty state next step",
+    "status": "Closed",
+    "tone": "success",
+    "owner": "Harvey Cole",
+    "score": "Library",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "ID-29",
+    "title": "Error copy blames user",
+    "status": "Open",
+    "tone": "error",
+    "owner": "Harvey Cole",
+    "score": "Pay",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "ID-21",
+    "title": "Focus order on modal",
+    "status": "Closed",
+    "tone": "success",
+    "owner": "June Park",
+    "score": "Settings",
+    "updated": "Nov 19"
+  }
+]

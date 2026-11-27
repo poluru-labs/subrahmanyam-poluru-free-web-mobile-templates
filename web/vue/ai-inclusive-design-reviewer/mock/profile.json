@@ -1,0 +1,16 @@
+{
+  "product": "Inclusive Design Reviewer",
+  "kicker": "Design critique",
+  "headline": "Review the design for more than one kind of user",
+  "lede": "Capture barriers in flows, content, and interaction before engineering builds them in.",
+  "summary": "A reviewer for design teams who want inclusive feedback on the work in progress.",
+  "workspace": "Critiques",
+  "about": [
+    "Inclusive Design Reviewer records who a screen fails, why, and which design decision to revisit.",
+    "Sample critiques cover onboarding, a dense dashboard, and an empty state."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "bolt",
+    "title": "Latency split",
+    "detail": "Queue time and compute time are shown apart."
+  },
+  {
+    "icon": "chart",
+    "title": "Version compare",
+    "detail": "A new model version is plotted against the last one."
+  },
+  {
+    "icon": "alert",
+    "title": "Error budget",
+    "detail": "Timeouts count against the endpoint, not the whole platform."
+  }
+]
