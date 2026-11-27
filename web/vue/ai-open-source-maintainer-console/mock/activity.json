@@ -1,0 +1,18 @@
+[
+  {
+    "when": "1h ago",
+    "text": "Menu focus bug moved to the top of triage."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Docs typo approved for the patch release."
+  },
+  {
+    "when": "Sun",
+    "text": "Type change held for a major version."
+  },
+  {
+    "when": "Fri",
+    "text": "Release notes draft started for v3.4."
+  }
+]

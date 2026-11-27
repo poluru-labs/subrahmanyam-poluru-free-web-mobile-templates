@@ -1,0 +1,47 @@
+[
+  {
+    "id": "OS-50",
+    "title": "Focus bug in menu",
+    "status": "Needs you",
+    "tone": "error",
+    "owner": "Maintainer",
+    "score": "Issue 812",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "OS-47",
+    "title": "Docs typo patch",
+    "status": "Ready",
+    "tone": "success",
+    "owner": "Contributor",
+    "score": "PR 204",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "OS-44",
+    "title": "Breaking type change",
+    "status": "Blocked",
+    "tone": "warning",
+    "owner": "Maintainer",
+    "score": "PR 198",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "OS-40",
+    "title": "Good first issue stale",
+    "status": "Quiet",
+    "tone": "ghost",
+    "owner": "Triage",
+    "score": "Issue 640",
+    "updated": "Nov 18"
+  },
+  {
+    "id": "OS-36",
+    "title": "Release notes draft",
+    "status": "Ready",
+    "tone": "info",
+    "owner": "Maintainer",
+    "score": "v3.4",
+    "updated": "Nov 17"
+  }
+]

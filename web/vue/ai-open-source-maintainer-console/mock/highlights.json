@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "code",
+    "title": "Needs maintainer",
+    "detail": "Issues labeled for a decision are separated from support chatter."
+  },
+  {
+    "icon": "users",
+    "title": "Review debt",
+    "detail": "Pull requests with no reviewer are listed by age."
+  },
+  {
+    "icon": "box",
+    "title": "Release train",
+    "detail": "The next tag shows what is included and what is blocked."
+  }
+]

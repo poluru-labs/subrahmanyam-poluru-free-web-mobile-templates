@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Needs triage",
+    "value": "19",
+    "note": "2 repos"
+  },
+  {
+    "label": "PRs waiting",
+    "value": "7",
+    "note": "Older than 5 days"
+  },
+  {
+    "label": "Release",
+    "value": "v3.4",
+    "note": "2 blockers"
+  }
+]

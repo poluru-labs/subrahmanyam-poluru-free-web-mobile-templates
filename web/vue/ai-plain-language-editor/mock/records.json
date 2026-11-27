@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PL-60",
+    "title": "Benefits denial letter",
+    "status": "Editing",
+    "tone": "warning",
+    "owner": "Ruth Keller",
+    "score": "Grade 14",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "PL-57",
+    "title": "Privacy notice intro",
+    "status": "Approved",
+    "tone": "success",
+    "owner": "Ruth Keller",
+    "score": "Grade 8",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "PL-53",
+    "title": "Syllabus attendance rule",
+    "status": "Editing",
+    "tone": "info",
+    "owner": "Tom Becker",
+    "score": "Grade 12",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "PL-49",
+    "title": "Appeal deadline sentence",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Tom Becker",
+    "score": "Legal hold",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "PL-44",
+    "title": "Clinic hours page",
+    "status": "Approved",
+    "tone": "success",
+    "owner": "Ruth Keller",
+    "score": "Grade 6",
+    "updated": "Nov 18"
+  }
+]

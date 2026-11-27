@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Open Source Maintainer Console
+  Popular web color: Sea Green #2E8B57
+  Layout: Split studio
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F4F6F8;
+  --color-base-300: #E6EAEF;
+  --color-base-content: #1C2430;
+  --color-primary: #2E8B57;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #F28500;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #EA580C;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #1C2430;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-open-source-maintainer-console */
+.osm-shell { background: repeating-linear-gradient(90deg, rgb(46 139 87 / 0.04) 0 24px, transparent 24px 48px); }
+.osm-canvas { background: linear-gradient(165deg, rgb(46 139 87 / 0.1) 0%, rgb(242 133 0 / 0.06) 100%); border: 2px solid rgb(46 139 87 / 0.35); border-radius: 0; }
+.osm-queue { border-left: 6px solid var(--color-secondary); background: linear-gradient(180deg, rgb(234 88 12 / 0.07) 0%, transparent 75%); border-radius: 0; }
+.osm-header-bar { background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); height: 3px; }

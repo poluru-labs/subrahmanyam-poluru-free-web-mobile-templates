@@ -1,0 +1,16 @@
+{
+  "product": "Plain Language Editor",
+  "kicker": "Clear writing",
+  "headline": "Edit for the reader, not the institution",
+  "lede": "Shorten sentences, name the action, and keep the meaning of public-facing text.",
+  "summary": "An editor for teams rewriting dense pages into plain language.",
+  "workspace": "Drafts",
+  "about": [
+    "Plain Language Editor shows the original, a plainer draft, and the meaning that must not change.",
+    "Sample drafts cover a benefits letter, a privacy notice, and a course syllabus blurb."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

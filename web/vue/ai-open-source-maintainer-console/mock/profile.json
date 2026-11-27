@@ -1,0 +1,16 @@
+{
+  "product": "Open Source Maintainer Console",
+  "kicker": "Project desk",
+  "headline": "See the work waiting on maintainers",
+  "lede": "Triage issues, release risk, and unanswered pull requests without living in the inbox.",
+  "summary": "A console for maintainers who need a calm view of an active project.",
+  "workspace": "Repos",
+  "about": [
+    "Open Source Maintainer Console groups issues that need a maintainer, releases that are late, and pull requests with no review.",
+    "Sample items come from a UI library and its documentation site."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

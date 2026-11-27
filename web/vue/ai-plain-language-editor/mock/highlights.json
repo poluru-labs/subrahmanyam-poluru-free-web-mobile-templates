@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "pen",
+    "title": "Action first",
+    "detail": "The reader's next step is named near the start."
+  },
+  {
+    "icon": "message",
+    "title": "Shorter lines",
+    "detail": "Long sentences are split without dropping a condition."
+  },
+  {
+    "icon": "check",
+    "title": "Meaning check",
+    "detail": "Legal or policy limits stay marked so they are not smoothed away."
+  }
+]
