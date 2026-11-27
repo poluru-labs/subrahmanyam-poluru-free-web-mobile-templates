@@ -1,0 +1,47 @@
+[
+  {
+    "id": "SF-90",
+    "title": "Lab report methods",
+    "status": "Draft",
+    "tone": "info",
+    "owner": "Prof. Alvarez",
+    "score": "Criterion 2",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "SF-86",
+    "title": "Essay thesis",
+    "status": "Sent",
+    "tone": "success",
+    "owner": "Prof. Alvarez",
+    "score": "Criterion 1",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "SF-81",
+    "title": "Slides too dense",
+    "status": "Draft",
+    "tone": "warning",
+    "owner": "Prof. Shah",
+    "score": "Criterion 3",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "SF-77",
+    "title": "Citation practice",
+    "status": "Sent",
+    "tone": "success",
+    "owner": "Prof. Shah",
+    "score": "Criterion 4",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "SF-70",
+    "title": "Group presentation",
+    "status": "Hold",
+    "tone": "ghost",
+    "owner": "Prof. Alvarez",
+    "score": "Awaiting peer",
+    "updated": "Nov 20"
+  }
+]

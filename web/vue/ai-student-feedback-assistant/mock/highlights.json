@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "message",
+    "title": "Next try",
+    "detail": "Every draft names what to do on the next version."
+  },
+  {
+    "icon": "pen",
+    "title": "Rubric voice",
+    "detail": "Comments stay tied to the criterion, not a generic pep talk."
+  },
+  {
+    "icon": "check",
+    "title": "Instructor send",
+    "detail": "Nothing goes to a student until a person sends it."
+  }
+]

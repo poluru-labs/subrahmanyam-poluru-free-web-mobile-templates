@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Claims v3 rejected because fraud cases vanished."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Sensor set accepted with no near matches."
+  },
+  {
+    "when": "Thu",
+    "text": "Support text held for a near-match review."
+  },
+  {
+    "when": "Nov 18",
+    "text": "Demo rows accepted for a public sample."
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Sets validated",
+    "value": "9",
+    "note": "2 rejected"
+  },
+  {
+    "label": "Rare-class loss",
+    "value": "1 set",
+    "note": "Claims fraud"
+  },
+  {
+    "label": "Near matches",
+    "value": "0",
+    "note": "Latest sensor set"
+  }
+]

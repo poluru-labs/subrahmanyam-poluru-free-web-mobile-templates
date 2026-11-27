@@ -1,0 +1,16 @@
+{
+  "product": "Synthetic Data Validator",
+  "kicker": "Stand-in data",
+  "headline": "Check the synthetic set before you trust it",
+  "lede": "Compare distributions, rare cases, and privacy risk against the source it imitates.",
+  "summary": "A validator for teams using synthetic data in place of sensitive records.",
+  "workspace": "Samples",
+  "about": [
+    "Synthetic Data Validator compares a generated set with the source profile. Rare classes that disappeared are treated as failures.",
+    "Sample sets cover claims, sensor readings, and a text corpus."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

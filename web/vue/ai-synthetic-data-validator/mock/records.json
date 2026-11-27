@@ -1,0 +1,47 @@
+[
+  {
+    "id": "SY-16",
+    "title": "Claims v3",
+    "status": "Rejected",
+    "tone": "error",
+    "owner": "Yara Haddad",
+    "score": "Tail missing",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "SY-14",
+    "title": "Sensor stand-in",
+    "status": "Accepted",
+    "tone": "success",
+    "owner": "Yara Haddad",
+    "score": "Close",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "SY-12",
+    "title": "Support text",
+    "status": "Review",
+    "tone": "warning",
+    "owner": "Colin Peeters",
+    "score": "Near match",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "SY-09",
+    "title": "Claims v2",
+    "status": "Rejected",
+    "tone": "error",
+    "owner": "Colin Peeters",
+    "score": "Skew",
+    "updated": "Nov 20"
+  },
+  {
+    "id": "SY-07",
+    "title": "Public demo rows",
+    "status": "Accepted",
+    "tone": "success",
+    "owner": "Yara Haddad",
+    "score": "Safe",
+    "updated": "Nov 18"
+  }
+]

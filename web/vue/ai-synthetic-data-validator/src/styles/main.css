@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Synthetic Data Validator
+  Popular web color: Magenta #C71585
+  Layout: Masthead columns
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFCF8;
+  --color-base-200: #F6F1EA;
+  --color-base-300: #E7DFD4;
+  --color-base-content: #292218;
+  --color-primary: #C71585;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #FF7F50;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #0047AB;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #292218;
+  --color-neutral-content: #FFFCF8;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-synthetic-data-validator */
+.sdv-shell { background: linear-gradient(180deg, rgb(199 21 133 / 0.07) 0%, rgb(255 127 80 / 0.05) 180px, transparent 420px); }
+.sdv-masthead { background: linear-gradient(118deg, #5a0f4a 0%, #c71585 40%, #ff7f50 78%, #0047ab 100%); }
+.sdv-sample-col { border-top: 3px solid var(--color-secondary); background: linear-gradient(180deg, rgb(255 127 80 / 0.1), transparent 80%); }
+.sdv-fidelity-pill { background: linear-gradient(135deg, rgb(0 71 171 / 0.22), rgb(199 21 133 / 0.18)); }

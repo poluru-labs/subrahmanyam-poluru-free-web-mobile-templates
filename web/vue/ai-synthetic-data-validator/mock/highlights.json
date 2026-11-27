@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "chart",
+    "title": "Distribution fit",
+    "detail": "Margins are compared without exposing source rows."
+  },
+  {
+    "icon": "alert",
+    "title": "Missing tails",
+    "detail": "Rare but important cases are checked on purpose."
+  },
+  {
+    "icon": "lock",
+    "title": "Privacy notes",
+    "detail": "Near matches to real records are flagged."
+  }
+]

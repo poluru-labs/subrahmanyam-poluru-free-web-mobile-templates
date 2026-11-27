@@ -1,0 +1,16 @@
+{
+  "product": "Student Feedback Assistant",
+  "kicker": "Useful comments",
+  "headline": "Write feedback a student can act on",
+  "lede": "Turn rubric notes into comments that name the strength, the gap, and the next try.",
+  "summary": "An assistant for instructors who want feedback that students can use.",
+  "workspace": "Notes",
+  "about": [
+    "Student Feedback Assistant drafts from the rubric, then leaves the comment for the instructor to edit and send.",
+    "Sample notes cover a lab report, an essay, and a presentation."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}
