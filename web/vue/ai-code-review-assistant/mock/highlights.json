@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "code",
+    "title": "Risk slices",
+    "detail": "Auth, data, and migration hunks are pulled to the top."
+  },
+  {
+    "icon": "check",
+    "title": "Test gaps",
+    "detail": "Changed branches without a test are listed beside the diff."
+  },
+  {
+    "icon": "message",
+    "title": "Open questions",
+    "detail": "Unresolved threads stay attached to the file."
+  }
+]

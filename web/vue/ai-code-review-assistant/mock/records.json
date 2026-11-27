@@ -1,0 +1,47 @@
+[
+  {
+    "id": "RV-902",
+    "title": "Refund path missing test",
+    "status": "High",
+    "tone": "error",
+    "owner": "Lila Berg",
+    "score": "PR 441",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "RV-896",
+    "title": "Rename across billing",
+    "status": "Medium",
+    "tone": "warning",
+    "owner": "Theo Marsh",
+    "score": "PR 438",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "RV-888",
+    "title": "Docs only changelog",
+    "status": "Low",
+    "tone": "success",
+    "owner": "Lila Berg",
+    "score": "PR 430",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "RV-874",
+    "title": "Migration lock question",
+    "status": "High",
+    "tone": "error",
+    "owner": "Theo Marsh",
+    "score": "PR 427",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "RV-860",
+    "title": "CSS token cleanup",
+    "status": "Low",
+    "tone": "success",
+    "owner": "Anya Petrova",
+    "score": "PR 419",
+    "updated": "Nov 22"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Open reviews",
+    "value": "11",
+    "note": "4 high risk"
+  },
+  {
+    "label": "Median wait",
+    "value": "9h",
+    "note": "Down 2 hours"
+  },
+  {
+    "label": "Tests added",
+    "value": "23",
+    "note": "After suggestions"
+  }
+]

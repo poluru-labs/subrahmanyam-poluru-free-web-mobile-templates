@@ -1,0 +1,16 @@
+{
+  "product": "Cloud Resource Optimizer",
+  "kicker": "Spend and size",
+  "headline": "Shrink the cloud you are not using",
+  "lede": "Find idle compute, oversized databases, and storage that no workload has touched.",
+  "summary": "An optimizer for platform teams who want lower bills without guesswork.",
+  "workspace": "Clusters",
+  "about": [
+    "Cloud Resource Optimizer ranks waste by monthly cost and by how safe a change looks. Recommendations stay suggestions until a person accepts them.",
+    "Sample clusters include batch workers, a quiet staging account, and a database that never peaks."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

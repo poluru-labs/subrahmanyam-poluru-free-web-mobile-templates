@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+/*
+  Cloud Resource Optimizer
+  Popular web color: Rose #E11D48
+  Layout: Operations dashboard
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F4F6F8;
+  --color-base-300: #E6EAEF;
+  --color-base-content: #1C2430;
+  --color-primary: #E11D48;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #1E3A8A;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #E94B35;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #1C2430;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-cloud-resource-optimizer */
+.ops-cloud { background: repeating-linear-gradient(90deg, rgb(225 29 72 / 0.04) 0 1px, transparent 1px 48px); }

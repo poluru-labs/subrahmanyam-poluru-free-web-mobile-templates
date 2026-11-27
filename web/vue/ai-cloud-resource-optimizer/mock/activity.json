@@ -1,0 +1,18 @@
+[
+  {
+    "when": "1h ago",
+    "text": "Farah accepted the image bucket lifecycle rule."
+  },
+  {
+    "when": "Today",
+    "text": "Warehouse recommendation held for a traffic review."
+  },
+  {
+    "when": "Thu",
+    "text": "Snapshot set marked unused for 40 days."
+  },
+  {
+    "when": "Last week",
+    "text": "Prod API nodes confirmed as right-sized."
+  }
+]

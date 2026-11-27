@@ -1,0 +1,16 @@
+{
+  "product": "Code Review Assistant",
+  "kicker": "Review queue",
+  "headline": "Spend review time on the risky diff",
+  "lede": "Group comments by risk, tests, and unanswered questions so reviewers start where it matters.",
+  "summary": "A review desk for teams who want clearer pull requests, not more noise.",
+  "workspace": "Reviews",
+  "about": [
+    "Code Review Assistant sorts a diff into risk, missing tests, and questions already answered. It does not replace the reviewer.",
+    "Sample reviews cover a payments change, a refactor, and a documentation-only patch."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

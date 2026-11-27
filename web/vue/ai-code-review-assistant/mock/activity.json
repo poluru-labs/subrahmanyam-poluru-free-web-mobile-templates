@@ -1,0 +1,18 @@
+[
+  {
+    "when": "30m ago",
+    "text": "Refund path still has an uncovered branch."
+  },
+  {
+    "when": "Today",
+    "text": "Docs-only changelog marked low risk."
+  },
+  {
+    "when": "Tue",
+    "text": "Theo answered the migration lock question."
+  },
+  {
+    "when": "Mon",
+    "text": "Three reviews cleared after tests landed."
+  }
+]

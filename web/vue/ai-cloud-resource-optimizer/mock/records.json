@@ -1,0 +1,47 @@
+[
+  {
+    "id": "CL-19",
+    "title": "Staging workers overnight",
+    "status": "Idle",
+    "tone": "warning",
+    "owner": "Farah Naz",
+    "score": "$2,140",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "CL-17",
+    "title": "Analytics warehouse",
+    "status": "Oversized",
+    "tone": "warning",
+    "owner": "Benito Cruz",
+    "score": "$4,800",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "CL-14",
+    "title": "Image bucket lifecycle",
+    "status": "Ready",
+    "tone": "success",
+    "owner": "Farah Naz",
+    "score": "$900",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "CL-11",
+    "title": "Prod API nodes",
+    "status": "Right size",
+    "tone": "success",
+    "owner": "Benito Cruz",
+    "score": "$0",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "CL-08",
+    "title": "Old snapshot set",
+    "status": "Idle",
+    "tone": "error",
+    "owner": "Farah Naz",
+    "score": "$1,250",
+    "updated": "Nov 21"
+  }
+]

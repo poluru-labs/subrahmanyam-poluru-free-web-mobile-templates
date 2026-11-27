@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "cloud",
+    "title": "Idle inventory",
+    "detail": "Resources with no recent traffic are listed first."
+  },
+  {
+    "icon": "chart",
+    "title": "Cost rank",
+    "detail": "Savings are estimated in monthly dollars, not vague percentages."
+  },
+  {
+    "icon": "check",
+    "title": "Safe changes",
+    "detail": "Each suggestion notes the rollback and the owner."
+  }
+]
