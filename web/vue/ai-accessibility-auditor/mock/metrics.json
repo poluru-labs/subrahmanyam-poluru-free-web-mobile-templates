@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Open findings",
+    "value": "48",
+    "note": "12 critical"
+  },
+  {
+    "label": "Pages in scope",
+    "value": "1,284",
+    "note": "Scanned this morning"
+  },
+  {
+    "label": "Verified fixes",
+    "value": "316",
+    "note": "This quarter"
+  }
+]

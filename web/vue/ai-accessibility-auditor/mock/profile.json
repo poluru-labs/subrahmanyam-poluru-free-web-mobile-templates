@@ -1,0 +1,16 @@
+{
+  "product": "Accessibility Auditor",
+  "kicker": "Inclusive review",
+  "headline": "Find the barriers before your users do",
+  "lede": "Scan pages, components, and flows for WCAG gaps, then track every fix from first finding to verified pass.",
+  "summary": "An audit workspace for teams who ship interfaces people can actually use.",
+  "workspace": "Audits",
+  "about": [
+    "Accessibility Auditor keeps manual review and automated checks in one queue. Findings cite a success criterion, a screenshot, and the person who owns the fix.",
+    "The sample audits cover checkout, account settings, and a marketing page so you can see how a real review moves."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

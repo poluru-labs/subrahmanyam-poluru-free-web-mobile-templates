@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "route",
+    "title": "Next-step plans",
+    "detail": "The next lesson follows the last three attempts, not a fixed syllabus."
+  },
+  {
+    "icon": "chart",
+    "title": "Mastery view",
+    "detail": "See which skills are solid and which still need practice."
+  },
+  {
+    "icon": "users",
+    "title": "Cohort signals",
+    "detail": "Spot a whole section struggling with the same idea."
+  }
+]

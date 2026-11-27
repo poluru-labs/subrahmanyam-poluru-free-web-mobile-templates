@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "shield",
+    "title": "Criterion mapping",
+    "detail": "Each finding names the WCAG success criterion it breaks."
+  },
+  {
+    "icon": "search",
+    "title": "Flow scans",
+    "detail": "Keyboard and screen-reader passes sit beside the automated results."
+  },
+  {
+    "icon": "check",
+    "title": "Verified fixes",
+    "detail": "A finding closes only after someone retests the repaired screen."
+  }
+]

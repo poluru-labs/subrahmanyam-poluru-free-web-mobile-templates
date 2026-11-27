@@ -1,0 +1,52 @@
+{
+  "name": "ai-accessibility-auditor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scan pages, components, and flows for WCAG gaps, then track every fix from first finding to verified pass.",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@vue/devtools-api": "^8.2.1",
+    "pinia": "^4.1.0",
+    "vue": "^3.5.46",
+    "vue-router": "^5.5.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@tsconfig/node24": "^24.0.6",
+    "@types/node": "^24.13.3",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "@vitest/coverage-v8": "^5.1.2",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "@vue/test-utils": "^2.6.0",
+    "@vue/tsconfig": "^0.9.1",
+    "daisyui": "^5.8.3",
+    "eslint": "^10.15.0",
+    "eslint-plugin-vue": "^10.12.1",
+    "happy-dom": "^21.0.4",
+    "npm-run-all2": "^9.1.0",
+    "prettier": "^3.10.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~6.0.3",
+    "vite": "^8.4.0",
+    "vite-plugin-vue-devtools": "^8.2.1",
+    "vitest": "^5.1.2",
+    "vue-tsc": "^3.3.14"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  },
+  "author": "Subrahmanyam Poluru (https://polurus.com)"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "AX-1042",
+    "title": "Checkout keyboard trap",
+    "status": "Open",
+    "tone": "warning",
+    "owner": "Maya Chen",
+    "score": "Fail",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "AX-1108",
+    "title": "Pricing table contrast",
+    "status": "Verified",
+    "tone": "success",
+    "owner": "Luis Ortega",
+    "score": "Pass",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "AX-0988",
+    "title": "Dialog missing name",
+    "status": "Review",
+    "tone": "info",
+    "owner": "Amina Diallo",
+    "score": "Partial",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "AX-1214",
+    "title": "Chart without text alternative",
+    "status": "Open",
+    "tone": "error",
+    "owner": "Jonah Park",
+    "score": "Fail",
+    "updated": "Nov 20"
+  },
+  {
+    "id": "AX-0871",
+    "title": "Skip link lands correctly",
+    "status": "Verified",
+    "tone": "success",
+    "owner": "Maya Chen",
+    "score": "Pass",
+    "updated": "Nov 18"
+  }
+]

@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+/*
+  Adaptive Learning Platform
+  Popular web color: Indigo #4F46E5
+  Layout: Centered overlap
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFCF8;
+  --color-base-200: #F6F1EA;
+  --color-base-300: #E7DFD4;
+  --color-base-content: #292218;
+  --color-primary: #4F46E5;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #0891B2;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #2E8B57;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #292218;
+  --color-neutral-content: #FFFCF8;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-adaptive-learning-platform */
+.learn-shell {
+  background-color: var(--color-base-200);
+  background-image:
+    radial-gradient(ellipse 70% 55% at 15% 0%, rgb(79 70 229 / 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 90% 10%, rgb(8 145 178 / 0.12), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgb(46 139 87 / 0.1), transparent 55%);
+}
+
+.learn-hero-float {
+  box-shadow:
+    0 4px 6px rgb(41 34 24 / 0.04),
+    0 24px 80px rgb(79 70 229 / 0.12);
+}
+
+.learn-path-card:nth-child(2) {
+  transform: translateY(12px);
+}
+
+.learn-path-card:nth-child(3) {
+  transform: translateY(24px);
+}
+
+@media (min-width: 768px) {
+  .learn-path-card:nth-child(2) {
+    transform: translateY(18px);
+  }
+
+  .learn-path-card:nth-child(3) {
+    transform: translateY(36px);
+  }
+}
+
+.learn-progress-track {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}

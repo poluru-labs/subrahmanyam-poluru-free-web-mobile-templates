@@ -1,0 +1,16 @@
+{
+  "product": "Adaptive Learning Platform",
+  "kicker": "Personal paths",
+  "headline": "A course that changes with the learner",
+  "lede": "Watch mastery, struggle, and pace, then adjust the next lesson before a student stalls.",
+  "summary": "A learning studio for instructors who want each path to respond to evidence.",
+  "workspace": "Paths",
+  "about": [
+    "Adaptive Learning Platform groups learners by what they have mastered, not by the week of the term. Instructors can override any recommendation.",
+    "Sample paths show a biology unit, a writing lab, and a math recovery track."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "LP-220",
+    "title": "Cell respiration recovery",
+    "status": "Active",
+    "tone": "info",
+    "owner": "Priya Shah",
+    "score": "62%",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "LP-214",
+    "title": "Thesis paragraph lab",
+    "status": "On track",
+    "tone": "success",
+    "owner": "Elena Voss",
+    "score": "81%",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "LP-198",
+    "title": "Fraction sense sprint",
+    "status": "Needs coach",
+    "tone": "warning",
+    "owner": "Chris Adeyemi",
+    "score": "44%",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "LP-231",
+    "title": "Field study briefing",
+    "status": "Active",
+    "tone": "info",
+    "owner": "Noah Kim",
+    "score": "70%",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "LP-176",
+    "title": "Citation practice",
+    "status": "Complete",
+    "tone": "success",
+    "owner": "Elena Voss",
+    "score": "94%",
+    "updated": "Nov 19"
+  }
+]
