@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Linux install page is in review for 2.8."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Authentication page fell behind the token change."
+  },
+  {
+    "when": "Sun",
+    "text": "Migration guide published."
+  },
+  {
+    "when": "Fri",
+    "text": "Error catalog marked two versions behind."
+  }
+]

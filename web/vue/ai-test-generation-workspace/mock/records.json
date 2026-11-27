@@ -1,0 +1,47 @@
+[
+  {
+    "id": "TG-44",
+    "title": "Refund zero amount",
+    "status": "Accepted",
+    "tone": "success",
+    "owner": "Lila Berg",
+    "score": "billing.spec",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "TG-41",
+    "title": "Parser empty input",
+    "status": "Accepted",
+    "tone": "success",
+    "owner": "Theo Marsh",
+    "score": "parse.spec",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "TG-37",
+    "title": "Modal focus return",
+    "status": "Draft",
+    "tone": "info",
+    "owner": "Lila Berg",
+    "score": "modal.spec",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "TG-33",
+    "title": "Negative tax invented",
+    "status": "Rejected",
+    "tone": "error",
+    "owner": "Theo Marsh",
+    "score": "Wrong rule",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "TG-28",
+    "title": "Retry after 429",
+    "status": "Draft",
+    "tone": "warning",
+    "owner": "Lila Berg",
+    "score": "client.spec",
+    "updated": "Nov 22"
+  }
+]

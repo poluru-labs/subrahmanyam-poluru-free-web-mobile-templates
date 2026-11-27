@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Pages",
+    "value": "86",
+    "note": "4 sections"
+  },
+  {
+    "label": "In review",
+    "value": "9",
+    "note": "For 2.8"
+  },
+  {
+    "label": "Stale",
+    "value": "5",
+    "note": "Behind the release"
+  }
+]

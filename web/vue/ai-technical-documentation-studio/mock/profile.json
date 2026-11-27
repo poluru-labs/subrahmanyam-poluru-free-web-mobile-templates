@@ -1,0 +1,16 @@
+{
+  "product": "Technical Documentation Studio",
+  "kicker": "Docs that match",
+  "headline": "Write the doc next to the version it describes",
+  "lede": "Track pages, review comments, and the release they belong to.",
+  "summary": "A studio for writers keeping technical docs aligned with the product.",
+  "workspace": "Docs",
+  "about": [
+    "Technical Documentation Studio ties a page to a product version and a review state. Stale pages are the ones whose version moved on.",
+    "Sample pages cover install, authentication, and a migration guide."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

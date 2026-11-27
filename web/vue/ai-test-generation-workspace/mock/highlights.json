@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "code",
+    "title": "Branch gaps",
+    "detail": "Untested branches in the diff are listed first."
+  },
+  {
+    "icon": "check",
+    "title": "Accepted cases",
+    "detail": "Only accepted suggestions become tests."
+  },
+  {
+    "icon": "file",
+    "title": "Suite home",
+    "detail": "Each case names the file it should live in."
+  }
+]

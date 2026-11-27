@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "file",
+    "title": "Version tie",
+    "detail": "A page names the release it documents."
+  },
+  {
+    "icon": "message",
+    "title": "Review notes",
+    "detail": "Comments from engineering stay on the page."
+  },
+  {
+    "icon": "alert",
+    "title": "Stale pages",
+    "detail": "A shipped change without a doc update is listed."
+  }
+]

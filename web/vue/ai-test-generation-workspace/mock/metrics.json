@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Suggestions",
+    "value": "38",
+    "note": "This week"
+  },
+  {
+    "label": "Accepted",
+    "value": "21",
+    "note": "Landed in PRs"
+  },
+  {
+    "label": "Rejected",
+    "value": "9",
+    "note": "Wrong behavior"
+  }
+]

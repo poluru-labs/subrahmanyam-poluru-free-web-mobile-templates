@@ -1,0 +1,16 @@
+{
+  "product": "Test Generation Workspace",
+  "kicker": "Missing tests",
+  "headline": "Draft the test the change still needs",
+  "lede": "Propose cases from the diff, then keep the ones a person accepts.",
+  "summary": "A workspace for engineers filling test gaps without accepting every suggestion.",
+  "workspace": "Suites",
+  "about": [
+    "Test Generation Workspace suggests cases for changed branches and leaves acceptance to the author.",
+    "Sample suggestions cover a refund function, a parser, and a UI state."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

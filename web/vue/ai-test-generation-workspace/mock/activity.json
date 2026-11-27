@@ -1,0 +1,18 @@
+[
+  {
+    "when": "2h ago",
+    "text": "Zero-amount refund test accepted."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Negative tax suggestion rejected as incorrect."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Empty parser input accepted."
+  },
+  {
+    "when": "Mon",
+    "text": "429 retry case still a draft."
+  }
+]

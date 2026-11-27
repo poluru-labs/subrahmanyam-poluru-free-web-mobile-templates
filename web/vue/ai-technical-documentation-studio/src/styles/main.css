@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Technical Documentation Studio
+  Popular web color: Deep Emerald #046307
+  Layout: Operations dashboard
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFCF8;
+  --color-base-200: #F6F1EA;
+  --color-base-300: #E7DFD4;
+  --color-base-content: #292218;
+  --color-primary: #046307;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #65A30D;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #4682B4;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #292218;
+  --color-neutral-content: #FFFCF8;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-technical-documentation-studio */
+.tds-shell { background: linear-gradient(180deg, rgb(4 99 7 / 0.07), transparent 320px), var(--color-base-200); }
+.tds-ops-band { background: linear-gradient(90deg, #022e04 0%, #046307 45%, #65a30d 100%); }
+.tds-coverage-cell { box-shadow: inset 0 0 0 1px rgb(70 130 180 / 0.14); }
+.tds-lime-strip { background-image: linear-gradient(90deg, rgb(101 163 13 / 0.1) 1px, transparent 1px); background-size: 24px 100%; }
