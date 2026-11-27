@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "file",
+    "title": "Reading order",
+    "detail": "The sequence a screen reader follows is shown beside the page."
+  },
+  {
+    "icon": "search",
+    "title": "Missing alternatives",
+    "detail": "Figures without text alternatives are listed by page."
+  },
+  {
+    "icon": "check",
+    "title": "Heading map",
+    "detail": "Skipped heading levels are called out before export."
+  }
+]

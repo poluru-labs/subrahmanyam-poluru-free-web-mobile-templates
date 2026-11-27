@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Files in review",
+    "value": "23",
+    "note": "5 due today"
+  },
+  {
+    "label": "Issues open",
+    "value": "64",
+    "note": "Mostly figures"
+  },
+  {
+    "label": "Cleared files",
+    "value": "11",
+    "note": "This week"
+  }
+]

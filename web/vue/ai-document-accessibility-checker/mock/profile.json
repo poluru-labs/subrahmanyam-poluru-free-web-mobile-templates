@@ -1,0 +1,16 @@
+{
+  "product": "Document Accessibility Checker",
+  "kicker": "File review",
+  "headline": "Check the document, not just the page",
+  "lede": "Review PDFs, slides, and exports for reading order, alt text, and headings people can follow.",
+  "summary": "A checker for teams who publish documents as well as websites.",
+  "workspace": "Documents",
+  "about": [
+    "Document Accessibility Checker walks reading order, missing alternatives, and heading structure inside a file.",
+    "Sample documents include a benefits form, a slide deck, and an annual report."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

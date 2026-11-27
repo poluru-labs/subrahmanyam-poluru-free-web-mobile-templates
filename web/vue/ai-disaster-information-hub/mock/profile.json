@@ -1,0 +1,16 @@
+{
+  "product": "Disaster Information Hub",
+  "kicker": "Public brief",
+  "headline": "One brief for a fast-moving emergency",
+  "lede": "Publish shelter status, road closures, and official updates without mixing rumor into the record.",
+  "summary": "A hub for emergency staff who need a single public brief.",
+  "workspace": "Alerts",
+  "about": [
+    "Disaster Information Hub separates confirmed updates from items still being checked. Each note names the agency and the time it was verified.",
+    "Sample alerts cover shelters, a bridge closure, and a boil-water notice."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

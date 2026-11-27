@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "alert",
+    "title": "Confirmed first",
+    "detail": "Unverified reports stay out of the public brief."
+  },
+  {
+    "icon": "globe",
+    "title": "Place status",
+    "detail": "Shelters and roads keep a last-verified time."
+  },
+  {
+    "icon": "message",
+    "title": "Plain updates",
+    "detail": "Notices are short enough to read on a phone."
+  }
+]

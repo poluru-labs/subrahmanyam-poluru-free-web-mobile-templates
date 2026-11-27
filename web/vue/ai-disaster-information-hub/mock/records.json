@@ -1,0 +1,47 @@
+[
+  {
+    "id": "DS-18",
+    "title": "River bridge closed",
+    "status": "Confirmed",
+    "tone": "error",
+    "owner": "County roads",
+    "score": "Hard close",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "DS-17",
+    "title": "High school shelter",
+    "status": "Open",
+    "tone": "success",
+    "owner": "Red Cross desk",
+    "score": "80 beds",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "DS-15",
+    "title": "Boil water, north side",
+    "status": "Confirmed",
+    "tone": "warning",
+    "owner": "Water utility",
+    "score": "Active",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "DS-12",
+    "title": "Rumor of second fire",
+    "status": "Unverified",
+    "tone": "ghost",
+    "owner": "Joint desk",
+    "score": "Hold",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "DS-09",
+    "title": "East clinic power",
+    "status": "Restored",
+    "tone": "success",
+    "owner": "County health",
+    "score": "Stable",
+    "updated": "Nov 25"
+  }
+]

@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Document Accessibility Checker
+  Popular web color: Emerald #059669
+  Layout: Steps and timeline
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F4F6F8;
+  --color-base-300: #E6EAEF;
+  --color-base-content: #1C2430;
+  --color-primary: #059669;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #B87333;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #9B111E;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #1C2430;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-document-accessibility-checker */
+.doc-shell { background: linear-gradient(180deg, rgb(5 150 105 / 0.06) 0%, transparent 240px); }
+.doc-step-track { background: linear-gradient(180deg, var(--color-primary), rgb(184 115 51 / 0.4)); }
+.doc-step-dot { box-shadow: 0 0 0 4px color-mix(in oklab, var(--color-primary) 22%, transparent); }
+.doc-review-ribbon { background: linear-gradient(90deg, rgb(5 150 105 / 0.12), transparent); }

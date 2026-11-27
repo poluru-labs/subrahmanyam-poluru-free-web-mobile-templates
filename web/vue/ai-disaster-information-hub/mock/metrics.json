@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Open alerts",
+    "value": "7",
+    "note": "2 critical"
+  },
+  {
+    "label": "Shelters open",
+    "value": "5",
+    "note": "312 beds"
+  },
+  {
+    "label": "Updates today",
+    "value": "14",
+    "note": "All sourced"
+  }
+]

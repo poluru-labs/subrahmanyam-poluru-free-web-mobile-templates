@@ -1,0 +1,47 @@
+[
+  {
+    "id": "DC-88",
+    "title": "Benefits form page 2",
+    "status": "Fail",
+    "tone": "error",
+    "owner": "Sofia Almeida",
+    "score": "No labels",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "DC-84",
+    "title": "Board slide titles",
+    "status": "Warn",
+    "tone": "warning",
+    "owner": "Sofia Almeida",
+    "score": "Order",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "DC-79",
+    "title": "Annual report charts",
+    "status": "Fail",
+    "tone": "error",
+    "owner": "Gita Raman",
+    "score": "Alt text",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "DC-71",
+    "title": "Meeting minutes",
+    "status": "Pass",
+    "tone": "success",
+    "owner": "Gita Raman",
+    "score": "Clear",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "DC-66",
+    "title": "Map handout",
+    "status": "Warn",
+    "tone": "warning",
+    "owner": "Sofia Almeida",
+    "score": "Contrast",
+    "updated": "Nov 20"
+  }
+]
