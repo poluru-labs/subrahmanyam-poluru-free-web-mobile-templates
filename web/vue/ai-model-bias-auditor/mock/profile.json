@@ -1,0 +1,16 @@
+{
+  "product": "Model Bias Auditor",
+  "kicker": "Fairness review",
+  "headline": "Measure who the model treats differently",
+  "lede": "Compare error rates across groups before a model is cleared for use.",
+  "summary": "An auditor for teams who need disparity written down, not waved off.",
+  "workspace": "Scores",
+  "about": [
+    "Model Bias Auditor compares false positives, false negatives, and coverage across the groups you define.",
+    "Sample slices cover a hiring screen, a support router, and a credit-risk trial."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

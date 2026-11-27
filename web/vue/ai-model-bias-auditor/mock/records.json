@@ -1,0 +1,47 @@
+[
+  {
+    "id": "MB-18",
+    "title": "Hiring screen, region",
+    "status": "Gap",
+    "tone": "error",
+    "owner": "Amira Hassan",
+    "score": "+9 pts",
+    "updated": "Nov 25"
+  },
+  {
+    "id": "MB-16",
+    "title": "Support router, language",
+    "status": "Watch",
+    "tone": "warning",
+    "owner": "Amira Hassan",
+    "score": "+4 pts",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "MB-14",
+    "title": "Credit trial, age band",
+    "status": "Thin",
+    "tone": "info",
+    "owner": "Joel Kramer",
+    "score": "n<50",
+    "updated": "Nov 23"
+  },
+  {
+    "id": "MB-11",
+    "title": "Search rank baseline",
+    "status": "Clear",
+    "tone": "success",
+    "owner": "Joel Kramer",
+    "score": "1 pt",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "MB-09",
+    "title": "Moderation, dialect",
+    "status": "Gap",
+    "tone": "error",
+    "owner": "Amira Hassan",
+    "score": "+7 pts",
+    "updated": "Nov 19"
+  }
+]

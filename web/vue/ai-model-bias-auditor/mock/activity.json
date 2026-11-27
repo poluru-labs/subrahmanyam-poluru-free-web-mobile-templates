@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Today",
+    "text": "Hiring screen blocked on a false-negative gap."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Credit age band marked too small to judge."
+  },
+  {
+    "when": "Wed",
+    "text": "Search baseline cleared."
+  },
+  {
+    "when": "Mon",
+    "text": "Dialect slice opened for a second audit."
+  }
+]

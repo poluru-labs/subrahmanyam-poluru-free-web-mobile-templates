@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "book",
+    "title": "Screening log",
+    "detail": "Include and exclude decisions keep a reason."
+  },
+  {
+    "icon": "pen",
+    "title": "Extraction",
+    "detail": "Findings are captured in the same fields across papers."
+  },
+  {
+    "icon": "scale",
+    "title": "Disagreement",
+    "detail": "Two reviewers can differ without losing either note."
+  }
+]

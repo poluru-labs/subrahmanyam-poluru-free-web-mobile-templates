@@ -1,0 +1,47 @@
+[
+  {
+    "id": "LR-140",
+    "title": "Okoye 2021 cohort",
+    "status": "Include",
+    "tone": "success",
+    "owner": "Dr. Mehta",
+    "score": "Heat",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "LR-136",
+    "title": "Editorial, no data",
+    "status": "Exclude",
+    "tone": "ghost",
+    "owner": "Dr. Mehta",
+    "score": "Wrong type",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "LR-128",
+    "title": "Santos 2019 methods",
+    "status": "Conflict",
+    "tone": "warning",
+    "owner": "Dr. Ng",
+    "score": "Outcome",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "LR-119",
+    "title": "City dashboard brief",
+    "status": "Exclude",
+    "tone": "ghost",
+    "owner": "Dr. Ng",
+    "score": "Not a study",
+    "updated": "Nov 21"
+  },
+  {
+    "id": "LR-110",
+    "title": "Berg 2023 review",
+    "status": "Include",
+    "tone": "success",
+    "owner": "Dr. Mehta",
+    "score": "Synthesis",
+    "updated": "Nov 19"
+  }
+]

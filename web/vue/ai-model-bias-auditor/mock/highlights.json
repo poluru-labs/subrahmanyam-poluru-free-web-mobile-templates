@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "scale",
+    "title": "Group gaps",
+    "detail": "Error rates are shown side by side, not averaged away."
+  },
+  {
+    "icon": "users",
+    "title": "Slice coverage",
+    "detail": "Groups with too little data are marked incomplete."
+  },
+  {
+    "icon": "file",
+    "title": "Decision record",
+    "detail": "A clearance notes the gap that was accepted or fixed."
+  }
+]

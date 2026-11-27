@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Models in audit",
+    "value": "6",
+    "note": "2 blocked"
+  },
+  {
+    "label": "Largest gap",
+    "value": "9 pts",
+    "note": "False negatives"
+  },
+  {
+    "label": "Slices thin",
+    "value": "3",
+    "note": "Need more data"
+  }
+]

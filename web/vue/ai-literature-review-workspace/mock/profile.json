@@ -1,0 +1,16 @@
+{
+  "product": "Literature Review Workspace",
+  "kicker": "Reading set",
+  "headline": "Keep the review readable as the pile grows",
+  "lede": "Screen papers, capture findings, and see where the studies disagree.",
+  "summary": "A workspace for researchers building a literature review they can defend.",
+  "workspace": "Papers",
+  "about": [
+    "Literature Review Workspace tracks screening decisions, extracted findings, and open disagreements.",
+    "Sample papers come from a methods review on urban heat and health."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}
