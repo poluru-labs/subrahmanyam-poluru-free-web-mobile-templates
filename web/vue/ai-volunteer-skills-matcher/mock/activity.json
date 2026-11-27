@@ -1,0 +1,18 @@
+[
+  {
+    "when": "Morning",
+    "text": "Pantry sorter shift filled by a nearby volunteer."
+  },
+  {
+    "when": "Today",
+    "text": "Tax clinic still needs a preparer."
+  },
+  {
+    "when": "Yesterday",
+    "text": "Evening delivery shift has no driver."
+  },
+  {
+    "when": "Sat",
+    "text": "Front desk shift filled with a bilingual match."
+  }
+]

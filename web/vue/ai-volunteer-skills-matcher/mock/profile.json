@@ -1,0 +1,16 @@
+{
+  "product": "Volunteer Skills Matcher",
+  "kicker": "People and shifts",
+  "headline": "Match volunteers to shifts they can actually do",
+  "lede": "Pair skills, availability, and location so coordinators stop guessing from a spreadsheet.",
+  "summary": "A matcher for volunteer coordinators filling real shifts.",
+  "workspace": "Shifts",
+  "about": [
+    "Volunteer Skills Matcher shows who is free, which skill a shift needs, and how far the site is.",
+    "Sample shifts include a pantry, a tax clinic, and a park cleanup."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

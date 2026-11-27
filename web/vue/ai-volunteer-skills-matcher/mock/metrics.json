@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Open shifts",
+    "value": "24",
+    "note": "This weekend"
+  },
+  {
+    "label": "Filled",
+    "value": "15",
+    "note": "Skill matched"
+  },
+  {
+    "label": "Unfilled skill",
+    "value": "4",
+    "note": "Need a driver"
+  }
+]

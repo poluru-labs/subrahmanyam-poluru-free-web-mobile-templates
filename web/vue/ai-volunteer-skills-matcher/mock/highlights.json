@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "users",
+    "title": "Skill fit",
+    "detail": "A shift names the skill, not only the headcount."
+  },
+  {
+    "icon": "sun",
+    "title": "Availability",
+    "detail": "Open hours are checked against the person's calendar."
+  },
+  {
+    "icon": "globe",
+    "title": "Distance",
+    "detail": "Travel time is part of the match."
+  }
+]

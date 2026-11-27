@@ -1,0 +1,16 @@
+{
+  "product": "Water Usage Insights",
+  "kicker": "Watershed view",
+  "headline": "See where the water actually went",
+  "lede": "Compare districts, leaks, and seasonal use so a spike has a cause.",
+  "summary": "An insight board for utilities and city staff watching water use.",
+  "workspace": "Districts",
+  "about": [
+    "Water Usage Insights separates customer use, known leaks, and irrigation season. A district over plan is traced to one of those.",
+    "Sample districts include a downtown core, a suburban zone, and a hospital campus."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "droplet",
+    "title": "District totals",
+    "detail": "Use is shown against the seasonal plan."
+  },
+  {
+    "icon": "alert",
+    "title": "Leak watch",
+    "detail": "Night flow that should be quiet is flagged."
+  },
+  {
+    "icon": "chart",
+    "title": "Season context",
+    "detail": "Irrigation months are marked so summer is not a surprise."
+  }
+]

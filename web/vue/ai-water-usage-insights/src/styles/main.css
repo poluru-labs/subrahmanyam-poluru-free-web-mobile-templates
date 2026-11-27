@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+/*
+  Water Usage Insights
+  Popular web color: Plum #8E4585
+  Layout: Alternating story
+  Fonts: Roboto for text, Open Sans for headings.
+*/
+
+@theme {
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFCF8;
+  --color-base-200: #F6F1EA;
+  --color-base-300: #E7DFD4;
+  --color-base-content: #292218;
+  --color-primary: #8E4585;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #228B22;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #3F3F46;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #292218;
+  --color-neutral-content: #FFFCF8;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Open Sans', sans-serif;
+}
+
+/* layout: ai-water-usage-insights */
+.wui-shell { background: linear-gradient(180deg, rgb(142 69 133 / 0.06), rgb(34 139 34 / 0.04) 220px, transparent 480px); }
+.wui-watershed-band { background: linear-gradient(120deg, #4a1f46 0%, #8e4585 45%, #228b22 100%); }
+.wui-zig-primary { background: linear-gradient(90deg, rgb(142 69 133 / 0.1), transparent 70%); }
+.wui-zig-secondary { background: linear-gradient(270deg, rgb(34 139 34 / 0.12), transparent 70%); }
+.wui-story-tick { border-top: 3px solid var(--color-secondary); }

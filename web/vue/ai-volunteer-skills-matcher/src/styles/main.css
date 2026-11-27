@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Volunteer Skills Matcher
+  Popular web color: Cerulean #007BA7
+  Layout: Record mosaic
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F4F6F8;
+  --color-base-300: #E6EAEF;
+  --color-base-content: #1C2430;
+  --color-primary: #007BA7;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #059669;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #36454F;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #1C2430;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0rem;
+  --radius-field: 0rem;
+  --radius-box: 0rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-volunteer-skills-matcher */
+.vsm-shell { background: linear-gradient(135deg, rgb(0 123 167 / 0.06) 0%, transparent 50%), var(--color-base-200); }
+.vsm-cerulean-band { background: linear-gradient(100deg, #003d52 0%, #007ba7 60%, #059669 100%); }
+.vsm-mosaic-a { background: linear-gradient(160deg, rgb(0 123 167 / 0.12), transparent); border-width: 2px; }
+.vsm-mosaic-b { background: rgb(5 150 105 / 0.08); border-width: 2px; }

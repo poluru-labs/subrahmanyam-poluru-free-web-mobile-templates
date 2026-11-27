@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Districts",
+    "value": "8",
+    "note": "All reporting"
+  },
+  {
+    "label": "Over plan",
+    "value": "2",
+    "note": "North and hospital"
+  },
+  {
+    "label": "Suspected leaks",
+    "value": "3",
+    "note": "Night flow"
+  }
+]
