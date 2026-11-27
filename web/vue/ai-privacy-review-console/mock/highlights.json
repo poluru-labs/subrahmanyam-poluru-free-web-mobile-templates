@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "lock",
+    "title": "Purpose test",
+    "detail": "A feature without a stated purpose does not move forward."
+  },
+  {
+    "icon": "file",
+    "title": "Field list",
+    "detail": "Each field is necessary, optional, or rejected."
+  },
+  {
+    "icon": "scale",
+    "title": "Retention",
+    "detail": "Storage time is a decision, not a default forever."
+  }
+]

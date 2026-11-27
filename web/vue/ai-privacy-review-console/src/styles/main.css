@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+  Privacy Review Console
+  Popular web color: Copper #B87333
+  Layout: Band and rows
+  Fonts: Open Sans for text, Roboto for headings.
+*/
+
+@theme {
+  --font-sans: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "brand";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F3F7F6;
+  --color-base-300: #E3EEEC;
+  --color-base-content: #14211F;
+  --color-primary: #B87333;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #8E4585;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #D97706;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #14211F;
+  --color-neutral-content: #FFFFFF;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1917;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui" {
+  themes:
+    brand --default,
+    light,
+    dark;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Roboto', sans-serif;
+}
+
+/* layout: ai-privacy-review-console */
+.priv-shell { background: repeating-linear-gradient(0deg, rgb(184 115 51 / 0.04) 0 56px, transparent 56px 112px); }
+.priv-copper-band { background: linear-gradient(102deg, #6b3f1a 0%, #b87333 40%, #8e4585 92%); }
+.priv-review-row { border-left: 4px solid var(--color-primary); background: linear-gradient(90deg, rgb(184 115 51 / 0.09) 0%, transparent 70%); }
+.priv-plum-row { border-left: 4px solid var(--color-secondary); background: linear-gradient(90deg, rgb(142 69 133 / 0.1) 0%, transparent 70%); }

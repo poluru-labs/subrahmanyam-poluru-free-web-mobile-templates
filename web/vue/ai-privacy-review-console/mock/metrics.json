@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Reviews open",
+    "value": "8",
+    "note": "2 blocked"
+  },
+  {
+    "label": "Fields rejected",
+    "value": "11",
+    "note": "This quarter"
+  },
+  {
+    "label": "Cleared features",
+    "value": "15",
+    "note": "With limits"
+  }
+]

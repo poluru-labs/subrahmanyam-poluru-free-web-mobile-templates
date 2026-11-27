@@ -1,0 +1,16 @@
+{
+  "product": "Privacy Review Console",
+  "kicker": "Data review",
+  "headline": "Review a feature before the data leaves",
+  "lede": "Record purpose, fields, retention, and the open questions on every new data use.",
+  "summary": "A console for privacy reviewers clearing features with a written record.",
+  "workspace": "Reviews",
+  "about": [
+    "Privacy Review Console asks what data, why, who receives it, and how long it stays. A review can be blocked without a purpose.",
+    "Sample reviews cover a referral program, a support upload, and a research export."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

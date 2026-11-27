@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PR-34",
+    "title": "Referral contacts",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Nora Feldman",
+    "score": "No purpose",
+    "updated": "Nov 26"
+  },
+  {
+    "id": "PR-32",
+    "title": "Support screenshot upload",
+    "status": "Limits",
+    "tone": "warning",
+    "owner": "Nora Feldman",
+    "score": "30 days",
+    "updated": "Nov 24"
+  },
+  {
+    "id": "PR-29",
+    "title": "Research export",
+    "status": "Cleared",
+    "tone": "success",
+    "owner": "Hugo Martins",
+    "score": "De-identified",
+    "updated": "Nov 22"
+  },
+  {
+    "id": "PR-25",
+    "title": "Location ping",
+    "status": "Blocked",
+    "tone": "error",
+    "owner": "Hugo Martins",
+    "score": "Too broad",
+    "updated": "Nov 20"
+  },
+  {
+    "id": "PR-21",
+    "title": "Newsletter double opt-in",
+    "status": "Cleared",
+    "tone": "success",
+    "owner": "Nora Feldman",
+    "score": "Email only",
+    "updated": "Nov 18"
+  }
+]

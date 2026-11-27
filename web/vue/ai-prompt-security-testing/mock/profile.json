@@ -1,0 +1,16 @@
+{
+  "product": "Prompt Security Testing",
+  "kicker": "Attack drills",
+  "headline": "Test the prompt before someone else does",
+  "lede": "Run injection, exfiltration, and policy-bypass cases against the assistant you ship.",
+  "summary": "A testing bench for teams who need prompt attacks written down and retested.",
+  "workspace": "Probes",
+  "about": [
+    "Prompt Security Testing stores attack cases, the result, and whether a guardrail held. A failed case stays open until a retest passes.",
+    "Sample probes cover secret extraction, instruction override, and a tool-abuse attempt."
+  ],
+  "author": {
+    "name": "Subrahmanyam Poluru",
+    "url": "https://polurus.com"
+  }
+}

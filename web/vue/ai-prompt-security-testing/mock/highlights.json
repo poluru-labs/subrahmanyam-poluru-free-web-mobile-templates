@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "lock",
+    "title": "Case library",
+    "detail": "Attacks are versioned with the prompt they target."
+  },
+  {
+    "icon": "alert",
+    "title": "Failures",
+    "detail": "A leaked instruction or tool misuse fails the run."
+  },
+  {
+    "icon": "check",
+    "title": "Retest",
+    "detail": "A fix is not closed on the first green build alone."
+  }
+]

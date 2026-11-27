@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Cases",
+    "value": "80",
+    "note": "3 suites"
+  },
+  {
+    "label": "Failing",
+    "value": "6",
+    "note": "Current prompt"
+  },
+  {
+    "label": "Retests due",
+    "value": "4",
+    "note": "This week"
+  }
+]
